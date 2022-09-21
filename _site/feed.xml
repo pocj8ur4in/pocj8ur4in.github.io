@@ -1,1 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-21T00:29:28+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-21T12:24:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[HTML] 1. HTML 기초 정리</title><link href="http://localhost:4000/html/html1/" rel="alternate" type="text/html" title="[HTML] 1. HTML 기초 정리" /><published>2022-09-20T00:00:00+09:00</published><updated>2022-09-20T00:00:00+09:00</updated><id>http://localhost:4000/html/html1</id><content type="html" xml:base="http://localhost:4000/html/html1/"><![CDATA[<h2 id="웹-web">웹 (Web)</h2>
+<ul>
+  <li>월드 와이드 웹 (WWW)이라고도 부름</li>
+  <li>인터넷을 통해 제공되는 전세계적인 정보 공유 서비스 공간</li>
+</ul>
+
+<h3 id="인터넷-internet">인터넷 (Internet)</h3>
+<ul>
+  <li>전세계적으로 연결된 컴퓨터 네트워크 공간</li>
+  <li>수많은 클라이언트, 서버, 이들로 구성된 네트워크의 집합</li>
+  <li>TCP/IP 통신 규약을 통해 파일 송수신</li>
+</ul>
+
+<h4 id="네트워크-network">네트워크 (Network)</h4>
+<ul>
+  <li>컴퓨터들이 통신망을 통해 하나로 연결된 통신 체계</li>
+</ul>
+
+<h5 id="클라이언트-client">클라이언트 (Client)</h5>
+<ul>
+  <li>네트워크에 연결되어 서버에 정보 요청 (Request)</li>
+</ul>
+
+<h5 id="서버-server">서버 (Server)</h5>
+<ul>
+  <li>네트워크에 연결되어 클라이언트에 정보 응답 (Response)</li>
+</ul>
+
+<h3 id="웹-서버-web-server">웹 서버 (Web Server)</h3>
+<ul>
+  <li>웹 클라이언트가 요청하는 웹 페이지나 프로그램 등의 웹 서비스 (Web Service)을 실행하여 해당 파일이나 그 결과를 사용자에게 제공</li>
+  <li>클라이언트의 요청에 대해 항상 응답하기 위해 항상 실행되어야 함</li>
+</ul>
+
+<h3 id="웹-브라우저-web-browser">웹 브라우저 (Web Browser)</h3>
+<ul>
+  <li>웹 서버에서 웹 페이지를 가져오거나 웹 서버로 정보를 보낼 때 사용자가 사용하는 프로그램</li>
+</ul>
+
+<h3 id="웹-사이트-web-page">웹 사이트 (Web Page)</h3>
+<ul>
+  <li>웹을 통해 접속할 수 있는 웹 페이지의 집합</li>
+</ul>
+
+<h4 id="웹-문서-web-page">웹 문서 (Web Page)</h4>
+<ul>
+  <li>웹 사이트를 구성하는 개별 페이지 (HTML 문서로 작성)</li>
+</ul>
+
+<h3 id="html-hyper-text-markup-language">HTML (Hyper Text Markup Language)</h3>
+<ul>
+  <li>웹 문서의 모양을 기술하기 위해 사용하는 마크업 언어</li>
+</ul>
+
+<h4 id="마크업-언어-markup-language">마크업 언어 (Markup Language)</h4>
+<ul>
+  <li>문서가 화면에 표시되는 형식을 표현하거나 데이터의 논리적인 구조를 명시하기 위한 규칙들을 기술하는 언어
+    <blockquote>
+      <p>프로그래밍 언어 (Programming Language)와 달리,</p>
+      <ul>
+        <li>조건 분기문을 가지고 있지 않음</li>
+        <li>메모리 내 임의의 값을 수정할 수  없음</li>
+      </ul>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="html의-기본-요소">HTML의 기본 요소</h2>
+
+<p>입력 :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+	&lt;head&gt;
+		&lt;div style=" color: blue; font-size: 15px;"&gt;
+			Hello World!
+		&lt;/div&gt;
+	&lt;/head&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+
+<html>
+	<head>
+		<div style="
+			color: blue;
+			font-size: 15px;
+		">
+			Hello World!
+		</div>
+	</head>
+</html>
+
+<h3 id="doctype-html">&lt;!DOCTYPE html&gt;</h3>
+<ul>
+  <li>HTML5 표준 문법으로 작성된 문서임을 선언</li>
+  <li>
+    <h3 id="엘리먼트-elements">엘리먼트 (elements)</h3>
+  </li>
+  <li>HTML 내 모든 명령어의 집합</li>
+  <li>
+    <h3 id="태그-tags">태그 (tags)</h3>
+  </li>
+  <li>엘리먼트의 시작과 끝을 표시하는 마크업 기호</li>
+  <li>
+    <h3 id="속성-attributes">속성 (attributes)</h3>
+  </li>
+  <li>시작 태그 내에서 명령어를 구체화하는 값</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="HTML" /><category term="HTML" /><category term="WEB" /><summary type="html"><![CDATA[웹 (Web) 월드 와이드 웹 (WWW)이라고도 부름 인터넷을 통해 제공되는 전세계적인 정보 공유 서비스 공간]]></summary></entry></feed>
