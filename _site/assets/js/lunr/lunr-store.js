@@ -28,4 +28,10 @@ var store = [{
         "tags": ["C++"],
         "url": "/baekjoon/baekjoon3/",
         "teaser": null
+      },{
+        "title": "[BOJ] 10998. A×B (B5)",
+        "excerpt":"1. 문제 조건 두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A×B를 출력한다. 2. 문제 풀이 #include &lt;iostream&gt; using namespace std; int main(){ ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL); int A, B; cin &gt;&gt;...","categories": ["Baekjoon"],
+        "tags": ["C++"],
+        "url": "/baekjoon/baekjoon4/",
+        "teaser": null
       }]

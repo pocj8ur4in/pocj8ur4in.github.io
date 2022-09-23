@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-23T14:27:19+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[BOJ] 1000. A+B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon1/" rel="alternate" type="text/html" title="[BOJ] 1000. A+B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon1</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon1/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-23T14:57:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[BOJ] 1000. A+B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon1/" rel="alternate" type="text/html" title="[BOJ] 1000. A+B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon1</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon1/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.</p>
 <ul>
   <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
@@ -110,7 +110,46 @@ int main(){
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/2557">https://www.acmicpc.net/problem/2557</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="C++" /><summary type="html"><![CDATA[1. 문제 조건 Hello World!를 출력하시오. 입력 : 출력 : Hello World!]]></summary></entry><entry><title type="html">[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;</title><link href="http://localhost:4000/frontend/html2/" rel="alternate" type="text/html" title="[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;" /><published>2022-09-21T00:00:00+09:00</published><updated>2022-09-22T00:00:00+09:00</updated><id>http://localhost:4000/frontend/html2</id><content type="html" xml:base="http://localhost:4000/frontend/html2/"><![CDATA[<h2 id="html--html으로-작성된-문서임을-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> : HTML으로 작성된 문서임을 선언하는 태그</h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="C++" /><summary type="html"><![CDATA[1. 문제 조건 Hello World!를 출력하시오. 입력 : 출력 : Hello World!]]></summary></entry><entry><title type="html">[BOJ] 10998. A×B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon4/" rel="alternate" type="text/html" title="[BOJ] 10998. A×B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon4</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon4/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<p>두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오.</p>
+<ul>
+  <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
+  <li>출력 : 첫째 줄에 A×B를 출력한다.</li>
+</ul>
+
+<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
+    int A, B;
+    
+    cin &gt;&gt; A &gt;&gt; B;
+    
+    cout &lt;&lt; A * B;
+    
+    return 0;
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;iostream&gt;</code> 클래스의 <code class="language-plaintext highlighter-rouge">cin</code>와 <code class="language-plaintext highlighter-rouge">cout</code>로 입출력 구현</li>
+</ul>
+
+<h2 id="3-문제-분류">3. 문제 분류</h2>
+<ul>
+  <li>구현</li>
+  <li>수학 &gt; 사칙연산</li>
+</ul>
+
+<blockquote>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/10998">https://www.acmicpc.net/problem/10998</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="C++" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A×B를 출력한다.]]></summary></entry><entry><title type="html">[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;</title><link href="http://localhost:4000/frontend/html2/" rel="alternate" type="text/html" title="[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;" /><published>2022-09-21T00:00:00+09:00</published><updated>2022-09-22T00:00:00+09:00</updated><id>http://localhost:4000/frontend/html2</id><content type="html" xml:base="http://localhost:4000/frontend/html2/"><![CDATA[<h2 id="html--html으로-작성된-문서임을-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> : HTML으로 작성된 문서임을 선언하는 태그</h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
 ...
