@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-23T13:31:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[BOJ] 1000. A+B (B5)</title><link href="http://localhost:4000/boj/baekjoon1/" rel="alternate" type="text/html" title="[BOJ] 1000. A+B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/boj/baekjoon1</id><content type="html" xml:base="http://localhost:4000/boj/baekjoon1/"><![CDATA[<h2 id="1-문제-풀이">1. 문제 풀이</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-23T13:49:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[BOJ] 1000. A+B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon1/" rel="alternate" type="text/html" title="[BOJ] 1000. A+B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon1</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon1/"><![CDATA[<h2 id="1-문제-풀이">1. 문제 풀이</h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
 using namespace std;
@@ -29,8 +29,40 @@ int main() {
 </ul>
 
 <blockquote>
-  <p>주소 : https://www.acmicpc.net/problem/1000</p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="BOJ" /><category term="C++" /><category term="Coding Test" /><summary type="html"><![CDATA[1. 문제 풀이]]></summary></entry><entry><title type="html">[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;</title><link href="http://localhost:4000/html/html2/" rel="alternate" type="text/html" title="[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;" /><published>2022-09-21T00:00:00+09:00</published><updated>2022-09-22T00:00:00+09:00</updated><id>http://localhost:4000/html/html2</id><content type="html" xml:base="http://localhost:4000/html/html2/"><![CDATA[<h2 id="html--html으로-작성된-문서임을-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> : HTML으로 작성된 문서임을 선언하는 태그</h2>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1000</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><summary type="html"><![CDATA[1. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 1001. A-B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon2/" rel="alternate" type="text/html" title="[BOJ] 1001. A-B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon2</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon2/"><![CDATA[<h2 id="1-문제-풀이">1. 문제 풀이</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    
+    int A, B;
+    
+    cin &gt;&gt; A &gt;&gt; B;
+    
+    cout &lt;&lt; A - B;
+    
+    return 0;
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;iostream&gt;</code> 클래스의 <code class="language-plaintext highlighter-rouge">cin</code>와 <code class="language-plaintext highlighter-rouge">cout</code>로 입출력 구현</li>
+</ul>
+
+<h2 id="2-문제-분류">2. 문제 분류</h2>
+<ul>
+  <li>구현</li>
+  <li>수학 &gt; 사칙연산</li>
+</ul>
+
+<blockquote>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1001</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><summary type="html"><![CDATA[1. 문제 풀이]]></summary></entry><entry><title type="html">[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;</title><link href="http://localhost:4000/frontend/html2/" rel="alternate" type="text/html" title="[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;" /><published>2022-09-21T00:00:00+09:00</published><updated>2022-09-22T00:00:00+09:00</updated><id>http://localhost:4000/frontend/html2</id><content type="html" xml:base="http://localhost:4000/frontend/html2/"><![CDATA[<h2 id="html--html으로-작성된-문서임을-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> : HTML으로 작성된 문서임을 선언하는 태그</h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
 ...
@@ -988,7 +1020,7 @@ int main() {
 		color: #000;
 	}
 &lt;/style&gt;
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="HTML" /><category term="FrontEnd" /><summary type="html"><![CDATA[&lt;html&gt; : HTML으로 작성된 문서임을 선언하는 태그]]></summary></entry><entry><title type="html">[HTML] 1. HTML 기초</title><link href="http://localhost:4000/html/html1/" rel="alternate" type="text/html" title="[HTML] 1. HTML 기초" /><published>2022-09-20T00:00:00+09:00</published><updated>2022-09-21T00:00:00+09:00</updated><id>http://localhost:4000/html/html1</id><content type="html" xml:base="http://localhost:4000/html/html1/"><![CDATA[<h2 id="웹-web">웹 (Web)</h2>
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Frontend" /><summary type="html"><![CDATA[&lt;html&gt; : HTML으로 작성된 문서임을 선언하는 태그]]></summary></entry><entry><title type="html">[HTML] 1. HTML 기초</title><link href="http://localhost:4000/frontend/html1/" rel="alternate" type="text/html" title="[HTML] 1. HTML 기초" /><published>2022-09-20T00:00:00+09:00</published><updated>2022-09-21T00:00:00+09:00</updated><id>http://localhost:4000/frontend/html1</id><content type="html" xml:base="http://localhost:4000/frontend/html1/"><![CDATA[<h2 id="웹-web">웹 (Web)</h2>
 <ul>
   <li>월드 와이드 웹 (WWW)이라고도 부름</li>
   <li>인터넷을 통해 제공되는 전세계적인 정보 공유 서비스 공간</li>
@@ -1084,4 +1116,4 @@ int main() {
 <ul>
   <li>여는 태그 내에서 명령어를 구체화하는 속성과 그에 해당되는 값
 <br /> (<code class="language-plaintext highlighter-rouge">&lt;tag element="value"&gt;</code>)</li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="HTML" /><category term="FrontEnd" /><summary type="html"><![CDATA[웹 (Web) 월드 와이드 웹 (WWW)이라고도 부름 인터넷을 통해 제공되는 전세계적인 정보 공유 서비스 공간]]></summary></entry></feed>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Frontend" /><summary type="html"><![CDATA[웹 (Web) 월드 와이드 웹 (WWW)이라고도 부름 인터넷을 통해 제공되는 전세계적인 정보 공유 서비스 공간]]></summary></entry></feed>
