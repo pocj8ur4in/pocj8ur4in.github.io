@@ -64,4 +64,10 @@ var store = [{
         "tags": ["Python"],
         "url": "/algorithm/algorithm1/",
         "teaser": null
+      },{
+        "title": "[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)",
+        "excerpt":"구현 알고리즘 (Implementation Algorithm) 구현 : 알고리즘을 소스 코드로 바꾸는 과정 구현 알고리즘은 결국 모든 범위의 문제 유형을 포괄하는 개념 문제 해결 분야에서의 구현 유형은 ‘풀이를 떠오르는 것은 쉽지만 소스 코드로 옮기기 어려운 문제’를 의미 대체로 사소한 조건 설정이 많은 문제일수록 구현이 까다로움 Python으로 구현 시 고려해야 할 제약 사항...","categories": ["Algorithm"],
+        "tags": ["Python"],
+        "url": "/algorithm/algorithm2/",
+        "teaser": null
       }]
