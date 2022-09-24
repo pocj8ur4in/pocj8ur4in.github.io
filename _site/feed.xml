@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-23T15:39:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[BOJ] 10869. 사칙연산 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon6/" rel="alternate" type="text/html" title="[BOJ] 10869. 사칙연산 (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon6</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon6/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-24T19:46:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[BOJ] 10869. 사칙연산 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon6/" rel="alternate" type="text/html" title="[BOJ] 10869. 사칙연산 (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon6</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon6/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>두 자연수 A와 B가 주어진다. 이때, A+B, A-B, A*B, A/B(몫), A%B(나머지)를 출력하는 프로그램을 작성하시오.</p>
 
 <ul>
@@ -8,27 +8,14 @@
 
 <h2 id="2-문제-풀이">2. 문제 풀이</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
-using namespace std;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
 
-int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    
-    int A, B;
-    
-    cin &gt;&gt; A &gt;&gt; B;
-
-    cout &lt;&lt; A + B &lt;&lt; "\n" &lt;&lt; A - B &lt;&lt; "\n" &lt;&lt; A * B &lt;&lt; "\n" &lt;&lt; A / B &lt;&lt; "\n" &lt;&lt; A % B;
-
-    return 0;
-}
+print(int(int(a) + int(b)))
+print(int(int(a) - int(b)))
+print(int(int(a) * int(b)))
+print(int(int(a) / int(b)))
+print(int(int(a) % int(b)))
 </code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">&lt;iostream&gt;</code> 클래스의 <code class="language-plaintext highlighter-rouge">cin</code>와 <code class="language-plaintext highlighter-rouge">cout</code>로 입출력 구현</li>
-</ul>
 
 <h2 id="3-문제-분류">3. 문제 분류</h2>
 <ul>
@@ -38,7 +25,7 @@ int main(){
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/10869">https://www.acmicpc.net/problem/10869</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="C++" /><summary type="html"><![CDATA[1. 문제 조건 두 자연수 A와 B가 주어진다. 이때, A+B, A-B, A*B, A/B(몫), A%B(나머지)를 출력하는 프로그램을 작성하시오.]]></summary></entry><entry><title type="html">[BOJ] 2557. Hello World (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon3/" rel="alternate" type="text/html" title="[BOJ] 2557. Hello World (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon3</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon3/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 자연수 A와 B가 주어진다. 이때, A+B, A-B, A*B, A/B(몫), A%B(나머지)를 출력하는 프로그램을 작성하시오.]]></summary></entry><entry><title type="html">[BOJ] 2557. Hello World (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon3/" rel="alternate" type="text/html" title="[BOJ] 2557. Hello World (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon3</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon3/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>Hello World!를 출력하시오.</p>
 <ul>
   <li>입력 : 없음</li>
@@ -47,23 +34,8 @@ int main(){
 
 <h2 id="2-문제-풀이">2. 문제 풀이</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
-using namespace std;
-
-int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    
-    cout &lt;&lt; "Hello World!";
-
-    return 0;
-}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Hello World!")
 </code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">&lt;iostream&gt;</code> 클래스의 <code class="language-plaintext highlighter-rouge">cout</code>로 입력 구현</li>
-</ul>
 
 <h2 id="3-문제-분류">3. 문제 분류</h2>
 <ul>
@@ -72,7 +44,7 @@ int main(){
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/2557">https://www.acmicpc.net/problem/2557</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="C++" /><summary type="html"><![CDATA[1. 문제 조건 Hello World!를 출력하시오. 입력 : 없음 출력 : Hello World!]]></summary></entry><entry><title type="html">[BOJ] 1000. A+B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon1/" rel="alternate" type="text/html" title="[BOJ] 1000. A+B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon1</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon1/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 Hello World!를 출력하시오. 입력 : 없음 출력 : Hello World!]]></summary></entry><entry><title type="html">[BOJ] 1000. A+B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon1/" rel="alternate" type="text/html" title="[BOJ] 1000. A+B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon1</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon1/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.</p>
 <ul>
   <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
@@ -81,27 +53,10 @@ int main(){
 
 <h2 id="2-문제-풀이">2. 문제 풀이</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
-using namespace std;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
 
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    
-    int A, B;
-    
-    cin &gt;&gt; A &gt;&gt; B;
-    
-    cout &lt;&lt; A + B;
-    
-    return 0;
-}
+print(int(a) + int(b))
 </code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">&lt;iostream&gt;</code> 클래스의 <code class="language-plaintext highlighter-rouge">cin</code>와 <code class="language-plaintext highlighter-rouge">cout</code>로 입출력 구현</li>
-</ul>
 
 <h2 id="3-문제-분류">3. 문제 분류</h2>
 <ul>
@@ -111,7 +66,7 @@ int main() {
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1000</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="C++" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A+B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 1001. A-B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon2/" rel="alternate" type="text/html" title="[BOJ] 1001. A-B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon2</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon2/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A+B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 1001. A-B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon2/" rel="alternate" type="text/html" title="[BOJ] 1001. A-B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon2</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon2/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오.</p>
 <ul>
   <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
@@ -120,27 +75,10 @@ int main() {
 
 <h2 id="2-문제-풀이">2. 문제 풀이</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
-using namespace std;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
 
-int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    
-    int A, B;
-    
-    cin &gt;&gt; A &gt;&gt; B;
-    
-    cout &lt;&lt; A - B;
-    
-    return 0;
-}
+print(int(a) - int(b))
 </code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">&lt;iostream&gt;</code> 클래스의 <code class="language-plaintext highlighter-rouge">cin</code>와 <code class="language-plaintext highlighter-rouge">cout</code>로 입출력 구현</li>
-</ul>
 
 <h2 id="2-문제-분류">2. 문제 분류</h2>
 <ul>
@@ -150,12 +88,11 @@ int main() {
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1001</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="C++" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A-B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 1330. 두 수 비교하기 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon7/" rel="alternate" type="text/html" title="[BOJ] 1330. 두 수 비교하기 (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon7</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon7/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A-B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 1330. 두 수 비교하기 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon7/" rel="alternate" type="text/html" title="[BOJ] 1330. 두 수 비교하기 (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon7</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon7/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>두 정수 A와 B가 주어졌을 때, A와 B를 비교하는 프로그램을 작성하시오.</p>
 
 <ul>
-  <li>입력 : 첫째 줄에 A와 B가 주어진다. A와 B는 공백 한 칸으로 구분되어져 있다.</li>
-  <li>첫째 줄에 다음 세 가지 중 하나를 출력한다.
+  <li>입력 : 첫째 줄에 A와 B가 주어진다. A와 B는 공백 한 칸으로 구분되어져 있다. 첫째 줄에 다음 세 가지 중 하나를 출력한다.
     <blockquote>
       <ul>
         <li>A가 B보다 큰 경우에는 ‘&gt;’를 출력한다.</li>
@@ -169,36 +106,15 @@ int main() {
 
 <h2 id="2-문제-풀이">2. 문제 풀이</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
-using namespace std;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
 
-int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    
-    int A, B;
-    
-    cin &gt;&gt; A &gt;&gt; B;
-
-    if (A &gt; B){
-        cout &lt;&lt; "&gt;";
-    }
-    else if (A &lt; B){
-        cout &lt;&lt; "&lt;";
-    }
-    else{
-        cout &lt;&lt; "==";
-    }
-    
-    return 0;
-}
+if int(a) &lt; int(b):
+    print("&lt;")
+elif int(a) &gt; int(b):
+    print("&gt;")
+else:
+    print("==")
 </code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">&lt;iostream&gt;</code> 클래스의 <code class="language-plaintext highlighter-rouge">cin</code>와 <code class="language-plaintext highlighter-rouge">cout</code>로 입출력 구현</li>
-  <li><code class="language-plaintext highlighter-rouge">if</code>문과 <code class="language-plaintext highlighter-rouge">else</code>문으로 조건문 구현</li>
-</ul>
 
 <h2 id="3-문제-분류">3. 문제 분류</h2>
 <ul>
@@ -207,7 +123,7 @@ int main(){
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/1330">https://www.acmicpc.net/problem/1330</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="C++" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B가 주어졌을 때, A와 B를 비교하는 프로그램을 작성하시오.]]></summary></entry><entry><title type="html">[BOJ] 10998. A×B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon4/" rel="alternate" type="text/html" title="[BOJ] 10998. A×B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon4</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon4/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B가 주어졌을 때, A와 B를 비교하는 프로그램을 작성하시오.]]></summary></entry><entry><title type="html">[BOJ] 10998. A×B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon4/" rel="alternate" type="text/html" title="[BOJ] 10998. A×B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon4</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon4/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오.</p>
 <ul>
   <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
@@ -216,27 +132,10 @@ int main(){
 
 <h2 id="2-문제-풀이">2. 문제 풀이</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
-using namespace std;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
 
-int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    
-    int A, B;
-    
-    cin &gt;&gt; A &gt;&gt; B;
-    
-    cout &lt;&lt; A * B;
-    
-    return 0;
-}
+print(int(a) * int(b))
 </code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">&lt;iostream&gt;</code> 클래스의 <code class="language-plaintext highlighter-rouge">cin</code>와 <code class="language-plaintext highlighter-rouge">cout</code>로 입출력 구현</li>
-</ul>
 
 <h2 id="3-문제-분류">3. 문제 분류</h2>
 <ul>
@@ -246,7 +145,7 @@ int main(){
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/10998">https://www.acmicpc.net/problem/10998</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="C++" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A×B를 출력한다.]]></summary></entry><entry><title type="html">[BOJ] 2588. 곱셈 (B3)</title><link href="http://localhost:4000/baekjoon/baekjoon5/" rel="alternate" type="text/html" title="[BOJ] 2588. 곱셈 (B3)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon5</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon5/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A×B를 출력한다.]]></summary></entry><entry><title type="html">[BOJ] 2588. 곱셈 (B3)</title><link href="http://localhost:4000/baekjoon/baekjoon5/" rel="alternate" type="text/html" title="[BOJ] 2588. 곱셈 (B3)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon5</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon5/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>(세 자리 수) × (세 자리 수)는 다음과 같은 과정을 통하여 이루어진다.<br /><br />
 <img src="https://www.acmicpc.net/upload/images/f5NhGHVLM4Ix74DtJrwfC97KepPl27s%20(1).png" />
 <br /><br />
@@ -259,27 +158,18 @@ int main(){
 
 <h2 id="2-문제-풀이">2. 문제 풀이</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
-using namespace std;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = int(input())
+b = int(input())
 
-int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    
-    int A, B;
-    cin &gt;&gt; A &gt;&gt; B;
+c = (a * (b % 10) / 1)
+d = (a * (b % 100 - b % 10) / 10)
+e = (a * (b % 1000 - b % 100) / 100)
 
-    cout &lt;&lt; A * ((B % 10) / 1) &lt;&lt; "\n" &lt;&lt; A * ((B % 100) / 10) &lt;&lt; "\n" &lt;&lt; A * ((B % 1000) / 100) &lt;&lt; "\n" &lt;&lt; A * B;
-
-    return 0;
-}
-
+print(int(c))
+print(int(d))
+print(int(e))
+print(a * b)
 </code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">&lt;iostream&gt;</code> 클래스의 <code class="language-plaintext highlighter-rouge">cin</code>와 <code class="language-plaintext highlighter-rouge">cout</code>로 입출력 구현</li>
-</ul>
 
 <h2 id="3-문제-분류">3. 문제 분류</h2>
 <ul>
@@ -289,7 +179,7 @@ int main(){
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/2588">https://www.acmicpc.net/problem/2588</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="C++" /><summary type="html"><![CDATA[1. 문제 조건 (세 자리 수) × (세 자리 수)는 다음과 같은 과정을 통하여 이루어진다. (1)과 (2)위치에 들어갈 세 자리 자연수가 주어질 때 (3), (4), (5), (6)위치에 들어갈 값을 구하는 프로그램을 작성하시오.]]></summary></entry><entry><title type="html">[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;</title><link href="http://localhost:4000/frontend/html2/" rel="alternate" type="text/html" title="[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;" /><published>2022-09-21T00:00:00+09:00</published><updated>2022-09-22T00:00:00+09:00</updated><id>http://localhost:4000/frontend/html2</id><content type="html" xml:base="http://localhost:4000/frontend/html2/"><![CDATA[<h2 id="html--html으로-작성된-문서임을-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> : HTML으로 작성된 문서임을 선언하는 태그</h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 (세 자리 수) × (세 자리 수)는 다음과 같은 과정을 통하여 이루어진다. (1)과 (2)위치에 들어갈 세 자리 자연수가 주어질 때 (3), (4), (5), (6)위치에 들어갈 값을 구하는 프로그램을 작성하시오.]]></summary></entry><entry><title type="html">[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;</title><link href="http://localhost:4000/frontend/html2/" rel="alternate" type="text/html" title="[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;" /><published>2022-09-21T00:00:00+09:00</published><updated>2022-09-22T00:00:00+09:00</updated><id>http://localhost:4000/frontend/html2</id><content type="html" xml:base="http://localhost:4000/frontend/html2/"><![CDATA[<h2 id="html--html으로-작성된-문서임을-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> : HTML으로 작성된 문서임을 선언하는 태그</h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
 ...
@@ -308,14 +198,14 @@ int main(){
 &lt;/html&gt;
 </code></pre></div></div>
 
-<h3 id="html-lang--html-문서의-텍스트가-어떤-언어로-작성되었는지-나타내는-속성"><code class="language-plaintext highlighter-rouge">&lt;html lang=""&gt;</code> : HTML 문서의 텍스트가 어떤 언어로 작성되었는지 나타내는 속성</h3>
+<h3 id="html-lang--웹-문서의-텍스트가-어떤-언어로-작성되었는지-나타내는-속성"><code class="language-plaintext highlighter-rouge">&lt;html lang=""&gt;</code> : 웹 문서의 텍스트가 어떤 언어로 작성되었는지 나타내는 속성</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html lang="ko"&gt;
 ...
 &lt;/html&gt;
 </code></pre></div></div>
 
-<h2 id="head--html-문서의-속성을-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> : HTML 문서의 속성을 선언하는 태그</h2>
+<h2 id="head--웹-문서의-속성을-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> : 웹 문서의 속성을 선언하는 태그</h2>
 <ul>
   <li>실제 웹 브라우저 화면 상에는 출력되지 않음</li>
   <li>HTML 문서의 부가적인 정보들을 넣음</li>
@@ -328,13 +218,13 @@ int main(){
 &lt;/html&gt;
 </code></pre></div></div>
 
-<h3 id="title--웹-페이지의-제목을-나타내는-태그"><code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> : 웹 페이지의 제목을 나타내는 태그</h3>
+<h3 id="title--웹-문서의-제목을-나타내는-태그"><code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> : 웹 문서의 제목을 나타내는 태그</h3>
 <ul>
   <li>브라우저의 탭에 표시되는 제목을 출력</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;title&gt;
-	웹 페이지 제목
+	웹 문서 제목
 &lt;/title&gt;
 </code></pre></div></div>
 
@@ -394,7 +284,7 @@ int main(){
 /&gt;
 </code></pre></div></div>
 
-<h5 id="meta-namerobots--검색-로봇을-제어하는-name-값"><code class="language-plaintext highlighter-rouge">&lt;meta name="robots"&gt;</code> : 검색 로봇을 제어하는 name 값</h5>
+<h5 id="meta-namerobots---검색-로봇을-제어하는-name-값"><code class="language-plaintext highlighter-rouge">&lt;meta name="robots"&gt;</code> :  검색 로봇을 제어하는 name 값</h5>
 
 <table>
 	<thead>
@@ -557,7 +447,7 @@ int main(){
 /&gt; 
 </code></pre></div></div>
 
-<h4 id="meta-http-equiv--웹-서버가-html-문서와-함께-html-응답-헤더를-보내-웹-브라우저가-http-문서의-초기-정보를-지정할-수-있게-하는-속성"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv=""&gt;</code> : 웹 서버가 HTML 문서와 함께 HTML 응답 헤더를 보내 웹 브라우저가 HTTP 문서의 초기 정보를 지정할 수 있게 하는 속성</h4>
+<h4 id="meta-http-equiv--웹-서버가-웹-문서와-함께-html-응답-헤더를-보내-웹-브라우저가-http-문서의-초기-정보를-지정할-수-있게-하는-속성"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv=""&gt;</code> : 웹 서버가 웹 문서와 함께 HTML 응답 헤더를 보내 웹 브라우저가 HTTP 문서의 초기 정보를 지정할 수 있게 하는 속성</h4>
 
 <h5 id="meta-http-equivsubject--웹-사이트의-주제를-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="subject"&gt;</code> : 웹 사이트의 주제를 지정하는 http-equiv 값</h5>
 
@@ -651,7 +541,7 @@ int main(){
 /&gt;
 </code></pre></div></div>
 
-<h5 id="meta-http-equivx-ua-compatible--html-문서를-렌더링할-ie-버전을-명시하여-웹의-호환성을-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="X-UA-Compatible"&gt;</code> : HTML 문서를 렌더링할 IE 버전을 명시하여 웹의 호환성을 지정하는 http-equiv 값</h5>
+<h5 id="meta-http-equivx-ua-compatible--웹-문서를-렌더링할-ie-버전을-명시하여-웹의-호환성을-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="X-UA-Compatible"&gt;</code> : 웹 문서를 렌더링할 IE 버전을 명시하여 웹의 호환성을 지정하는 http-equiv 값</h5>
 
 <table>
 	<thead>
@@ -691,7 +581,7 @@ int main(){
 &gt;
 </code></pre></div></div>
 
-<h5 id="meta-http-equivcontent-type--html-문서에-대한-웹-브라우저의-문자-인코딩-방식을-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="content-type"&gt;</code> : HTML 문서에 대한 웹 브라우저의 문자 인코딩 방식을 지정하는 http-equiv 값</h5>
+<h5 id="meta-http-equivcontent-type--웹-문서에-대한-웹-브라우저의-문자-인코딩-방식을-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="content-type"&gt;</code> : 웹 문서에 대한 웹 브라우저의 문자 인코딩 방식을 지정하는 http-equiv 값</h5>
 <ul>
   <li>‘호환성 보기’</li>
   <li>HTML5 : charset 속성으로 대체 가능</li>
@@ -729,7 +619,7 @@ int main(){
 &lt;meta charset="UTF-8"&gt;
 </code></pre></div></div>
 
-<h5 id="meta-http-equivcontent-language--html-문서-내의-언어를-명시하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="content-language"&gt;</code> : HTML 문서 내의 언어를 명시하는 http-equiv 값</h5>
+<h5 id="meta-http-equivcontent-language--웹-문서-내의-언어를-명시하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="content-language"&gt;</code> : 웹 문서 내의 언어를 명시하는 http-equiv 값</h5>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? HTML 문서의 기본 언어로 한국어를 사용할 경우 --&gt;
 &lt;meta
@@ -738,7 +628,7 @@ int main(){
 &gt;
 </code></pre></div></div>
 
-<h5 id="meta-http-equivcontent-security-policy--xss-데이터-삽입-공격-등을-감지하고-완화하기-위해-html-문서에-대한-컨텐츠-정책을-명시하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="content-security-policy"&gt;</code> : XSS, 데이터 삽입 공격 등을 감지하고 완화하기 위해 HTML 문서에 대한 컨텐츠 정책을 명시하는 http-equiv 값</h5>
+<h5 id="meta-http-equivcontent-security-policy--xss-데이터-삽입-공격-등을-감지하고-완화하기-위해-웹-문서에-대한-컨텐츠-정책을-명시하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="content-security-policy"&gt;</code> : XSS, 데이터 삽입 공격 등을 감지하고 완화하기 위해 웹 문서에 대한 컨텐츠 정책을 명시하는 http-equiv 값</h5>
 
 <table>
     <thead>
@@ -839,7 +729,7 @@ int main(){
 &gt;
 </code></pre></div></div>
 
-<h5 id="meta-http-equivcontent-script-type--html-문서에-사용된-프로그래밍-언어를-명시하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="content-script-type"&gt;</code> : HTML 문서에 사용된 프로그래밍 언어를 명시하는 http-equiv 값</h5>
+<h5 id="meta-http-equivcontent-script-type--웹-문서에-사용된-프로그래밍-언어를-명시하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="content-script-type"&gt;</code> : 웹 문서에 사용된 프로그래밍 언어를 명시하는 http-equiv 값</h5>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? HTML 문서에 javascript와 css가 사용된 경우 --&gt;
 &lt;meta
@@ -852,7 +742,7 @@ int main(){
 &gt;
 </code></pre></div></div>
 
-<h5 id="meta-http-equivdefault-style--html-문서에-우선적으로-적용할-스타일시트를-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="default-style"&gt;</code> : HTML 문서에 우선적으로 적용할 스타일시트를 지정하는 http-equiv 값</h5>
+<h5 id="meta-http-equivdefault-style--웹-문서에-우선적으로-적용할-스타일시트를-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="default-style"&gt;</code> : 웹 문서에 우선적으로 적용할 스타일시트를 지정하는 http-equiv 값</h5>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
 	http-equiv="default-style"
@@ -860,7 +750,7 @@ int main(){
 &gt;
 </code></pre></div></div>
 
-<h5 id="meta-http-equivrefresh--html-문서를-새로고침하는-시간-간격을-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="refresh"&gt;</code> : HTML 문서를 새로고침하는 시간 간격을 지정하는 http-equiv 값</h5>
+<h5 id="meta-http-equivrefresh--웹-문서를-새로고침하는-시간-간격을-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="refresh"&gt;</code> : 웹 문서를 새로고침하는 시간 간격을 지정하는 http-equiv 값</h5>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? HTML 문서를 새로고침하는 시간 간격을 180초로 할 경우 --&gt;
 &lt;meta
@@ -869,7 +759,7 @@ int main(){
 &gt;
 </code></pre></div></div>
 
-<h5 id="meta-http-equivrefresh-url--html-문서를-새로고침하는-시간-간격을-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="refresh; url="&gt;</code> : HTML 문서를 새로고침하는 시간 간격을 지정하는 http-equiv 값</h5>
+<h5 id="meta-http-equivrefresh-url--웹-문서를-새로고침하는-시간-간격을-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="refresh; url="&gt;</code> : 웹 문서를 새로고침하는 시간 간격을 지정하는 http-equiv 값</h5>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? HTML 문서에서 10초 후 http://pocj8ur4in.github.io/로 이동할 경우 --&gt;
 &lt;meta
@@ -886,7 +776,7 @@ int main(){
 &gt;
 </code></pre></div></div>
 
-<h5 id="meta-http-equivpragma--현재의-웹-페이지를-캐시로-저장할지-여부를-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="pragma"&gt;</code> : 현재의 웹 페이지를 캐시로 저장할지 여부를 지정하는 http-equiv 값</h5>
+<h5 id="meta-http-equivpragma--현재의-웹-문서를-캐시로-저장할지-여부를-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="pragma"&gt;</code> : 현재의 웹 문서를 캐시로 저장할지 여부를 지정하는 http-equiv 값</h5>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
 	http-equiv="pragma"
@@ -906,7 +796,7 @@ int main(){
   </ul>
 </blockquote>
 
-<h5 id="meta-http-equivexpires--현재의-웹-페이지의-웹-캐시-만료일을-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="expires"&gt;</code> : 현재의 웹 페이지의 웹 캐시 만료일을 지정하는 http-equiv 값</h5>
+<h5 id="meta-http-equivexpires--현재의-웹-문서의-웹-캐시-만료일을-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="expires"&gt;</code> : 현재의 웹 문서의 웹 캐시 만료일을 지정하는 http-equiv 값</h5>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
 	http-equiv="expires"
@@ -914,9 +804,9 @@ int main(){
 &gt;
 </code></pre></div></div>
 
-<h5 id="meta-http-equivpage-enter--현재-웹-페이지로-접속할-때의-장면-전환-효과를-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="page-enter"&gt;</code> : 현재 웹 페이지로 접속할 때의 장면 전환 효과를 지정하는 http-equiv 값</h5>
+<h5 id="meta-http-equivpage-enter--현재-웹-문서로-접속할-때의-장면-전환-효과를-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="page-enter"&gt;</code> : 현재 웹 문서로 접속할 때의 장면 전환 효과를 지정하는 http-equiv 값</h5>
 
-<h5 id="meta-http-equivpage-exit--현재-웹-페이지를-종료할-때의-장면-전환-효과를-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="page-exit"&gt;</code> : 현재 웹 페이지를 종료할 때의 장면 전환 효과를 지정하는 http-equiv 값</h5>
+<h5 id="meta-http-equivpage-exit--현재-웹-문서를-종료할-때의-장면-전환-효과를-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="page-exit"&gt;</code> : 현재 웹 문서를 종료할 때의 장면 전환 효과를 지정하는 http-equiv 값</h5>
 
 <h5 id="meta-http-equivsite-enter--다른-웹-사이트에서-현재-웹-사이트로의-장면-전환-효과를-지정하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="site-enter"&gt;</code> : 다른 웹 사이트에서 현재 웹 사이트로의 장면 전환 효과를 지정하는 http-equiv 값</h5>
 
@@ -964,14 +854,14 @@ int main(){
   </ul>
 </blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? 현재 페이지를 나갈 때 흩어뿌리기 장면 전환을 1초간 --&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? 현재 문서를 나갈 때 흩어뿌리기 장면 전환을 1초간 --&gt;
 &lt;meta
 	http-equiv="page-exit"
 		content="revealtrans(duration=1, transition=12)"
 &gt;
 </code></pre></div></div>
 
-<h5 id="meta-http-equivorigin-trial--웹-개발자가-html-문서에-실험단계인-속성을-명시하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="origin-trial"&gt;</code> : 웹 개발자가 HTML 문서에 실험단계인 속성을 명시하는 http-equiv 값</h5>
+<h5 id="meta-http-equivorigin-trial--웹-개발자가-웹-문서에-실험단계인-속성을-명시하는-http-equiv-값"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="origin-trial"&gt;</code> : 웹 개발자가 웹 문서에 실험단계인 속성을 명시하는 http-equiv 값</h5>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? NETFILX에서 PIP 내 음소거 기능 추가 코드 --&gt;
 &lt;meta
@@ -1002,7 +892,7 @@ int main(){
    		</tr>
    		<tr>
    			<th>:type</th>
-   			<td>웹페이지 타입</td>
+   			<td>웹 문서의 타입</td>
    		</tr>
     		<tr>
    			<th>:image</th>
@@ -1010,7 +900,7 @@ int main(){
    		</tr>
      		<tr>
    			<th>:url</th>
-   			<td>웹페이지 대표 URL</td>
+   			<td>웹 문서의 대표 URL</td>
    		</tr>
  	</tbody>
 	<thead>
@@ -1022,27 +912,27 @@ int main(){
    	<tbody>
      		<tr>
    			<th>:description</th>
-   			<td>웹페이지 설명</td>
+   			<td>웹 문서 설명</td>
    		</tr>
    		<tr>
    			<th>:locale</th>
-   			<td>웹페이지 내 언어</td>
+   			<td>웹 문서 내 언어</td>
    		</tr>
     		<tr>
    			<th>:locale:alternate</th>
-   			<td>웹페이지 내 다국적 언어</td>
+   			<td>웹 문서 내 다국적 언어</td>
    		</tr>
    		<tr>
    			<th>:site_name</th>
-   			<td>웹 페이지 내 카테고리 제목</td>
+   			<td>웹 문서 내 카테고리 제목</td>
    		</tr>
      		<tr>
    			<th>:audio</th>
-   			<td>웹페이지에 포함되는 오디오 파일 URL</td>
+   			<td>웹 문서에 포함되는 오디오 파일 URL</td>
    		</tr>
     		<tr>
    			<th>:video</th>
-   			<td>웹페이지에 포함되는 비디오 파일 URL</td>
+   			<td>웹 문서에 포함되는 비디오 파일 URL</td>
    		</tr>
 	</tbody>
 	<thead>
@@ -1150,7 +1040,7 @@ int main(){
 
 <h4 id="link-relcanonical--검색-엔진을-위한-대표-url-주소를-설정하는-rel-값"><code class="language-plaintext highlighter-rouge">&lt;link rel="canonical"&gt;</code> : 검색 엔진을 위한 대표 URL 주소를 설정하는 rel 값</h4>
 <ul>
-  <li>웹 문서 내 URL 주소는 다르나 동일한 내용의 중복된 웹 문서가 있을 때 사용</li>
+  <li>웹 문서 내의 URL 주소는 다르나 동일한 내용의 중복된 웹 문서가 있을 때 사용</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link
@@ -1238,7 +1128,7 @@ int main(){
 &lt;/script&gt;
 </code></pre></div></div>
 
-<h3 id="style--현재-html-문서의-스타일-정보를-정의하는-태그"><code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> : 현재 HTML 문서의 스타일 정보를 정의하는 태그</h3>
+<h3 id="style--현재-웹-문서의-스타일-정보를-정의하는-태그"><code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> : 현재 웹 문서의 스타일 정보를 정의하는 태그</h3>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;style&gt;
 	body {
 		background-color: #fff;
@@ -1328,18 +1218,19 @@ int main(){
 	</head>
 </html>
 
-<h3 id="엘리먼트-elements">엘리먼트 (elements)</h3>
+<h3 id="html-엘리먼트-html-elements">HTML 엘리먼트 (HTML elements)</h3>
 <ul>
   <li>HTML 내 모든 명령어의 집합</li>
 </ul>
 
-<h3 id="태그-tags">태그 (tags)</h3>
+<h3 id="html-태그-html-tags">HTML 태그 (HTML tags)</h3>
 <ul>
   <li>엘리먼트의 시작과 끝을 표시하는 마크업 기호</li>
+  <li>태그 역시 엘리먼트에 속함</li>
   <li>여는 태그 (<code class="language-plaintext highlighter-rouge">&lt;tag&gt;</code>)와 닫는 태그 (<code class="language-plaintext highlighter-rouge">&lt;/tag&gt;</code>)가 존재</li>
 </ul>
 
-<h3 id="속성-attributes">속성 (attributes)</h3>
+<h3 id="html-속성-html-attributes">HTML 속성 (HTML attributes)</h3>
 <ul>
   <li>여는 태그 내에서 명령어를 구체화하는 속성과 그에 해당되는 값
 <br /> (<code class="language-plaintext highlighter-rouge">&lt;tag element="value"&gt;</code>)</li>
