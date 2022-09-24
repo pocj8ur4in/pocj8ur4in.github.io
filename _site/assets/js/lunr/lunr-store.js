@@ -58,4 +58,10 @@ var store = [{
         "tags": ["Python"],
         "url": "/baekjoon/baekjoon8/",
         "teaser": null
+      },{
+        "title": "[Algorithm] 1. 알고리즘과 복잡도",
+        "excerpt":"알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법 입력 : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함 출력 : 최소 1개 이상의 결과를 가져야 함 알고리즘의 복잡도 (Complexity) : 알고리즘의 성능을 나타내는 척도 공간 복잡도 (Space Complexity) : 문제를 해결할 때 걸리는 공간과 입력의 함수 관계 특정한 크기의 입력에...","categories": ["Algorithm"],
+        "tags": ["Python"],
+        "url": "/algorithm/algorithm1/",
+        "teaser": null
       }]

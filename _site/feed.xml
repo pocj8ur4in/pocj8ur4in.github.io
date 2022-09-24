@@ -1,103 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-24T20:31:18+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[BOJ] 1330. 두 수 비교하기 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon7/" rel="alternate" type="text/html" title="[BOJ] 1330. 두 수 비교하기 (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon7</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon7/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>두 정수 A와 B가 주어졌을 때, A와 B를 비교하는 프로그램을 작성하시오.</p>
-
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-24T21:55:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Algorithm] 1. 알고리즘과 복잡도</title><link href="http://localhost:4000/algorithm/algorithm1/" rel="alternate" type="text/html" title="[Algorithm] 1. 알고리즘과 복잡도" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm1</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm1/"><![CDATA[<h2 id="알고리즘-algorithm--어떠한-문제를-해결하기-위한-절차나-방법">알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법</h2>
 <ul>
-  <li>입력 : 첫째 줄에 A와 B가 주어진다. A와 B는 공백 한 칸으로 구분되어져 있다.</li>
-  <li>출력 : 첫째 줄에 다음 세 가지 중 하나를 출력한다.
-    <blockquote>
-      <ul>
-        <li>A가 B보다 큰 경우에는 ‘&gt;’를 출력한다.</li>
-        <li>A가 B보다 작은 경우에는 ‘&lt;’를 출력한다.</li>
-        <li>A와 B가 같은 경우에는 ‘==’를 출력한다.</li>
-      </ul>
-    </blockquote>
-  </li>
-  <li>제한 : -10,000 ≤ A, B ≤ 10,000</li>
+  <li>입력 : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함</li>
+  <li>출력 : 최소 1개 이상의 결과를 가져야 함</li>
 </ul>
 
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+<h2 id="알고리즘의-복잡도-complexity--알고리즘의-성능을-나타내는-척도">알고리즘의 복잡도 (Complexity) : 알고리즘의 성능을 나타내는 척도</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
-
-if int(a) &lt; int(b):
-    print("&lt;")
-elif int(a) &gt; int(b):
-    print("&gt;")
-else:
-    print("==")
-</code></pre></div></div>
-
-<h2 id="3-문제-분류">3. 문제 분류</h2>
+<h3 id="공간-복잡도-space-complexity--문제를-해결할-때-걸리는-공간과-입력의-함수-관계">공간 복잡도 (Space Complexity) : 문제를 해결할 때 걸리는 공간과 입력의 함수 관계</h3>
 <ul>
-  <li>구현</li>
+  <li>특정한 크기의 입력에 대해 알고리즘이 얼마나 많은 메모리를 차지하는가?</li>
+  <li>알고리즘을 위해 필요한 메모리의 양</li>
 </ul>
+
+<h3 id="시간-복잡도-time-complexity--문제를-해결할-때-걸리는-시간과-입력의-함수-관계">시간 복잡도 (Time Complexity) : 문제를 해결할 때 걸리는 시간과 입력의 함수 관계</h3>
+<ul>
+  <li>특정한 크기의 입력에 대해 알고리즘이 얼마나 오래 걸리는가?</li>
+  <li>알고리즘을 위해 필요한 연산의 횟수</li>
+  <li>만약 프로그램을 비효율적으로 작성하여 시간 제한 (Time Limit)를 넘기면, 시간 초과 (Time Limit Exceeded)로 오답 처리</li>
+</ul>
+
+<h4 id="빅-오-표기법-big-o--최악의-경우만을-고려해-시간-복잡도를-계산">빅 오 표기법 (Big-O) : 최악의 경우만을 고려해 시간 복잡도를 계산</h4>
+<ul>
+  <li>이를 위해 가장 빠르게 증가할, 즉 가장 높은 차수의 항만을 고려하고 계수와 나머지 차수의 항들은 계산에서 제외</li>
+  <li>만약 크기 N의 모든 입력에 대한 알고리즘에 필요한 시간이 최대 N의 식을 가진다면, 이 알고리즘의 점근적 시간 복잡도는 O(N)</li>
+</ul>
+
+<h5 id="공통-시간-복잡도-표-common-time-complexity-table">공통 시간 복잡도 표 (Common Time Complexity Table)</h5>
+
+<table>
+	<thead>
+		<tr>
+			<th>빅 오 표기법</th>
+			<th>설명</th>
+		</tr>
+	</thead>
+   	<tbody>
+        <tr>
+            <th>O(1)</th>
+            <td>상수 시간</td>
+        </tr>
+        <tr>
+            <th>O(logN)</th>
+            <td>로그 시간</td>
+        </tr>
+        <tr>
+            <th>O(N)</th>
+            <td>선형 시간</td>
+        </tr>
+        <tr>
+            <th>O(N * logN)</th>
+            <td>로그 선형 시간</td>
+        </tr>
+        <tr>
+            <th>O(N^2)</th>
+            <td>2차 시간</td>
+        </tr>
+        <tr>
+            <th>O(N^3)</th>
+            <td>3차 시간</td>
+        </tr>
+        <tr>
+            <th>O(N^4)</th>
+            <td>4차 시간</td>
+        </tr>
+    </tbody>
+</table>
 
 <blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/1330">https://www.acmicpc.net/problem/1330</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B가 주어졌을 때, A와 B를 비교하는 프로그램을 작성하시오.]]></summary></entry><entry><title type="html">[BOJ] 2557. Hello World (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon3/" rel="alternate" type="text/html" title="[BOJ] 2557. Hello World (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon3</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon3/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>Hello World!를 출력하시오.</p>
-<ul>
-  <li>입력 : 없음</li>
-  <li>출력 : Hello World!</li>
-</ul>
+  <p>만약 시간 제한이 1초인 문제를 해결할 때, 시간 복잡도 …인 알고리즘을 설계해야 한다.</p>
+  <ul>
+    <li>N의 범위가 500인 경우 : O(N^3)</li>
+    <li>N의 범위가 2,000인 경우 : O(N^2)</li>
+    <li>N의 범위가 100,000인 경우 : O(N * logN)</li>
+    <li>N의 범위가 10,000,000인 경우 : O(N^3)</li>
+  </ul>
+</blockquote>
 
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Hello World!")
-</code></pre></div></div>
-
-<h2 id="3-문제-분류">3. 문제 분류</h2>
-<ul>
-  <li>구현</li>
-</ul>
-
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/2557">https://www.acmicpc.net/problem/2557</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 Hello World!를 출력하시오. 입력 : 없음 출력 : Hello World!]]></summary></entry><entry><title type="html">[BOJ] 1000. A+B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon1/" rel="alternate" type="text/html" title="[BOJ] 1000. A+B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon1</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon1/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.</p>
-<ul>
-  <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
-  <li>출력 : 첫째 줄에 A+B를 출력한다.</li>
-</ul>
-
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
-
-print(int(a) + int(b))
-</code></pre></div></div>
-
-<h2 id="3-문제-분류">3. 문제 분류</h2>
-<ul>
-  <li>구현</li>
-  <li>수학 &gt; 사칙연산</li>
-</ul>
-
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1000</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A+B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 1001. A-B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon2/" rel="alternate" type="text/html" title="[BOJ] 1001. A-B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon2</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon2/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오.</p>
-<ul>
-  <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
-  <li>출력 : 첫째 줄에 A-B를 출력한다.</li>
-</ul>
-
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
-
-print(int(a) - int(b))
-</code></pre></div></div>
-
-<h2 id="2-문제-분류">2. 문제 분류</h2>
-<ul>
-  <li>구현</li>
-  <li>수학 &gt; 사칙연산</li>
-</ul>
-
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1001</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A-B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 10718. We love kriii (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon8/" rel="alternate" type="text/html" title="[BOJ] 10718. We love kriii (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon8</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon8/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<h3 id="수행-시간-측정-by-python">수행 시간 측정 by Python</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import time
+start_time = time.time() # 측정 시작
+...
+end_time = time.time() # 측정 종료
+print(end_time - start_time) # 수행 시간 출력
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><category term="Python" /><summary type="html"><![CDATA[알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법 입력 : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함 출력 : 최소 1개 이상의 결과를 가져야 함]]></summary></entry><entry><title type="html">[BOJ] 10718. We love kriii (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon8/" rel="alternate" type="text/html" title="[BOJ] 10718. We love kriii (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon8</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon8/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>ACM-ICPC 인터넷 예선, Regional, 그리고 World Finals까지 이미 2회씩 진출해버린 kriii는 미련을 버리지 못하고 왠지 모르게 올해에도 파주 World Finals 준비 캠프에 참여했다.</p>
 
 <p>대회를 뜰 줄 모르는 지박령 kriii를 위해서 격려의 문구를 출력해주자.</p>
@@ -141,7 +126,70 @@ print(int(a) * int(b))
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/10998">https://www.acmicpc.net/problem/10998</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A×B를 출력한다.]]></summary></entry><entry><title type="html">[BOJ] 2588. 곱셈 (B3)</title><link href="http://localhost:4000/baekjoon/baekjoon5/" rel="alternate" type="text/html" title="[BOJ] 2588. 곱셈 (B3)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon5</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon5/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A×B를 출력한다.]]></summary></entry><entry><title type="html">[BOJ] 1000. A+B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon1/" rel="alternate" type="text/html" title="[BOJ] 1000. A+B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon1</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon1/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<p>두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.</p>
+<ul>
+  <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
+  <li>출력 : 첫째 줄에 A+B를 출력한다.</li>
+</ul>
+
+<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
+
+print(int(a) + int(b))
+</code></pre></div></div>
+
+<h2 id="3-문제-분류">3. 문제 분류</h2>
+<ul>
+  <li>구현</li>
+  <li>수학 &gt; 사칙연산</li>
+</ul>
+
+<blockquote>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1000</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A+B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 1001. A-B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon2/" rel="alternate" type="text/html" title="[BOJ] 1001. A-B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon2</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon2/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<p>두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오.</p>
+<ul>
+  <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
+  <li>출력 : 첫째 줄에 A-B를 출력한다.</li>
+</ul>
+
+<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
+
+print(int(a) - int(b))
+</code></pre></div></div>
+
+<h2 id="2-문제-분류">2. 문제 분류</h2>
+<ul>
+  <li>구현</li>
+  <li>수학 &gt; 사칙연산</li>
+</ul>
+
+<blockquote>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1001</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A-B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 2557. Hello World (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon3/" rel="alternate" type="text/html" title="[BOJ] 2557. Hello World (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon3</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon3/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<p>Hello World!를 출력하시오.</p>
+<ul>
+  <li>입력 : 없음</li>
+  <li>출력 : Hello World!</li>
+</ul>
+
+<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Hello World!")
+</code></pre></div></div>
+
+<h2 id="3-문제-분류">3. 문제 분류</h2>
+<ul>
+  <li>구현</li>
+</ul>
+
+<blockquote>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/2557">https://www.acmicpc.net/problem/2557</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 Hello World!를 출력하시오. 입력 : 없음 출력 : Hello World!]]></summary></entry><entry><title type="html">[BOJ] 2588. 곱셈 (B3)</title><link href="http://localhost:4000/baekjoon/baekjoon5/" rel="alternate" type="text/html" title="[BOJ] 2588. 곱셈 (B3)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon5</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon5/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>(세 자리 수) × (세 자리 수)는 다음과 같은 과정을 통하여 이루어진다.<br /><br />
 <img src="https://www.acmicpc.net/upload/images/f5NhGHVLM4Ix74DtJrwfC97KepPl27s%20(1).png" />
 <br /><br />
@@ -202,7 +250,43 @@ print(int(int(a) % int(b)))
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/10869">https://www.acmicpc.net/problem/10869</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 자연수 A와 B가 주어진다. 이때, A+B, A-B, A*B, A/B(몫), A%B(나머지)를 출력하는 프로그램을 작성하시오.]]></summary></entry><entry><title type="html">[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;</title><link href="http://localhost:4000/frontend/html2/" rel="alternate" type="text/html" title="[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;" /><published>2022-09-21T00:00:00+09:00</published><updated>2022-09-22T00:00:00+09:00</updated><id>http://localhost:4000/frontend/html2</id><content type="html" xml:base="http://localhost:4000/frontend/html2/"><![CDATA[<h2 id="html--html으로-작성된-문서임을-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> : HTML으로 작성된 문서임을 선언하는 태그</h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 자연수 A와 B가 주어진다. 이때, A+B, A-B, A*B, A/B(몫), A%B(나머지)를 출력하는 프로그램을 작성하시오.]]></summary></entry><entry><title type="html">[BOJ] 1330. 두 수 비교하기 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon7/" rel="alternate" type="text/html" title="[BOJ] 1330. 두 수 비교하기 (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon7</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon7/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<p>두 정수 A와 B가 주어졌을 때, A와 B를 비교하는 프로그램을 작성하시오.</p>
+
+<ul>
+  <li>입력 : 첫째 줄에 A와 B가 주어진다. A와 B는 공백 한 칸으로 구분되어져 있다.</li>
+  <li>출력 : 첫째 줄에 다음 세 가지 중 하나를 출력한다.
+    <blockquote>
+      <ul>
+        <li>A가 B보다 큰 경우에는 ‘&gt;’를 출력한다.</li>
+        <li>A가 B보다 작은 경우에는 ‘&lt;’를 출력한다.</li>
+        <li>A와 B가 같은 경우에는 ‘==’를 출력한다.</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>제한 : -10,000 ≤ A, B ≤ 10,000</li>
+</ul>
+
+<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
+
+if int(a) &lt; int(b):
+    print("&lt;")
+elif int(a) &gt; int(b):
+    print("&gt;")
+else:
+    print("==")
+</code></pre></div></div>
+
+<h2 id="3-문제-분류">3. 문제 분류</h2>
+<ul>
+  <li>구현</li>
+</ul>
+
+<blockquote>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/1330">https://www.acmicpc.net/problem/1330</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B가 주어졌을 때, A와 B를 비교하는 프로그램을 작성하시오.]]></summary></entry><entry><title type="html">[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;</title><link href="http://localhost:4000/frontend/html2/" rel="alternate" type="text/html" title="[HTML] 2. HTML 태그 - &amp;lt;head&amp;gt;" /><published>2022-09-21T00:00:00+09:00</published><updated>2022-09-22T00:00:00+09:00</updated><id>http://localhost:4000/frontend/html2</id><content type="html" xml:base="http://localhost:4000/frontend/html2/"><![CDATA[<h2 id="html--html으로-작성된-문서임을-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> : HTML으로 작성된 문서임을 선언하는 태그</h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
 ...
@@ -1160,101 +1244,4 @@ print(int(int(a) % int(b)))
 		color: #000;
 	}
 &lt;/style&gt;
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Frontend" /><category term="HTML" /><summary type="html"><![CDATA[&lt;html&gt; : HTML으로 작성된 문서임을 선언하는 태그]]></summary></entry><entry><title type="html">[HTML] 1. HTML 기초</title><link href="http://localhost:4000/frontend/html1/" rel="alternate" type="text/html" title="[HTML] 1. HTML 기초" /><published>2022-09-20T00:00:00+09:00</published><updated>2022-09-21T00:00:00+09:00</updated><id>http://localhost:4000/frontend/html1</id><content type="html" xml:base="http://localhost:4000/frontend/html1/"><![CDATA[<h2 id="웹-web">웹 (Web)</h2>
-<ul>
-  <li>월드 와이드 웹 (WWW)이라고도 부름</li>
-  <li>인터넷을 통해 제공되는 전세계적인 정보 공유 서비스 공간</li>
-</ul>
-
-<h3 id="인터넷-internet">인터넷 (Internet)</h3>
-<ul>
-  <li>전세계적으로 연결된 컴퓨터 네트워크 공간</li>
-  <li>수많은 클라이언트, 서버, 이들로 구성된 네트워크의 집합</li>
-  <li>TCP/IP 통신 규약을 통해 파일 송수신</li>
-</ul>
-
-<h4 id="네트워크-network">네트워크 (Network)</h4>
-<ul>
-  <li>컴퓨터들이 통신망을 통해 하나로 연결된 통신 체계</li>
-</ul>
-
-<h5 id="클라이언트-client">클라이언트 (Client)</h5>
-<ul>
-  <li>네트워크에 연결되어 서버에 정보 요청 (Request)</li>
-</ul>
-
-<h5 id="서버-server">서버 (Server)</h5>
-<ul>
-  <li>네트워크에 연결되어 클라이언트에 정보 응답 (Response)</li>
-</ul>
-
-<h3 id="웹-서버-web-server">웹 서버 (Web Server)</h3>
-<ul>
-  <li>클라이언트가 요청하는 웹 문서나 프로그램 등의 웹 서비스 (Web Service)을 실행하여 해당 파일이나 그 결과를 사용자에게 제공</li>
-  <li>클라이언트의 요청에 대해 항상 응답하기 위해 항상 실행되어야 함</li>
-</ul>
-
-<h3 id="웹-브라우저-web-browser">웹 브라우저 (Web Browser)</h3>
-<ul>
-  <li>웹 서버에서 웹 문서를 가져오거나 웹 서버로 정보를 보낼 때 사용자가 사용하는 프로그램</li>
-</ul>
-
-<h4 id="웹-문서-web-page">웹 문서 (Web Page)</h4>
-<ul>
-  <li>웹 사이트를 구성하는 개별 문서 (HTML 문서로 작성)</li>
-</ul>
-
-<h3 id="웹-사이트-web-site">웹 사이트 (Web site)</h3>
-<ul>
-  <li>웹을 통해 접속할 수 있는 웹 문서의 집합</li>
-</ul>
-
-<h2 id="html-hyper-text-markup-language">HTML (Hyper Text Markup Language)</h2>
-<ul>
-  <li>웹 문서의 모양을 기술하기 위해 사용하는 마크업 언어</li>
-</ul>
-
-<p>입력 :</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
-	&lt;head&gt;
-		&lt;div style="
-			color: blue;
-			font-size: 15px;
-		"&gt;
-			Hello World!
-		&lt;/div&gt;
-	&lt;/head&gt;
-&lt;/html&gt;
-</code></pre></div></div>
-
-<p>출력 :</p>
-
-<html>
-	<head>
-		<div style="
-			color: blue;
-			font-size: 15px;
-		">
-			Hello World!
-		</div>
-	</head>
-</html>
-
-<h3 id="html-엘리먼트-html-elements">HTML 엘리먼트 (HTML elements)</h3>
-<ul>
-  <li>HTML 내 모든 명령어의 집합</li>
-</ul>
-
-<h3 id="html-태그-html-tags">HTML 태그 (HTML tags)</h3>
-<ul>
-  <li>엘리먼트의 시작과 끝을 표시하는 마크업 기호</li>
-  <li>태그 역시 엘리먼트에 속함</li>
-  <li>여는 태그 (<code class="language-plaintext highlighter-rouge">&lt;tag&gt;</code>)와 닫는 태그 (<code class="language-plaintext highlighter-rouge">&lt;/tag&gt;</code>)가 존재</li>
-</ul>
-
-<h3 id="html-속성-html-attributes">HTML 속성 (HTML attributes)</h3>
-<ul>
-  <li>여는 태그 내에서 명령어를 구체화하는 속성과 그에 해당되는 값
-<br /> (<code class="language-plaintext highlighter-rouge">&lt;tag element="value"&gt;</code>)</li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Frontend" /><category term="HTML" /><summary type="html"><![CDATA[웹 (Web) 월드 와이드 웹 (WWW)이라고도 부름 인터넷을 통해 제공되는 전세계적인 정보 공유 서비스 공간]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Frontend" /><category term="HTML" /><summary type="html"><![CDATA[&lt;html&gt; : HTML으로 작성된 문서임을 선언하는 태그]]></summary></entry></feed>
