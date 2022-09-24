@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-24T20:30:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[BOJ] 1330. 두 수 비교하기 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon7/" rel="alternate" type="text/html" title="[BOJ] 1330. 두 수 비교하기 (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon7</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon7/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-24T20:31:18+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[BOJ] 1330. 두 수 비교하기 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon7/" rel="alternate" type="text/html" title="[BOJ] 1330. 두 수 비교하기 (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon7</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon7/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>두 정수 A와 B가 주어졌을 때, A와 B를 비교하는 프로그램을 작성하시오.</p>
 
 <ul>
-  <li>입력 : 첫째 줄에 A와 B가 주어진다. A와 B는 공백 한 칸으로 구분되어져 있다. 첫째 줄에 다음 세 가지 중 하나를 출력한다.
+  <li>입력 : 첫째 줄에 A와 B가 주어진다. A와 B는 공백 한 칸으로 구분되어져 있다.</li>
+  <li>출력 : 첫째 줄에 다음 세 가지 중 하나를 출력한다.
     <blockquote>
       <ul>
         <li>A가 B보다 큰 경우에는 ‘&gt;’를 출력한다.</li>
