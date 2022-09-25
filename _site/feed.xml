@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-25T00:58:33+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Algorithm] 1. 알고리즘과 복잡도</title><link href="http://localhost:4000/algorithm/algorithm1/" rel="alternate" type="text/html" title="[Algorithm] 1. 알고리즘과 복잡도" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm1</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm1/"><![CDATA[<h2 id="알고리즘-algorithm--어떠한-문제를-해결하기-위한-절차나-방법">알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-25T21:58:48+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Algorithm] 1. 알고리즘과 복잡도</title><link href="http://localhost:4000/algorithm/algorithm1/" rel="alternate" type="text/html" title="[Algorithm] 1. 알고리즘과 복잡도" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm1</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm1/"><![CDATA[<h2 id="알고리즘-algorithm--어떠한-문제를-해결하기-위한-절차나-방법">알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법</h2>
 <ul>
   <li>입력 : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함</li>
   <li>출력 : 최소 1개 이상의 결과를 가져야 함</li>
@@ -126,19 +126,16 @@ print(end_time - start_time) # 수행 시간 출력
     </tbody>
 </table>
 
-<h2 id="상하좌우">‘상하좌우’</h2>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><category term="Python" /><summary type="html"><![CDATA[구현 알고리즘 (Implementation Algorithm) 구현 : 알고리즘을 소스 코드로 바꾸는 과정 구현 알고리즘은 결국 모든 범위의 문제 유형을 포괄하는 개념 문제 해결 분야에서의 구현 유형은 ‘풀이를 떠오르는 것은 쉽지만 소스 코드로 옮기기 어려운 문제’를 의미 대체로 사소한 조건 설정이 많은 문제일수록 구현이 까다로움]]></summary></entry><entry><title type="html">[BOJ] 10718. We love kriii (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon8/" rel="alternate" type="text/html" title="[BOJ] 10718. We love kriii (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon8</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon8/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>ACM-ICPC 인터넷 예선, Regional, 그리고 World Finals까지 이미 2회씩 진출해버린 kriii는 미련을 버리지 못하고 왠지 모르게 올해에도 파주 World Finals 준비 캠프에 참여했다.</p>
-
-<p>대회를 뜰 줄 모르는 지박령 kriii를 위해서 격려의 문구를 출력해주자.</p>
+<h2 id="문제--상하좌우">문제 : 상하좌우</h2>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><category term="Python" /><summary type="html"><![CDATA[구현 알고리즘 (Implementation Algorithm) 구현 : 알고리즘을 소스 코드로 바꾸는 과정 구현 알고리즘은 결국 모든 범위의 문제 유형을 포괄하는 개념 문제 해결 분야에서의 구현 유형은 ‘풀이를 떠오르는 것은 쉽지만 소스 코드로 옮기기 어려운 문제’를 의미 대체로 사소한 조건 설정이 많은 문제일수록 구현이 까다로움]]></summary></entry><entry><title type="html">[BOJ] 2557. Hello World (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon3/" rel="alternate" type="text/html" title="[BOJ] 2557. Hello World (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon3</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon3/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<p>Hello World!를 출력하시오.</p>
 <ul>
-  <li>입력 : 본 문제는 입력이 없다.</li>
-  <li>출력 : 두 줄에 걸쳐 “강한친구 대한육군”을 한 줄에 한 번씩 출력한다.</li>
+  <li>입력 : 없음</li>
+  <li>출력 : Hello World!</li>
 </ul>
 
 <h2 id="2-문제-풀이">2. 문제 풀이</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("강한친구 대한육군")
-print("강한친구 대한육군")
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Hello World!")
 </code></pre></div></div>
 
 <h2 id="3-문제-분류">3. 문제 분류</h2>
@@ -147,8 +144,8 @@ print("강한친구 대한육군")
 </ul>
 
 <blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/10718">https://www.acmicpc.net/problem/10718</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 ACM-ICPC 인터넷 예선, Regional, 그리고 World Finals까지 이미 2회씩 진출해버린 kriii는 미련을 버리지 못하고 왠지 모르게 올해에도 파주 World Finals 준비 캠프에 참여했다.]]></summary></entry><entry><title type="html">[BOJ] 10998. A×B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon4/" rel="alternate" type="text/html" title="[BOJ] 10998. A×B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon4</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon4/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/2557">https://www.acmicpc.net/problem/2557</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 Hello World!를 출력하시오. 입력 : 없음 출력 : Hello World!]]></summary></entry><entry><title type="html">[BOJ] 10998. A×B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon4/" rel="alternate" type="text/html" title="[BOJ] 10998. A×B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon4</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon4/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오.</p>
 <ul>
   <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
@@ -214,26 +211,7 @@ print(int(a) - int(b))
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1001</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A-B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 2557. Hello World (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon3/" rel="alternate" type="text/html" title="[BOJ] 2557. Hello World (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon3</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon3/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>Hello World!를 출력하시오.</p>
-<ul>
-  <li>입력 : 없음</li>
-  <li>출력 : Hello World!</li>
-</ul>
-
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Hello World!")
-</code></pre></div></div>
-
-<h2 id="3-문제-분류">3. 문제 분류</h2>
-<ul>
-  <li>구현</li>
-</ul>
-
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/2557">https://www.acmicpc.net/problem/2557</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 Hello World!를 출력하시오. 입력 : 없음 출력 : Hello World!]]></summary></entry><entry><title type="html">[BOJ] 2588. 곱셈 (B3)</title><link href="http://localhost:4000/baekjoon/baekjoon5/" rel="alternate" type="text/html" title="[BOJ] 2588. 곱셈 (B3)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon5</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon5/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A-B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 2588. 곱셈 (B3)</title><link href="http://localhost:4000/baekjoon/baekjoon5/" rel="alternate" type="text/html" title="[BOJ] 2588. 곱셈 (B3)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon5</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon5/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>(세 자리 수) × (세 자리 수)는 다음과 같은 과정을 통하여 이루어진다.<br /><br />
 <img src="https://www.acmicpc.net/upload/images/f5NhGHVLM4Ix74DtJrwfC97KepPl27s%20(1).png" />
 <br /><br />
@@ -330,4 +308,26 @@ else:
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/1330">https://www.acmicpc.net/problem/1330</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B가 주어졌을 때, A와 B를 비교하는 프로그램을 작성하시오.]]></summary></entry></feed>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B가 주어졌을 때, A와 B를 비교하는 프로그램을 작성하시오.]]></summary></entry><entry><title type="html">[BOJ] 10718. We love kriii (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon8/" rel="alternate" type="text/html" title="[BOJ] 10718. We love kriii (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon8</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon8/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<p>ACM-ICPC 인터넷 예선, Regional, 그리고 World Finals까지 이미 2회씩 진출해버린 kriii는 미련을 버리지 못하고 왠지 모르게 올해에도 파주 World Finals 준비 캠프에 참여했다.</p>
+
+<p>대회를 뜰 줄 모르는 지박령 kriii를 위해서 격려의 문구를 출력해주자.</p>
+<ul>
+  <li>입력 : 본 문제는 입력이 없다.</li>
+  <li>출력 : 두 줄에 걸쳐 “강한친구 대한육군”을 한 줄에 한 번씩 출력한다.</li>
+</ul>
+
+<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("강한친구 대한육군")
+print("강한친구 대한육군")
+</code></pre></div></div>
+
+<h2 id="3-문제-분류">3. 문제 분류</h2>
+<ul>
+  <li>구현</li>
+</ul>
+
+<blockquote>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/10718">https://www.acmicpc.net/problem/10718</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 ACM-ICPC 인터넷 예선, Regional, 그리고 World Finals까지 이미 2회씩 진출해버린 kriii는 미련을 버리지 못하고 왠지 모르게 올해에도 파주 World Finals 준비 캠프에 참여했다.]]></summary></entry></feed>
