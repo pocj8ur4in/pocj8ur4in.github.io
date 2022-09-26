@@ -53,6 +53,12 @@ var store = [{
         "url": "/baekjoon/baekjoon8/",
         "teaser": null
       },{
+        "title": "[BOJ] 10430. 나머지 (B5)",
+        "excerpt":"1. 문제 조건 (A + B) % C는 ((A % C) + (B % C))% C 와 같을까? (A × B) % C는 ((A % C) × (B % C))% C 와 같을까? 세 수 A, B, C가 주어졌을 때, 위의 네 가지 값을 구하는 프로그램을 작성하시오. 입력 : 첫째...","categories": ["Baekjoon"],
+        "tags": ["Python"],
+        "url": "/baekjoon/baekjoon9/",
+        "teaser": null
+      },{
         "title": "[Algorithm] 1. 알고리즘과 복잡도",
         "excerpt":"알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법 입력 : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함 출력 : 최소 1개 이상의 결과를 가져야 함 알고리즘의 복잡도 (Complexity) : 알고리즘의 성능을 나타내는 척도 공간 복잡도 (Space Complexity) : 문제를 해결할 때 걸리는 공간과 입력의 함수 관계 특정한 크기의 입력에...","categories": ["Algorithm"],
         "tags": ["Python"],
