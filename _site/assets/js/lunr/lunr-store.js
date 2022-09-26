@@ -64,4 +64,10 @@ var store = [{
         "tags": ["Python"],
         "url": "/algorithm/algorithm2/",
         "teaser": null
+      },{
+        "title": "[macOS] 홈브류 (Homebrew)",
+        "excerpt":"Homebrew Ruby로 작성된 macOS용 패키지 관리 어플리케이션 (Package Management Application) 커맨드라인 도구나 시스템 패키지 설치에 사용 cask Package : GUI 어플리케이션 설치도 가능하게 해주는 Homebrew 확장 패키지 mas Package : App Store 어플리케이션 설치도 가능하게 해주는 Homebrew 확장 패키지 Homebrew 설치 터미널 실행 후 다음 명령어를 입력 /bin/bash -c \"$(curl...","categories": ["Mac"],
+        "tags": [],
+        "url": "/mac/homebrew1/",
+        "teaser": null
       }]

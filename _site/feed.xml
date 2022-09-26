@@ -1,4 +1,234 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-25T21:58:48+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Algorithm] 1. 알고리즘과 복잡도</title><link href="http://localhost:4000/algorithm/algorithm1/" rel="alternate" type="text/html" title="[Algorithm] 1. 알고리즘과 복잡도" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm1</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm1/"><![CDATA[<h2 id="알고리즘-algorithm--어떠한-문제를-해결하기-위한-절차나-방법">알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-26T17:38:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[macOS] 홈브류 (Homebrew)</title><link href="http://localhost:4000/mac/homebrew1/" rel="alternate" type="text/html" title="[macOS] 홈브류 (Homebrew)" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/mac/homebrew1</id><content type="html" xml:base="http://localhost:4000/mac/homebrew1/"><![CDATA[<h2 id="homebrew"><a href="https://brew.sh/index_ko">Homebrew</a></h2>
+
+<ul>
+  <li>Ruby로 작성된 macOS용 패키지 관리 어플리케이션 (Package Management Application)</li>
+  <li>커맨드라인 도구나 시스템 패키지 설치에 사용</li>
+  <li>cask Package : GUI 어플리케이션 설치도 가능하게 해주는 Homebrew 확장 패키지</li>
+  <li>mas Package : App Store 어플리케이션 설치도 가능하게 해주는 Homebrew 확장 패키지</li>
+</ul>
+
+<h3 id="homebrew-설치">Homebrew 설치</h3>
+<ul>
+  <li>터미널 실행 후 다음 명령어를 입력</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+</code></pre></div></div>
+
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 Homebrew가 정상적으로 설치되었는지 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew --version
+// "Homebrew X.X.X" 출력 : 정상 설치
+// "zsh: command not found: brew" 출력 : 설치 오류
+</code></pre></div></div>
+
+<h3 id="cask-package-설치">cask Package 설치</h3>
+<ul>
+  <li>터미널 창에 다음 명령어를 입력</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install cask
+</code></pre></div></div>
+
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 cask Package가 정상적으로 설치되었는지 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew list
+</code></pre></div></div>
+
+<h3 id="mas-package-설치">mas Package 설치</h3>
+<ul>
+  <li>터미널 창에 다음 명령어를 입력</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install mas
+</code></pre></div></div>
+
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 mas Package가 정상적으로 설치되었는지 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew list
+</code></pre></div></div>
+
+<h3 id="homebrew-명령어">Homebrew 명령어</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Homebrew 명령어 이름</th>
+            <th>Homebrew 명령어 설명</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>brew --version</th>
+            <td>Homebrew의 버전 정보 확인</td>
+        </tr>
+        <tr>
+            <th>brew doctor</th>
+            <td>Homebrew 설치 환경을 검사</td>
+        </tr>
+        <tr>
+            <th>brew update</th>
+            <td>Homebrew를 최신 버전으로 업데이트</td>
+        </tr>
+        <tr>
+            <th>brew list</th>
+            <td>설치된 패키지를 확인</td>
+        </tr>
+        <tr>
+            <th>brew upgrade</th>
+            <td>설치된 모든 패키지를 업데이트</td>
+        </tr>
+        <tr>
+            <th>brew search (패키지명)</th>
+            <td>해당 패키지가 설치되어 있는지 검색</td>
+        </tr>
+        <tr>
+            <th>brew install (패키지명)</th>
+            <td>해당 패키지를 최신 버전으로 설치</td>
+        </tr>
+        <tr>
+            <th>brew info (패키지명)</th>
+            <td>해당 패키지의 정보 확인</td>
+        </tr>
+        <tr>
+            <th>brew upgrade (패키지명)</th>
+            <td>해당 패키지를 업데이트</td>
+        </tr>
+        <tr>
+            <th>brew uninstall (패키지명)</th>
+            <td>해당 패키지를 삭제</td>
+        </tr>
+        <tr>
+            <th>brew outdated</th>
+            <td>최신 버전이 존재하는 패키지 확인</td>
+        </tr>
+        <tr>
+            <th>brew cleanup (패키지명)</th>
+            <td>해당 패키지의 구버전에 해당하는 파일 삭제</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="cask-명령어">cask 명령어</h3>
+<ul>
+  <li>기존의 brew 명령어 뒤에 <code class="language-plaintext highlighter-rouge">--cask</code>를 추가</li>
+</ul>
+
+<h3 id="mas-명령어">mas 명령어</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>mas 명령어 이름</th>
+            <th>mas 명령어 설명</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>mas version</th>
+            <td>mas의 버전 정보 확인</td>
+        </tr>
+        <tr>
+            <th>mas list</th>
+            <td>mas로 설치된 패키지 확인</td>
+        </tr>
+        <tr>
+            <th>mas upgrade</th>
+            <td>mas로 설치된 모든 패키지를 최신 버전으로 업데이트</td>
+        </tr>
+        <tr>
+            <th>mas search (검색어)</th>
+            <td>앱스토어에서 해당 검색어와 일치하는 패키지 검색</td>
+        </tr>
+        <tr>
+            <th>mas install (패키지 ID)</th>
+            <td>해당되는 ID를 가진 패키지를 최신 버전으로 설치</td>
+        </tr>
+        <tr>
+            <th>mas upgrade (패키지 ID)</th>
+            <td>해당되는 ID를 가진 패키지를 최신 버전으로 업데이트</td>
+        </tr>
+        <tr>
+            <th>mas uninstall (패키지명)</th>
+            <td>mas로 설치된 해당 패키지를 삭제</td>
+        </tr>
+        <tr>
+            <th>mas outdated</th>
+            <td>mas로 설치된 패키지 중 최신 버전이 존재하는 패키지 확인</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="homebrew-삭제">Homebrew 삭제</h3>
+<ul>
+  <li>터미널 실행 후 다음 명령어를 입력</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Homebrew로 설치한 모든 package를 일괄 삭제
+brew remove --force --ignore-dependencies $(brew list)
+
+// Homebrew 삭제
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+</code></pre></div></div>
+
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 Homebrew가 정상적으로 삭제되었는지 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew --version
+// "zsh: command not found: brew" 출력 : 정상 삭제
+// "Homebrew X.X.X" 출력 : 삭제 오류
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Mac" /><summary type="html"><![CDATA[Homebrew]]></summary></entry><entry><title type="html">[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)</title><link href="http://localhost:4000/algorithm/algorithm2/" rel="alternate" type="text/html" title="[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm2</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm2/"><![CDATA[<h2 id="구현-알고리즘-implementation-algorithm">구현 알고리즘 (Implementation Algorithm)</h2>
+<ul>
+  <li>구현 : 알고리즘을 소스 코드로 바꾸는 과정</li>
+  <li>구현 알고리즘은 결국 모든 범위의 문제 유형을 포괄하는 개념</li>
+  <li>문제 해결 분야에서의 구현 유형은 ‘풀이를 떠오르는 것은 쉽지만 소스 코드로 옮기기 어려운 문제’를 의미</li>
+  <li>대체로 사소한 조건 설정이 많은 문제일수록 구현이 까다로움</li>
+</ul>
+
+<h2 id="python으로-구현-시-고려해야-할-제약-사항">Python으로 구현 시 고려해야 할 제약 사항</h2>
+
+<h3 id="python에서의-변수-표현-범위">Python에서의 변수 표현 범위</h3>
+<ul>
+  <li>C/C++/JAVA와 달리, Python은 프로그래머가 직접 정수형 변수 자료형을 지정할 필요가 없고 아주 큰 수의 연산 역시 기본으로 지원</li>
+  <li>실수형 변수는 유효 숫자에 따라 연산하기에 원하는 결과가 나오지 않을 수 있음</li>
+</ul>
+
+<h2 id="python에서의-list-크기">Python에서의 list 크기</h2>
+<ul>
+  <li>Python에서 여러 개의 변수를 사용할 때 list를 이용하는데, 이때 제한된 메모리를 초과할 수 있음</li>
+</ul>
+
+<table>
+	<thead>
+		<tr>
+			<th>list의 길이</th>
+			<th>메모리 사용량</th>
+		</tr>
+	</thead>
+   	<tbody>
+        <tr>
+            <th>1,000</th>
+            <td>약 4KB</td>
+        </tr>
+        <tr>
+            <th>1,000,000</th>
+            <td>약 4MB</td>
+        </tr>
+        <tr>
+            <th>1,000,000,000</th>
+            <td>약 40MB</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="문제--상하좌우">문제 : 상하좌우</h2>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><category term="Python" /><summary type="html"><![CDATA[구현 알고리즘 (Implementation Algorithm) 구현 : 알고리즘을 소스 코드로 바꾸는 과정 구현 알고리즘은 결국 모든 범위의 문제 유형을 포괄하는 개념 문제 해결 분야에서의 구현 유형은 ‘풀이를 떠오르는 것은 쉽지만 소스 코드로 옮기기 어려운 문제’를 의미 대체로 사소한 조건 설정이 많은 문제일수록 구현이 까다로움]]></summary></entry><entry><title type="html">[Algorithm] 1. 알고리즘과 복잡도</title><link href="http://localhost:4000/algorithm/algorithm1/" rel="alternate" type="text/html" title="[Algorithm] 1. 알고리즘과 복잡도" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm1</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm1/"><![CDATA[<h2 id="알고리즘-algorithm--어떠한-문제를-해결하기-위한-절차나-방법">알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법</h2>
 <ul>
   <li>입력 : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함</li>
   <li>출력 : 최소 1개 이상의 결과를 가져야 함</li>
@@ -82,70 +312,7 @@ start_time = time.time() # 측정 시작
 ...
 end_time = time.time() # 측정 종료
 print(end_time - start_time) # 수행 시간 출력
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><category term="Python" /><summary type="html"><![CDATA[알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법 입력 : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함 출력 : 최소 1개 이상의 결과를 가져야 함]]></summary></entry><entry><title type="html">[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)</title><link href="http://localhost:4000/algorithm/algorithm2/" rel="alternate" type="text/html" title="[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm2</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm2/"><![CDATA[<h2 id="구현-알고리즘-implementation-algorithm">구현 알고리즘 (Implementation Algorithm)</h2>
-<ul>
-  <li>구현 : 알고리즘을 소스 코드로 바꾸는 과정</li>
-  <li>구현 알고리즘은 결국 모든 범위의 문제 유형을 포괄하는 개념</li>
-  <li>문제 해결 분야에서의 구현 유형은 ‘풀이를 떠오르는 것은 쉽지만 소스 코드로 옮기기 어려운 문제’를 의미</li>
-  <li>대체로 사소한 조건 설정이 많은 문제일수록 구현이 까다로움</li>
-</ul>
-
-<h2 id="python으로-구현-시-고려해야-할-제약-사항">Python으로 구현 시 고려해야 할 제약 사항</h2>
-
-<h3 id="python에서의-변수-표현-범위">Python에서의 변수 표현 범위</h3>
-<ul>
-  <li>C/C++/JAVA와 달리, Python은 프로그래머가 직접 정수형 변수 자료형을 지정할 필요가 없고 아주 큰 수의 연산 역시 기본으로 지원</li>
-  <li>실수형 변수는 유효 숫자에 따라 연산하기에 원하는 결과가 나오지 않을 수 있음</li>
-</ul>
-
-<h2 id="python에서의-list-크기">Python에서의 list 크기</h2>
-<ul>
-  <li>Python에서 여러 개의 변수를 사용할 때 list를 이용하는데, 이때 제한된 메모리를 초과할 수 있음</li>
-</ul>
-
-<table>
-	<thead>
-		<tr>
-			<th>list의 길이</th>
-			<th>메모리 사용량</th>
-		</tr>
-	</thead>
-   	<tbody>
-        <tr>
-            <th>1,000</th>
-            <td>약 4KB</td>
-        </tr>
-        <tr>
-            <th>1,000,000</th>
-            <td>약 4MB</td>
-        </tr>
-        <tr>
-            <th>1,000,000,000</th>
-            <td>약 40MB</td>
-        </tr>
-    </tbody>
-</table>
-
-<h2 id="문제--상하좌우">문제 : 상하좌우</h2>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><category term="Python" /><summary type="html"><![CDATA[구현 알고리즘 (Implementation Algorithm) 구현 : 알고리즘을 소스 코드로 바꾸는 과정 구현 알고리즘은 결국 모든 범위의 문제 유형을 포괄하는 개념 문제 해결 분야에서의 구현 유형은 ‘풀이를 떠오르는 것은 쉽지만 소스 코드로 옮기기 어려운 문제’를 의미 대체로 사소한 조건 설정이 많은 문제일수록 구현이 까다로움]]></summary></entry><entry><title type="html">[BOJ] 2557. Hello World (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon3/" rel="alternate" type="text/html" title="[BOJ] 2557. Hello World (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon3</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon3/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>Hello World!를 출력하시오.</p>
-<ul>
-  <li>입력 : 없음</li>
-  <li>출력 : Hello World!</li>
-</ul>
-
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Hello World!")
-</code></pre></div></div>
-
-<h2 id="3-문제-분류">3. 문제 분류</h2>
-<ul>
-  <li>구현</li>
-</ul>
-
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/2557">https://www.acmicpc.net/problem/2557</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 Hello World!를 출력하시오. 입력 : 없음 출력 : Hello World!]]></summary></entry><entry><title type="html">[BOJ] 10998. A×B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon4/" rel="alternate" type="text/html" title="[BOJ] 10998. A×B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon4</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon4/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><category term="Python" /><summary type="html"><![CDATA[알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법 입력 : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함 출력 : 최소 1개 이상의 결과를 가져야 함]]></summary></entry><entry><title type="html">[BOJ] 10998. A×B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon4/" rel="alternate" type="text/html" title="[BOJ] 10998. A×B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon4</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon4/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오.</p>
 <ul>
   <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
@@ -167,85 +334,7 @@ print(int(a) * int(b))
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/10998">https://www.acmicpc.net/problem/10998</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A×B를 출력한다.]]></summary></entry><entry><title type="html">[BOJ] 1000. A+B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon1/" rel="alternate" type="text/html" title="[BOJ] 1000. A+B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon1</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon1/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.</p>
-<ul>
-  <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
-  <li>출력 : 첫째 줄에 A+B를 출력한다.</li>
-</ul>
-
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
-
-print(int(a) + int(b))
-</code></pre></div></div>
-
-<h2 id="3-문제-분류">3. 문제 분류</h2>
-<ul>
-  <li>구현</li>
-  <li>수학 &gt; 사칙연산</li>
-</ul>
-
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1000</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A+B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 1001. A-B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon2/" rel="alternate" type="text/html" title="[BOJ] 1001. A-B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon2</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon2/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오.</p>
-<ul>
-  <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
-  <li>출력 : 첫째 줄에 A-B를 출력한다.</li>
-</ul>
-
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
-
-print(int(a) - int(b))
-</code></pre></div></div>
-
-<h2 id="2-문제-분류">2. 문제 분류</h2>
-<ul>
-  <li>구현</li>
-  <li>수학 &gt; 사칙연산</li>
-</ul>
-
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1001</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A-B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 2588. 곱셈 (B3)</title><link href="http://localhost:4000/baekjoon/baekjoon5/" rel="alternate" type="text/html" title="[BOJ] 2588. 곱셈 (B3)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon5</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon5/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>(세 자리 수) × (세 자리 수)는 다음과 같은 과정을 통하여 이루어진다.<br /><br />
-<img src="https://www.acmicpc.net/upload/images/f5NhGHVLM4Ix74DtJrwfC97KepPl27s%20(1).png" />
-<br /><br />
-(1)과 (2)위치에 들어갈 세 자리 자연수가 주어질 때 (3), (4), (5), (6)위치에 들어갈 값을 구하는 프로그램을 작성하시오.</p>
-
-<ul>
-  <li>입력 : 첫째 줄에 (1)의 위치에 들어갈 세 자리 자연수가, 둘째 줄에 (2)의 위치에 들어갈 세자리 자연수가 주어진다.</li>
-  <li>출력 : 첫째 줄부터 넷째 줄까지 차례대로 (3), (4), (5), (6)에 들어갈 값을 출력한다.</li>
-</ul>
-
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = int(input())
-b = int(input())
-
-c = (a * (b % 10) / 1)
-d = (a * (b % 100 - b % 10) / 10)
-e = (a * (b % 1000 - b % 100) / 100)
-
-print(int(c))
-print(int(d))
-print(int(e))
-print(a * b)
-</code></pre></div></div>
-
-<h2 id="3-문제-분류">3. 문제 분류</h2>
-<ul>
-  <li>구현</li>
-  <li>수학 &gt; 사칙연산</li>
-</ul>
-
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/2588">https://www.acmicpc.net/problem/2588</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 (세 자리 수) × (세 자리 수)는 다음과 같은 과정을 통하여 이루어진다. (1)과 (2)위치에 들어갈 세 자리 자연수가 주어질 때 (3), (4), (5), (6)위치에 들어갈 값을 구하는 프로그램을 작성하시오.]]></summary></entry><entry><title type="html">[BOJ] 10869. 사칙연산 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon6/" rel="alternate" type="text/html" title="[BOJ] 10869. 사칙연산 (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon6</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon6/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A×B를 출력한다.]]></summary></entry><entry><title type="html">[BOJ] 10869. 사칙연산 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon6/" rel="alternate" type="text/html" title="[BOJ] 10869. 사칙연산 (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon6</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon6/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>두 자연수 A와 B가 주어진다. 이때, A+B, A-B, A*B, A/B(몫), A%B(나머지)를 출력하는 프로그램을 작성하시오.</p>
 
 <ul>
@@ -330,4 +419,67 @@ print("강한친구 대한육군")
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/10718">https://www.acmicpc.net/problem/10718</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 ACM-ICPC 인터넷 예선, Regional, 그리고 World Finals까지 이미 2회씩 진출해버린 kriii는 미련을 버리지 못하고 왠지 모르게 올해에도 파주 World Finals 준비 캠프에 참여했다.]]></summary></entry></feed>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 ACM-ICPC 인터넷 예선, Regional, 그리고 World Finals까지 이미 2회씩 진출해버린 kriii는 미련을 버리지 못하고 왠지 모르게 올해에도 파주 World Finals 준비 캠프에 참여했다.]]></summary></entry><entry><title type="html">[BOJ] 1000. A+B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon1/" rel="alternate" type="text/html" title="[BOJ] 1000. A+B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon1</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon1/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<p>두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.</p>
+<ul>
+  <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
+  <li>출력 : 첫째 줄에 A+B를 출력한다.</li>
+</ul>
+
+<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
+
+print(int(a) + int(b))
+</code></pre></div></div>
+
+<h2 id="3-문제-분류">3. 문제 분류</h2>
+<ul>
+  <li>구현</li>
+  <li>수학 &gt; 사칙연산</li>
+</ul>
+
+<blockquote>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1000</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A+B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 1001. A-B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon2/" rel="alternate" type="text/html" title="[BOJ] 1001. A-B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon2</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon2/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<p>두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오.</p>
+<ul>
+  <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
+  <li>출력 : 첫째 줄에 A-B를 출력한다.</li>
+</ul>
+
+<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
+
+print(int(a) - int(b))
+</code></pre></div></div>
+
+<h2 id="2-문제-분류">2. 문제 분류</h2>
+<ul>
+  <li>구현</li>
+  <li>수학 &gt; 사칙연산</li>
+</ul>
+
+<blockquote>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1001</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A-B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 2557. Hello World (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon3/" rel="alternate" type="text/html" title="[BOJ] 2557. Hello World (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon3</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon3/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<p>Hello World!를 출력하시오.</p>
+<ul>
+  <li>입력 : 없음</li>
+  <li>출력 : Hello World!</li>
+</ul>
+
+<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("Hello World!")
+</code></pre></div></div>
+
+<h2 id="3-문제-분류">3. 문제 분류</h2>
+<ul>
+  <li>구현</li>
+</ul>
+
+<blockquote>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/2557">https://www.acmicpc.net/problem/2557</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 Hello World!를 출력하시오. 입력 : 없음 출력 : Hello World!]]></summary></entry></feed>
