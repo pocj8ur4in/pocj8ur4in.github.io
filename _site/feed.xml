@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-27T13:49:37+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[macOS] 홈브류 (Homebrew)</title><link href="http://localhost:4000/mac/homebrew1/" rel="alternate" type="text/html" title="[macOS] 홈브류 (Homebrew)" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/mac/homebrew1</id><content type="html" xml:base="http://localhost:4000/mac/homebrew1/"><![CDATA[<h2 id="homebrew"><a href="https://brew.sh/index_ko">Homebrew</a></h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-27T14:07:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Blog] macOS에서 Minimal Mistakes로 깃허브 블로그 만들기</title><link href="http://localhost:4000/github.io/blog1/" rel="alternate" type="text/html" title="[Blog] macOS에서 Minimal Mistakes로 깃허브 블로그 만들기" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/github.io/blog1</id><content type="html" xml:base="http://localhost:4000/github.io/blog1/"><![CDATA[<h2 id="기본-환경-설정">기본 환경 설정</h2>
+
+<h3 id="ruby-설치">Ruby 설치</h3>
+<ul>
+  <li>macOS에서는 Ruby가 기본적으로 설치되어 있음</li>
+  <li>터미널 실행 후 다음 명령어를 입력해 설치 여부 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby -v
+// ruby X.X.X 출력 : 정상 설치
+// "zsh: command not found: ruby" 출력 : 설치 오류
+</code></pre></div></div>
+
+<h3 id="jekyll-설치">Jekyll 설치</h3>
+<ul>
+  <li>터미널 창에 다음 명령어를 입력</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll
+</code></pre></div></div>
+
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 Jekyll가 정상적으로 설치되었는지 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll -v
+// jekyll X.X.X 출력 : 정상 설치
+// "zsh: command not found: jekyll" 출력 : 설치 오류
+</code></pre></div></div>
+
+<h3 id="minimal-mistakes-theme-설치"><code class="language-plaintext highlighter-rouge">minimal-mistakes theme</code> 설치</h3>
+<ul>
+  <li>
+    <p><a href="https://mmistakes.github.io/minimal-mistakes/">minimal-mistakes 공식 홈페이지</a>에서 테마 다운로드</p>
+  </li>
+  <li>
+    <p>아래 사진에 있는, 필요한 파일 및 폴더만 남기고 나머지는 삭제</p>
+  </li>
+</ul>
+
+<p><img src="https://i.postimg.cc/855KdXRn/blog1-1.png" width="240" /></p>
+
+<h3 id="github-repository-생성">Github Repository 생성</h3>
+<ul>
+  <li>Github에 <code class="language-plaintext highlighter-rouge">(Github ID).github.io</code>의 형식으로 Repository 생성</li>
+</ul>
+
+<p><img src="https://i.postimg.cc/FRFS4GcW/blog1-2.png" width="360" /></p>
+
+<ul>
+  <li>지금까지 정리한 테마 파일들을 push</li>
+  <li>블로그 주소 : <code class="language-plaintext highlighter-rouge">https://(Github ID).github.io</code></li>
+</ul>
+
+<h3 id="로컬-서버-설정-및-실행">로컬 서버 설정 및 실행</h3>
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 <code class="language-plaintext highlighter-rouge">.jekyll-cache</code> 폴더와 <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> 파일 생성</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler
+bundle exec jekyll serve
+</code></pre></div></div>
+
+<ul>
+  <li><a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a>으로 로컬 서버 접속</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github.io" /><category term="HTML" /><category term="JavaScript" /><category term="SCSS" /><category term="Ruby" /><summary type="html"><![CDATA[기본 환경 설정]]></summary></entry><entry><title type="html">[macOS] 홈브류 (Homebrew)</title><link href="http://localhost:4000/mac/homebrew1/" rel="alternate" type="text/html" title="[macOS] 홈브류 (Homebrew)" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/mac/homebrew1</id><content type="html" xml:base="http://localhost:4000/mac/homebrew1/"><![CDATA[<h2 id="homebrew"><a href="https://brew.sh/index_ko">Homebrew</a></h2>
 
 <ul>
   <li>Ruby로 작성된 macOS용 패키지 관리 어플리케이션 (Package Management Application)</li>
@@ -184,51 +249,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew --version
 // "zsh: command not found: brew" 출력 : 정상 삭제
 // "Homebrew X.X.X" 출력 : 삭제 오류
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Mac" /><summary type="html"><![CDATA[Homebrew]]></summary></entry><entry><title type="html">[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)</title><link href="http://localhost:4000/algorithm/algorithm2/" rel="alternate" type="text/html" title="[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm2</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm2/"><![CDATA[<h2 id="구현-알고리즘-implementation-algorithm">구현 알고리즘 (Implementation Algorithm)</h2>
-<ul>
-  <li>구현 : 알고리즘을 소스 코드로 바꾸는 과정</li>
-  <li>구현 알고리즘은 결국 모든 범위의 문제 유형을 포괄하는 개념</li>
-  <li>문제 해결 분야에서의 구현 유형은 ‘풀이를 떠오르는 것은 쉽지만 소스 코드로 옮기기 어려운 문제’를 의미</li>
-  <li>대체로 사소한 조건 설정이 많은 문제일수록 구현이 까다로움</li>
-</ul>
-
-<h2 id="python으로-구현-시-고려해야-할-제약-사항">Python으로 구현 시 고려해야 할 제약 사항</h2>
-
-<h3 id="python에서의-변수-표현-범위">Python에서의 변수 표현 범위</h3>
-<ul>
-  <li>C/C++/JAVA와 달리, Python은 프로그래머가 직접 정수형 변수 자료형을 지정할 필요가 없고 아주 큰 수의 연산 역시 기본으로 지원</li>
-  <li>실수형 변수는 유효 숫자에 따라 연산하기에 원하는 결과가 나오지 않을 수 있음</li>
-</ul>
-
-<h2 id="python에서의-list-크기">Python에서의 list 크기</h2>
-<ul>
-  <li>Python에서 여러 개의 변수를 사용할 때 list를 이용하는데, 이때 제한된 메모리를 초과할 수 있음</li>
-</ul>
-
-<table>
-	<thead>
-		<tr>
-			<th>list의 길이</th>
-			<th>메모리 사용량</th>
-		</tr>
-	</thead>
-   	<tbody>
-        <tr>
-            <th>1,000</th>
-            <td>약 4KB</td>
-        </tr>
-        <tr>
-            <th>1,000,000</th>
-            <td>약 4MB</td>
-        </tr>
-        <tr>
-            <th>1,000,000,000</th>
-            <td>약 40MB</td>
-        </tr>
-    </tbody>
-</table>
-
-<h2 id="문제--상하좌우">문제 : 상하좌우</h2>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><category term="Python" /><summary type="html"><![CDATA[구현 알고리즘 (Implementation Algorithm) 구현 : 알고리즘을 소스 코드로 바꾸는 과정 구현 알고리즘은 결국 모든 범위의 문제 유형을 포괄하는 개념 문제 해결 분야에서의 구현 유형은 ‘풀이를 떠오르는 것은 쉽지만 소스 코드로 옮기기 어려운 문제’를 의미 대체로 사소한 조건 설정이 많은 문제일수록 구현이 까다로움]]></summary></entry><entry><title type="html">[Algorithm] 1. 알고리즘과 복잡도</title><link href="http://localhost:4000/algorithm/algorithm1/" rel="alternate" type="text/html" title="[Algorithm] 1. 알고리즘과 복잡도" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm1</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm1/"><![CDATA[<h2 id="알고리즘-algorithm--어떠한-문제를-해결하기-위한-절차나-방법">알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법</h2>
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Mac" /><summary type="html"><![CDATA[Homebrew]]></summary></entry><entry><title type="html">[Algorithm] 1. 알고리즘과 복잡도</title><link href="http://localhost:4000/algorithm/algorithm1/" rel="alternate" type="text/html" title="[Algorithm] 1. 알고리즘과 복잡도" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm1</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm1/"><![CDATA[<h2 id="알고리즘-algorithm--어떠한-문제를-해결하기-위한-절차나-방법">알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법</h2>
 <ul>
   <li>입력 : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함</li>
   <li>출력 : 최소 1개 이상의 결과를 가져야 함</li>
@@ -312,29 +333,51 @@ start_time = time.time() # 측정 시작
 ...
 end_time = time.time() # 측정 종료
 print(end_time - start_time) # 수행 시간 출력
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><category term="Python" /><summary type="html"><![CDATA[알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법 입력 : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함 출력 : 최소 1개 이상의 결과를 가져야 함]]></summary></entry><entry><title type="html">[BOJ] 10998. A×B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon4/" rel="alternate" type="text/html" title="[BOJ] 10998. A×B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon4</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon4/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오.</p>
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><category term="Python" /><summary type="html"><![CDATA[알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법 입력 : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함 출력 : 최소 1개 이상의 결과를 가져야 함]]></summary></entry><entry><title type="html">[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)</title><link href="http://localhost:4000/algorithm/algorithm2/" rel="alternate" type="text/html" title="[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm2</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm2/"><![CDATA[<h2 id="구현-알고리즘-implementation-algorithm">구현 알고리즘 (Implementation Algorithm)</h2>
 <ul>
-  <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
-  <li>출력 : 첫째 줄에 A×B를 출력한다.</li>
+  <li>구현 : 알고리즘을 소스 코드로 바꾸는 과정</li>
+  <li>구현 알고리즘은 결국 모든 범위의 문제 유형을 포괄하는 개념</li>
+  <li>문제 해결 분야에서의 구현 유형은 ‘풀이를 떠오르는 것은 쉽지만 소스 코드로 옮기기 어려운 문제’를 의미</li>
+  <li>대체로 사소한 조건 설정이 많은 문제일수록 구현이 까다로움</li>
 </ul>
 
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+<h2 id="python으로-구현-시-고려해야-할-제약-사항">Python으로 구현 시 고려해야 할 제약 사항</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
-
-print(int(a) * int(b))
-</code></pre></div></div>
-
-<h2 id="3-문제-분류">3. 문제 분류</h2>
+<h3 id="python에서의-변수-표현-범위">Python에서의 변수 표현 범위</h3>
 <ul>
-  <li>구현</li>
-  <li>수학 &gt; 사칙연산</li>
+  <li>C/C++/JAVA와 달리, Python은 프로그래머가 직접 정수형 변수 자료형을 지정할 필요가 없고 아주 큰 수의 연산 역시 기본으로 지원</li>
+  <li>실수형 변수는 유효 숫자에 따라 연산하기에 원하는 결과가 나오지 않을 수 있음</li>
 </ul>
 
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/10998">https://www.acmicpc.net/problem/10998</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A×B를 출력한다.]]></summary></entry><entry><title type="html">[BOJ] 2588. 곱셈 (B3)</title><link href="http://localhost:4000/baekjoon/baekjoon5/" rel="alternate" type="text/html" title="[BOJ] 2588. 곱셈 (B3)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon5</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon5/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<h2 id="python에서의-list-크기">Python에서의 list 크기</h2>
+<ul>
+  <li>Python에서 여러 개의 변수를 사용할 때 list를 이용하는데, 이때 제한된 메모리를 초과할 수 있음</li>
+</ul>
+
+<table>
+	<thead>
+		<tr>
+			<th>list의 길이</th>
+			<th>메모리 사용량</th>
+		</tr>
+	</thead>
+   	<tbody>
+        <tr>
+            <th>1,000</th>
+            <td>약 4KB</td>
+        </tr>
+        <tr>
+            <th>1,000,000</th>
+            <td>약 4MB</td>
+        </tr>
+        <tr>
+            <th>1,000,000,000</th>
+            <td>약 40MB</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="문제--상하좌우">문제 : 상하좌우</h2>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><category term="Python" /><summary type="html"><![CDATA[구현 알고리즘 (Implementation Algorithm) 구현 : 알고리즘을 소스 코드로 바꾸는 과정 구현 알고리즘은 결국 모든 범위의 문제 유형을 포괄하는 개념 문제 해결 분야에서의 구현 유형은 ‘풀이를 떠오르는 것은 쉽지만 소스 코드로 옮기기 어려운 문제’를 의미 대체로 사소한 조건 설정이 많은 문제일수록 구현이 까다로움]]></summary></entry><entry><title type="html">[BOJ] 2588. 곱셈 (B3)</title><link href="http://localhost:4000/baekjoon/baekjoon5/" rel="alternate" type="text/html" title="[BOJ] 2588. 곱셈 (B3)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon5</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon5/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>(세 자리 수) × (세 자리 수)는 다음과 같은 과정을 통하여 이루어진다.<br /><br />
 <img src="https://www.acmicpc.net/upload/images/f5NhGHVLM4Ix74DtJrwfC97KepPl27s%20(1).png" />
 <br /><br />

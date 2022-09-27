@@ -76,4 +76,10 @@ var store = [{
         "tags": [],
         "url": "/mac/homebrew1/",
         "teaser": null
+      },{
+        "title": "[Blog] macOS에서 Minimal Mistakes로 깃허브 블로그 만들기",
+        "excerpt":"기본 환경 설정 Ruby 설치 macOS에서는 Ruby가 기본적으로 설치되어 있음 터미널 실행 후 다음 명령어를 입력해 설치 여부 확인 ruby -v // ruby X.X.X 출력 : 정상 설치 // \"zsh: command not found: ruby\" 출력 : 설치 오류 Jekyll 설치 터미널 창에 다음 명령어를 입력 gem install jekyll 터미널 창에...","categories": ["Github.io"],
+        "tags": ["HTML","JavaScript","SCSS","Ruby"],
+        "url": "/github.io/blog1/",
+        "teaser": null
       }]
