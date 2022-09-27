@@ -82,4 +82,10 @@ var store = [{
         "tags": ["HTML","JavaScript","SCSS","Ruby"],
         "url": "/github.io/blog1/",
         "teaser": null
+      },{
+        "title": "[F/E] 2. CSS",
+        "excerpt":"CSS (Cascading Style Sheet) : HTML 문서가 웹 사이트에 표현되는 방법을 정해주는 스타일 시트 언어 (style sheet language) 레이아웃 및 디자인 정보로 인해 구조화된 HTML을 만드는 데에 어려움을 겪자 디자인적 요소들을 분리하기 위해 사용 CSS 선택자 { CSS 속성 : CSS 값; } CSS 선택자 (CSS selector) : 어떤 것을...","categories": ["Frontend"],
+        "tags": ["HTML","CSS"],
+        "url": "/frontend/css1/",
+        "teaser": null
       }]
