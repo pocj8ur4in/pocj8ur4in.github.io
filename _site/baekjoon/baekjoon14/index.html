@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[BOJ] 10869. 사칙연산 (B5) - pocj8ur4in’s blog</title>
-<meta name="description" content="1. 문제 조건 두 자연수 A와 B가 주어진다. 이때, A+B, A-B, A*B, A/B(몫), A%B(나머지)를 출력하는 프로그램을 작성하시오.">
+<!-- begin _includes/seo.html --><title>[BOJ] 25083. 새싹 (B5) - pocj8ur4in’s blog</title>
+<meta name="description" content="1. 문제 조건 아래 예제와 같이 새싹을 출력하시오.">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -22,32 +22,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[BOJ] 10869. 사칙연산 (B5)">
-<meta property="og:url" content="http://localhost:4000/baekjoon/baekjoon6/">
+<meta property="og:title" content="[BOJ] 25083. 새싹 (B5)">
+<meta property="og:url" content="http://localhost:4000/baekjoon/baekjoon14/">
 
 
-  <meta property="og:description" content="1. 문제 조건 두 자연수 A와 B가 주어진다. 이때, A+B, A-B, A*B, A/B(몫), A%B(나머지)를 출력하는 프로그램을 작성하시오.">
-
-
-
+  <meta property="og:description" content="1. 문제 조건 아래 예제와 같이 새싹을 출력하시오.">
 
 
 
 
-  <meta property="article:published_time" content="2022-09-23T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2022-09-23T00:00:00+09:00">
+  <meta property="article:published_time" content="2022-09-29T00:00:00+09:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2022-09-29T00:00:00+09:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/baekjoon/baekjoon6/">
+
+<link rel="canonical" href="http://localhost:4000/baekjoon/baekjoon14/">
 
 
 
@@ -182,7 +182,7 @@
     
       
       
-        <li class="current">[BOJ] 10869. 사칙연산 (B5)</li>
+        <li class="current">[BOJ] 25083. 새싹 (B5)</li>
       
     
   </ol>
@@ -310,16 +310,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[BOJ] 10869. 사칙연산 (B5)">
-    <meta itemprop="description" content="1. 문제 조건두 자연수 A와 B가 주어진다. 이때, A+B, A-B, A*B, A/B(몫), A%B(나머지)를 출력하는 프로그램을 작성하시오.">
-    <meta itemprop="datePublished" content="2022-09-23T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2022-09-23T00:00:00+09:00">
+    <meta itemprop="headline" content="[BOJ] 25083. 새싹 (B5)">
+    <meta itemprop="description" content="1. 문제 조건아래 예제와 같이 새싹을 출력하시오.">
+    <meta itemprop="datePublished" content="2022-09-29T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-09-29T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/baekjoon/baekjoon6/" class="u-url" itemprop="url">[BOJ] 10869. 사칙연산 (B5)
+            <a href="http://localhost:4000/baekjoon/baekjoon14/" class="u-url" itemprop="url">[BOJ] 25083. 새싹 (B5)
 </a>
           </h1>
           
@@ -357,32 +357,40 @@
           </aside>
         
         <h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>두 자연수 A와 B가 주어진다. 이때, A+B, A-B, A*B, A/B(몫), A%B(나머지)를 출력하는 프로그램을 작성하시오.</p>
+<p>아래 예제와 같이 새싹을 출력하시오.</p>
 
 <ul>
-  <li>입력 : 두 자연수 A와 B가 주어진다. (1 ≤ A, B ≤ 10,000)</li>
-  <li>첫째 줄에 A+B, 둘째 줄에 A-B, 셋째 줄에 A*B, 넷째 줄에 A/B, 다섯째 줄에 A%B를 출력한다.</li>
+  <li>입력 : 입력은 없다.</li>
+  <li>출력 : 새싹을 출력한다.</li>
 </ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>         ,r'"7
+r`-_   ,'  ,/
+ \. ". L_r'
+   `~\/
+      |
+      |
+
+</code></pre></div></div>
 
 <h2 id="2-문제-풀이">2. 문제 풀이</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("         ,r'\"7")
+print("r`-_   ,'  ,/")
+print(" \\. \". L_r'")
+print("   `~\\/")
+print("      |")
+print("      |")
 
-print(int(int(a) + int(b)))
-print(int(int(a) - int(b)))
-print(int(int(a) * int(b)))
-print(int(int(a) / int(b)))
-print(int(int(a) % int(b)))
 </code></pre></div></div>
 
 <h2 id="3-문제-분류">3. 문제 분류</h2>
 <ul>
   <li>구현</li>
-  <li>수학 &gt; 사칙연산</li>
 </ul>
 
 <blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/10869">https://www.acmicpc.net/problem/10869</a></p>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/25083">https://www.acmicpc.net/problem/25083</a></p>
 </blockquote>
 
         
@@ -425,7 +433,7 @@ print(int(int(a) % int(b)))
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-09-23">September 23, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-09-29">September 29, 2022</time></p>
 
       </footer>
 
@@ -434,23 +442,22 @@ print(int(int(a) % int(b)))
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BBOJ%5D+10869.+%EC%82%AC%EC%B9%99%EC%97%B0%EC%82%B0+%28B5%29%20http%3A%2F%2Flocalhost%3A4000%2Fbaekjoon%2Fbaekjoon6%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5BBOJ%5D+25083.+%EC%83%88%EC%8B%B9+%28B5%29%20http%3A%2F%2Flocalhost%3A4000%2Fbaekjoon%2Fbaekjoon14%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fbaekjoon%2Fbaekjoon6%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fbaekjoon%2Fbaekjoon14%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fbaekjoon%2Fbaekjoon6%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fbaekjoon%2Fbaekjoon14%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/baekjoon/baekjoon5/" class="pagination--pager" title="[BOJ] 2588. 곱셈 (B3)
+      <a href="/baekjoon/baekjoon13/" class="pagination--pager" title="[BOJ] 10171. 고양이 (B5)
 ">이전</a>
     
     
-      <a href="/baekjoon/baekjoon7/" class="pagination--pager" title="[BOJ] 1330. 두 수 비교하기 (B5)
-">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -464,48 +471,6 @@ print(int(int(a) % int(b)))
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/baekjoon/baekjoon14/" rel="permalink">[BOJ] 25083. 새싹 (B5)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">1. 문제 조건
-아래 예제와 같이 새싹을 출력하시오.
-
-</p>
-  </article>
-</div>
-
         
           
 
@@ -633,6 +598,48 @@ KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간�
 </div>
 
         
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/baekjoon/baekjoon10/" rel="permalink">[BOJ] 14681. 사분면 고르기 (B5)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">1. 문제 조건
+흔한 수학 문제 중 하나는 주어진 점이 어느 사분면에 속하는지 알아내는 것이다. 사분면은 아래 그림처럼 1부터 4까지 번호를 갖는다. “Quadrant n”은 “제n사분면”이라는 뜻이다.
+
+</p>
+  </article>
+</div>
+
+        
       </div>
     </div>
   
@@ -704,8 +711,8 @@ KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간�
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4000/baekjoon/baekjoon6/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/baekjoon/baekjoon6"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "http://localhost:4000/baekjoon/baekjoon14/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/baekjoon/baekjoon14"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

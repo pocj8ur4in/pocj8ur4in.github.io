@@ -112,4 +112,10 @@ var store = [{
         "tags": ["Python"],
         "url": "/baekjoon/baekjoon13/",
         "teaser": null
+      },{
+        "title": "[BOJ] 25083. 새싹 (B5)",
+        "excerpt":"1. 문제 조건  아래 예제와 같이 새싹을 출력하시오.      입력 : 입력은 없다.   출력 : 새싹을 출력한다.            ,r'\"7 r`-_   ,'  ,/  \\. \". L_r'    `~\\/       |       |    2. 문제 풀이   print(\"         ,r'\\\"7\") print(\"r`-_   ,'  ,/\") print(\" \\\\. \\\". L_r'\") print(\"   `~\\\\/\") print(\"      |\") print(\"      |\")    3. 문제 분류     구현      주소 : https://www.acmicpc.net/problem/25083   ","categories": ["Baekjoon"],
+        "tags": ["Python"],
+        "url": "/baekjoon/baekjoon14/",
+        "teaser": null
       }]
