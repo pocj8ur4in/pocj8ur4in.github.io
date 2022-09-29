@@ -106,4 +106,10 @@ var store = [{
         "tags": ["Python"],
         "url": "/baekjoon/baekjoon12/",
         "teaser": null
+      },{
+        "title": "[BOJ] 10171. 고양이 (B5)",
+        "excerpt":"1. 문제 조건  아래 예제와 같이 고양이를 출력하시오.      입력 : 없음.   출력 :   \\    /\\  )  ( ') (  /  )  \\(__)|   2. 문제 풀이   print(\"\\    /\\\\\") print(\" )  ( ')\") print(\"(  /  )\") print(\" \\(__)|\")   3. 문제 분류     구현      주소 : https://www.acmicpc.net/problem/10171   ","categories": ["Baekjoon"],
+        "tags": ["Python"],
+        "url": "/baekjoon/baekjoon13/",
+        "teaser": null
       }]

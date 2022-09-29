@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-29T12:54:16+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[BOJ] 10172. 개 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon12/" rel="alternate" type="text/html" title="[BOJ] 10172. 개 (B5)" /><published>2022-09-29T00:00:00+09:00</published><updated>2022-09-29T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon12</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon12/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-29T12:56:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[BOJ] 10172. 개 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon12/" rel="alternate" type="text/html" title="[BOJ] 10172. 개 (B5)" /><published>2022-09-29T00:00:00+09:00</published><updated>2022-09-29T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon12</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon12/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>아래 예제와 같이 개를 출력하시오.</p>
 
 <ul>
@@ -29,7 +29,72 @@ print("||_/=\\\\__|")
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/10172">https://www.acmicpc.net/problem/10172</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 아래 예제와 같이 개를 출력하시오.]]></summary></entry><entry><title type="html">[BOJ] 2525. 오븐 시계 (B3)</title><link href="http://localhost:4000/baekjoon/baekjoon11/" rel="alternate" type="text/html" title="[BOJ] 2525. 오븐 시계 (B3)" /><published>2022-09-28T00:00:00+09:00</published><updated>2022-09-28T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon11</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon11/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 아래 예제와 같이 개를 출력하시오.]]></summary></entry><entry><title type="html">[BOJ] 10171. 고양이 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon13/" rel="alternate" type="text/html" title="[BOJ] 10171. 고양이 (B5)" /><published>2022-09-29T00:00:00+09:00</published><updated>2022-09-29T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon13</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon13/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<p>아래 예제와 같이 고양이를 출력하시오.</p>
+
+<ul>
+  <li>입력 : 없음.</li>
+  <li>출력 :</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\    /\
+ )  ( ')
+(  /  )
+ \(__)|
+</code></pre></div></div>
+
+<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("\    /\\")
+print(" )  ( ')")
+print("(  /  )")
+print(" \(__)|")
+</code></pre></div></div>
+
+<h2 id="3-문제-분류">3. 문제 분류</h2>
+<ul>
+  <li>구현</li>
+</ul>
+
+<blockquote>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/10171">https://www.acmicpc.net/problem/10171</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 아래 예제와 같이 고양이를 출력하시오.]]></summary></entry><entry><title type="html">[BOJ] 14681. 사분면 고르기 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon10/" rel="alternate" type="text/html" title="[BOJ] 14681. 사분면 고르기 (B5)" /><published>2022-09-28T00:00:00+09:00</published><updated>2022-09-28T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon10</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon10/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<p>흔한 수학 문제 중 하나는 주어진 점이 어느 사분면에 속하는지 알아내는 것이다. 사분면은 아래 그림처럼 1부터 4까지 번호를 갖는다. “Quadrant n”은 “제n사분면”이라는 뜻이다.</p>
+
+<p><img src="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/problem/14681/1.png" /></p>
+
+<p>예를 들어, 좌표가 (12, 5)인 점 A는 x좌표와 y좌표가 모두 양수이므로 제1사분면에 속한다. 점 B는 x좌표가 음수이고 y좌표가 양수이므로 제2사분면에 속한다.<br />
+점의 좌표를 입력받아 그 점이 어느 사분면에 속하는지 알아내는 프로그램을 작성하시오. (단, x좌표와 y좌표는 모두 양수나 음수라고 가정한다.)</p>
+
+<ul>
+  <li>입력 : 첫 줄에는 정수 x가 주어진다. (−1000 ≤ x ≤ 1000; x ≠ 0) 다음 줄에는 정수 y가 주어진다. (−1000 ≤ y ≤ 1000; y ≠ 0)</li>
+  <li>출력 : 점 (x, y)의 사분면 번호(1, 2, 3, 4 중 하나)를 출력한다.</li>
+</ul>
+
+<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x = int(input())
+y = int(input())
+
+if (x &gt; 0 and y &gt; 0):
+    print(1)
+elif(x &lt; 0 and y &gt; 0):
+    print(2)
+elif(x &lt; 0 and y &lt; 0):
+    print(3)
+elif(x &gt; 0 and y &lt; 0):
+    print(4)
+</code></pre></div></div>
+
+<h2 id="3-문제-분류">3. 문제 분류</h2>
+<ul>
+  <li>구현</li>
+  <li>기하학</li>
+</ul>
+
+<blockquote>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/14681">https://www.acmicpc.net/problem/14681</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 흔한 수학 문제 중 하나는 주어진 점이 어느 사분면에 속하는지 알아내는 것이다. 사분면은 아래 그림처럼 1부터 4까지 번호를 갖는다. “Quadrant n”은 “제n사분면”이라는 뜻이다.]]></summary></entry><entry><title type="html">[BOJ] 2525. 오븐 시계 (B3)</title><link href="http://localhost:4000/baekjoon/baekjoon11/" rel="alternate" type="text/html" title="[BOJ] 2525. 오븐 시계 (B3)" /><published>2022-09-28T00:00:00+09:00</published><updated>2022-09-28T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon11</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon11/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간편하게 만드는 인공지능 오븐을 개발하려고 한다. 인공지능 오븐은 오븐구이가 끝나는 시간을 분 단위로 자동적으로 계산한다.</p>
 
 <p>또한, 인공지능 오븐에는 사용자에게 훈제오리구이 요리가 끝나는 시각을 알려 주는 디지털 시계가 있다.</p>
@@ -69,43 +134,7 @@ print(a, b)
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/2525">https://www.acmicpc.net/problem/2525</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간편하게 만드는 인공지능 오븐을 개발하려고 한다. 인공지능 오븐은 오븐구이가 끝나는 시간을 분 단위로 자동적으로 계산한다.]]></summary></entry><entry><title type="html">[BOJ] 14681. 사분면 고르기 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon10/" rel="alternate" type="text/html" title="[BOJ] 14681. 사분면 고르기 (B5)" /><published>2022-09-28T00:00:00+09:00</published><updated>2022-09-28T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon10</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon10/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>흔한 수학 문제 중 하나는 주어진 점이 어느 사분면에 속하는지 알아내는 것이다. 사분면은 아래 그림처럼 1부터 4까지 번호를 갖는다. “Quadrant n”은 “제n사분면”이라는 뜻이다.</p>
-
-<p><img src="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/problem/14681/1.png" /></p>
-
-<p>예를 들어, 좌표가 (12, 5)인 점 A는 x좌표와 y좌표가 모두 양수이므로 제1사분면에 속한다. 점 B는 x좌표가 음수이고 y좌표가 양수이므로 제2사분면에 속한다.<br />
-점의 좌표를 입력받아 그 점이 어느 사분면에 속하는지 알아내는 프로그램을 작성하시오. (단, x좌표와 y좌표는 모두 양수나 음수라고 가정한다.)</p>
-
-<ul>
-  <li>입력 : 첫 줄에는 정수 x가 주어진다. (−1000 ≤ x ≤ 1000; x ≠ 0) 다음 줄에는 정수 y가 주어진다. (−1000 ≤ y ≤ 1000; y ≠ 0)</li>
-  <li>출력 : 점 (x, y)의 사분면 번호(1, 2, 3, 4 중 하나)를 출력한다.</li>
-</ul>
-
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x = int(input())
-y = int(input())
-
-if (x &gt; 0 and y &gt; 0):
-    print(1)
-elif(x &lt; 0 and y &gt; 0):
-    print(2)
-elif(x &lt; 0 and y &lt; 0):
-    print(3)
-elif(x &gt; 0 and y &lt; 0):
-    print(4)
-</code></pre></div></div>
-
-<h2 id="3-문제-분류">3. 문제 분류</h2>
-<ul>
-  <li>구현</li>
-  <li>기하학</li>
-</ul>
-
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/14681">https://www.acmicpc.net/problem/14681</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 흔한 수학 문제 중 하나는 주어진 점이 어느 사분면에 속하는지 알아내는 것이다. 사분면은 아래 그림처럼 1부터 4까지 번호를 갖는다. “Quadrant n”은 “제n사분면”이라는 뜻이다.]]></summary></entry><entry><title type="html">[macOS] 홈브류 (Homebrew)</title><link href="http://localhost:4000/mac/homebrew1/" rel="alternate" type="text/html" title="[macOS] 홈브류 (Homebrew)" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/mac/homebrew1</id><content type="html" xml:base="http://localhost:4000/mac/homebrew1/"><![CDATA[<h2 id="homebrew"><a href="https://brew.sh/index_ko">Homebrew</a></h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간편하게 만드는 인공지능 오븐을 개발하려고 한다. 인공지능 오븐은 오븐구이가 끝나는 시간을 분 단위로 자동적으로 계산한다.]]></summary></entry><entry><title type="html">[macOS] 홈브류 (Homebrew)</title><link href="http://localhost:4000/mac/homebrew1/" rel="alternate" type="text/html" title="[macOS] 홈브류 (Homebrew)" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/mac/homebrew1</id><content type="html" xml:base="http://localhost:4000/mac/homebrew1/"><![CDATA[<h2 id="homebrew"><a href="https://brew.sh/index_ko">Homebrew</a></h2>
 
 <ul>
   <li>Ruby로 작성된 macOS용 패키지 관리 어플리케이션 (Package Management Application)</li>
@@ -1299,26 +1328,4 @@ print(int(a) + int(b))
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1000</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A+B를 출력한다. 2. 문제 풀이]]></summary></entry><entry><title type="html">[BOJ] 1001. A-B (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon2/" rel="alternate" type="text/html" title="[BOJ] 1001. A-B (B5)" /><published>2022-09-23T00:00:00+09:00</published><updated>2022-09-23T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon2</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon2/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오.</p>
-<ul>
-  <li>입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)</li>
-  <li>출력 : 첫째 줄에 A-B를 출력한다.</li>
-</ul>
-
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
-
-print(int(a) - int(b))
-</code></pre></div></div>
-
-<h2 id="2-문제-분류">2. 문제 분류</h2>
-<ul>
-  <li>구현</li>
-  <li>수학 &gt; 사칙연산</li>
-</ul>
-
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/1001">https://www.acmicpc.net/problem/1001</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A-B를 출력한다. 2. 문제 풀이]]></summary></entry></feed>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오. 입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10) 출력 : 첫째 줄에 A+B를 출력한다. 2. 문제 풀이]]></summary></entry></feed>

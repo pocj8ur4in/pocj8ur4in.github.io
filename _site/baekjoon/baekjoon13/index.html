@@ -9,30 +9,36 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>pocj8ur4in's blog - 페이지 4</title>
-<meta name="description" content="이것저것 적어두는 개발자 지망생.">
+<!-- begin _includes/seo.html --><title>[BOJ] 10171. 고양이 (B5) - pocj8ur4in’s blog</title>
+<meta name="description" content="1. 문제 조건 아래 예제와 같이 고양이를 출력하시오.">
 
 
   <meta name="author" content="pocj8ur4in">
   
+  <meta property="article:author" content="pocj8ur4in">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="pocj8ur4in’s blog">
-<meta property="og:url" content="http://localhost:4000/page4/">
+<meta property="og:title" content="[BOJ] 10171. 고양이 (B5)">
+<meta property="og:url" content="http://localhost:4000/baekjoon/baekjoon13/">
 
 
-  <meta property="og:description" content="이것저것 적어두는 개발자 지망생.">
-
-
-
+  <meta property="og:description" content="1. 문제 조건 아래 예제와 같이 고양이를 출력하시오.">
 
 
 
 
 
+
+
+  <meta property="article:published_time" content="2022-09-29T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2022-09-29T00:00:00+09:00">
 
 
 
@@ -41,10 +47,8 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/page4/">
+<link rel="canonical" href="http://localhost:4000/baekjoon/baekjoon13/">
 
-
-  <link rel="prev" href="http://localhost:4000/page3/">
 
 
 
@@ -97,7 +101,7 @@
      crossorigin="anonymous"></script>
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -146,6 +150,43 @@
     <div class="initial-content">
       
 
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#baekjoon" itemprop="item"><span itemprop="name">Baekjoon</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">[BOJ] 10171. 고양이 (B5)</li>
+      
+    
+  </ol>
+</nav>
 
   
 
@@ -268,29 +309,173 @@
 
 
 
-  <div class="archive">
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[BOJ] 10171. 고양이 (B5)">
+    <meta itemprop="description" content="1. 문제 조건아래 예제와 같이 고양이를 출력하시오.">
+    <meta itemprop="datePublished" content="2022-09-29T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-09-29T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/baekjoon/baekjoon13/" class="u-url" itemprop="url">[BOJ] 10171. 고양이 (B5)
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
     
-      <h1 id="page-title" class="page__title"></h1>
+
     
+
     
+      
+      
 
-<h3 class="archive__subtitle">최근 포스트</h3>
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
 
 
+        </header>
+      
 
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#1-문제-조건">1. 문제 조건</a></li><li><a href="#2-문제-풀이">2. 문제 풀이</a></li><li><a href="#3-문제-분류">3. 문제 분류</a></li></ul>
 
-<div class="entries-list">
+            </nav>
+          </aside>
+        
+        <h2 id="1-문제-조건">1. 문제 조건</h2>
+<p>아래 예제와 같이 고양이를 출력하시오.</p>
+
+<ul>
+  <li>입력 : 없음.</li>
+  <li>출력 :</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\    /\
+ )  ( ')
+(  /  )
+ \(__)|
+</code></pre></div></div>
+
+<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("\    /\\")
+print(" )  ( ')")
+print("(  /  )")
+print(" \(__)|")
+</code></pre></div></div>
+
+<h2 id="3-문제-분류">3. 문제 분류</h2>
+<ul>
+  <li>구현</li>
+</ul>
+
+<blockquote>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/10171">https://www.acmicpc.net/problem/10171</a></p>
+</blockquote>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
   
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
     
+      <a href="/tags/#python" class="page__taxonomy-item p-category" rel="tag">Python</a>
+    
+    </span>
+  </p>
 
 
 
-<div class="list__item">
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#baekjoon" class="page__taxonomy-item p-category" rel="tag">Baekjoon</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-09-29">September 29, 2022</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BBOJ%5D+10171.+%EA%B3%A0%EC%96%91%EC%9D%B4+%28B5%29%20http%3A%2F%2Flocalhost%3A4000%2Fbaekjoon%2Fbaekjoon13%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fbaekjoon%2Fbaekjoon13%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fbaekjoon%2Fbaekjoon13%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/baekjoon/baekjoon12/" class="pagination--pager" title="[BOJ] 10172. 개 (B5)
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/baekjoon/baekjoon3/" rel="permalink">[BOJ] 2557. Hello World (B5)
+        <a href="/baekjoon/baekjoon12/" rel="permalink">[BOJ] 10172. 개 (B5)
 </a>
       
     </h2>
@@ -316,27 +501,23 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">1. 문제 조건
-Hello World!를 출력하시오.
-
-  입력 : 없음
-  출력 : Hello World!
-
+아래 예제와 같이 개를 출력하시오.
 
 </p>
   </article>
 </div>
 
-  
-    
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/baekjoon/baekjoon2/" rel="permalink">[BOJ] 1001. A-B (B5)
+        <a href="/baekjoon/baekjoon11/" rel="permalink">[BOJ] 2525. 오븐 시계 (B3)
 </a>
       
     </h2>
@@ -362,29 +543,23 @@ Hello World!를 출력하시오.
 
 
     <p class="archive__item-excerpt" itemprop="description">1. 문제 조건
-두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오.
-
-  입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)
-  출력 : 첫째 줄에 A-B를 출력한다.
-
-
-2. 문제 풀이
+KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간편하게 만드는 인공지능 오븐을 개발하려고 한다. 인공지능 오븐은 오븐구이가 끝나는 시간을 분 단위로 자동적으로 계산한다.
 
 </p>
   </article>
 </div>
 
-  
-    
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/baekjoon/baekjoon1/" rel="permalink">[BOJ] 1000. A+B (B5)
+        <a href="/baekjoon/baekjoon10/" rel="permalink">[BOJ] 14681. 사분면 고르기 (B5)
 </a>
       
     </h2>
@@ -410,29 +585,23 @@ Hello World!를 출력하시오.
 
 
     <p class="archive__item-excerpt" itemprop="description">1. 문제 조건
-두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
-
-  입력 : 첫째 줄에 A와 B가 주어진다. (0 &lt; A, B &lt; 10)
-  출력 : 첫째 줄에 A+B를 출력한다.
-
-
-2. 문제 풀이
+흔한 수학 문제 중 하나는 주어진 점이 어느 사분면에 속하는지 알아내는 것이다. 사분면은 아래 그림처럼 1부터 4까지 번호를 갖는다. “Quadrant n”은 “제n사분면”이라는 뜻이다.
 
 </p>
   </article>
 </div>
 
-  
-    
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/frontend/html1/" rel="permalink">[F/E] 1. HTML
+        <a href="/frontend/css1/" rel="permalink">[F/E] 2. CSS
 </a>
       
     </h2>
@@ -450,83 +619,26 @@ Hello World!를 출력하시오.
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          18 분 소요
+          3 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">웹 (Web)
+    <p class="archive__item-excerpt" itemprop="description">CSS (Cascading Style Sheet) : HTML 문서가 웹 사이트에 표현되는 방법을 정해주는 스타일 시트 언어 (style sheet language)
 
-  월드 와이드 웹 (WWW)이라고도 부름
-  인터넷을 통해 제공되는 전세계적인 정보 공유 서비스 공간
-
-
-</p>
+  레이아웃 및 디자인 정보로 인해 구조화된 HTML을 만드는 데에 어려움을 겪자 디자인적 요소들을 분리하기 위해...</p>
   </article>
 </div>
 
+        
+      </div>
+    </div>
+  
   
 </div>
 
-
-<nav class="pagination">
-  
-  <ul>
-    
-    
-      
-        <li><a href="/page3/">이전</a></li>
-      
-    
-
-    
-    
-      <li><a href="/">1</a></li>
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-        
-        
-        
-        <li><a href="/page2/">2</a></li>
-      
-    
-      
-        
-        
-        
-        <li><a href="/page3/">3</a></li>
-      
-    
-
-    
-    
-
-    
-      <li><a href="#" class="disabled current">4</a></li>
-    
-
-    
-    
-      <li><a href="#" class="disabled"><span aria-hidden="true">다음</span></a></li>
-    
-  </ul>
-</nav>
-
-
-
-  </div>
-</div>
     </div>
 
     
@@ -587,6 +699,25 @@ Hello World!를 출력하시오.
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/baekjoon/baekjoon13/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/baekjoon/baekjoon13"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://pocj8ur4in.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
 
 
 
