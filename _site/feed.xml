@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-29T12:58:10+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[BOJ] 10171. 고양이 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon13/" rel="alternate" type="text/html" title="[BOJ] 10171. 고양이 (B5)" /><published>2022-09-29T00:00:00+09:00</published><updated>2022-09-29T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon13</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon13/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-09-29T13:06:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[BOJ] 2884. 알람 시계 (B3)</title><link href="http://localhost:4000/baekjoon/baekjoon15/" rel="alternate" type="text/html" title="[BOJ] 2884. 알람 시계 (B3)" /><published>2022-09-29T00:00:00+09:00</published><updated>2022-09-29T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon15</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon15/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
+<p>상근이는 매일 아침 알람을 듣고 일어난다. 알람을 듣고 바로 일어나면 다행이겠지만, 항상 조금만 더 자려는 마음 때문에 매일 학교를 지각하고 있다.</p>
+
+<p>상근이는 모든 방법을 동원해보았지만, 조금만 더 자려는 마음은 그 어떤 것도 없앨 수가 없었다.</p>
+
+<p>이런 상근이를 불쌍하게 보던, 창영이는 자신이 사용하는 방법을 추천해 주었다.</p>
+
+<p>바로 “45분 일찍 알람 설정하기”이다.</p>
+
+<p>이 방법은 단순하다. 원래 설정되어 있는 알람을 45분 앞서는 시간으로 바꾸는 것이다. 어차피 알람 소리를 들으면, 알람을 끄고 조금 더 잘 것이기 때문이다. 이 방법을 사용하면, 매일 아침 더 잤다는 기분을 느낄 수 있고, 학교도 지각하지 않게 된다.</p>
+
+<p>현재 상근이가 설정한 알람 시각이 주어졌을 때, 창영이의 방법을 사용한다면, 이를 언제로 고쳐야 하는지 구하는 프로그램을 작성하시오.</p>
+
+<ul>
+  <li>
+    <p>입력 : 첫째 줄에 두 정수 H와 M이 주어진다. (0 ≤ H ≤ 23, 0 ≤ M ≤ 59) 그리고 이것은 현재 상근이가 설정한 놓은 알람 시간 H시 M분을 의미한다. 입력 시간은 24시간 표현을 사용한다. 24시간 표현에서 하루의 시작은 0:0(자정)이고, 끝은 23:59(다음날 자정 1분 전)이다. 시간을 나타낼 때, 불필요한 0은 사용하지 않는다.</p>
+  </li>
+  <li>
+    <p>출력 : 첫째 줄에 상근이가 창영이의 방법을 사용할 때, 설정해야 하는 알람 시간을 출력한다. (입력과 같은 형태로 출력하면 된다.)</p>
+  </li>
+</ul>
+
+<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>h, m = input().split()
+
+h = int(h)
+m = int(m)
+
+if m &lt; 45:
+    h -= 1
+    m += 15
+else:
+    m -= 45
+
+if h &lt; 0:
+    h = 23
+    
+print(h, m)
+</code></pre></div></div>
+
+<h2 id="3-문제-분류">3. 문제 분류</h2>
+<ul>
+  <li>수학 &gt; 사칙연산</li>
+</ul>
+
+<blockquote>
+  <p>주소 : <a href="https://www.acmicpc.net/problem/2884">https://www.acmicpc.net/problem/2884</a></p>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 상근이는 매일 아침 알람을 듣고 일어난다. 알람을 듣고 바로 일어나면 다행이겠지만, 항상 조금만 더 자려는 마음 때문에 매일 학교를 지각하고 있다.]]></summary></entry><entry><title type="html">[BOJ] 10171. 고양이 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon13/" rel="alternate" type="text/html" title="[BOJ] 10171. 고양이 (B5)" /><published>2022-09-29T00:00:00+09:00</published><updated>2022-09-29T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon13</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon13/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
 <p>아래 예제와 같이 고양이를 출력하시오.</p>
 
 <ul>
@@ -169,193 +217,374 @@ print(a, b)
 
 <blockquote>
   <p>주소 : <a href="https://www.acmicpc.net/problem/2525">https://www.acmicpc.net/problem/2525</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간편하게 만드는 인공지능 오븐을 개발하려고 한다. 인공지능 오븐은 오븐구이가 끝나는 시간을 분 단위로 자동적으로 계산한다.]]></summary></entry><entry><title type="html">[macOS] 홈브류 (Homebrew)</title><link href="http://localhost:4000/mac/homebrew1/" rel="alternate" type="text/html" title="[macOS] 홈브류 (Homebrew)" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/mac/homebrew1</id><content type="html" xml:base="http://localhost:4000/mac/homebrew1/"><![CDATA[<h2 id="homebrew"><a href="https://brew.sh/index_ko">Homebrew</a></h2>
-
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간편하게 만드는 인공지능 오븐을 개발하려고 한다. 인공지능 오븐은 오븐구이가 끝나는 시간을 분 단위로 자동적으로 계산한다.]]></summary></entry><entry><title type="html">[F/E] 2. CSS</title><link href="http://localhost:4000/frontend/css1/" rel="alternate" type="text/html" title="[F/E] 2. CSS" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/frontend/css1</id><content type="html" xml:base="http://localhost:4000/frontend/css1/"><![CDATA[<h2 id="css-cascading-style-sheet--html-문서가-웹-사이트에-표현되는-방법을-정해주는-스타일-시트-언어-style-sheet-language">CSS (Cascading Style Sheet) : HTML 문서가 웹 사이트에 표현되는 방법을 정해주는 스타일 시트 언어 (style sheet language)</h2>
 <ul>
-  <li>Ruby로 작성된 macOS용 패키지 관리 어플리케이션 (Package Management Application)</li>
-  <li>커맨드라인 도구나 시스템 패키지 설치에 사용</li>
-  <li>cask Package : GUI 어플리케이션 설치도 가능하게 해주는 Homebrew 확장 패키지</li>
-  <li>mas Package : App Store 어플리케이션 설치도 가능하게 해주는 Homebrew 확장 패키지</li>
+  <li>레이아웃 및 디자인 정보로 인해 구조화된 HTML을 만드는 데에 어려움을 겪자 디자인적 요소들을 분리하기 위해 사용</li>
 </ul>
 
-<h3 id="homebrew-설치">Homebrew 설치</h3>
-<ul>
-  <li>터미널 실행 후 다음 명령어를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
+    CSS 속성 : CSS 값;
+}
 </code></pre></div></div>
 
 <ul>
-  <li>터미널 창에 다음 명령어를 입력해 Homebrew가 정상적으로 설치되었는지 확인</li>
+  <li>CSS 선택자 (CSS selector) : 어떤 것을 꾸밀지 지정</li>
+  <li>CSS 속성 (CSS property) : 어떤 모양을 꾸밀지 지정</li>
+  <li>CSS 값 (CSS value) : 어떻게 꾸밀지 지정</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew --version
-// "Homebrew X.X.X" 출력 : 정상 설치
-// "zsh: command not found: brew" 출력 : 설치 오류
+<h3 id="css를-html에-적용시키는-방법">CSS를 HTML에 적용시키는 방법</h3>
+
+<h4 id="inline-style-sheet--html-태그의-속성-style에-css-코드를-넣는-방법">Inline Style Sheet : HTML 태그의 속성 <code class="language-plaintext highlighter-rouge">style=""</code>에 CSS 코드를 넣는 방법</h4>
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p style="color: blue"&gt;
+    hello world
+&lt;/p&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<p style="color: blue">
+    hello world
+</p>
+
+<h4 id="internal-style-sheet--html-문서-내-태그-stylestyle에-css-코드를-넣는-방법">Internal Style Sheet : HTML 문서 내 태그 <code class="language-plaintext highlighter-rouge">&lt;style&gt;&lt;/style&gt;</code>에 CSS 코드를 넣는 방법</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;head&gt;
+    &lt;style&gt;
+        p {
+            color: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p style="color: blue"&gt;
+        hello world
+    &lt;/p&gt;
+&lt;/body&gt;
 </code></pre></div></div>
 
-<h3 id="cask-package-설치">cask Package 설치</h3>
-<ul>
-  <li>터미널 창에 다음 명령어를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install cask
+<h4 id="linking-style-sheet--별도의-css-파일을-만들고-이를-html-문서와-연결하는-방법">Linking Style Sheet : 별도의 .CSS 파일을 만들고 이를 HTML 문서와 연결하는 방법</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="style.css"&gt;
 </code></pre></div></div>
 
+<h3 id="css-선언-css-declaration--css-속성과-css-값을-지정">CSS 선언 (CSS declaration) : CSS 속성과 CSS 값을 지정</h3>
 <ul>
-  <li>터미널 창에 다음 명령어를 입력해 cask Package가 정상적으로 설치되었는지 확인</li>
+  <li>세미클론 (;)으로 선언을 구분해 여러 번의 선언 가능</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew list
-</code></pre></div></div>
-
-<h3 id="mas-package-설치">mas Package 설치</h3>
-<ul>
-  <li>터미널 창에 다음 명령어를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install mas
-</code></pre></div></div>
-
-<ul>
-  <li>터미널 창에 다음 명령어를 입력해 mas Package가 정상적으로 설치되었는지 확인</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew list
-</code></pre></div></div>
-
-<h3 id="homebrew-명령어">Homebrew 명령어</h3>
-
-<table>
-    <thead>
-        <tr>
-            <th>Homebrew 명령어 이름</th>
-            <th>Homebrew 명령어 설명</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>brew --version</th>
-            <td>Homebrew의 버전 정보 확인</td>
-        </tr>
-        <tr>
-            <th>brew doctor</th>
-            <td>Homebrew 설치 환경을 검사</td>
-        </tr>
-        <tr>
-            <th>brew update</th>
-            <td>Homebrew를 최신 버전으로 업데이트</td>
-        </tr>
-        <tr>
-            <th>brew list</th>
-            <td>설치된 패키지를 확인</td>
-        </tr>
-        <tr>
-            <th>brew upgrade</th>
-            <td>설치된 모든 패키지를 업데이트</td>
-        </tr>
-        <tr>
-            <th>brew search (패키지명)</th>
-            <td>해당 패키지가 설치되어 있는지 검색</td>
-        </tr>
-        <tr>
-            <th>brew install (패키지명)</th>
-            <td>해당 패키지를 최신 버전으로 설치</td>
-        </tr>
-        <tr>
-            <th>brew info (패키지명)</th>
-            <td>해당 패키지의 정보 확인</td>
-        </tr>
-        <tr>
-            <th>brew upgrade (패키지명)</th>
-            <td>해당 패키지를 업데이트</td>
-        </tr>
-        <tr>
-            <th>brew uninstall (패키지명)</th>
-            <td>해당 패키지를 삭제</td>
-        </tr>
-        <tr>
-            <th>brew outdated</th>
-            <td>최신 버전이 존재하는 패키지 확인</td>
-        </tr>
-        <tr>
-            <th>brew cleanup (패키지명)</th>
-            <td>해당 패키지의 구버전에 해당하는 파일 삭제</td>
-        </tr>
-    </tbody>
-</table>
-
-<h3 id="cask-명령어">cask 명령어</h3>
-<ul>
-  <li>기존의 brew 명령어 뒤에 <code class="language-plaintext highlighter-rouge">--cask</code>를 추가</li>
-</ul>
-
-<h3 id="mas-명령어">mas 명령어</h3>
-
-<table>
-    <thead>
-        <tr>
-            <th>mas 명령어 이름</th>
-            <th>mas 명령어 설명</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>mas version</th>
-            <td>mas의 버전 정보 확인</td>
-        </tr>
-        <tr>
-            <th>mas list</th>
-            <td>mas로 설치된 패키지 확인</td>
-        </tr>
-        <tr>
-            <th>mas upgrade</th>
-            <td>mas로 설치된 모든 패키지를 최신 버전으로 업데이트</td>
-        </tr>
-        <tr>
-            <th>mas search (검색어)</th>
-            <td>앱스토어에서 해당 검색어와 일치하는 패키지 검색</td>
-        </tr>
-        <tr>
-            <th>mas install (패키지 ID)</th>
-            <td>해당되는 ID를 가진 패키지를 최신 버전으로 설치</td>
-        </tr>
-        <tr>
-            <th>mas upgrade (패키지 ID)</th>
-            <td>해당되는 ID를 가진 패키지를 최신 버전으로 업데이트</td>
-        </tr>
-        <tr>
-            <th>mas uninstall (패키지명)</th>
-            <td>mas로 설치된 해당 패키지를 삭제</td>
-        </tr>
-        <tr>
-            <th>mas outdated</th>
-            <td>mas로 설치된 패키지 중 최신 버전이 존재하는 패키지 확인</td>
-        </tr>
-    </tbody>
-</table>
-
-<h3 id="homebrew-삭제">Homebrew 삭제</h3>
-<ul>
-  <li>터미널 실행 후 다음 명령어를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Homebrew로 설치한 모든 package를 일괄 삭제
-brew remove --force --ignore-dependencies $(brew list)
-
-// Homebrew 삭제
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
+    CSS 속성1 : CSS 값1;
+    CSS 속성2 : CSS 값2;
+}
 </code></pre></div></div>
 
 <ul>
-  <li>터미널 창에 다음 명령어를 입력해 Homebrew가 정상적으로 삭제되었는지 확인</li>
+  <li>작은따옴표 (‘’) 혹은 큰따옴표 (““)으로 값의 공백 처리</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew --version
-// "zsh: command not found: brew" 출력 : 정상 삭제
-// "Homebrew X.X.X" 출력 : 삭제 오류
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Mac" /><summary type="html"><![CDATA[Homebrew]]></summary></entry><entry><title type="html">[Blog] macOS에서 Minimal Mistakes로 깃허브 블로그 만들기</title><link href="http://localhost:4000/github.io/blog1/" rel="alternate" type="text/html" title="[Blog] macOS에서 Minimal Mistakes로 깃허브 블로그 만들기" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-29T00:00:00+09:00</updated><id>http://localhost:4000/github.io/blog1</id><content type="html" xml:base="http://localhost:4000/github.io/blog1/"><![CDATA[<h2 id="기본-환경-설정">기본 환경 설정</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
+    CSS 속성1 : 'CSS 값1';
+    CSS 속성2 : "CSS 값2";
+}
+</code></pre></div></div>
+
+<ul>
+  <li>값은 속성을 여러 번 선언하였다면, 나중에 설정된 값이 적용</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
+    CSS 속성1 : CSS 값1;
+    CSS 속성1 : CSS 값2;
+}
+/* CSS 속성 1에는 CSS 값2가 적용된다. */
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">!important</code> : 값은 속성을 여러 번 선언하였다면, 나중에 설정된 값이 아닌 CSS 값 뒤에 <code class="language-plaintext highlighter-rouge">!important</code>가 사용된 것을 우선시</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
+    CSS 속성1 : CSS 값1 !important;
+    CSS 속성1 : CSS 값2;
+}
+/* CSS 속성 1에는 CSS 값1가 적용된다. */
+</code></pre></div></div>
+
+<h3 id="css-주석--">CSS 주석 : <code class="language-plaintext highlighter-rouge">/**/</code></h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* (주석 1) */
+
+/*
+(주석 2)
+*/
+</code></pre></div></div>
+
+<h3 id="css-변수-css-variables--css-변수를-선언할-경우-변수를-정의한-요소와-그-하위-요소에서-css-변수를-사용-가능">CSS 변수 (CSS variables) : CSS 변수를 선언할 경우, 변수를 정의한 요소와 그 하위 요소에서 CSS 변수를 사용 가능</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--variable-name: value;
+</code></pre></div></div>
+<h4 id="root--css-변수를-전역-변수로-정의"><code class="language-plaintext highlighter-rouge">:root</code> : CSS 변수를 전역 변수로 정의</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:root {
+       --variable-name: value;
+}
+</code></pre></div></div>
+
+<h3 id="css-상속-css-inheritance--부모-태그의-상속하는-속성은-자식-태그에-영향을-미침">CSS 상속 (CSS inheritance) : 부모 태그의 상속하는 속성은 자식 태그에 영향을 미침</h3>
+
+<ul>
+  <li>
+    <h4 id="부모-자식-관계--어떤-태그-안에-다른-태그가-있는-관계">부모-자식 관계 : 어떤 태그 안에 다른 태그가 있는 관계</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p&gt;
+    &lt;span&gt;
+        &lt;span&gt; 태그는 &lt;p&gt; 태그의 자식
+        &lt;p&gt; 태그는 &lt;span&gt; 태그의 부모
+    &lt;/span&gt;
+&lt;/p&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="형제-관계--어떤-태그-안에-같이-있는-관계">형제 관계 : 어떤 태그 안에 같이 있는 관계</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p&gt;
+    &lt;span&gt;
+        &lt;span&gt; 태그는 &lt;img&gt; 태그와 형제
+    &lt;/span&gt;
+    &lt;img&gt;
+&lt;/p&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="캐스케이딩-cascading--부모-태그에서-정의된-속성은-자식-태그로-상속-부모-태그에서-자식-태그에-정의된-속성을-변경-가능">캐스케이딩 (Cascading) : 부모 태그에서 정의된 속성은 자식 태그로 상속, 부모 태그에서 자식 태그에 정의된 속성을 변경 가능</h4>
+  </li>
+</ul>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p style="font-color: red"&gt;
+    &lt;span style="font-color: blue"&gt;
+        CSS 우선순위 : span의 font-color 속성이 p의 font-color 속성보다 높다.
+    &lt;/span&gt;
+&lt;/p&gt;
+
+</code></pre></div></div>
+
+<p>출력 :</p>
+<p style="font-color: red">
+    <span style="font-color: blue">
+        (CSS 우선순위 : span의 font-color 속성이 p의 font-color 속성보다 높다.)
+    </span>
+</p>
+
+<h3 id="css-선택자-css-selector--html-문서에-스타일을-입힐-요소를-선택하는-문자">CSS 선택자 (CSS Selector) : HTML 문서에 스타일을 입힐 요소를 선택하는 문자</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
+    CSS 속성 : CSS 값;
+}
+</code></pre></div></div>
+<blockquote>
+  <ul>
+    <li>여러 종류의 선택자를 중첩 가능 (<code class="language-plaintext highlighter-rouge">p.span</code>)</li>
+    <li>여러 종류의 선택자를 <code class="language-plaintext highlighter-rouge">space</code> 키로 구분해 동시에 선택 가능  (<code class="language-plaintext highlighter-rouge">p.span p.img</code>)</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>
+    <h4 id="전체-선택자---모든-요소를-선택하는-선택자">전체 선택자 <code class="language-plaintext highlighter-rouge">*</code> : 모든 요소를 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* {
+  color: blue;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="태그-선택자-tag--해당-태그의-요소를-선택하는-선택자">태그 선택자 <code class="language-plaintext highlighter-rouge">tag</code> : 해당 태그의 요소를 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag {
+  color: aqua;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="아이디-선택자-id--해당-아이디의-요소를-선택하는-선택자">아이디 선택자 <code class="language-plaintext highlighter-rouge">#id</code> : 해당 아이디의 요소를 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#tag {
+  color: red;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="클래스-선택자-class--해당-클래스의-요소를-선택하는-선택자">클래스 선택자 <code class="language-plaintext highlighter-rouge">.class</code> : 해당 클래스의 요소를 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.tag {
+  color: green;
+}
+</code></pre></div></div>
+
+<blockquote>
+  <p>아이디 (id)와 클래스 (class)의 차이점 : 클래스는 한 문서에 여러 개를 사용 가능하나, 아이디는 한 문서에 한번만 사용 가능</p>
+</blockquote>
+
+<ul>
+  <li>
+    <h4 id="후손-선택자-selector1selector2--해당-선택자의-모든-하위-요소-중-하나를-지정해-선택하는-선택자">후손 선택자 <code class="language-plaintext highlighter-rouge">(selector1)(selector2)</code> : 해당 선택자의 모든 하위 요소 중 하나를 지정해 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div tag{
+     color: yellow;
+}
+...
+&lt;div&gt;
+    &lt;tag&gt;
+        hello world
+    &lt;/tag&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;span&gt;
+        &lt;tag&gt;
+            hello world
+        &lt;/tag&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="자손-선택자-selector1selector2--해당-선택자의-자식-요소-중-하나를-지정해-선택하는-선택자">자손 선택자 <code class="language-plaintext highlighter-rouge">(selector1)&gt;(selector2)</code> : 해당 선택자의 자식 요소 중 하나를 지정해 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div &gt; tag{
+     color: purple;
+}
+...
+&lt;div&gt;
+    &lt;tag&gt;
+        hello world
+    &lt;/tag&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="형제-선택자-selector1selector2--해당-선택자의-형제-요소-중-하나를-지정해-선택하는-선택자">형제 선택자 <code class="language-plaintext highlighter-rouge">(selector1)~(selector2)</code> : 해당 선택자의 형제 요소 중 하나를 지정해 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div ~ tag{
+     color: pink;
+}
+...
+&lt;div&gt;
+    hello world
+&lt;/div&gt;
+&lt;tag&gt;
+    !
+&lt;/tag&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="인접-형제-선택자-selector1selector2--선택자의-형제-중-바로-다음에-오는-선택자를-지정해-선택하는-선택자">인접 형제 선택자 <code class="language-plaintext highlighter-rouge">(selector1)+(selector2)</code> : 선택자의 형제 중 바로 다음에 오는 선택자를 지정해 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div + tag{
+     color: gray;
+}
+...
+&lt;div&gt;
+    hello world
+&lt;/div&gt;
+&lt;tag&gt;
+    ?
+&lt;/tag&gt;
+&lt;tag&gt;
+    !
+&lt;/tag&gt;
+/* 첫번째 형제 요소인 "?"가 회색으로 출력 */
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="속성-선택자-속성--태그에-해당-속성이-명시되어-있는-요소들을-선택하는-선택자">속성 선택자 <code class="language-plaintext highlighter-rouge">[속성]</code> : 태그에 해당 속성이 명시되어 있는 요소들을 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag[attributes]{
+     color: white;
+}
+...
+&lt;tag attributes="true"&gt;
+    hello world
+&lt;/tag&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="속성-선택자-속성문자열--태그에-해당-속성이-명시되어-있고-그-값이-문자열인-요소들을-선택하는-선택자">속성 선택자 <code class="language-plaintext highlighter-rouge">[속성=문자열]</code> : 태그에 해당 속성이 명시되어 있고 그 값이 문자열인 요소들을 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag[attributes="attr"]{
+     color: yellow;
+}
+...
+&lt;tag attributes="attr"&gt;
+    hello world
+&lt;/tag&gt;
+</code></pre></div></div>
+
+<h3 id="가상-요소-선택자-pseudo-elements-selector--요소의-특정-부분을-선택하는-선택자">가상 요소 선택자 (Pseudo-elements Selector) : 요소의 특정 부분을 선택하는 선택자</h3>
+
+<ul>
+  <li>
+    <h4 id="first-line--요소의-첫번째-줄을-선택하는-선택자"><code class="language-plaintext highlighter-rouge">::first-line</code> : 요소의 첫번째 줄을 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag::first-line {
+  color: orange;
+}
+</code></pre></div></div>
+
+<h2 id="css-속성-css-attributes--웹-사이트에-표현되는-방법을-지정하는-요소">CSS 속성 (CSS attributes) : 웹 사이트에 표현되는 방법을 지정하는 요소</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 속성 : CSS 값;
+</code></pre></div></div>
+
+<h3 id="텍스트-관련-속성">텍스트 관련 속성</h3>
+
+<ul>
+  <li>
+    <h4 id="color--색상을-지정하는-속성"><code class="language-plaintext highlighter-rouge">color:</code> : 색상을 지정하는 속성</h4>
+  </li>
+</ul>
+
+<p>입력 :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="color:red"&gt;
+    hello world
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+<div style="color:red">
+    hello world
+</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Frontend" /><category term="HTML" /><category term="CSS" /><summary type="html"><![CDATA[CSS (Cascading Style Sheet) : HTML 문서가 웹 사이트에 표현되는 방법을 정해주는 스타일 시트 언어 (style sheet language) 레이아웃 및 디자인 정보로 인해 구조화된 HTML을 만드는 데에 어려움을 겪자 디자인적 요소들을 분리하기 위해 사용]]></summary></entry><entry><title type="html">[Blog] macOS에서 Minimal Mistakes로 깃허브 블로그 만들기</title><link href="http://localhost:4000/github.io/blog1/" rel="alternate" type="text/html" title="[Blog] macOS에서 Minimal Mistakes로 깃허브 블로그 만들기" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-29T00:00:00+09:00</updated><id>http://localhost:4000/github.io/blog1</id><content type="html" xml:base="http://localhost:4000/github.io/blog1/"><![CDATA[<h2 id="기본-환경-설정">기본 환경 설정</h2>
 
 <h3 id="ruby-설치">Ruby 설치</h3>
 <ul>
@@ -846,458 +1075,193 @@ analytics:
   <li><a href="https://www.google.co.kr/adsense/start/">Google AdSense</a> 가입 후 사이트 추가</li>
   <li><code class="language-plaintext highlighter-rouge">_includes/head/custom.html</code> 파일에 코드 붙어넣기</li>
   <li><code class="language-plaintext highlighter-rouge">_includes/footer/custom.html</code> 파일에 광고 삽입</li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github.io" /><category term="HTML" /><category term="JavaScript" /><category term="SCSS" /><category term="Ruby" /><summary type="html"><![CDATA[기본 환경 설정]]></summary></entry><entry><title type="html">[F/E] 2. CSS</title><link href="http://localhost:4000/frontend/css1/" rel="alternate" type="text/html" title="[F/E] 2. CSS" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/frontend/css1</id><content type="html" xml:base="http://localhost:4000/frontend/css1/"><![CDATA[<h2 id="css-cascading-style-sheet--html-문서가-웹-사이트에-표현되는-방법을-정해주는-스타일-시트-언어-style-sheet-language">CSS (Cascading Style Sheet) : HTML 문서가 웹 사이트에 표현되는 방법을 정해주는 스타일 시트 언어 (style sheet language)</h2>
-<ul>
-  <li>레이아웃 및 디자인 정보로 인해 구조화된 HTML을 만드는 데에 어려움을 겪자 디자인적 요소들을 분리하기 위해 사용</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
-    CSS 속성 : CSS 값;
-}
-</code></pre></div></div>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github.io" /><category term="HTML" /><category term="JavaScript" /><category term="SCSS" /><category term="Ruby" /><summary type="html"><![CDATA[기본 환경 설정]]></summary></entry><entry><title type="html">[macOS] 홈브류 (Homebrew)</title><link href="http://localhost:4000/mac/homebrew1/" rel="alternate" type="text/html" title="[macOS] 홈브류 (Homebrew)" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/mac/homebrew1</id><content type="html" xml:base="http://localhost:4000/mac/homebrew1/"><![CDATA[<h2 id="homebrew"><a href="https://brew.sh/index_ko">Homebrew</a></h2>
 
 <ul>
-  <li>CSS 선택자 (CSS selector) : 어떤 것을 꾸밀지 지정</li>
-  <li>CSS 속성 (CSS property) : 어떤 모양을 꾸밀지 지정</li>
-  <li>CSS 값 (CSS value) : 어떻게 꾸밀지 지정</li>
+  <li>Ruby로 작성된 macOS용 패키지 관리 어플리케이션 (Package Management Application)</li>
+  <li>커맨드라인 도구나 시스템 패키지 설치에 사용</li>
+  <li>cask Package : GUI 어플리케이션 설치도 가능하게 해주는 Homebrew 확장 패키지</li>
+  <li>mas Package : App Store 어플리케이션 설치도 가능하게 해주는 Homebrew 확장 패키지</li>
 </ul>
 
-<h3 id="css를-html에-적용시키는-방법">CSS를 HTML에 적용시키는 방법</h3>
-
-<h4 id="inline-style-sheet--html-태그의-속성-style에-css-코드를-넣는-방법">Inline Style Sheet : HTML 태그의 속성 <code class="language-plaintext highlighter-rouge">style=""</code>에 CSS 코드를 넣는 방법</h4>
-<p>입력 :</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p style="color: blue"&gt;
-    hello world
-&lt;/p&gt;
-</code></pre></div></div>
-<p>출력 :</p>
-<p style="color: blue">
-    hello world
-</p>
-
-<h4 id="internal-style-sheet--html-문서-내-태그-stylestyle에-css-코드를-넣는-방법">Internal Style Sheet : HTML 문서 내 태그 <code class="language-plaintext highlighter-rouge">&lt;style&gt;&lt;/style&gt;</code>에 CSS 코드를 넣는 방법</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;head&gt;
-    &lt;style&gt;
-        p {
-            color: blue;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;p style="color: blue"&gt;
-        hello world
-    &lt;/p&gt;
-&lt;/body&gt;
-</code></pre></div></div>
-
-<h4 id="linking-style-sheet--별도의-css-파일을-만들고-이를-html-문서와-연결하는-방법">Linking Style Sheet : 별도의 .CSS 파일을 만들고 이를 HTML 문서와 연결하는 방법</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="style.css"&gt;
-</code></pre></div></div>
-
-<h3 id="css-선언-css-declaration--css-속성과-css-값을-지정">CSS 선언 (CSS declaration) : CSS 속성과 CSS 값을 지정</h3>
+<h3 id="homebrew-설치">Homebrew 설치</h3>
 <ul>
-  <li>세미클론 (;)으로 선언을 구분해 여러 번의 선언 가능</li>
+  <li>터미널 실행 후 다음 명령어를 입력</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
-    CSS 속성1 : CSS 값1;
-    CSS 속성2 : CSS 값2;
-}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 </code></pre></div></div>
 
 <ul>
-  <li>작은따옴표 (‘’) 혹은 큰따옴표 (““)으로 값의 공백 처리</li>
+  <li>터미널 창에 다음 명령어를 입력해 Homebrew가 정상적으로 설치되었는지 확인</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
-    CSS 속성1 : 'CSS 값1';
-    CSS 속성2 : "CSS 값2";
-}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew --version
+// "Homebrew X.X.X" 출력 : 정상 설치
+// "zsh: command not found: brew" 출력 : 설치 오류
+</code></pre></div></div>
+
+<h3 id="cask-package-설치">cask Package 설치</h3>
+<ul>
+  <li>터미널 창에 다음 명령어를 입력</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install cask
 </code></pre></div></div>
 
 <ul>
-  <li>값은 속성을 여러 번 선언하였다면, 나중에 설정된 값이 적용</li>
+  <li>터미널 창에 다음 명령어를 입력해 cask Package가 정상적으로 설치되었는지 확인</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
-    CSS 속성1 : CSS 값1;
-    CSS 속성1 : CSS 값2;
-}
-/* CSS 속성 1에는 CSS 값2가 적용된다. */
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew list
+</code></pre></div></div>
+
+<h3 id="mas-package-설치">mas Package 설치</h3>
+<ul>
+  <li>터미널 창에 다음 명령어를 입력</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install mas
 </code></pre></div></div>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">!important</code> : 값은 속성을 여러 번 선언하였다면, 나중에 설정된 값이 아닌 CSS 값 뒤에 <code class="language-plaintext highlighter-rouge">!important</code>가 사용된 것을 우선시</li>
+  <li>터미널 창에 다음 명령어를 입력해 mas Package가 정상적으로 설치되었는지 확인</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
-    CSS 속성1 : CSS 값1 !important;
-    CSS 속성1 : CSS 값2;
-}
-/* CSS 속성 1에는 CSS 값1가 적용된다. */
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew list
 </code></pre></div></div>
 
-<h3 id="css-주석--">CSS 주석 : <code class="language-plaintext highlighter-rouge">/**/</code></h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* (주석 1) */
-
-/*
-(주석 2)
-*/
-</code></pre></div></div>
-
-<h3 id="css-변수-css-variables--css-변수를-선언할-경우-변수를-정의한-요소와-그-하위-요소에서-css-변수를-사용-가능">CSS 변수 (CSS variables) : CSS 변수를 선언할 경우, 변수를 정의한 요소와 그 하위 요소에서 CSS 변수를 사용 가능</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--variable-name: value;
-</code></pre></div></div>
-<h4 id="root--css-변수를-전역-변수로-정의"><code class="language-plaintext highlighter-rouge">:root</code> : CSS 변수를 전역 변수로 정의</h4>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:root {
-       --variable-name: value;
-}
-</code></pre></div></div>
-
-<h3 id="css-상속-css-inheritance--부모-태그의-상속하는-속성은-자식-태그에-영향을-미침">CSS 상속 (CSS inheritance) : 부모 태그의 상속하는 속성은 자식 태그에 영향을 미침</h3>
-
-<ul>
-  <li>
-    <h4 id="부모-자식-관계--어떤-태그-안에-다른-태그가-있는-관계">부모-자식 관계 : 어떤 태그 안에 다른 태그가 있는 관계</h4>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p&gt;
-    &lt;span&gt;
-        &lt;span&gt; 태그는 &lt;p&gt; 태그의 자식
-        &lt;p&gt; 태그는 &lt;span&gt; 태그의 부모
-    &lt;/span&gt;
-&lt;/p&gt;
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <h4 id="형제-관계--어떤-태그-안에-같이-있는-관계">형제 관계 : 어떤 태그 안에 같이 있는 관계</h4>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p&gt;
-    &lt;span&gt;
-        &lt;span&gt; 태그는 &lt;img&gt; 태그와 형제
-    &lt;/span&gt;
-    &lt;img&gt;
-&lt;/p&gt;
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <h4 id="캐스케이딩-cascading--부모-태그에서-정의된-속성은-자식-태그로-상속-부모-태그에서-자식-태그에-정의된-속성을-변경-가능">캐스케이딩 (Cascading) : 부모 태그에서 정의된 속성은 자식 태그로 상속, 부모 태그에서 자식 태그에 정의된 속성을 변경 가능</h4>
-  </li>
-</ul>
-
-<p>입력 :</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p style="font-color: red"&gt;
-    &lt;span style="font-color: blue"&gt;
-        CSS 우선순위 : span의 font-color 속성이 p의 font-color 속성보다 높다.
-    &lt;/span&gt;
-&lt;/p&gt;
-
-</code></pre></div></div>
-
-<p>출력 :</p>
-<p style="font-color: red">
-    <span style="font-color: blue">
-        (CSS 우선순위 : span의 font-color 속성이 p의 font-color 속성보다 높다.)
-    </span>
-</p>
-
-<h3 id="css-선택자-css-selector--html-문서에-스타일을-입힐-요소를-선택하는-문자">CSS 선택자 (CSS Selector) : HTML 문서에 스타일을 입힐 요소를 선택하는 문자</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
-    CSS 속성 : CSS 값;
-}
-</code></pre></div></div>
-<blockquote>
-  <ul>
-    <li>여러 종류의 선택자를 중첩 가능 (<code class="language-plaintext highlighter-rouge">p.span</code>)</li>
-    <li>여러 종류의 선택자를 <code class="language-plaintext highlighter-rouge">space</code> 키로 구분해 동시에 선택 가능  (<code class="language-plaintext highlighter-rouge">p.span p.img</code>)</li>
-  </ul>
-</blockquote>
-
-<ul>
-  <li>
-    <h4 id="전체-선택자---모든-요소를-선택하는-선택자">전체 선택자 <code class="language-plaintext highlighter-rouge">*</code> : 모든 요소를 선택하는 선택자</h4>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* {
-  color: blue;
-}
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <h4 id="태그-선택자-tag--해당-태그의-요소를-선택하는-선택자">태그 선택자 <code class="language-plaintext highlighter-rouge">tag</code> : 해당 태그의 요소를 선택하는 선택자</h4>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag {
-  color: aqua;
-}
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <h4 id="아이디-선택자-id--해당-아이디의-요소를-선택하는-선택자">아이디 선택자 <code class="language-plaintext highlighter-rouge">#id</code> : 해당 아이디의 요소를 선택하는 선택자</h4>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#tag {
-  color: red;
-}
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <h4 id="클래스-선택자-class--해당-클래스의-요소를-선택하는-선택자">클래스 선택자 <code class="language-plaintext highlighter-rouge">.class</code> : 해당 클래스의 요소를 선택하는 선택자</h4>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.tag {
-  color: green;
-}
-</code></pre></div></div>
-
-<blockquote>
-  <p>아이디 (id)와 클래스 (class)의 차이점 : 클래스는 한 문서에 여러 개를 사용 가능하나, 아이디는 한 문서에 한번만 사용 가능</p>
-</blockquote>
-
-<ul>
-  <li>
-    <h4 id="후손-선택자-selector1selector2--해당-선택자의-모든-하위-요소-중-하나를-지정해-선택하는-선택자">후손 선택자 <code class="language-plaintext highlighter-rouge">(selector1)(selector2)</code> : 해당 선택자의 모든 하위 요소 중 하나를 지정해 선택하는 선택자</h4>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div tag{
-     color: yellow;
-}
-...
-&lt;div&gt;
-    &lt;tag&gt;
-        hello world
-    &lt;/tag&gt;
-&lt;/div&gt;
-&lt;div&gt;
-    &lt;span&gt;
-        &lt;tag&gt;
-            hello world
-        &lt;/tag&gt;
-    &lt;/span&gt;
-&lt;/div&gt;
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <h4 id="자손-선택자-selector1selector2--해당-선택자의-자식-요소-중-하나를-지정해-선택하는-선택자">자손 선택자 <code class="language-plaintext highlighter-rouge">(selector1)&gt;(selector2)</code> : 해당 선택자의 자식 요소 중 하나를 지정해 선택하는 선택자</h4>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div &gt; tag{
-     color: purple;
-}
-...
-&lt;div&gt;
-    &lt;tag&gt;
-        hello world
-    &lt;/tag&gt;
-&lt;/div&gt;
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <h4 id="형제-선택자-selector1selector2--해당-선택자의-형제-요소-중-하나를-지정해-선택하는-선택자">형제 선택자 <code class="language-plaintext highlighter-rouge">(selector1)~(selector2)</code> : 해당 선택자의 형제 요소 중 하나를 지정해 선택하는 선택자</h4>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div ~ tag{
-     color: pink;
-}
-...
-&lt;div&gt;
-    hello world
-&lt;/div&gt;
-&lt;tag&gt;
-    !
-&lt;/tag&gt;
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <h4 id="인접-형제-선택자-selector1selector2--선택자의-형제-중-바로-다음에-오는-선택자를-지정해-선택하는-선택자">인접 형제 선택자 <code class="language-plaintext highlighter-rouge">(selector1)+(selector2)</code> : 선택자의 형제 중 바로 다음에 오는 선택자를 지정해 선택하는 선택자</h4>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div + tag{
-     color: gray;
-}
-...
-&lt;div&gt;
-    hello world
-&lt;/div&gt;
-&lt;tag&gt;
-    ?
-&lt;/tag&gt;
-&lt;tag&gt;
-    !
-&lt;/tag&gt;
-/* 첫번째 형제 요소인 "?"가 회색으로 출력 */
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <h4 id="속성-선택자-속성--태그에-해당-속성이-명시되어-있는-요소들을-선택하는-선택자">속성 선택자 <code class="language-plaintext highlighter-rouge">[속성]</code> : 태그에 해당 속성이 명시되어 있는 요소들을 선택하는 선택자</h4>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag[attributes]{
-     color: white;
-}
-...
-&lt;tag attributes="true"&gt;
-    hello world
-&lt;/tag&gt;
-</code></pre></div></div>
-
-<ul>
-  <li>
-    <h4 id="속성-선택자-속성문자열--태그에-해당-속성이-명시되어-있고-그-값이-문자열인-요소들을-선택하는-선택자">속성 선택자 <code class="language-plaintext highlighter-rouge">[속성=문자열]</code> : 태그에 해당 속성이 명시되어 있고 그 값이 문자열인 요소들을 선택하는 선택자</h4>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag[attributes="attr"]{
-     color: yellow;
-}
-...
-&lt;tag attributes="attr"&gt;
-    hello world
-&lt;/tag&gt;
-</code></pre></div></div>
-
-<h3 id="가상-요소-선택자-pseudo-elements-selector--요소의-특정-부분을-선택하는-선택자">가상 요소 선택자 (Pseudo-elements Selector) : 요소의 특정 부분을 선택하는 선택자</h3>
-
-<ul>
-  <li>
-    <h4 id="first-line--요소의-첫번째-줄을-선택하는-선택자"><code class="language-plaintext highlighter-rouge">::first-line</code> : 요소의 첫번째 줄을 선택하는 선택자</h4>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag::first-line {
-  color: orange;
-}
-</code></pre></div></div>
-
-<h2 id="css-속성-css-attributes--웹-사이트에-표현되는-방법을-지정하는-요소">CSS 속성 (CSS attributes) : 웹 사이트에 표현되는 방법을 지정하는 요소</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 속성 : CSS 값;
-</code></pre></div></div>
-
-<h3 id="텍스트-관련-속성">텍스트 관련 속성</h3>
-
-<ul>
-  <li>
-    <h4 id="color--색상을-지정하는-속성"><code class="language-plaintext highlighter-rouge">color:</code> : 색상을 지정하는 속성</h4>
-  </li>
-</ul>
-
-<p>입력 :</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="color:red"&gt;
-    hello world
-&lt;/div&gt;
-</code></pre></div></div>
-
-<p>출력 :</p>
-<div style="color:red">
-    hello world
-</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Frontend" /><category term="HTML" /><category term="CSS" /><summary type="html"><![CDATA[CSS (Cascading Style Sheet) : HTML 문서가 웹 사이트에 표현되는 방법을 정해주는 스타일 시트 언어 (style sheet language) 레이아웃 및 디자인 정보로 인해 구조화된 HTML을 만드는 데에 어려움을 겪자 디자인적 요소들을 분리하기 위해 사용]]></summary></entry><entry><title type="html">[Algorithm] 1. 알고리즘과 복잡도</title><link href="http://localhost:4000/algorithm/algorithm1/" rel="alternate" type="text/html" title="[Algorithm] 1. 알고리즘과 복잡도" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm1</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm1/"><![CDATA[<h2 id="알고리즘-algorithm--어떠한-문제를-해결하기-위한-절차나-방법">알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법</h2>
-<ul>
-  <li>입력 : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함</li>
-  <li>출력 : 최소 1개 이상의 결과를 가져야 함</li>
-</ul>
-
-<h2 id="알고리즘의-복잡도-complexity--알고리즘의-성능을-나타내는-척도">알고리즘의 복잡도 (Complexity) : 알고리즘의 성능을 나타내는 척도</h2>
-
-<h3 id="공간-복잡도-space-complexity--문제를-해결할-때-걸리는-공간과-입력의-함수-관계">공간 복잡도 (Space Complexity) : 문제를 해결할 때 걸리는 공간과 입력의 함수 관계</h3>
-<ul>
-  <li>특정한 크기의 입력에 대해 알고리즘이 얼마나 많은 메모리를 차지하는가?</li>
-  <li>알고리즘을 위해 필요한 메모리의 양</li>
-</ul>
-
-<h3 id="시간-복잡도-time-complexity--문제를-해결할-때-걸리는-시간과-입력의-함수-관계">시간 복잡도 (Time Complexity) : 문제를 해결할 때 걸리는 시간과 입력의 함수 관계</h3>
-<ul>
-  <li>특정한 크기의 입력에 대해 알고리즘이 얼마나 오래 걸리는가?</li>
-  <li>알고리즘을 위해 필요한 연산의 횟수</li>
-  <li>만약 프로그램을 비효율적으로 작성하여 시간 제한 (Time Limit)를 넘기면, 시간 초과 (Time Limit Exceeded)로 오답 처리</li>
-</ul>
-
-<h4 id="빅-오-표기법-big-o--최악의-경우만을-고려해-시간-복잡도를-계산">빅 오 표기법 (Big-O) : 최악의 경우만을 고려해 시간 복잡도를 계산</h4>
-<ul>
-  <li>이를 위해 가장 빠르게 증가할, 즉 가장 높은 차수의 항만을 고려하고 계수와 나머지 차수의 항들은 계산에서 제외</li>
-  <li>만약 크기 N의 모든 입력에 대한 알고리즘에 필요한 시간이 최대 N의 식을 가진다면, 이 알고리즘의 점근적 시간 복잡도는 O(N)</li>
-</ul>
-
-<h5 id="공통-시간-복잡도-표-common-time-complexity-table">공통 시간 복잡도 표 (Common Time Complexity Table)</h5>
+<h3 id="homebrew-명령어">Homebrew 명령어</h3>
 
 <table>
-	<thead>
-		<tr>
-			<th>빅 오 표기법</th>
-			<th>설명</th>
-		</tr>
-	</thead>
-   	<tbody>
+    <thead>
         <tr>
-            <th>O(1)</th>
-            <td>상수 시간</td>
+            <th>Homebrew 명령어 이름</th>
+            <th>Homebrew 명령어 설명</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>brew --version</th>
+            <td>Homebrew의 버전 정보 확인</td>
         </tr>
         <tr>
-            <th>O(logN)</th>
-            <td>로그 시간</td>
+            <th>brew doctor</th>
+            <td>Homebrew 설치 환경을 검사</td>
         </tr>
         <tr>
-            <th>O(N)</th>
-            <td>선형 시간</td>
+            <th>brew update</th>
+            <td>Homebrew를 최신 버전으로 업데이트</td>
         </tr>
         <tr>
-            <th>O(N * logN)</th>
-            <td>로그 선형 시간</td>
+            <th>brew list</th>
+            <td>설치된 패키지를 확인</td>
         </tr>
         <tr>
-            <th>O(N^2)</th>
-            <td>2차 시간</td>
+            <th>brew upgrade</th>
+            <td>설치된 모든 패키지를 업데이트</td>
         </tr>
         <tr>
-            <th>O(N^3)</th>
-            <td>3차 시간</td>
+            <th>brew search (패키지명)</th>
+            <td>해당 패키지가 설치되어 있는지 검색</td>
         </tr>
         <tr>
-            <th>O(N^4)</th>
-            <td>4차 시간</td>
+            <th>brew install (패키지명)</th>
+            <td>해당 패키지를 최신 버전으로 설치</td>
+        </tr>
+        <tr>
+            <th>brew info (패키지명)</th>
+            <td>해당 패키지의 정보 확인</td>
+        </tr>
+        <tr>
+            <th>brew upgrade (패키지명)</th>
+            <td>해당 패키지를 업데이트</td>
+        </tr>
+        <tr>
+            <th>brew uninstall (패키지명)</th>
+            <td>해당 패키지를 삭제</td>
+        </tr>
+        <tr>
+            <th>brew outdated</th>
+            <td>최신 버전이 존재하는 패키지 확인</td>
+        </tr>
+        <tr>
+            <th>brew cleanup (패키지명)</th>
+            <td>해당 패키지의 구버전에 해당하는 파일 삭제</td>
         </tr>
     </tbody>
 </table>
 
-<blockquote>
-  <p>만약 시간 제한이 1초인 문제를 해결할 때, 시간 복잡도 …인 알고리즘을 설계해야 한다.</p>
-  <ul>
-    <li>N의 범위가 500인 경우 : O(N^3)</li>
-    <li>N의 범위가 2,000인 경우 : O(N^2)</li>
-    <li>N의 범위가 100,000인 경우 : O(N * logN)</li>
-    <li>N의 범위가 10,000,000인 경우 : O(N^3)</li>
-  </ul>
-</blockquote>
+<h3 id="cask-명령어">cask 명령어</h3>
+<ul>
+  <li>기존의 brew 명령어 뒤에 <code class="language-plaintext highlighter-rouge">--cask</code>를 추가</li>
+</ul>
 
-<h3 id="수행-시간-측정-by-python">수행 시간 측정 by Python</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import time
-start_time = time.time() # 측정 시작
-...
-end_time = time.time() # 측정 종료
-print(end_time - start_time) # 수행 시간 출력
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><category term="Python" /><summary type="html"><![CDATA[알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법 입력 : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함 출력 : 최소 1개 이상의 결과를 가져야 함]]></summary></entry><entry><title type="html">[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)</title><link href="http://localhost:4000/algorithm/algorithm2/" rel="alternate" type="text/html" title="[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm2</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm2/"><![CDATA[<h2 id="구현-알고리즘-implementation-algorithm">구현 알고리즘 (Implementation Algorithm)</h2>
+<h3 id="mas-명령어">mas 명령어</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>mas 명령어 이름</th>
+            <th>mas 명령어 설명</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>mas version</th>
+            <td>mas의 버전 정보 확인</td>
+        </tr>
+        <tr>
+            <th>mas list</th>
+            <td>mas로 설치된 패키지 확인</td>
+        </tr>
+        <tr>
+            <th>mas upgrade</th>
+            <td>mas로 설치된 모든 패키지를 최신 버전으로 업데이트</td>
+        </tr>
+        <tr>
+            <th>mas search (검색어)</th>
+            <td>앱스토어에서 해당 검색어와 일치하는 패키지 검색</td>
+        </tr>
+        <tr>
+            <th>mas install (패키지 ID)</th>
+            <td>해당되는 ID를 가진 패키지를 최신 버전으로 설치</td>
+        </tr>
+        <tr>
+            <th>mas upgrade (패키지 ID)</th>
+            <td>해당되는 ID를 가진 패키지를 최신 버전으로 업데이트</td>
+        </tr>
+        <tr>
+            <th>mas uninstall (패키지명)</th>
+            <td>mas로 설치된 해당 패키지를 삭제</td>
+        </tr>
+        <tr>
+            <th>mas outdated</th>
+            <td>mas로 설치된 패키지 중 최신 버전이 존재하는 패키지 확인</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="homebrew-삭제">Homebrew 삭제</h3>
+<ul>
+  <li>터미널 실행 후 다음 명령어를 입력</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Homebrew로 설치한 모든 package를 일괄 삭제
+brew remove --force --ignore-dependencies $(brew list)
+
+// Homebrew 삭제
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+</code></pre></div></div>
+
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 Homebrew가 정상적으로 삭제되었는지 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew --version
+// "zsh: command not found: brew" 출력 : 정상 삭제
+// "Homebrew X.X.X" 출력 : 삭제 오류
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Mac" /><summary type="html"><![CDATA[Homebrew]]></summary></entry><entry><title type="html">[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)</title><link href="http://localhost:4000/algorithm/algorithm2/" rel="alternate" type="text/html" title="[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm2</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm2/"><![CDATA[<h2 id="구현-알고리즘-implementation-algorithm">구현 알고리즘 (Implementation Algorithm)</h2>
 <ul>
   <li>구현 : 알고리즘을 소스 코드로 바꾸는 과정</li>
   <li>구현 알고리즘은 결국 모든 범위의 문제 유형을 포괄하는 개념</li>

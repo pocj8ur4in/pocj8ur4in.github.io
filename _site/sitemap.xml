@@ -81,6 +81,10 @@
 <lastmod>2022-09-29T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/baekjoon/baekjoon15/</loc>
+<lastmod>2022-09-29T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/categories/</loc>
 </url>
 <url>
@@ -100,6 +104,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/page4/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page5/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/googlece206819820f99f5.html</loc>
