@@ -94,6 +94,8 @@
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
 <!-- end custom head snippets -->
 
   </head>
@@ -127,6 +129,11 @@
             </li><li class="masthead__menu-item">
               <a href="/search/">검색</a>
             </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">토글 메뉴</span>
@@ -614,7 +621,7 @@ KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간�
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          5 분 소요
         
       </span>
     
@@ -636,6 +643,17 @@ KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간�
 
     </div>
 
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
     
 
     <div id="footer" class="page__footer">
@@ -677,6 +695,10 @@ KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간�
 
 
 
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 

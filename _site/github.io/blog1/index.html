@@ -94,6 +94,8 @@
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
 <!-- end custom head snippets -->
 
   </head>
@@ -127,6 +129,11 @@
             </li><li class="masthead__menu-item">
               <a href="/search/">검색</a>
             </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">토글 메뉴</span>
@@ -328,7 +335,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          5 분 소요
         
       </span>
     
@@ -343,7 +350,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#기본-환경-설정">기본 환경 설정</a><ul><li><a href="#ruby-설치">Ruby 설치</a></li><li><a href="#jekyll-설치">Jekyll 설치</a></li><li><a href="#minimal-mistakes-theme-설치">minimal-mistakes theme 설치</a></li><li><a href="#github-repository-생성">Github Repository 생성</a></li><li><a href="#로컬-서버-설정-및-실행">로컬 서버 설정 및 실행</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#기본-환경-설정">기본 환경 설정</a><ul><li><a href="#ruby-설치">Ruby 설치</a></li><li><a href="#jekyll-설치">Jekyll 설치</a></li><li><a href="#minimal-mistakes-theme-설치">minimal-mistakes theme 설치</a></li><li><a href="#github-repository-생성">Github Repository 생성</a></li><li><a href="#로컬-서버-설정-및-실행">로컬 서버 설정 및 실행</a></li><li><a href="#js-빌드-설정">js 빌드 설정</a></li><li><a href="#admin-설정">ADMIN 설정</a></li></ul></li><li><a href="#블로그-기본-설정">블로그 기본 설정</a><ul><li><a href="#블로그-댓글-기능-설정-disqus">블로그 댓글 기능 설정 (disqus)</a></li><li><a href="#블로그-검색-기능-설정">블로그 검색 기능 설정</a></li><li><a href="#google-검색-노출-살정">Google 검색 노출 살정</a></li><li><a href="#쁠로그-방문자-통계-설정">쁠로그 방문자 통계 설정</a></li><li><a href="#블로그-포스트-불러오기-설정">블로그 포스트 불러오기 설정</a></li></ul></li><li><a href="#블로그-레이아웃-설정">블로그 레이아웃 설정</a><ul><li><a href="#블로그-좌측-사이드바에-위치할-프로필-설정">블로그 좌측 사이드바에 위치할 프로필 설정</a></li><li><a href="#블로그-하단에-위치할-꼬리말-설정">블로그 하단에 위치할 꼬리말 설정</a></li><li><a href="#블로그-상단에-위치할-네비게이션-바-설정">블로그 상단에 위치할 네비게이션 바 설정</a></li><li><a href="#블로그-너비-설정">블로그 너비 설정</a></li><li><a href="#블로그-폰트-크기-설정">블로그 폰트 크기 설정</a></li><li><a href="#블로그-아이콘-설정">블로그 아이콘 설정</a></li></ul></li><li><a href="#블로그-포스트-작성">블로그 포스트 작성</a><ul><li><a href="#포스트-이름-양식">포스트 이름 양식</a></li><li><a href="#포스트-내부-양식">포스트 내부 양식</a></li><li><a href="#포스트-내용">포스트 내용</a></li><li><a href="#포스트에-소스-코드-넣기">포스트에 소스 코드 넣기</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -383,9 +390,8 @@
   <li>
     <p><a href="https://github.com/mmistakes/minimal-mistakes">minimal-mistakes Github 페이지</a>에서 .zip 파일 다운로드 후 압축 해제</p>
   </li>
-  <li>
-    <p>아래 사진에 있는, 필요한 파일 및 폴더만 남기고 나머지는 삭제</p>
-  </li>
+  <li>아래 사진에 있는, 필요한 파일 및 폴더만 남기고 나머지는 삭제</li>
+  <li>기존에는 존재하지 않는 <code class="language-plaintext highlighter-rouge">_post</code>와 <code class="language-plaintext highlighter-rouge">_page</code> 디렉토리는 생성</li>
 </ul>
 
 <p><img src="https://i.postimg.cc/855KdXRn/blog1-1.png" width="240" /></p>
@@ -413,6 +419,420 @@ bundle exec jekyll serve
 
 <ul>
   <li><a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a>으로 로컬 서버 접속</li>
+</ul>
+
+<h3 id="js-빌드-설정">js 빌드 설정</h3>
+<ul>
+  <li><a href="https://pocj8ur4in.github.io/mac/homebrew1/">해당 게시글</a>을 통해 <code class="language-plaintext highlighter-rouge">homebrew</code> 설치</li>
+  <li>터미널 창에 다음 명령어를 입력해 <code class="language-plaintext highlighter-rouge">node.js</code> 설치</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install node
+</code></pre></div></div>
+
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 <code class="language-plaintext highlighter-rouge">node.js</code>가 정상적으로 설치되었는지 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node -v
+// "node X.X.X" 출력 : 정상 설치
+// "zsh: command not found: node" 출력 : 설치 오류
+</code></pre></div></div>
+
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 <code class="language-plaintext highlighter-rouge">yarn</code> 설치</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install yarn
+</code></pre></div></div>
+
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 <code class="language-plaintext highlighter-rouge">yarn</code>가 정상적으로 설치되었는지 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn --version
+// "X.X.X" 출력 : 정상 설치
+// "zsh: command not found: yarn" 출력 : 설치 오류
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">package.json</code> 파일 수정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "devDependencies": {
+    "concat": "^1.0.3"
+    }
+  scripts": {
+    "concat-js": "...assets/js/custom/custom.js",
+    "uglify": "...assets/js/custom/custom.js -c -m -o assets/js/main.min.js"     
+    }
+</code></pre></div></div>
+
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 <code class="language-plaintext highlighter-rouge">npm</code> 설치</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install
+</code></pre></div></div>
+
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 <code class="language-plaintext highlighter-rouge">npm</code>가 정상적으로 설치되었는지 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm -v
+// "X.X.X" 출력 : 정상 설치
+// "zsh: command not found: npm" 출력 : 설치 오류
+</code></pre></div></div>
+
+<h3 id="admin-설정">ADMIN 설정</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Gemfile</code> 파일 수정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem 'jekyll-admin', group: :jekyll_plugins
+</code></pre></div></div>
+
+<ul>
+  <li>터미널 창에 다음 명령어를 입력</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
+jekyll serve
+</code></pre></div></div>
+
+<ul>
+  <li><a href=" http://localhost:4000/admin/"> http://localhost:4000/admin/</a>를 통해 ADMIN 페이지 접속</li>
+</ul>
+
+<h2 id="블로그-기본-설정">블로그 기본 설정</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code> 파일 수정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minimal_mistakes_skin    :         # 블로그의 전체적인 스킨 지정 
+                                   # (Minimal Mistakes에서 기본적으로 제공)
+                                   # "default" "air", "aqua", "contrast", "dark"
+                                   # "dirt", "neon", "mint", "plum", "sunrise"
+
+locale                   : "ko-KR" # 블로그에 쓰일 로컬 언어 지정
+title                    :         # 메타 태그에 들어갈 블로그의 제목 지정
+title_separator          : "-"          
+subtitle                 :         # 블로그의 제목 하단에 위치할 부제목 지정
+name                     :         # 블로그 저자 이름 지정
+description              :         # SEO 향상을 위한 meta description 태그 지정
+url                      :         # 블로그 url 
+                                   # "https://(github ID).github.io"
+baseurl                  :         # 서브 폴더를 위한 url 지정
+repository               :         # github repository url
+                                   # "https://github.com/(github ID)/(github ID).github.io"
+teaser                   :         # 관련 포스트나 검색 등에 들어갈 미리보기 이미지 지정
+                                   # ("assets/images/"로 연결)
+logo                     :         # 블로그의 제목 옆에 들어갈 로고 이미지 지정
+                                   # ("assets/images"로 연결)
+masthead_title           :         # 블로그 프로필 상단에 위치할 사이트 제목 지정
+breadcrumbs              : true    # 브래드크럼 사용 여부 지정
+words_per_minute         : 200     # 포스트를 읽는 데 걸리는 시간을 계산히기 위한 분당 읽는 글자의 지정
+
+</code></pre></div></div>
+
+<h3 id="블로그-댓글-기능-설정-disqus">블로그 댓글 기능 설정 (disqus)</h3>
+<ul>
+  <li><a href="https://disqus.com">https://disqus.com</a>에 접속해 회원가입</li>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code> 파일 수정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>comments:
+  provider               : "disqus"
+  disqus:
+    shortname            :         # disqus ID 지정
+</code></pre></div></div>
+
+<h3 id="블로그-검색-기능-설정">블로그 검색 기능 설정</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code> 파일 수정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>search                   : # 블로그 검색 여부 지정
+search_full_content      : # 블로그의 내용 검색 여부 지정
+</code></pre></div></div>
+
+<h3 id="google-검색-노출-살정">Google 검색 노출 살정</h3>
+<ul>
+  <li><a href="https://search.google.com/search-console/about">Google Search Console</a>에서 도메인 입력</li>
+  <li>소유권 확인을 위해 다운로드받은 <code class="language-plaintext highlighter-rouge">HTML</code>파일을 <code class="language-plaintext highlighter-rouge">root</code>에 위치</li>
+  <li>크롤링을 위해 <code class="language-plaintext highlighter-rouge">sitemap.yml</code>파일를 생성해 <code class="language-plaintext highlighter-rouge">root</code>에 위치 (<a href="https://github.com/pocj8ur4in/pocj8ur4in.github.io/blob/main/sitemap.yml">github link</a>)</li>
+  <li>크롤링을 위해 <code class="language-plaintext highlighter-rouge">robots.txt</code>파일를 생성해 <code class="language-plaintext highlighter-rouge">root</code>에 위치</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
+User-agent: *
+Allow: /
+
+# 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 차단
+User-agent: *
+Disallow: /
+
+# 구글 검색 로봇만 차단하고, 다른 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
+User-agent: Googlebot
+Disallow: /
+
+# 네이버 검색로봇만 차단하고, 다른 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
+User-agent: Yeti
+Disallow: /
+
+Sitemap: https://pocj8ur4in.github.io/sitemap.xml
+</code></pre></div></div>
+
+<h3 id="쁠로그-방문자-통계-설정">쁠로그 방문자 통계 설정</h3>
+<ul>
+  <li><a href="https://analytics.google.com/analytics/web/provision/#/provision">Google Analytics</a> 가입 후 애널리틱스 데이터 스트림 설정</li>
+  <li>측정 ID 복사 후 <code class="language-plaintext highlighter-rouge">_config.yml</code> 파일 수정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Analytics
+analytics:
+  provider               : "google-gtag"
+  google:
+    tracking_id          : "(측정 ID)"
+</code></pre></div></div>
+
+<h3 id="블로그-포스트-불러오기-설정">블로그 포스트 불러오기 설정</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code> 파일 수정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: true
+      share: false
+      related: false
+</code></pre></div></div>
+
+<h2 id="블로그-레이아웃-설정">블로그 레이아웃 설정</h2>
+
+<h3 id="블로그-좌측-사이드바에-위치할-프로필-설정">블로그 좌측 사이드바에 위치할 프로필 설정</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code> 파일 수정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>author:
+  name             :       # 저자 이름 지정
+  avatar           :       # 저자 이미지 지정
+  bio              :       # 저자 바이오그래피 지정
+  location         :       # 저자 위치 지정
+  email            :       # 저자 이메일 지정
+  links:                   # 저자 관련 사이트 링크 지정
+    - label:               # 사이트 분류 지정
+      icon:                # 사이트 아이콘 지정
+      url:                 # 사이트 url 지정
+</code></pre></div></div>
+
+<h3 id="블로그-하단에-위치할-꼬리말-설정">블로그 하단에 위치할 꼬리말 설정</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code> 파일 수정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>footer:
+  links:                   # 블로그 관련 사이트 링크 지정
+    - label:               # 사이트 분류 지정
+      icon:                # 사이트 아이콘 지정
+      url:                 # 사이트 url 지정
+</code></pre></div></div>
+
+<h3 id="블로그-상단에-위치할-네비게이션-바-설정">블로그 상단에 위치할 네비게이션 바 설정</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_config.yml</code> 파일 수정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_data/navigation.yml</code> 파일 수정해 원하는 네비게이션 바 설정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>main:
+  - title: (카테고리)        # 화면에 보여질 세부 항목의 이름 지정
+    url: /(카테고리)/        # _pages 내에 정해진 양식 파일이나 특정 링크로 연결
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_pages</code>에 필요한 양식 (<code class="language-plaintext highlighter-rouge">.md</code>) 파일 생성</li>
+</ul>
+
+<p>예시) <code class="language-plaintext highlighter-rouge">tag-archive.md</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: "tags"
+permalink: /tags/
+layout: tags
+author_profile: true
+---
+</code></pre></div></div>
+
+<h3 id="블로그-너비-설정">블로그 너비 설정</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_sass/minimal_mistakes/_variables.scss</code> 파일 수정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/*
+   Grid
+   ========================================================================== */
+
+$right-sidebar-width-narrow: 100px !default;    // default 200px
+$right-sidebar-width: 200px !default;           // default 300px
+$right-sidebar-width-wide: 250px !default;      // default 400px
+</code></pre></div></div>
+
+<h3 id="블로그-폰트-크기-설정">블로그 폰트 크기 설정</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_sass/minimal_mistakes/_reset.scss</code> 파일 수정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>html {
+  /* apply a natural box layout model to all elements */
+  box-sizing: border-box;
+  background-color: $background-color;
+  font-size: 16px;                    // Default 16px;
+
+  @include breakpoint($medium) {
+    font-size: 16px;                  // Default 18px;
+  }
+
+  @include breakpoint($large) {
+    font-size: 16px;                  // Default 20px;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 16px;                  // Default 22px;
+  }
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+</code></pre></div></div>
+
+<h3 id="블로그-아이콘-설정">블로그 아이콘 설정</h3>
+<ul>
+  <li><a href="https://realfavicongenerator.net/">https://realfavicongenerator.net/</a>에 원하는 사진을 넣기</li>
+  <li><code class="language-plaintext highlighter-rouge">_includes/_head/custom.html</code> 파일에 사이트에서 출력된 코드 삽입</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- start custom head snippets --&gt;
+
+&lt;!-- insert favicons. use https://realfavicongenerator.net/ --&gt;
+&lt;link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.ico/apple-touch-icon.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="32x32" href="/assets/logo.ico/favicon-32x32.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="16x16" href="/assets/logo.ico/favicon-16x16.png"&gt;
+&lt;link rel="mask-icon" href="/assets/logo.ico/safari-pinned-tab.svg" color="#ffffff"&gt;
+&lt;meta name="msapplication-TileColor" content="#ffffff"&gt;
+&lt;meta name="theme-color" content="#ffffff"&gt;
+</code></pre></div></div>
+
+<h2 id="블로그-포스트-작성">블로그 포스트 작성</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_posts</code> 폴더에 <code class="language-plaintext highlighter-rouge">md</code> 파일 생성</li>
+</ul>
+
+<h3 id="포스트-이름-양식">포스트 이름 양식</h3>
+<ul>
+  <li>XXXX(연도)-XX(월)-XX(일)-(포스트 이름) 순으로 작성</li>
+</ul>
+
+<h3 id="포스트-내부-양식">포스트 내부 양식</h3>
+<ul>
+  <li>파일 상단에 <code class="language-plaintext highlighter-rouge">---</code>에 둘러싸인 내용 작성</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: "[Blog] macOS에서 Minimal Mistakes로 깃허브 블로그 만들기"
+
+categories:
+    - Github.io
+
+tag:
+    [HTML, JavaScript, SCSS, Ruby]
+
+toc: true
+toc_sticky: true
+
+date: 2022-09-26
+lastmod: 2022-09-26
+---
+</code></pre></div></div>
+
+<table>
+    <thead>
+        <tr>
+            <th>양식 이름</th>
+            <td>양식 설명</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>title</th>
+            <td>포스트 제목</td>
+        </tr>
+        <tr>
+            <th>categories</th>
+            <td>포스트 카테고리</td>
+        </tr>
+        <tr>
+            <th>tags</th>
+            <td>포스트 태그</td>
+        </tr>
+        <tr>
+            <th>toc</th>
+            <td>우측 상단의 목차</td>
+        </tr>
+        <tr>
+            <th>toc_label</th>
+            <td>목차 이름</td>
+        </tr>
+        <tr>
+            <th>toc_icon</th>
+            <td>목차 아이콘</td>
+        </tr>
+        <tr>
+            <th>toc_sticky</th>
+            <td>목차 고정 여부</td>
+        </tr>
+        <tr>
+            <th>date</th>
+            <td>포스트 작성일</td>
+        </tr>
+        <tr>
+            <th>lastmod</th>
+            <td>포스트 수정일</td>
+        </tr>
+        <tr>
+            <th>author_profile</th>
+            <td>프로필 창 표시 여부</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="포스트-내용">포스트 내용</h3>
+<ul>
+  <li>html 태그의 사용 방법은 <a href="_posts/2022-09-20-html1.md">해당 게시글</a>을 참고</li>
+</ul>
+
+<h3 id="포스트에-소스-코드-넣기">포스트에 소스 코드 넣기</h3>
+<ul>
+  <li><a href="https://gist.github.com">Github Gist</a>에서 작성 후 Embed 코드를 복사해 원하는 위치에 붙어넣기</li>
 </ul>
 
         
@@ -676,6 +1096,17 @@ KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간�
     </div>
 
     
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
 
     <div id="footer" class="page__footer">
       <footer>
@@ -716,6 +1147,10 @@ KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간�
 
 
 
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 
