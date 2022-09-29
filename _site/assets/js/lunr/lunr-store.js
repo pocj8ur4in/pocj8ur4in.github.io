@@ -100,4 +100,10 @@ var store = [{
         "tags": ["Python"],
         "url": "/baekjoon/baekjoon11/",
         "teaser": null
+      },{
+        "title": "[BOJ] 10172. 개 (B5)",
+        "excerpt":"1. 문제 조건  아래 예제와 같이 개를 출력하시오.      입력 : 없음.   출력 :   |\\_/| |q p|   /} ( 0 )\"\"\"\\ |\"^\"`    | ||_/=\\\\__|   2. 문제 풀이   print(\"|\\\\_/|\") print(\"|q p|   /}\") print(\"( 0 )\\\"\\\"\\\"\\\\\") print(\"|\\\"^\\\"`    |\") print(\"||_/=\\\\\\\\__|\")   3. 문제 분류     구현      주소 : https://www.acmicpc.net/problem/10172   ","categories": ["Baekjoon"],
+        "tags": ["Python"],
+        "url": "/baekjoon/baekjoon12/",
+        "teaser": null
       }]
