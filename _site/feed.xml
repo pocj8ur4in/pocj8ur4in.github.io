@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-06T18:42:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Git] terminal로 Git 활용하기</title><link href="http://localhost:4000/git/git2/" rel="alternate" type="text/html" title="[Git] terminal로 Git 활용하기" /><published>2022-10-06T00:00:00+09:00</published><updated>2022-10-06T00:00:00+09:00</updated><id>http://localhost:4000/git/git2</id><content type="html" xml:base="http://localhost:4000/git/git2/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-06T18:48:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Git] terminal로 Git 활용하기</title><link href="http://localhost:4000/git/git2/" rel="alternate" type="text/html" title="[Git] terminal로 Git 활용하기" /><published>2022-10-06T00:00:00+09:00</published><updated>2022-10-06T00:00:00+09:00</updated><id>http://localhost:4000/git/git2</id><content type="html" xml:base="http://localhost:4000/git/git2/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--info"><strong>이 항목은 macOS 기반으로 작성되었습니다.</strong><br />&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.</p>
 
@@ -273,12 +273,15 @@ $ ls
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
 &gt; folder3/ folder1     folder2     file1
+
 $ rm file1
 $ ls
 &gt; folder3/ folder1     folder2
+
 $ rm -r folder1
 $ ls
 &gt; folder3/ folder2
+
 $ rm -rf folder2
 $ ls
 &gt; folder3/
@@ -304,8 +307,12 @@ $ ls
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
 &gt; ./ file1.txt     file2.txt     file3.txt
+
 $ find ./ -name *.txt
-&gt; ./file1.txt
+&gt; ./ file1.txt     
+&gt; ./ file2.txt     
+&gt; ./ file3.txt
+
 $ find ./ -name *.txt -exec rm -f {} \;
 $ ls
 &gt; ./

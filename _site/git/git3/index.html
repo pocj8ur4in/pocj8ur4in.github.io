@@ -489,12 +489,15 @@ $ ls
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
 &gt; folder3/ folder1     folder2     file1
+
 $ rm file1
 $ ls
 &gt; folder3/ folder1     folder2
+
 $ rm -r folder1
 $ ls
 &gt; folder3/ folder2
+
 $ rm -rf folder2
 $ ls
 &gt; folder3/
@@ -520,8 +523,12 @@ $ ls
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
 &gt; ./ file1.txt     file2.txt     file3.txt
+
 $ find ./ -name *.txt
-&gt; ./file1.txt
+&gt; ./ file1.txt     
+&gt; ./ file2.txt     
+&gt; ./ file3.txt
+
 $ find ./ -name *.txt -exec rm -f {} \;
 $ ls
 &gt; ./
