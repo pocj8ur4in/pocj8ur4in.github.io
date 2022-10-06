@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-07T02:27:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[B/E] 1. 운영체제</title><link href="http://localhost:4000/backend/os1/" rel="alternate" type="text/html" title="[B/E] 1. 운영체제" /><published>2022-10-07T00:00:00+09:00</published><updated>2022-10-07T00:00:00+09:00</updated><id>http://localhost:4000/backend/os1</id><content type="html" xml:base="http://localhost:4000/backend/os1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-07T02:34:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[B/E] 1. 운영체제</title><link href="http://localhost:4000/backend/os1/" rel="alternate" type="text/html" title="[B/E] 1. 운영체제" /><published>2022-10-07T00:00:00+09:00</published><updated>2022-10-07T00:00:00+09:00</updated><id>http://localhost:4000/backend/os1</id><content type="html" xml:base="http://localhost:4000/backend/os1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
 
@@ -194,22 +194,20 @@ git config --global user.email "pocj8ur4in@gmail.com"
   </ul>
 </blockquote>
 
-<h3 id="--pwd-print-working-directory--현재-작업중인-디렉터리의-경로를-출력">- <code class="language-plaintext highlighter-rouge">pwd</code> (<code class="language-plaintext highlighter-rouge">print working directory</code>) : 현재 작업중인 디렉터리의 경로를 출력</h3>
+<h3 id="pwd-print-working-directory--현재-작업중인-디렉터리의-경로를-출력"><code class="language-plaintext highlighter-rouge">pwd</code> (<code class="language-plaintext highlighter-rouge">print working directory</code>) : 현재 작업중인 디렉터리의 경로를 출력</h3>
 <hr />
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pwd
 &gt; /home
 </code></pre></div></div>
 
-<h3 id="--cd-change-directory--절대--상대-경로로-이롱">- <code class="language-plaintext highlighter-rouge">cd</code> (<code class="language-plaintext highlighter-rouge">change directory</code>) : 절대 / 상대 경로로 이롱</h3>
+<h3 id="cd-change-directory--절대--상대-경로로-이롱"><code class="language-plaintext highlighter-rouge">cd</code> (<code class="language-plaintext highlighter-rouge">change directory</code>) : 절대 / 상대 경로로 이롱</h3>
 <hr />
 
-<blockquote>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">.</code> : 한단계 위의 디렉토리</li>
-    <li><code class="language-plaintext highlighter-rouge">~</code> : Home 디렉토리</li>
-  </ul>
-</blockquote>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.</code> : 한단계 위의 디렉토리</li>
+  <li><code class="language-plaintext highlighter-rouge">~</code> : Home 디렉토리</li>
+</ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd /folder1/folder2
 $ pwd
@@ -224,21 +222,19 @@ $ pwd
 &gt; /home
 </code></pre></div></div>
 
-<h3 id="--ls-list--현재-작업중인-디렉터리-내의-파일과-디렉토리를-출력">- <code class="language-plaintext highlighter-rouge">ls</code> (<code class="language-plaintext highlighter-rouge">list</code>) : 현재 작업중인 디렉터리 내의 파일과 디렉토리를 출력</h3>
+<h3 id="ls-list--현재-작업중인-디렉터리-내의-파일과-디렉토리를-출력"><code class="language-plaintext highlighter-rouge">ls</code> (<code class="language-plaintext highlighter-rouge">list</code>) : 현재 작업중인 디렉터리 내의 파일과 디렉토리를 출력</h3>
 <hr />
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
 &gt; home/ folder1     folder3     file1    file2.txt
 </code></pre></div></div>
 
-<h3 id="--cp-copy--파일을-복사">- <code class="language-plaintext highlighter-rouge">cp</code> (<code class="language-plaintext highlighter-rouge">copy</code>) : 파일을 복사</h3>
+<h3 id="cp-copy--파일을-복사"><code class="language-plaintext highlighter-rouge">cp</code> (<code class="language-plaintext highlighter-rouge">copy</code>) : 파일을 복사</h3>
 <hr />
 
-<blockquote>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">-r</code> : 디렉토리를 복사</li>
-  </ul>
-</blockquote>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-r</code> : 디렉토리를 복사</li>
+</ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
 &gt; home/ folder1     folder3     file1    file2.txt
@@ -250,7 +246,7 @@ $ ls
 &gt; home/ folder1     folder3     file1
 </code></pre></div></div>
 
-<h3 id="--mv-move--파일-혹은-디렉터리를-이동--파일-혹은-디렉터리의-이름-변경">- <code class="language-plaintext highlighter-rouge">mv</code> (<code class="language-plaintext highlighter-rouge">move</code>) : 파일 혹은 디렉터리를 이동 / 파일 혹은 디렉터리의 이름 변경</h3>
+<h3 id="mv-move--파일-혹은-디렉터리를-이동--파일-혹은-디렉터리의-이름-변경"><code class="language-plaintext highlighter-rouge">mv</code> (<code class="language-plaintext highlighter-rouge">move</code>) : 파일 혹은 디렉터리를 이동 / 파일 혹은 디렉터리의 이름 변경</h3>
 <hr />
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
@@ -269,14 +265,12 @@ $ ls
 &gt; folder3/ file3
 </code></pre></div></div>
 
-<h3 id="--mkdir-make-directory--디렉터리를-생성">- <code class="language-plaintext highlighter-rouge">mkdir</code> (<code class="language-plaintext highlighter-rouge">make directory</code>) : 디렉터리를 생성</h3>
+<h3 id="mkdir-make-directory--디렉터리를-생성"><code class="language-plaintext highlighter-rouge">mkdir</code> (<code class="language-plaintext highlighter-rouge">make directory</code>) : 디렉터리를 생성</h3>
 <hr />
 
-<blockquote>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">-p</code> : 하위 디렉터리까지 생성</li>
-  </ul>
-</blockquote>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-p</code> : 하위 디렉터리까지 생성</li>
+</ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
 &gt; folder3/ file3
@@ -294,15 +288,13 @@ $ ls
 &gt; folder3/ dir3
 </code></pre></div></div>
 
-<h3 id="--rm-remove--파일을-삭제">- <code class="language-plaintext highlighter-rouge">rm</code> (<code class="language-plaintext highlighter-rouge">remove</code>) : 파일을 삭제</h3>
+<h3 id="rm-remove--파일을-삭제"><code class="language-plaintext highlighter-rouge">rm</code> (<code class="language-plaintext highlighter-rouge">remove</code>) : 파일을 삭제</h3>
 <hr />
 
-<blockquote>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">-r</code> : 디렉터리를 삭제 (하위 디렉터리와 파일도 삭제)</li>
-    <li><code class="language-plaintext highlighter-rouge">-f</code> : 사용자에 삭제 여부를 묻지 않음</li>
-  </ul>
-</blockquote>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-r</code> : 디렉터리를 삭제 (하위 디렉터리와 파일도 삭제)</li>
+  <li><code class="language-plaintext highlighter-rouge">-f</code> : 사용자에 삭제 여부를 묻지 않음</li>
+</ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
 &gt; folder3/ folder1     folder2     file1
@@ -320,23 +312,19 @@ $ ls
 &gt; folder3/
 </code></pre></div></div>
 
-<h3 id="--find-검색할-경로-옵션--특정-파일이나-디렉터리를-검색">- <code class="language-plaintext highlighter-rouge">find</code> [검색할 경로] [옵션] : 특정 파일이나 디렉터리를 검색</h3>
+<h3 id="find-검색할-경로-옵션--특정-파일이나-디렉터리를-검색"><code class="language-plaintext highlighter-rouge">find</code> [검색할 경로] [옵션] : 특정 파일이나 디렉터리를 검색</h3>
 <hr />
 
-<blockquote>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">-name</code> : 특정 이름이나 확장자를 가진 파일이나 디렉터리를 검색</li>
-    <li><code class="language-plaintext highlighter-rouge">-exec [명령어] {} \;</code> : 검색 이후의 명령어를 처리
-      <blockquote>
-        <ul>
-          <li><code class="language-plaintext highlighter-rouge">{}</code> : 검색 결과가 해당 구문 안으로 하나씩 처리</li>
-          <li><code class="language-plaintext highlighter-rouge">\;</code> : <code class="language-plaintext highlighter-rouge">-exec</code> 다음 부분의 명령어를 실행</li>
-        </ul>
-      </blockquote>
-    </li>
-    <li><code class="language-plaintext highlighter-rouge">-type</code> : 디렉터리나 파일을 지정</li>
-  </ul>
-</blockquote>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-name</code> : 특정 이름이나 확장자를 가진 파일이나 디렉터리를 검색</li>
+  <li><code class="language-plaintext highlighter-rouge">-exec [명령어] {} \;</code> : 검색 이후의 명령어를 처리
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">{}</code> : 검색 결과가 해당 구문 안으로 하나씩 처리</li>
+      <li><code class="language-plaintext highlighter-rouge">\;</code> : <code class="language-plaintext highlighter-rouge">-exec</code> 다음 부분의 명령어를 실행</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">-type</code> : 디렉터리나 파일을 지정</li>
+</ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
 &gt; ./ file1.txt     file2.txt     file3.txt
