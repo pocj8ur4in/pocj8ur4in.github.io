@@ -456,44 +456,36 @@ git config --global user.email "pocj8ur4in@gmail.com"
   </li>
   <li>
     <h3 id="git-status---깃-상태-확인하기"><code class="language-plaintext highlighter-rouge">git status</code> :  깃 상태 확인하기</h3>
-    <blockquote>
-      <ul>
-        <li><code class="language-plaintext highlighter-rouge">untracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있지 않습니다. <br />(파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">N</code>)</li>
-        <li><code class="language-plaintext highlighter-rouge">tracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있습니다. <br />(파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">Y</code>)
-          <blockquote>
-            <ul>
-              <li><code class="language-plaintext highlighter-rouge">unmodified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되지 않았습니다.</li>
-              <li><code class="language-plaintext highlighter-rouge">modified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되었습니다.</li>
-              <li><code class="language-plaintext highlighter-rouge">staged</code> 상태 :</li>
-            </ul>
-          </blockquote>
-        </li>
-      </ul>
-    </blockquote>
+    <p><code class="language-plaintext highlighter-rouge">untracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있지 않습니다. <br />(파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">N</code>)</p>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">tracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있습니다. <br />(파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">Y</code>)
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">unmodified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되지 않았습니다.</li>
+          <li><code class="language-plaintext highlighter-rouge">modified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되었습니다.</li>
+          <li><code class="language-plaintext highlighter-rouge">staged</code> 상태 :</li>
+        </ul>
+      </li>
+    </ul>
   </li>
   <li>
     <h3 id="git-add--작업-트리에서-스테이지로-스테이징-staging"><code class="language-plaintext highlighter-rouge">git add</code> : 작업 트리에서 스테이지로 스테이징 (<code class="language-plaintext highlighter-rouge">staging</code>)</h3>
   </li>
   <li>
     <h3 id="git-commit--스테이지에-있는-파일을-버전으로-커밋-commit"><code class="language-plaintext highlighter-rouge">git commit</code> : 스테이지에 있는 파일을 버전으로 커밋 (<code class="language-plaintext highlighter-rouge">commit</code>)</h3>
-    <blockquote>
-      <ul>
-        <li><code class="language-plaintext highlighter-rouge">-m</code> 옵션을 통해 커밋과 함께 메시지 저장</li>
-        <li><code class="language-plaintext highlighter-rouge">-am</code> 옵션을 통해 스테이징과 커밋을 동시에 처리</li>
-      </ul>
-    </blockquote>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">-m</code> 옵션을 통해 커밋과 함께 메시지 저장</li>
+      <li><code class="language-plaintext highlighter-rouge">-am</code> 옵션을 통해 스테이징과 커밋을 동시에 처리</li>
+    </ul>
   </li>
   <li>
     <h3 id="git-log--리포지토리에-저장된-버전-정보-확인"><code class="language-plaintext highlighter-rouge">git log</code> : 리포지토리에 저장된 버전 정보 확인</h3>
-    <blockquote>
-      <ul>
-        <li>커밋 해시 (<code class="language-plaintext highlighter-rouge">commit hash</code>) : 커밋을 구별하는 ID</li>
-        <li><code class="language-plaintext highlighter-rouge">HEAD-&gt;master</code> : 해당 버전이 가장 최신임을 표시</li>
-        <li>작성자 (<code class="language-plaintext highlighter-rouge">Author</code>) : <code class="language-plaintext highlighter-rouge">git config --global user</code>를 통해 입력한 사용자 정보 (이름과 이메일)</li>
-        <li>작성일 (<code class="language-plaintext highlighter-rouge">Date</code>) : 버전이 작성된 시각</li>
-        <li>커밋 메시지 (<code class="language-plaintext highlighter-rouge">commit message</code>) : <code class="language-plaintext highlighter-rouge">git commit -m</code>을 통해 저장된 메시지</li>
-      </ul>
-    </blockquote>
+    <ul>
+      <li>커밋 해시 (<code class="language-plaintext highlighter-rouge">commit hash</code>) : 커밋을 구별하는 ID</li>
+      <li><code class="language-plaintext highlighter-rouge">HEAD-&gt;master</code> : 해당 버전이 가장 최신임을 표시</li>
+      <li>작성자 (<code class="language-plaintext highlighter-rouge">Author</code>) : <code class="language-plaintext highlighter-rouge">git config --global user</code>를 통해 입력한 사용자 정보 (이름과 이메일)</li>
+      <li>작성일 (<code class="language-plaintext highlighter-rouge">Date</code>) : 버전이 작성된 시각</li>
+      <li>커밋 메시지 (<code class="language-plaintext highlighter-rouge">commit message</code>) : <code class="language-plaintext highlighter-rouge">git commit -m</code>을 통해 저장된 메시지</li>
+    </ul>
   </li>
   <li>
     <h3 id="git-diff--작업-트리와-스테이지에-있는-파일-비교"><code class="language-plaintext highlighter-rouge">git diff</code> : 작업 트리와 스테이지에 있는 파일 비교</h3>
