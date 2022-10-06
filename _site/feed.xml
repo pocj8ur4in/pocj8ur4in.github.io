@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-07T02:50:28+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[B/E] 1. 운영체제</title><link href="http://localhost:4000/backend/os1/" rel="alternate" type="text/html" title="[B/E] 1. 운영체제" /><published>2022-10-07T00:00:00+09:00</published><updated>2022-10-07T00:00:00+09:00</updated><id>http://localhost:4000/backend/os1</id><content type="html" xml:base="http://localhost:4000/backend/os1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-07T03:15:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[B/E] 1. 운영체제</title><link href="http://localhost:4000/backend/os1/" rel="alternate" type="text/html" title="[B/E] 1. 운영체제" /><published>2022-10-07T00:00:00+09:00</published><updated>2022-10-07T00:00:00+09:00</updated><id>http://localhost:4000/backend/os1</id><content type="html" xml:base="http://localhost:4000/backend/os1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
 
@@ -31,141 +31,7 @@
       </li>
     </ul>
   </li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Backend" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Git] terminal로 Git 활용하기</title><link href="http://localhost:4000/git/git2/" rel="alternate" type="text/html" title="[Git] terminal로 Git 활용하기" /><published>2022-10-06T00:00:00+09:00</published><updated>2022-10-06T00:00:00+09:00</updated><id>http://localhost:4000/git/git2</id><content type="html" xml:base="http://localhost:4000/git/git2/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
-
-<p class="notice--info"><strong>이 항목은 macOS 기반으로 작성되었습니다.</strong><br />&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.</p>
-
-<p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
-
-<p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
-
-<h2 id="깃-git--분산형-버전-관리-시스템-version-control-system"><a href="https://git-scm.com">깃</a> (<code class="language-plaintext highlighter-rouge">Git</code>) : 분산형 버전 관리 시스템 (<code class="language-plaintext highlighter-rouge">Version Control System</code>)</h2>
-<ul>
-  <li>버전 관리 (<code class="language-plaintext highlighter-rouge">Version Control</code>) : 문서를 수정할 때마다 구체적으로 저장하고 관리</li>
-  <li>백업 (<code class="language-plaintext highlighter-rouge">Backup</code>) : 현재문서를 원격 저장소에 저장</li>
-  <li>협업 (<code class="language-plaintext highlighter-rouge">Collaboration</code>) : 다른 팀원들과 원격 저장소를 통해 파일 공유</li>
-</ul>
-
-<h3 id="깃-설치">깃 설치</h3>
-<hr />
-
-<ul>
-  <li><a href="https://pocj8ur4in.github.io/mac/homebrew1/">해당 링크</a>를 통해 Homebrew 설치</li>
-  <li>Homebrew가 정상적으로 설치되었을 경우 터미널 창에 다음 명령어를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install git
-</code></pre></div></div>
-
-<ul>
-  <li>터미널 창에 다음 명령어를 입력해 Git이 정상적으로 설치되었는지 확인</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git --version
-// "git X.X.X" 출력 : 정상 설치
-// "zsh: command not found: brew" 출력 : 설치 오류
-</code></pre></div></div>
-
-<ul>
-  <li>터미널 창에 다음 명령어를 입력해 사용자 정보를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "pocj8ur4in"
-git config --global user.email "pocj8ur4in@gmail.com"
-</code></pre></div></div>
-
-<h2 id="git-디렉터리--깃-버전-version이-저장될-디렉터리"><code class="language-plaintext highlighter-rouge">.git</code> 디렉터리 : 깃 버전 (version)이 저장될 디렉터리</h2>
-<ul>
-  <li>작업 트리 (<code class="language-plaintext highlighter-rouge">working tree</code>) : 파일 수정, 저장 등의 작업을 하는 작업 디렉터리</li>
-  <li>스테이지 (<code class="language-plaintext highlighter-rouge">stage</code>) : 수정할 파일이 대기하는 스테이징 영역</li>
-  <li>리포지토리 (<code class="language-plaintext highlighter-rouge">repository</code>) : 스테이지에서 대기하고 있던 파일들을 버전으로 만들어 저장하는 저장소
-    <blockquote>
-      <p>이 때. 스테이지와 리포지토리는 <code class="language-plaintext highlighter-rouge">.git</code> 디렉터리에 저장된다.</p>
-    </blockquote>
-  </li>
-</ul>
-
-<h2 id="gitignore-디렉터리--버전-관리를-하지-않을-파일이나-디렉터리-혹은-파일-확장자를-제외할-디렉터리"><code class="language-plaintext highlighter-rouge">.gitignore</code> 디렉터리 : 버전 관리를 하지 않을 파일이나 디렉터리, 혹은 파일 확장자를 제외할 디렉터리</h2>
-
-<ul>
-  <li>특정한 이름을 가진 파일 제외</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>filename.txt
-</code></pre></div></div>
-<ul>
-  <li>특정한 확장자를 가진 파일 제외</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.txt
-</code></pre></div></div>
-<ul>
-  <li>특정한 경로 아래의 파일 제외</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder/
-</code></pre></div></div>
-<ul>
-  <li>특정한 경로 아래의 특정한 확장자를 가진 파일 제외</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder/filename.txt
-</code></pre></div></div>
-<ul>
-  <li>예외 만들기</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>!filename.txt
-</code></pre></div></div>
-
-<h2 id="readmemd-파일--프로젝트에-대한-설명과-사용-방법-license-등의-내용이-작성된-마크다운-형식의-파일"><code class="language-plaintext highlighter-rouge">README.MD</code> 파일 : 프로젝트에 대한 설명과 사용 방법, LICENSE 등의 내용이 작성된 마크다운 형식의 파일</h2>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Github</code> 프로젝트 리포지토리 페이지에서 <code class="language-plaintext highlighter-rouge">README.MD</code>가 표현된 것을 확인 가능</li>
-</ul>
-
-<h2 id="git--깃-명령-다음에-입력할-수-있는-명령어-옵션-확인"><code class="language-plaintext highlighter-rouge">git</code> : 깃 명령 다음에 입력할 수 있는 명령어 옵션 확인</h2>
-
-<ul>
-  <li>
-    <h3 id="git-init--깃-저장소-만들기"><code class="language-plaintext highlighter-rouge">git init</code> : 깃 저장소 만들기</h3>
-  </li>
-  <li>
-    <h3 id="git-status---깃-상태-확인하기"><code class="language-plaintext highlighter-rouge">git status</code> :  깃 상태 확인하기</h3>
-    <p><code class="language-plaintext highlighter-rouge">untracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있지 않습니다. <br />(파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">N</code>)</p>
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">tracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있습니다. <br />(파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">Y</code>)
-        <ul>
-          <li><code class="language-plaintext highlighter-rouge">unmodified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되지 않았습니다.</li>
-          <li><code class="language-plaintext highlighter-rouge">modified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되었습니다.</li>
-          <li><code class="language-plaintext highlighter-rouge">staged</code> 상태 :</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="git-add--작업-트리에서-스테이지로-스테이징-staging"><code class="language-plaintext highlighter-rouge">git add</code> : 작업 트리에서 스테이지로 스테이징 (<code class="language-plaintext highlighter-rouge">staging</code>)</h3>
-  </li>
-  <li>
-    <h3 id="git-commit--스테이지에-있는-파일을-버전으로-커밋-commit"><code class="language-plaintext highlighter-rouge">git commit</code> : 스테이지에 있는 파일을 버전으로 커밋 (<code class="language-plaintext highlighter-rouge">commit</code>)</h3>
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">-m</code> 옵션을 통해 커밋과 함께 메시지 저장</li>
-      <li><code class="language-plaintext highlighter-rouge">-am</code> 옵션을 통해 스테이징과 커밋을 동시에 처리</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="git-log--리포지토리에-저장된-버전-정보-확인"><code class="language-plaintext highlighter-rouge">git log</code> : 리포지토리에 저장된 버전 정보 확인</h3>
-    <ul>
-      <li>커밋 해시 (<code class="language-plaintext highlighter-rouge">commit hash</code>) : 커밋을 구별하는 ID</li>
-      <li><code class="language-plaintext highlighter-rouge">HEAD-&gt;master</code> : 해당 버전이 가장 최신임을 표시</li>
-      <li>작성자 (<code class="language-plaintext highlighter-rouge">Author</code>) : <code class="language-plaintext highlighter-rouge">git config --global user</code>를 통해 입력한 사용자 정보 (이름과 이메일)</li>
-      <li>작성일 (<code class="language-plaintext highlighter-rouge">Date</code>) : 버전이 작성된 시각</li>
-      <li>커밋 메시지 (<code class="language-plaintext highlighter-rouge">commit message</code>) : <code class="language-plaintext highlighter-rouge">git commit -m</code>을 통해 저장된 메시지</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="git-diff--작업-트리와-스테이지에-있는-파일-비교"><code class="language-plaintext highlighter-rouge">git diff</code> : 작업 트리와 스테이지에 있는 파일 비교</h3>
-  </li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Git" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Git] 자주 쓰는 linux 기본 명령어</title><link href="http://localhost:4000/git/git3/" rel="alternate" type="text/html" title="[Git] 자주 쓰는 linux 기본 명령어" /><published>2022-10-06T00:00:00+09:00</published><updated>2022-10-06T00:00:00+09:00</updated><id>http://localhost:4000/git/git3</id><content type="html" xml:base="http://localhost:4000/git/git3/"><![CDATA[<p class="notice--info"><strong>이 항목은 macOS 기반으로 작성되었습니다.</strong><br />&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.</p>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Backend" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Git] 자주 쓰는 linux 기본 명령어</title><link href="http://localhost:4000/git/git3/" rel="alternate" type="text/html" title="[Git] 자주 쓰는 linux 기본 명령어" /><published>2022-10-06T00:00:00+09:00</published><updated>2022-10-06T00:00:00+09:00</updated><id>http://localhost:4000/git/git3</id><content type="html" xml:base="http://localhost:4000/git/git3/"><![CDATA[<p class="notice--info"><strong>이 항목은 macOS 기반으로 작성되었습니다.</strong><br />&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.</p>
 
 <p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
 
@@ -329,226 +195,333 @@ $ find ./ -name *.txt
 $ find ./ -name *.txt -exec rm -f {} \;
 $ ls
 &gt; ./
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Git" /><summary type="html"><![CDATA[이 항목은 macOS 기반으로 작성되었습니다.&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[BOJ] 2884. 알람 시계 (B3)</title><link href="http://localhost:4000/baekjoon/baekjoon15/" rel="alternate" type="text/html" title="[BOJ] 2884. 알람 시계 (B3)" /><published>2022-09-29T00:00:00+09:00</published><updated>2022-09-29T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon15</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon15/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>상근이는 매일 아침 알람을 듣고 일어난다. 알람을 듣고 바로 일어나면 다행이겠지만, 항상 조금만 더 자려는 마음 때문에 매일 학교를 지각하고 있다.</p>
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Git" /><summary type="html"><![CDATA[이 항목은 macOS 기반으로 작성되었습니다.&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Git] terminal로 Git 활용하기</title><link href="http://localhost:4000/git/git2/" rel="alternate" type="text/html" title="[Git] terminal로 Git 활용하기" /><published>2022-10-06T00:00:00+09:00</published><updated>2022-10-06T00:00:00+09:00</updated><id>http://localhost:4000/git/git2</id><content type="html" xml:base="http://localhost:4000/git/git2/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
-<p>상근이는 모든 방법을 동원해보았지만, 조금만 더 자려는 마음은 그 어떤 것도 없앨 수가 없었다.</p>
+<p class="notice--info"><strong>이 항목은 macOS 기반으로 작성되었습니다.</strong><br />&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.</p>
 
-<p>이런 상근이를 불쌍하게 보던, 창영이는 자신이 사용하는 방법을 추천해 주었다.</p>
+<p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
 
-<p>바로 “45분 일찍 알람 설정하기”이다.</p>
+<p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
 
-<p>이 방법은 단순하다. 원래 설정되어 있는 알람을 45분 앞서는 시간으로 바꾸는 것이다. 어차피 알람 소리를 들으면, 알람을 끄고 조금 더 잘 것이기 때문이다. 이 방법을 사용하면, 매일 아침 더 잤다는 기분을 느낄 수 있고, 학교도 지각하지 않게 된다.</p>
+<h2 id="깃-git--분산형-버전-관리-시스템-version-control-system"><a href="https://git-scm.com">깃</a> (<code class="language-plaintext highlighter-rouge">Git</code>) : 분산형 버전 관리 시스템 (<code class="language-plaintext highlighter-rouge">Version Control System</code>)</h2>
+<ul>
+  <li>버전 관리 (<code class="language-plaintext highlighter-rouge">Version Control</code>) : 문서를 수정할 때마다 구체적으로 저장하고 관리</li>
+  <li>백업 (<code class="language-plaintext highlighter-rouge">Backup</code>) : 현재문서를 원격 저장소에 저장</li>
+  <li>협업 (<code class="language-plaintext highlighter-rouge">Collaboration</code>) : 다른 팀원들과 원격 저장소를 통해 파일 공유</li>
+</ul>
 
-<p>현재 상근이가 설정한 알람 시각이 주어졌을 때, 창영이의 방법을 사용한다면, 이를 언제로 고쳐야 하는지 구하는 프로그램을 작성하시오.</p>
+<h3 id="깃-설치">깃 설치</h3>
+<hr />
+
+<ul>
+  <li><a href="https://pocj8ur4in.github.io/mac/homebrew1/">해당 링크</a>를 통해 Homebrew 설치</li>
+  <li>Homebrew가 정상적으로 설치되었을 경우 터미널 창에 다음 명령어를 입력</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install git
+</code></pre></div></div>
+
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 Git이 정상적으로 설치되었는지 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git --version
+// "git X.X.X" 출력 : 정상 설치
+// "zsh: command not found: brew" 출력 : 설치 오류
+</code></pre></div></div>
+
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 사용자 정보를 입력</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "pocj8ur4in"
+git config --global user.email "pocj8ur4in@gmail.com"
+</code></pre></div></div>
+
+<h2 id="git-디렉터리--깃-버전-version이-저장될-디렉터리"><code class="language-plaintext highlighter-rouge">.git</code> 디렉터리 : 깃 버전 (version)이 저장될 디렉터리</h2>
+<ul>
+  <li>작업 트리 (<code class="language-plaintext highlighter-rouge">working tree</code>) : 파일 수정, 저장 등의 작업을 하는 작업 디렉터리</li>
+  <li>스테이지 (<code class="language-plaintext highlighter-rouge">stage</code>) : 수정할 파일이 대기하는 스테이징 영역</li>
+  <li>리포지토리 (<code class="language-plaintext highlighter-rouge">repository</code>) : 스테이지에서 대기하고 있던 파일들을 버전으로 만들어 저장하는 저장소
+    <blockquote>
+      <p>이 때. 스테이지와 리포지토리는 <code class="language-plaintext highlighter-rouge">.git</code> 디렉터리에 저장된다.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="gitignore-디렉터리--버전-관리를-하지-않을-파일이나-디렉터리-혹은-파일-확장자를-제외할-디렉터리"><code class="language-plaintext highlighter-rouge">.gitignore</code> 디렉터리 : 버전 관리를 하지 않을 파일이나 디렉터리, 혹은 파일 확장자를 제외할 디렉터리</h2>
+
+<ul>
+  <li>특정한 이름을 가진 파일 제외</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>filename.txt
+</code></pre></div></div>
+<ul>
+  <li>특정한 확장자를 가진 파일 제외</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.txt
+</code></pre></div></div>
+<ul>
+  <li>특정한 경로 아래의 파일 제외</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder/
+</code></pre></div></div>
+<ul>
+  <li>특정한 경로 아래의 특정한 확장자를 가진 파일 제외</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder/filename.txt
+</code></pre></div></div>
+<ul>
+  <li>예외 만들기</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>!filename.txt
+</code></pre></div></div>
+
+<h2 id="readmemd-파일--프로젝트에-대한-설명과-사용-방법-license-등의-내용이-작성된-마크다운-형식의-파일"><code class="language-plaintext highlighter-rouge">README.MD</code> 파일 : 프로젝트에 대한 설명과 사용 방법, LICENSE 등의 내용이 작성된 마크다운 형식의 파일</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Github</code> 프로젝트 리포지토리 페이지에서 <code class="language-plaintext highlighter-rouge">README.MD</code>가 표현된 것을 확인 가능</li>
+</ul>
+
+<h2 id="git--깃-명령-다음에-입력할-수-있는-명령어-옵션-확인"><code class="language-plaintext highlighter-rouge">git</code> : 깃 명령 다음에 입력할 수 있는 명령어 옵션 확인</h2>
 
 <ul>
   <li>
-    <p>입력 : 첫째 줄에 두 정수 H와 M이 주어진다. (0 ≤ H ≤ 23, 0 ≤ M ≤ 59) 그리고 이것은 현재 상근이가 설정한 놓은 알람 시간 H시 M분을 의미한다. 입력 시간은 24시간 표현을 사용한다. 24시간 표현에서 하루의 시작은 0:0(자정)이고, 끝은 23:59(다음날 자정 1분 전)이다. 시간을 나타낼 때, 불필요한 0은 사용하지 않는다.</p>
+    <h3 id="git-init--깃-저장소-만들기"><code class="language-plaintext highlighter-rouge">git init</code> : 깃 저장소 만들기</h3>
   </li>
   <li>
-    <p>출력 : 첫째 줄에 상근이가 창영이의 방법을 사용할 때, 설정해야 하는 알람 시간을 출력한다. (입력과 같은 형태로 출력하면 된다.)</p>
+    <h3 id="git-status---깃-상태-확인하기"><code class="language-plaintext highlighter-rouge">git status</code> :  깃 상태 확인하기</h3>
+    <p><code class="language-plaintext highlighter-rouge">untracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있지 않습니다. <br />(파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">N</code>)</p>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">tracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있습니다. <br />(파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">Y</code>)
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">unmodified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되지 않았습니다.</li>
+          <li><code class="language-plaintext highlighter-rouge">modified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되었습니다.</li>
+          <li><code class="language-plaintext highlighter-rouge">staged</code> 상태 :</li>
+        </ul>
+      </li>
+    </ul>
   </li>
+  <li>
+    <h3 id="git-add--작업-트리에서-스테이지로-스테이징-staging"><code class="language-plaintext highlighter-rouge">git add</code> : 작업 트리에서 스테이지로 스테이징 (<code class="language-plaintext highlighter-rouge">staging</code>)</h3>
+  </li>
+  <li>
+    <h3 id="git-commit--스테이지에-있는-파일을-버전으로-커밋-commit"><code class="language-plaintext highlighter-rouge">git commit</code> : 스테이지에 있는 파일을 버전으로 커밋 (<code class="language-plaintext highlighter-rouge">commit</code>)</h3>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">-m</code> 옵션을 통해 커밋과 함께 메시지 저장</li>
+      <li><code class="language-plaintext highlighter-rouge">-am</code> 옵션을 통해 스테이징과 커밋을 동시에 처리</li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="git-log--리포지토리에-저장된-버전-정보-확인"><code class="language-plaintext highlighter-rouge">git log</code> : 리포지토리에 저장된 버전 정보 확인</h3>
+    <ul>
+      <li>커밋 해시 (<code class="language-plaintext highlighter-rouge">commit hash</code>) : 커밋을 구별하는 ID</li>
+      <li><code class="language-plaintext highlighter-rouge">HEAD-&gt;master</code> : 해당 버전이 가장 최신임을 표시</li>
+      <li>작성자 (<code class="language-plaintext highlighter-rouge">Author</code>) : <code class="language-plaintext highlighter-rouge">git config --global user</code>를 통해 입력한 사용자 정보 (이름과 이메일)</li>
+      <li>작성일 (<code class="language-plaintext highlighter-rouge">Date</code>) : 버전이 작성된 시각</li>
+      <li>커밋 메시지 (<code class="language-plaintext highlighter-rouge">commit message</code>) : <code class="language-plaintext highlighter-rouge">git commit -m</code>을 통해 저장된 메시지</li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="git-diff--작업-트리와-스테이지에-있는-파일-비교"><code class="language-plaintext highlighter-rouge">git diff</code> : 작업 트리와 스테이지에 있는 파일 비교</h3>
+  </li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Git" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[macOS] 홈브류 (Homebrew)</title><link href="http://localhost:4000/mac/homebrew1/" rel="alternate" type="text/html" title="[macOS] 홈브류 (Homebrew)" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-26T00:00:00+09:00</updated><id>http://localhost:4000/mac/homebrew1</id><content type="html" xml:base="http://localhost:4000/mac/homebrew1/"><![CDATA[<p class="notice--info"><strong>이 항목은 macOS 기반으로 작성되었습니다.</strong><br />&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.</p>
+
+<p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
+
+<p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
+
+<h2 id="homebrew"><a href="https://brew.sh/index_ko">Homebrew</a></h2>
+
+<ul>
+  <li>Ruby로 작성된 macOS용 패키지 관리 어플리케이션 (Package Management Application)</li>
+  <li>커맨드라인 도구나 시스템 패키지 설치에 사용</li>
+  <li>cask Package : GUI 어플리케이션 설치도 가능하게 해주는 Homebrew 확장 패키지</li>
+  <li>mas Package : App Store 어플리케이션 설치도 가능하게 해주는 Homebrew 확장 패키지</li>
 </ul>
 
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+<h3 id="homebrew-설치">Homebrew 설치</h3>
+<ul>
+  <li>터미널 실행 후 다음 명령어를 입력</li>
+</ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>h, m = input().split()
-
-h = int(h)
-m = int(m)
-
-if m &lt; 45:
-    h -= 1
-    m += 15
-else:
-    m -= 45
-
-if h &lt; 0:
-    h = 23
-    
-print(h, m)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 </code></pre></div></div>
 
-<h2 id="3-문제-분류">3. 문제 분류</h2>
 <ul>
-  <li>수학 &gt; 사칙연산</li>
+  <li>터미널 창에 다음 명령어를 입력해 Homebrew가 정상적으로 설치되었는지 확인</li>
 </ul>
 
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/2884">https://www.acmicpc.net/problem/2884</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 상근이는 매일 아침 알람을 듣고 일어난다. 알람을 듣고 바로 일어나면 다행이겠지만, 항상 조금만 더 자려는 마음 때문에 매일 학교를 지각하고 있다.]]></summary></entry><entry><title type="html">[BOJ] 25083. 새싹 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon14/" rel="alternate" type="text/html" title="[BOJ] 25083. 새싹 (B5)" /><published>2022-09-29T00:00:00+09:00</published><updated>2022-09-29T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon14</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon14/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>아래 예제와 같이 새싹을 출력하시오.</p>
-
-<ul>
-  <li>입력 : 입력은 없다.</li>
-  <li>출력 : 새싹을 출력한다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>         ,r'"7
-r`-_   ,'  ,/
- \. ". L_r'
-   `~\/
-      |
-      |
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew --version
+// "Homebrew X.X.X" 출력 : 정상 설치
+// "zsh: command not found: brew" 출력 : 설치 오류
 </code></pre></div></div>
 
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+<h3 id="cask-package-설치">cask Package 설치</h3>
+<ul>
+  <li>터미널 창에 다음 명령어를 입력</li>
+</ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("         ,r'\"7")
-print("r`-_   ,'  ,/")
-print(" \\. \". L_r'")
-print("   `~\\/")
-print("      |")
-print("      |")
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install cask
 </code></pre></div></div>
 
-<h2 id="3-문제-분류">3. 문제 분류</h2>
 <ul>
-  <li>구현</li>
+  <li>터미널 창에 다음 명령어를 입력해 cask Package가 정상적으로 설치되었는지 확인</li>
 </ul>
 
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/25083">https://www.acmicpc.net/problem/25083</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 아래 예제와 같이 새싹을 출력하시오.]]></summary></entry><entry><title type="html">[BOJ] 10171. 고양이 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon13/" rel="alternate" type="text/html" title="[BOJ] 10171. 고양이 (B5)" /><published>2022-09-29T00:00:00+09:00</published><updated>2022-09-29T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon13</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon13/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>아래 예제와 같이 고양이를 출력하시오.</p>
-
-<ul>
-  <li>입력 : 없음.</li>
-  <li>출력 :</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\    /\
- )  ( ')
-(  /  )
- \(__)|
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew list
 </code></pre></div></div>
 
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+<h3 id="mas-package-설치">mas Package 설치</h3>
+<ul>
+  <li>터미널 창에 다음 명령어를 입력</li>
+</ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("\    /\\")
-print(" )  ( ')")
-print("(  /  )")
-print(" \(__)|")
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install mas
 </code></pre></div></div>
 
-<h2 id="3-문제-분류">3. 문제 분류</h2>
 <ul>
-  <li>구현</li>
+  <li>터미널 창에 다음 명령어를 입력해 mas Package가 정상적으로 설치되었는지 확인</li>
 </ul>
 
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/10171">https://www.acmicpc.net/problem/10171</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 아래 예제와 같이 고양이를 출력하시오.]]></summary></entry><entry><title type="html">[BOJ] 10172. 개 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon12/" rel="alternate" type="text/html" title="[BOJ] 10172. 개 (B5)" /><published>2022-09-29T00:00:00+09:00</published><updated>2022-09-29T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon12</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon12/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>아래 예제와 같이 개를 출력하시오.</p>
-
-<ul>
-  <li>입력 : 없음.</li>
-  <li>출력 :</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|\_/|
-|q p|   /}
-( 0 )"""\
-|"^"`    |
-||_/=\\__|
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew list
 </code></pre></div></div>
 
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
+<h3 id="homebrew-명령어">Homebrew 명령어</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print("|\\_/|")
-print("|q p|   /}")
-print("( 0 )\"\"\"\\")
-print("|\"^\"`    |")
-print("||_/=\\\\__|")
+<table>
+    <thead>
+        <tr>
+            <th>Homebrew 명령어 이름</th>
+            <th>Homebrew 명령어 설명</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>brew --version</th>
+            <td>Homebrew의 버전 정보 확인</td>
+        </tr>
+        <tr>
+            <th>brew doctor</th>
+            <td>Homebrew 설치 환경을 검사</td>
+        </tr>
+        <tr>
+            <th>brew update</th>
+            <td>Homebrew를 최신 버전으로 업데이트</td>
+        </tr>
+        <tr>
+            <th>brew list</th>
+            <td>설치된 패키지를 확인</td>
+        </tr>
+        <tr>
+            <th>brew upgrade</th>
+            <td>설치된 모든 패키지를 업데이트</td>
+        </tr>
+        <tr>
+            <th>brew search (패키지명)</th>
+            <td>해당 패키지가 설치되어 있는지 검색</td>
+        </tr>
+        <tr>
+            <th>brew install (패키지명)</th>
+            <td>해당 패키지를 최신 버전으로 설치</td>
+        </tr>
+        <tr>
+            <th>brew info (패키지명)</th>
+            <td>해당 패키지의 정보 확인</td>
+        </tr>
+        <tr>
+            <th>brew upgrade (패키지명)</th>
+            <td>해당 패키지를 업데이트</td>
+        </tr>
+        <tr>
+            <th>brew uninstall (패키지명)</th>
+            <td>해당 패키지를 삭제</td>
+        </tr>
+        <tr>
+            <th>brew outdated</th>
+            <td>최신 버전이 존재하는 패키지 확인</td>
+        </tr>
+        <tr>
+            <th>brew cleanup (패키지명)</th>
+            <td>해당 패키지의 구버전에 해당하는 파일 삭제</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="cask-명령어">cask 명령어</h3>
+<ul>
+  <li>기존의 brew 명령어 뒤에 <code class="language-plaintext highlighter-rouge">--cask</code>를 추가</li>
+</ul>
+
+<h3 id="mas-명령어">mas 명령어</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>mas 명령어 이름</th>
+            <th>mas 명령어 설명</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>mas version</th>
+            <td>mas의 버전 정보 확인</td>
+        </tr>
+        <tr>
+            <th>mas list</th>
+            <td>mas로 설치된 패키지 확인</td>
+        </tr>
+        <tr>
+            <th>mas upgrade</th>
+            <td>mas로 설치된 모든 패키지를 최신 버전으로 업데이트</td>
+        </tr>
+        <tr>
+            <th>mas search (검색어)</th>
+            <td>앱스토어에서 해당 검색어와 일치하는 패키지 검색</td>
+        </tr>
+        <tr>
+            <th>mas install (패키지 ID)</th>
+            <td>해당되는 ID를 가진 패키지를 최신 버전으로 설치</td>
+        </tr>
+        <tr>
+            <th>mas upgrade (패키지 ID)</th>
+            <td>해당되는 ID를 가진 패키지를 최신 버전으로 업데이트</td>
+        </tr>
+        <tr>
+            <th>mas uninstall (패키지명)</th>
+            <td>mas로 설치된 해당 패키지를 삭제</td>
+        </tr>
+        <tr>
+            <th>mas outdated</th>
+            <td>mas로 설치된 패키지 중 최신 버전이 존재하는 패키지 확인</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="homebrew-삭제">Homebrew 삭제</h3>
+<ul>
+  <li>터미널 실행 후 다음 명령어를 입력</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Homebrew로 설치한 모든 package를 일괄 삭제
+brew remove --force --ignore-dependencies $(brew list)
+
+// Homebrew 삭제
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
 </code></pre></div></div>
 
-<h2 id="3-문제-분류">3. 문제 분류</h2>
 <ul>
-  <li>구현</li>
+  <li>터미널 창에 다음 명령어를 입력해 Homebrew가 정상적으로 삭제되었는지 확인</li>
 </ul>
 
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/10172">https://www.acmicpc.net/problem/10172</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 아래 예제와 같이 개를 출력하시오.]]></summary></entry><entry><title type="html">[BOJ] 14681. 사분면 고르기 (B5)</title><link href="http://localhost:4000/baekjoon/baekjoon10/" rel="alternate" type="text/html" title="[BOJ] 14681. 사분면 고르기 (B5)" /><published>2022-09-28T00:00:00+09:00</published><updated>2022-09-28T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon10</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon10/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>흔한 수학 문제 중 하나는 주어진 점이 어느 사분면에 속하는지 알아내는 것이다. 사분면은 아래 그림처럼 1부터 4까지 번호를 갖는다. “Quadrant n”은 “제n사분면”이라는 뜻이다.</p>
-
-<p><img src="https://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/problem/14681/1.png" /></p>
-
-<p>예를 들어, 좌표가 (12, 5)인 점 A는 x좌표와 y좌표가 모두 양수이므로 제1사분면에 속한다. 점 B는 x좌표가 음수이고 y좌표가 양수이므로 제2사분면에 속한다.<br />
-점의 좌표를 입력받아 그 점이 어느 사분면에 속하는지 알아내는 프로그램을 작성하시오. (단, x좌표와 y좌표는 모두 양수나 음수라고 가정한다.)</p>
-
-<ul>
-  <li>입력 : 첫 줄에는 정수 x가 주어진다. (−1000 ≤ x ≤ 1000; x ≠ 0) 다음 줄에는 정수 y가 주어진다. (−1000 ≤ y ≤ 1000; y ≠ 0)</li>
-  <li>출력 : 점 (x, y)의 사분면 번호(1, 2, 3, 4 중 하나)를 출력한다.</li>
-</ul>
-
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x = int(input())
-y = int(input())
-
-if (x &gt; 0 and y &gt; 0):
-    print(1)
-elif(x &lt; 0 and y &gt; 0):
-    print(2)
-elif(x &lt; 0 and y &lt; 0):
-    print(3)
-elif(x &gt; 0 and y &lt; 0):
-    print(4)
-</code></pre></div></div>
-
-<h2 id="3-문제-분류">3. 문제 분류</h2>
-<ul>
-  <li>구현</li>
-  <li>기하학</li>
-</ul>
-
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/14681">https://www.acmicpc.net/problem/14681</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 흔한 수학 문제 중 하나는 주어진 점이 어느 사분면에 속하는지 알아내는 것이다. 사분면은 아래 그림처럼 1부터 4까지 번호를 갖는다. “Quadrant n”은 “제n사분면”이라는 뜻이다.]]></summary></entry><entry><title type="html">[BOJ] 2525. 오븐 시계 (B3)</title><link href="http://localhost:4000/baekjoon/baekjoon11/" rel="alternate" type="text/html" title="[BOJ] 2525. 오븐 시계 (B3)" /><published>2022-09-28T00:00:00+09:00</published><updated>2022-09-28T00:00:00+09:00</updated><id>http://localhost:4000/baekjoon/baekjoon11</id><content type="html" xml:base="http://localhost:4000/baekjoon/baekjoon11/"><![CDATA[<h2 id="1-문제-조건">1. 문제 조건</h2>
-<p>KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간편하게 만드는 인공지능 오븐을 개발하려고 한다. 인공지능 오븐은 오븐구이가 끝나는 시간을 분 단위로 자동적으로 계산한다.</p>
-
-<p>또한, 인공지능 오븐에는 사용자에게 훈제오리구이 요리가 끝나는 시각을 알려 주는 디지털 시계가 있다.</p>
-
-<p>훈제오리구이를 시작하는 시각과 오븐구이를 하는 데 필요한 시간이 분단위로 주어졌을 때, 오븐구이가 끝나는 시각을 계산하는 프로그램을 작성하시오.</p>
-
-<ul>
-  <li>입력 : 첫째 줄에는 현재 시각이 나온다. 현재 시각은 시 A (0 ≤ A ≤ 23) 와 분 B (0 ≤ B ≤ 59)가 정수로 빈칸을 사이에 두고 순서대로 주어진다. 두 번째 줄에는 요리하는 데 필요한 시간 C (0 ≤ C ≤ 1,000)가 분 단위로 주어진다.</li>
-  <li>출력 : 첫째 줄에 종료되는 시각의 시와 분을 공백을 사이에 두고 출력한다. (단, 시는 0부터 23까지의 정수, 분은 0부터 59까지의 정수이다. 디지털 시계는 23시 59분에서 1분이 지나면 0시 0분이 된다.)</li>
-</ul>
-
-<h2 id="2-문제-풀이">2. 문제 풀이</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = input().split()
-c = int(input())
-
-a = int(a)
-b = int(b)
-
-b += c
-
-while b &gt;= 60:
-    a += 1
-    b -= 60
-    
-if a &gt;= 24:
-    a -= 24
-    
-print(a, b)
-</code></pre></div></div>
-
-<h2 id="3-문제-분류">3. 문제 분류</h2>
-<ul>
-  <li>구현</li>
-  <li>수학 &gt; 사칙연산</li>
-</ul>
-
-<blockquote>
-  <p>주소 : <a href="https://www.acmicpc.net/problem/2525">https://www.acmicpc.net/problem/2525</a></p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Baekjoon" /><category term="Python" /><summary type="html"><![CDATA[1. 문제 조건 KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간편하게 만드는 인공지능 오븐을 개발하려고 한다. 인공지능 오븐은 오븐구이가 끝나는 시간을 분 단위로 자동적으로 계산한다.]]></summary></entry><entry><title type="html">[Git] macOS에서 Minimal Mistakes로 Github Blog 만들기</title><link href="http://localhost:4000/git/git1/" rel="alternate" type="text/html" title="[Git] macOS에서 Minimal Mistakes로 Github Blog 만들기" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-29T00:00:00+09:00</updated><id>http://localhost:4000/git/git1</id><content type="html" xml:base="http://localhost:4000/git/git1/"><![CDATA[<p class="notice--info"><strong>이 항목은 macOS 기반으로 작성되었습니다.</strong><br />&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew --version
+// "zsh: command not found: brew" 출력 : 정상 삭제
+// "Homebrew X.X.X" 출력 : 삭제 오류
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Mac" /><summary type="html"><![CDATA[이 항목은 macOS 기반으로 작성되었습니다.&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Git] macOS에서 Minimal Mistakes로 Github Blog 만들기</title><link href="http://localhost:4000/git/git1/" rel="alternate" type="text/html" title="[Git] macOS에서 Minimal Mistakes로 Github Blog 만들기" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-09-29T00:00:00+09:00</updated><id>http://localhost:4000/git/git1</id><content type="html" xml:base="http://localhost:4000/git/git1/"><![CDATA[<p class="notice--info"><strong>이 항목은 macOS 기반으로 작성되었습니다.</strong><br />&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.</p>
 
 <p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
 
@@ -1109,4 +1082,3430 @@ analytics:
   <li><a href="https://www.google.co.kr/adsense/start/">Google AdSense</a> 가입 후 사이트 추가</li>
   <li><code class="language-plaintext highlighter-rouge">_includes/head/custom.html</code> 파일에 코드 붙어넣기</li>
   <li><code class="language-plaintext highlighter-rouge">_includes/footer/custom.html</code> 파일에 광고 삽입</li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Git" /><category term="HTML" /><category term="JavaScript" /><category term="SCSS" /><category term="Ruby" /><summary type="html"><![CDATA[이 항목은 macOS 기반으로 작성되었습니다.&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.]]></summary></entry></feed>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Git" /><category term="HTML" /><category term="JavaScript" /><category term="SCSS" /><category term="Ruby" /><summary type="html"><![CDATA[이 항목은 macOS 기반으로 작성되었습니다.&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[F/E] 2. CSS</title><link href="http://localhost:4000/frontend/css1/" rel="alternate" type="text/html" title="[F/E] 2. CSS" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-10-05T00:00:00+09:00</updated><id>http://localhost:4000/frontend/css1</id><content type="html" xml:base="http://localhost:4000/frontend/css1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+
+<p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
+
+<p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
+
+<h2 id="css-cascading-style-sheet--html-문서가-웹-사이트에-표현되는-방법을-정하는-스타일-시트-언어">CSS (Cascading Style Sheet) : HTML 문서가 웹 사이트에 표현되는 방법을 정하는 스타일 시트 언어</h2>
+<ul>
+  <li>레이아웃 및 디자인 정보로 인해 구조화된 HTML을 만드는 데에 어려움을 겪자 디자인적 요소들을 분리하기 위해 사용</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
+    CSS 속성 : CSS 값;
+}
+</code></pre></div></div>
+
+<blockquote>
+  <ul>
+    <li>CSS 선택자 : 어떤 것을 꾸밀지?</li>
+    <li>CSS 속성 : 어떤 모양을 꾸밀지?</li>
+    <li>CSS 값 : 어떻게 꾸밀지?</li>
+  </ul>
+</blockquote>
+
+<h3 id="-css를-html에-적용시키는-방법"># CSS를 HTML에 적용시키는 방법</h3>
+
+<h4 id="--inline-style-sheet--html-태그의-속성-style에-css-코드를-넣는-방법">- Inline Style Sheet : HTML 태그의 속성 <code class="language-plaintext highlighter-rouge">style=""</code>에 CSS 코드를 넣는 방법</h4>
+<hr />
+
+<p>입력 :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p style="color: blue"&gt;
+    hello world
+&lt;/p&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+<p style="font-size:15px; background-color: black;color: blue">
+    hello world
+</p>
+
+<h4 id="--internal-style-sheet--html-문서-내-태그-stylestyle에-css-코드를-넣는-방법">- Internal Style Sheet : HTML 문서 내 태그 <code class="language-plaintext highlighter-rouge">&lt;style&gt;&lt;/style&gt;</code>에 CSS 코드를 넣는 방법</h4>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;head&gt;
+    &lt;style&gt;
+        p {
+            color: blue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p style="color: blue"&gt;
+        hello world
+    &lt;/p&gt;
+&lt;/body&gt;
+</code></pre></div></div>
+
+<h4 id="--linking-style-sheet--별도의-css-파일을-만들고-이를-html-문서와-연결하는-방법">- Linking Style Sheet : 별도의 .CSS 파일을 만들고 이를 HTML 문서와 연결하는 방법</h4>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="style.css"&gt;
+</code></pre></div></div>
+
+<h3 id="css-선언-css-declaration--css-속성과-css-값을-지정">CSS 선언 (CSS declaration) : CSS 속성과 CSS 값을 지정</h3>
+<hr />
+
+<ul>
+  <li>세미클론 (;)으로 선언을 구분해 여러 번의 선언 가능</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
+    CSS 속성1 : CSS 값1;
+    CSS 속성2 : CSS 값2;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>작은따옴표 (‘’) 혹은 큰따옴표 (““)으로 값의 공백 처리</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
+    CSS 속성1 : 'CSS 값1';
+    CSS 속성2 : "CSS 값2";
+}
+</code></pre></div></div>
+
+<ul>
+  <li>값은 속성을 여러 번 선언하였다면, 나중에 설정된 값이 적용</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
+    CSS 속성1 : CSS 값1;
+    CSS 속성1 : CSS 값2;
+}
+/* CSS 속성 1에는 CSS 값2가 적용된다. */
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">!important</code> : 값은 속성을 여러 번 선언하였다면, 나중에 설정된 값이 아닌 CSS 값 뒤에 <code class="language-plaintext highlighter-rouge">!important</code>가 사용된 것을 우선시</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
+    CSS 속성1 : CSS 값1 !important;
+    CSS 속성1 : CSS 값2;
+}
+/* CSS 속성 1에는 CSS 값1가 적용된다. */
+</code></pre></div></div>
+
+<h3 id="css-주석--">CSS 주석 : <code class="language-plaintext highlighter-rouge">/**/</code></h3>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* (주석 1) */
+
+/*
+(주석 2)
+*/
+
+/*/*(주석 3)*/*/
+</code></pre></div></div>
+
+<h3 id="css-변수-css-variables--css-변수를-선언할-경우-변수를-정의한-요소와-그-하위-요소에서-css-변수를-사용-가능">CSS 변수 (CSS variables) : CSS 변수를 선언할 경우, 변수를 정의한 요소와 그 하위 요소에서 CSS 변수를 사용 가능</h3>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--variable-name: value;
+</code></pre></div></div>
+<h4 id="root--css-변수를-전역-변수로-정의"><code class="language-plaintext highlighter-rouge">:root</code> : CSS 변수를 전역 변수로 정의</h4>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>:root {
+       --variable-name: value;
+}
+</code></pre></div></div>
+
+<h3 id="css-상속-css-inheritance--부모-태그의-상속하는-속성은-자식-태그에-영향을-미침">CSS 상속 (CSS inheritance) : 부모 태그의 상속하는 속성은 자식 태그에 영향을 미침</h3>
+<hr />
+
+<ul>
+  <li>
+    <h4 id="부모-자식-관계--어떤-태그-안에-다른-태그가-있는-관계">부모-자식 관계 : 어떤 태그 안에 다른 태그가 있는 관계</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p&gt;
+    &lt;span&gt;
+        &lt;span&gt; 태그는 &lt;p&gt; 태그의 자식
+        &lt;p&gt; 태그는 &lt;span&gt; 태그의 부모
+    &lt;/span&gt;
+&lt;/p&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="형제-관계--어떤-태그-안에-같이-있는-관계">형제 관계 : 어떤 태그 안에 같이 있는 관계</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p&gt;
+    &lt;span&gt;
+        &lt;span&gt; 태그는 &lt;img&gt; 태그와 형제
+    &lt;/span&gt;
+    &lt;img&gt;
+&lt;/p&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="캐스케이딩-cascading--부모-태그에서-정의된-속성은-자식-태그로-상속-자식-태그에-정의된-속성은-변경-가능">캐스케이딩 (Cascading) : 부모 태그에서 정의된 속성은 자식 태그로 상속, 자식 태그에 정의된 속성은 변경 가능</h4>
+  </li>
+</ul>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p style="color: red"&gt;
+    &lt;span style="color: blue"&gt;
+        - CSS 우선순위 : span의 font-color 속성이 p의 font-color 속성보다 높다.
+    &lt;/span&gt;
+&lt;/p&gt;
+
+</code></pre></div></div>
+
+<p>출력 :</p>
+<p style="font-size:15px; background-color: black; color: red">
+    <span style="color: blue">
+        CSS 우선순위 : span의 font-color 속성이 p의 font-color 속성보다 높다.
+    </span>
+</p>
+
+<h3 id="css-선택자-css-selector--html-문서에-스타일을-입힐-요소를-선택하는-문자">CSS 선택자 (CSS Selector) : HTML 문서에 스타일을 입힐 요소를 선택하는 문자</h3>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
+    CSS 속성 : CSS 값;
+}
+</code></pre></div></div>
+<blockquote>
+  <ul>
+    <li>여러 종류의 선택자를 중첩 가능 (<code class="language-plaintext highlighter-rouge">p.span</code>)</li>
+    <li>여러 종류의 선택자를 <code class="language-plaintext highlighter-rouge">space</code> 키로 구분해 동시에 선택 가능  (<code class="language-plaintext highlighter-rouge">p.span p.img</code>)</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>
+    <h4 id="전체-선택자---모든-요소를-선택하는-선택자">전체 선택자 <code class="language-plaintext highlighter-rouge">*</code> : 모든 요소를 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* {
+  color: blue;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="태그-선택자-tag--해당-태그의-요소를-선택하는-선택자">태그 선택자 <code class="language-plaintext highlighter-rouge">tag</code> : 해당 태그의 요소를 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag {
+  color: aqua;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="아이디-선택자-id--해당-아이디의-요소를-선택하는-선택자">아이디 선택자 <code class="language-plaintext highlighter-rouge">#id</code> : 해당 아이디의 요소를 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#tag {
+  color: red;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="클래스-선택자-class--해당-클래스의-요소를-선택하는-선택자">클래스 선택자 <code class="language-plaintext highlighter-rouge">.class</code> : 해당 클래스의 요소를 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.tag {
+  color: green;
+}
+</code></pre></div></div>
+
+<blockquote>
+  <p>아이디 (id)와 클래스 (class)의 차이점 : 클래스는 한 문서에 여러 개를 사용 가능하나, 아이디는 한 문서에 한번만 사용 가능</p>
+</blockquote>
+
+<ul>
+  <li>
+    <h4 id="후손-선택자-selector1selector2--해당-선택자의-모든-하위-요소-중-하나를-지정해-선택하는-선택자">후손 선택자 <code class="language-plaintext highlighter-rouge">(selector1)(selector2)</code> : 해당 선택자의 모든 하위 요소 중 하나를 지정해 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div tag{
+     color: yellow;
+}
+...
+&lt;div&gt;
+    &lt;tag&gt;
+        hello world
+    &lt;/tag&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;span&gt;
+        &lt;tag&gt;
+            hello world
+        &lt;/tag&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="자손-선택자-selector1selector2--해당-선택자의-자식-요소-중-하나를-지정해-선택하는-선택자">자손 선택자 <code class="language-plaintext highlighter-rouge">(selector1)&gt;(selector2)</code> : 해당 선택자의 자식 요소 중 하나를 지정해 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div &gt; tag{
+     color: purple;
+}
+...
+&lt;div&gt;
+    &lt;tag&gt;
+        hello world
+    &lt;/tag&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="형제-선택자-selector1selector2--해당-선택자의-형제-요소-중-하나를-지정해-선택하는-선택자">형제 선택자 <code class="language-plaintext highlighter-rouge">(selector1)~(selector2)</code> : 해당 선택자의 형제 요소 중 하나를 지정해 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div ~ tag{
+     color: pink;
+}
+...
+&lt;div&gt;
+    hello world
+&lt;/div&gt;
+&lt;tag&gt;
+    !
+&lt;/tag&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="인접-형제-선택자-selector1selector2--선택자의-형제-중-바로-다음에-오는-선택자를-지정해-선택하는-선택자">인접 형제 선택자 <code class="language-plaintext highlighter-rouge">(selector1)+(selector2)</code> : 선택자의 형제 중 바로 다음에 오는 선택자를 지정해 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div + tag{
+     color: gray;
+}
+...
+&lt;div&gt;
+    hello world
+&lt;/div&gt;
+&lt;tag&gt;
+    ?
+&lt;/tag&gt;
+&lt;tag&gt;
+    !
+&lt;/tag&gt;
+/* 첫번째 형제 요소인 "?"가 회색으로 출력 */
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="속성-선택자-속성--태그에-해당-속성이-명시되어-있는-요소들을-선택하는-선택자">속성 선택자 <code class="language-plaintext highlighter-rouge">[속성]</code> : 태그에 해당 속성이 명시되어 있는 요소들을 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag[attributes]{
+     color: white;
+}
+...
+&lt;tag attributes="true"&gt;
+    hello world
+&lt;/tag&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="속성-선택자-속성문자열--태그에-해당-속성이-명시되어-있고-그-값이-문자열인-요소들을-선택하는-선택자">속성 선택자 <code class="language-plaintext highlighter-rouge">[속성=문자열]</code> : 태그에 해당 속성이 명시되어 있고 그 값이 문자열인 요소들을 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag[attributes="attr"]{
+     color: yellow;
+}
+...
+&lt;tag attributes="attr"&gt;
+    hello world
+&lt;/tag&gt;
+</code></pre></div></div>
+
+<h3 id="가상-요소-선택자-pseudo-elements-selector--요소의-특정-부분을-선택하는-선택자">가상 요소 선택자 (Pseudo-elements Selector) : 요소의 특정 부분을 선택하는 선택자</h3>
+<hr />
+
+<ul>
+  <li>
+    <h4 id="first-line--요소의-첫번째-줄을-선택하는-선택자"><code class="language-plaintext highlighter-rouge">::first-line</code> : 요소의 첫번째 줄을 선택하는 선택자</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag::first-line {
+  color: orange;
+}
+</code></pre></div></div>
+
+<h2 id="css-속성-css-attributes--웹-사이트에-표현되는-방법을-지정하는-요소">CSS 속성 (CSS attributes) : 웹 사이트에 표현되는 방법을 지정하는 요소</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 속성 : CSS 값;
+</code></pre></div></div>
+
+<h3 id="-폰트-font-관련-속성"># 폰트 (font) 관련 속성</h3>
+
+<h4 id="color--색상을-지정하는-속성"><code class="language-plaintext highlighter-rouge">color:</code> : 색상을 지정하는 속성</h4>
+<hr />
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>color: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>#000000</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: large">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>color: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>color</td>
+                                    <td>색상 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>initial</td>
+                                    <td>현재의 속성값을 기본값으로 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>inherit</td>
+                                    <td>부모 요소의 속성값 상속</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>입력 :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="color:red"&gt;
+    hello world
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+<div style="color: red; font-size: 15px; background-color: black;">
+    hello world
+</div>
+
+<h4 id="font-size--글자-크기를-지정하는-속성"><code class="language-plaintext highlighter-rouge">font-size:</code> : 글자 크기를 지정하는 속성</h4>
+<hr />
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>font-size: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>medium</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: large">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>font-size: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>medium</td>
+                                    <td>웹 브라우저에서 정한 기본값</td>
+                                </tr>
+                                <tr>
+                                    <td>xx-small, x-small, small, large, x-large, xx-large</td>
+                                    <td>기본값에 대한 상대적인 크기</td>
+                                </tr>
+                                <tr>
+                                    <td>smaller, larger</td>
+                                    <td>부모 요소의 글자 크기에 대한 상대적인 크기</td>
+                                </tr>
+                                <tr>
+                                    <td>px</td>
+                                    <td>글자 크기를 직접 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>%, em</td>
+                                    <td>부모 요소의 글자 크기에 대한 상대적인 글자 크기의 비율을 직접 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>rem</td>
+                                    <td>최상위 요소의 글자 크기에 대한 상대적인 글자 크기의 비율을 직접 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>initial</td>
+                                    <td>현재의 속성값을 기본값으로 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>inherit</td>
+                                    <td>부모 요소의 속성값 상속</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>입력 :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="font-size: xx-small"&gt;xx-small&lt;/div&gt;
+&lt;div style="font-size: x-small"&gt;x-small&lt;/div&gt;
+&lt;div style="font-size: small"&gt;small&lt;/div&gt;
+&lt;div style="font-size: medium"&gt;medium&lt;/div&gt;
+&lt;div style="font-size: large"&gt;large&lt;/div&gt;
+&lt;div style="font-size: x-large"&gt;x-large&lt;/div&gt;
+&lt;div style="font-size: xx-large"&gt;xx-large&lt;/div&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+<div style="color: white; background-color: black;">
+    <div style="font-size: xx-small">xx-small</div>
+    <div style="font-size: x-small">x-small</div>
+    <div style="font-size: small">small</div>
+    <div style="font-size: medium">medium</div>
+    <div style="font-size: large">large</div>
+    <div style="font-size: x-large">x-large</div>
+    <div style="font-size: xx-large">xx-large</div>
+</div>
+<p><br />
+입력 :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="font-size: smaller"&gt;smaller&lt;/div&gt;
+&lt;div&gt;medium&lt;/div&gt;
+&lt;div style="font-size: larger"&gt;larger&lt;/div&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+<div style="color: white; background-color: black;">
+    <div style="font-size: smaller">smaller</div>
+    <div>medium</div>
+    <div style="font-size: larger">larger</div>
+</div>
+<p><br />
+입력 :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="font-size: 10px"&gt;
+    10px
+    &lt;i style="font-size: 200%;"&gt;
+        20px
+        &lt;span style="font-size: 0.8em"&gt;
+            16px
+            &lt;b style="font-size: 1rem"&gt;
+                1rem
+            &lt;/b&gt;
+        &lt;/span&gt;
+    &lt;/i&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+<div style="color: white; background-color: black; font-size: 10px">
+    10px
+    <i style="font-size: 200%;">
+        20px
+        <span style="font-size: 0.8em">
+            16px
+            <b style="font-size: 1rem">
+                1rem
+            </b>
+        </span>
+    </i>
+</div>
+
+<h4 id="font-family--글꼴을-지정하는-속성"><code class="language-plaintext highlighter-rouge">font-family:</code> : 글꼴을 지정하는 속성</h4>
+<hr />
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>font-family: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>웹 브라우저의 기본 글꼴</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: large">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>font-family: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>font</td>
+                                    <td>글꼴 이름 / 글꼴 유형</td>
+                                </tr>
+                                <tr>
+                                    <td>initial</td>
+                                    <td>현재의 속성값을 기본값으로 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>inherit</td>
+                                    <td>부모 요소의 속성값 상속</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="font-family: (지정할 글꼴);"&gt;
+    지정된 글꼴로 출력합니다.
+&lt;/div&gt;
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="font-family: (지정할 글꼴1), (지정할 글꼴2);"&gt;
+    지정된 글꼴1로 출력하되 (i) 해당 글꼴이 존재하지 않는다면 (ii) 표현할 수 없다면, 지정된 글꼴2로 출력합니다.
+&lt;/div&gt;
+</code></pre></div></div>
+
+<h4 id="font-weight--글자의-굵기-정도를-지정하는-속성"><code class="language-plaintext highlighter-rouge">font-weight:</code> : 글자의 굵기 정도를 지정하는 속성</h4>
+<hr />
+
+<blockquote>
+  <p>나타낼 수 있는 굵기의 정도는 글꼴마다 다름</p>
+</blockquote>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>font-weight: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>normal</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: large">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>font-weight: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>normal</td>
+                                    <td>보통 굵기 (400)</td>
+                                </tr>
+                                <tr>
+                                    <td>bold</td>
+                                    <td>굵은 굵기 (700)</td>
+                                </tr>
+                                <tr>
+                                    <td>bolder</td>
+                                    <td>상속된 값보다 굵은 크기</td>
+                                </tr>
+                                <tr>
+                                    <td>lighter</td>
+                                    <td>상속된 값보다 얇은 크기</td>
+                                </tr>
+                                <tr>
+                                    <td>number</td>
+                                    <td>굵기 정도를 직접 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>initial</td>
+                                    <td>현재의 속성값을 기본값으로 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>inherit</td>
+                                    <td>부모 요소의 속성값 상속</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>입력 :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="font-weight: normal"&gt;
+    &lt;div style="font-weight: lighter"&gt;normal-lighter&lt;/div&gt;
+    normal
+    &lt;div style="font-weight: bolder"&gt;normal-bolder&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="font-weight: bold"&gt;
+    &lt;div style="font-weight: lighter"&gt;bold-lighter&lt;/div&gt;
+    bold
+    &lt;div style="font-weight: bolder"&gt;bold-bolder&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+    <div style="font-weight: normal">
+        <div style="font-weight: lighter">normal-lighter</div>
+        normal
+        <div style="font-weight: bolder">normal-bolder</div>
+    </div>
+    <div style="font-weight: bold">
+        <div style="font-weight: lighter">bold-lighter</div>
+        bold
+        <div style="font-weight: bolder">bold-bolder</div>
+    </div>
+</div>
+
+<h3 id="-텍스트-text-관련-속성"># 텍스트 (text) 관련 속성</h3>
+
+<h4 id="text-align--텍스트를-정렬하는-속성"><code class="language-plaintext highlighter-rouge">text-align:</code> : 텍스트를 정렬하는 속성</h4>
+<hr />
+
+<div style="text-align: center; font-size: large">
+    <table>
+        <thead>
+            <tr>
+                <td>text-align: 문법</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>left</td>
+                <td>왼쪽 정렬</td>
+            </tr>
+            <tr>
+                <td>right</td>
+                <td>오른쪽 정렬</td>
+            </tr>
+            <tr>
+                <td>center</td>
+                <td>가운데 정렬</td>
+            </tr>
+            <tr>
+                <td>justify</td>
+                <td>양쪽 정렬</td>
+            </tr>
+            <tr>
+                <td>initial</td>
+                <td>현재의 속성값을 기본값으로 지정</td>
+            </tr>
+            <tr>
+                <td>inherit</td>
+                <td>부모 요소의 속성값 상속</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>입력 :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="text-align: left;"&gt;바다는 크레파스보다 진한 푸르고 육중한 비늘을 무겁게 뒤채면서, 숨을 쉰다.&lt;/div&gt;
+&lt;div style="text-align: right;"&gt;중립국으로 가는 석방 포로를 실은 인도 배 타고르호는, 흰 페인트로 말쑥하게 칠한 삼천 톤의 몸을 떨면서, 물건처럼 빼곡이 들어찬 동지나 바다의 훈김을 헤치며 미끄려져 간다.&lt;/div&gt;
+&lt;div style="text-align: center;"&gt;석방 포로 이명준(李明俊)은, 오른편의 곧장 갑판으로 통한 사닥다리를 타고 내려가, 배 뒤쪽 난간에 가서, 거기에 기대어 선다.&lt;/div&gt;
+&lt;div style="text-align: justify;"&gt;담배를 꺼내 물고 라이터를 켜댔으나 바람에 이내 꺼지고 하여, 몇 번이나 그르친 끝에, 그 자리에 쭈그리고 앉아서 오른팔로 얼굴을 가리고 간신히 댕긴다.&lt;/div&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+    <div style="text-align: left;">바다는 크레파스보다 진한 푸르고 육중한 비늘을 무겁게 뒤채면서, 숨을 쉰다.</div>
+    <div style="text-align: right;">중립국으로 가는 석방 포로를 실은 인도 배 타고르호는, 흰 페인트로 말쑥하게 칠한 삼천 톤의 몸을 떨면서, 물건처럼 빼곡이 들어찬 동지나 바다의 훈김을 헤치며 미끄려져 간다.</div>
+    <div style="text-align: center;">석방 포로 이명준(李明俊)은, 오른편의 곧장 갑판으로 통한 사닥다리를 타고 내려가, 배 뒤쪽 난간에 가서, 거기에 기대어 선다.</div>
+    <div style="text-align: justify;">담배를 꺼내 물고 라이터를 켜댔으나 바람에 이내 꺼지고 하여, 몇 번이나 그르친 끝에, 그 자리에 쭈그리고 앉아서 오른팔로 얼굴을 가리고 간신히 댕긴다.</div>
+</div>
+
+<h4 id="text-decoration--텍스트을-꾸미는-선을-지정하는-속성"><code class="language-plaintext highlighter-rouge">text-decoration:</code> : 텍스트을 꾸미는 선을 지정하는 속성</h4>
+<hr />
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>text-decoration: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>none</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: large">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>text-decoration: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>none</td>
+                                    <td>선을 만들지 않음</td>
+                                </tr>
+                                <tr>
+                                    <td>line-through</td>
+                                    <td>취소선 생성</td>
+                                </tr>
+                                <tr>
+                                    <td>overline</td>
+                                    <td>윗줄 생성</td>
+                                </tr>
+                                <tr>
+                                    <td>underline</td>
+                                    <td>밑줄 생성</td>
+                                </tr>
+                                <tr>
+                                    <td>initial</td>
+                                    <td>현재의 속성값을 기본값으로 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>inherit</td>
+                                    <td>부모 요소의 속성값 상속</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>입력 :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="text-decoration: none"&gt;none&lt;/div&gt;
+&lt;div style="text-decoration: line-through"&gt;line-through&lt;/div&gt;
+&lt;div style="text-decoration: overline"&gt;overline&lt;/div&gt;
+&lt;div style="text-decoration: underline"&gt;underline&lt;/div&gt;
+&lt;div style="text-decoration: line-through overline underline"&gt;text-decoration&lt;/div&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+    <div style="text-decoration: none">none</div>
+    <div style="text-decoration: line-through">line-through</div>
+    <div style="text-decoration: overline">overline</div>
+    <div style="text-decoration: underline">underline</div>
+    <div style="text-decoration: line-through overline underline">text-decoration</div>
+</div>
+
+<h4 id="columns--여러-개의-문단을-만드는-속성"><code class="language-plaintext highlighter-rouge">columns:</code> : 여러 개의 문단을 만드는 속성</h4>
+<hr />
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>columns: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>auto</td>
+            </tr>
+            <tr>
+                <td>속성값</td>
+                <td>문단의 최대 개수 or 문단의 최소 가로 길이</td>
+            </tr>
+         </tbody>
+    </table>
+</div>
+
+<p>입력 :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="columns: 3;"&gt;자기가 무엇에 홀려 있음을 깨닫는다. 그 넉넉한 뱃길에 여태껏 알아보지 못하고, 숨바꼭질을 하고, 피하려 하고 총으로 쏘려고까지 한 일을 생각하면, 무엇에 씌었던 게 틀림없다. 큰 새 작은 새는 좋아서 미칠 듯이, 물속에 가라앉을 듯, 탁 스치고 지나가는가 하면, 되돌아오면서, 그렇다고 한다. 무덤을 이기고 온, 못 잊을 고운 각시들이, 손짓해 본다. 내 딸아. 비로소 마음이 놓인다. 옛날, 어느 벌판에서 겪은 신내림이, 문득 떠오른다. 그러자, 언젠가 전에, 이렇게 이 배를 타고 가다가, 그 벌판을 지금처럼 떠올린 일이, 그리고 딸을 부르던 일이, 이렇게 마음이 놓이던 일이 떠올랐다. 거울 속에 비친 남자는 활짝 웃고 있다.&lt;/div&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+    <div style="columns: 3;">자기가 무엇에 홀려 있음을 깨닫는다. 그 넉넉한 뱃길에 여태껏 알아보지 못하고, 숨바꼭질을 하고, 피하려 하고 총으로 쏘려고까지 한 일을 생각하면, 무엇에 씌었던 게 틀림없다. 큰 새 작은 새는 좋아서 미칠 듯이, 물속에 가라앉을 듯, 탁 스치고 지나가는가 하면, 되돌아오면서, 그렇다고 한다. 무덤을 이기고 온, 못 잊을 고운 각시들이, 손짓해 본다. 내 딸아. 비로소 마음이 놓인다. 옛날, 어느 벌판에서 겪은 신내림이, 문득 떠오른다. 그러자, 언젠가 전에, 이렇게 이 배를 타고 가다가, 그 벌판을 지금처럼 떠올린 일이, 그리고 딸을 부르던 일이, 이렇게 마음이 놓이던 일이 떠올랐다. 거울 속에 비친 남자는 활짝 웃고 있다.</div>
+</div>
+<p><br />
+입력 :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="columns: 150px;"&gt;자기가 무엇에 홀려 있음을 깨닫는다. 그 넉넉한 뱃길에 여태껏 알아보지 못하고, 숨바꼭질을 하고, 피하려 하고 총으로 쏘려고까지 한 일을 생각하면, 무엇에 씌었던 게 틀림없다. 큰 새 작은 새는 좋아서 미칠 듯이, 물속에 가라앉을 듯, 탁 스치고 지나가는가 하면, 되돌아오면서, 그렇다고 한다. 무덤을 이기고 온, 못 잊을 고운 각시들이, 손짓해 본다. 내 딸아. 비로소 마음이 놓인다. 옛날, 어느 벌판에서 겪은 신내림이, 문득 떠오른다. 그러자, 언젠가 전에, 이렇게 이 배를 타고 가다가, 그 벌판을 지금처럼 떠올린 일이, 그리고 딸을 부르던 일이, 이렇게 마음이 놓이던 일이 떠올랐다. 거울 속에 비친 남자는 활짝 웃고 있다.&lt;/div&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+    <div style="columns: 150px;">자기가 무엇에 홀려 있음을 깨닫는다. 그 넉넉한 뱃길에 여태껏 알아보지 못하고, 숨바꼭질을 하고, 피하려 하고 총으로 쏘려고까지 한 일을 생각하면, 무엇에 씌었던 게 틀림없다. 큰 새 작은 새는 좋아서 미칠 듯이, 물속에 가라앉을 듯, 탁 스치고 지나가는가 하면, 되돌아오면서, 그렇다고 한다. 무덤을 이기고 온, 못 잊을 고운 각시들이, 손짓해 본다. 내 딸아. 비로소 마음이 놓인다. 옛날, 어느 벌판에서 겪은 신내림이, 문득 떠오른다. 그러자, 언젠가 전에, 이렇게 이 배를 타고 가다가, 그 벌판을 지금처럼 떠올린 일이, 그리고 딸을 부르던 일이, 이렇게 마음이 놓이던 일이 떠올랐다. 거울 속에 비친 남자는 활짝 웃고 있다.</div>
+</div>
+
+<h3 id="-박스-모델-box-model--모든-html-엘리멘트들은-박스-모양으로-구성되어-있음"># 박스 모델 (Box Model) : 모든 HTML 엘리멘트들은 박스 모양으로 구성되어 있음</h3>
+
+<div style="
+    background-color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    ">
+    <div style="
+            border-style: solid;
+            border-width: 5px;
+            border-color: red;
+            margin-left: 10%;
+            margin-right: 10%;
+            padding-bottom: 2%;">
+        마진 영역 (Margin Area)
+        <div style="
+            border-style: inherit;
+            border-width: inherit;
+            border-color: blue;
+            margin-left: inherit;
+            margin-right: inherit;
+            padding-bottom: inherit;">
+            테두리 영역 (Border Area)
+            <div style="
+                border-style: inherit;
+                border-width: inherit;
+                border-color: green;
+                margin-left: inherit;
+                margin-right: inherit;
+                padding-bottom: inherit;">
+                패딩 영역 (Padding Area)
+                <div style="
+                    border-style: inherit;
+                    border-width: inherit;
+                    border-color: aqua;
+                    margin-left: inherit;
+                    margin-right: inherit;
+                    padding-bottom: inherit;">
+                    컨텐츠 영역 (Content Area)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h4 id="margin-속성--마진에-값을-부여하는-속성">margin 속성 : 마진에 값을 부여하는 속성</h4>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.box {
+    margin: xx yy zz ww;
+    /* xx는 위쪽 마진, yy는 오른쪽 마진, zz는 아랫쪽 마진, ww는 왼쪽 마진 */
+    margin-top: xx;
+    margin-right: xx;
+    margin-bottom: xx;
+    margin-left: xx;
+}
+</code></pre></div></div>
+
+<h4 id="padding-속성--패딩에-값을-부여하는-속성">padding 속성 : 패딩에 값을 부여하는 속성</h4>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.box {
+    padding: xx yy zz ww;
+    /* xx는 위쪽 패딩, yy는 오른쪽 패딩, zz는 아랫쪽 패딩, ww는 왼쪽 패딩 */
+    padding-top: xx;
+    padding-right: xx;
+    padding-bottom: xx;
+    padding-left: xx;
+}
+</code></pre></div></div>
+
+<h4 id="border-속성--테두리에-값을-부여하는-속성">border 속성 : 테두리에 값을 부여하는 속성</h4>
+<hr />
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>border: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>medium, none, color</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: large">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>border: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>border-width</td>
+                                    <td>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td>border-width: 값</td>
+                                                    <td>테두리의 두께 정도 지정</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>medium</td>
+                                                    <td>기본값</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>thick</td>
+                                                    <td>기본값보다 굵게</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>thin</td>
+                                                    <td>기본값보다 얇게</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>%, px, em, rem</td>
+                                                    <td>직접 테두리의 두께 정도 지정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>initial</td>
+                                                    <td>현재의 속성값을 기본값으로 지정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>inherit</td>
+                                                    <td>부모 요소의 속성값 상속</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>border-style</td>
+                                    <td>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td>border-style: 값</td>
+                                                    <td>테두리의 모양 지정</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>none</td>
+                                                    <td>테두리를 생성하지 않음 (기본값)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>dashed, dotted,<br />double, groove,<br />hidden, inset,<br /> outset, ridge,<br />solid</td>
+                                                    <td>여러 모양의 테두리를 생성</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>initial</td>
+                                                    <td>현재의 속성값을 기본값으로 지정</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>inherit</td>
+                                                    <td>부모 요소의 속성값 상속</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>border-color</td>
+                                    <td>테두리의 색상 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>border-radius</td>
+                                    <td>%, px, em, rem 등으로 테두리의 모서리에 대한 둥근 정도 지정
+                                        <div style="text-align: left;">
+                                            <li>top-left-x</li>
+                                            <li>top-right-x</li>
+                                            <li>bottom-right-x</li>
+                                            <li>bottom-left-x</li>
+                                            <li>top-left-y</li>
+                                            <li>top-right-y</li>
+                                            <li>bottom-right-y</li>
+                                            <li>bottom-left-y</li>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>initial</td>
+                                    <td>현재의 속성값을 기본값으로 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>inherit</td>
+                                    <td>부모 요소의 속성값 상속</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p>입력 :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="
+    background-color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    "&gt;
+    &lt;div style="
+        border: dashed 5px red;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 25%;
+        padding-bottom: inherit;"&gt;
+    dashed 5px red (border-radius: 25%)
+        &lt;div style="
+            border: dotted 3px blue;
+            margin-left: inherit;
+            margin-right: inherit;
+            padding-bottom: inherit;"&gt;
+        dotted 3px blue
+            &lt;div style="
+                border: double 7px green;
+                margin-left: inherit;
+                margin-right: inherit;
+                padding-bottom: inherit;"&gt;
+            double 7px green
+                &lt;div style="
+                    border: solid 3px gray;
+                    margin-left: inherit;
+                    margin-right: inherit;
+                    padding-bottom: inherit;"&gt;
+                    solid 3px gray
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<div style="
+    background-color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    ">
+    <div style="
+        border: dashed 5px red;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 25%;
+        padding-bottom: inherit;">
+    dashed 5px red (border-radius: 25%)
+        <div style="
+            border: dotted 3px blue;
+            margin-left: inherit;
+            margin-right: inherit;
+            padding-bottom: inherit;">
+        dotted 3px blue
+            <div style="
+                border: double 7px green;
+                margin-left: inherit;
+                margin-right: inherit;
+                padding-bottom: inherit;">
+            double 7px green
+                <div style="
+                    border: solid 3px gray;
+                    margin-left: inherit;
+                    margin-right: inherit;
+                    padding-bottom: inherit;">
+                    solid 3px gray
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h4 id="width-height-속성--박스의-가로-세로-길이를-지정하는-속성">width, height 속성 : 박스의 가로, 세로 길이를 지정하는 속성</h4>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="
+    postion: relative;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;"&gt;
+    &lt;div style="
+        postion: absolute;
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: 70%;"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<div style="
+    postion: relative;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;">
+    <div style="
+        postion: absolute;
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: 70%;">
+    </div>
+</div>
+
+<h4 id="box-sizing-속성--박스-크기의-기준을-지정하는-속성">box-sizing 속성 : 박스 크기의 기준을 지정하는 속성</h4>
+<hr />
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>box-sizing: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>content-box</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: large">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>box-sizing: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>content-box</td>
+                                    <td>컨텐츠 영역을 기준으로 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>border-box</td>
+                                    <td>테두리 영역을 기준으로 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>initial</td>
+                                    <td>현재의 속성값을 기본값으로 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>inherit</td>
+                                    <td>부모 요소의 속성값 상속</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.cb {
+    box-sizing: content-box;
+}
+.bb {
+    box-sizing: border-box;
+}
+.iib {
+    box-sizing: initial;
+}
+.ihb {
+    box-sizing: inherit;
+}
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Frontend" /><category term="HTML" /><category term="CSS" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 1. 알고리즘 (Algorithm)과 복잡도 (Complexity)</title><link href="http://localhost:4000/algorithm/algorithm1/" rel="alternate" type="text/html" title="[Algorithm] 1. 알고리즘 (Algorithm)과 복잡도 (Complexity)" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm1</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm1/"><![CDATA[<p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
+
+<h2 id="알고리즘-algorithm--어떠한-문제를-해결하기-위한-절차나-방법">알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법</h2>
+<ul>
+  <li>입력 : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함</li>
+  <li>출력 : 최소 1개 이상의 결과를 가져야 함</li>
+</ul>
+
+<h2 id="알고리즘의-복잡도-complexity--알고리즘의-성능을-나타내는-척도">알고리즘의 복잡도 (Complexity) : 알고리즘의 성능을 나타내는 척도</h2>
+
+<h3 id="공간-복잡도-space-complexity--문제를-해결할-때-걸리는-공간과-입력의-함수-관계">공간 복잡도 (Space Complexity) : 문제를 해결할 때 걸리는 공간과 입력의 함수 관계</h3>
+<ul>
+  <li>특정한 크기의 입력에 대해 알고리즘이 얼마나 많은 메모리를 차지하는가?</li>
+  <li>알고리즘을 위해 필요한 메모리의 양</li>
+</ul>
+
+<h3 id="시간-복잡도-time-complexity--문제를-해결할-때-걸리는-시간과-입력의-함수-관계">시간 복잡도 (Time Complexity) : 문제를 해결할 때 걸리는 시간과 입력의 함수 관계</h3>
+<ul>
+  <li>특정한 크기의 입력에 대해 알고리즘이 얼마나 오래 걸리는가?</li>
+  <li>알고리즘을 위해 필요한 연산의 횟수</li>
+  <li>만약 프로그램을 비효율적으로 작성하여 시간 제한 (Time Limit)를 넘기면, 시간 초과 (Time Limit Exceeded)로 오답 처리</li>
+</ul>
+
+<h4 id="빅-오-표기법-big-o--최악의-경우만을-고려해-시간-복잡도를-계산">빅 오 표기법 (Big-O) : 최악의 경우만을 고려해 시간 복잡도를 계산</h4>
+<ul>
+  <li>이를 위해 가장 빠르게 증가할, 즉 가장 높은 차수의 항만을 고려하고 계수와 나머지 차수의 항들은 계산에서 제외</li>
+  <li>만약 크기 N의 모든 입력에 대한 알고리즘에 필요한 시간이 최대 N의 식을 가진다면, 이 알고리즘의 점근적 시간 복잡도는 O(N)</li>
+</ul>
+
+<h5 id="공통-시간-복잡도-표-common-time-complexity-table">공통 시간 복잡도 표 (Common Time Complexity Table)</h5>
+<table style="margin-left: 2%; margin-top: 2%;">
+	<thead>
+		<tr>
+			<th>빅 오 표기법</th>
+			<th>설명</th>
+		</tr>
+	</thead>
+   	<tbody>
+        <tr>
+            <th>O(1)</th>
+            <td>상수 시간</td>
+        </tr>
+        <tr>
+            <th>O(logN)</th>
+            <td>로그 시간</td>
+        </tr>
+        <tr>
+            <th>O(N)</th>
+            <td>선형 시간</td>
+        </tr>
+        <tr>
+            <th>O(N * logN)</th>
+            <td>로그 선형 시간</td>
+        </tr>
+        <tr>
+            <th>O(N^2)</th>
+            <td>2차 시간</td>
+        </tr>
+        <tr>
+            <th>O(N^3)</th>
+            <td>3차 시간</td>
+        </tr>
+        <tr>
+            <th>O(N^4)</th>
+            <td>4차 시간</td>
+        </tr>
+    </tbody>
+</table>
+
+<blockquote>
+  <p>만약 시간 제한이 1초인 문제를 해결할 때, 시간 복잡도 …인 알고리즘을 설계해야 한다.</p>
+  <ul>
+    <li>N의 범위가 500인 경우 : O(N^3)</li>
+    <li>N의 범위가 2,000인 경우 : O(N^2)</li>
+    <li>N의 범위가 100,000인 경우 : O(N * logN)</li>
+    <li>N의 범위가 10,000,000인 경우 : O(N^3)</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>
+    <h4 id="수행-시간-측정-code-by-python">수행 시간 측정 Code by Python</h4>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import time
+start_time = time.time() # 측정 시작
+...
+end_time = time.time() # 측정 종료
+print(end_time - start_time) # 수행 시간 출력
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><category term="Python" /><summary type="html"><![CDATA[이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.]]></summary></entry><entry><title type="html">[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)</title><link href="http://localhost:4000/algorithm/algorithm2/" rel="alternate" type="text/html" title="[Algorithm] 2. 구현 알고리즘 (Implementation Algorithm)" /><published>2022-09-24T00:00:00+09:00</published><updated>2022-09-24T00:00:00+09:00</updated><id>http://localhost:4000/algorithm/algorithm2</id><content type="html" xml:base="http://localhost:4000/algorithm/algorithm2/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+
+<p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
+
+<p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
+
+<h2 id="구현-알고리즘-implementation-algorithm">구현 알고리즘 (Implementation Algorithm)</h2>
+<ul>
+  <li>구현 : 알고리즘을 소스 코드로 바꾸는 과정</li>
+  <li>구현 알고리즘은 결국 모든 범위의 문제 유형을 포괄하는 개념</li>
+  <li>문제 해결 분야에서의 구현 유형은 ‘풀이를 떠오르는 것은 쉽지만 소스 코드로 옮기기 어려운 문제’를 의미</li>
+  <li>대체로 사소한 조건 설정이 많은 문제일수록 구현이 까다로움</li>
+</ul>
+
+<h2 id="python으로-구현-시-고려해야-할-제약-사항">Python으로 구현 시 고려해야 할 제약 사항</h2>
+
+<h3 id="python에서의-변수-표현-범위">Python에서의 변수 표현 범위</h3>
+<ul>
+  <li>C/C++/JAVA와 달리, Python은 프로그래머가 직접 정수형 변수 자료형을 지정할 필요가 없고 아주 큰 수의 연산 역시 기본으로 지원</li>
+  <li>실수형 변수는 유효 숫자에 따라 연산하기에 원하는 결과가 나오지 않을 수 있음</li>
+</ul>
+
+<h2 id="python에서의-list-크기">Python에서의 list 크기</h2>
+<ul>
+  <li>Python에서 여러 개의 변수를 사용할 때 list를 이용하는데, 이때 제한된 메모리를 초과할 수 있음</li>
+</ul>
+
+<table>
+	<thead>
+		<tr>
+			<th>list의 길이</th>
+			<th>메모리 사용량</th>
+		</tr>
+	</thead>
+   	<tbody>
+        <tr>
+            <th>1,000</th>
+            <td>약 4KB</td>
+        </tr>
+        <tr>
+            <th>1,000,000</th>
+            <td>약 4MB</td>
+        </tr>
+        <tr>
+            <th>1,000,000,000</th>
+            <td>약 40MB</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="문제--상하좌우">문제 : 상하좌우</h2>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><category term="Python" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[F/E] 1. HTML</title><link href="http://localhost:4000/frontend/html1/" rel="alternate" type="text/html" title="[F/E] 1. HTML" /><published>2022-09-20T00:00:00+09:00</published><updated>2022-10-03T00:00:00+09:00</updated><id>http://localhost:4000/frontend/html1</id><content type="html" xml:base="http://localhost:4000/frontend/html1/"><![CDATA[<p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
+
+<p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
+
+<h2 id="웹-web--인터넷을-기반으로-이미지와-문자를-전송하는-프로토콜-protocol">웹 (Web) : 인터넷을 기반으로 이미지와 문자를 전송하는 프로토콜 (Protocol)</h2>
+
+<ul>
+  <li>월드 와이드 웹 (WWW)이라고도 부름</li>
+  <li>하이퍼텍스트 기반으로 연결된 문서들의 집합체로 정의</li>
+</ul>
+
+<h3 id="인터넷-internet--전세계적으로-연결된-컴퓨터-네트워크-공간">인터넷 (Internet) : 전세계적으로 연결된 컴퓨터 네트워크 공간</h3>
+<hr />
+
+<ul>
+  <li>수많은 클라이언트, 서버, 이들로 구성된 네트워크의 집합</li>
+  <li>TCP/IP 통신 규약을 통해 파일 송수신</li>
+</ul>
+
+<h4 id="네트워크-network--컴퓨터들이-전자신호를-통해-하나로-연결된-통신-체계">네트워크 (Network) : 컴퓨터들이 전자신호를 통해 하나로 연결된 통신 체계</h4>
+<hr />
+
+<ul>
+  <li>통신망 혹은 망이라고도 부름</li>
+  <li>노드들이 링크를 통해 자원 공유 가능</li>
+</ul>
+
+<blockquote>
+  <h4 id="서버-server--네트워크에-연결되어-클라이언트에-정보-응답-response">서버 (Server) : 네트워크에 연결되어 클라이언트에 정보 응답 (Response)</h4>
+  <ul>
+    <li>
+      <h5 id="웹-서버-web-server---클라이언트가-요청하는-웹-문서를-전달하거나-웹-서비를-실행하여-그-결과를-사용자에게-제공">웹 서버 (Web Server) :  클라이언트가 요청하는 웹 문서를 전달하거나 웹 서비를 실행하여 그 결과를 사용자에게 제공</h5>
+    </li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <h4 id="클라이언트-client--네트워크에-연결되어-서버에-정보-요청-request">클라이언트 (Client) : 네트워크에 연결되어 서버에 정보 요청 (Request)</h4>
+  <ul>
+    <li>
+      <h5 id="웹-브라우저-web-browser--웹-서버에서-웹-문서를-받거나-웹-서버로-정보를-보낼-때-사용자가-사용하는-프로그램">웹 브라우저 (Web Browser) : 웹 서버에서 웹 문서를 받거나 웹 서버로 정보를 보낼 때 사용자가 사용하는 프로그램</h5>
+    </li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <h4 id="웹-사이트-web-site---웹을-통해-접속할-수-있는-웹-문서의-집합">웹 사이트 (Web site) :  웹을 통해 접속할 수 있는 웹 문서의 집합</h4>
+  <ul>
+    <li>
+      <h5 id="웹-문서-web-page--웹-사이트를-구성하는-개별-문서-html-문서로-작성">웹 문서 (Web Page) : 웹 사이트를 구성하는 개별 문서 (HTML 문서로 작성)</h5>
+    </li>
+  </ul>
+</blockquote>
+
+<h2 id="html-hyper-text-transfer-protocol--웹-문서의-모양을-기술하기-위해-사용하는-마크업-언어">HTML (Hyper Text Transfer Protocol) : 웹 문서의 모양을 기술하기 위해 사용하는 마크업 언어</h2>
+<ul>
+  <li>인터넷에서 데이터를 주고받을 수 있는 텍스트 기반의 통신 프로토콜 (Transfer Protocol)</li>
+  <li>제목, 단락, 목록 등과 같이 본문을 위한 구조적 의미를 표현할 수 있고, 링크, 인용 등을 통해 구조적 문서를 구성할 수 있음</li>
+</ul>
+
+<p>입력 :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+	&lt;head&gt;
+		&lt;div style="
+			color: blue;
+			font-size: 15px;
+		"&gt;
+			Hello World!
+		&lt;/div&gt;
+	&lt;/head&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+
+<html>
+	<head>
+		<div style="
+			color: blue;
+			font-size: 15px;
+		">
+			Hello World!
+		</div>
+	</head>
+</html>
+
+<blockquote>
+  <ul>
+    <li>
+      <h3 id="html-엘리먼트-html-elements--html-문서나-웹-페이지를-이루는-개별적인-요소">HTML 엘리먼트 (HTML elements) : HTML 문서나 웹 페이지를 이루는 개별적인 요소</h3>
+    </li>
+    <li>
+      <h3 id="html-태그-html-tags-tagtag--엘리먼트의-시작과-끝을-표시하는-마크업-기호">HTML 태그 (HTML tags) <code class="language-plaintext highlighter-rouge">&lt;tag&gt;&lt;/tag&gt;</code> : 엘리먼트의 시작과 끝을 표시하는 마크업 기호</h3>
+    </li>
+    <li>
+      <h3 id="html-속성-html-attributes-tag-element--여는-태그-내에서-명령어를-구체화하는-속성">HTML 속성 (HTML attributes) <code class="language-plaintext highlighter-rouge">&lt;tag element=""&gt;</code> : 여는 태그 내에서 명령어를 구체화하는 속성</h3>
+    </li>
+    <li>
+      <h3 id="html-변수-html-arguments-tag-elementvalue--태그-내의-속성에-해당되는-변수">HTML 변수 (HTML arguments) <code class="language-plaintext highlighter-rouge">&lt;tag element="value"&gt;</code> : 태그 내의 속성에 해당되는 변수</h3>
+    </li>
+    <li>
+      <h3 id="html-주석-html-arguments----주석---">HTML 주석 (HTML arguments) <code class="language-plaintext highlighter-rouge">&lt;!-- 주석 --&gt;</code></h3>
+    </li>
+  </ul>
+</blockquote>
+
+<h2 id="html--html으로-작성된-문서임을-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;html&gt;</code> : HTML으로 작성된 문서임을 선언하는 태그</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h3 id="doctype-html--마크업-언어에서의-문서-형식을-정의하는-태그"><code class="language-plaintext highlighter-rouge">&lt;!DOCTYPE html&gt;</code> : 마크업 언어에서의 문서 형식을 정의하는 태그</h3>
+<hr />
+
+<ul>
+  <li>DTD 태그 (Document Type Definition)</li>
+  <li>웹 브라우저의 렌더링 엔진이 관용 모드 (Quirks Mode)가 아닌 표준 모드로 렌더링</li>
+  <li>HTML5 :<code class="language-plaintext highlighter-rouge">&lt;!DOCTYPE html&gt;</code>으로 선언</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h3 id="html-lang--웹-문서의-텍스트가-어떤-언어로-작성되었는지-나타내는-속성"><code class="language-plaintext highlighter-rouge">&lt;html lang=""&gt;</code> : 웹 문서의 텍스트가 어떤 언어로 작성되었는지 나타내는 속성</h3>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html lang="ko"&gt;
+...
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="head--웹-문서의-속성을-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> : 웹 문서의 속성을 선언하는 태그</h2>
+<ul>
+  <li>실제 웹 브라우저 화면 상에는 출력되지 않음</li>
+  <li>HTML 문서의 부가적인 정보들을 넣음</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html lang="ko"&gt;
+	&lt;head&gt;
+	...
+	&lt;/head&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h3 id="title--웹-문서의-제목을-나타내는-태그"><code class="language-plaintext highlighter-rouge">&lt;title&gt;</code> : 웹 문서의 제목을 나타내는 태그</h3>
+<hr />
+
+<ul>
+  <li>브라우저의 탭에 표시되는 제목을 출력</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;title&gt;
+	웹 문서 제목
+&lt;/title&gt;
+</code></pre></div></div>
+
+<h3 id="meta--웹-서버와-웹-브라우저-간-상호-교환되는-정보를-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;meta&gt;</code> : 웹 서버와 웹 브라우저 간 상호 교환되는 정보를 선언하는 태그</h3>
+<hr />
+
+<table>
+	<thead>
+ 		<tr>
+ 			<th>meta 태그의 속성 값</th>
+ 			<td>설명</td>
+ 		</tr>
+ 	</thead>
+ 	<tbody>
+ 		<tr>
+ 			<th>name</th>
+ 			<td>메타 정보의 이름 선언</td>
+ 		</tr>
+ 		<tr>
+ 			<th>content</th>
+ 			<td>메타 정보의 내용 선언</td>
+ 		</tr>
+ 		<tr>
+ 			<th>http-equiv</th>
+ 			<td>HTTP 문서의 초기 정보 선언</td>
+ 		</tr>
+ 	</tbody>
+</table>
+
+<h4 id="meta-name--웹-서버가-웹-브라우저의-요청에-대해-응답할-정보들을-선언하는-속성"><code class="language-plaintext highlighter-rouge">&lt;meta name=""&gt;</code> : 웹 서버가 웹 브라우저의 요청에 대해 응답할 정보들을 선언하는 속성</h4>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	name="..."
+    	content="..."
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-namedescription--웹-브라우저의-검색-결과에-표시될-웹-문서의-설명을-선언하는-name-변수"><code class="language-plaintext highlighter-rouge">&lt;meta name="description"&gt;</code> : 웹 브라우저의 검색 결과에 표시될 웹 문서의 설명을 선언하는 name 변수</h5>
+<hr />
+
+<ul>
+  <li>content 값은 공백을 포함해 최대 150글자여야 함</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	name="description"
+      	content="설명"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-namekeywords--웹-브라우저의-검색-엔진에-의해-검색될-검색-키워드를-선언하는-name-변수"><code class="language-plaintext highlighter-rouge">&lt;meta name="keywords"&gt;</code> : 웹 브라우저의 검색 엔진에 의해 검색될 검색 키워드를 선언하는 name 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+    name="keywords"
+      	content="키워드1, 키워드2,..."
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-namerobots---검색-로봇을-제어하는-name-변수"><code class="language-plaintext highlighter-rouge">&lt;meta name="robots"&gt;</code> :  검색 로봇을 제어하는 name 변수</h5>
+<hr />
+
+<table>
+	<thead>
+		<tr>
+			<th>robots 태그의 content 변수</th>
+			<td>설명</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Follow</th>
+			<td>해당 문서를 수집 대상으로 지정</td>
+		</tr>
+		<tr>
+			<th>Index</th>
+			<td>해당 문서를 포함해 링크가 걸린 곳을 수집 대상으로 지정</td>
+		</tr>
+		<tr>
+			<th>Noindex</th>
+			<td>해당 문서를 수집 대상에서 제외</td>
+		</tr>
+		<tr>
+			<th>Nofollow</th>
+			<td>해당 문서를 포함해 링크가 걸린 곳을 수집 대상에서 제외</td>
+		</tr>
+		<tr>
+			<th>All</th>
+			<td>'Index, Follow'와 동일</td>
+		</tr>
+		<tr>
+			<th>None</th>
+			<td>'Noindex, Nofollow'와 동일</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+    name="robots"
+      	content="명령1, 명령2"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-namedate--웹-문서가-작성된-날짜를-선언하는-name-변수"><code class="language-plaintext highlighter-rouge">&lt;meta name="date"&gt;</code> : 웹 문서가 작성된 날짜를 선언하는 name 변수</h5>
+<hr />
+
+<ul>
+  <li>content 값은 “2022-09-21T17:38:06+09:00”와 같이 “연도-월-일T시:분:초+(GMT)” 형식으로 작성</li>
+  <li>GMT는 그리니치 표준시와 현 국가/지역 사이의 시차를 의미</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+   	name="date"
+      	content="날짜"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-nameviewport--모든-장치에서-웹-문서가-잘-보이도록-뷰-포트를-설정하는-name-변수"><code class="language-plaintext highlighter-rouge">&lt;meta name="viewport"&gt;</code> : 모든 장치에서 웹 문서가 잘 보이도록 뷰 포트를 설정하는 name 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+   	name ="viewport"
+      	content="
+			width=device-width,
+			initial-scale=1.0
+			"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-nametwitter--twitter의-미리보기-기능을-설정하는-name-변수"><code class="language-plaintext highlighter-rouge">&lt;meta name="twitter"&gt;</code> : twitter의 ‘미리보기’ 기능을 설정하는 name 변수</h5>
+<hr />
+
+<table>
+	<thead>
+		<tr>
+			<th>'twitter 미리보기' 설정 변수</th>
+			<th>설명</th>
+		</tr>
+	</thead>
+   	<tbody>
+		<tr>
+			<th>twitter:card</th>
+			<td>트위터 미리보기를 표시</td>
+		</tr>
+		<tr>
+			<th>twitter:url</th>
+			<td>트위터 미리보기에서 표시될 웹 페이지 주소</td>
+		</tr>
+		<tr>
+			<th>twitter:title</th>
+			<td>트위터 미리보기에서 표시될 웹 페이지 제목</td>
+		</tr>
+		<tr>
+			<th>twitter:description</th>
+			<td>트위터 미리보기에서 표시될 웹 페이지 설명</td>
+		</tr>
+		<tr>
+			<th>twitter:image</th>
+			<td>트위터 미리보기에서 표시될 웹 페이지 이미지</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+    name="twitter:card"
+    	content="summary"
+/&gt;
+&lt;meta
+    name="twitter:url"
+    	content="website_url"
+/&gt;
+&lt;meta
+    name="twitter:title"
+    	content="website_name"
+/&gt; 
+&lt;meta
+    name="twitter:description"
+    	content="website_description"
+/&gt; 
+&lt;meta
+    name="twitter:image"
+    	content="website_image"
+/&gt;
+</code></pre></div></div>
+
+<h4 id="meta-nameapple-mobile-web-app--ios-safari의-홈-화면에-추가-기능을--설정하는-name-변수"><code class="language-plaintext highlighter-rouge">&lt;meta name="apple-mobile-web-app"&gt;</code> : ios Safari의 ‘홈 화면에 추가’ 기능을  설정하는 name 변수</h4>
+<hr />
+
+<ul>
+  <li>애플 메타 태그 (apple meta tag)</li>
+</ul>
+
+<table>
+	<thead>
+		<tr>
+			<th>Safari '홈 화면에 추가' 설정 변수</th>
+			<th>설명</th>
+		</tr>
+	</thead>
+   	<tbody>
+		<tr>
+			<th>apple-mobile-web-app-title</th>
+			<td>홈 화면에 추가 기능을 사용할 때 표시될 웹 사이트의 이름</td>
+		</tr>
+		<tr>
+			<th>apple-mobile-web-app-capable</th>
+			<td>홈 화면에 추가 기능을 사용할 때 브라우저의 UI 사용 여부</td>
+		</tr>
+		<tr>
+			<th>apple-mobile-web-app-status-bar-style</th>
+			<td>홈 화면에 추가 기능을 사용할 때 표시될 상태바의 색상<br />(default : 회색, black : 검정, black-translucent : 반투명)</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+    name="apple-mobile-web-app-title"
+    	content="website_name"
+/&gt;
+&lt;meta
+    name="apple-mobile-web-app-capable"
+      	content="yes"
+/&gt;
+&lt;meta
+    name="apple-mobile-web-app-status-bar-style"
+    	content="black-translucent"
+/&gt; 
+</code></pre></div></div>
+
+<h4 id="meta-http-equiv--웹-서버가-웹-문서와-함께-html-응답-헤더를-보내-웹-브라우저가-http-문서의-초기-정보를-지정할-수-있게-하는-속성"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv=""&gt;</code> : 웹 서버가 웹 문서와 함께 HTML 응답 헤더를 보내 웹 브라우저가 HTTP 문서의 초기 정보를 지정할 수 있게 하는 속성</h4>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+    http-equiv="..."
+    	content="..."
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivsubject--웹-사이트의-주제를-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="subject"&gt;</code> : 웹 사이트의 주제를 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="subject"
+		content="웹 사이트 주제"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivtitle--웹-사이트의-제목을-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="title"&gt;</code> : 웹 사이트의 제목을 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="title"
+		content="웹 사이트 제목"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivauthor--웹-문서를-작성한-저자를-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="author"&gt;</code> : 웹 문서를 작성한 저자를 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="author"
+		content="저자"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivdistribution--웹-문서를-배포하는-배포자를-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="distribution"&gt;</code> : 웹 문서를 배포하는 배포자를 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="distribution"
+		content="배포자"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivgenerator--웹-문서를-작성한-제작-도구를-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="generator"&gt;</code> : 웹 문서를 작성한 제작 도구를 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="generator"
+		content="제작 도구"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivreply-to--문의받을-이메일을-지정하는-http-equiv-변수-reply-to-대신-email도-가능"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="reply-to"&gt;</code> : 문의받을 이메일을 지정하는 http-equiv 변수 (“reply-to” 대신 “email”도 가능)</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="reply-to"
+      	content="이메일"
+/&gt;
+&lt;meta
+	http-equiv="email"
+      	content="이메일"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivfilename--파일-이름을-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="filename"&gt;</code> : 파일 이름을 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="filename"
+      	content="파일 이름"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivlocation--위치를-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="location"&gt;</code> : 위치를 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="location"
+      	content="위치"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivcopyright--저작권를-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="copyright"&gt;</code> : 저작권를 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="copyright"
+      	content="copyright@저작권 이메일 주소"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivbuild--웹-문서의-최초-제작-연도-월-일을-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="build"&gt;</code> : 웹 문서의 최초 제작 연도, 월, 일을 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="build"
+      	content="최초 수정일"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivlast-modified--웹-문서의-최종-수정-연도-월-일을-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="last-modified"&gt;</code> : 웹 문서의 최종 수정 연도, 월, 일을 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="build"
+      	content="최종 수정일"
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivx-ua-compatible--웹-문서를-렌더링할-ie-버전을-명시해-웹의-호환성을-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="X-UA-Compatible"&gt;</code> : 웹 문서를 렌더링할 IE 버전을 명시해 웹의 호환성을 지정하는 http-equiv 변수</h5>
+<hr />
+
+<table>
+	<thead>
+		<tr>
+			<th>X-UA-Compatible의 content 변수 </th>
+			<th>설명</th>
+		</tr>
+	</thead>
+   	<tbody>
+		<tr>
+    		<th>IE=5</th>
+			<td>관용 모드 (quirks mode)로 지정된 DOCTYPE에 상관없이 IE5 렌더링 방식을 사용</td>
+       	</tr>
+    	<tr>
+      		<th>IE=7, IE=8</th>
+			<td>IE7, IE8 표준 모드로 지정된 DOCTYPE에 상관없이 IE7, IE8 표준 모드 렌더링 방식을 사용</td>
+       	</tr>
+        <tr>
+			<th>IE=EmulateIE7, IE=EmulateIE8</th>
+  			<td>IE7, IE8 에뮬레이션 모드로 지정된 DOCTYPE에 따라 IE7, IE8 표준모드나 관용모드로 렌더링</td>
+       	</tr>
+    	<tr>
+    		<th>IE=edge</th>
+  			<td>최신 모드로 지정된 DOCTYPE에 상관없이 IE8 이상 버전에서는 항상 최신 표준 모드로 렌더링</td>
+		</tr>
+		    	<tr>
+    		<th>IE=edge, chrome=1</th>
+  			<td>최신 모드로 지정된 DOCTYPE에 상관없이 IE8 이상 버전에서는 항상 최신 표준 모드로 렌더링, Google Chrome이 설치되어 있다면 Goggle Chrome으로 렌더링</td>
+		</tr>
+ 	</tbody>
+</table>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? HTTP 문서에 대한 브라우저의 렌더링 방식을 항상 최신 표준 모드로 렌더링할 경우 --&gt;
+&lt;meta
+	http-equiv="X-UA-Compatible"
+		content="IE=edge"
+&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivcontent-type--웹-문서에-대한-웹-브라우저의-문자-인코딩-방식을-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="content-type"&gt;</code> : 웹 문서에 대한 웹 브라우저의 문자 인코딩 방식을 지정하는 http-equiv 변수</h5>
+<hr />
+
+<ul>
+  <li>‘호환성 보기’</li>
+  <li>HTML5 : charset 속성으로 대체 가능</li>
+</ul>
+
+<table>
+	<thead>
+		<tr>
+			<th>문자 코드의 종류</th>
+			<th>설명</th>
+		</tr>
+	</thead>
+   	<tbody>
+		<tr>
+    		<th>EUC-KR (ISO-2022-KR)</th>
+			<td>ISO-숫자 타입 문자 인코딩 : 한글을 2비트로 변환해 인코딩</td>
+       	</tr>
+		<tr>
+    		<th>UTF-8, UTF-16, UTF-32</th>
+			<td>유니코드 변환 포맷 인코딩 : 모든 문자를 8, 16, 32비트로 변환해 인코딩 </td>
+       	</tr>
+ 	</tbody>
+</table>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? 문자 인코딩 방식으로 유니코드를 위한 문자셋인 UTF-8을 사용할 경우 --&gt;
+
+&lt;!--? http-equiv에서 content-type 태그를 사용할 경우 --&gt;
+&lt;meta
+	http-equiv="content-type"
+		content="text/html;
+		charset=UTF-8"
+&gt;
+
+&lt;!--? charset 속성을 사용할 경우 --&gt;
+&lt;meta charset="UTF-8"&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivcontent-language--웹-문서-내의-언어를-명시하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="content-language"&gt;</code> : 웹 문서 내의 언어를 명시하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? HTML 문서의 기본 언어로 한국어를 사용할 경우 --&gt;
+&lt;meta
+	http-equiv="content-language"
+		content="ko"
+&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivcontent-security-policy--xss-데이터-삽입-공격-등을-감지하고-완화하기-위해-웹-문서에-대한-컨텐츠-정책을-명시하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="content-security-policy"&gt;</code> : XSS, 데이터 삽입 공격 등을 감지하고 완화하기 위해 웹 문서에 대한 컨텐츠 정책을 명시하는 http-equiv 변수</h5>
+<hr />
+
+<table>
+    <thead>
+        <tr>
+          	<th>CSP 지시문</th>
+      		<th>설명</th>
+        </tr>
+	</thead>
+	<tbody>
+        <tr>
+          	<th>default-src</th>
+          	<td>모든 컨텐츠는 현재 도메인에서만 제공 (디폴트 설정)</td>
+        </tr>
+        <tr>
+        	<th>connect-src</th>
+          	<td>연결 가능한 URL를 제한</td>
+        </tr>
+        <tr>
+          	<th>script-src</th>
+          	<td>스크립트 관련 권한 집합 제어</td>
+        </tr>
+        <tr>
+          	<th>style-src</th>
+          	<td>스타일시트 관련 권한 집합 제어</td>
+        </tr>
+        <tr>
+          	<th>img-src</th>
+          	<td>이미지 관련 권한 집합 제어</td>
+        </tr>
+        <tr>
+          	<th>font-src</th>
+          	<td>웹 글꼴을 제공할 수 있는 URL 지정</td>
+        </tr>
+		<tr>
+			<th>frame-src</th>
+			<td>iframe 태그 : 상위의 iframe 도메인에서 하위의 iframe 도메인을 확인하고 제어</td>
+		</tr>
+		<tr>
+			<th>report-uri</th>
+			<td>컨텐츠 보안 정책 위반 시 브라우저가 보고서를 보낼 URL 지정 (메타 태그에서는 이 지시문 사용 불가)</td>
+		</tr>
+    </tbody>
+	<thead>
+		<tr>
+			<th>CSP 옵션</th>
+			<th>설명</th>
+		</tr>
+	</thead>
+	<tbody>
+        <tr>
+          	<th>*.trusted.com</th>
+          	<td>접근 허용할 도메인 지정</td>
+        </tr>
+        <tr>
+          	<th>'none'</th>
+          	<td>모든 도메인을 차단</td>
+        </tr>
+        <tr>
+          	<th>'self'</th>
+          	<td>현재 도메인만 허용</td>
+        </tr>
+        <tr>
+          	<th>'unsafe-inline'</th>
+        	<td>소스 코드 내 인라인 자바스크립트 및 CSS 허용</td>
+        </tr>
+        <tr>
+          	<th>'nonce-(암호화된 문자)'</th>
+          	<td>암호화된 방식으로 인라인 자바스크립트 및 CSS 허용</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? CSP : 모든 컨텐츠를 현재 도메인에서만 제공 --&gt;
+&lt;meta
+	http-equiv="Content-Security-Policy"
+		content="
+			default-src 'self'
+		"
+&gt;
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? CSP : 특정 도메인과 모든 하위 도메인의 컨텐츠를 허용 --&gt;
+&lt;meta
+	http-equiv="Content-Security-Policy"
+		content="
+			default-src 'self' *.trusted.com
+		"
+&gt;
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? CSP : 이미지는 모든 도메인, 스크립트와 스타일시트는 특정 도메인만 허용 --&gt;
+&lt;meta
+	http-equiv="Content-Security-Policy"
+		content="
+			default-src 'self';
+			img-src *;
+			script-src 'self' trusted1.com;
+			style-src 'self' trusted2.com
+		"
+&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivcontent-script-type--웹-문서에-사용된-프로그래밍-언어를-명시하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="content-script-type"&gt;</code> : 웹 문서에 사용된 프로그래밍 언어를 명시하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? HTML 문서에 javascript와 css가 사용된 경우 --&gt;
+&lt;meta
+	http-equiv="content-script-type"
+		content="text/javascript"
+&gt;
+&lt;meta
+	http-equiv="content-script-type"
+		content="text/css"
+&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivdefault-style--웹-문서에-우선적으로-적용할-스타일시트를-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="default-style"&gt;</code> : 웹 문서에 우선적으로 적용할 스타일시트를 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="default-style"
+		content="some stylesheet"
+&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivrefresh--웹-문서를-새로고침하는-시간-간격을-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="refresh"&gt;</code> : 웹 문서를 새로고침하는 시간 간격을 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? HTML 문서를 새로고침하는 시간 간격을 180초로 할 경우 --&gt;
+&lt;meta
+	http-equiv="refresh"
+		content="180"
+&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivrefresh-url--웹-문서를-새로고침하는-시간-간격을-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="refresh; url="&gt;</code> : 웹 문서를 새로고침하는 시간 간격을 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? HTML 문서에서 10초 후 http://pocj8ur4in.github.io/로 이동할 경우 --&gt;
+&lt;meta
+	http-equiv="refresh"
+		content="10"; url="http://pocj8ur4in.github.io/
+&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivcache-control--웹-캐시-사용-여부를-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="cache-control"&gt;</code> : 웹 캐시 사용 여부를 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="cache-control"
+		content="no-cache"
+&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivpragma--현재의-웹-문서를-캐시로-저장할지-여부를-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="pragma"&gt;</code> : 현재의 웹 문서를 캐시로 저장할지 여부를 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="pragma"
+		content="no-cache"
+&gt;
+</code></pre></div></div>
+
+<blockquote>
+  <p>사용자의 웹 브라우저가 항상 캐시를 읽도록 설정되어 있어도 이를 무시하고 페이지를 갱신하려면,</p>
+
+  <p><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="cache-control"  content="no-cache"&gt;</code>
+<code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="pragma" content="no-cache"&gt;</code></p>
+
+  <ul>
+    <li>장점 : 자주 내용이 수정되는 웹 페이지의 경우 항상 사용자에게 바뀐 내용을 보여줄 수 있음</li>
+    <li>단점 : 매번 서버로부터 웹 페이지를 갱신하므로 페이지 출력 속도가 떨어짐</li>
+  </ul>
+</blockquote>
+
+<h5 id="meta-http-equivexpires--현재의-웹-문서의-웹-캐시-만료일을-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="expires"&gt;</code> : 현재의 웹 문서의 웹 캐시 만료일을 지정하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	http-equiv="expires"
+		content="캐시 만료일"
+&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivpagesite-enterexit--특정-상황에서의-장면-전환-효과를-지정하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="page/site-enter/exit"&gt;</code> : 특정 상황에서의 장면 전환 효과를 지정하는 http-equiv 변수</h5>
+<hr />
+
+<table>
+	<thead>
+		<tr>
+			<th>장면 전환 http-equiv 변수</th>
+			<th>설명</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>page-enter</th>
+			<td>현재 페이지 접속 시</td>
+		</tr>
+		<tr>
+			<th>page-exit</th>
+			<td>현재 페이지 종료 시</td>
+		</tr>
+		<tr>
+			<th>site-enter</th>
+			<td>현재 사이트 접속 시</td>
+		</tr>
+		<tr>
+			<th>site-exit</th>
+			<td>현재 사이트 종료 시</td>
+		</tr>
+	</tbody>
+</table>
+
+<ul>
+  <li>revealtrans() :  문서 전환 효과 지정
+    <ul>
+      <li>(duration=) : 장면 전환 효과를 수행할 시간 설정</li>
+      <li>(transition=) : 장면 전환 효과를 수행할 방법 설정</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? 현재 문서를 나갈 때 흩어뿌리기 장면 전환을 1초간 --&gt;
+&lt;meta
+	http-equiv="page-exit"
+		content="revealtrans(duration=1, transition=12)"
+&gt;
+</code></pre></div></div>
+
+<h5 id="meta-http-equivorigin-trial--웹-개발자가-웹-문서에-실험단계인-속성을-명시하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="origin-trial"&gt;</code> : 웹 개발자가 웹 문서에 실험단계인 속성을 명시하는 http-equiv 변수</h5>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? NETFILX에서 PIP 내 음소거 기능 추가 코드 --&gt;
+&lt;meta
+	http-equiv="origin-trial"
+		data-feature="Mute in Picture-in-Picture window"
+		data-expires="2099-00-00"
+		content="...."
+/&gt;
+</code></pre></div></div>
+
+<h5 id="meta-propertyog--네이버-카카오톡-등의-sns에-게시될-때-데이터-설정을-최적화하는-property-변수"><code class="language-plaintext highlighter-rouge">&lt;meta property="og"&gt;</code> : 네이버, 카카오톡 등의 SNS에 게시될 때 데이터 설정을 최적화하는 property 변수</h5>
+<hr />
+
+<ul>
+  <li>오픈그래프 (OpenGraph) 태그</li>
+  <li>property : http-equiv와 비슷한 역할을 하는 속성</li>
+</ul>
+
+<table>
+	<thead>
+		<tr>
+			<th>og 필수 변수</th>
+			<th>설명</th>
+		</tr>
+	</thead>
+   	<tbody>
+    		<tr>
+   			<th>:title</th>
+   			<td>웹 사이트 제목</td>
+   		</tr>
+   		<tr>
+   			<th>:type</th>
+   			<td>웹 문서의 타입</td>
+   		</tr>
+    		<tr>
+   			<th>:image</th>
+   			<td>표시될 이미지</td>
+   		</tr>
+     		<tr>
+   			<th>:url</th>
+   			<td>웹 문서의 대표 URL</td>
+   		</tr>
+ 	</tbody>
+	<thead>
+		<tr>
+			<th>og 옵션 변수</th>
+			<th>설명</th>
+		</tr>
+	</thead>
+   	<tbody>
+     		<tr>
+   			<th>:description</th>
+   			<td>웹 문서 설명</td>
+   		</tr>
+   		<tr>
+   			<th>:locale</th>
+   			<td>웹 문서 내 언어</td>
+   		</tr>
+    		<tr>
+   			<th>:locale:alternate</th>
+   			<td>웹 문서 내 다국적 언어</td>
+   		</tr>
+   		<tr>
+   			<th>:site_name</th>
+   			<td>웹 문서 내 카테고리 제목</td>
+   		</tr>
+     		<tr>
+   			<th>:audio</th>
+   			<td>웹 문서에 포함되는 오디오 파일 URL</td>
+   		</tr>
+    		<tr>
+   			<th>:video</th>
+   			<td>웹 문서에 포함되는 비디오 파일 URL</td>
+   		</tr>
+	</tbody>
+	<thead>
+		<tr>
+			<th>og 오브젝트 변수</th>
+			<th>설명</th>
+		</tr>
+	</thead>
+   	<tbody>
+   		<tr>
+   			<th>:width</th>
+   			<td>표시될 오브젝트의 가로 길이</td>
+   		</tr>
+   		<tr>
+   			<th>:height</th>
+   			<td>표시될 오브젝트의 세로 길이</td>
+   		</tr>
+    		<tr>
+   			<th>:url</th>
+   			<td>표시될 오브젝트의 URL</td>
+   		</tr>
+      		<tr>
+   			<th>:secure_url</th>
+   			<td>표시될 오브젝트의 HTTPS URL</td>
+   		</tr>
+    		<tr>
+   			<th>:alt</th>
+   			<td>표시될 오브젝트에 대한 설명</td>
+   		</tr>
+   	</tbody>
+</table>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
+	property="og:type"
+    	content="website_type"
+/&gt;
+&lt;meta
+    property="og:locale"
+    	content="website_language"
+/&gt;
+&lt;meta
+	property="og:site_name"
+    	content="website_name"
+/&gt;
+&lt;meta
+	property="og:url"
+    	content="website_url"
+    /&gt;
+&lt;meta
+    property="og:description"
+      	content="website_description"
+/&gt;
+&lt;meta
+    property="og:image"
+    	content="website_image"
+    /&gt;
+&lt;meta
+    property="og:image:width"
+    	content="512"
+    /&gt;
+&lt;meta
+    property="og:image:height"
+    content="512"
+/&gt;
+</code></pre></div></div>
+
+<h3 id="link--현재-웹-문서와-외부-소스-간의-관계를-정의하는-태그"><code class="language-plaintext highlighter-rouge">&lt;link&gt;</code> : 현재 웹 문서와 외부 소스 간의 관계를 정의하는 태그</h3>
+<hr />
+
+<ul>
+  <li>오로지 속성만을 포함 : 여는 태그만 존재</li>
+</ul>
+
+<table>
+	<thead>
+		<tr>
+			<th>link 속성</th>
+			<td>설명</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>rel</th>
+			<td>현재 웹 문서와 외부 소스 간의 관계</td>
+		</tr>
+		<tr>
+			<th>href</th>
+			<td>외부 소스의 주소</td>
+		</tr>
+		<tr>
+			<th>type</th>
+			<td>외부 소스의 타입</td>
+		</tr>
+		<tr>
+			<th>sizes</th>
+			<td>외부 소스가 표시될 때의 사이즈</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? 현재 웹 문서와 manifest.json (웹 익스텐션이 포함하는 json 형식의 파일)을 연결할 때 --&gt;
+&lt;link
+    rel="manifest"
+    href="manifest.json"
+/&gt;
+</code></pre></div></div>
+
+<h4 id="link-relcanonical--검색-엔진을-위한-대표-url-주소를-설정하는-rel-변수"><code class="language-plaintext highlighter-rouge">&lt;link rel="canonical"&gt;</code> : 검색 엔진을 위한 대표 URL 주소를 설정하는 rel 변수</h4>
+<hr />
+
+<ul>
+  <li>웹 문서 내의 URL 주소는 다르나 동일한 내용의 중복된 웹 문서가 있을 때 사용</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link
+	rel="canonical"
+    	href="대표 URL"
+/&gt;
+</code></pre></div></div>
+
+<h4 id="link-relshortcut-icon--브라우저-탭에-표시될-아이콘을-설정하는-rel-변수"><code class="language-plaintext highlighter-rouge">&lt;link rel="shortcut icon"&gt;</code> : 브라우저 탭에 표시될 아이콘을 설정하는 rel 변수</h4>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link
+	rel="shortcut icon"
+	href="PUBLIC_URL%/favicon.ico"
+	type="image/x-icon"
+	sizes="16x16"
+&gt;
+</code></pre></div></div>
+
+<h4 id="-link-relapple-touch-icon--브라우저-탭에-표시될-아이콘을-설정하는-rel-변수"><code class="language-plaintext highlighter-rouge">&lt; link rel="apple-touch-icon"&gt;</code> : 브라우저 탭에 표시될 아이콘을 설정하는 rel 변수</h4>
+<hr />
+
+<ul>
+  <li>애플 메타 태그 (apple meta tag)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link
+	rel="shortcut icon"
+	href="PUBLIC_URL%/favicon.ico"
+	type="image/x-icon"
+	sizes="16x16"
+&gt;
+</code></pre></div></div>
+
+<h4 id="link-relapple-touch---ios-safari의-홈-화면에-추가-기능을-설정하는-rel-변수"><code class="language-plaintext highlighter-rouge">&lt;link rel=""apple-touch"&gt;</code> :  ios Safari의 ‘홈 화면에 추가’ 기능을 설정하는 rel 변수</h4>
+<hr />
+
+<ul>
+  <li>애플 메타 태그 (apple meta tag)</li>
+</ul>
+
+<table>
+	<thead>
+		<tr>
+			<th>Safari '홈 화면에 추가' 설정 변수</th>
+			<td>설명</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>apple-touch-icon</th>
+			<td>홈 화면에 추가 기능을 사용할 때 표시될 웹 사이트의 아이콘</td>
+		</tr>
+		<tr>
+			<th>apple-touch-startup-image</th>
+			<td>홈 화면에 추가 기능을 사용할 때 로딩 시 스타트업 이미지<br />
+			(단, 이미지의 크기가 각 기기에 맞게끔 정확히 맞춰져 있어야 제대로 화면에 표시)</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link
+    rel="apple-touch-icon"
+    sizes="12x57"
+    href="%PUBLIC_URL%/img/apple-icon-57x57.png"
+/&gt;
+&lt;link
+    rel="apple-touch-startup-icon"
+    sizes="320x460"
+    href="%PUBLIC_URL%/img/apple-icon-320x460.png"
+/&gt;
+</code></pre></div></div>
+
+<h3 id="script--javascript나-css와-같은-외부-스크립트-파일을-참조하는-태그"><code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> : javascript나 css와 같은 외부 스크립트 파일을 참조하는 태그</h3>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? 구조화된 JSON-LD 데이터 스니펫 : 제목, 작성자 및 기타 세부 정보를 Google이 수집 --&gt;
+&lt;script type="application/ld+json"&gt;
+      {
+        "@context": "https://schema.org",
+        
+          "@type": "website",
+          "name": "website_name",
+          "author": {
+            "@type": "Person",
+            "name": "Person_name"
+          },
+          "description": "website_description",
+          "url": "website_url"
+      }
+&lt;/script&gt;
+</code></pre></div></div>
+
+<h3 id="style--현재-웹-문서의-스타일-정보를-정의하는-태그"><code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> : 현재 웹 문서의 스타일 정보를 정의하는 태그</h3>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;style&gt;
+	body {
+		background-color: #fff;
+	}
+	div {
+		color: #000;
+	}
+&lt;/style&gt;
+</code></pre></div></div>
+
+<h2 id="body--웹-문서의-모양을-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> : 웹 문서의 모양을 선언하는 태그</h2>
+<ul>
+  <li>실제 웹 브라우저 화면 상에는 출력</li>
+  <li>HTML 문서의 레이아웃을 넣음</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+	...
+	&lt;body&gt;
+	...
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h3 id="-텍스트-관련-태그"># 텍스트 관련 태그</h3>
+
+<h4 id="font--글자를-넣는-태그"><code class="language-plaintext highlighter-rouge">&lt;font&gt;</code> : 글자를 넣는 태그</h4>
+<hr />
+
+<blockquote>
+  <h5 id="font-size--글자의-크기를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;font size=""&gt;</code> : 글자의 크기를 지정하는 속성</h5>
+  <h5 id="font-color--글자의-색상을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;font color=""&gt;</code> : 글자의 색상을 지정하는 속성</h5>
+  <h5 id="font-face--글자의-끌골을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;font face=""&gt;</code> : 글자의 끌골을 지정하는 속성</h5>
+</blockquote>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;font size="10" color="aqua"&gt;
+	hello world!
+&lt;/font&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<font size="10" color="aqua">
+		hello world!
+	</font>
+</div>
+
+<h4 id="h1h6--제목을-표현하는-태그"><code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code>~<code class="language-plaintext highlighter-rouge">&lt;h6&gt;</code> : 제목을 표현하는 태그</h4>
+<hr />
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h1&gt;h1&lt;/h1&gt;
+&lt;h2&gt;h2&lt;/h2&gt;
+&lt;h3&gt;h3&lt;/h3&gt;
+&lt;h4&gt;h4&lt;/h4&gt;
+&lt;h5&gt;h5&lt;/h5&gt;
+&lt;h6&gt;h6&lt;/h6&gt;
+</code></pre></div></div>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<h1>h1</h1>
+	<h1><small>h2</small></h1>
+	<h1><small><small>h3</small></small></h1>
+	<h1><small><small><small>h4</small></small></small></h1>
+	<h1><small><small><small><small>h5</small></small></small></small></h1>
+	<h1><small><small><small><small><small>h6</small></small></small></small></small></h1>
+</div>
+
+<h4 id="p--문단을-묶는-태그"><code class="language-plaintext highlighter-rouge">&lt;p&gt;</code> : 문단을 묶는 태그</h4>
+<hr />
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p align="center"&gt;문단 1 : 가운데 정렬&lt;/p&gt;
+&lt;p align="right"&gt;문단 2 : 오른쪽 정렬&lt;/p&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<p align="center">문단 1 : 가운데 정렬</p>
+	<p align="right">문단 2 : 오른쪽 정렬</p>
+</div>
+
+<h4 id="b--텍스트를-굵게-표시하는-태그"><code class="language-plaintext highlighter-rouge">&lt;b&gt;</code> : 텍스트를 굵게 표시하는 태그</h4>
+<hr />
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;b&gt;굵게&lt;/b&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<b>굵게</b>
+</div>
+
+<h4 id="strongem--텍스트를-강하게--약하게-강조하는-태그"><code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>,<code class="language-plaintext highlighter-rouge">&lt;em&gt;</code> : 텍스트를 강하게 / 약하게 강조하는 태그</h4>
+<hr />
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;strong&gt;강하게 강조&lt;/strong&gt;
+&lt;em&gt;약하게 강조&lt;/em&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<strong>강하게 강조</strong>
+	<em>약하게 강조</em>
+</div>
+
+<h4 id="i--텍스트를-기울임꼴로-표시하는-태그"><code class="language-plaintext highlighter-rouge">&lt;i&gt;</code> : 텍스트를 기울임꼴로 표시하는 태그</h4>
+<hr />
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;i&gt;기울임꼴로&lt;/i&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<i>기울임꼴로</i>
+</div>
+
+<h4 id="ins--텍스트에-밑줄을-표시하는-태그"><code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code> : 텍스트에 밑줄을 표시하는 태그</h4>
+<hr />
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ins&gt;밑줄&lt;/ins&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<ins>밑줄</ins>
+</div>
+
+<h4 id="del--텍스트에-취소선을-표시하는-태그"><code class="language-plaintext highlighter-rouge">&lt;del&gt;</code> : 텍스트에 취소선을 표시하는 태그</h4>
+<hr />
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;del&gt;취소선&lt;/del&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<del>취소선</del>
+</div>
+
+<h4 id="small-텍스트를-조금-더-작게-표시하는-태그"><code class="language-plaintext highlighter-rouge">&lt;small&gt;</code>: 텍스트를 조금 더 작게 표시하는 태그</h4>
+<hr />
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A
+&lt;small&gt;A&lt;/small&gt;
+&lt;small&gt;&lt;small&gt;A&lt;/small&gt;&lt;/small&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	A
+	<small>A</small>
+	<small><small>A</small></small>
+</div>
+
+<h4 id="br--문단을-개행하는-태그"><code class="language-plaintext highlighter-rouge">&lt;br&gt;</code> : 문단을 개행하는 태그</h4>
+<hr />
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>B&lt;br&gt;B&lt;br&gt;B
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	B<br />B<br />B
+</div>
+
+<h4 id="hr--가로줄을-넣는-태그"><code class="language-plaintext highlighter-rouge">&lt;hr&gt;</code> : 가로줄을 넣는 태그</h4>
+<hr />
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>↓ 가로줄
+&lt;hr&gt;
+↑ 가로줄
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	↓ 가로줄
+	<hr />
+	↑ 가로줄
+</div>
+
+<h4 id="code--소스-코드를-넣는-태그"><code class="language-plaintext highlighter-rouge">&lt;code&gt;</code> : 소스 코드를 넣는 태그</h4>
+<hr />
+
+<ul>
+  <li>`을 3번 쓰는 것으로 대체 가능</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;code&gt;
+	print("Hello World!")
+&lt;code&gt;
+</code></pre></div></div>
+
+<h3 id="-목록-관련-태그"># 목록 관련 태그</h3>
+
+<h4 id="li--목록을-표시할-때-각-항목들을-표시하는-태그"><code class="language-plaintext highlighter-rouge">&lt;li&gt;</code> : 목록을 표시할 때 각 항목들을 표시하는 태그</h4>
+<hr />
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;li&gt;X&lt;/li&gt;
+&lt;li&gt;Y&lt;/li&gt;
+&lt;li&gt;Z&lt;/li&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<li>X</li>
+	<li>Y</li>
+	<li>Z</li>
+</div>
+
+<h4 id="ul--순서-없는-목록을-표시하는-태그"><code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code> : 순서 없는 목록을 표시하는 태그</h4>
+<hr />
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul&gt;
+	&lt;li&gt;X&lt;/li&gt;
+	&lt;li&gt;Y&lt;/li&gt;
+	&lt;li&gt;Z&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<ul>
+		<li>X</li>
+		<li>Y</li>
+		<li>Z</li>
+	</ul>
+</div>
+
+<h4 id="ol--순서-있는-목록을-표시하는-태그"><code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code> : 순서 있는 목록을 표시하는 태그</h4>
+<hr />
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ol&gt;
+	&lt;li&gt;X&lt;/li&gt;
+	&lt;li&gt;Y&lt;/li&gt;
+	&lt;li&gt;Z&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<ol>
+		<li>X</li>
+		<li>Y</li>
+		<li>Z</li>
+	</ol>
+</div>
+
+<h3 id="-링크-이미지-관련-태그"># 링크, 이미지 관련 태그</h3>
+
+<h4 id="a--하이퍼링크를-생성하는-태그"><code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> : 하이퍼링크를 생성하는 태그</h4>
+<hr />
+
+<blockquote>
+  <h5 id="a-href--링크된-문서를-입력하는-속성"><code class="language-plaintext highlighter-rouge">&lt;a href=""&gt;</code> : 링크된 문서를 입력하는 속성</h5>
+  <h5 id="a-target--링크된-문서를-어떻게-열지-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;a target=""&gt;</code> : 링크된 문서를 어떻게 열지 지정하는 속성</h5>
+  <h5 id="a-title--링크의-이름을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;a title=""&gt;</code> : 링크의 이름을 지정하는 속성</h5>
+  <h5 id="a-name--링크의-이름을-지정하는-속성-문서-내에서도-이-이름을-이용해-이동-가능"><code class="language-plaintext highlighter-rouge">&lt;a name=""&gt;</code> : 링크의 이름을 지정하는 속성 (문서 내에서도 이 이름을 이용해 이동 가능)</h5>
+</blockquote>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a
+	href="https://pocj8ur4in.github.io"
+	target="_blank"
+	title="pocj8ur4in"
+&gt;
+	pocj8ur4in
+&lt;/a&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<a href="https://pocj8ur4in.github.io" target="_blank" title="pocj8ur4in">
+		pocj8ur4in
+	</a>
+</div>
+
+<h4 id="img--이미지를-추가하는-태그"><code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> : 이미지를 추가하는 태그</h4>
+<hr />
+
+<h5 id="img-src--이미지-파일의-경로를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;img src=""&gt;</code> : 이미지 파일의 경로를 지정하는 속성</h5>
+<ul>
+  <li>절대 경로 : http:// 또는 https://</li>
+  <li>상대 경로 : path/filename</li>
+</ul>
+
+<blockquote>
+  <h5 id="img-alt--이미지가-출력되지-않을-경우-이미지에-대한-설명을-제공하는-속성"><code class="language-plaintext highlighter-rouge">&lt;img alt=""&gt;</code> : 이미지가 출력되지 않을 경우 이미지에 대한 설명을 제공하는 속성</h5>
+  <h5 id="img-title--이미지에-대한-추가-정보를-제공하는-속성-마우스가-접근하면-말풍선으로-표시"><code class="language-plaintext highlighter-rouge">&lt;img title=""&gt;</code> : 이미지에 대한 추가 정보를 제공하는 속성 (마우스가 접근하면 말풍선으로 표시)</h5>
+  <h5 id="img-height-width--이미지의-세로-가로의-길이를-지정하는-속성-html5--픽셀로만-지정-가능-는-css로-대체"><code class="language-plaintext highlighter-rouge">&lt;img height="" width=""&gt;</code> : 이미지의 세로, 가로의 길이를 지정하는 속성 (HTML5 : 픽셀로만 지정 가능, %는 CSS로 대체)</h5>
+  <h5 id="img-border--이미지의-경계선의-두께를-지정하는-속성-기본값--1px"><code class="language-plaintext highlighter-rouge">&lt;img border=""&gt;</code> : 이미지의 경계선의 두께를 지정하는 속성 (기본값 : 1px)</h5>
+</blockquote>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img
+	src="https://cdn.pixabay.com/photo/2020/10/21/04/01/leaves-5672036_1280.png"
+	alt="leaves-5672036_1280.png"
+	title="이미지"
+	height="720px"
+	width="720px"
+	border="0px"
+&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<img src="https://cdn.pixabay.com/photo/2020/10/21/04/01/leaves-5672036_1280.png" alt="leaves-5672036_1280.png" title="이미지" height="720px" width="720px" />
+</div>
+
+<h4 id="figure--이미지나-다이어그램을-감싸는-태그"><code class="language-plaintext highlighter-rouge">&lt;figure&gt;</code> : 이미지나 다이어그램을 감싸는 태그</h4>
+<hr />
+
+<h5 id="figcaption--figure에-제목을-추가하는-태그"><code class="language-plaintext highlighter-rouge">&lt;figcaption&gt;</code> : <code class="language-plaintext highlighter-rouge">&lt;figure&gt;</code>에 제목을 추가하는 태그</h5>
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;figure&gt;
+	&lt;figcaption&gt;
+		figure
+	&lt;/figcaption&gt;
+	&lt;img
+		src="https://cdn.pixabay.com/photo/2020/10/21/04/01/leaves-5672036_1280.png"
+		alt="leaves-5672036_1280.png"
+		title="이미지"
+		height="720px"
+		width="720px"
+	&gt;
+&lt;/figure&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<figure>
+	<figcaption>
+		figure
+	</figcaption>
+	<img src="https://cdn.pixabay.com/photo/2020/10/21/04/01/leaves-5672036_1280.png" alt="leaves-5672036_1280.png" title="이미지" height="720px" width="720px" />
+</figure>
+
+<h3 id="-표-관련-태그"># 표 관련 태그</h3>
+
+<h4 id="table--표를-만드는-태그"><code class="language-plaintext highlighter-rouge">&lt;table&gt;</code> : 표를 만드는 태그</h4>
+<hr />
+
+<blockquote>
+  <h4 id="tr--표의-행을-만드는-태그"><code class="language-plaintext highlighter-rouge">&lt;tr&gt;</code> : 표의 행을 만드는 태그</h4>
+  <h4 id="td--표의-내용을-표현하는-태그"><code class="language-plaintext highlighter-rouge">&lt;td&gt;</code> : 표의 내용을 표현하는 태그</h4>
+  <h4 id="th--표의-머리말을-표현하는-태그"><code class="language-plaintext highlighter-rouge">&lt;th&gt;</code> : 표의 머리말을 표현하는 태그</h4>
+  <h4 id="colspan--표에서-열을-병합하는-태그"><code class="language-plaintext highlighter-rouge">&lt;colspan&gt;</code> : 표에서 열을 병합하는 태그</h4>
+  <h4 id="rowspan--표에서-행을-병합하는-태그"><code class="language-plaintext highlighter-rouge">&lt;rowspan&gt;</code> : 표에서 행을 병합하는 태그</h4>
+  <h4 id="caption--표의-제목-부분을-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;caption&gt;</code> : 표의 제목 부분을 기술하는 태그</h4>
+  <h4 id="col--표의-열-정보를-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;col&gt;</code> : 표의 열 정보를 기술하는 태그</h4>
+  <h4 id="thead--표의-상단-부분을-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;thead&gt;</code> : 표의 상단 부분을 기술하는 태그</h4>
+  <h4 id="tbody--표의-본문-부분을-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;tbody&gt;</code> : 표의 본문 부분을 기술하는 태그</h4>
+  <h4 id="tfoot--표의-하단-부분을-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;tfoot&gt;</code> : 표의 하단 부분을 기술하는 태그</h4>
+</blockquote>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table&gt;
+	&lt;caption&gt;OO고등학교 시간표&lt;/caption&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt; &lt;/th&gt;
+			&lt;th&gt;월&lt;/th&gt;
+			&lt;th&gt;화&lt;/th&gt;
+			&lt;th&gt;수&lt;/th&gt;
+			&lt;th&gt;목&lt;/th&gt;
+			&lt;th&gt;금&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;th&gt;1교시&lt;/th&gt;
+			&lt;td&gt;수학&lt;/td&gt;
+			&lt;td rowspan="2"&gt;국어&lt;/td&gt;
+			&lt;td&gt;수학&lt;/td&gt;
+			&lt;td&gt;과학&lt;/td&gt;
+			&lt;td&gt;영어&lt;/td&gt;
+	　　&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th&gt;2교시&lt;/th&gt;
+			&lt;td rowspan="2"&gt;사회&lt;/td&gt;
+			&lt;td&gt;영어&lt;/td&gt;
+			&lt;td&gt;국어&lt;/td&gt;
+			&lt;td rowspan="3"&gt;음악&lt;/td&gt;
+	　　&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th&gt;3교시&lt;/th&gt;
+			&lt;td&gt;수학&lt;/td&gt;
+			&lt;td rowspan="2"&gt;미술&lt;/td&gt;
+			&lt;td&gt;영어&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;th&gt;4교시&lt;/th&gt;
+			&lt;td&gt;체육&lt;/td&gt;
+			&lt;td&gt;사회&lt;/td&gt;
+			&lt;td&gt;영어&lt;/td&gt;
+	　　&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+<table>
+	<caption>OO고등학교 시간표</caption>
+	<thead>
+		<tr>
+			<th> </th>
+			<th>월</th>
+			<th>화</th>
+			<th>수</th>
+			<th>목</th>
+			<th>금</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>1교시</th>
+			<td>수학</td>
+			<td rowspan="2">국어</td>
+			<td>수학</td>
+			<td>과학</td>
+			<td>영어</td>
+	　　</tr>
+		<tr>
+			<th>2교시</th>
+			<td rowspan="2">사회</td>
+			<td>영어</td>
+			<td>국어</td>
+			<td rowspan="3">음악</td>
+	　　</tr>
+		<tr>
+			<th>3교시</th>
+			<td>수학</td>
+			<td rowspan="2">미술</td>
+			<td>영어</td>
+		</tr>
+		<tr>
+			<th>4교시</th>
+			<td>체육</td>
+			<td>사회</td>
+			<td>영어</td>
+	　　</tr>
+	</tbody>
+</table>
+
+<h3 id="-폼-관련-태그"># 폼 관련 태그</h3>
+<blockquote>
+  <p>입력 양식 (form) : 사용자로부터 정보를 받을 때 사용</p>
+</blockquote>
+
+<h4 id="form--cgi와-상호-작용을-위한-입력값을-받는-태그"><code class="language-plaintext highlighter-rouge">&lt;form&gt;</code> : <code class="language-plaintext highlighter-rouge">CGI</code>와 상호 작용을 위한 입력값을 받는 태그</h4>
+<hr />
+
+<blockquote>
+  <ul>
+    <li>
+      <h5 id="form-method--웹-서버와의-통신-방식을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;form method=""&gt;</code> : 웹 서버와의 통신 방식을 지정하는 속성</h5>
+    </li>
+    <li>
+      <h5 id="form-action--입력-양식에-입력된-값을-저장할-db-문서를-지정하는-속성-php나-asp으로-작성"><code class="language-plaintext highlighter-rouge">&lt;form action=""&gt;</code> : 입력 양식에 입력된 값을 저장할 DB 문서를 지정하는 속성 (PHP나 ASP으로 작성)</h5>
+    </li>
+  </ul>
+</blockquote>
+
+<h4 id="label--폼의-양식에-이름을-지정하는-태그"><code class="language-plaintext highlighter-rouge">&lt;label&gt;</code> : 폼의 양식에 이름을 지정하는 태그</h4>
+<hr />
+
+<h5 id="label-for--label의-for의-값과-양식의-id의-값이-같으면-연결하는-속성"><code class="language-plaintext highlighter-rouge">&lt;label for=""&gt;</code> : label의 for의 값과 양식의 id의 값이 같으면 연결하는 속성</h5>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;label for="input-label"&gt;input-text&lt;/label&gt;
+&lt;input type="text" id="input-text"&gt;
+&lt;label for="checkbox-label"&gt;checkbox-text&lt;/label&gt;
+&lt;input type="checkbox" id="checkbox-text"&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<label for="input-label">input-text</label>
+	<input type="text" id="input-text" />
+	<label for="checkbox-label">checkbox-text</label>
+	<input type="checkbox" id="checkbox-text" />
+</div>
+
+<h4 id="input--입력값을-입력받을-필드를-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;input&gt;</code> : 입력값을 입력받을 필드를 선언하는 태그</h4>
+<hr />
+
+<blockquote>
+  <ul>
+    <li>
+      <h5 id="input-name--필드의-이름을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;input name=""&gt;</code> : 필드의 이름을 지정하는 속성</h5>
+    </li>
+    <li>
+      <h5 id="input-type--필드의-종류를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;input type=""&gt;</code> : 필드의 종류를 지정하는 속성</h5>
+    </li>
+  </ul>
+
+  <blockquote>
+    <ul>
+      <li>
+        <h6 id="input-typetext--한-줄의-문자열을-생성하는-type-변수-기본-변수"><code class="language-plaintext highlighter-rouge">&lt;input type="text"&gt;</code> : 한 줄의 문자열을 생성하는 type 변수 (기본 변수)</h6>
+      </li>
+      <li>
+        <h6 id="input-typepassword--비밀번호를-생성하는-type-변수"><code class="language-plaintext highlighter-rouge">&lt;input type="password"&gt;</code> : 비밀번호를 생성하는 type 변수</h6>
+      </li>
+      <li>
+        <h6 id="input-typerange--지정한-범위의-숫자를-생성하는-type-변수"><code class="language-plaintext highlighter-rouge">&lt;input type="range"&gt;</code> : 지정한 범위의 숫자를 생성하는 type 변수</h6>
+      </li>
+      <li>
+        <h6 id="input-typecheckbox--선택해제할-수-있는-항목-중복-가능을-생성하는-type-변수"><code class="language-plaintext highlighter-rouge">&lt;input type="checkbox"&gt;</code> : 선택/해제할 수 있는 항목 (중복 가능)을 생성하는 type 변수</h6>
+      </li>
+      <li>
+        <h6 id="input-typeradio--선택해제할-수-있는-항목-중복-불가을-생성하는-type-변수"><code class="language-plaintext highlighter-rouge">&lt;input type="radio"&gt;</code> : 선택/해제할 수 있는 항목 (중복 불가)을 생성하는 type 변수</h6>
+      </li>
+      <li>
+        <h6 id="input-typesubmit--클릭할-경우-입력값을-전송하는-버튼을-생성하는-type-변수"><code class="language-plaintext highlighter-rouge">&lt;input type="submit"&gt;</code> : 클릭할 경우 입력값을 전송하는 버튼을 생성하는 type 변수</h6>
+      </li>
+      <li>
+        <h6 id="input-typereset--클릭할-경우-입력값을-초기화하는-버튼을-생성하는-type-변수"><code class="language-plaintext highlighter-rouge">&lt;input type="reset"&gt;</code> : 클릭할 경우 입력값을 초기화하는 버튼을 생성하는 type 변수</h6>
+      </li>
+      <li>
+        <h6 id="input-typefile--파일-업로드-버튼"><code class="language-plaintext highlighter-rouge">&lt;input type="file"&gt;</code> : 파일 업로드 버튼</h6>
+      </li>
+      <li>
+        <h6 id="input-typehidden--입력값-없이-폼과-함께-전송해야-하는-정보를-감싸는-type-변수-hidden-flied"><code class="language-plaintext highlighter-rouge">&lt;input type="hidden"&gt;</code> : 입력값 없이 폼과 함께 전송해야 하는 정보를 감싸는 type 변수 (hidden flied)</h6>
+      </li>
+    </ul>
+  </blockquote>
+</blockquote>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;input type="text" name="text"&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div style="color: white; font-size: 15px; background-color: black;">
+	<input type="text" name="text" />
+</div>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;input type="password" name="password"&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div>
+	<input type="password" name="password" />
+</div>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;input type="range" name="range"&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+<div>
+	<input type="range" name="range" />
+</div>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;input type="checkbox" name="checkbox" value="1"&gt;1
+&lt;input type="checkbox" name="checkbox" value="2"&gt;2
+&lt;input type="checkbox" name="checkbox" value="3"&gt;3
+&lt;input type="checkbox" name="checkbox" value="4"&gt;4
+&lt;input type="checkbox" name="checkbox" value="5"&gt;5
+</code></pre></div></div>
+
+<p>출력 :</p>
+<div>
+	<input type="checkbox" name="checkbox" value="1" />1 
+	<input type="checkbox" name="checkbox" value="2" />2 
+	<input type="checkbox" name="checkbox" value="3" />3 
+	<input type="checkbox" name="checkbox" value="4" />4 
+	<input type="checkbox" name="checkbox" value="5" />5
+</div>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;input type="radio" name="radio" value="1"&gt;1
+&lt;input type="radio" name="radio" value="2"&gt;2
+&lt;input type="radio" name="radio" value="3"&gt;3
+&lt;input type="radio" name="radio" value="4"&gt;4
+&lt;input type="radio" name="radio" value="5"&gt;5
+</code></pre></div></div>
+
+<p>출력 :</p>
+<div>
+	<input type="radio" name="radio" value="1" />1 
+	<input type="radio" name="radio" value="2" />2 
+	<input type="radio" name="radio" value="3" />3 
+	<input type="radio" name="radio" value="4" />4 
+	<input type="radio" name="radio" value="5" />5
+</div>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;input type="submit" name="submit"&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div>
+	<input type="submit" name="submit" />
+</div>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;input type="reset" name="reset"&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div>
+	<input type="reset" name="reset" />
+</div>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;input type="file" name="file"&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div>
+	<input type="file" name="file" />
+</div>
+
+<h4 id="textarea--여러-줄의-문자열-값을-입력받는-태그"><code class="language-plaintext highlighter-rouge">&lt;textarea&gt;</code> : 여러 줄의 문자열 값을 입력받는 태그</h4>
+<hr />
+
+<blockquote>
+  <ul>
+    <li>
+      <h5 id="textarea-rows-col---텍스트-에이리어의-너비와-높이를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;textarea rows=""&gt; col=""</code>  : 텍스트 에이리어의 너비와 높이를 지정하는 속성</h5>
+    </li>
+  </ul>
+</blockquote>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;textarea cols="50" rows="10"&gt;&lt;/textarea&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<div>
+	<textarea cols="50" rows="10"></textarea>
+</div>
+
+<h4 id="button--클릭-가능한-버튼을-생성하는-태그"><code class="language-plaintext highlighter-rouge">&lt;button&gt;</code> : 클릭 가능한 버튼을 생성하는 태그</h4>
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;button name="button"&gt;
+	버튼
+&lt;/button&gt;
+</code></pre></div></div>
+<p>출력 : 
+<button name="button">
+	버튼
+</button></p>
+
+<h4 id="select--드롭다운-목록을-생성하는-태그"><code class="language-plaintext highlighter-rouge">&lt;select&gt;</code> : 드롭다운 목록을 생성하는 태그</h4>
+<hr />
+
+<blockquote>
+  <h5 id="option--드롭다운-목록의-항목을-생성하는-태그"><code class="language-plaintext highlighter-rouge">&lt;option&gt;</code> : 드롭다운 목록의 항목을 생성하는 태그</h5>
+  <h5 id="select-autofocus--페이지가-로드-시-해당-목록으로-바로-이동하게끔-하는-속성"><code class="language-plaintext highlighter-rouge">&lt;select autofocus&gt;</code> : 페이지가 로드 시 해당 목록으로 바로 이동하게끔 하는 속성</h5>
+  <h5 id="select-disabled--화면에는-보이지만-사용할-수-없도록-만드는-속성"><code class="language-plaintext highlighter-rouge">&lt;select disabled&gt;</code> : 화면에는 보이지만 사용할 수 없도록 만드는 속성</h5>
+  <h5 id="select-multiple--여러-값들을-선택할-수-있게끔-하는-속성"><code class="language-plaintext highlighter-rouge">&lt;select multiple&gt;</code> : 여러 값들을 선택할 수 있게끔 하는 속성</h5>
+  <h5 id="select-name--목록에-이름을-붙이는-속성"><code class="language-plaintext highlighter-rouge">&lt;select name=""&gt;</code> : 목록에 이름을 붙이는 속성</h5>
+  <h5 id="select-size--목록을-펼치기-전에-보여질-목록의-개수를-정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;select size=""&gt;</code> : 목록을 펼치기 전에 보여질 목록의 개수를 정하는 속성</h5>
+</blockquote>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form&gt;
+    &lt;select&gt;
+        &lt;option&gt;a&lt;/option&gt;
+        &lt;option&gt;b&lt;/option&gt;
+        &lt;option&gt;c&lt;/option&gt;
+        &lt;option&gt;d&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/form&gt;
+&lt;form&gt;
+    &lt;select autofocus&gt;
+        &lt;option&gt;e&lt;/option&gt;
+        &lt;option&gt;f&lt;/option&gt;
+        &lt;option&gt;g&lt;/option&gt;
+        &lt;option&gt;h&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/form&gt;
+&lt;form&gt;
+    &lt;select disabled&gt;
+        &lt;option&gt;i&lt;/option&gt;
+        &lt;option&gt;j&lt;/option&gt;
+        &lt;option&gt;k&lt;/option&gt;
+        &lt;option&gt;l&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/form&gt;
+&lt;form&gt;
+    &lt;select multiple&gt;
+        &lt;option&gt;m&lt;/option&gt;
+        &lt;option&gt;n&lt;/option&gt;
+        &lt;option&gt;o&lt;/option&gt;
+        &lt;option&gt;p&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/form&gt;
+&lt;form&gt;
+    &lt;select name="select box" size="2"&gt;
+        &lt;option&gt;q&lt;/option&gt;
+        &lt;option&gt;r&lt;/option&gt;
+        &lt;option&gt;s&lt;/option&gt;
+        &lt;option&gt;t&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/form&gt;
+</code></pre></div></div>
+<p>출력 :</p>
+<form>
+    <select>
+        <option>a</option>
+        <option>b</option>
+        <option>c</option>
+        <option>d</option>
+    </select>
+</form>
+<form>
+    <select autofocus="">
+        <option>e</option>
+        <option>f</option>
+        <option>g</option>
+        <option>h</option>
+    </select>
+</form>
+<form>
+    <select disabled="">
+        <option>i</option>
+        <option>j</option>
+        <option>k</option>
+        <option>l</option>
+    </select>
+</form>
+<form>
+    <select multiple="">
+        <option>m</option>
+        <option>n</option>
+        <option>o</option>
+        <option>p</option>
+    </select>
+</form>
+<form>
+    <select name="select box" size="2">
+        <option>q</option>
+        <option>r</option>
+        <option>s</option>
+        <option>t</option>
+    </select>
+</form>
+
+<h3 id="-멀티미디어-관련-태그"># 멀티미디어 관련 태그</h3>
+
+<h4 id="video--비디오를-추가하는-태그"><code class="language-plaintext highlighter-rouge">&lt;video&gt;</code> : 비디오를 추가하는 태그</h4>
+<hr />
+
+<blockquote>
+  <h5 id="video-source-src--삽입할-비디오의-주소를-입력받는-속성"><code class="language-plaintext highlighter-rouge">&lt;video source src=""&gt;</code> : 삽입할 비디오의 주소를 입력받는 속성</h5>
+  <h5 id="video-source-type--삽입할-비디오의-타입을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video source type=""&gt;</code> : 삽입할 비디오의 타입을 지정하는 속성</h5>
+  <h5 id="video-height-width--비디오의-출력-영역-높이와-너비를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video height="" width=""&gt;</code> : 비디오의 출력 영역 높이와 너비를 지정하는 속성</h5>
+  <h5 id="video-poster--비디오-포스터-프레임의-주소를-입력받는-속성"><code class="language-plaintext highlighter-rouge">&lt;video poster=""&gt;</code> : 비디오 포스터 프레임의 주소를 입력받는 속성</h5>
+  <h5 id="video-autoplay--비디오의-자동-재생-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video autoplay=""&gt;</code> : 비디오의 자동 재생 여부를 지정하는 속성</h5>
+  <h5 id="video-control--비디오의-소리-조절-시간대-탐색-일시정지-및-재시작을-할-수-있는-컨트롤러를-생성하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video control=""&gt;</code> : 비디오의 소리 조절, 시간대 탐색, 일시정지 및 재시작을 할 수 있는 컨트롤러를 생성하는 속성</h5>
+  <h5 id="video-loop--비디오의-재시작-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video loop=""&gt;</code> : 비디오의 재시작 여부를 지정하는 속성</h5>
+  <h5 id="video-preload--웹-문서를-열-때-동영상-메타데이터-로드-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video preload=""&gt;</code> : 웹 문서를 열 때 동영상, 메타데이터 로드 여부를 지정하는 속성</h5>
+  <ul>
+    <li>
+      <h6 id="video-preloadauto--웹-문서를-열-때-동영상과-메타데이터-모두-로드하는-preload-변수"><code class="language-plaintext highlighter-rouge">&lt;video preload="auto"&gt;</code> : 웹 문서를 열 때 동영상과 메타데이터 모두 로드하는 preload 변수</h6>
+    </li>
+    <li>
+      <h6 id="video-preloadmetadata--웹-문서를-열-때-메타데이터만-로드하는-preload-변수"><code class="language-plaintext highlighter-rouge">&lt;video preload="metadata"&gt;</code> : 웹 문서를 열 때 메타데이터만 로드하는 preload 변수</h6>
+    </li>
+    <li>
+      <h6 id="video-preloadnone--웹-문서를-열-때-동영상과-메타데이터-모두-로드하지-않는-preload-변수"><code class="language-plaintext highlighter-rouge">&lt;video preload="none"&gt;</code> : 웹 문서를 열 때 동영상과 메타데이터 모두 로드하지 않는 preload 변수</h6>
+    </li>
+  </ul>
+</blockquote>
+
+<h4 id="audio--오디오를-추가하는-태그"><code class="language-plaintext highlighter-rouge">&lt;audio&gt;</code> : 오디오를 추가하는 태그</h4>
+<hr />
+
+<blockquote>
+  <h5 id="audio-src--삽입할-오디오의-주소를-입력받는-속성"><code class="language-plaintext highlighter-rouge">&lt;audio src=""&gt;</code> : 삽입할 오디오의 주소를 입력받는 속성</h5>
+  <h5 id="audio-autoplay--오디오의-자동-재생-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;audio autoplay=""&gt;</code> : 오디오의 자동 재생 여부를 지정하는 속성</h5>
+  <h5 id="audio-control--오디오의-소리-조절-시간대-탐색-일시정지-및-재시작을-할-수-있는-컨트롤러를-생성하는-속성"><code class="language-plaintext highlighter-rouge">&lt;audio control=""&gt;</code> : 오디오의 소리 조절, 시간대 탐색, 일시정지 및 재시작을 할 수 있는 컨트롤러를 생성하는 속성</h5>
+</blockquote>
+
+<h3 id="외부-페이지-삽입-관련-태그">외부 페이지 삽입 관련 태그</h3>
+
+<h4 id="object-embed--웹-문서나-외부-프로그램을-임베드하는-태그"><code class="language-plaintext highlighter-rouge">&lt;object&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;embed&gt;</code> : 웹 문서나 외부 프로그램을 임베드하는 태그</h4>
+
+<h3 id="-프레임-관련-태그"># 프레임 관련 태그</h3>
+
+<h4 id="iframe--웹-문서-안에-박스형으로-프레임을-넣어-문서-안의-문서를-표현하는-태그"><code class="language-plaintext highlighter-rouge">&lt;iframe&gt;</code> : 웹 문서 안에 박스형으로 프레임을 넣어 문서 안의 문서를 표현하는 태그</h4>
+<hr />
+
+<blockquote>
+  <h5 id="iframe-src--넣을-웹-문서의-주소을-입력받는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe src=""&gt;</code> : 넣을 웹 문서의 주소을 입력받는 속성</h5>
+  <h5 id="iframe-height-width--프레임의-높이-너비를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe height="" width=""&gt;</code> : 프레임의 높이, 너비를 지정하는 속성</h5>
+  <h5 id="iframe-sandbox--샌드박스-정책을-실행하는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe sandbox=""&gt;</code> : 샌드박스 정책을 실행하는 속성</h5>
+  <blockquote>
+    <p>샌드박스 정책 : 컴퓨터에서 어떠한 프로그램이나 코드 실행 시 격리된 공간인 샌드박스를 제공하고, 그곳이 아닌 다른 곳으로 벗어나 허용되지 않은 작업을 하지 못하도록 방지하는 기술</p>
+  </blockquote>
+
+  <h5 id="iframe-frameborder--프레임의-테두리-표시-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe frameborder=""&gt;</code> : 프레임의 테두리 표시 여부를 지정하는 속성</h5>
+  <h5 id="iframe-allowfullscreen--프레임의-전체-화면-모드-전환-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe allowfullscreen=""&gt;</code> : 프레임의 전체 화면 모드 전환 여부를 지정하는 속성</h5>
+</blockquote>
+
+<p>입력 :</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div&gt;
+	&lt;iframe
+		src="https://github.com/pocj8ur4in"
+		width="720"
+		height="720"
+		scrolling="no"
+		frameborder="1"
+		allowfullscreen="true"
+		allow="
+			clipboard-write;
+			encrypted-media;
+			picture-in-picture;
+			web-share"
+		sandbox="
+			allow-same-origin
+			allow-popups
+			allow-scripts"
+		&gt;
+	&lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p>출력 :</p>
+<div>
+	<iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;q=buenos+aires&amp;sll=37.0625,-95.677068&amp;sspn=38.638819,80.859375&amp;t=h&amp;hnear=Buenos+Aires,+Argentina&amp;z=11&amp;ll=-34.603723,-58.381593&amp;output=embed" width="720" height="720" scrolling="no" frameborder="1" allowfullscreen="true" allow="
+			clipboard-write;
+			encrypted-media;
+			picture-in-picture;
+			web-share" sandbox="
+			allow-same-origin
+			allow-popups
+			allow-scripts">
+	</iframe>
+</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Frontend" /><category term="HTML" /><summary type="html"><![CDATA[이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.]]></summary></entry></feed>
