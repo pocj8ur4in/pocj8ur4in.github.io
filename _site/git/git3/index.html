@@ -38,7 +38,7 @@
 
 
 
-  <meta property="article:modified_time" content="2022-10-06T00:00:00+09:00">
+  <meta property="article:modified_time" content="2022-10-08T00:00:00+09:00">
 
 
 
@@ -313,7 +313,7 @@
     <meta itemprop="headline" content="[Git] 자주 쓰는 linux 기본 명령어">
     <meta itemprop="description" content="이 항목은 macOS 기반으로 작성되었습니다.&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.">
     <meta itemprop="datePublished" content="2022-10-06T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2022-10-06T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-10-08T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
@@ -351,7 +351,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#pwd-print-working-directory--현재-작업중인-디렉터리의-경로를-출력">pwd (print working directory) : 현재 작업중인 디렉터리의 경로를 출력</a></li><li><a href="#cd-change-directory--절대--상대-경로로-이롱">cd (change directory) : 절대 / 상대 경로로 이롱</a></li><li><a href="#ls-list--현재-작업중인-디렉터리-내의-파일과-디렉토리를-출력">ls (list) : 현재 작업중인 디렉터리 내의 파일과 디렉토리를 출력</a></li><li><a href="#cp-copy--파일을-복사">cp (copy) : 파일을 복사</a></li><li><a href="#mv-move--파일-혹은-디렉터리를-이동--파일-혹은-디렉터리의-이름-변경">mv (move) : 파일 혹은 디렉터리를 이동 / 파일 혹은 디렉터리의 이름 변경</a></li><li><a href="#mkdir-make-directory--디렉터리를-생성">mkdir (make directory) : 디렉터리를 생성</a></li><li><a href="#rm-remove--파일을-삭제">rm (remove) : 파일을 삭제</a></li><li><a href="#find-검색할-경로-옵션--특정-파일이나-디렉터리를-검색">find [검색할 경로] [옵션] : 특정 파일이나 디렉터리를 검색</a></li></ul>
+              <ul class="toc__menu"><li><a href="#pwd-print-working-directory--현재-작업중인-디렉터리의-경로를-출력">pwd (print working directory) : 현재 작업중인 디렉터리의 경로를 출력</a></li><li><a href="#cd-디렉토리-이름-change-directory--절대--상대-경로로-이롱">cd [디렉토리 이름] (change directory) : 절대 / 상대 경로로 이롱</a></li><li><a href="#ls-옵션-파일-이름-list--현재-작업중인-디렉터리-내의-파일과-디렉토리-정보를-출력">ls [옵션] [파일 이름] (list) : 현재 작업중인 디렉터리 내의 파일과 디렉토리 정보를 출력</a></li><li><a href="#cp-옵션-원본-파일-이름-대상-파일-이름-디렉토리-이름-copy--파일을-복사">cp [옵션] [원본 파일 이름] [대상 파일 이름/ 디렉토리 이름] (copy) : 파일을 복사</a></li><li><a href="#mv-옵션-원본-파일-이름-대상-파일-이름-move--파일-혹은-디렉터리의-이름이나-위치를-변경">mv [옵션] [원본 파일 이름] [대상 파일 이름] (move) : 파일 혹은 디렉터리의 이름이나 위치를 변경</a></li><li><a href="#mkdir-옵션-파일-이름-make-directory--새로운-디렉터리를-생성">mkdir [옵션] [파일 이름] (make directory) : 새로운 디렉터리를 생성</a></li><li><a href="#rm-옵션-파일-이름-remove--파일을-삭제">rm [옵션] [파일 이름] (remove) : 파일을 삭제</a></li><li><a href="#find-디렉토리-이름-옵션--특정-파일이나-디렉터리를-검색">find [디렉토리 이름] [옵션] : 특정 파일이나 디렉터리를 검색</a></li></ul>
 
             </nav>
           </aside>
@@ -384,39 +384,51 @@
 &gt; /home
 </code></pre></div></div>
 
-<h3 id="cd-change-directory--절대--상대-경로로-이롱"><code class="language-plaintext highlighter-rouge">cd</code> (<code class="language-plaintext highlighter-rouge">change directory</code>) : 절대 / 상대 경로로 이롱</h3>
+<h3 id="cd-디렉토리-이름-change-directory--절대--상대-경로로-이롱"><code class="language-plaintext highlighter-rouge">cd</code> [디렉토리 이름] (<code class="language-plaintext highlighter-rouge">change directory</code>) : 절대 / 상대 경로로 이롱</h3>
 <hr />
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">.</code> : 한단계 위의 디렉토리</li>
+  <li><code class="language-plaintext highlighter-rouge">.</code> : 현재 디렉토리</li>
+  <li><code class="language-plaintext highlighter-rouge">..</code> : 한 단계 위의 디렉토리</li>
+  <li><code class="language-plaintext highlighter-rouge">/</code> : 최상위 디렉토리</li>
   <li><code class="language-plaintext highlighter-rouge">~</code> : Home 디렉토리</li>
+  <li><code class="language-plaintext highlighter-rouge">-</code> : 이전 디렉토리</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd /folder1/folder2
 $ pwd
 &gt; /home/folder1/folder2
 
-$ cd .
+$ cd ..
 $ pwd
 &gt; /home/folder1
+
+$ cd -
+$ pwd
+&gt; /home/folder1/folder2
+
+$ cd .
+$ pwd
+&gt; /home/folder1/folder2
 
 $ cd ~
 $ pwd
 &gt; /home
 </code></pre></div></div>
 
-<h3 id="ls-list--현재-작업중인-디렉터리-내의-파일과-디렉토리를-출력"><code class="language-plaintext highlighter-rouge">ls</code> (<code class="language-plaintext highlighter-rouge">list</code>) : 현재 작업중인 디렉터리 내의 파일과 디렉토리를 출력</h3>
+<h3 id="ls-옵션-파일-이름-list--현재-작업중인-디렉터리-내의-파일과-디렉토리-정보를-출력"><code class="language-plaintext highlighter-rouge">ls</code> [옵션] [파일 이름] (<code class="language-plaintext highlighter-rouge">list</code>) : 현재 작업중인 디렉터리 내의 파일과 디렉토리 정보를 출력</h3>
 <hr />
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
 &gt; home/ folder1     folder3     file1    file2.txt
 </code></pre></div></div>
 
-<h3 id="cp-copy--파일을-복사"><code class="language-plaintext highlighter-rouge">cp</code> (<code class="language-plaintext highlighter-rouge">copy</code>) : 파일을 복사</h3>
+<h3 id="cp-옵션-원본-파일-이름-대상-파일-이름-디렉토리-이름-copy--파일을-복사"><code class="language-plaintext highlighter-rouge">cp</code> [옵션] [원본 파일 이름] [대상 파일 이름/ 디렉토리 이름] (<code class="language-plaintext highlighter-rouge">copy</code>) : 파일을 복사</h3>
 <hr />
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">-r</code> : 디렉토리를 복사</li>
+  <li><code class="language-plaintext highlighter-rouge">f</code> : 덮어쓰기 시 물어보지 않음</li>
+  <li><code class="language-plaintext highlighter-rouge">-r</code> : 하위 디렉토리를 모두 포함하여 복사</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
@@ -429,8 +441,12 @@ $ ls
 &gt; home/ folder1     folder3     file1
 </code></pre></div></div>
 
-<h3 id="mv-move--파일-혹은-디렉터리를-이동--파일-혹은-디렉터리의-이름-변경"><code class="language-plaintext highlighter-rouge">mv</code> (<code class="language-plaintext highlighter-rouge">move</code>) : 파일 혹은 디렉터리를 이동 / 파일 혹은 디렉터리의 이름 변경</h3>
+<h3 id="mv-옵션-원본-파일-이름-대상-파일-이름-move--파일-혹은-디렉터리의-이름이나-위치를-변경"><code class="language-plaintext highlighter-rouge">mv</code> [옵션] [원본 파일 이름] [대상 파일 이름] (<code class="language-plaintext highlighter-rouge">move</code>) : 파일 혹은 디렉터리의 이름이나 위치를 변경</h3>
 <hr />
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">f</code> : 덮어쓰기 시 물어보지 않음</li>
+</ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
 &gt; home/ folder1     folder3     file1
@@ -448,7 +464,7 @@ $ ls
 &gt; folder3/ file3
 </code></pre></div></div>
 
-<h3 id="mkdir-make-directory--디렉터리를-생성"><code class="language-plaintext highlighter-rouge">mkdir</code> (<code class="language-plaintext highlighter-rouge">make directory</code>) : 디렉터리를 생성</h3>
+<h3 id="mkdir-옵션-파일-이름-make-directory--새로운-디렉터리를-생성"><code class="language-plaintext highlighter-rouge">mkdir</code> [옵션] [파일 이름] (<code class="language-plaintext highlighter-rouge">make directory</code>) : 새로운 디렉터리를 생성</h3>
 <hr />
 
 <ul>
@@ -471,12 +487,13 @@ $ ls
 &gt; folder3/ dir3
 </code></pre></div></div>
 
-<h3 id="rm-remove--파일을-삭제"><code class="language-plaintext highlighter-rouge">rm</code> (<code class="language-plaintext highlighter-rouge">remove</code>) : 파일을 삭제</h3>
+<h3 id="rm-옵션-파일-이름-remove--파일을-삭제"><code class="language-plaintext highlighter-rouge">rm</code> [옵션] [파일 이름] (<code class="language-plaintext highlighter-rouge">remove</code>) : 파일을 삭제</h3>
 <hr />
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">-r</code> : 디렉터리를 삭제 (하위 디렉터리와 파일도 삭제)</li>
   <li><code class="language-plaintext highlighter-rouge">-f</code> : 사용자에 삭제 여부를 묻지 않음</li>
+  <li><code class="language-plaintext highlighter-rouge">-i</code> : 파일이나 디렉토리 삭제할 때마다 확인 (y: 확인, n: 취소)</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
@@ -495,7 +512,7 @@ $ ls
 &gt; folder3/
 </code></pre></div></div>
 
-<h3 id="find-검색할-경로-옵션--특정-파일이나-디렉터리를-검색"><code class="language-plaintext highlighter-rouge">find</code> [검색할 경로] [옵션] : 특정 파일이나 디렉터리를 검색</h3>
+<h3 id="find-디렉토리-이름-옵션--특정-파일이나-디렉터리를-검색"><code class="language-plaintext highlighter-rouge">find</code> [디렉토리 이름] [옵션] : 특정 파일이나 디렉터리를 검색</h3>
 <hr />
 
 <ul>
@@ -547,7 +564,7 @@ $ ls
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-10-06">October 6, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-10-08">October 8, 2022</time></p>
 
       </footer>
 
