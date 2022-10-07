@@ -1,27 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-07T03:15:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[B/E] 1. 운영체제</title><link href="http://localhost:4000/backend/os1/" rel="alternate" type="text/html" title="[B/E] 1. 운영체제" /><published>2022-10-07T00:00:00+09:00</published><updated>2022-10-07T00:00:00+09:00</updated><id>http://localhost:4000/backend/os1</id><content type="html" xml:base="http://localhost:4000/backend/os1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-08T01:08:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle>이것저것 적어두는 개발자 지망생.</subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[B/E] 1. 운영체제</title><link href="http://localhost:4000/backend/os1/" rel="alternate" type="text/html" title="[B/E] 1. 운영체제" /><published>2022-10-07T00:00:00+09:00</published><updated>2022-10-08T00:00:00+09:00</updated><id>http://localhost:4000/backend/os1</id><content type="html" xml:base="http://localhost:4000/backend/os1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
 
 <h2 id="운영체제-operation-system--사용자가-컴퓨터에서-실행한-프로그램을-관리하고-제어">운영체제 (<code class="language-plaintext highlighter-rouge">Operation System</code>) : 사용자가 컴퓨터에서 실행한 프로그램을 관리하고 제어</h2>
 <ul>
-  <li>컴퓨터 시스템 자원의 효율적인 관리 (<code class="language-plaintext highlighter-rouge">Performance</code>) : <code class="language-plaintext highlighter-rouge">CPU</code>, <code class="language-plaintext highlighter-rouge">RAM</code> 등 하드웨어 (<code class="language-plaintext highlighter-rouge">H/W</code>)를 관리해 성능 향상</li>
+  <li>컴퓨터 시스템 자원의 효율적인 관리 (<code class="language-plaintext highlighter-rouge">Performance</code>) : CPU, RAM 등 하드웨어 (<code class="language-plaintext highlighter-rouge">H/W</code>)를 관리해 성능 향상</li>
   <li>사용자 편의성 제공 (<code class="language-plaintext highlighter-rouge">Convenience</code>) : 사용자가 더 편리하게 사용할 수 있는 환경을 구성</li>
 </ul>
 
-<h3 id="ex-부팅-booting--컴퓨터-전원을-켜는-작업">ex) 부팅 (<code class="language-plaintext highlighter-rouge">Booting</code>) : 컴퓨터 전원을 켜는 작업</h3>
-<hr />
-
-<p><img src="https://i.postimg.cc/hvtnjWL9/os2.png" height="40%" width="40%" /></p>
+<h3 id="ex-부팅-booting--컴퓨터를-시작할-때-자기-자신을-구동시킬-프로그램을-스스로-불러내는-동작">ex) 부팅 (<code class="language-plaintext highlighter-rouge">Booting</code>) : 컴퓨터를 시작할 때 자기 자신을 구동시킬 프로그램을 스스로 불러내는 동작</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">RAM</code> : 휘발성 단기 저장 장치 (전원이 꺼지면 모든 내용이 지워짐)</li>
-  <li><code class="language-plaintext highlighter-rouge">ROM</code> : 비휘발성 단기 저장 장치 (전원이 꺼져도 그 안의 내용이 계속 유지)
+  <li>메인 메모리 (<code class="language-plaintext highlighter-rouge">Main Memory</code>) : 즉시 필요한 데이터를 저장하는 주 기억 장치
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">POST</code> (<code class="language-plaintext highlighter-rouge">Power-On Self-Test</code>) : (부팅 시 가장 처음 실행되는 프로그램) 현재 컴퓨터의 상태 검사</li>
-      <li>부트 로더 (<code class="language-plaintext highlighter-rouge">Boot Loader</code>) : (<code class="language-plaintext highlighter-rouge">POST</code> 다음에 실행되는 프로그램) 장기 저장 장치의 운영체제를 탐색 후 <code class="language-plaintext highlighter-rouge">RAM</code>에 로드</li>
+      <li><code class="language-plaintext highlighter-rouge">RAM</code> : 휘발성 주 기억 장치 (전원이 꺼지면 모든 내용이 지워짐)</li>
+      <li><code class="language-plaintext highlighter-rouge">ROM</code> : 비휘발성 주 기억 장치 (전원이 꺼져도 그 안의 내용이 계속 유지)
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">POST</code> (<code class="language-plaintext highlighter-rouge">Power-On Self-Test</code>) : (부팅 시 가장 처음 실행되는 프로그램) 현재 컴퓨터의 상태 검사</li>
+          <li>부트 로더 (<code class="language-plaintext highlighter-rouge">Boot Loader</code>) : (<code class="language-plaintext highlighter-rouge">POST</code> 다음에 실행되는 프로그램) 보조 기억 장치의 운영체제를 탐색 후 <code class="language-plaintext highlighter-rouge">RAM</code>에 할당
+            <ul>
+              <li>보조 기억 장치에서 <code class="language-plaintext highlighter-rouge">RAM</code>으로 할당된 운영체제는 컴퓨터 전원이 꺼질 때까지 상주 (<code class="language-plaintext highlighter-rouge">Resident</code>)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">SSD</code>/<code class="language-plaintext highlighter-rouge">HDD</code> : 운영체제가 저장된 장기 기억 장치
+  <li><code class="language-plaintext highlighter-rouge">SSD</code>/<code class="language-plaintext highlighter-rouge">HDD</code> : 운영체제가 저장된 보조 기억 장치
     <ul>
       <li>커널 (<code class="language-plaintext highlighter-rouge">Kernel</code>) : 운영체제가 수행하는 모든 작업이 저장</li>
       <li>명령어 해석기 (<code class="language-plaintext highlighter-rouge">Shell</code>) : 사용자가 요청하는 명령어를 해석해 커널에 요청하고 결과를 출력
@@ -31,6 +36,110 @@
       </li>
     </ul>
   </li>
+</ul>
+
+<h2 id="운영체제의-발전-과정">운영체제의 발전 과정</h2>
+
+<h3 id="1-일괄-처리-시스템-batch-processing-system--프로그램-수행-과정의-자동화">1. 일괄 처리 시스템 (<code class="language-plaintext highlighter-rouge">Batch Processing System</code>) : 프로그램 수행 과정의 자동화</h3>
+<ul>
+  <li>컴파일 -&gt; 링크 -&gt; 로딩의 순서로 입력</li>
+  <li><code class="language-plaintext highlighter-rouge">Resident Monitor</code> : 프로세서에 할당하기 위해 위의 과정을 하나의 프로그램으로 작성 (최초의 운영체제)</li>
+</ul>
+
+<h3 id="2-다중-프로그래밍-multiprogramming-system--메모리에-여러-응용-프로그램을-적재시켜-idle-상태를-최소화">2. 다중 프로그래밍 (<code class="language-plaintext highlighter-rouge">Multiprogramming System</code>) : 메모리에 여러 응용 프로그램을 적재시켜 idle 상태를 최소화</h3>
+<ul>
+  <li>프로그램 실행 시에 계산을 담당하는 <code class="language-plaintext highlighter-rouge">CPU</code>와 입출력을 담당하는 <code class="language-plaintext highlighter-rouge">I/O</code> 장치가 교대로 실행
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">idle</code>상태 : I/O 장치가 실행되는 동안 CPU가 아무런 작업도 하지 않는 상태</li>
+    </ul>
+  </li>
+  <li>CPU 스케줄링 (<code class="language-plaintext highlighter-rouge">CPU Scheduling</code>) : CPU가 어느 프로그램을 실행할지 선택하는 작업</li>
+</ul>
+
+<h3 id="3-시분할-시스템-time-sharing-system--cpu가-프로그램을-수행하는-시간을-제한">3. 시분할 시스템 (<code class="language-plaintext highlighter-rouge">Time-sharing System</code>) : CPU가 프로그램을 수행하는 시간을 제한</h3>
+<ul>
+  <li>I/O 장치의 도입으로 사용자와 컴퓨터 간 대화 형식이 가능해졌으나, 컴퓨터의 가격이 비쌈
+    <ul>
+      <li>각 사용자들이 하나의 컴퓨터에 여러 I/O 장치를 연결하는, 단말기 (<code class="language-plaintext highlighter-rouge">Terminal</code>)의 형태로 공유하여 사용</li>
+      <li>한 사용자가 CPU를 사용하는 동안 다른 사용자들이 사용하지 못하는 문제 발생</li>
+    </ul>
+  </li>
+  <li>스위칭 (<code class="language-plaintext highlighter-rouge">Switching</code>) : 위의 문제를 해결하기 위해 프로그램을 일정 시간 실행하면 반드시 다음 프로그램으로 넘어가게 함</li>
+</ul>
+
+<h3 id="4-인터럽트-기반-시스템-interrupt-based-system--인터럽트-발생-시-isr에-맞는-처리를-수행">4. 인터럽트 기반 시스템 (<code class="language-plaintext highlighter-rouge">Interrupt-based System</code>) : 인터럽트 발생 시 <code class="language-plaintext highlighter-rouge">ISR</code>에 맞는 처리를 수행</h3>
+<ul>
+  <li>인터럽트 (<code class="language-plaintext highlighter-rouge">Interrupt</code>) : 프로그램 실행 중에 예기치 않은 상황이 발생할 경우 이를 CPU에 알리는 전기 신호
+    <ul>
+      <li>외부 인터럽트 (<code class="language-plaintext highlighter-rouge">eternal Interrupt</code>)</li>
+      <li>내부 인터럽트 (<code class="language-plaintext highlighter-rouge">internal Interrupt</code>)</li>
+    </ul>
+  </li>
+  <li>인터럽트 서비스 루틴 (<code class="language-plaintext highlighter-rouge">Interrupt Service Routine</code>) : 운영체제 내에 있는, 인터럽트 신호를 처리하기 위한 방법을 내포한 코드</li>
+</ul>
+
+<h2 id="이중-모드-dual-mode--사용자-user-모드와-관리자-supervisor-모드를-나눔">이중 모드 (Dual Mode) : 사용자 (<code class="language-plaintext highlighter-rouge">User</code>) 모드와 관리자 (<code class="language-plaintext highlighter-rouge">Supervisor</code>) 모드를 나눔</h2>
+
+<blockquote>
+  <p>문제 : 여러 사용자가 한 컴퓨터를 서버로 활용할 때, 한 사용자가 고의나 실수로 서버에 치명적 손상을 주면 아무도 사용할 수 없다.</p>
+</blockquote>
+
+<ul>
+  <li>CPU 내의 레지스터 (<code class="language-plaintext highlighter-rouge">Register</code>)의 비트 (<code class="language-plaintext highlighter-rouge">bit</code>)를 통해 플래그 (<code class="language-plaintext highlighter-rouge">flag</code>)로 나타냄 (관리자 모드 : <code class="language-plaintext highlighter-rouge">0</code>, 사용자 모드 : <code class="language-plaintext highlighter-rouge">1</code>)</li>
+  <li>특권 명령어 (<code class="language-plaintext highlighter-rouge">Privileged Instruction</code>) : 관리자 모드에서만 내릴 수 있는 명령어
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">STOP</code>, <code class="language-plaintext highlighter-rouge">HALT</code>, <code class="language-plaintext highlighter-rouge">RESET</code>, <code class="language-plaintext highlighter-rouge">SET_TIMER</code> 등</li>
+      <li>사용자 모드에서는 특권 명령어를 내릴 수 없음 (내부 인터럽트를 발생해 해당 명령어를 요청한 프로그램을 강제 종료)</li>
+    </ul>
+  </li>
+  <li>사용자가 하드웨어의 자원에 접근하는 경우, 프로그램에서 소프트웨어 인터럽트를 발생시켜 운영체제에 위임해 관리자 모드로 처리
+    <ul>
+      <li>컴퓨터가 부팅되는 과정 : 관리자 모드</li>
+      <li>응용 프로그램이 실행되는 과정 : 관리자 모드</li>
+      <li>응용 프로그램이 실행되는 중일 때 : 사용자 모드</li>
+      <li>인터럽트가 발생한 후 처리하는 과정 : 관리자 모드</li>
+      <li>인터럽트를 처리하였을 때 : 사용자 모드</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="하드웨어-보호-protection--잘못된-명령이나-접근으로부터-보호하기-위해-운영체제에서-트랩을-일으킴">하드웨어 보호 (<code class="language-plaintext highlighter-rouge">Protection</code>) : 잘못된 명령이나 접근으로부터 보호하기 위해 운영체제에서 트랩을 일으킴</h2>
+
+<blockquote>
+  <p>문제 : 정보들이 여러 I/O 장치를 통해 컴퓨터로 입출력되는 과정에서 장치 간 혹은 데이터 간의 혼선이 발생할 수 있다.</p>
+</blockquote>
+
+<h3 id="-입출력-장치-보호--in-out과-같은-입출력-명령을-특권-명령으로-지정해-운영체제를-통해-수행되게-함">&gt; 입출력 장치 보호 : <code class="language-plaintext highlighter-rouge">in</code>, <code class="language-plaintext highlighter-rouge">out</code>과 같은 입출력 명령을 특권 명령으로 지정해 운영체제를 통해 수행되게 함</h3>
+<ul>
+  <li>입출력 수행 시에는 관리자 모드로 전환해 특권 명령을 내림
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Privileged Instruction Violation</code> : 사용자가 입출력 명령을 직접 내린 경우 프로그램을 강제 종료</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>문제 : 다른 사용자나 운영체제에 할당된 메모리 영역에 접근해 정보나 프로그램을 해킹할 수 있다.</p>
+</blockquote>
+
+<h3 id="-메모리-보호--cpu와-메인-메모리-간의-주소-버스에-mmu-memory-management-unit을-설치">&gt; 메모리 보호 : CPU와 메인 메모리 간의 주소 버스에 <code class="language-plaintext highlighter-rouge">MMU</code> (<code class="language-plaintext highlighter-rouge">Memory Management Unit</code>)을 설치</h3>
+<ul>
+  <li>두 개의 레지스터를 통해 해당 프로그램의 주소 범위를 저장</li>
+  <li>사용자에 할당된 메모리 영역을 벗어난 주소값을 가져오지 못하게 함</li>
+  <li><code class="language-plaintext highlighter-rouge">MMU</code> 설정은 운영체제만 변경 가능
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Segment Violation</code> : 만약 사용자에 할당된 메모리 영역을 벗어난 주소값이 <code class="language-plaintext highlighter-rouge">MMU</code>에 들어오면 내부 인터럽트를 발생시킴</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>문제 : 프로그램에서의 무한 루프로 인해 CPU가 독점되어 다른 프로그램이 수행되지 못할 수 있다.</p>
+</blockquote>
+
+<h3 id="-cpu-보호--타이머-timer를-두어-일정-시간이-지나면-타이머-인터럽트를-발생시킴">&gt; CPU 보호 : 타이머 (<code class="language-plaintext highlighter-rouge">Timer</code>)를 두어 일정 시간이 지나면 타이머 인터럽트를 발생시킴</h3>
+<ul>
+  <li>타이머 인터럽트 (<code class="language-plaintext highlighter-rouge">Timer Interrupt</code>) : 해당 인터럽트의 ISR에서 CPU는 각 프로그램의 CPU 점유 시간을 측정해 분배</li>
 </ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Backend" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Git] 자주 쓰는 linux 기본 명령어</title><link href="http://localhost:4000/git/git3/" rel="alternate" type="text/html" title="[Git] 자주 쓰는 linux 기본 명령어" /><published>2022-10-06T00:00:00+09:00</published><updated>2022-10-06T00:00:00+09:00</updated><id>http://localhost:4000/git/git3</id><content type="html" xml:base="http://localhost:4000/git/git3/"><![CDATA[<p class="notice--info"><strong>이 항목은 macOS 기반으로 작성되었습니다.</strong><br />&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.</p>
 
 <p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
