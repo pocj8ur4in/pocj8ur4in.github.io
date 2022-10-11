@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-11T14:37:52+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[F/E] 3. JavaScript</title><link href="http://localhost:4000/frontend/js1/" rel="alternate" type="text/html" title="[F/E] 3. JavaScript" /><published>2022-10-09T00:00:00+09:00</published><updated>2022-10-09T00:00:00+09:00</updated><id>http://localhost:4000/frontend/js1</id><content type="html" xml:base="http://localhost:4000/frontend/js1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-12T00:20:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[F/E] 3. JavaScript</title><link href="http://localhost:4000/frontend/js1/" rel="alternate" type="text/html" title="[F/E] 3. JavaScript" /><published>2022-10-09T00:00:00+09:00</published><updated>2022-10-09T00:00:00+09:00</updated><id>http://localhost:4000/frontend/js1</id><content type="html" xml:base="http://localhost:4000/frontend/js1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
 
@@ -594,16 +594,65 @@ else {
   </li>
 </ul>
 
-<h4 id="프로세스-간의-통신-inter-process-communication--ipc">프로세스 간의 통신 (<code class="language-plaintext highlighter-rouge">Inter-process Communication</code>) : <code class="language-plaintext highlighter-rouge">IPC</code></h4>
-<h5 id="shared-memory-기법--상호-작용하는-프로세스-사이에-하나의-공유하는-공간을-만들어-공유하는-정보들을-저장"><code class="language-plaintext highlighter-rouge">Shared Memory</code> 기법 : 상호 작용하는 프로세스 사이에 하나의 공유하는 공간을 만들어 공유하는 정보들을 저장</h5>
-<ul>
-  <li>운영체제를 거쳐야 하는 <code class="language-plaintext highlighter-rouge">Message Passing</code>에 비해 속도가 빠름</li>
-  <li><code class="language-plaintext highlighter-rouge">Race Condition</code> : 두 개 이상의 프로세스가 <code class="language-plaintext highlighter-rouge">Shared Memory</code>에 동시에 접근해 데이터가 불일치해질 수 있음</li>
-</ul>
+<h4 id="프로세스-간의-통신-inter-process-communication--프로세스-간-상호-통신하는-규칙에-대한-메커니즘">프로세스 간의 통신 (<code class="language-plaintext highlighter-rouge">Inter-Process Communication</code>) : 프로세스 간 상호 통신하는 규칙에 대한 메커니즘</h4>
+<hr />
 
-<h5 id="message-passing-기법--상호-작용하는-프로세스-간-작업이-필요한-경우-운영체제를-통해-각자의-메시지를-전달해-통신"><code class="language-plaintext highlighter-rouge">Message Passing</code> 기법 : 상호 작용하는 프로세스 간 작업이 필요한 경우 운영체제를 통해 각자의 메시지를 전달해 통신</h5>
 <ul>
-  <li>운영체제를 거쳐야 하기 때문에 <code class="language-plaintext highlighter-rouge">Shared Memory</code>에 비해 속도가 느림</li>
+  <li>메시지 패싱 (<code class="language-plaintext highlighter-rouge">Message Passing</code>) : 협력적 프로세스 간 각자의 메시지를 운영 체제에 전달해 통신</li>
+  <li>공유 메모리 (<code class="language-plaintext highlighter-rouge">Shared Memory</code>) : 협력적 프로세스 간 하나의 공유하는 영역을 만들어 상호 통신
+    <ul>
+      <li>임계 영역 (<code class="language-plaintext highlighter-rouge">Critical Region</code>) : <code class="language-plaintext highlighter-rouge">Shared Memory</code>에서 공유하는 데이터들이 변경되는 코드 영역
+        <ul>
+          <li>경쟁 상태 (<code class="language-plaintext highlighter-rouge">Race Condition</code>) : 두 프로세스가 <code class="language-plaintext highlighter-rouge">Critical Region</code>에 동시 접근해 접근 순서나 위치에 따른 결과 차이
+            <ul>
+              <li>상호 배제 (<code class="language-plaintext highlighter-rouge">Mutual Exclusion</code>) : <code class="language-plaintext highlighter-rouge">Critical Region</code>을 한 프로세스만 사용하고 다른 프로세스 접근 금지</li>
+            </ul>
+          </li>
+          <li>기아 문제 (<code class="language-plaintext highlighter-rouge">Starving</code>)
+            <ul>
+              <li>유한 대기 (<code class="language-plaintext highlighter-rouge">Bounded Waiting</code>) :<code class="language-plaintext highlighter-rouge">Critical Region</code> 밖에서 대기하는 모든 프로세스는 유한 시간 내에 진입</li>
+            </ul>
+          </li>
+          <li>데드락 문제 (<code class="language-plaintext highlighter-rouge">Deadlock</code>)
+            <ul>
+              <li>진행 (<code class="language-plaintext highlighter-rouge">Progress</code>) : <code class="language-plaintext highlighter-rouge">Critical Region</code>에 접근하는 프로세스를 결정하는 것은 유한 시간 이내에 결졍</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Mutual Locks</code>
+        <ul>
+          <li>잠금 : 한 프로세스가 <code class="language-plaintext highlighter-rouge">Critical Region</code>을 점유한 후에 다른 프로세스가 접근할 수 없도록 잠금</li>
+          <li>인터럽트 봉쇄 : 한 프로세스가 <code class="language-plaintext highlighter-rouge">Critical Region</code>을 점유한 뒤에는 모든 인터럽트 중단</li>
+          <li>엄격한 교대 : 두 프로세스가 하나의 <code class="language-plaintext highlighter-rouge">Critical Region</code>을 사용할 때, 교대로 한 번씩만 접근하도록 함
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">Mutual Locks</code>에서의 <code class="language-plaintext highlighter-rouge">Busy Waiting</code> : <code class="language-plaintext highlighter-rouge">Critical Region</code> 밖에 대기하는 프로세스가 지속적인 접근 시도
+                <ul>
+                  <li>무한 루프를 돌며 CPU 시간을 낭비 (<code class="language-plaintext highlighter-rouge">Spin Lock</code>)</li>
+                  <li>대기 시간이 매우 짧은 경우 : 제한적으로 사용</li>
+                </ul>
+              </li>
+              <li>단일 변수, 2개의 프로세스에 대해서만 동기화 가능</li>
+            </ul>
+          </li>
+          <li><code class="language-plaintext highlighter-rouge">Bounded Waiting</code>으로 인한 기아, <code class="language-plaintext highlighter-rouge">Progress</code>으로 인한 데드락 해결 못함</li>
+        </ul>
+      </li>
+      <li>인터럽트 비활성화 (<code class="language-plaintext highlighter-rouge">Disabling Interrupts</code>) : 한 프로세스가 <code class="language-plaintext highlighter-rouge">Critical Region</code>을 점유하는 동안
+        <ul>
+          <li>커널 입장에서는 변수나 리스트를 인터럽트의 방해 없이 지속적으로 갱신할 수 있기에 편리</li>
+          <li>인터럽트를 비활성화해 운영체제의 권한을 사용자에 내주는 것은 위험함</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Lock variables</code> : 프로세스가 <code class="language-plaintext highlighter-rouge">Critical Region</code>에 접근을 시도할 때 <code class="language-plaintext highlighter-rouge">Lock variables</code> 확인
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">Lock variables</code>가 0 : 프로세스는 <code class="language-plaintext highlighter-rouge">Lock variables</code>을 1로 변경하고 <code class="language-plaintext highlighter-rouge">Critical Region</code>에 진입</li>
+          <li><code class="language-plaintext highlighter-rouge">Lock variables</code>가 1 : <code class="language-plaintext highlighter-rouge">Lock variables</code>가 0이 될 때까지 대기</li>
+        </ul>
+      </li>
+      <li></li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="cpu-스케줄링-cpu-scheduling--cpu가-하나의-프로세스를-끝나면-다음에-수행할-프로세스를-정하는-알고리즘">CPU 스케줄링 (<code class="language-plaintext highlighter-rouge">CPU Scheduling</code>) : CPU가 하나의 프로세스를 끝나면 다음에 수행할 프로세스를 정하는 알고리즘</h3>
