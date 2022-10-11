@@ -6,7 +6,7 @@ title                    : "pocj8ur4in's blog"
 title_separator          : "-"
 subtitle                 : "since 2022.09.01."
 name                     : "pocj8ur4in"
-description              : "이것저것 적어두는 개발자 지망생."
+description              : ""
 url                      : "https://pocj8ur4in.github.io"
 repository               : "pocj8ur4in/pocj8ur4in.github.io"
 teaser                   : 
@@ -69,9 +69,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "pocj8ur4in"
+  name             : "pocj8ur4in.io"
   avatar           : 
-  bio              : "이것저것 적어두는 개발자 지망생."
+  bio              : "아는 게 없어..."
   location         : "Seoul, Republic of Korea"
   email            : "pocj8ur4in@gmail.com"
   links:

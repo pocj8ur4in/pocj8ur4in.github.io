@@ -1,12 +1,9 @@
 main:
-  - title: "홈"
-    url: "/"
+  - title: "대문"
+    url: "/home/"
 
   - title: "카테고리"
     url: /categories/
 
   - title: "태그"
     url: /tags/
-
-  - title: "검색"
-    url: /search/
