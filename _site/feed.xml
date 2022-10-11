@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-11T14:15:28+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[F/E] 3. JavaScript</title><link href="http://localhost:4000/frontend/js1/" rel="alternate" type="text/html" title="[F/E] 3. JavaScript" /><published>2022-10-09T00:00:00+09:00</published><updated>2022-10-09T00:00:00+09:00</updated><id>http://localhost:4000/frontend/js1</id><content type="html" xml:base="http://localhost:4000/frontend/js1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-11T14:36:16+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[F/E] 3. JavaScript</title><link href="http://localhost:4000/frontend/js1/" rel="alternate" type="text/html" title="[F/E] 3. JavaScript" /><published>2022-10-09T00:00:00+09:00</published><updated>2022-10-09T00:00:00+09:00</updated><id>http://localhost:4000/frontend/js1</id><content type="html" xml:base="http://localhost:4000/frontend/js1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
 
@@ -4374,7 +4374,7 @@ print(end_time - start_time) # 수행 시간 출력
 /&gt; 
 </code></pre></div></div>
 
-<h4 id="meta-http-equiv--웹-서버가-웹-문서와-함께-html-응답-헤더를-보내-웹-브라우저가-http-문서의-초기-정보를-지정할-수-있게-하는-속성"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv=""&gt;</code> : 웹 서버가 웹 문서와 함께 HTML 응답 헤더를 보내 웹 브라우저가 HTTP 문서의 초기 정보를 지정할 수 있게 하는 속성</h4>
+<h4 id="meta-http-equiv--웹-서버가-웹-문서-내에-html-응답-헤더를-넣어-웹-브라우저가-초기-정보를-지정하게-하는-속성"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv=""&gt;</code> : 웹 서버가 웹 문서 내에 HTML 응답 헤더를 넣어 웹 브라우저가 초기 정보를 지정하게 하는 속성</h4>
 <hr />
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;meta
@@ -4515,7 +4515,7 @@ print(end_time - start_time) # 수행 시간 출력
 		</tr>
 		    	<tr>
     		<th>IE=edge, chrome=1</th>
-  			<td>최신 모드로 지정된 DOCTYPE에 상관없이 IE8 이상 버전에서는 항상 최신 표준 모드로 렌더링, Google Chrome이 설치되어 있다면 Goggle Chrome으로 렌더링</td>
+  			<td>최신 모드로 지정된 DOCTYPE에 상관없이 IE8 이상 버전에서는 항상 최신 표준 모드로 렌더링,<br /> 만약 Google Chrome이 설치되어 있다면 Goggle Chrome으로 렌더링</td>
 		</tr>
  	</tbody>
 </table>
@@ -4577,8 +4577,12 @@ print(end_time - start_time) # 수행 시간 출력
 &gt;
 </code></pre></div></div>
 
-<h5 id="meta-http-equivcontent-security-policy--xss-데이터-삽입-공격-등을-감지하고-완화하기-위해-웹-문서에-대한-컨텐츠-정책을-명시하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="content-security-policy"&gt;</code> : XSS, 데이터 삽입 공격 등을 감지하고 완화하기 위해 웹 문서에 대한 컨텐츠 정책을 명시하는 http-equiv 변수</h5>
+<h5 id="meta-http-equivcontent-security-policy--웹-문서에-대한-컨텐츠-정책을-명시하는-http-equiv-변수"><code class="language-plaintext highlighter-rouge">&lt;meta http-equiv="content-security-policy"&gt;</code> : 웹 문서에 대한 컨텐츠 정책을 명시하는 http-equiv 변수</h5>
 <hr />
+
+<ul>
+  <li>XSS, 데이터 삽입 공격 등을 감지하고 완화하기 위해 사용</li>
+</ul>
 
 <table>
     <thead>
@@ -5119,11 +5123,17 @@ print(end_time - start_time) # 수행 시간 출력
 <h4 id="font--글자를-넣는-태그"><code class="language-plaintext highlighter-rouge">&lt;font&gt;</code> : 글자를 넣는 태그</h4>
 <hr />
 
-<blockquote>
-  <h5 id="font-size--글자의-크기를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;font size=""&gt;</code> : 글자의 크기를 지정하는 속성</h5>
-  <h5 id="font-color--글자의-색상을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;font color=""&gt;</code> : 글자의 색상을 지정하는 속성</h5>
-  <h5 id="font-face--글자의-끌골을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;font face=""&gt;</code> : 글자의 끌골을 지정하는 속성</h5>
-</blockquote>
+<ul>
+  <li>
+    <h5 id="font-size--글자의-크기를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;font size=""&gt;</code> : 글자의 크기를 지정하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="font-color--글자의-색상을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;font color=""&gt;</code> : 글자의 색상을 지정하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="font-face--글자의-끌골을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;font face=""&gt;</code> : 글자의 끌골을 지정하는 속성</h5>
+  </li>
+</ul>
 
 <p>입력 :</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;font size="10" color="aqua"&gt;
@@ -5339,12 +5349,20 @@ print(end_time - start_time) # 수행 시간 출력
 <h4 id="a--하이퍼링크를-생성하는-태그"><code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> : 하이퍼링크를 생성하는 태그</h4>
 <hr />
 
-<blockquote>
-  <h5 id="a-href--링크된-문서를-입력하는-속성"><code class="language-plaintext highlighter-rouge">&lt;a href=""&gt;</code> : 링크된 문서를 입력하는 속성</h5>
-  <h5 id="a-target--링크된-문서를-어떻게-열지-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;a target=""&gt;</code> : 링크된 문서를 어떻게 열지 지정하는 속성</h5>
-  <h5 id="a-title--링크의-이름을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;a title=""&gt;</code> : 링크의 이름을 지정하는 속성</h5>
-  <h5 id="a-name--링크의-이름을-지정하는-속성-문서-내에서도-이-이름을-이용해-이동-가능"><code class="language-plaintext highlighter-rouge">&lt;a name=""&gt;</code> : 링크의 이름을 지정하는 속성 (문서 내에서도 이 이름을 이용해 이동 가능)</h5>
-</blockquote>
+<ul>
+  <li>
+    <h5 id="a-href--링크된-문서를-입력하는-속성"><code class="language-plaintext highlighter-rouge">&lt;a href=""&gt;</code> : 링크된 문서를 입력하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="a-target--링크된-문서를-어떻게-열지-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;a target=""&gt;</code> : 링크된 문서를 어떻게 열지 지정하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="a-title--링크의-이름을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;a title=""&gt;</code> : 링크의 이름을 지정하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="a-name--링크의-이름을-지정하는-속성-문서-내에서도-이-이름을-이용해-이동-가능"><code class="language-plaintext highlighter-rouge">&lt;a name=""&gt;</code> : 링크의 이름을 지정하는 속성 (문서 내에서도 이 이름을 이용해 이동 가능)</h5>
+  </li>
+</ul>
 
 <p>입력 :</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a
@@ -5365,18 +5383,27 @@ print(end_time - start_time) # 수행 시간 출력
 <h4 id="img--이미지를-추가하는-태그"><code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> : 이미지를 추가하는 태그</h4>
 <hr />
 
-<h5 id="img-src--이미지-파일의-경로를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;img src=""&gt;</code> : 이미지 파일의 경로를 지정하는 속성</h5>
 <ul>
-  <li>절대 경로 : http:// 또는 https://</li>
-  <li>상대 경로 : path/filename</li>
+  <li>
+    <h5 id="img-src--이미지-파일의-경로를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;img src=""&gt;</code> : 이미지 파일의 경로를 지정하는 속성</h5>
+    <ul>
+      <li>절대 경로 : http:// 또는 https://</li>
+      <li>상대 경로 : path/filename</li>
+    </ul>
+  </li>
+  <li>
+    <h5 id="img-alt--이미지가-출력되지-않을-경우-이미지에-대한-설명을-제공하는-속성"><code class="language-plaintext highlighter-rouge">&lt;img alt=""&gt;</code> : 이미지가 출력되지 않을 경우 이미지에 대한 설명을 제공하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="img-title--이미지에-대한-추가-정보를-제공하는-속성-마우스가-접근하면-말풍선으로-표시"><code class="language-plaintext highlighter-rouge">&lt;img title=""&gt;</code> : 이미지에 대한 추가 정보를 제공하는 속성 (마우스가 접근하면 말풍선으로 표시)</h5>
+  </li>
+  <li>
+    <h5 id="img-height-width--이미지의-세로-가로의-길이를-지정하는-속성-html5-픽셀만-지정-가능-는-css-대체"><code class="language-plaintext highlighter-rouge">&lt;img height="" width=""&gt;</code> : 이미지의 세로, 가로의 길이를 지정하는 속성 (<code class="language-plaintext highlighter-rouge">HTML5</code>: 픽셀만 지정 가능, %는 CSS 대체)</h5>
+  </li>
+  <li>
+    <h5 id="img-border--이미지의-경계선의-두께를-지정하는-속성-기본값--1px"><code class="language-plaintext highlighter-rouge">&lt;img border=""&gt;</code> : 이미지의 경계선의 두께를 지정하는 속성 (기본값 : 1px)</h5>
+  </li>
 </ul>
-
-<blockquote>
-  <h5 id="img-alt--이미지가-출력되지-않을-경우-이미지에-대한-설명을-제공하는-속성"><code class="language-plaintext highlighter-rouge">&lt;img alt=""&gt;</code> : 이미지가 출력되지 않을 경우 이미지에 대한 설명을 제공하는 속성</h5>
-  <h5 id="img-title--이미지에-대한-추가-정보를-제공하는-속성-마우스가-접근하면-말풍선으로-표시"><code class="language-plaintext highlighter-rouge">&lt;img title=""&gt;</code> : 이미지에 대한 추가 정보를 제공하는 속성 (마우스가 접근하면 말풍선으로 표시)</h5>
-  <h5 id="img-height-width--이미지의-세로-가로의-길이를-지정하는-속성-html5--픽셀로만-지정-가능-는-css로-대체"><code class="language-plaintext highlighter-rouge">&lt;img height="" width=""&gt;</code> : 이미지의 세로, 가로의 길이를 지정하는 속성 (HTML5 : 픽셀로만 지정 가능, %는 CSS로 대체)</h5>
-  <h5 id="img-border--이미지의-경계선의-두께를-지정하는-속성-기본값--1px"><code class="language-plaintext highlighter-rouge">&lt;img border=""&gt;</code> : 이미지의 경계선의 두께를 지정하는 속성 (기본값 : 1px)</h5>
-</blockquote>
 
 <p>입력 :</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img
@@ -5396,7 +5423,12 @@ print(end_time - start_time) # 수행 시간 출력
 <h4 id="figure--이미지나-다이어그램을-감싸는-태그"><code class="language-plaintext highlighter-rouge">&lt;figure&gt;</code> : 이미지나 다이어그램을 감싸는 태그</h4>
 <hr />
 
-<h5 id="figcaption--figure에-제목을-추가하는-태그"><code class="language-plaintext highlighter-rouge">&lt;figcaption&gt;</code> : <code class="language-plaintext highlighter-rouge">&lt;figure&gt;</code>에 제목을 추가하는 태그</h5>
+<ul>
+  <li>
+    <h5 id="figcaption--figure에-제목을-추가하는-태그"><code class="language-plaintext highlighter-rouge">&lt;figcaption&gt;</code> : <code class="language-plaintext highlighter-rouge">&lt;figure&gt;</code>에 제목을 추가하는 태그</h5>
+  </li>
+</ul>
+
 <p>입력 :</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;figure&gt;
 	&lt;figcaption&gt;
@@ -5424,18 +5456,38 @@ print(end_time - start_time) # 수행 시간 출력
 <h4 id="table--표를-만드는-태그"><code class="language-plaintext highlighter-rouge">&lt;table&gt;</code> : 표를 만드는 태그</h4>
 <hr />
 
-<blockquote>
-  <h4 id="tr--표의-행을-만드는-태그"><code class="language-plaintext highlighter-rouge">&lt;tr&gt;</code> : 표의 행을 만드는 태그</h4>
-  <h4 id="td--표의-내용을-표현하는-태그"><code class="language-plaintext highlighter-rouge">&lt;td&gt;</code> : 표의 내용을 표현하는 태그</h4>
-  <h4 id="th--표의-머리말을-표현하는-태그"><code class="language-plaintext highlighter-rouge">&lt;th&gt;</code> : 표의 머리말을 표현하는 태그</h4>
-  <h4 id="colspan--표에서-열을-병합하는-태그"><code class="language-plaintext highlighter-rouge">&lt;colspan&gt;</code> : 표에서 열을 병합하는 태그</h4>
-  <h4 id="rowspan--표에서-행을-병합하는-태그"><code class="language-plaintext highlighter-rouge">&lt;rowspan&gt;</code> : 표에서 행을 병합하는 태그</h4>
-  <h4 id="caption--표의-제목-부분을-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;caption&gt;</code> : 표의 제목 부분을 기술하는 태그</h4>
-  <h4 id="col--표의-열-정보를-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;col&gt;</code> : 표의 열 정보를 기술하는 태그</h4>
-  <h4 id="thead--표의-상단-부분을-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;thead&gt;</code> : 표의 상단 부분을 기술하는 태그</h4>
-  <h4 id="tbody--표의-본문-부분을-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;tbody&gt;</code> : 표의 본문 부분을 기술하는 태그</h4>
-  <h4 id="tfoot--표의-하단-부분을-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;tfoot&gt;</code> : 표의 하단 부분을 기술하는 태그</h4>
-</blockquote>
+<ul>
+  <li>
+    <h4 id="tr--표의-행을-만드는-태그"><code class="language-plaintext highlighter-rouge">&lt;tr&gt;</code> : 표의 행을 만드는 태그</h4>
+  </li>
+  <li>
+    <h4 id="td--표의-내용을-표현하는-태그"><code class="language-plaintext highlighter-rouge">&lt;td&gt;</code> : 표의 내용을 표현하는 태그</h4>
+  </li>
+  <li>
+    <h4 id="th--표의-머리말을-표현하는-태그"><code class="language-plaintext highlighter-rouge">&lt;th&gt;</code> : 표의 머리말을 표현하는 태그</h4>
+  </li>
+  <li>
+    <h4 id="colspan--표에서-열을-병합하는-태그"><code class="language-plaintext highlighter-rouge">&lt;colspan&gt;</code> : 표에서 열을 병합하는 태그</h4>
+  </li>
+  <li>
+    <h4 id="rowspan--표에서-행을-병합하는-태그"><code class="language-plaintext highlighter-rouge">&lt;rowspan&gt;</code> : 표에서 행을 병합하는 태그</h4>
+  </li>
+  <li>
+    <h4 id="caption--표의-제목-부분을-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;caption&gt;</code> : 표의 제목 부분을 기술하는 태그</h4>
+  </li>
+  <li>
+    <h4 id="col--표의-열-정보를-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;col&gt;</code> : 표의 열 정보를 기술하는 태그</h4>
+  </li>
+  <li>
+    <h4 id="thead--표의-상단-부분을-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;thead&gt;</code> : 표의 상단 부분을 기술하는 태그</h4>
+  </li>
+  <li>
+    <h4 id="tbody--표의-본문-부분을-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;tbody&gt;</code> : 표의 본문 부분을 기술하는 태그</h4>
+  </li>
+  <li>
+    <h4 id="tfoot--표의-하단-부분을-기술하는-태그"><code class="language-plaintext highlighter-rouge">&lt;tfoot&gt;</code> : 표의 하단 부분을 기술하는 태그</h4>
+  </li>
+</ul>
 
 <p>입력 :</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;table&gt;
@@ -5534,21 +5586,23 @@ print(end_time - start_time) # 수행 시간 출력
 <h4 id="form--cgi와-상호-작용을-위한-입력값을-받는-태그"><code class="language-plaintext highlighter-rouge">&lt;form&gt;</code> : <code class="language-plaintext highlighter-rouge">CGI</code>와 상호 작용을 위한 입력값을 받는 태그</h4>
 <hr />
 
-<blockquote>
-  <ul>
-    <li>
-      <h5 id="form-method--웹-서버와의-통신-방식을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;form method=""&gt;</code> : 웹 서버와의 통신 방식을 지정하는 속성</h5>
-    </li>
-    <li>
-      <h5 id="form-action--입력-양식에-입력된-값을-저장할-db-문서를-지정하는-속성-php나-asp으로-작성"><code class="language-plaintext highlighter-rouge">&lt;form action=""&gt;</code> : 입력 양식에 입력된 값을 저장할 <code class="language-plaintext highlighter-rouge">DB</code> 문서를 지정하는 속성 (<code class="language-plaintext highlighter-rouge">PHP</code>나 <code class="language-plaintext highlighter-rouge">ASP</code>으로 작성)</h5>
-    </li>
-  </ul>
-</blockquote>
+<ul>
+  <li>
+    <h5 id="form-method--웹-서버와의-통신-방식을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;form method=""&gt;</code> : 웹 서버와의 통신 방식을 지정하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="form-action--입력-양식에-입력된-값을-저장할-db-문서를-지정하는-속성-php나-asp으로-작성"><code class="language-plaintext highlighter-rouge">&lt;form action=""&gt;</code> : 입력 양식에 입력된 값을 저장할 <code class="language-plaintext highlighter-rouge">DB</code> 문서를 지정하는 속성 (<code class="language-plaintext highlighter-rouge">PHP</code>나 <code class="language-plaintext highlighter-rouge">ASP</code>으로 작성)</h5>
+  </li>
+</ul>
 
 <h4 id="label--폼의-양식에-이름을-지정하는-태그"><code class="language-plaintext highlighter-rouge">&lt;label&gt;</code> : 폼의 양식에 이름을 지정하는 태그</h4>
 <hr />
 
-<h5 id="label-for--label의-for의-값과-양식의-id의-값이-같으면-연결하는-속성"><code class="language-plaintext highlighter-rouge">&lt;label for=""&gt;</code> : <code class="language-plaintext highlighter-rouge">label</code>의 <code class="language-plaintext highlighter-rouge">for</code>의 값과 양식의 <code class="language-plaintext highlighter-rouge">id</code>의 값이 같으면 연결하는 속성</h5>
+<ul>
+  <li>
+    <h5 id="label-for--label의-for의-값과-양식의-id의-값이-같으면-연결하는-속성"><code class="language-plaintext highlighter-rouge">&lt;label for=""&gt;</code> : <code class="language-plaintext highlighter-rouge">label</code>의 <code class="language-plaintext highlighter-rouge">for</code>의 값과 양식의 <code class="language-plaintext highlighter-rouge">id</code>의 값이 같으면 연결하는 속성</h5>
+  </li>
+</ul>
 
 <p>입력 :</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;label for="input-label"&gt;input-text&lt;/label&gt;
@@ -5567,17 +5621,12 @@ print(end_time - start_time) # 수행 시간 출력
 <h4 id="input--입력값을-입력받을-필드를-선언하는-태그"><code class="language-plaintext highlighter-rouge">&lt;input&gt;</code> : 입력값을 입력받을 필드를 선언하는 태그</h4>
 <hr />
 
-<blockquote>
-  <ul>
-    <li>
-      <h5 id="input-name--필드의-이름을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;input name=""&gt;</code> : 필드의 이름을 지정하는 속성</h5>
-    </li>
-    <li>
-      <h5 id="input-type--필드의-종류를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;input type=""&gt;</code> : 필드의 종류를 지정하는 속성</h5>
-    </li>
-  </ul>
-
-  <blockquote>
+<ul>
+  <li>
+    <h5 id="input-name--필드의-이름을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;input name=""&gt;</code> : 필드의 이름을 지정하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="input-type--필드의-종류를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;input type=""&gt;</code> : 필드의 종류를 지정하는 속성</h5>
     <ul>
       <li>
         <h6 id="input-typetext--한-줄의-문자열을-생성하는-type-변수-기본-변수"><code class="language-plaintext highlighter-rouge">&lt;input type="text"&gt;</code> : 한 줄의 문자열을 생성하는 type 변수 (기본 변수)</h6>
@@ -5607,8 +5656,8 @@ print(end_time - start_time) # 수행 시간 출력
         <h6 id="input-typehidden--입력값-없이-폼과-함께-전송해야-하는-정보를-감싸는-type-변수-hidden-flied"><code class="language-plaintext highlighter-rouge">&lt;input type="hidden"&gt;</code> : 입력값 없이 폼과 함께 전송해야 하는 정보를 감싸는 type 변수 (<code class="language-plaintext highlighter-rouge">hidden flied</code>)</h6>
       </li>
     </ul>
-  </blockquote>
-</blockquote>
+  </li>
+</ul>
 
 <p>입력 :</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;input type="text" name="text"&gt;
@@ -5696,13 +5745,11 @@ print(end_time - start_time) # 수행 시간 출력
 <h4 id="textarea--여러-줄의-문자열-값을-입력받는-태그"><code class="language-plaintext highlighter-rouge">&lt;textarea&gt;</code> : 여러 줄의 문자열 값을 입력받는 태그</h4>
 <hr />
 
-<blockquote>
-  <ul>
-    <li>
-      <h5 id="textarea-rows-col---텍스트-에이리어의-너비와-높이를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;textarea rows=""&gt; col=""</code>  : 텍스트 에이리어의 너비와 높이를 지정하는 속성</h5>
-    </li>
-  </ul>
-</blockquote>
+<ul>
+  <li>
+    <h5 id="textarea-rows-col---텍스트-에이리어의-너비와-높이를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;textarea rows=""&gt; col=""</code>  : 텍스트 에이리어의 너비와 높이를 지정하는 속성</h5>
+  </li>
+</ul>
 
 <p>입력 :</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;textarea cols="50" rows="10"&gt;&lt;/textarea&gt;
@@ -5726,14 +5773,26 @@ print(end_time - start_time) # 수행 시간 출력
 <h4 id="select--드롭다운-목록을-생성하는-태그"><code class="language-plaintext highlighter-rouge">&lt;select&gt;</code> : 드롭다운 목록을 생성하는 태그</h4>
 <hr />
 
-<blockquote>
-  <h5 id="option--드롭다운-목록의-항목을-생성하는-태그"><code class="language-plaintext highlighter-rouge">&lt;option&gt;</code> : 드롭다운 목록의 항목을 생성하는 태그</h5>
-  <h5 id="select-autofocus--페이지가-로드-시-해당-목록으로-바로-이동하게끔-하는-속성"><code class="language-plaintext highlighter-rouge">&lt;select autofocus&gt;</code> : 페이지가 로드 시 해당 목록으로 바로 이동하게끔 하는 속성</h5>
-  <h5 id="select-disabled--화면에는-보이지만-사용할-수-없도록-만드는-속성"><code class="language-plaintext highlighter-rouge">&lt;select disabled&gt;</code> : 화면에는 보이지만 사용할 수 없도록 만드는 속성</h5>
-  <h5 id="select-multiple--여러-값들을-선택할-수-있게끔-하는-속성"><code class="language-plaintext highlighter-rouge">&lt;select multiple&gt;</code> : 여러 값들을 선택할 수 있게끔 하는 속성</h5>
-  <h5 id="select-name--목록에-이름을-붙이는-속성"><code class="language-plaintext highlighter-rouge">&lt;select name=""&gt;</code> : 목록에 이름을 붙이는 속성</h5>
-  <h5 id="select-size--목록을-펼치기-전에-보여질-목록의-개수를-정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;select size=""&gt;</code> : 목록을 펼치기 전에 보여질 목록의 개수를 정하는 속성</h5>
-</blockquote>
+<ul>
+  <li>
+    <h5 id="option--드롭다운-목록의-항목을-생성하는-태그"><code class="language-plaintext highlighter-rouge">&lt;option&gt;</code> : 드롭다운 목록의 항목을 생성하는 태그</h5>
+  </li>
+  <li>
+    <h5 id="select-autofocus--페이지가-로드-시-해당-목록으로-바로-이동하게끔-하는-속성"><code class="language-plaintext highlighter-rouge">&lt;select autofocus&gt;</code> : 페이지가 로드 시 해당 목록으로 바로 이동하게끔 하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="select-disabled--화면에는-보이지만-사용할-수-없도록-만드는-속성"><code class="language-plaintext highlighter-rouge">&lt;select disabled&gt;</code> : 화면에는 보이지만 사용할 수 없도록 만드는 속성</h5>
+  </li>
+  <li>
+    <h5 id="select-multiple--여러-값들을-선택할-수-있게끔-하는-속성"><code class="language-plaintext highlighter-rouge">&lt;select multiple&gt;</code> : 여러 값들을 선택할 수 있게끔 하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="select-name--목록에-이름을-붙이는-속성"><code class="language-plaintext highlighter-rouge">&lt;select name=""&gt;</code> : 목록에 이름을 붙이는 속성</h5>
+  </li>
+  <li>
+    <h5 id="select-size--목록을-펼치기-전에-보여질-목록의-개수를-정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;select size=""&gt;</code> : 목록을 펼치기 전에 보여질 목록의 개수를 정하는 속성</h5>
+  </li>
+</ul>
 
 <p>입력 :</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;form&gt;
@@ -5824,57 +5883,88 @@ print(end_time - start_time) # 수행 시간 출력
 <h4 id="video--비디오를-추가하는-태그"><code class="language-plaintext highlighter-rouge">&lt;video&gt;</code> : 비디오를 추가하는 태그</h4>
 <hr />
 
-<blockquote>
-  <h5 id="video-source-src--삽입할-비디오의-주소를-입력받는-속성"><code class="language-plaintext highlighter-rouge">&lt;video source src=""&gt;</code> : 삽입할 비디오의 주소를 입력받는 속성</h5>
-  <h5 id="video-source-type--삽입할-비디오의-타입을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video source type=""&gt;</code> : 삽입할 비디오의 타입을 지정하는 속성</h5>
-  <h5 id="video-height-width--비디오의-출력-영역-높이와-너비를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video height="" width=""&gt;</code> : 비디오의 출력 영역 높이와 너비를 지정하는 속성</h5>
-  <h5 id="video-poster--비디오-포스터-프레임의-주소를-입력받는-속성"><code class="language-plaintext highlighter-rouge">&lt;video poster=""&gt;</code> : 비디오 포스터 프레임의 주소를 입력받는 속성</h5>
-  <h5 id="video-autoplay--비디오의-자동-재생-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video autoplay=""&gt;</code> : 비디오의 자동 재생 여부를 지정하는 속성</h5>
-  <h5 id="video-control--비디오의-소리-조절-시간대-탐색-일시정지-및-재시작을-할-수-있는-컨트롤러를-생성하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video control=""&gt;</code> : 비디오의 소리 조절, 시간대 탐색, 일시정지 및 재시작을 할 수 있는 컨트롤러를 생성하는 속성</h5>
-  <h5 id="video-loop--비디오의-재시작-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video loop=""&gt;</code> : 비디오의 재시작 여부를 지정하는 속성</h5>
-  <h5 id="video-preload--웹-문서를-열-때-동영상-메타데이터-로드-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video preload=""&gt;</code> : 웹 문서를 열 때 동영상, 메타데이터 로드 여부를 지정하는 속성</h5>
-  <ul>
-    <li>
-      <h6 id="video-preloadauto--웹-문서를-열-때-동영상과-메타데이터-모두-로드하는-preload-변수"><code class="language-plaintext highlighter-rouge">&lt;video preload="auto"&gt;</code> : 웹 문서를 열 때 동영상과 메타데이터 모두 로드하는 preload 변수</h6>
-    </li>
-    <li>
-      <h6 id="video-preloadmetadata--웹-문서를-열-때-메타데이터만-로드하는-preload-변수"><code class="language-plaintext highlighter-rouge">&lt;video preload="metadata"&gt;</code> : 웹 문서를 열 때 메타데이터만 로드하는 preload 변수</h6>
-    </li>
-    <li>
-      <h6 id="video-preloadnone--웹-문서를-열-때-동영상과-메타데이터-모두-로드하지-않는-preload-변수"><code class="language-plaintext highlighter-rouge">&lt;video preload="none"&gt;</code> : 웹 문서를 열 때 동영상과 메타데이터 모두 로드하지 않는 preload 변수</h6>
-    </li>
-  </ul>
-</blockquote>
+<ul>
+  <li>
+    <h5 id="video-source-src--삽입할-비디오의-주소를-입력받는-속성"><code class="language-plaintext highlighter-rouge">&lt;video source src=""&gt;</code> : 삽입할 비디오의 주소를 입력받는 속성</h5>
+  </li>
+  <li>
+    <h5 id="video-source-type--삽입할-비디오의-타입을-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video source type=""&gt;</code> : 삽입할 비디오의 타입을 지정하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="video-height-width--비디오의-출력-영역-높이와-너비를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video height="" width=""&gt;</code> : 비디오의 출력 영역 높이와 너비를 지정하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="video-poster--비디오-포스터-프레임의-주소를-입력받는-속성"><code class="language-plaintext highlighter-rouge">&lt;video poster=""&gt;</code> : 비디오 포스터 프레임의 주소를 입력받는 속성</h5>
+  </li>
+  <li>
+    <h5 id="video-autoplay--비디오의-자동-재생-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video autoplay=""&gt;</code> : 비디오의 자동 재생 여부를 지정하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="video-control--비디오의-소리-조절-시간대-탐색-일시정지-및-재시작을-할-수-있는-컨트롤러를-생성하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video control=""&gt;</code> : 비디오의 소리 조절, 시간대 탐색, 일시정지 및 재시작을 할 수 있는 컨트롤러를 생성하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="video-loop--비디오의-재시작-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video loop=""&gt;</code> : 비디오의 재시작 여부를 지정하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="video-preload--웹-문서를-열-때-동영상-메타데이터-로드-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;video preload=""&gt;</code> : 웹 문서를 열 때 동영상, 메타데이터 로드 여부를 지정하는 속성</h5>
+    <ul>
+      <li>
+        <h6 id="video-preloadauto--웹-문서를-열-때-동영상과-메타데이터-모두-로드하는-preload-변수"><code class="language-plaintext highlighter-rouge">&lt;video preload="auto"&gt;</code> : 웹 문서를 열 때 동영상과 메타데이터 모두 로드하는 preload 변수</h6>
+      </li>
+      <li>
+        <h6 id="video-preloadmetadata--웹-문서를-열-때-메타데이터만-로드하는-preload-변수"><code class="language-plaintext highlighter-rouge">&lt;video preload="metadata"&gt;</code> : 웹 문서를 열 때 메타데이터만 로드하는 preload 변수</h6>
+      </li>
+      <li>
+        <h6 id="video-preloadnone--웹-문서를-열-때-동영상과-메타데이터-모두-로드하지-않는-preload-변수"><code class="language-plaintext highlighter-rouge">&lt;video preload="none"&gt;</code> : 웹 문서를 열 때 동영상과 메타데이터 모두 로드하지 않는 preload 변수</h6>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 <h4 id="audio--오디오를-추가하는-태그"><code class="language-plaintext highlighter-rouge">&lt;audio&gt;</code> : 오디오를 추가하는 태그</h4>
 <hr />
 
-<blockquote>
-  <h5 id="audio-src--삽입할-오디오의-주소를-입력받는-속성"><code class="language-plaintext highlighter-rouge">&lt;audio src=""&gt;</code> : 삽입할 오디오의 주소를 입력받는 속성</h5>
-  <h5 id="audio-autoplay--오디오의-자동-재생-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;audio autoplay=""&gt;</code> : 오디오의 자동 재생 여부를 지정하는 속성</h5>
-  <h5 id="audio-control--오디오의-소리-조절-시간대-탐색-일시정지-및-재시작을-할-수-있는-컨트롤러를-생성하는-속성"><code class="language-plaintext highlighter-rouge">&lt;audio control=""&gt;</code> : 오디오의 소리 조절, 시간대 탐색, 일시정지 및 재시작을 할 수 있는 컨트롤러를 생성하는 속성</h5>
-</blockquote>
-
-<h3 id="외부-페이지-삽입-관련-태그">외부 페이지 삽입 관련 태그</h3>
-
-<h4 id="object-embed--웹-문서나-외부-프로그램을-임베드하는-태그"><code class="language-plaintext highlighter-rouge">&lt;object&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;embed&gt;</code> : 웹 문서나 외부 프로그램을 임베드하는 태그</h4>
+<ul>
+  <li>
+    <h5 id="audio-src--삽입할-오디오의-주소를-입력받는-속성"><code class="language-plaintext highlighter-rouge">&lt;audio src=""&gt;</code> : 삽입할 오디오의 주소를 입력받는 속성</h5>
+  </li>
+  <li>
+    <h5 id="audio-autoplay--오디오의-자동-재생-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;audio autoplay=""&gt;</code> : 오디오의 자동 재생 여부를 지정하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="audio-control--오디오의-소리-조절-시간대-탐색-일시정지-및-재시작을-할-수-있는-컨트롤러를-생성하는-속성"><code class="language-plaintext highlighter-rouge">&lt;audio control=""&gt;</code> : 오디오의 소리 조절, 시간대 탐색, 일시정지 및 재시작을 할 수 있는 컨트롤러를 생성하는 속성</h5>
+  </li>
+</ul>
 
 <h3 id="-프레임-관련-태그"># 프레임 관련 태그</h3>
 
 <h4 id="iframe--웹-문서-안에-박스형으로-프레임을-넣어-문서-안의-문서를-표현하는-태그"><code class="language-plaintext highlighter-rouge">&lt;iframe&gt;</code> : 웹 문서 안에 박스형으로 프레임을 넣어 문서 안의 문서를 표현하는 태그</h4>
 <hr />
 
-<blockquote>
-  <h5 id="iframe-src--넣을-웹-문서의-주소을-입력받는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe src=""&gt;</code> : 넣을 웹 문서의 주소을 입력받는 속성</h5>
-  <h5 id="iframe-height-width--프레임의-높이-너비를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe height="" width=""&gt;</code> : 프레임의 높이, 너비를 지정하는 속성</h5>
-  <h5 id="iframe-sandbox--샌드박스-정책을-실행하는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe sandbox=""&gt;</code> : 샌드박스 정책을 실행하는 속성</h5>
-  <blockquote>
-    <p>샌드박스 정책 : 컴퓨터에서 어떠한 프로그램이나 코드 실행 시 격리된 공간인 샌드박스를 제공하고, 그곳이 아닌 다른 곳으로 벗어나 허용되지 않은 작업을 하지 못하도록 방지하는 기술</p>
-  </blockquote>
+<ul>
+  <li>
+    <h5 id="iframe-src--넣을-웹-문서의-주소을-입력받는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe src=""&gt;</code> : 넣을 웹 문서의 주소을 입력받는 속성</h5>
+  </li>
+  <li>
+    <h5 id="iframe-height-width--프레임의-높이-너비를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe height="" width=""&gt;</code> : 프레임의 높이, 너비를 지정하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="iframe-sandbox--샌드박스-정책을-실행하는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe sandbox=""&gt;</code> : 샌드박스 정책을 실행하는 속성</h5>
+  </li>
+</ul>
 
-  <h5 id="iframe-frameborder--프레임의-테두리-표시-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe frameborder=""&gt;</code> : 프레임의 테두리 표시 여부를 지정하는 속성</h5>
-  <h5 id="iframe-allowfullscreen--프레임의-전체-화면-모드-전환-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe allowfullscreen=""&gt;</code> : 프레임의 전체 화면 모드 전환 여부를 지정하는 속성</h5>
+<blockquote>
+  <p>샌드박스 정책 : 프로그램 실행 시 격리된 공간인 샌드박스를 제공해 그곳을 벗아난 작업을 하지 않도록 방지하는 기술</p>
 </blockquote>
+
+<ul>
+  <li>
+    <h5 id="iframe-frameborder--프레임의-테두리-표시-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe frameborder=""&gt;</code> : 프레임의 테두리 표시 여부를 지정하는 속성</h5>
+  </li>
+  <li>
+    <h5 id="iframe-allowfullscreen--프레임의-전체-화면-모드-전환-여부를-지정하는-속성"><code class="language-plaintext highlighter-rouge">&lt;iframe allowfullscreen=""&gt;</code> : 프레임의 전체 화면 모드 전환 여부를 지정하는 속성</h5>
+  </li>
+</ul>
 
 <p>입력 :</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div&gt;
@@ -5910,4 +6000,9 @@ print(end_time - start_time) # 수행 시간 출력
 			allow-popups
 			allow-scripts">
 	</iframe>
-</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Frontend" /><category term="HTML" /><summary type="html"><![CDATA[이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.]]></summary></entry></feed>
+</div>
+
+<h3 id="-외부-페이지-삽입-관련-태그"># 외부 페이지 삽입 관련 태그</h3>
+
+<h4 id="object-embed--웹-문서나-외부-프로그램을-임베드하는-태그"><code class="language-plaintext highlighter-rouge">&lt;object&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;embed&gt;</code> : 웹 문서나 외부 프로그램을 임베드하는 태그</h4>
+<hr />]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Frontend" /><category term="HTML" /><summary type="html"><![CDATA[이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.]]></summary></entry></feed>
