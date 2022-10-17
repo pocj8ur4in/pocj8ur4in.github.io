@@ -34,15 +34,11 @@
 </url>
 <url>
 <loc>http://localhost:4000/backend/os1/</loc>
-<lastmod>2022-10-10T00:00:00+09:00</lastmod>
+<lastmod>2022-10-17T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/frontend/js1/</loc>
 <lastmod>2022-10-09T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/design/dt1/</loc>
-<lastmod>2022-10-13T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/categories/</loc>
@@ -61,9 +57,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/page2/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/page3/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/googlece206819820f99f5.html</loc>
