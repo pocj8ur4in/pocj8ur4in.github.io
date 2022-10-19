@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-17T22:52:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[F/E] 3. JavaScript</title><link href="http://localhost:4000/frontend/js1/" rel="alternate" type="text/html" title="[F/E] 3. JavaScript" /><published>2022-10-09T00:00:00+09:00</published><updated>2022-10-09T00:00:00+09:00</updated><id>http://localhost:4000/frontend/js1</id><content type="html" xml:base="http://localhost:4000/frontend/js1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-19T15:05:27+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[F/E] 3. JavaScript</title><link href="http://localhost:4000/frontend/js1/" rel="alternate" type="text/html" title="[F/E] 3. JavaScript" /><published>2022-10-09T00:00:00+09:00</published><updated>2022-10-09T00:00:00+09:00</updated><id>http://localhost:4000/frontend/js1</id><content type="html" xml:base="http://localhost:4000/frontend/js1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
 
@@ -242,15 +242,61 @@ var y = 'varY'; var z = 'varZ'
 
 <h2 id="운영체제-operation-system--사용자가-컴퓨터에서-실행한-프로그램을-관리하고-제어">운영체제 (<code class="language-plaintext highlighter-rouge">Operation System</code>) : 사용자가 컴퓨터에서 실행한 프로그램을 관리하고 제어</h2>
 <ul>
-  <li>컴퓨터 시스템 자원의 효율적인 관리 (<code class="language-plaintext highlighter-rouge">Performance</code>) : CPU, RAM 등 하드웨어 (<code class="language-plaintext highlighter-rouge">H/W</code>)를 관리해 성능 향상</li>
+  <li>컴퓨터 시스템 자원의 효율적인 관리 (<code class="language-plaintext highlighter-rouge">Performance</code>) : 하드웨어 자원을 각각의 사용자 응용 프로그램에 적절히 분배
+    <ul>
+      <li>하드웨어 자원 (<code class="language-plaintext highlighter-rouge">Hardware Resource</code>) : CPU 시간, 기억 장치 및 디스크 영역, I/O 장치</li>
+    </ul>
+  </li>
   <li>사용자 편의성 제공 (<code class="language-plaintext highlighter-rouge">Convenience</code>) : 사용자가 더 편리하게 사용할 수 있는 환경을 구성</li>
 </ul>
+
+<div style="color: white; padding: 2% 0% 2% 0%; background-color: black;">
+<ul>
+  <li>프로세스 관리 (Process Management)</li>
+  <li>메인 메모리 관리 (Main Memory Management)</li>
+  <li>파일 관리(File Management)</li>
+  <li>저장 장치 관리 (Storage Management)</li>
+  <li>I/O 장치 관리 (I/O Device Management)</li>
+  <li>시스템 호출 (System call)</li>
+</ul>
+</div>
 
 <h3 id="부팅-booting--컴퓨터를-시작할-때-자기-자신을-구동시킬-프로그램을-스스로-불러내는-동작">부팅 (<code class="language-plaintext highlighter-rouge">Booting</code>) : 컴퓨터를 시작할 때 자기 자신을 구동시킬 프로그램을 스스로 불러내는 동작</h3>
 <ul>
   <li>메인 메모리 (<code class="language-plaintext highlighter-rouge">Main Memory</code>) : 즉시 필요한 데이터를 저장하는 주 기억 장치
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">RAM</code> : 휘발성 주 기억 장치 (전원이 꺼지면 모든 내용이 지워짐)</li>
+      <li><code class="language-plaintext highlighter-rouge">RAM</code> : 휘발성 주 기억 장치 (전원이 꺼지면 모든 내용이 지워짐)
+        <ul>
+          <li>코드 영역 (<code class="language-plaintext highlighter-rouge">Code Area</code>) : 실행할 프로그램의 코드가 저장되는 영역
+            <ul>
+              <li>CPU는 이 영역에 저장된 명령어를 하나씩 호출해 수행함</li>
+            </ul>
+          </li>
+          <li>데이터 영역 (<code class="language-plaintext highlighter-rouge">Data Area</code>) : 실행할 프로그램의 전역 변수와 정적 변수가 저장되는 영역
+            <ul>
+              <li>프로그램 시작 시 할당, 프로그램 종료 시 소멸</li>
+            </ul>
+          </li>
+          <li>스택 영역 (<code class="language-plaintext highlighter-rouge">Stack Area</code>) : 실행할 프로그램의 함수의 호출과 관련된 지역 변수와 매개 변수가 정적으로 저장되는 영역
+            <ul>
+              <li>후입선출 (<code class="language-plaintext highlighter-rouge">Last-In, First-Out</code>) 방식에 따른 동작 : <code class="language-plaintext highlighter-rouge">PUSH</code>로 데이터를 저장하고, <code class="language-plaintext highlighter-rouge">POP</code>로 데이터를 인출</li>
+              <li>메모리의 높은 주소에서 메모리의 낮은 주소의 방향으로 할당</li>
+              <li>함수 호출 시 할당, 함수 호출 종료 시 소멸</li>
+            </ul>
+          </li>
+          <li>힙 영역 (<code class="language-plaintext highlighter-rouge">Heap Area</code>) : 사용자에 의해 동적으로 할당되고 해제되는 전역 변수가 저장되는 영역
+            <ul>
+              <li>할당되는 변수의 크기 제한이 없음 : 크기 제한이 존재하는 스택에 비해 액세스 속도가 상대적으로 느림</li>
+              <li>CPU에 의해 효율적으로 관리되는 스택 영역과 달리, 사용자가 힙 영역을 관리해야 함
+                <ul>
+                  <li>메모리 단편화 (<code class="language-plaintext highlighter-rouge">Memory Fragmentation</code>) : 사용 가능한 메모리가 존재하지만, 할당이 불가능한 상태</li>
+                </ul>
+              </li>
+              <li>메모리의 낮은 주소에서 메모리의 높은 주소의 방향으로 할당</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
       <li><code class="language-plaintext highlighter-rouge">ROM</code> : 비휘발성 주 기억 장치 (전원이 꺼져도 그 안의 내용이 계속 유지)
         <ul>
           <li><code class="language-plaintext highlighter-rouge">POST</code> (<code class="language-plaintext highlighter-rouge">Power-On Self-Test</code>) : (부팅 시 가장 처음 실행되는 프로그램) 현재 컴퓨터의 상태 검사</li>
@@ -275,45 +321,38 @@ var y = 'varY'; var z = 'varZ'
   </li>
 </ul>
 
-<h2 id="운영체제의-동작">운영체제의 동작</h2>
+<h2 id="운영체제의-동작-원리">운영체제의 동작 원리</h2>
 
 <h3 id="일괄-처리-시스템-batch-processing-system--프로그램-수행-과정의-자동화">일괄 처리 시스템 (<code class="language-plaintext highlighter-rouge">Batch Processing System</code>) : 프로그램 수행 과정의 자동화</h3>
 <ul>
-  <li>컴파일 -&gt; 링크 -&gt; 로딩의 순서로 입력</li>
-  <li><code class="language-plaintext highlighter-rouge">Resident Monitor</code> : 프로세서에 할당하기 위해 위의 과정을 하나의 프로그램으로 작성</li>
+  <li><code class="language-plaintext highlighter-rouge">Resident Monitor</code> : 프로세서에 할당하기 위해 (컴파일 -&gt; 링크 -&gt; 로딩)의 과정을 하나의 프로그램으로 작성</li>
 </ul>
 
-<h3 id="다중-프로그래밍-시스템-multiprogramming-system--메모리에-여러-응용-프로그램을-적재시켜-idle-상태를-최소화">다중 프로그래밍 시스템 (<code class="language-plaintext highlighter-rouge">Multiprogramming System</code>) : 메모리에 여러 응용 프로그램을 적재시켜 idle 상태를 최소화</h3>
+<h3 id="시분할-시스템-time-sharing-system--cpu가-프로그램을-수행하는-시간을-제한">시분할 시스템 (<code class="language-plaintext highlighter-rouge">Time-sharing System</code>) : CPU가 프로그램을 수행하는 시간을 제한</h3>
+<ul>
+  <li>스위칭 (<code class="language-plaintext highlighter-rouge">Switching</code>) : 프로그램이 일정 시간 실행되면 <code class="language-plaintext highlighter-rouge">Time Out</code>을 발생시켜 다음 프로그램으로 넘어가게 함</li>
+  <li>다중 작업 (<code class="language-plaintext highlighter-rouge">Multitasking</code>) : CPU가 짧은 시간 내에 여러 프로그램을 스위칭해 동시에 작업하는 것처럼 보이게 함
+    <ul>
+      <li>CPU 스케줄링 (<code class="language-plaintext highlighter-rouge">CPU Scheduling</code>) : CPU가 어느 프로그램을 실행할지 선택하는 작업</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="다중-프로그래밍-시스템-multiprogramming-system--메모리에-여러-응용-프로그램을-적재시켜-idle-상태-최소화">다중 프로그래밍 시스템 (<code class="language-plaintext highlighter-rouge">Multiprogramming System</code>) : 메모리에 여러 응용 프로그램을 적재시켜 idle 상태 최소화</h3>
 <ul>
   <li>프로그램 실행 시에 계산을 담당하는 <code class="language-plaintext highlighter-rouge">CPU</code>와 입출력을 담당하는 <code class="language-plaintext highlighter-rouge">I/O</code> 장치가 교대로 실행
     <ul>
       <li><code class="language-plaintext highlighter-rouge">idle</code>상태 : I/O 장치가 실행되는 동안 CPU가 아무런 작업도 하지 않는 상태</li>
     </ul>
   </li>
-  <li>CPU 스케줄링 (<code class="language-plaintext highlighter-rouge">CPU Scheduling</code>) : CPU가 어느 프로그램을 실행할지 선택하는 작업</li>
 </ul>
 
-<h3 id="시분할-시스템-time-sharing-system--cpu가-프로그램을-수행하는-시간을-제한">시분할 시스템 (<code class="language-plaintext highlighter-rouge">Time-sharing System</code>) : CPU가 프로그램을 수행하는 시간을 제한</h3>
-<ul>
-  <li>I/O 장치의 도입으로 사용자와 컴퓨터 간 대화 형식이 가능해졌으나, 컴퓨터의 가격이 비쌈
-    <ul>
-      <li>각 사용자들이 하나의 컴퓨터에 여러 I/O 장치를 연결하는, 단말기 (<code class="language-plaintext highlighter-rouge">Terminal</code>)의 형태로 공유하여 사용</li>
-      <li>한 사용자가 CPU를 사용하는 동안 다른 사용자들이 사용하지 못하는 문제 발생</li>
-    </ul>
-  </li>
-  <li>스위칭 (<code class="language-plaintext highlighter-rouge">Switching</code>) : 위의 문제를 해결하기 위해 프로그램이 제한된 시간 실행되면 반드시 다음 프로그램으로 넘어가게 함
-    <ul>
-      <li>다중 작업 (<code class="language-plaintext highlighter-rouge">Multitasking</code>)이 가능해짐</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="인터럽트-기반-시스템-interrupt-based-system--인터럽트-발생-시-isr에-맞는-처리를-수행">인터럽트 기반 시스템 (<code class="language-plaintext highlighter-rouge">Interrupt-based System</code>) : 인터럽트 발생 시 <code class="language-plaintext highlighter-rouge">ISR</code>에 맞는 처리를 수행</h3>
+<h3 id="인터럽트-기반-시스템-interrupt-based-system--인터럽트-발생-시-isr에-맞는-처리-수행">인터럽트 기반 시스템 (<code class="language-plaintext highlighter-rouge">Interrupt-based System</code>) : 인터럽트 발생 시 <code class="language-plaintext highlighter-rouge">ISR</code>에 맞는 처리 수행</h3>
 <ul>
   <li>인터럽트 (<code class="language-plaintext highlighter-rouge">Interrupt</code>) : 프로그램 실행 중에 예기치 않은 상황이 발생할 경우 이를 CPU에 알리는 전기 신호
     <ul>
-      <li>외부 인터럽트 (<code class="language-plaintext highlighter-rouge">eternal Interrupt</code>) : 하드웨어 인터럽트</li>
-      <li>내부 인터럽트 (<code class="language-plaintext highlighter-rouge">internal Interrupt</code>) : 소프트웨어 언터럽트
+      <li>외부 인터럽트 (<code class="language-plaintext highlighter-rouge">Eternal Interrupt</code>) = 하드웨어 인터럽트 (<code class="language-plaintext highlighter-rouge">Hardware Interrupt</code>)</li>
+      <li>내부 인터럽트 (<code class="language-plaintext highlighter-rouge">Internal Interrupt</code>) = 소프트웨어 언터럽트 (<code class="language-plaintext highlighter-rouge">Software Interrupt</code>)
         <ul>
           <li>예외 (<code class="language-plaintext highlighter-rouge">Exception</code>)</li>
           <li>시스템 호출 (<code class="language-plaintext highlighter-rouge">System call</code>)</li>
@@ -324,45 +363,45 @@ var y = 'varY'; var z = 'varZ'
   <li>인터럽트 서비스 루틴 (<code class="language-plaintext highlighter-rouge">Interrupt Service Routine</code>) : 운영체제 내에 있는, 인터럽트 신호를 처리하기 위한 방법을 내포한 코드</li>
 </ul>
 
-<h2 id="운영체제의-특징">운영체제의 특징</h2>
-
-<h3 id="이중-모드-dual-mode-execution--사용자-user-모드와-커널-kernel-모드를-나눔">이중 모드 (<code class="language-plaintext highlighter-rouge">Dual Mode Execution</code>) : 사용자 (<code class="language-plaintext highlighter-rouge">User</code>) 모드와 커널 (<code class="language-plaintext highlighter-rouge">Kernel</code>) 모드를 나눔</h3>
+<h3 id="이중-모드-dual-mode-execution--유저-user-모드와-커널-kernel-모드를-나눔">이중 모드 (<code class="language-plaintext highlighter-rouge">Dual Mode Execution</code>) : 유저 (<code class="language-plaintext highlighter-rouge">User</code>) 모드와 커널 (<code class="language-plaintext highlighter-rouge">Kernel</code>) 모드를 나눔</h3>
 
 <blockquote>
-  <p>문제 : 어떤 작업의 오류로 자원을 계속해서 점유하는 일과 같이 컴퓨터의 작업 효율을 저해하는 행위로부터 보호할 수단을 필요</p>
+  <p>! 문제 : 어떤 작업이 자원을 계속해서 점유하는 일과 같이 컴퓨터의 작업 효율을 저해하는 행위로부터 보호할 수단을 필요</p>
 </blockquote>
 
 <ul>
-  <li>CPU 내 레지스터 (<code class="language-plaintext highlighter-rouge">Register</code>)의 <code class="language-plaintext highlighter-rouge">Mode-Bit</code>를 플래그 (<code class="language-plaintext highlighter-rouge">flag</code>)로 활용해 나타냄 (커낼 모드 : <code class="language-plaintext highlighter-rouge">0</code>, 사용자 모드 : <code class="language-plaintext highlighter-rouge">1</code>)</li>
+  <li>CPU 내 레지스터 (<code class="language-plaintext highlighter-rouge">Register</code>)의 <code class="language-plaintext highlighter-rouge">Mode-Bit</code>를 플래그 (<code class="language-plaintext highlighter-rouge">flag</code>)로 활용해 나타냄 (커낼 모드 : <code class="language-plaintext highlighter-rouge">0</code>, 유저 모드 : <code class="language-plaintext highlighter-rouge">1</code>)</li>
   <li>각 명령어에 <code class="language-plaintext highlighter-rouge">Mode-Bit</code>를 넣어 시스템 내의 <code class="language-plaintext highlighter-rouge">Mode-Bit</code>와 같을 시에만 명령어 수행</li>
   <li>특권 명령어 (<code class="language-plaintext highlighter-rouge">Privileged Instruction</code>) : 커널 모드에서만 내릴 수 있는 명령어
     <ul>
       <li><code class="language-plaintext highlighter-rouge">STOP</code>, <code class="language-plaintext highlighter-rouge">HALT</code>, <code class="language-plaintext highlighter-rouge">RESET</code>, <code class="language-plaintext highlighter-rouge">SET_TIMER</code> 등</li>
-      <li>사용자 모드에서는 특권 명령어를 내릴 수 없음 (내부 인터럽트를 발생해 해당 명령어를 요청한 프로그램을 강제 종료)</li>
+      <li>유저 모드에서는 특권 명령어를 내릴 수 없음 (내부 인터럽트를 발생해 해당 명령어를 요청한 프로그램을 강제 종료)</li>
     </ul>
   </li>
   <li>시스템 호출 (<code class="language-plaintext highlighter-rouge">System Call</code>) : <code class="language-plaintext highlighter-rouge">Mode-Bit</code>를 바꾸는 행위 (<code class="language-plaintext highlighter-rouge">INT 80</code>)
     <ul>
-      <li>사용자가 하드웨어의 자원에 접근할 때, 프로그램에서 시스템 호출을 발생시켜 운영체제에 위임해 커널 모드로 처리
-        <ul>
-          <li>컴퓨터가 부팅되는 과정 : 커널 모드</li>
-          <li>응용 프로그램이 실행되는 과정 : 커널 모드</li>
-          <li>응용 프로그램이 실행되는 중일 때 : 사용자 모드</li>
-          <li>인터럽트가 발생한 후 처리하는 과정 : 커널 모드</li>
-          <li>인터럽트를 처리한 후 : 사용자 모드</li>
-        </ul>
-      </li>
+      <li>사용자가 하드웨어의 자원에 접근할 때, 프로그램에서 시스템 호출을 발생시켜 운영체제에 위임해 커널 모드로 처리</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="하드웨어-보호-hw-protection--잘못된-명령이나-접근으로부터-보호하기-위해-운영체제에서-내부-인터럽트를-발생">하드웨어 보호 (<code class="language-plaintext highlighter-rouge">H/W Protection</code>) : 잘못된 명령이나 접근으로부터 보호하기 위해 운영체제에서 내부 인터럽트를 발생</h3>
-
 <blockquote>
-  <p>문제 : 정보들이 여러 I/O 장치를 통해 컴퓨터로 입출력되는 과정에서 장치 간 혹은 데이터 간의 혼선이 발생할 수 있음</p>
+  <ul>
+    <li>컴퓨터가 부팅되는 과정 : 커널 모드</li>
+    <li>응용 프로그램이 실행되는 과정 : 커널 모드</li>
+    <li>응용 프로그램이 실행되는 중일 때 : 유저 모드</li>
+    <li>인터럽트가 발생한 후 처리하는 과정 : 커널 모드</li>
+    <li>인터럽트를 처리한 후 : 유저 모드</li>
+  </ul>
 </blockquote>
 
-<h4 id="입출력-장치-보호-io-protection--in-out과-같은-입출력-명령을-특권-명령으로-지정해-운영체제를-통해-수행">입출력 장치 보호 (<code class="language-plaintext highlighter-rouge">I/O Protection</code>) : <code class="language-plaintext highlighter-rouge">in</code>, <code class="language-plaintext highlighter-rouge">out</code>과 같은 입출력 명령을 특권 명령으로 지정해 운영체제를 통해 수행</h4>
+<h4 id="하드웨어-보호-hw-protection--잘못된-명령이나-접근으로부터-보호하기-위해-운영체제에서-내부-인터럽트를-발생">하드웨어 보호 (<code class="language-plaintext highlighter-rouge">H/W Protection</code>) : 잘못된 명령이나 접근으로부터 보호하기 위해 운영체제에서 내부 인터럽트를 발생</h4>
+
+<blockquote>
+  <p>! 문제 : 정보들이 여러 I/O 장치를 통해 컴퓨터로 입출력되는 과정에서 장치 간 혹은 데이터 간의 혼선이 발생할 수 있음</p>
+</blockquote>
+
+<h5 id="입출력-장치-보호-io-protection--in-out과-같은-입출력-명령을-특권-명령으로-지정해-운영체제를-통해-수행">입출력 장치 보호 (<code class="language-plaintext highlighter-rouge">I/O Protection</code>) : <code class="language-plaintext highlighter-rouge">in</code>, <code class="language-plaintext highlighter-rouge">out</code>과 같은 입출력 명령을 특권 명령으로 지정해 운영체제를 통해 수행</h5>
 <ul>
   <li>입출력 수행 시에는 관리자 모드로 전환해 특권 명령을 내림
     <ul>
@@ -372,10 +411,10 @@ var y = 'varY'; var z = 'varZ'
 </ul>
 
 <blockquote>
-  <p>문제 : 다른 사용자나 운영체제에 할당된 메모리 영역에 접근해 정보나 프로그램을 해킹할 수 있음</p>
+  <p>! 문제 : 다른 사용자나 운영체제에 할당된 메모리 영역에 접근해 정보나 프로그램을 해킹할 수 있음</p>
 </blockquote>
 
-<h4 id="메모리-보호-memory-protection--cpu와-메인-메모리-간-주소-버스에-mmu-memory-management-unit를-설치">메모리 보호 (<code class="language-plaintext highlighter-rouge">Memory Protection</code>) : CPU와 메인 메모리 간 주소 버스에 <code class="language-plaintext highlighter-rouge">MMU</code> (<code class="language-plaintext highlighter-rouge">Memory Management Unit</code>)를 설치</h4>
+<h5 id="메모리-보호-memory-protection--cpu와-메인-메모리-간-주소-버스에-mmu-memory-management-unit를-설치">메모리 보호 (<code class="language-plaintext highlighter-rouge">Memory Protection</code>) : CPU와 메인 메모리 간 주소 버스에 <code class="language-plaintext highlighter-rouge">MMU</code> (<code class="language-plaintext highlighter-rouge">Memory Management Unit</code>)를 설치</h5>
 <ul>
   <li>두 개의 레지스터를 통해 해당 프로그램의 주소 범위를 저장</li>
   <li>사용자에 할당된 메모리 영역을 벗어난 주소값을 가져오지 못하게 함</li>
@@ -387,10 +426,10 @@ var y = 'varY'; var z = 'varZ'
 </ul>
 
 <blockquote>
-  <p>문제 : 프로그램에서의 무한 루프로 인해 CPU가 독점되어 다른 프로그램이 수행되지 못할 수 있음</p>
+  <p>! 문제 : 프로그램에서의 무한 루프로 인해 CPU가 독점되어 다른 프로그램이 수행되지 못할 수 있음</p>
 </blockquote>
 
-<h4 id="cpu-보호-cpu-protection--타이머-timer를-두어-일정-시간이-지나면-타이머-인터럽트를-발생시킴">CPU 보호 (<code class="language-plaintext highlighter-rouge">CPU Protection</code>) : 타이머 (<code class="language-plaintext highlighter-rouge">Timer</code>)를 두어 일정 시간이 지나면 타이머 인터럽트를 발생시킴</h4>
+<h5 id="cpu-보호-cpu-protection--타이머-timer를-두어-일정-시간이-지나면-타이머-인터럽트를-발생시킴">CPU 보호 (<code class="language-plaintext highlighter-rouge">CPU Protection</code>) : 타이머 (<code class="language-plaintext highlighter-rouge">Timer</code>)를 두어 일정 시간이 지나면 타이머 인터럽트를 발생시킴</h5>
 <ul>
   <li>타이머 (<code class="language-plaintext highlighter-rouge">Timer</code>) : 무한 루프나 자원 독점을 막기 위해 특정 시간이 지나면 타이머 인터럽트를 발생시킴
     <ul>
@@ -400,46 +439,18 @@ var y = 'varY'; var z = 'varZ'
   </li>
 </ul>
 
-<h2 id="운영체제-서비스-operation-system-service">운영체제 서비스 (<code class="language-plaintext highlighter-rouge">Operation System Service</code>)</h2>
-<ul>
-  <li>컴퓨터의 성능을 효율적으로 사용하기 위해 하드웨어 자원을 각각의 사용자 응용 프로그램에 적절히 분배
-    <ul>
-      <li>하드웨어 자원 : CPU 시간, 기억 장치 및 디스크 영역, I/O 장치</li>
-    </ul>
-  </li>
-</ul>
-
-<div style="color: white; padding: 2% 0% 2% 0%; background-color: black;">
-<ul>
-  <li>프로세스 관리 (Process Management)</li>
-  <li>메인 메모리 관리 (Main Memory Management)</li>
-  <li>프로세스 관리 (Process Management)</li>
-  <li>파일 관리(File Management)</li>
-  <li>저장 장치 관리 (Storage Management)</li>
-  <li>I/O 장치 관리 (I/O Device Management)</li>
-  <li>시스템 호출 (System call)</li>
-</ul>
-</div>
-
 <h2 id="프로세스-process--실제-메인-메모리에-할당되어-실행-중인-프로그램">프로세스 (<code class="language-plaintext highlighter-rouge">Process</code>) : 실제 메인 메모리에 할당되어 실행 중인 프로그램</h2>
-
 <ul>
-  <li>프로그램은 보조 기억 장치에서 아무런 동작을 하지 않은 상태
+  <li>프로그램은 보조 기억 장치에서 아무런 동작을 하지 않은 상태</li>
+  <li>어떤 요청에 의해 메인 메모리에 할당되어 CPU를 사용하면서 실행</li>
+  <li>각각의 프로세스는 CPU에 의해 샐행된 후 …를 생성 (메인 메모리를 효율적으로 사용해야 함)
     <ul>
-      <li>어떤 요청에 의해 메인 메모리에 할당되어 CPU를 사용하면서 실행
+      <li>프로세스 테이블 엔트리 = 프로세스 컨트롤 블록 (<code class="language-plaintext highlighter-rouge">Process Control Block</code>)</li>
+      <li>주소 공간 (<code class="language-plaintext highlighter-rouge">Address Space</code>)
         <ul>
-          <li>각각의 프로세스는 CPU에 의해 샐행된 후 …를 생성 (메인 메모리를 효율적으로 사용해야 함)
-            <ul>
-              <li>프로세스 테이블 엔트리 : <code class="language-plaintext highlighter-rouge">PCB</code> (<code class="language-plaintext highlighter-rouge">Process Control Block</code>)</li>
-              <li>주소 공간 (<code class="language-plaintext highlighter-rouge">Address Space</code>)
-                <ul>
-                  <li>코드 세그먼트 (<code class="language-plaintext highlighter-rouge">Code Segment</code>) : 프로그램 소스 코드가 저장</li>
-                  <li>데이터 세그먼트 (<code class="language-plaintext highlighter-rouge">Data Segment</code>) : 전역 변수가 저장</li>
-                  <li>스택 세그먼트 (<code class="language-plaintext highlighter-rouge">Stack Segment</code>) : 함수와 지역변수가 저장</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+          <li>코드 세그먼트 (<code class="language-plaintext highlighter-rouge">Code Segment</code>) : 프로그램 소스 코드가 저장</li>
+          <li>데이터 세그먼트 (<code class="language-plaintext highlighter-rouge">Data Segment</code>) : 전역 변수가 저장</li>
+          <li>스택 세그먼트 (<code class="language-plaintext highlighter-rouge">Stack Segment</code>) : 지역변수와 매개변수가 저장</li>
         </ul>
       </li>
     </ul>
@@ -447,118 +458,8 @@ var y = 'varY'; var z = 'varZ'
 </ul>
 
 <blockquote>
-  <p>함수와 지역변수가 <code class="language-plaintext highlighter-rouge">LIFO</code> (후입선출)의 특성을 가진 스택에서 실행되기에 전역 변수를 미리 지정해 메인 메모리의 공간 절약 가능</p>
+  <p>지역변수와 매개 변수가 후입선출의 방식을 따른 스택에 저장되기에, 전역 변수를 먼저 선언해 메인 메모리의 공간 절약 가능</p>
 </blockquote>
-
-<h3 id="ex-프로세스-관리를-위한-시스템-호출">ex) 프로세스 관리를 위한 시스템 호출</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while (true) {
-  type_prompt();
-  read_command(command, parameters);
-if (fork() != 0){
-    /* Parent Code */
-    waitpid(-1, &amp;status, 0);
-  }
-else {
-    /* Child Code */
-    execve (command, parameters, 0);
-  } 
-}
-</code></pre></div></div>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">brk</code>시스템은 데이터 세그먼트가 끝나는 시점에서 새로운 주소를 명시화해 <code class="language-plaintext highlighter-rouge">malloc</code> 라이브러리는 공간을 동적으로 할당받음</li>
-</ul>
-
-<h3 id="프로세스-상태-process-status--각-단계들에서-상태-전이가-일어나-다음-단계로-넘어감">프로세스 상태 (<code class="language-plaintext highlighter-rouge">Process Status</code>) : 각 단계들에서 상태 전이가 일어나 다음 단계로 넘어감</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">New</code> : 프로그램이 메인 메모리에 할당</li>
-  <li><code class="language-plaintext highlighter-rouge">Ready</code> : 프로세스가 언제든 실행 가능한 상태; 할당된 프로그램이 실행되기 위한 모든 준비를 마친 상태로 대기
-    <ul>
-      <li>n개의 작업이 있을 때, CPU의 프로세서는 스케줄러의 0~(n-1)번, 즉 n개의 작업을 번갈아 처리</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">Running</code> : CPU가 해당 프로세스를 실제로 실행중인 상태</li>
-  <li><code class="language-plaintext highlighter-rouge">Waiting</code>=<code class="language-plaintext highlighter-rouge">Blocked</code> : <code class="language-plaintext highlighter-rouge">Running</code>이 불가능한 상태; 프로세스가 끝나지 않은 시점에 해당되는 I/O 정보가 없어 작업할 수 없음
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Waiting</code>가 끝나면 다시 CPU에 실행되기 위해 <code class="language-plaintext highlighter-rouge">Ready</code>로 돌아가야 함</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">Terminated</code> : 프로세스가 완전히 종료</li>
-</ul>
-
-<p><img src="https://user-images.githubusercontent.com/34755287/70577651-11eb7a00-1bef-11ea-9866-0c659728be9e.png" width="80%" style="margin-left: 2%" /></p>
-
-<ul>
-  <li>I/O 작업으로 인한 상태 변화 : <code class="language-plaintext highlighter-rouge">Running</code> -&gt; <code class="language-plaintext highlighter-rouge">Waiting</code> -&gt; <code class="language-plaintext highlighter-rouge">Ready</code> -&gt; <code class="language-plaintext highlighter-rouge">Running</code></li>
-  <li>시간 초과로 인터럽트에 의한 상태 변화 : <code class="language-plaintext highlighter-rouge">Running</code> -&gt; <code class="language-plaintext highlighter-rouge">Ready</code> -&gt; <code class="language-plaintext highlighter-rouge">Running</code></li>
-</ul>
-
-<h3 id="프로세스-컨트롤-블록-process-control-block--프로세스에-대한-모든-정보를-저장하는-곳">프로세스 컨트롤 블록 (<code class="language-plaintext highlighter-rouge">Process Control Block</code>) : 프로세스에 대한 모든 정보를 저장하는 곳</h3>
-<ul>
-  <li>CPU는 여러 프로세스를 빈번히 전환하면서 수행하기에 각 프로세스의 데이터를 저장해야 작업을 이어서 수행할 수 있음</li>
-  <li>운영체제 네의 프로세스를 관리하는 코드 부분에 저장
-    <ul>
-      <li>프로세스 컨트롤 블록에 데이터를 저장하고 복원하는 시간 역시 다중 작업을 위해 각 프로세스에 할당되는 시간에 포함</li>
-    </ul>
-  </li>
-  <li>프로세스 상태 (<code class="language-plaintext highlighter-rouge">Process Status</code>), 프로그램 카운터 (<code class="language-plaintext highlighter-rouge">Program Counter</code>)와 스택 포인터 (<code class="language-plaintext highlighter-rouge">Stack Pointer</code>), 파일 디스크립터 (<code class="language-plaintext highlighter-rouge">File Descriptors</code>) 등등의 정보를 포함</li>
-</ul>
-
-<p><img src="https://user-images.githubusercontent.com/34755287/70577652-12841080-1bef-11ea-8f1c-5c0e0d94c132.png" width="80%" style="margin-left: 2%" /></p>
-
-<h3 id="프로세스-큐-process-queue--프로세스-순서를-기다리는-큐">프로세스 큐 (<code class="language-plaintext highlighter-rouge">Process Queue</code>) : 프로세스 순서를 기다리는 큐</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Job Queue</code> : 보조 기억 장치의 프로그램이 실행되기 위해 메인 메모리의 할당 순서를 기다리는 큐</li>
-  <li><code class="language-plaintext highlighter-rouge">Ready Queue</code> : CPU 점유 순서를 기다리는 큐</li>
-  <li><code class="language-plaintext highlighter-rouge">Device Queue</code> : I/O를 위한 각 장치의 실행 순서를 기다리는 큐</li>
-</ul>
-
-<p><img src="https://user-images.githubusercontent.com/34755287/53879660-5ccdd500-4052-11e9-972d-11ba3faeb3e3.png" width="80%" style="margin-left: 2%" /></p>
-
-<ul>
-  <li>각 큐의 내부에 저장된 실제 데이터는 각 프로세스의 <code class="language-plaintext highlighter-rouge">PCB</code>에 저장</li>
-</ul>
-
-<h3 id="스케줄러-scheduler--프로세스-순서를-정해-프로세스-큐에-올릴-것을-결정">스케줄러 (<code class="language-plaintext highlighter-rouge">Scheduler</code>) : 프로세스 순서를 정해 프로세스 큐에 올릴 것을 결정</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Ready Queue</code>&gt;<code class="language-plaintext highlighter-rouge">Short-term Scheduler</code> : 어떤 프로세스에 CPU 자원을 할당할지 결정하기에 스케줄링 속도가 빨라야 함</li>
-  <li><code class="language-plaintext highlighter-rouge">Job Queue</code>&gt;<code class="language-plaintext highlighter-rouge">Long-term Scheduler</code> : 프로세스가 <code class="language-plaintext highlighter-rouge">Terminated</code>되어야 큐에 올리기에 스케줄링 속도가 빠르지 않아도 됨
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Long-term Scheduler</code>는 다중 프로그래밍의 정도 (<code class="language-plaintext highlighter-rouge">Degree of Multiprogramming</code>)를 제어함
-        <ul>
-          <li>다중 프로그래밍의 정도 (<code class="language-plaintext highlighter-rouge">Degree of Multiprogramming</code>) : 현재 메모리에 할당된 프로세스의 개수</li>
-        </ul>
-      </li>
-      <li><code class="language-plaintext highlighter-rouge">Long-term Scheduler</code>는 <code class="language-plaintext highlighter-rouge">I/O bound Process</code>,<code class="language-plaintext highlighter-rouge">CPU bound Process</code>를 메인 메모리에 적절히 할당해야 함
-        <ul>
-          <li><code class="language-plaintext highlighter-rouge">I/O bound Process</code>, <code class="language-plaintext highlighter-rouge">CPU bound Process</code> : I/O 작업 (입출력)/ CPU 작업 (계산) 비중이 높은 프로세스</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">Medium-term Scheduler</code> : 운영체제가 실행중에 메인 메모리 내 프로세스 중 보조 저장 장치로 옮길 것을 주기적으로 검사
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Swapping</code> (<code class="language-plaintext highlighter-rouge">Swap-out</code>↔<code class="language-plaintext highlighter-rouge">Swap-in</code>) : <code class="language-plaintext highlighter-rouge">Swap-in</code>으로 다시 할당할 때 이전 공간으로 할당되는 것은 보장되지 않음
-        <ul>
-          <li><code class="language-plaintext highlighter-rouge">Swap-out</code> : 메인 메모리에서 장기적으로 사용하지 않는 프로세스를 보조 기억 장치로 저장</li>
-          <li><code class="language-plaintext highlighter-rouge">Swap-in</code> : 나중에 해당 프로세스가 다시 사용되려 할 때 보조 기억 장치에서 메인 메모리에 다시 할당</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="문맥-전환-context-switching--cpu에서-한-프로세스가-실행-중인-것을-멈추고-다른-프로세스가-실행하는-것">문맥 전환 (<code class="language-plaintext highlighter-rouge">Context Switching</code>) : CPU에서 한 프로세스가 실행 중인 것을 멈추고 다른 프로세스가 실행하는 것</h3>
-<ul>
-  <li>문맥 (<code class="language-plaintext highlighter-rouge">Context</code>) : 프로세스의 흐름. <code class="language-plaintext highlighter-rouge">PCB</code> 안에서 표현</li>
-  <li><code class="language-plaintext highlighter-rouge">CPU Scheduler</code> : CPU가 어느 프로세스를 선택할지 지정</li>
-  <li><code class="language-plaintext highlighter-rouge">Dispatcher</code> : 문맥 전환이 발생하면 <code class="language-plaintext highlighter-rouge">Ready</code>에서 <code class="language-plaintext highlighter-rouge">Running</code>으로 상태 전이
-    <ul>
-      <li>CPU 데이터는 이전 프로세스의 <code class="language-plaintext highlighter-rouge">PCB</code>에 갱신</li>
-      <li>새로 시작되는 프로세스의 <code class="language-plaintext highlighter-rouge">PCB</code>를 CPU로 복원</li>
-      <li><code class="language-plaintext highlighter-rouge">Context Switching Overhead</code> : 문맥 전환이 발생할 때마다 <code class="language-plaintext highlighter-rouge">Dispatch</code>를 매번 수행해야 함</li>
-    </ul>
-  </li>
-</ul>
 
 <h3 id="프로세스의-생성과-종료">프로세스의 생성과 종료</h3>
 <ul>
@@ -581,91 +482,314 @@ else {
 <ul>
   <li>프로세스 트리 (<code class="language-plaintext highlighter-rouge">Process Tree</code>) : 부모 프로세스인 A에서 자식 프로세스인 B, C, D가 파생되어 생성
     <ul>
-      <li>부모 프로세스 : 생성한 프로세스</li>
-      <li>자식 프로세스 : 생성된 프로세스</li>
-      <li>형제 프로세스 : 같은 부모 프로세스를 갖는 자식 프로세스</li>
+      <li>부모 프로세스 : 프로세스를 생성한 프로세스</li>
+      <li>자식 프로세스 : 프로세스로부터 생성된 프로세스</li>
+      <li>형제 프로세스 : 같은 부모 프로세스에서 파생된 자식 프로세스</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="프로세스-간-통신-inter-process-communication--프로세스-사이에-상호-통신하는-규칙에-대한-메커니즘">프로세스 간 통신 (<code class="language-plaintext highlighter-rouge">Inter-Process Communication</code>) : 프로세스 사이에 상호 통신하는 규칙에 대한 메커니즘</h3>
+<h4 id="ex-프로세스-관리를-위한-시스템-호출">ex) 프로세스 관리를 위한 시스템 호출</h4>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while (true) {
+  type_prompt();
+  read_command(command, parameters);
+if (fork() != 0){
+    /* Parent Code */
+    waitpid(-1, &amp;status, 0);
+  }
+else {
+    /* Child Code */
+    execve (command, parameters, 0);
+  } 
+}
+</code></pre></div></div>
 <ul>
-  <li>메시지 패싱 기법 (<code class="language-plaintext highlighter-rouge">Message Passing</code>) : 협력적 프로세스 간 각자의 메시지를 운영 체제에 전달해 통신</li>
-  <li>공유 메모리 기법 (<code class="language-plaintext highlighter-rouge">Shared Memory</code>) : 협력적 프로세스 간 하나의 공유하는 영역을 만들어 상호 통신</li>
+  <li><code class="language-plaintext highlighter-rouge">brk</code>시스템은 데이터 세그먼트가 끝나는 시점에서 새로운 주소를 명시화해 <code class="language-plaintext highlighter-rouge">malloc</code> 라이브러리는 공간을 동적으로 할당받음</li>
 </ul>
 
-<h2 id="쓰레드-thread--프로그램-내부의-흐름">쓰레드 (<code class="language-plaintext highlighter-rouge">Thread</code>) : 프로그램 내부의 흐름</h2>
+<h3 id="프로세스-컨트롤-블록-process-control-block--프로세스에-대한-모든-정보를-저장하는-곳">프로세스 컨트롤 블록 (<code class="language-plaintext highlighter-rouge">Process Control Block</code>) : 프로세스에 대한 모든 정보를 저장하는 곳</h3>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Thread ID</code>, <code class="language-plaintext highlighter-rouge">Program Counter</code>, <code class="language-plaintext highlighter-rouge">Register Set</code> 및 <code class="language-plaintext highlighter-rouge">Stack</code>으로 구성</li>
-  <li>CPU를 구성하는 기본 단위</li>
-  <li>일반적으로 하나의 프로그램은 하나의 쓰레드를 가짐
+  <li>CPU는 여러 프로세스를 빈번히 전환하면서 수행하기에 각 프로세스의 데이터를 저장해야 작업을 이어서 수행할 수 있음</li>
+  <li>운영체제 내 프로세스를 관리하는 코드 부분에 저장
     <ul>
-      <li>여러 쓰레드들이 하나의 프로세스 안에 속하면서 자원을 공유
+      <li>프로세스 컨트롤 블록에 데이터를 저장하고 복원하는 시간 역시 다중 작업을 위해 각 프로세스에 할당되는 시간에 포함</li>
+    </ul>
+  </li>
+  <li>프로세스 상태 (<code class="language-plaintext highlighter-rouge">Process Status</code>), 프로그램 카운터 (<code class="language-plaintext highlighter-rouge">Program Counter</code>), 스택 포인터 (<code class="language-plaintext highlighter-rouge">Stack Pointer</code>), 파일 디스크립터 (<code class="language-plaintext highlighter-rouge">File Descriptors</code>) 등의 정보 포함</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/70577652-12841080-1bef-11ea-8f1c-5c0e0d94c132.png" width="80%" style="margin-left: 2%" /></p>
+
+<h4 id="프로세스-상태-process-status--각-단계들에서-상태-전이가-일어나-다음-단계로-넘어감">프로세스 상태 (<code class="language-plaintext highlighter-rouge">Process Status</code>) : 각 단계들에서 상태 전이가 일어나 다음 단계로 넘어감</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">New</code> : 프로그램이 메인 메모리에 할당된 상태</li>
+  <li><code class="language-plaintext highlighter-rouge">Ready</code> : 프로세스가 언제든 실행 가능한 상태; 할당된 프로그램이 실행되기 위한 모든 준비를 마친 상태로 대기된 상태
+    <ul>
+      <li>n개의 작업이 있을 때, CPU의 프로세서는 스케줄러의 0~(n-1)번, 즉 n개의 작업을 번갈아 처리</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Running</code> : CPU가 해당 프로세스를 실제로 실행중인 상태</li>
+  <li><code class="language-plaintext highlighter-rouge">Waiting</code>=<code class="language-plaintext highlighter-rouge">Blocked</code> : <code class="language-plaintext highlighter-rouge">Running</code>이 불가능한 상태
+    <ul>
+      <li>프로세스가 끝나지 않은 시점에 해당되는 I/O 정보가 없어 작업할 수 없음</li>
+      <li><code class="language-plaintext highlighter-rouge">Waiting</code>가 끝나면 다시 CPU에 실행되기 위해 <code class="language-plaintext highlighter-rouge">Ready</code>로 돌아가야 함</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Terminated</code> : 프로세스가 완전히 종료된 상태</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/70577651-11eb7a00-1bef-11ea-9866-0c659728be9e.png" width="80%" style="margin-left: 2%" /></p>
+
+<blockquote>
+  <ul>
+    <li>I/O 작업으로 인한 상태 변화 : <code class="language-plaintext highlighter-rouge">Running</code> -&gt; <code class="language-plaintext highlighter-rouge">Waiting</code> -&gt; <code class="language-plaintext highlighter-rouge">Ready</code> -&gt; <code class="language-plaintext highlighter-rouge">Running</code></li>
+    <li>시간 초과로 인터럽트에 의한 상태 변화 : <code class="language-plaintext highlighter-rouge">Running</code> -&gt; <code class="language-plaintext highlighter-rouge">Ready</code> -&gt; <code class="language-plaintext highlighter-rouge">Running</code></li>
+  </ul>
+</blockquote>
+
+<h3 id="프로세스-큐-process-queue--커널이-프로세스-스케줄링을-위해-데이터-영역에서-관리하는-큐">프로세스 큐 (<code class="language-plaintext highlighter-rouge">Process Queue</code>) : 커널이 프로세스 스케줄링을 위해 데이터 영역에서 관리하는 큐</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Ready Queue</code> : 프로세스 상태가 <code class="language-plaintext highlighter-rouge">Ready</code>인 프로세스들이 CPU 제어를 기다리는 큐
+    <ul>
+      <li>어떤 CPU 스케줄링 알고리즘을 선택하는지에 따라 CPU 제어 순서가 달라짐</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Job Queue</code> : 보조 기억 장치의 프로그램이 실행되기 위해 메인 메모리의 할당 순서를 기다리는 큐
+    <ul>
+      <li>시스템 내의 모든 프로세스 관리 : <code class="language-plaintext highlighter-rouge">Ready Queue</code>, <code class="language-plaintext highlighter-rouge">Device Queue</code>에 속한 모든 프로세스 포함</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Device Queue</code> : 프로세스 상태가 <code class="language-plaintext highlighter-rouge">Waiting</code>인 프로세스들이 CPU 외의 자원을 기다리는 큐
+    <ul>
+      <li>기다리는 자원들마다 큐가 할당되며, 해당 자원이 사용되면 인터럽트를 발생시키고 <code class="language-plaintext highlighter-rouge">Ready Queue</code>로 이동</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/53879660-5ccdd500-4052-11e9-972d-11ba3faeb3e3.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>각 큐는 프로세스의 프로세스 컨트롤 블록을 가리키는 포인터 방식으로 연결 리스트를 구현</li>
+</ul>
+
+<h4 id="스케줄러-cpu-scheduler--프로세스-순서를-정해-프로세스-큐에-올릴-것을-결정하는-커널의-코드">스케줄러 (<code class="language-plaintext highlighter-rouge">CPU Scheduler</code>) : 프로세스 순서를 정해 프로세스 큐에 올릴 것을 결정하는 커널의 코드</h4>
+<ul>
+  <li>장기 스케줄러 (<code class="language-plaintext highlighter-rouge">Long-term Scheduler</code>) : 생성된 프로세스 중 어떤 것을 <code class="language-plaintext highlighter-rouge">Job Queue</code>에서 <code class="language-plaintext highlighter-rouge">Ready Queue</code>으로 이동시킬지 선택
+    <ul>
+      <li>장기 스케줄러는 현재 메모리에 할당된 프로세스의 개수 (<code class="language-plaintext highlighter-rouge">Degree of multiprogramming</code>)를 제어</li>
+      <li>장기 스케줄러는 <code class="language-plaintext highlighter-rouge">I/O bound Process</code>,<code class="language-plaintext highlighter-rouge">CPU bound Process</code>를 메인 메모리에 적절히 할당해야 함
         <ul>
-          <li>공유 메모리 기법 X : 공유 메모리를 만들지 않아도 됨</li>
-          <li>메시지 패싱 기법 X : 운영 체제를 거치지 않고도 통신 가능
-            <ul>
-              <li>문맥 전환과 프로세스에 메모리와 자원의 할당이 더 효율적</li>
-              <li>멀티 쓰레드가 멀티 프로세스보다 더 효율적인 이유</li>
-            </ul>
-          </li>
+          <li><code class="language-plaintext highlighter-rouge">I/O bound Process</code> : I/O 작업 (입출력) 비중이 높은 프로세스</li>
+          <li><code class="language-plaintext highlighter-rouge">CPU bound Process</code> : CPU 작업 (계산) 비중이 높은 프로세스</li>
         </ul>
       </li>
-      <li>사용자의 입력에 빠른 반응</li>
     </ul>
   </li>
-</ul>
-
-<h3 id="멀티-쓰레드-모델-multi-thread-models---2개-이상의-쓰레드로-구성된-모델">멀티 쓰레드 모델 (<code class="language-plaintext highlighter-rouge">Multi-Thread Models</code>) :  2개 이상의 쓰레드로 구성된 모델</h3>
-<ul>
-  <li>유저 쓰레드 (<code class="language-plaintext highlighter-rouge">User Thread</code>) : 유저 레벨의 쓰레드 라이브러리를 통해 관리되는 쓰레드</li>
-  <li>커널 쓰레드 (<code class="language-plaintext highlighter-rouge">Kernel Thread</code>) :  운영체제가 제공하고 직접 관리하는 쓰레드
+  <li>중기 스케줄러 (<code class="language-plaintext highlighter-rouge">Medium-term Scheduler</code>) : 실행 중인 프로세스 중 보조 저장 장치로 옮길 것을 주기적으로 검사
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">Many-to-One</code> : 한 커널 쓰레드가 여러 유저 쓰레드 처리 (시스템 호출에 의한 블록 :  병목 현상)</li>
-      <li><code class="language-plaintext highlighter-rouge">One-to-One</code> : 유저 쓰레드 한 개당 커널 쓰레드를 대응시켜 처리 (커널 쓰레드의 과도한 생성)</li>
-      <li><code class="language-plaintext highlighter-rouge">Many-to-Many</code> : 여러 유저 쓰레드가 여러 커널 쓰레드 처리 (커널 쓰레드의 수는 유저 쓰레드의 수보다 작거나 같게)</li>
-      <li><code class="language-plaintext highlighter-rouge">Two-Level</code>: 중요한 작업은 <code class="language-plaintext highlighter-rouge">One-to-One</code>으로, 나머지는 <code class="language-plaintext highlighter-rouge">Many-to-One</code>으로 처리</li>
+      <li><code class="language-plaintext highlighter-rouge">Swapping</code> (<code class="language-plaintext highlighter-rouge">Swap-out</code>↔<code class="language-plaintext highlighter-rouge">Swap-in</code>) : <code class="language-plaintext highlighter-rouge">Swap-in</code>할 때 이전 공간으로 재할당되는 것은 보장되지 않음
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">Swap-out</code> : 메인 메모리에서 우선 순위가 은 프로세스를 통째로 보조 기억 장치로 저장</li>
+          <li><code class="language-plaintext highlighter-rouge">Swap-in</code> : 나중에 해당 프로세스가 다시 사용되려 할 때 보조 기억 장치에서 메인 메모리에 다시 할당</li>
+        </ul>
+      </li>
+      <li>중기 스케줄러 또한 현재 메모리에 할당된 프로세스의 개수 (<code class="language-plaintext highlighter-rouge">Degree of multiprogramming</code>)를 제어</li>
+    </ul>
+  </li>
+  <li>단기 스케줄러 (<code class="language-plaintext highlighter-rouge">Short-term Scheduler</code>) : <code class="language-plaintext highlighter-rouge">Ready Queue</code> 내에서 프로세스들 중 어떤 것을 다음에 실행시킬지 선택
+    <ul>
+      <li>CPU 스케줄러라고도 부르며, 시분할 시스템에서 <code class="language-plaintext highlighter-rouge">Time Out</code>이 발생하면 호출</li>
     </ul>
   </li>
 </ul>
 
-<h2 id="동기화-synchronization--프로세스나-쓰레드-사이에-공유하는-데이터나-흐름의-일관성을-유지하는-것">동기화 (<code class="language-plaintext highlighter-rouge">Synchronization</code>) : 프로세스나 쓰레드 사이에 공유하는 데이터나 흐름의 일관성을 유지하는 것</h2>
+<h2 id="문맥-전환-context-switching--cpu가-실행중인-프로세스를-멈추고-다른-프로세스를-실행하는-작업">문맥 전환 (<code class="language-plaintext highlighter-rouge">Context Switching</code>) : CPU가 실행중인 프로세스를 멈추고 다른 프로세스를 실행하는 작업</h2>
 <ul>
-  <li>협력적 프로세스 (<code class="language-plaintext highlighter-rouge">Cooperating Process</code>) : 다른 프로세스에 영향을 받거나 주는 프로세스</li>
-  <li>독립적 프로세스 (<code class="language-plaintext highlighter-rouge">Independent Process</code>) : 다른 프로세스에 영향을 받지 않는 프로세스</li>
+  <li>문맥 (<code class="language-plaintext highlighter-rouge">Context</code>) : 각 프로세스 컨트롤 블록 내에서 표현
+    <ul>
+      <li>하드웨어 문맥 : 프로그램 카운터 정보와 레지스터 정보를 저장</li>
+      <li>프로세스 주소 공간 : 각 프로세스가 갖고 있는 독자적인 주소 공간에 위치</li>
+    </ul>
+  </li>
+  <li>CPU 스케줄러 (<code class="language-plaintext highlighter-rouge">CPU Scheduler</code>) : CPU가 어느 프로세스를 다음에 실행할지 지정</li>
+  <li>디스패쳐 (<code class="language-plaintext highlighter-rouge">Dispatcher</code>) : 문맥 전환이 발생하면 <code class="language-plaintext highlighter-rouge">Ready</code>에서 <code class="language-plaintext highlighter-rouge">Running</code>으로 상태 전이
+    <ul>
+      <li>문맥 전환 오버헤드 (<code class="language-plaintext highlighter-rouge">Context Switching Overhead</code>) : 문맥 전환이 발생할 때마다 디스패쳐를 매번 실행시킴<br /><br /></li>
+    </ul>
+  </li>
 </ul>
 
-<h3 id="임계-영역-문제-critical-region--shared-memory에서-공유하는-데이터들이-변경되는-코드-영역에서-발생">임계 영역 문제 (<code class="language-plaintext highlighter-rouge">Critical Region</code>) : <code class="language-plaintext highlighter-rouge">Shared Memory</code>에서 공유하는 데이터들이 변경되는 코드 영역에서 발생</h3>
-<ul>
-  <li>경쟁 상태 (<code class="language-plaintext highlighter-rouge">Race Condition</code>) : 두 프로세스가 <code class="language-plaintext highlighter-rouge">Critical Region</code>에 동시 접근해 접근 순서나 위치에 따른 결과 차이</li>
-  <li>기아 상태 (<code class="language-plaintext highlighter-rouge">Starving</code>) : 한 프로세스의 우선순위가 높아 나머지 프로세스들이 <code class="language-plaintext highlighter-rouge">Critical Region</code>에 접근하지 못함</li>
-  <li>교착 상태 (<code class="language-plaintext highlighter-rouge">Deadlock</code>) : 2개 이상의 작업이 상대의 작업이 끝나기만을 기다려 다음 단계로 진행하지 못함</li>
-</ul>
+<ol>
+  <li>CPU에서 실행중인 프로세스의 데이터는 해당 프로세스의 프로세스 컨트롤 블록에 갱신</li>
+  <li>새로 시작될 프로세스의 프로세스 컨트롤 블록를 CPU로 복원</li>
+  <li>캐시와 <code class="language-plaintext highlighter-rouge">Translation Lookup Buffer</code>를 재설정</li>
+</ol>
 
-<h2 id="cpu-스케줄링-cpu-scheduling--하나의-프로세스-작업이-끝난-뒤-다음-프로세스를-선택하는-행위">CPU 스케줄링 (<code class="language-plaintext highlighter-rouge">CPU Scheduling</code>) : 하나의 프로세스 작업이 끝난 뒤 다음 프로세스를 선택하는 행위</h2>
+<blockquote>
+  <p>시스템 호출로 인한 인터럽트 발생 시 : 실행중인 프로세스의 문맥을 프로세스 컨트롤 블록에 갱신하나, 문맥 전환은 일어나지 않음</p>
+</blockquote>
+
+<h3 id="cpu-스케줄링-cpu-scheduling--cpu-스케줄러에서-다음에-실행할-프로세스를-선택하는-작업">CPU 스케줄링 (<code class="language-plaintext highlighter-rouge">CPU Scheduling</code>) : CPU 스케줄러에서 다음에 실행할 프로세스를 선택하는 작업</h3>
 <ul>
   <li>선점 (<code class="language-plaintext highlighter-rouge">Preemptive</code>) : 한 프로세스가 CPU를 점유하는 동안, 다른 프로세스가 CPU를 강제로 점유할 수 있음</li>
-  <li>비선점 (<code class="language-plaintext highlighter-rouge">Non-Preemptive</code>) : 한 프로세스가 CPU를 점유하는 동안, 다른 프로세스가 CPU를 점유할 수 없음 (예외 : I/O 발생)</li>
+  <li>비선점 (<code class="language-plaintext highlighter-rouge">Non-Preemptive</code>) : 한 프로세스가 CPU를 점유하는 동안, 다른 프로세스가 CPU를 점유할 수 없음 (예외 : <code class="language-plaintext highlighter-rouge">I/O</code> 발생)</li>
 </ul>
 
-<h3 id="스케줄링-척도-scheduling-criteria--스케줄링의-효율을-분석하는-기준">스케줄링 척도 (<code class="language-plaintext highlighter-rouge">Scheduling Criteria</code>) : 스케줄링의 효율을 분석하는 기준</h3>
+<h4 id="cpu-스케줄링-척도-cpu-scheduling-criteria--cpu-스케줄링의-효율을-분석하는-기준">CPU 스케줄링 척도 (<code class="language-plaintext highlighter-rouge">CPU Scheduling Criteria</code>) : CPU 스케줄링의 효율을 분석하는 기준</h4>
 <ul>
-  <li>CPU 이용률 (<code class="language-plaintext highlighter-rouge">CPU Utilization</code>) : CPU가 수행되는 비율</li>
-  <li>처리량 (<code class="language-plaintext highlighter-rouge">Throughput</code>) : 단위 시간당 CPU가 처리하는 작업의 수</li>
-  <li>반환 시간 (<code class="language-plaintext highlighter-rouge">Turnaround time</code>) : 프로세스가 처음 시작된 시간부터 모든 작업을 끝내고 종료할 때까지 걸린 시간</li>
-  <li>대기 시간 (<code class="language-plaintext highlighter-rouge">Waiting time</code>) : CPU를 점유하기 위해 <code class="language-plaintext highlighter-rouge">Ready Queue</code>에서 기다린 시간</li>
-  <li>응답 시간 (<code class="language-plaintext highlighter-rouge">Response time</code>) : 대화형 시스템에서의 입력에 대한 반응 시간</li>
+  <li>CPU 점유율 (<code class="language-plaintext highlighter-rouge">CPU Utilization</code>) : 현재 CPU가 작업을 수행하는 비율, 높을수록 좋음</li>
+  <li>처리율 (<code class="language-plaintext highlighter-rouge">Throughput</code>) : 단위 시간 당 완료되는 프로세스의 개수, 많을 수록 좋음</li>
+  <li>소요 시간 (<code class="language-plaintext highlighter-rouge">Turnaround Time</code>) : 프로세스가 생성된 시간부터 종료되는 데까지 걸린 시간. 짧을수록 좋음</li>
+  <li>대기 시간 (<code class="language-plaintext highlighter-rouge">Waiting Time</code>) : CPU 제어를 위해 <code class="language-plaintext highlighter-rouge">Ready Queue</code>에서”만” 대기한 시간, 짧을수록 좋음</li>
 </ul>
 
-<h3 id="cpu-스케줄링-알고리즘">CPU 스케줄링 알고리즘</h3>
+<h4 id="cpu-스케줄링-알고리즘-cpu-scheduling-algorithm">CPU 스케줄링 알고리즘 (<code class="language-plaintext highlighter-rouge">CPU Scheduling Algorithm</code>)</h4>
 <ul>
-  <li>선입선출 (<code class="language-plaintext highlighter-rouge">First-Come, First-Served</code>) : 먼저 온 프로세스를 먼저 수행</li>
-  <li>최단작업 (<code class="language-plaintext highlighter-rouge">Shortest-Job-First</code>) : 짧게 수행되는 프로세스를 먼저 수행</li>
-  <li>우선순위 (<code class="language-plaintext highlighter-rouge">Priority</code>) : 우선순위가 높은 프로세스를 먼저 수행</li>
-  <li>라운드 로빈 (<code class="language-plaintext highlighter-rouge">Round-Robin</code>) : 원 모양으로 모든 프로세스를 돌아가면서 수행</li>
-  <li>멀티레벨 큐 (<code class="language-plaintext highlighter-rouge">Multilevel Queue</code>) :</li>
-  <li>멀티레벨 피드백 큐 (<code class="language-plaintext highlighter-rouge">Multilevel Feedback Queue</code>) :</li>
+  <li>선입선출 (<code class="language-plaintext highlighter-rouge">First-Come, First-Served</code>) 스케줄링 : 가장 먼저 작업을 요청한 프로세스를 먼저 수행
+    <ul>
+      <li>비선점 스케줄링 : 큐를 이용해 구현 가능</li>
+    </ul>
+  </li>
+  <li>최단작업 (<code class="language-plaintext highlighter-rouge">Shortest-Job-First</code>) 스케줄링 : 시간이 가장 짧게 수행되는 프로세스를 먼저 수행
+    <ul>
+      <li></li>
+    </ul>
+  </li>
+  <li>우선순위 (<code class="language-plaintext highlighter-rouge">Priority</code>) 스케줄링 : 우선순위가 가장 높은 프로세스를 먼저 수행</li>
+  <li>라운드 로빈 (<code class="language-plaintext highlighter-rouge">Round-Robin</code>) 스케줄링 : 원 모양으로 모든 프로세스를 돌아가면서 수행</li>
+  <li>멀티레벨 큐 (<code class="language-plaintext highlighter-rouge">Multilevel Queue</code>) 스케줄링 :</li>
+  <li>멀티레벨 피드백 큐 (<code class="language-plaintext highlighter-rouge">Multilevel Feedback Queue</code>) 스케줄링 :</li>
+</ul>
+
+<h2 id="쓰레드-thread--프로세스-내부의-흐름">쓰레드 (<code class="language-plaintext highlighter-rouge">Thread</code>) : 프로세스 내부의 흐름</h2>
+<ul>
+  <li>CPU를 구성하는 기본 단위로, 일반적으로 하나의 프로세스은 하나의 쓰레드가 존재</li>
+  <li>하나의 쓰레드는 고유한 <code class="language-plaintext highlighter-rouge">Thread ID</code>, <code class="language-plaintext highlighter-rouge">Program Counter</code>, <code class="language-plaintext highlighter-rouge">Register Set</code> 및 <code class="language-plaintext highlighter-rouge">Stack</code>을 가짐</li>
+</ul>
+
+<h3 id="다중-쓰레드-multi-threads---하나의-프로세스에-쓰레드가-2개-이상-존재">다중 쓰레드 (<code class="language-plaintext highlighter-rouge">Multi-Threads</code>) :  하나의 프로세스에 쓰레드가 2개 이상 존재</h3>
+<ul>
+  <li>한 프로세스에서 여러 개의 쓰레드가 빠른 시간 간격으로 스위칭되어 여러 쓰레드가 동시에 실행되는 것처럼 보임</li>
+  <li>여러 쓰레드들이 하나의 프로세스 안에 속하면서 자원을 공유함
+    <ul>
+      <li>메시지 패싱 X : 운영 체제를 거치지 않고도 통신 가능
+        <ul>
+          <li>멀티 쓰레드가 멀티 프로세스보다 효율적인 이유 : 문맥 전환 시간이 짧고, 메모리와 자원의 할당이 더 효율적</li>
+        </ul>
+      </li>
+      <li>공유 메모리 X : 공유 메모리를 만들지 않아도 됨</li>
+    </ul>
+  </li>
+  <li>운영체제가 다중 쓰레드를 지원하는 경우 : 운영체제에서의 문맥 전환이 프로세스가 아닌 쓰레드 단위로 이루어짐
+    <ul>
+      <li>하나의 프로세스 안에서 여러 쓰레드가 수행되다가 다른 프로세스로 넘어가 그 프로세스의 쓰레드를 수행함</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="다중-쓰레드-모델-multi-threads-models---2개-이상의-쓰레드로-구성된-모델">다중 쓰레드 모델 (<code class="language-plaintext highlighter-rouge">Multi-Threads Models</code>) :  2개 이상의 쓰레드로 구성된 모델</h3>
+<blockquote>
+  <ul>
+    <li>유저 쓰레드 (<code class="language-plaintext highlighter-rouge">User Thread</code>) : 유저 레벨의 쓰레드 라이브러리를 통해 관리되는 쓰레드</li>
+    <li>커널 쓰레드 (<code class="language-plaintext highlighter-rouge">Kernel Thread</code>) :  운영체제가 제공하고 직접 관리하는 쓰레드</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Many-to-One</code> 모델 : 한 커널 쓰레드가 여러 유저 쓰레드 처리 (시스템 호출에 의한 블록 :  병목 현상)</li>
+  <li><code class="language-plaintext highlighter-rouge">One-to-One</code> 모델 : 유저 쓰레드 한 개당 커널 쓰레드를 대응시켜 처리 (커널 쓰레드의 과도한 생성)</li>
+  <li><code class="language-plaintext highlighter-rouge">Many-to-Many</code> 모델 : 여러 유저 쓰레드가 여러 커널 쓰레드 처리 (커널 쓰레드의 수는 유저 쓰레드의 수보다 작거나 같게)</li>
+  <li><code class="language-plaintext highlighter-rouge">Two-Level</code> 모델 : 중요한 작업은 <code class="language-plaintext highlighter-rouge">One-to-One</code>으로, 나머지는 <code class="language-plaintext highlighter-rouge">Many-to-One</code>으로 처리</li>
+</ul>
+
+<h2 id="프로세스-간-통신-inter-process-communication--협력-프로세스-간-상호-통신-규칙에-대한-메커니즘">프로세스 간 통신 (<code class="language-plaintext highlighter-rouge">Inter-Process Communication</code>) : 협력 프로세스 간 상호 통신 규칙에 대한 메커니즘</h2>
+<blockquote>
+  <ul>
+    <li>독립 프로세스 (<code class="language-plaintext highlighter-rouge">Independent Process</code>) : (단일 처리 시스템에서) 다른 프로세스에 독립적으로 실행되는 동기적 프로세스</li>
+    <li>협력 프로세스 (<code class="language-plaintext highlighter-rouge">Cooperating Process</code>) : 실행중인 다른 프로세스와의 상호 작용을 통해 수행되는 비동기적 프로세스</li>
+  </ul>
+</blockquote>
+
+<h3 id="공유-메모리-shared-memory--협력-프로세스-간-하나의-공유-메모리-영역을-만들어-상호-통신">공유 메모리 (<code class="language-plaintext highlighter-rouge">Shared Memory</code>) : 협력 프로세스 간 하나의 공유 메모리 영역을 만들어 상호 통신</h3>
+<ul>
+  <li>공유 메모리 세그먼트 : 공유 메모리 영역은 공유 메모리 세그먼트를 생성하는 프로세스의 주소 공간에 위치</li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li>장점 : 커널 의존성이 낮아 속도가 빠르고, 유저 레벨에서의 IPC가 가능해 자유로운 통신이 가능</li>
+    <li>단점 : 자원과 데이터를 공유하기에 동기화 문제가 발생</li>
+  </ul>
+</blockquote>
+
+<h3 id="메시지-패싱-message-passing--협력-프로세스-간-각자의-메시지를-운영-체제에-전달해-통신">메시지 패싱 (<code class="language-plaintext highlighter-rouge">Message Passing</code>) : 협력 프로세스 간 각자의 메시지를 운영 체제에 전달해 통신</h3>
+<blockquote>
+  <ul>
+    <li>장점 : 별도의 구축 없이 커널만을 이용하기에 비교적 구현이 쉬움</li>
+    <li>단점 : 커널을 이용할 때마다, 시스템 호출에 따른 문맥 전환 매번 발생 (문맥 복사 2번 수행, 문맥 전환 오버헤드 발생)</li>
+  </ul>
+</blockquote>
+
+<h2 id="임계-영역-문제-critical-region--shared-memory에서-공유하는-데이터들이-변경되는-코드-영역에서-발생">임계 영역 문제 (<code class="language-plaintext highlighter-rouge">Critical Region</code>) : <code class="language-plaintext highlighter-rouge">Shared Memory</code>에서 공유하는 데이터들이 변경되는 코드 영역에서 발생</h2>
+<ul>
+  <li>경쟁 상태 (<code class="language-plaintext highlighter-rouge">Race Condition</code>) : 두 프로세스가 <code class="language-plaintext highlighter-rouge">Critical Region</code>에 동시 접근해 접근 순서나 위치에 따른 결과 차이</li>
+</ul>
+
+<h3 id="임계-영역-문제를-해결하기-위해-만족해야-하는-조건">임계 영역 문제를 해결하기 위해 만족해야 하는 조건</h3>
+<ul>
+  <li>상호 배제 (<code class="language-plaintext highlighter-rouge">Mutual Exclusion</code>) : 한 프로세스가 <code class="language-plaintext highlighter-rouge">Critical Region</code> 내에 있으면 다른 프로세스 접근 금지</li>
+  <li>유한 대기 (<code class="language-plaintext highlighter-rouge">Bounded Waiting</code>) : 이미 <code class="language-plaintext highlighter-rouge">Critical Region</code>에 들어간 프로세스가 다시 접근하려는 것을 제한</li>
+  <li>진행 (<code class="language-plaintext highlighter-rouge">Progress</code>) : <code class="language-plaintext highlighter-rouge">Critical Region</code>에 프로세스가 없을 때 접근할 프로세스를 유한 시간 내에 적절히 결정</li>
+</ul>
+
+<h2 id="동기화-synchronization--여러-프로세스나-쓰레드-간-공유하는-데이터나-흐름의-일관성을-유지하는-것">동기화 (<code class="language-plaintext highlighter-rouge">Synchronization</code>) : 여러 프로세스나 쓰레드 간 공유하는 데이터나 흐름의 일관성을 유지하는 것</h2>
+
+<h3 id="세마포-semaphore--두가지-세마포-동작으로-이루어진-동기화-도구-소프트웨어">세마포 (<code class="language-plaintext highlighter-rouge">Semaphore</code>) : 두가지 세마포 동작으로 이루어진 동기화 도구 소프트웨어</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">P</code> (<code class="language-plaintext highlighter-rouge">acquire()</code>로 시스템 호출) :</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">V</code> (<code class="language-plaintext highlighter-rouge">release()</code>로 시스템 호출) :</p>
+  </li>
+  <li>기아 상태 (<code class="language-plaintext highlighter-rouge">Starving</code>) : 한 프로세스의 우선순위가 높아 나머지 프로세스들이 <code class="language-plaintext highlighter-rouge">Critical Region</code>에 접근하지 못함</li>
+  <li>
+    <p>교착 상태 (<code class="language-plaintext highlighter-rouge">Deadlock</code>) : 2개 이상의 작업이 상대의 작업이 끝나기만을 기다려 다음 단계로 진행하지 못함</p>
+  </li>
+  <li>
+    <p>뮤텍스 : 한 프로세스가 <code class="language-plaintext highlighter-rouge">Critical Region</code> 내에 있으면 다른 프로세스 접근 금지</p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Mutual Locks</code>
+    <ul>
+      <li>잠금 : 한 프로세스가 <code class="language-plaintext highlighter-rouge">Critical Region</code>을 점유한 후에 다른 프로세스가 접근할 수 없도록 잠금</li>
+      <li>인터럽트 봉쇄 : 한 프로세스가 <code class="language-plaintext highlighter-rouge">Critical Region</code>을 점유한 뒤에는 모든 인터럽트 중단</li>
+      <li>엄격한 교대 : 두 프로세스가 하나의 <code class="language-plaintext highlighter-rouge">Critical Region</code>을 사용할 때, 교대로 한 번씩만 접근하도록 함
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">Mutual Locks</code>에서의 <code class="language-plaintext highlighter-rouge">Busy Waiting</code> : <code class="language-plaintext highlighter-rouge">Critical Region</code> 밖에 대기하는 프로세스가 지속적인 접근 시도
+            <ul>
+              <li>무한 루프를 돌며 CPU 시간을 낭비 (<code class="language-plaintext highlighter-rouge">Spin Lock</code>)</li>
+              <li>대기 시간이 매우 짧은 경우 : 제한적으로 사용</li>
+            </ul>
+          </li>
+          <li>단일 변수, 2개의 프로세스에 대해서만 동기화 가능</li>
+        </ul>
+      </li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">Bounded Waiting</code>으로 인한 기아, <code class="language-plaintext highlighter-rouge">Progress</code>으로 인한 데드락 해결 못함</p>
+      </li>
+      <li>인터럽트 비활성화 (<code class="language-plaintext highlighter-rouge">Disabling Interrupts</code>) : 한 프로세스가 <code class="language-plaintext highlighter-rouge">Critical Region</code>을 점유하는 동안
+        <ul>
+          <li>커널 입장에서는 변수나 리스트를 인터럽트의 방해 없이 지속적으로 갱신할 수 있기에 편리</li>
+          <li>인터럽트를 비활성화해 운영체제의 권한을 사용자에 내주는 것은 위험함</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Lock variables</code> : 프로세스가 <code class="language-plaintext highlighter-rouge">Critical Region</code>에 접근을 시도할 때 <code class="language-plaintext highlighter-rouge">Lock variables</code> 확인
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">Lock variables</code>가 0 : 프로세스는 <code class="language-plaintext highlighter-rouge">Lock variables</code>을 1로 변경하고 <code class="language-plaintext highlighter-rouge">Critical Region</code>에 진입</li>
+          <li><code class="language-plaintext highlighter-rouge">Lock variables</code>가 1 : <code class="language-plaintext highlighter-rouge">Lock variables</code>가 0이 될 때까지 대기</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Backend" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Git] 자주 쓰는 linux 기본 명령어</title><link href="http://localhost:4000/git/git3/" rel="alternate" type="text/html" title="[Git] 자주 쓰는 linux 기본 명령어" /><published>2022-10-06T00:00:00+09:00</published><updated>2022-10-08T00:00:00+09:00</updated><id>http://localhost:4000/git/git3</id><content type="html" xml:base="http://localhost:4000/git/git3/"><![CDATA[<p class="notice--info"><strong>이 항목은 macOS 기반으로 작성되었습니다.</strong><br />&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.</p>
 
 <p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
