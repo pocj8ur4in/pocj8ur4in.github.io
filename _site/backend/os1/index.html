@@ -334,7 +334,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          9 분 소요
+          11 분 소요
         
       </span>
     
@@ -349,7 +349,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#운영체제-operation-system--사용자가-컴퓨터에서-실행한-프로그램을-관리하고-제어">운영체제 (Operation System) : 사용자가 컴퓨터에서 실행한 프로그램을 관리하고 제어</a><ul><li><a href="#부팅-booting--컴퓨터를-시작할-때-자기-자신을-구동시킬-프로그램을-스스로-불러내는-동작">부팅 (Booting) : 컴퓨터를 시작할 때 자기 자신을 구동시킬 프로그램을 스스로 불러내는 동작</a></li></ul></li><li><a href="#운영체제의-동작-원리">운영체제의 동작 원리</a><ul><li><a href="#일괄-처리-시스템-batch-processing-system--프로그램-수행-과정의-자동화">일괄 처리 시스템 (Batch Processing System) : 프로그램 수행 과정의 자동화</a></li><li><a href="#시분할-시스템-time-sharing-system--cpu가-프로그램을-수행하는-시간을-제한">시분할 시스템 (Time-sharing System) : CPU가 프로그램을 수행하는 시간을 제한</a></li><li><a href="#다중-프로그래밍-시스템-multiprogramming-system--메모리에-여러-응용-프로그램을-적재시켜-idle-상태-최소화">다중 프로그래밍 시스템 (Multiprogramming System) : 메모리에 여러 응용 프로그램을 적재시켜 idle 상태 최소화</a></li><li><a href="#인터럽트-기반-시스템-interrupt-based-system--인터럽트-발생-시-isr에-맞는-처리-수행">인터럽트 기반 시스템 (Interrupt-based System) : 인터럽트 발생 시 ISR에 맞는 처리 수행</a></li><li><a href="#이중-모드-dual-mode-execution--유저-user-모드와-커널-kernel-모드를-나눔">이중 모드 (Dual Mode Execution) : 유저 (User) 모드와 커널 (Kernel) 모드를 나눔</a><ul><li><a href="#하드웨어-보호-hw-protection--잘못된-명령이나-접근으로부터-보호하기-위해-운영체제에서-내부-인터럽트를-발생">하드웨어 보호 (H/W Protection) : 잘못된 명령이나 접근으로부터 보호하기 위해 운영체제에서 내부 인터럽트를 발생</a><ul><li><a href="#입출력-장치-보호-io-protection--in-out과-같은-입출력-명령을-특권-명령으로-지정해-운영체제를-통해-수행">입출력 장치 보호 (I/O Protection) : in, out과 같은 입출력 명령을 특권 명령으로 지정해 운영체제를 통해 수행</a></li><li><a href="#메모리-보호-memory-protection--cpu와-메인-메모리-간-주소-버스에-mmu-memory-management-unit를-설치">메모리 보호 (Memory Protection) : CPU와 메인 메모리 간 주소 버스에 MMU (Memory Management Unit)를 설치</a></li><li><a href="#cpu-보호-cpu-protection--타이머-timer를-두어-일정-시간이-지나면-타이머-인터럽트를-발생시킴">CPU 보호 (CPU Protection) : 타이머 (Timer)를 두어 일정 시간이 지나면 타이머 인터럽트를 발생시킴</a></li></ul></li></ul></li></ul></li><li><a href="#프로세스-process--실제-메인-메모리에-할당되어-실행-중인-프로그램">프로세스 (Process) : 실제 메인 메모리에 할당되어 실행 중인 프로그램</a><ul><li><a href="#프로세스의-생성과-종료">프로세스의 생성과 종료</a><ul><li><a href="#ex-프로세스-관리를-위한-시스템-호출">ex) 프로세스 관리를 위한 시스템 호출</a></li></ul></li><li><a href="#프로세스-컨트롤-블록-pcb--process-control-block--프로세스에-대한-모든-정보를-저장하는-곳">프로세스 컨트롤 블록 (PCB = Process Control Block) : 프로세스에 대한 모든 정보를 저장하는 곳</a><ul><li><a href="#프로세스-상태-process-status--각-단계들에서-상태-전이가-일어나-다음-단계로-넘어감">프로세스 상태 (Process Status) : 각 단계들에서 상태 전이가 일어나 다음 단계로 넘어감</a></li></ul></li><li><a href="#프로세스-큐-process-queue--커널이-프로세스-스케줄링을-위해-데이터-영역에서-관리하는-큐">프로세스 큐 (Process Queue) : 커널이 프로세스 스케줄링을 위해 데이터 영역에서 관리하는 큐</a><ul><li><a href="#스케줄러-cpu-scheduler--프로세스-순서를-정해-프로세스-큐에-올릴-것을-결정하는-커널의-코드">스케줄러 (CPU Scheduler) : 프로세스 순서를 정해 프로세스 큐에 올릴 것을 결정하는 커널의 코드</a></li></ul></li></ul></li><li><a href="#문맥-전환-context-switching--cpu가-실행중인-프로세스를-멈추고-다른-프로세스를-실행하는-작업">문맥 전환 (Context Switching) : CPU가 실행중인 프로세스를 멈추고 다른 프로세스를 실행하는 작업</a></li><li><a href="#cpu-스케줄링-cpu-scheduling--cpu-스케줄러에서-다음에-실행할-프로세스를-선택하는-작업">CPU 스케줄링 (CPU Scheduling) : CPU 스케줄러에서 다음에 실행할 프로세스를 선택하는 작업</a><ul><li><a href="#cpu-스케줄링-척도-cpu-scheduling-criteria--cpu-스케줄링의-효율을-분석하는-기준">CPU 스케줄링 척도 (CPU Scheduling Criteria) : CPU 스케줄링의 효율을 분석하는 기준</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#운영체제-operation-system--사용자가-컴퓨터에서-실행한-프로그램을-관리하고-제어">운영체제 (Operation System) : 사용자가 컴퓨터에서 실행한 프로그램을 관리하고 제어</a><ul><li><a href="#부팅-booting--컴퓨터를-시작할-때-자기-자신을-구동시킬-프로그램을-스스로-불러내는-동작">부팅 (Booting) : 컴퓨터를 시작할 때 자기 자신을 구동시킬 프로그램을 스스로 불러내는 동작</a></li><li><a href="#일괄-처리-시스템-batch-processing-system--프로그램-수행-과정의-자동화">일괄 처리 시스템 (Batch Processing System) : 프로그램 수행 과정의 자동화</a></li><li><a href="#시분할-시스템-time-sharing-system--cpu가-프로그램을-수행하는-시간을-제한">시분할 시스템 (Time-sharing System) : CPU가 프로그램을 수행하는 시간을 제한</a></li><li><a href="#다중-프로그래밍-시스템-multiprogramming-system--메모리에-여러-응용-프로그램을-적재시켜-idle-상태-최소화">다중 프로그래밍 시스템 (Multiprogramming System) : 메모리에 여러 응용 프로그램을 적재시켜 idle 상태 최소화</a></li><li><a href="#인터럽트-기반-시스템-interrupt-based-system--인터럽트-발생-시-isr에-맞는-처리-수행">인터럽트 기반 시스템 (Interrupt-based System) : 인터럽트 발생 시 ISR에 맞는 처리 수행</a></li><li><a href="#이중-모드-dual-mode-execution--유저-user-모드와-커널-kernel-모드를-나눔">이중 모드 (Dual Mode Execution) : 유저 (User) 모드와 커널 (Kernel) 모드를 나눔</a><ul><li><a href="#하드웨어-보호-hw-protection--잘못된-명령이나-접근으로부터-보호하기-위해-운영체제에서-내부-인터럽트를-발생">하드웨어 보호 (H/W Protection) : 잘못된 명령이나 접근으로부터 보호하기 위해 운영체제에서 내부 인터럽트를 발생</a><ul><li><a href="#입출력-장치-보호-io-protection--in-out과-같은-입출력-명령을-특권-명령으로-지정해-운영체제를-통해-수행">입출력 장치 보호 (I/O Protection) : in, out과 같은 입출력 명령을 특권 명령으로 지정해 운영체제를 통해 수행</a></li><li><a href="#메모리-보호-memory-protection--cpu와-메인-메모리-간-주소-버스에-mmu-memory-management-unit를-설치">메모리 보호 (Memory Protection) : CPU와 메인 메모리 간 주소 버스에 MMU (Memory Management Unit)를 설치</a></li><li><a href="#cpu-보호-cpu-protection--타이머-timer를-두어-일정-시간이-지나면-타이머-인터럽트를-발생시킴">CPU 보호 (CPU Protection) : 타이머 (Timer)를 두어 일정 시간이 지나면 타이머 인터럽트를 발생시킴</a></li></ul></li></ul></li></ul></li><li><a href="#프로세스-process--실제-메인-메모리에-할당되어-실행-중인-프로그램">프로세스 (Process) : 실제 메인 메모리에 할당되어 실행 중인 프로그램</a><ul><li><a href="#프로세스의-생성과-종료-creation-and-destruction-of-process">프로세스의 생성과 종료 (Creation and Destruction of Process)</a></li><li><a href="#프로세스-컨트롤-블록-process-control-block--프로세스에-대한-모든-정보를-저장하는-곳">프로세스 컨트롤 블록 (Process Control Block) : 프로세스에 대한 모든 정보를 저장하는 곳</a><ul><li><a href="#프로세스-상태-process-status--각-단계들에서-상태-전이가-일어나-다음-단계로-넘어감">프로세스 상태 (Process Status) : 각 단계들에서 상태 전이가 일어나 다음 단계로 넘어감</a></li></ul></li><li><a href="#프로세스-큐-process-queue--커널이-프로세스-스케줄링을-위해-데이터-영역에서-관리하는-큐">프로세스 큐 (Process Queue) : 커널이 프로세스 스케줄링을 위해 데이터 영역에서 관리하는 큐</a><ul><li><a href="#스케줄러-cpu-scheduler--프로세스-순서를-정해-프로세스-큐에-올릴-것을-결정하는-커널의-코드">스케줄러 (CPU Scheduler) : 프로세스 순서를 정해 프로세스 큐에 올릴 것을 결정하는 커널의 코드</a><ul><li><a href="#문맥-전환-context-switching--cpu가-실행중인-프로세스를-멈추고-다른-프로세스를-실행하는-작업">문맥 전환 (Context Switching) : CPU가 실행중인 프로세스를 멈추고 다른 프로세스를 실행하는 작업</a></li></ul></li></ul></li></ul></li><li><a href="#cpu-스케줄링-cpu-scheduling--cpu-스케줄러에서-어느-프로세스를-다음에-실행할지-지정하는-작업">CPU 스케줄링 (CPU Scheduling) : CPU 스케줄러에서 어느 프로세스를 다음에 실행할지 지정하는 작업</a><ul><li><a href="#cpu-스케줄링-척도-cpu-scheduling-criteria--cpu-스케줄링의-효율을-분석하는-기준">CPU 스케줄링 척도 (CPU Scheduling Criteria) : CPU 스케줄링의 효율을 분석하는 기준</a></li><li><a href="#선입선출-first-come-first-served-스케줄링--가장-먼저-작업을-요청한-프로세스를-먼저-수행">선입선출 (First-Come, First-Served) 스케줄링 : 가장 먼저 작업을 요청한 프로세스를 먼저 수행</a></li><li><a href="#최단작업-shortest-job-first-스케줄링--시간이-가장-짧게-수행되는-프로세스를-먼저-수행">최단작업 (Shortest-Job-First) 스케줄링 : 시간이 가장 짧게 수행되는 프로세스를 먼저 수행</a></li><li><a href="#우선순위-priority-스케줄링--우선순위가-가장-높은-프로세스를-먼저-수행">우선순위 (Priority) 스케줄링 : 우선순위가 가장 높은 프로세스를 먼저 수행</a></li><li><a href="#라운드-로빈-round-robin-스케줄링--원-모양으로-모든-프로세스를-돌아가면서-수행">라운드 로빈 (Round-Robin) 스케줄링 : 원 모양으로 모든 프로세스를 돌아가면서 수행</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -438,8 +438,6 @@
     </ul>
   </li>
 </ul>
-
-<h2 id="운영체제의-동작-원리">운영체제의 동작 원리</h2>
 
 <h3 id="일괄-처리-시스템-batch-processing-system--프로그램-수행-과정의-자동화">일괄 처리 시스템 (<code class="language-plaintext highlighter-rouge">Batch Processing System</code>) : 프로그램 수행 과정의 자동화</h3>
 <ul>
@@ -579,7 +577,7 @@
   <p>지역변수와 매개 변수가 후입선출의 방식을 따른 스택에 저장되기에, 전역 변수를 먼저 선언해 메인 메모리의 공간 절약 가능</p>
 </blockquote>
 
-<h3 id="프로세스의-생성과-종료">프로세스의 생성과 종료</h3>
+<h3 id="프로세스의-생성과-종료-creation-and-destruction-of-process">프로세스의 생성과 종료 (<code class="language-plaintext highlighter-rouge">Creation and Destruction of Process</code>)</h3>
 <ul>
   <li>최초의 프로세스인 <code class="language-plaintext highlighter-rouge">Init</code>의 생성은 부팅된 운영체제가 처음 수행하는 작업 중 하나</li>
   <li>생성된 프로세스가 다른 프로세스를 생성하는 과정을 반복
@@ -607,26 +605,7 @@
   </li>
 </ul>
 
-<h4 id="ex-프로세스-관리를-위한-시스템-호출">ex) 프로세스 관리를 위한 시스템 호출</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while (true) {
-  type_prompt();
-  read_command(command, parameters);
-if (fork() != 0){
-    /* Parent Code */
-    waitpid(-1, &amp;status, 0);
-  }
-else {
-    /* Child Code */
-    execve (command, parameters, 0);
-  } 
-}
-</code></pre></div></div>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">brk</code>시스템은 데이터 세그먼트가 끝나는 시점에서 새로운 주소를 명시화해 <code class="language-plaintext highlighter-rouge">malloc</code> 라이브러리는 공간을 동적으로 할당받음</li>
-</ul>
-
-<h3 id="프로세스-컨트롤-블록-pcb--process-control-block--프로세스에-대한-모든-정보를-저장하는-곳">프로세스 컨트롤 블록 (<code class="language-plaintext highlighter-rouge">PCB</code> = <code class="language-plaintext highlighter-rouge">Process Control Block</code>) : 프로세스에 대한 모든 정보를 저장하는 곳</h3>
+<h3 id="프로세스-컨트롤-블록-process-control-block--프로세스에-대한-모든-정보를-저장하는-곳">프로세스 컨트롤 블록 (<code class="language-plaintext highlighter-rouge">Process Control Block</code>) : 프로세스에 대한 모든 정보를 저장하는 곳</h3>
 <ul>
   <li>CPU는 여러 프로세스를 빈번히 전환하면서 수행하기에 각 프로세스의 데이터를 저장해야 작업을 이어서 수행할 수 있음</li>
   <li>운영체제 내에서 프로세스를 관리하는 코드 부분에 저장
@@ -722,7 +701,7 @@ else {
   </li>
 </ul>
 
-<h2 id="문맥-전환-context-switching--cpu가-실행중인-프로세스를-멈추고-다른-프로세스를-실행하는-작업">문맥 전환 (<code class="language-plaintext highlighter-rouge">Context Switching</code>) : CPU가 실행중인 프로세스를 멈추고 다른 프로세스를 실행하는 작업</h2>
+<h5 id="문맥-전환-context-switching--cpu가-실행중인-프로세스를-멈추고-다른-프로세스를-실행하는-작업">문맥 전환 (<code class="language-plaintext highlighter-rouge">Context Switching</code>) : CPU가 실행중인 프로세스를 멈추고 다른 프로세스를 실행하는 작업</h5>
 <ul>
   <li>문맥 (<code class="language-plaintext highlighter-rouge">Context</code>) : 각 프로세스 컨트롤 블록 내에서 표현
     <ul>
@@ -748,7 +727,7 @@ else {
   <p>시스템 호출로 인한 인터럽트 발생 시 : 실행중인 프로세스의 문맥을 프로세스 컨트롤 블록에 갱신하나, 문맥 전환은 일어나지 않음</p>
 </blockquote>
 
-<h2 id="cpu-스케줄링-cpu-scheduling--cpu-스케줄러에서-다음에-실행할-프로세스를-선택하는-작업">CPU 스케줄링 (<code class="language-plaintext highlighter-rouge">CPU Scheduling</code>) : CPU 스케줄러에서 다음에 실행할 프로세스를 선택하는 작업</h2>
+<h2 id="cpu-스케줄링-cpu-scheduling--cpu-스케줄러에서-어느-프로세스를-다음에-실행할지-지정하는-작업">CPU 스케줄링 (<code class="language-plaintext highlighter-rouge">CPU Scheduling</code>) : CPU 스케줄러에서 어느 프로세스를 다음에 실행할지 지정하는 작업</h2>
 <ul>
   <li>선점 (<code class="language-plaintext highlighter-rouge">Preemptive</code>) : 한 프로세스가 CPU를 점유하는 동안, 다른 프로세스가 CPU를 강제로 점유할 수 있음</li>
   <li>비선점 (<code class="language-plaintext highlighter-rouge">Non-Preemptive</code>) : 한 프로세스가 CPU를 점유하는 동안, 다른 프로세스가 CPU를 점유할 수 없음 (예외 : <code class="language-plaintext highlighter-rouge">I/O</code> 발생)</li>
@@ -759,9 +738,265 @@ else {
   <li>CPU 점유율 (<code class="language-plaintext highlighter-rouge">CPU Utilization</code>) : 현재 CPU가 작업을 수행하는 비율 -&gt; 높을수록 좋음</li>
   <li>처리율 (<code class="language-plaintext highlighter-rouge">Throughput</code>) : 단위 시간 당 완료되는 프로세스의 개수 -&gt; 많을수록 좋음</li>
   <li>소요 시간 (<code class="language-plaintext highlighter-rouge">Turnaround Time</code>) : 프로세스가 생성된 시간부터 종료되는 데까지 걸린 시간 -&gt; 짧을수록 좋음</li>
-  <li>대기 시간 (<code class="language-plaintext highlighter-rouge">Waiting Time</code>) : CPU 제어를 위해 <code class="language-plaintext highlighter-rouge">Ready Queue</code>에서”만” 대기한 시간 -&gt; 짧을수록 좋음</li>
+  <li>대기 시간 (<code class="language-plaintext highlighter-rouge">Waiting Time</code>) : CPU 제어를 위해 <code class="language-plaintext highlighter-rouge">Ready Queue</code>에서”만” 대기한 시간 -&gt; 짧을수록 좋음
+    <ul>
+      <li>평균 대기 시간 (<code class="language-plaintext highlighter-rouge">Average Waiting Time</code>) : (각 프로세스들의 대기 시간의 합) / (프로세스들의 개수)</li>
+    </ul>
+  </li>
   <li>응답 시간 (<code class="language-plaintext highlighter-rouge">Response Time</code>) : <code class="language-plaintext highlighter-rouge">Interactive System</code>에서 입력에 대한 반응 시간 -&gt; 짧을수록 좋음</li>
 </ul>
+
+<h3 id="선입선출-first-come-first-served-스케줄링--가장-먼저-작업을-요청한-프로세스를-먼저-수행">선입선출 (<code class="language-plaintext highlighter-rouge">First-Come, First-Served</code>) 스케줄링 : 가장 먼저 작업을 요청한 프로세스를 먼저 수행</h3>
+<ul>
+  <li>비선점 (<code class="language-plaintext highlighter-rouge">Non-Preemptive</code>)</li>
+  <li>들어온 순서대로 작업을 수행한다고 해도 그것이 반드시 효율적이지 않음
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Convoy Effect</code> : CPU를 많이 점유하는 프로세스가 먼저 수행되어 나머지 프로세스들이 그만큼 오래 대기하는 것</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <table style="text-align: center">
+ 	<thead>
+		<tr>
+			<th>Process</th>
+			<th>Burst Time (msec)</th>
+		</tr>
+	</thead>
+   	<tbody>
+      <tr>
+        <td>P1</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>24</td>
+      </tr>
+    </tbody>
+</table>
+  <ul>
+    <li>FCFS Scheduling : (CPU에 요청받은 순서대로) P1, P2, P3 순으로 처리한다.
+      <ul>
+        <li>Average Waiting Time : (0 + 3 + 6) / 3 = 3msec</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <table style="text-align: center">
+ 	<thead>
+		<tr>
+			<th>Process</th>
+			<th>Burst Time (msec)</th>
+		</tr>
+	</thead>
+   	<tbody>
+      <tr>
+        <td>P1</td>
+        <td>24</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+</table>
+  <ul>
+    <li>FCFS Scheduling : (CPU에 요청받은 순서대로) P1, P2, P3 순으로 처리한다.
+      <ul>
+        <li>Average Waiting Time : (0 + 24 + 27) / 3 = 17msec</li>
+      </ul>
+    </li>
+    <li>CPU를 오래 점유하는 P3로 인해 상대적으로 빠른 처리가 가능한 P1과 2가 오래 대기하는 Convoy Effect이 발생!</li>
+  </ul>
+</blockquote>
+
+<h3 id="최단작업-shortest-job-first-스케줄링--시간이-가장-짧게-수행되는-프로세스를-먼저-수행">최단작업 (<code class="language-plaintext highlighter-rouge">Shortest-Job-First</code>) 스케줄링 : 시간이 가장 짧게 수행되는 프로세스를 먼저 수행</h3>
+<ul>
+  <li>비선점 (<code class="language-plaintext highlighter-rouge">Non-Preemptive</code>), 선점 (<code class="language-plaintext highlighter-rouge">Preemptive</code>)</li>
+  <li>일반적으로 가장 빠른 평균 대기 시간을 가지나, 현실에서는 각 프로세스의 CPU 점유 시간이 주어져 있지 않기에 비현실적</li>
+</ul>
+
+<blockquote>
+  <table style="text-align: center">
+ 	<thead>
+		<tr>
+			<th>Process</th>
+			<th>Burst Time (msec)</th>
+		</tr>
+	</thead>
+   	<tbody>
+      <tr>
+        <td>P1</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>P4</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+</table>
+  <ul>
+    <li>FCFS Scheduling : (CPU에 요청받은 순서대로) P1, P2, P3, P4 순으로 처리한다.
+      <ul>
+        <li>Average Waiting Time : (0 + 6 + 14 + 21) / 4 = 10.25msec</li>
+      </ul>
+    </li>
+    <li>SJF Scheduling : (작업 시간이 짧은 순서대로) P4, P1, P3, P2 순으로 처리한다.
+      <ul>
+        <li>Average Waiting Time : (0 + 3 + 9 + 16) / 4 = 7msec</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h3 id="우선순위-priority-스케줄링--우선순위가-가장-높은-프로세스를-먼저-수행">우선순위 (<code class="language-plaintext highlighter-rouge">Priority</code>) 스케줄링 : 우선순위가 가장 높은 프로세스를 먼저 수행</h3>
+<ul>
+  <li>비선점 (<code class="language-plaintext highlighter-rouge">Non-Preemptive</code>), 선점 (<code class="language-plaintext highlighter-rouge">Preemptive</code>)</li>
+  <li>우선순위는 정수값으로 표현되며, 값이 작을수록 우선순위가 높음</li>
+</ul>
+
+<blockquote>
+  <table style="text-align: center">
+ 	<thead>
+		<tr>
+			<th>Process</th>
+			<th>Burst Time (msec)</th>
+      <th>Priority</th>
+		</tr>
+	</thead>
+   	<tbody>
+      <tr>
+        <td>P1</td>
+        <td>10</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>2</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>P4</td>
+        <td>1</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>P5</td>
+        <td>5</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+</table>
+  <ul>
+    <li>Priority Scheduling : (우선순위가 높은 순서대로) P2, P5, P1, P3, P4 순으로 처리한다.
+      <ul>
+        <li>Average Waiting Time : (0 + 1 + 6 + 16 + 18) / 5 = 8.2 msec</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h3 id="라운드-로빈-round-robin-스케줄링--원-모양으로-모든-프로세스를-돌아가면서-수행">라운드 로빈 (<code class="language-plaintext highlighter-rouge">Round-Robin</code>) 스케줄링 : 원 모양으로 모든 프로세스를 돌아가면서 수행</h3>
+<ul>
+  <li>선점 (<code class="language-plaintext highlighter-rouge">Preemptive</code>)</li>
+  <li>시분할 시스템에서 CPU가 한 프로세스를 일정 시간 수행한 후, 이를 대기 상태로 보내고 다음 프로세스를 수행하는 것을 반복
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Time Quantum</code> : CPU가 한 프로세스를 수행하는 시간 -&gt; 스케줄리의 효율성이 <code class="language-plaintext highlighter-rouge">Time Quantum</code>의 크기에 의존</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <table style="text-align: center">
+ 	<thead>
+		<tr>
+			<th>Process</th>
+			<th>Burst Time (msec)</th>
+      <th>Time Quantum</th>
+		</tr>
+	</thead>
+   	<tbody>
+      <tr>
+        <td>P1</td>
+        <td>7</td>
+        <td rowspan="3">4msec</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>4</td>
+      </tr>
+    </tbody>
+</table>
+  <ul>
+    <li>RP Scheduling : (CPU에 요청받은 순서대로) P1, P2, P3, 그리고 (완료하지 못한) P1 순으로 처리한다.
+      <ul>
+        <li>Average Waiting Time : (4 + 8 + 12) / 3 = 8 msec</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <table style="text-align: center">
+ 	<thead>
+		<tr>
+			<th>Process</th>
+			<th>Burst Time (msec)</th>
+      <th>Time Quantum</th>
+		</tr>
+	</thead>
+   	<tbody>
+      <tr>
+        <td>P1</td>
+        <td>7</td>
+        <td rowspan="3">3msec</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>4</td>
+      </tr>
+    </tbody>
+</table>
+  <ul>
+    <li>RP Scheduling : (CPU에 요청받은 순서대로) P1, P2, P3, (완료하지 못한) P1, P2, P3, 그리고 P1 순으로 처리한다.
+      <ul>
+        <li>Average Waiting Time : (12 + 13 + 14) / 3 = 13 msec</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
 
         
       </section>
