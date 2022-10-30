@@ -1,7 +1,4 @@
 main:
-  - title: "대문"
-    url: "/home/"
-
   - title: "카테고리"
     url: /categories/
 
