@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-03T15:11:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[B/E] 도커 (Docker)</title><link href="http://localhost:4000/backend/docker1/" rel="alternate" type="text/html" title="[B/E] 도커 (Docker)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-02T00:00:00+09:00</updated><id>http://localhost:4000/backend/docker1</id><content type="html" xml:base="http://localhost:4000/backend/docker1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-06T01:15:11+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[B/E] 도커 (Docker)</title><link href="http://localhost:4000/backend/docker1/" rel="alternate" type="text/html" title="[B/E] 도커 (Docker)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-02T00:00:00+09:00</updated><id>http://localhost:4000/backend/docker1</id><content type="html" xml:base="http://localhost:4000/backend/docker1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
 
@@ -15,20 +15,20 @@
   <li>(가상의) 네트워크 : 가상 사설 네트워크 (<code class="language-plaintext highlighter-rouge">Virtual Personal Network</code>)</li>
 </ul>
 
-<h3 id="플랫폼-가상화-platform-virtualization--하나의-구동-가능한-컴퓨터를-추상화">플랫폼 가상화 (<code class="language-plaintext highlighter-rouge">Platform Virtualization</code>) : 하나의 구동 가능한 컴퓨터를 추상화</h3>
+<h3 id="플랫폼-가상화-platform-virtualization--여러-개의-프로세스을-구동할-수-있는-플랫폼을-추상화">플랫폼 가상화 (<code class="language-plaintext highlighter-rouge">Platform Virtualization</code>) : 여러 개의 프로세스을 구동할 수 있는 플랫폼을 추상화</h3>
 <ul>
   <li>에뮬레이션 (<code class="language-plaintext highlighter-rouge">Emulation</code>) : 다른 컴퓨터 프로세서를 위해 쓰인 운영체제와 응용 프로그램을 실행</li>
   <li>하드웨어 수준 가상화 (<code class="language-plaintext highlighter-rouge">H/W-level Virtualization</code>) : 하드웨어 플랫폼 위의 하이퍼바이저를 통해 가상 머신을 관리함</li>
   <li>
-    <p>운영체제 수준 가상화 (<code class="language-plaintext highlighter-rouge">O/S-level Virtualization</code>) : 운영체제의 커널이 격리된 컨테이너에서 프로세스를 동작시킴</p>
+    <p>운영체제 수준 가상화 (<code class="language-plaintext highlighter-rouge">O/S-level Virtualization</code>) : 운영체제의 커널이 각각의 격리된 프로세스를 동작시킴</p>
   </li>
   <li>
     <h4 id="에뮬레이터-emulator--모든-하드웨어-자원의-동작을-소프트웨어로-대체">에뮬레이터 (<code class="language-plaintext highlighter-rouge">Emulator</code>) : 모든 하드웨어 자원의 동작을 소프트웨어로 대체</h4>
     <ul>
       <li>애뮬레이터 안의 응용 프로그램은 물리 하드웨어가 아닌 인터프리터 프로그램을 통해 실행 (<code class="language-plaintext highlighter-rouge">Java Virtual Machine</code>)
         <ul>
-          <li>인터프리터 프로그램은 가상 머신에서 명령을 수행할 때마다 물리 CPU가 처리할 바이너리 명령어 갱신</li>
-          <li>물리 CPU는 에뮬레이터를 실행하기 위한 바이너리 명령어를 해석해 이를 대신 실행</li>
+          <li>인터프리터 프로그램은 가상 머신에서 명령을 수행할 때마다 물리 CPU가 처리할 바이너리 코드 갱신</li>
+          <li>물리 CPU는 에뮬레이터를 실행하기 위한 바이너리 코드를 해석해 이를 대신 실행</li>
         </ul>
       </li>
       <li>장점 : 아키텍쳐가 전혀 다른 하드웨어 역시 가상화할 수 있음 (vs 하이퍼바이저 : 가상화할 수 없음)</li>
@@ -55,21 +55,201 @@
           <li>장점 : 별도의 호스트 운영체제가 없어 오버헤드가 적음 / 하드웨어를 직접 제어하기에 효율적인 자원 사용 가능</li>
           <li>단점 : 자체적인 가상 머신에 대한 관리 기능이 없기에, 이를 위한 별도의 컴퓨터나 콘솔이 필요</li>
           <li>
-            <h6 id="전가상화-full-virtualization">전가상화 (<code class="language-plaintext highlighter-rouge">Full-Virtualization</code>)</h6>
+            <h6 id="전가상화-full-virtualization--하이퍼바이저에서-명령을-번역">전가상화 (<code class="language-plaintext highlighter-rouge">Full-Virtualization</code>) : 하이퍼바이저에서 명령을 번역</h6>
+            <ul>
+              <li>게스트 가상 머신이 요청한 명령은 하이퍼바이저가 실행한 관리용 가상 머신 <code class="language-plaintext highlighter-rouge">DOM</code>을 통해 하드웨어에 접근</li>
+              <li>하이퍼바이저가 각 가상 머신들의 모든 명령을 번역하여 실행하고, 이에 맞게 자원을 할당해야 함</li>
+            </ul>
           </li>
           <li>
-            <h6 id="반가상화-para-virtualization">반가상화 (<code class="language-plaintext highlighter-rouge">Para-Virtualization</code>)</h6>
+            <h6 id="반가상화-para-virtualization--게스트-가상-머신에서-명령을-번역">반가상화 (<code class="language-plaintext highlighter-rouge">Para-Virtualization</code>) : 게스트 가상 머신에서 명령을 번역</h6>
+            <ul>
+              <li>게스트 가상 머신이 하이퍼 콜 (<code class="language-plaintext highlighter-rouge">Hyper Call</code>)을 통해 하이퍼바이저에 명령을 직접 요청</li>
+              <li>게스트 가상 머신의 운영 체제가 하이퍼 콜을 요청할 수 있게 커널을 수정해야 함</li>
+            </ul>
           </li>
         </ul>
       </li>
     </ul>
   </li>
   <li>
-    <h4 id="컨테이너-container">컨테이너 (<code class="language-plaintext highlighter-rouge">Container</code>)</h4>
+    <h4 id="컨테이너-container--프로세스가-동작하는-격리된-사용자-공간-인스턴스">컨테이너 (<code class="language-plaintext highlighter-rouge">Container</code>) : 프로세스가 동작하는 격리된 사용자 공간 인스턴스</h4>
+    <ul>
+      <li>컨테이너는 하나의 응용 프로그램과 그 응용 프로그램의 동작을 위한 라이브러리로 구성</li>
+      <li>운영체제의 커널은 여러 개의 격리된 컨테이너를 갖추어 각각의 개별적인 서버처럼 동작시킴</li>
+    </ul>
   </li>
 </ul>
 
-<h2 id="도커-docker--컨테이너-기반-가상화-플랫폼-container-based-virtualization-platform">도커 (<code class="language-plaintext highlighter-rouge">Docker</code>) : 컨테이너 기반 가상화 플랫폼 (<code class="language-plaintext highlighter-rouge">Container-based Virtualization Platform</code>)</h2>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Backend" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[D/B] 데이터베이스 (Database)</title><link href="http://localhost:4000/database/database1/" rel="alternate" type="text/html" title="[D/B] 데이터베이스 (Database)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-02T00:00:00+09:00</updated><id>http://localhost:4000/database/database1</id><content type="html" xml:base="http://localhost:4000/database/database1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+<h2 id="도커-docker--컨테이너-기반-가상화-플랫폼-container-based-virtualization-platform">도커 (<code class="language-plaintext highlighter-rouge">Docker</code>) : 컨테이너 기반 가상화 플랫폼 (<code class="language-plaintext highlighter-rouge">Container-based Virtualization Platform</code>)</h2>
+<ul>
+  <li><a href="https://www.docker.com">공식 홈페이지</a>에서 <code class="language-plaintext highlighter-rouge">.dmg</code> 파일을 다운로드 후 설치</li>
+  <li>터미널 창에 다음 명령어를 입력해 도커가 정상적으로 설치되었는지 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker version // 현재 도커의 버전 확인
+
+Client:
+ Cloud integration: ~
+ Version:           ~
+ API version:       ~
+ Go version:        ~
+
+Server: ~
+ Engine:
+  Version:          ~
+  API version:      ~
+  Go version:       ~
+</code></pre></div></div>
+<blockquote>
+  <p>Q. 클라이언트와 서버의 버전 정보가 따로 구성되어 있는 이유?</p>
+  <ul>
+    <li>도커가 클라이언트와 서버의 역할을 각각 수행할 수 있음
+      <ul>
+        <li>리눅스 터미널에 도커 명령어를 입력하면 도커 클라이언트가 도커 서버로 명령을 전송하고 이를 터미널에 출력</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h3 id="q-도커를-쓰는-이유--응용-프로그램을-실행할-때-운영체제-수준-가상화-방식이-성능-손실이-더-적고-더-빠르게-동작한다">Q. 도커를 쓰는 이유? : 응용 프로그램을 실행할 때 운영체제 수준 가상화 방식이 성능 손실이 더 적고 더 빠르게 동작한다.</h3>
+<ul>
+  <li>도커를 설치한 운영체제의 종류에 상관없이 도커를 통해 동일한 명령어로 응용 프로그램을 설치하고 실행시킬 수 있다.</li>
+</ul>
+
+<div style="color: white; padding: 3% 2% 2% 2%; background-color: black;">
+사용자가 운영체제 A에서만 가능한 a, 운영체제 B에서만 가능한 b, 운영체제 C에서만 가능한 c을 동시에 실행한다고 가정한다면,
+<ul>
+  <li>에뮬레이션 : 응용 프로그램 ×3 ⊂ 에뮬레이트 운영체제 ×3 ⊂ 에뮬레이터 ×3 ⊂ 호스트 운영체제 ⊂ 하드웨어</li>
+  <li>Type 1. 호스팅 : 응용 프로그램 ×3 ⊂ 게스트 운영체제 ×3 ⊂ 하이퍼바이저 ⊂ 호스트 운영체제 ⊂ 하드웨어</li>
+  <li>Type 2. 네이티브 &gt; 전가상화 : 응용 프로그램 ×3 ⊂ 게스트 운영체제 ×3 ⊂ DOM ⊂ 하이퍼바이저 ⊂ 하드웨어</li>
+  <li>Type 2. 네이티브 &gt; 반가상화 : 응용 프로그램 ×3 ⊂ 수정된 게스트 운영체제 ×3 ⊂ 하이퍼바이저 ⊂ 하드웨어</li>
+  <li>운영체제 수준 가상화 : 컨테이너 프로세스 ×3 ⊂ 컨테이너 관리 소프트웨어 ⊂ 운영체제 ⊂ 하드웨어 </li>
+</ul>
+</div>
+
+<ul>
+  <li>Q. <code class="language-plaintext highlighter-rouge">MacOS</code>에서 도커로 윈도우 컨테이너를 실행하는 경우라면? : 응용 프로그램을 실행할 때 (O) 운영 체제를 실행할 때 (X)
+    <ul>
+      <li>윈도우 컨테이너 ⊂ 가상 머신 (호스팅) ⊂ 컨테이너 관리 소프트웨어 ⊂ 운영체제 ⊂ 하드웨어</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="도커-파일-dockerfile--서버-운영-기록을-코드화해-저장한-파일---해당-시점의-도커-이미지를-빌드">도커 파일 (<code class="language-plaintext highlighter-rouge">Dockerfile</code>) : 서버 운영 기록을 코드화해 저장한 파일 -&gt; 해당 시점의 도커 이미지를 빌드</h3>
+<ul>
+  <li>눈송이 서버 (<code class="language-plaintext highlighter-rouge">Snowflakes Server</code>) : 각각의 서버마다 운영 기록이 다르기에 서로 모양이 다른 서버들이 공존하는 상황
+    <ul>
+      <li>서버 간의 운영체제, 컴파일러, 설치된 패키지 등의 차이로 발생하는 문제 개선을 위해 서버 운영 기록 저장</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">DSL</code> (<code class="language-plaintext highlighter-rouge">Domain-Specific Language</code>) : 도커 이미지의 생성 과정을 표현하는 언어</li>
+</ul>
+
+<h3 id="q-도커-파일을-쓰는-이유--테스트-주도-개발의-순환에-부합한다">Q. 도커 파일을 쓰는 이유? : 테스트 주도 개발의 순환에 부합한다.</h3>
+<ul>
+  <li>테스트 주도 개발 (<code class="language-plaintext highlighter-rouge">Test Driven Development</code>) : 선 테스트 후 개발 사이클을 반복하는 개발 방법론</li>
+</ul>
+
+<div style="color: white; padding: 2% 1% 1% 1%; background-color: black;">
+<ol>
+  <li>테스트를 작성한다. : 도커 파일을 만든다.</li>
+  <li>테스트에 실패하고 코드를 수정한다. : 도커 이미지의 빌드에 실패하고 도커 파일을 수정한다.</li>
+  <li>테스트에 성공한다면, 중복된 코드 등을 리펙터링한다. : 도커 이미지의 빌드에 성공한다면, 도커 파일의 내용을 리펙터링하다.</li>
+  <li>처음으로 되돌아간다.</li>
+</ol>
+</div>
+
+<h3 id="도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보을-포함">도커 이미지 (<code class="language-plaintext highlighter-rouge">Docker Image</code>) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보을 포함</h3>
+<ul>
+  <li>상태값을 가지지 않음 (변하지 않는 값들을 저장) &lt;-&gt; 컨테이너 : 이미지가 실행된 살태 (변하는 값들을 저장)</li>
+  <li>이미지 레이어 : 도커 이미지는 여러 개의 읽기 전용 (<code class="language-plaintext highlighter-rouge">Read-Only</code>) 레이어로 구성되고, 파일 추가/생성 시 새로운 레이어를 생성
+    <ul>
+      <li>유니온 파일 시스템 (<code class="language-plaintext highlighter-rouge">Union File Systems</code>)읕 통해 여러 개의 레이어를 하나의 파일 시스템으로 활용</li>
+    </ul>
+  </li>
+  <li>컨테이너 레이어 : 컨테이너가 실행되면 이미지 레이어 위에 읽기/쓰기 (<code class="language-plaintext highlighter-rouge">Read-Write</code>) 레이어를 추가
+    <ul>
+      <li>컨테이너를 실행하면서 생성되거나 변경된 내용을 저장</li>
+    </ul>
+  </li>
+  <li>이미지 경로 : <code class="language-plaintext highlighter-rouge">URL</code> 방식으로 관리 -&gt; 뒤에 태그 (<code class="language-plaintext highlighter-rouge">/tag</code>)를 붙임</li>
+  <li><a href="https://hub.docker.com"> 도커 허브</a> (<code class="language-plaintext highlighter-rouge">Docker Hub</code>) : 도커 이미지를 서버에 무료로 공개하고 관리</li>
+</ul>
+
+<h3 id="q-도커-이미지를-쓰는-이유--도커-이미지와-도커-컨테이너들을-클래스나-인스턴스처럼-활용한다">Q. 도커 이미지를 쓰는 이유? : 도커 이미지와 도커 컨테이너들을 클래스나 인스턴스처럼 활용한다.</h3>
+<ul>
+  <li>도커는 해시 값 (= 컨테이너 ID)과 임의의 이름 (= 컨테이너 이름)를 통해 컨테이너를 구분하고 이들을 환경변수로 관리</li>
+</ul>
+
+<div style="color: white; padding: 3% 2% 2% 2%; background-color: black;">
+운영자가 지금까지 운영한 서버를 도커 이미지로 배포하고 도커 컨테이너에 설치한다면,
+<ul>
+  <li>도커 파일 : 지금까지 서버를 운영한 기록</li>
+  <li>도커 이미지 (도커 파일 + 실행 시점) : 지금부터 설치된 서버가 가질 초기값</li>
+  <li>도커 컨테이너 (도커 파일 + 환경 변수) : 지금부터 설치된 서버가 운영될 장소</li>
+</ul>
+</div>
+<ul>
+  <li>도커 안에서는 서버 역시 하나의 소프트웨어처럼 사용할 수 있고, 생성할 수 있는 컨테이너의 개수에도 제한이 없다.</li>
+</ul>
+
+<h3 id="도커-명령어-docker-command--리눅스-터미널에-도커-명령어를-입력하면-도커-서버에서-해당되는-작업을-수행">도커 명령어 (<code class="language-plaintext highlighter-rouge">Docker Command</code>) : 리눅스 터미널에 도커 명령어를 입력하면 도커 서버에서 해당되는 작업을 수행</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">docker run</code> : 컨테이너 실행
+    <ul>
+      <li>만약 입력받은 도커 이미지가 있다면 컨테이너를 생성 후 실행하고, 없다면 이를 다운로드한 후 컨테이너를 생성 후 실행</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
+</code></pre></div></div>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>docker run 옵션</td>
+                <td>옵션 설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>-d</td>
+                <td>백그라운드 모드 (detached mode)</td>
+            </tr>
+            <tr>
+                <td>-p</td>
+                <td>호스트와 컨테이너의 포트를 연결 (port forwarding)</td>
+            </tr>
+            <tr>
+                <td>-v</td>
+                <td>호스트와 컨테이너의 디렉터리를 연결 (mount)</td>
+            </tr>
+            <tr>
+                <td>-e</td>
+                <td>컨테이너 내에서 사용할 환경변수 설정 (environment variable)</td>
+            </tr>
+            <tr>
+                <td>-name</td>
+                <td>컨테이너 이름 설정 (container name)</td>
+            </tr>
+            <tr>
+                <td>-rm</td>
+                <td>프로세스 종료 시 컨테이너 자동으로 제거 (remove container)</td>
+            </tr>
+            <tr>
+                <td>-link</td>
+                <td>컨테이너 연결 (link container)</td>
+            </tr>
+            <tr>
+                <td>-it</td>
+                <td>리눅스 터미널 입력을 위한 옵션 (input terminal)</td>
+            </tr>
+         </tbody>
+    </table>
+</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Backend" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[D/B] 데이터베이스 (Database)</title><link href="http://localhost:4000/database/database1/" rel="alternate" type="text/html" title="[D/B] 데이터베이스 (Database)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-02T00:00:00+09:00</updated><id>http://localhost:4000/database/database1</id><content type="html" xml:base="http://localhost:4000/database/database1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
 
