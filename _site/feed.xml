@@ -1,4 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-06T01:15:11+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[B/E] 도커 (Docker)</title><link href="http://localhost:4000/backend/docker1/" rel="alternate" type="text/html" title="[B/E] 도커 (Docker)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-02T00:00:00+09:00</updated><id>http://localhost:4000/backend/docker1</id><content type="html" xml:base="http://localhost:4000/backend/docker1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-07T15:07:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[D/B] 데이터베이스 (Database)</title><link href="http://localhost:4000/database/database1/" rel="alternate" type="text/html" title="[D/B] 데이터베이스 (Database)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-02T00:00:00+09:00</updated><id>http://localhost:4000/database/database1</id><content type="html" xml:base="http://localhost:4000/database/database1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+
+<p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
+
+<h2 id="데이터베이스-database--데이터의-집합">데이터베이스 (<code class="language-plaintext highlighter-rouge">Database</code>) : 데이터의 집합</h2>
+<ul>
+  <li>데이터 (<code class="language-plaintext highlighter-rouge">Data</code>) : 현실에서 관찰하거나 측정한 사실이나 값
+    <ul>
+      <li>구조 (<code class="language-plaintext highlighter-rouge">Structure</code>) : 데이터를 저장하기 위해 미리 정한 구조
+        <ul>
+          <li>정형 데이터 (<code class="language-plaintext highlighter-rouge">Structured Data</code>) : 구조화된 데이터</li>
+          <li>반정형 데이터 (<code class="language-plaintext highlighter-rouge">Semi-Structured Data</code>) : 구조화된 데이터이지만, 내용 안에 구조에 대한 설명이 함께 존재
+            <ul>
+              <li>구조를 파악하는 파싱 (<code class="language-plaintext highlighter-rouge">Parsing</code>) 과정이 필요</li>
+            </ul>
+          </li>
+          <li>비정형 데이터 (<code class="language-plaintext highlighter-rouge">Unstructured Data</code>) : 구조화되지 않은 데이터</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>정보 (<code class="language-plaintext highlighter-rouge">information</code>) : 의사 결정에 사용하기 위해 데이터를 가공한 결과물</li>
+</ul>
+
+<h3 id="파일-시스템-file-system--컴퓨터에서-데이터를-쉽게-검색하고-접근하기-위해-조직된-체계">파일 시스템 (<code class="language-plaintext highlighter-rouge">File System</code>) : 컴퓨터에서 데이터를 쉽게 검색하고 접근하기 위해 조직된 체계</h3>
+<ul>
+  <li>데이터 중복성 : 동일한 내용의 데이터가 여러 파일에 중복 저장
+    <ul>
+      <li>공간 낭비 : 만약 여러 응용 프로그램이 동일한 내용의 데이터를 필요로 한다면, 이를 별도의 파일로 저장</li>
+      <li>동기화 문제 : 데이터 일관성과 데이터 무결성을 유지하기 어려움</li>
+    </ul>
+  </li>
+  <li>데이터 종속성 : 응용 프로그램이 데이터 파일에 종속적
+    <ul>
+      <li>만약 응용 프로그램이 사용하는 파일의 디렉토리를 변경한다면, 응용 프로그램 또한 이에 맞춰 변경해야 함</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>…… 운영체제에 내장된 파일 시스템으로는 데이터베이스를 효율적으로 관리하는 데에 한계가 있다.</p>
+</blockquote>
+
+<h2 id="데이터베이스-구조-database-architecture">데이터베이스 구조 (<code class="language-plaintext highlighter-rouge">Database Architecture</code>)</h2>
+<ul>
+  <li>데이터 사전 (<code class="language-plaintext highlighter-rouge">Data Dictionary</code>) : 스키마, 매핑 정보, 제약 조건 등을 저장
+    <ul>
+      <li>스키마 (<code class="language-plaintext highlighter-rouge">Schema</code>) : 데이터베이스에 저장되는 데이터 구조와 제약조건을 정의한 것
+        <ul>
+          <li>인스턴스 (<code class="language-plaintext highlighter-rouge">Instance</code>) : 스키마에 따라 데이터베이스에 실제로 저장된 값</li>
+        </ul>
+      </li>
+      <li>매핑 (<code class="language-plaintext highlighter-rouge">Mapping</code>) : 미리 정의된 매핑 정보를 이용해 사용자가 원하는 데이터에 접근
+        <ul>
+          <li>외부/개념 매핑 : 외부 스키마와 개념 스키마 간의 대응 관계</li>
+          <li>개념/내부 매핑 : 개념 스키마와 내부 스키마 간의 대응 관계</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>데이터 디렉터리 (<code class="language-plaintext highlighter-rouge">Data Directory</code>) : 데이터 사전에 있는 데이터에 접근할 때 필요한 위치 정보를 저장하는 시스템 데이터베이스</li>
+  <li>사용자 데이터베이스 (<code class="language-plaintext highlighter-rouge">User Database</code>) : 사용자가 실제 사용하는 데이터가 저장되어 있는 데이터베이스</li>
+</ul>
+
+<h3 id="3단계-데이터베이스-구조-3-level-database-architecture--하나의-데이터베이스를-3개의-단계로-나눔">3단계 데이터베이스 구조 (<code class="language-plaintext highlighter-rouge">3-Level Database Architecture</code>) : 하나의 데이터베이스를 3개의 단계로 나눔</h3>
+
+<ol>
+  <li>외부 단계 (<code class="language-plaintext highlighter-rouge">External Level</code>) : 개별 사용자의 관점 -&gt; 데이터베이스 하나에 외부 스키마가 여러 개 존재할 수 있음</li>
+  <li>개념 단계 (<code class="language-plaintext highlighter-rouge">Conceptual Level</code>) : 전체 조직의 관점 -&gt; 데이터베이스 하나에 개념 스키마가 하나만 존재</li>
+  <li>내부 단계 (<code class="language-plaintext highlighter-rouge">Internal Level</code>) : 물리적 저장 장치의 관점 -&gt; 데이터베이스 하나에 내부 스키마가 하나만 존재</li>
+</ol>
+
+<blockquote>
+  <p>내부 단계에서 외부 단계로 갈수록 높은 추상화 레벨 : 사용자에게 데이터베이스 구현과 관련된 내용을 숨기고 단순화된 정보만 제공</p>
+</blockquote>
+
+<h4 id="데이터-독립성-data-independency--하위-스키마를-변경하더라도-상위-스키마가-영향을-받지-않음">데이터 독립성 (<code class="language-plaintext highlighter-rouge">Data Independency</code>) : 하위 스키마를 변경하더라도 상위 스키마가 영향을 받지 않음</h4>
+<ul>
+  <li>논리적 데이터 독립성 : 개념 스키마 <code class="language-plaintext highlighter-rouge">-X-&gt;</code> 외부 스키마</li>
+  <li>물리적 데이터 독립성 : 내부 스키마 <code class="language-plaintext highlighter-rouge">-X-&gt;</code> 개념 스키마</li>
+</ul>
+
+<blockquote>
+  <p>데이터를 3단계 구조로 나누고, 단계별로 스카마를 유지하며, 스키마 간 대응 관계를 정의하는 궁극적 목적 : 데이터 독립성의 실현</p>
+</blockquote>
+
+<h2 id="데이터베이스-언어-database-language--사용자와-데이터베이스-관리-시스템-간의-통신-수단">데이터베이스 언어 (<code class="language-plaintext highlighter-rouge">Database Language</code>) : 사용자와 데이터베이스 관리 시스템 간의 통신 수단</h2>
+<ul>
+  <li>데이터 정의어 (<code class="language-plaintext highlighter-rouge">Data Definition Language</code>) : 스키마를 정의, 수정, 삭제하기 위해 사용</li>
+  <li>데이터 조작어 (<code class="language-plaintext highlighter-rouge">Data Manipulation Language</code>) : 데이터의 삽입, 삭제, 수정, 검색 처리를 요구하기 위해 사용</li>
+  <li>데이터 제어어 (<code class="language-plaintext highlighter-rouge">Data Control Language</code>) : 내부적으로 필요한 규칙 및 기법을 정의하기 위해 사용</li>
+</ul>
+
+<h2 id="데이터베이스-관리-시스템-database-management-system--데이터를-데이터베이스에-통합해-관리">데이터베이스 관리 시스템 (<code class="language-plaintext highlighter-rouge">Database Management System</code>) : 데이터를 데이터베이스에 통합해 관리</h2>
+<blockquote>
+  <ul>
+    <li>정의 기능 : 데이터베이스의 구조를 정의하거나 수정</li>
+    <li>조직 기능 : 데이터를 삽입, 삭제, 수정, 검색하는 연산을 수행</li>
+    <li>제어 기능 : 데이터를 항상 정확하고 안전하게 유지</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>질의 처리기 (<code class="language-plaintext highlighter-rouge">Query Processor</code>) : 사용자의 데이터 처리 요구를 해석해 처리</li>
+  <li>저장 데이터 관리자 (<code class="language-plaintext highlighter-rouge">Stored Data Manager</code>) : 디스크에 저장된 데이터베이스와 데이터 사전을 관리하고 접근</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Database" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[B/E] 도커 (Docker)</title><link href="http://localhost:4000/backend/docker1/" rel="alternate" type="text/html" title="[B/E] 도커 (Docker)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-02T00:00:00+09:00</updated><id>http://localhost:4000/backend/docker1</id><content type="html" xml:base="http://localhost:4000/backend/docker1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
 
@@ -249,112 +354,7 @@ Server: ~
             </tr>
          </tbody>
     </table>
-</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Backend" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[D/B] 데이터베이스 (Database)</title><link href="http://localhost:4000/database/database1/" rel="alternate" type="text/html" title="[D/B] 데이터베이스 (Database)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-02T00:00:00+09:00</updated><id>http://localhost:4000/database/database1</id><content type="html" xml:base="http://localhost:4000/database/database1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
-
-<p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
-
-<h2 id="데이터베이스-database--데이터의-집합">데이터베이스 (<code class="language-plaintext highlighter-rouge">Database</code>) : 데이터의 집합</h2>
-<ul>
-  <li>데이터 (<code class="language-plaintext highlighter-rouge">Data</code>) : 현실에서 관찰하거나 측정한 사실이나 값
-    <ul>
-      <li>구조 (<code class="language-plaintext highlighter-rouge">Structure</code>) : 데이터를 저장하기 위해 미리 정한 구조
-        <ul>
-          <li>정형 데이터 (<code class="language-plaintext highlighter-rouge">Structured Data</code>) : 구조화된 데이터</li>
-          <li>반정형 데이터 (<code class="language-plaintext highlighter-rouge">Semi-Structured Data</code>) : 구조화된 데이터이지만, 내용 안에 구조에 대한 설명이 함께 존재
-            <ul>
-              <li>구조를 파악하는 파싱 (<code class="language-plaintext highlighter-rouge">Parsing</code>) 과정이 필요</li>
-            </ul>
-          </li>
-          <li>비정형 데이터 (<code class="language-plaintext highlighter-rouge">Unstructured Data</code>) : 구조화되지 않은 데이터</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>정보 (<code class="language-plaintext highlighter-rouge">information</code>) : 의사 결정에 사용하기 위해 데이터를 가공한 결과물</li>
-</ul>
-
-<h3 id="파일-시스템-file-system--컴퓨터에서-데이터를-쉽게-검색하고-접근하기-위해-조직된-체계">파일 시스템 (<code class="language-plaintext highlighter-rouge">File System</code>) : 컴퓨터에서 데이터를 쉽게 검색하고 접근하기 위해 조직된 체계</h3>
-<ul>
-  <li>데이터 중복성 : 동일한 내용의 데이터가 여러 파일에 중복 저장
-    <ul>
-      <li>공간 낭비 : 만약 여러 응용 프로그램이 동일한 내용의 데이터를 필요로 한다면, 이를 별도의 파일로 저장</li>
-      <li>동기화 문제 : 데이터 일관성과 데이터 무결성을 유지하기 어려움</li>
-    </ul>
-  </li>
-  <li>데이터 종속성 : 응용 프로그램이 데이터 파일에 종속적
-    <ul>
-      <li>만약 응용 프로그램이 사용하는 파일의 디렉토리를 변경한다면, 응용 프로그램 또한 이에 맞춰 변경해야 함</li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <p>…… 운영체제에 내장된 파일 시스템으로는 데이터베이스를 효율적으로 관리하는 데에 한계가 있다.</p>
-</blockquote>
-
-<h2 id="데이터베이스-구조-database-architecture">데이터베이스 구조 (<code class="language-plaintext highlighter-rouge">Database Architecture</code>)</h2>
-<ul>
-  <li>데이터 사전 (<code class="language-plaintext highlighter-rouge">Data Dictionary</code>) : 스키마, 매핑 정보, 제약 조건 등을 저장
-    <ul>
-      <li>스키마 (<code class="language-plaintext highlighter-rouge">Schema</code>) : 데이터베이스에 저장되는 데이터 구조와 제약조건을 정의한 것
-        <ul>
-          <li>인스턴스 (<code class="language-plaintext highlighter-rouge">Instance</code>) : 스키마에 따라 데이터베이스에 실제로 저장된 값</li>
-        </ul>
-      </li>
-      <li>매핑 (<code class="language-plaintext highlighter-rouge">Mapping</code>) : 미리 정의된 매핑 정보를 이용해 사용자가 원하는 데이터에 접근
-        <ul>
-          <li>외부/개념 매핑 : 외부 스키마와 개념 스키마 간의 대응 관계</li>
-          <li>개념/내부 매핑 : 개념 스키마와 내부 스키마 간의 대응 관계</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>데이터 디렉터리 (<code class="language-plaintext highlighter-rouge">Data Directory</code>) : 데이터 사전에 있는 데이터에 접근할 때 필요한 위치 정보를 저장하는 시스템 데이터베이스</li>
-  <li>사용자 데이터베이스 (<code class="language-plaintext highlighter-rouge">User Database</code>) : 사용자가 실제 사용하는 데이터가 저장되어 있는 데이터베이스</li>
-</ul>
-
-<h3 id="3단계-데이터베이스-구조-3-level-database-architecture--하나의-데이터베이스를-3개의-단계로-나눔">3단계 데이터베이스 구조 (<code class="language-plaintext highlighter-rouge">3-Level Database Architecture</code>) : 하나의 데이터베이스를 3개의 단계로 나눔</h3>
-
-<ol>
-  <li>외부 단계 (<code class="language-plaintext highlighter-rouge">External Level</code>) : 개별 사용자의 관점 -&gt; 데이터베이스 하나에 외부 스키마가 여러 개 존재할 수 있음</li>
-  <li>개념 단계 (<code class="language-plaintext highlighter-rouge">Conceptual Level</code>) : 전체 조직의 관점 -&gt; 데이터베이스 하나에 개념 스키마가 하나만 존재</li>
-  <li>내부 단계 (<code class="language-plaintext highlighter-rouge">Internal Level</code>) : 물리적 저장 장치의 관점 -&gt; 데이터베이스 하나에 내부 스키마가 하나만 존재</li>
-</ol>
-
-<blockquote>
-  <p>내부 단계에서 외부 단계로 갈수록 높은 추상화 레벨 : 사용자에게 데이터베이스 구현과 관련된 내용을 숨기고 단순화된 정보만 제공</p>
-</blockquote>
-
-<h4 id="데이터-독립성-data-independency--하위-스키마를-변경하더라도-상위-스키마가-영향을-받지-않음">데이터 독립성 (<code class="language-plaintext highlighter-rouge">Data Independency</code>) : 하위 스키마를 변경하더라도 상위 스키마가 영향을 받지 않음</h4>
-<ul>
-  <li>논리적 데이터 독립성 : 개념 스키마 <code class="language-plaintext highlighter-rouge">-X-&gt;</code> 외부 스키마</li>
-  <li>물리적 데이터 독립성 : 내부 스키마 <code class="language-plaintext highlighter-rouge">-X-&gt;</code> 개념 스키마</li>
-</ul>
-
-<blockquote>
-  <p>데이터를 3단계 구조로 나누고, 단계별로 스카마를 유지하며, 스키마 간 대응 관계를 정의하는 궁극적 목적 : 데이터 독립성의 실현</p>
-</blockquote>
-
-<h2 id="데이터베이스-언어-database-language--사용자와-데이터베이스-관리-시스템-간의-통신-수단">데이터베이스 언어 (<code class="language-plaintext highlighter-rouge">Database Language</code>) : 사용자와 데이터베이스 관리 시스템 간의 통신 수단</h2>
-<ul>
-  <li>데이터 정의어 (<code class="language-plaintext highlighter-rouge">Data Definition Language</code>) : 스키마를 정의, 수정, 삭제하기 위해 사용</li>
-  <li>데이터 조작어 (<code class="language-plaintext highlighter-rouge">Data Manipulation Language</code>) : 데이터의 삽입, 삭제, 수정, 검색 처리를 요구하기 위해 사용</li>
-  <li>데이터 제어어 (<code class="language-plaintext highlighter-rouge">Data Control Language</code>) : 내부적으로 필요한 규칙 및 기법을 정의하기 위해 사용</li>
-</ul>
-
-<h2 id="데이터베이스-관리-시스템-database-management-system--데이터를-데이터베이스에-통합해-관리">데이터베이스 관리 시스템 (<code class="language-plaintext highlighter-rouge">Database Management System</code>) : 데이터를 데이터베이스에 통합해 관리</h2>
-<blockquote>
-  <ul>
-    <li>정의 기능 : 데이터베이스의 구조를 정의하거나 수정</li>
-    <li>조직 기능 : 데이터를 삽입, 삭제, 수정, 검색하는 연산을 수행</li>
-    <li>제어 기능 : 데이터를 항상 정확하고 안전하게 유지</li>
-  </ul>
-</blockquote>
-
-<ul>
-  <li>질의 처리기 (<code class="language-plaintext highlighter-rouge">Query Processor</code>) : 사용자의 데이터 처리 요구를 해석해 처리</li>
-  <li>저장 데이터 관리자 (<code class="language-plaintext highlighter-rouge">Stored Data Manager</code>) : 디스크에 저장된 데이터베이스와 데이터 사전을 관리하고 접근</li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Database" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[F/E] JavaScript</title><link href="http://localhost:4000/frontend/js1/" rel="alternate" type="text/html" title="[F/E] JavaScript" /><published>2022-10-09T00:00:00+09:00</published><updated>2022-10-30T00:00:00+09:00</updated><id>http://localhost:4000/frontend/js1</id><content type="html" xml:base="http://localhost:4000/frontend/js1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Backend" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[F/E] JavaScript</title><link href="http://localhost:4000/frontend/js1/" rel="alternate" type="text/html" title="[F/E] JavaScript" /><published>2022-10-09T00:00:00+09:00</published><updated>2022-10-30T00:00:00+09:00</updated><id>http://localhost:4000/frontend/js1</id><content type="html" xml:base="http://localhost:4000/frontend/js1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
 
