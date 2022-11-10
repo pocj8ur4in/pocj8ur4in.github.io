@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-08T14:18:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[D/B] 데이터베이스 (Database)</title><link href="http://localhost:4000/database/database1/" rel="alternate" type="text/html" title="[D/B] 데이터베이스 (Database)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-02T00:00:00+09:00</updated><id>http://localhost:4000/database/database1</id><content type="html" xml:base="http://localhost:4000/database/database1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-11T01:07:11+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[D/B] 데이터베이스 (Database)</title><link href="http://localhost:4000/database/database1/" rel="alternate" type="text/html" title="[D/B] 데이터베이스 (Database)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-02T00:00:00+09:00</updated><id>http://localhost:4000/database/database1</id><content type="html" xml:base="http://localhost:4000/database/database1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
 
@@ -1552,7 +1552,7 @@ var y = 'varY'; var z = 'varZ'
   <li>
     <h4 id="two-level-모델--중요한-작업은-one-to-one으로-나머지는-many-to-one으로-처리"><code class="language-plaintext highlighter-rouge">Two-Level</code> 모델 : 중요한 작업은 <code class="language-plaintext highlighter-rouge">One-to-One</code>으로, 나머지는 <code class="language-plaintext highlighter-rouge">Many-to-One</code>으로 처리</h4>
   </li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Backend" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Git] terminal로 Git 활용하기</title><link href="http://localhost:4000/git/git2/" rel="alternate" type="text/html" title="[Git] terminal로 Git 활용하기" /><published>2022-10-06T00:00:00+09:00</published><updated>2022-10-06T00:00:00+09:00</updated><id>http://localhost:4000/git/git2</id><content type="html" xml:base="http://localhost:4000/git/git2/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Backend" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Git] 깃 (Git)</title><link href="http://localhost:4000/git/git2/" rel="alternate" type="text/html" title="[Git] 깃 (Git)" /><published>2022-10-06T00:00:00+09:00</published><updated>2022-10-06T00:00:00+09:00</updated><id>http://localhost:4000/git/git2</id><content type="html" xml:base="http://localhost:4000/git/git2/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--info"><strong>이 항목은 macOS 기반으로 작성되었습니다.</strong><br />&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.</p>
 
@@ -1560,53 +1560,51 @@ var y = 'varY'; var z = 'varZ'
 
 <p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
 
-<h2 id="깃-git--분산형-버전-관리-시스템-version-control-system"><a href="https://git-scm.com">깃</a> (<code class="language-plaintext highlighter-rouge">Git</code>) : 분산형 버전 관리 시스템 (<code class="language-plaintext highlighter-rouge">Version Control System</code>)</h2>
+<h2 id="버전-관리-version-control--특정한-시간-기준으로-파일-변화를-저장하고-관리">버전 관리 (<code class="language-plaintext highlighter-rouge">Version Control</code>) : 특정한 시간 기준으로 파일 변화를 저장하고 관리</h2>
+<blockquote>
+  <p>버전 (<code class="language-plaintext highlighter-rouge">Version</code>) : 어떤 파일이 수정된 기록이나 그 파일이 수정된 내용</p>
+</blockquote>
+
+<ol>
+  <li>로컬 버전 관리 (<code class="language-plaintext highlighter-rouge">Local Version Control</code>)
+    <ul>
+      <li>사용자가 서버 없이 로컬 컴퓨터 내의 <code class="language-plaintext highlighter-rouge">D/B</code>를 이용해 파일의 변경 정보 관리</li>
+      <li>협업에서 사용하기 어려움, 내부 정보가 손상되면 복구할 방법이 없음</li>
+    </ul>
+  </li>
+  <li>중앙집중식 버전 관리 (<code class="language-plaintext highlighter-rouge">Central Version Control</code>) : 서브 머신 (<code class="language-plaintext highlighter-rouge">SVN</code>)
+    <ul>
+      <li>클라이언트가 최종본를 관리하는 <code class="language-plaintext highlighter-rouge">D/B</code> 서버로부터 개별 파일을 로컬에 다운로드, 수정본을 서버에 올림</li>
+      <li><code class="language-plaintext highlighter-rouge">D/B</code> 서버에 의존적, 협업의 규모가 커지면 수정 충돌 문제 발생 (유사 사례 : <a href="https://namu.wiki/w/편집%20충돌">나무위키 문서의 편집 충돌</a>)</li>
+    </ul>
+  </li>
+  <li>분산형 버전 관리 (<code class="language-plaintext highlighter-rouge">Distributed Version Control</code>) : 깃 (<code class="language-plaintext highlighter-rouge">Git</code>)
+    <ul>
+      <li>클라이언트가 최종본를 관리하는 <code class="language-plaintext highlighter-rouge">D/B</code> 서버로부터 수정할 개별 파일만이 아닌, 전체 프로젝트와 변경 이력을 다운로드</li>
+      <li>클라이언트가 <code class="language-plaintext highlighter-rouge">D/B</code> 서버에 관계없이 작업 가능, 클라이언트 혼자 프로젝트를 수정하기에 충돌의 염려 없이 작업 가능</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="깃-git--분산형-버전-관리-시스템-distributed-version-control-system"><a href="https://git-scm.com">깃</a> (<code class="language-plaintext highlighter-rouge">Git</code>) : 분산형 버전 관리 시스템 (<code class="language-plaintext highlighter-rouge">Distributed Version Control System</code>)</h2>
 <ul>
-  <li>버전 관리 (<code class="language-plaintext highlighter-rouge">Version Control</code>) : 문서를 수정할 때마다 구체적으로 저장하고 관리</li>
-  <li>백업 (<code class="language-plaintext highlighter-rouge">Backup</code>) : 현재문서를 원격 저장소에 저장</li>
-  <li>협업 (<code class="language-plaintext highlighter-rouge">Collaboration</code>) : 다른 팀원들과 원격 저장소를 통해 파일 공유</li>
+  <li>브랜치 저장소 (<code class="language-plaintext highlighter-rouge">Branch Repository</code>)</li>
+  <li>풀 리퀘스트 (<code class="language-plaintext highlighter-rouge">Pull Request</code>)</li>
 </ul>
 
-<h3 id="깃-설치">깃 설치</h3>
-<hr />
+<h3 id="git-디렉터리--깃의-버전-version이-저장될-디렉터리"><code class="language-plaintext highlighter-rouge">.git</code> 디렉터리 : 깃의 버전 (version)이 저장될 디렉터리</h3>
 
-<ul>
-  <li><a href="https://pocj8ur4in.github.io/mac/homebrew1/">해당 링크</a>를 통해 Homebrew 설치</li>
-  <li>Homebrew가 정상적으로 설치되었을 경우 터미널 창에 다음 명령어를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install git
-</code></pre></div></div>
-
-<ul>
-  <li>터미널 창에 다음 명령어를 입력해 Git이 정상적으로 설치되었는지 확인</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git --version
-// "git X.X.X" 출력 : 정상 설치
-// "zsh: command not found: brew" 출력 : 설치 오류
-</code></pre></div></div>
-
-<ul>
-  <li>터미널 창에 다음 명령어를 입력해 사용자 정보를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "pocj8ur4in"
-git config --global user.email "pocj8ur4in@gmail.com"
-</code></pre></div></div>
-
-<h2 id="git-디렉터리--깃-버전-version이-저장될-디렉터리"><code class="language-plaintext highlighter-rouge">.git</code> 디렉터리 : 깃 버전 (version)이 저장될 디렉터리</h2>
 <ul>
   <li>작업 트리 (<code class="language-plaintext highlighter-rouge">working tree</code>) : 파일 수정, 저장 등의 작업을 하는 작업 디렉터리</li>
   <li>스테이지 (<code class="language-plaintext highlighter-rouge">stage</code>) : 수정할 파일이 대기하는 스테이징 영역</li>
-  <li>리포지토리 (<code class="language-plaintext highlighter-rouge">repository</code>) : 스테이지에서 대기하고 있던 파일들을 버전으로 만들어 저장하는 저장소
-    <blockquote>
-      <p>이 때. 스테이지와 리포지토리는 <code class="language-plaintext highlighter-rouge">.git</code> 디렉터리에 저장된다.</p>
-    </blockquote>
-  </li>
+  <li>리포지토리 (<code class="language-plaintext highlighter-rouge">repository</code>) : 스테이지에서 대기하고 있던 파일들을 버전으로 만들어 저장하는 저장소</li>
 </ul>
 
-<h2 id="gitignore-디렉터리--버전-관리를-하지-않을-파일이나-디렉터리-혹은-파일-확장자를-제외할-디렉터리"><code class="language-plaintext highlighter-rouge">.gitignore</code> 디렉터리 : 버전 관리를 하지 않을 파일이나 디렉터리, 혹은 파일 확장자를 제외할 디렉터리</h2>
+<blockquote>
+  <p>작업 트리에서 이동된 파일들이 저장되는 영역인 스테이지와 리포지토리는 <code class="language-plaintext highlighter-rouge">.git</code> 디렉터리에 저장된다.</p>
+</blockquote>
+
+<h3 id="gitignore-디렉터리--버전-관리를-하지-않을-파일이나-디렉터리-혹은-파일-확장자를-제외할-디렉터리"><code class="language-plaintext highlighter-rouge">.gitignore</code> 디렉터리 : 버전 관리를 하지 않을 파일이나 디렉터리, 혹은 파일 확장자를 제외할 디렉터리</h3>
 
 <ul>
   <li>특정한 이름을 가진 파일 제외</li>
@@ -1614,24 +1612,28 @@ git config --global user.email "pocj8ur4in@gmail.com"
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>filename.txt
 </code></pre></div></div>
+
 <ul>
   <li>특정한 확장자를 가진 파일 제외</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.txt
 </code></pre></div></div>
+
 <ul>
   <li>특정한 경로 아래의 파일 제외</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder/
 </code></pre></div></div>
+
 <ul>
   <li>특정한 경로 아래의 특정한 확장자를 가진 파일 제외</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder/filename.txt
 </code></pre></div></div>
+
 <ul>
   <li>예외 만들기</li>
 </ul>
@@ -1639,54 +1641,46 @@ git config --global user.email "pocj8ur4in@gmail.com"
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>!filename.txt
 </code></pre></div></div>
 
-<h2 id="readmemd-파일--프로젝트에-대한-설명과-사용-방법-license-등의-내용이-작성된-마크다운-형식의-파일"><code class="language-plaintext highlighter-rouge">README.MD</code> 파일 : 프로젝트에 대한 설명과 사용 방법, LICENSE 등의 내용이 작성된 마크다운 형식의 파일</h2>
+<h3 id="readmemd-파일--프로젝트에-대한-설명과-사용-방법-license-등의-내용이-작성된-마크다운-형식의-파일"><code class="language-plaintext highlighter-rouge">README.MD</code> 파일 : 프로젝트에 대한 설명과 사용 방법, LICENSE 등의 내용이 작성된 마크다운 형식의 파일</h3>
+
 <ul>
   <li><code class="language-plaintext highlighter-rouge">Github</code> 프로젝트 리포지토리 페이지에서 <code class="language-plaintext highlighter-rouge">README.MD</code>가 표현된 것을 확인 가능</li>
 </ul>
 
-<h2 id="git--깃-명령-다음에-입력할-수-있는-명령어-옵션-확인"><code class="language-plaintext highlighter-rouge">git</code> : 깃 명령 다음에 입력할 수 있는 명령어 옵션 확인</h2>
+<p><code class="language-plaintext highlighter-rouge">git</code> : 깃 명령 다음에 입력할 수 있는 명령어 옵션 확인</p>
 
+<p><code class="language-plaintext highlighter-rouge">git init</code> : 깃 저장소 만들기</p>
+
+<p><code class="language-plaintext highlighter-rouge">git status</code> :  깃 상태 확인하기</p>
 <ul>
-  <li>
-    <h3 id="git-init--깃-저장소-만들기"><code class="language-plaintext highlighter-rouge">git init</code> : 깃 저장소 만들기</h3>
-  </li>
-  <li>
-    <h3 id="git-status---깃-상태-확인하기"><code class="language-plaintext highlighter-rouge">git status</code> :  깃 상태 확인하기</h3>
-    <p><code class="language-plaintext highlighter-rouge">untracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있지 않습니다. <br />(파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">N</code>)</p>
+  <li><code class="language-plaintext highlighter-rouge">untracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있지 않습니다. <br />(파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">N</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">tracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있습니다. <br />(파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">Y</code>)
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">tracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있습니다. <br />(파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">Y</code>)
-        <ul>
-          <li><code class="language-plaintext highlighter-rouge">unmodified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되지 않았습니다.</li>
-          <li><code class="language-plaintext highlighter-rouge">modified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되었습니다.</li>
-          <li><code class="language-plaintext highlighter-rouge">staged</code> 상태 :</li>
-        </ul>
-      </li>
+      <li><code class="language-plaintext highlighter-rouge">unmodified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되지 않았습니다.</li>
+      <li><code class="language-plaintext highlighter-rouge">modified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되었습니다.</li>
+      <li><code class="language-plaintext highlighter-rouge">staged</code> 상태 :</li>
     </ul>
   </li>
-  <li>
-    <h3 id="git-add--작업-트리에서-스테이지로-스테이징-staging"><code class="language-plaintext highlighter-rouge">git add</code> : 작업 트리에서 스테이지로 스테이징 (<code class="language-plaintext highlighter-rouge">staging</code>)</h3>
-  </li>
-  <li>
-    <h3 id="git-commit--스테이지에-있는-파일을-버전으로-커밋-commit"><code class="language-plaintext highlighter-rouge">git commit</code> : 스테이지에 있는 파일을 버전으로 커밋 (<code class="language-plaintext highlighter-rouge">commit</code>)</h3>
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">-m</code> 옵션을 통해 커밋과 함께 메시지 저장</li>
-      <li><code class="language-plaintext highlighter-rouge">-am</code> 옵션을 통해 스테이징과 커밋을 동시에 처리</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="git-log--리포지토리에-저장된-버전-정보-확인"><code class="language-plaintext highlighter-rouge">git log</code> : 리포지토리에 저장된 버전 정보 확인</h3>
-    <ul>
-      <li>커밋 해시 (<code class="language-plaintext highlighter-rouge">commit hash</code>) : 커밋을 구별하는 ID</li>
-      <li><code class="language-plaintext highlighter-rouge">HEAD-&gt;master</code> : 해당 버전이 가장 최신임을 표시</li>
-      <li>작성자 (<code class="language-plaintext highlighter-rouge">Author</code>) : <code class="language-plaintext highlighter-rouge">git config --global user</code>를 통해 입력한 사용자 정보 (이름과 이메일)</li>
-      <li>작성일 (<code class="language-plaintext highlighter-rouge">Date</code>) : 버전이 작성된 시각</li>
-      <li>커밋 메시지 (<code class="language-plaintext highlighter-rouge">commit message</code>) : <code class="language-plaintext highlighter-rouge">git commit -m</code>을 통해 저장된 메시지</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="git-diff--작업-트리와-스테이지에-있는-파일-비교"><code class="language-plaintext highlighter-rouge">git diff</code> : 작업 트리와 스테이지에 있는 파일 비교</h3>
-  </li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Git" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Git] 자주 쓰는 linux 기본 명령어</title><link href="http://localhost:4000/git/git3/" rel="alternate" type="text/html" title="[Git] 자주 쓰는 linux 기본 명령어" /><published>2022-10-06T00:00:00+09:00</published><updated>2022-10-08T00:00:00+09:00</updated><id>http://localhost:4000/git/git3</id><content type="html" xml:base="http://localhost:4000/git/git3/"><![CDATA[<p class="notice--info"><strong>이 항목은 macOS 기반으로 작성되었습니다.</strong><br />&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.</p>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">git add</code> : 작업 트리에서 스테이지로 스테이징 (<code class="language-plaintext highlighter-rouge">staging</code>)</p>
+
+<p><code class="language-plaintext highlighter-rouge">git commit</code> : 스테이지에 있는 파일을 버전으로 커밋 (<code class="language-plaintext highlighter-rouge">commit</code>)</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-m</code> 옵션을 통해 커밋과 함께 메시지 저장</li>
+  <li><code class="language-plaintext highlighter-rouge">-am</code> 옵션을 통해 스테이징과 커밋을 동시에 처리</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">git log</code> : 리포지토리에 저장된 버전 정보 확인</p>
+<ul>
+  <li>커밋 해시 (<code class="language-plaintext highlighter-rouge">commit hash</code>) : 커밋을 구별하는 ID</li>
+  <li><code class="language-plaintext highlighter-rouge">HEAD-&gt;master</code> : 해당 버전이 가장 최신임을 표시</li>
+  <li>작성자 (<code class="language-plaintext highlighter-rouge">Author</code>) : <code class="language-plaintext highlighter-rouge">git config --global user</code>를 통해 입력한 사용자 정보 (이름과 이메일)</li>
+  <li>작성일 (<code class="language-plaintext highlighter-rouge">Date</code>) : 버전이 작성된 시각</li>
+  <li>커밋 메시지 (<code class="language-plaintext highlighter-rouge">commit message</code>) : <code class="language-plaintext highlighter-rouge">git commit -m</code>을 통해 저장된 메시지</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">git diff</code> : 작업 트리와 스테이지에 있는 파일 비교</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Git" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Git] 자주 쓰는 linux 기본 명령어</title><link href="http://localhost:4000/git/git3/" rel="alternate" type="text/html" title="[Git] 자주 쓰는 linux 기본 명령어" /><published>2022-10-06T00:00:00+09:00</published><updated>2022-10-08T00:00:00+09:00</updated><id>http://localhost:4000/git/git3</id><content type="html" xml:base="http://localhost:4000/git/git3/"><![CDATA[<p class="notice--info"><strong>이 항목은 macOS 기반으로 작성되었습니다.</strong><br />&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.</p>
 
 <p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
 
