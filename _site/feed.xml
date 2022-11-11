@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-11T14:31:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[D/B] 데이터베이스 (Database)</title><link href="http://localhost:4000/database/database1/" rel="alternate" type="text/html" title="[D/B] 데이터베이스 (Database)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-02T00:00:00+09:00</updated><id>http://localhost:4000/database/database1</id><content type="html" xml:base="http://localhost:4000/database/database1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-11T15:13:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[D/B] 데이터베이스 (Database)</title><link href="http://localhost:4000/database/database1/" rel="alternate" type="text/html" title="[D/B] 데이터베이스 (Database)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-02T00:00:00+09:00</updated><id>http://localhost:4000/database/database1</id><content type="html" xml:base="http://localhost:4000/database/database1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
 
@@ -103,7 +103,9 @@
 <ul>
   <li>질의 처리기 (<code class="language-plaintext highlighter-rouge">Query Processor</code>) : 사용자의 데이터 처리 요구를 해석해 처리</li>
   <li>저장 데이터 관리자 (<code class="language-plaintext highlighter-rouge">Stored Data Manager</code>) : 디스크에 저장된 데이터베이스와 데이터 사전을 관리하고 접근</li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Database" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[B/E] 도커 (Docker)</title><link href="http://localhost:4000/backend/docker1/" rel="alternate" type="text/html" title="[B/E] 도커 (Docker)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-11T00:00:00+09:00</updated><id>http://localhost:4000/backend/docker1</id><content type="html" xml:base="http://localhost:4000/backend/docker1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Database" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[B/E] 도커 (Docker)</title><link href="http://localhost:4000/backend/docker1/" rel="alternate" type="text/html" title="[B/E] 도커 (Docker)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-11T00:00:00+09:00</updated><id>http://localhost:4000/backend/docker1</id><content type="html" xml:base="http://localhost:4000/backend/docker1/"><![CDATA[<p class="notice--info"><strong>이 항목은 macOS 기반으로 작성되었습니다.</strong><br />&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.</p>
+
+<p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
 
 <p class="notice--warning"><strong>이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.</strong><br />&gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.</p>
 
@@ -321,12 +323,12 @@ Server: ~
 
 <h2 id="도커-명령어-docker-command--docker-command-형식으로-구성">도커 명령어 (<code class="language-plaintext highlighter-rouge">Docker Command</code>) : <code class="language-plaintext highlighter-rouge">docker &lt;command&gt;</code> 형식으로 구성</h2>
 <ul>
-  <li>리눅스 터미널에 도커 명령어를 입력하면 도커 서버에서 이에 해당되는 작업 수행
-    <ul>
-      <li>항상 <code class="language-plaintext highlighter-rouge">root</code> 권한으로 실행되기에 <code class="language-plaintext highlighter-rouge">$ sudo</code>를 앞에 붙이지 않아도 됨</li>
-    </ul>
-  </li>
+  <li>리눅스 터미널에 도커 명령어를 입력하면 도커 서버에서 이에 해당되는 작업 수행</li>
+  <li>항상 <code class="language-plaintext highlighter-rouge">root</code> 권한으로 실행되기에 <code class="language-plaintext highlighter-rouge">$ sudo</code>를 앞에 붙어야 함</li>
 </ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo usermod -aG docker $USER # 현재 사용자를 docker 그룹에 추가
+</code></pre></div></div>
 
 <div style="text-align: center;">
     <table>
@@ -473,7 +475,7 @@ Server: ~
             </tr>
          </tbody>
     </table>
-</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Backend" /><summary type="html"><![CDATA[이 항목은 현재 작성중입니다.&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[F/E] JavaScript</title><link href="http://localhost:4000/frontend/js1/" rel="alternate" type="text/html" title="[F/E] JavaScript" /><published>2022-10-09T00:00:00+09:00</published><updated>2022-10-30T00:00:00+09:00</updated><id>http://localhost:4000/frontend/js1</id><content type="html" xml:base="http://localhost:4000/frontend/js1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
+</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Backend" /><summary type="html"><![CDATA[이 항목은 macOS 기반으로 작성되었습니다.&gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[F/E] JavaScript</title><link href="http://localhost:4000/frontend/js1/" rel="alternate" type="text/html" title="[F/E] JavaScript" /><published>2022-10-09T00:00:00+09:00</published><updated>2022-10-30T00:00:00+09:00</updated><id>http://localhost:4000/frontend/js1</id><content type="html" xml:base="http://localhost:4000/frontend/js1/"><![CDATA[<p class="notice--primary"><strong>이 항목은 현재 작성중입니다.</strong><br />&gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.</p>
 
 <p class="notice--danger"><strong>이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.</strong><br />&gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.</p>
 
