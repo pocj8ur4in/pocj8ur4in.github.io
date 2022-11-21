@@ -82,4 +82,10 @@ var store = [{
         "tags": [],
         "url": "/backend/spring1/",
         "teaser": null
+      },{
+        "title": "[B/E] API",
+        "excerpt":"이 항목은 현재 작성중입니다. &gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.   이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다. &gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.   API (Application Programming Interface) : 어플리케이션 프로그래밍 인터페이스     응용 프로그램에게 운영 체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 인터페이스            주로 파일 제어, 창 제어, 화상 처리, 문자 제어 등을 위한 인터페이스 제공       컴퓨터 프로그램 간 정보를 교환 가능하도록 함           JSON,  XML, OAuth, Open API, Web Socket API, RPC   라이브러리 (Library) : 플랫폼에서 바로 실행될 수 있도록 API를 바탕으로 구현된 모듈화된 프로그램의 집합     프로그래밍에서 라이브러리를 사용할 때 메소드가 어떻게 구현되었는지 알 수 없으나, 인터페이스만 알면 사용할 수 있음           API와 라이브러리의 차이? : 실제로 구현되었는가?                API : 응용 프로그램을 개발하는 데 있어 호환성을 위해 지켜야 하는 추상적인 원칙         라이브러리 : API를 기반으로 개발자에게 기능을 제공하기 위해 구현된 구현체         SDK (Software Development Kit) : API가 라이브러리와 함께 제공                  REST API : REST를 기반으로 API를 구현한 것   REST : 자원을 이름으로 구분하고, 해당 자원의 상태를 교환하는 모든 것     HTTP URI를 통해 자원의 표현 명시   HTTP Method를 통해 해당 자원의 HTTP URI에 대한 CRUD Operation (Create, Read, Update, Delete) 적용         자원 : HTTP URL   자원에 대한 동작 : HTTP Method   자원에 대한 동작의 내용 : HTTP Message Pay Load   서버-클라이언트 구조 (Server-Client)     클라이언트 (Client) : 자원을 요청하는 쪽            사용자 인증이나 세션이나 로그인 정보 등을 직접 관리           서버 (Server) : 자원을 응답하는 쪽            API를 제공하고 비즈니스 로직을 처리하고 저장           무상태 (Stateless) : 서버가 클라이언트의 세션 상태 및 쿠키를 저장하지 않는 네트워크 프로토콜     HTTP 프로토콜은 Stateless Protocol이므로 REST 역시 무상태            서버가 클라이언트의 요청에 대한 응답만 처리하고, 세션 상태나 쿠키를 저장하지 않아 구현이 단순해짐       서버는 클라이언트가 보낸 이전의 요청과 이후의 요청을 완전히 별개의 것으로 인식하고 처리                    이전 요청이 다음 요청의 처리에 연관되어서는 안됨                          ","categories": ["Backend"],
+        "tags": [],
+        "url": "/backend/api1/",
+        "teaser": null
       }]
