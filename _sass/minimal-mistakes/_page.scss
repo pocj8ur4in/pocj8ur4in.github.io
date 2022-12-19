@@ -47,6 +47,14 @@ body {
     padding-right: $right-sidebar-width;
   }
 
+  .page__content {
+    /* paragraph indents */
+    p {
+      line-height: 2; // 가독성을 위해 줄 간격 추가
+    }
+  }
+  
+
   .page__inner-wrap {
     float: left;
     margin-top: 1em;
