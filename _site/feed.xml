@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-02T18:27:27+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Github Pages] 2. 개발 블로그는 어디에 만들어야 하나요?</title><link href="http://localhost:4000/github.pages/blog2/" rel="alternate" type="text/html" title="[Github Pages] 2. 개발 블로그는 어디에 만들어야 하나요?" /><published>2023-04-01T00:00:00+09:00</published><updated>2023-04-01T00:00:00+09:00</updated><id>http://localhost:4000/github.pages/blog2</id><content type="html" xml:base="http://localhost:4000/github.pages/blog2/"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-04T00:16:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Github Pages] 3. Github Pages 블로그 소개</title><link href="http://localhost:4000/github.pages/blog3/" rel="alternate" type="text/html" title="[Github Pages] 3. Github Pages 블로그 소개" /><published>2023-04-02T00:00:00+09:00</published><updated>2023-04-02T00:00:00+09:00</updated><id>http://localhost:4000/github.pages/blog3</id><content type="html" xml:base="http://localhost:4000/github.pages/blog3/"><![CDATA[<blockquote>
+  <p>사실 이전 포스트에서 Github Pages에 대한 내용이 있어 좀 중복되는 느낌이 들 수도 있다. 하지만, 이 포스트에서는 Github Pages의 원리를 짚어보고자 작성한 것이니 혹시 모르는 사람들은 한번 읽어보자.</p>
+</blockquote>
+
+<h2 id="github-pages-블로그란">Github Pages 블로그란?</h2>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/229191108-c3f52e0c-4b2b-46af-9e07-5c59bd89183d.jpeg" alt="image" /></p>
+
+<h3 id="정적-웹사이트-생성기-ssg-static-site-generator">정적 웹사이트 생성기 (SSG; Static Site Generator)</h3>
+
+<p>많은 사람들이 Github Pages로 블로그를 사용하고 있어 이를 블로그 서비스로 인식하기 쉽지만, 사실 Github Pages는 Github에서 제공하는 정적 웹 사이트 호스팅 서비스이다. 그리고 정적 웹 사이트 호스팅 서비스를 가능하게 하는 것이 바로 SSG이다.<br /></p>
+
+<p>SSG로 생성된 사이트는 모든 웹 페이지를 미리 생성하고, 방문자로부터 요칭이 들어오면 미리 만든 웹 페이지를 그대로 응답해준다. 그러므로 서버와 클라이언트 모두 렌더링을 위한 작업이 거의 없기 때문에, SSG로 생성된 웹 사이트는 속도가 매우 빠른 장점을 가진다. 그리고 SSG로 생성된 사이트는 미리 만들어놓은 수많은 웹 페이지로 이루어져 있는 구조라 검색엔진 최적화 (SEO; Search Engine Optimization)가 뛰어나 검색엔진이 사이트를 크롤링하는 데에 적합하다.<br /></p>
+
+<p>그러나 빌드할 때마다 모든 웹 페이지를 생성하는 작업을 매번 하다보니, 컨텐츠를 자주 업데이트하는 웹 사이트나 규모가 커 빌드 시간이 오래 걸리는 웹 사이트에서는 큰 비효율성이 발생해 SSG보다는 다른 렌더링 기술을 사용한다. 그래서 SSG는 개인 블로그와 같이 컨텐츠의 변경이 자주 일어나지 않은, 소규모 웹 사이트를 제작할 때 많이 쓰이는 기술이다. (SSG 외에도 SPA, SSR과 같은 렌더링 기술이 있는데, 달레 님께서 <a href="https://www.daleseo.com/spa-ssg-ssr/">SPA와 SSG, 그리고 SSR</a>이라는 글에서 잘 정리해주셨으니 참고하길 바란다.)<br /></p>
+
+<p>지금 현재 내가 사용하고 있는 Github Pages 테마인 <a href="https://mmistakes.github.io/minimal-mistakes/">Minimal Mistakes</a>는 Jekyll을 정적 웹사이트 생성기로 사용한다. Jekyll 외에도 Hexo, Hugo와 같은 여러 정적 웹사이트 생성기들이 존재하는데, 이들을 간단하게 비교해보자.</p>
+
+<ul>
+  <li><a href="https://jekyllrb-ko.github.io">Jekyll</a>
+    <ul>
+      <li>Ruby 기반</li>
+      <li>가장 많이 쓰이고, 한글 래퍼런스 많음</li>
+      <li>Github Pages에서 공식으로 지원 : push한 글들이 별도의 빌드 과정 없이 알아서 Publish</li>
+      <li>글이 많아질수록 전체 빌드 속도가 느려짐
+<br /><br /></li>
+    </ul>
+  </li>
+  <li><a href="https://hexo.io/ko/index.html">Hexo</a>
+    <ul>
+      <li>Node.js (javascript) 기반</li>
+      <li>(javascript를 써서 그런지) 한글 래퍼런스 많음</li>
+      <li><a href="https://www.holaxprogramming.com/2017/04/16/github-page-and-hexo/">Hexo로 블로그를 만들 때 참고할 만한 글</a>
+<br /><br /></li>
+    </ul>
+  </li>
+  <li><a href="https://gohugo.io">Hugo</a>
+    <ul>
+      <li>Golang 기반</li>
+      <li>런타임에 다른 의존성이 필요하지 않아, 빌드 과정을 포함해도 빌드 속도가 빠른 편</li>
+      <li>한글 래퍼런스는 상대적으로 적음</li>
+      <li><a href="https://github.com/Integerous/Integerous.github.io">Hugo로 블로그를 만들 때 참고할 만한 글</a>
+<br /><br /></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="지킬-jekyll">지킬 (Jekyll)</h3>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/229413193-0534897e-6fdc-4c1a-888e-8e2e011045c5.jpg" alt="jekyll-logo" /></p>
+
+<p>사실 SSG 중에 Jekyll이 좋은 거 같아 골랐다기보단, Minimal Mistakes 테마가 내 마음에 들어서 설치했는데 그게 Jekyll을 쓰더라…의 흐름으로 쓰게 된 거고, Jekyll 말고도 다른 SSG가 있는 것을 알게 된 이후에도 어차피 다 같은 SSG인데 Jekyll 말고 굳이 다른 거를 배워서 쓸 필요성을 못 느끼겠어서 Jekyll을 계속 사용하고 있긴 하다. 일단 Jekyll이 어떤 방식으로 동작하는지 정리해보겠다. (사실 SSG와 동일한 원리인데, 이를 구체화한 것으로 생각하면 된다.)<br /></p>
+
+<p>Jekyll은 동적 웹 사이트 (Dynamic Web Site)과 동일하게, 레이아웃에 해당하는 templates과 컨텐츠에 해당하는 contents를 분리해 저장한다. (이때 Jekyll에서 templates을 작성할 때 사용하는 언어가 Liquid이고, contents를 작성할 때 사용하는 언어가 markdown이다.) 하지만 동적 사이트와 달리, Jekyll은 templates와 contents을 합친 HTML 문서를 미리 빌드해 저장하고, 방문자가 요청을 보내면 정적 컨텐츠에 해당하는 HTML 문서를 전송한다.<br /></p>
+
+<p>그래서 Jekyll은 웹 사이트를 운영하기 위한 HTML 관련 지식을 몰라도, .md 파일로 문서를 작성하면 HTML 파일로 이를 변환해주는 작업을 해주며 변환된 결과물을 토대로 웹 사이트를 구축해서 서비스해준다.</p>
+
+<h3 id="깃허브-페이지-github-pages">깃허브 페이지 (Github Pages)</h3>
+
+<p>상술하였듯 <a href="https://pages.github.com">Github Pages</a>는 Github에서 제공하는 정적 사이트 호스팅 서비스로, 무료 계정에 한해 하나의 Github Pages를 무료로 제공한다. Github Pages는 연동된 Github 저장소에서 HTML, CSS, JavaScript와 같은 정적 컨텐츠를 가져와 그대로 배포하는 방식으로 작동한다. 만약 Github 저장소가 Jekyll 디렉토리의 형태로 존재한다면, Github Pages는 해당 저장소가 Jekyll로 작성된 것임을 알고 이를 Jekyll로 빌드해 배포한다.<br /></p>
+
+<blockquote>
+  <p>Reference</p>
+  <ul>
+    <li>SW developer 님이 작성하신, <a href="https://devinlife.com/howto/">GitHub Pages 블로그 따라하기</a></li>
+    <li>Wheel 님이 작성하신, <a href="https://heekangpark.github.io/categories#jekyll">지킬 (Jekyll)</a></li>
+  </ul>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github.Pages" /><summary type="html"><![CDATA[사실 이전 포스트에서 Github Pages에 대한 내용이 있어 좀 중복되는 느낌이 들 수도 있다. 하지만, 이 포스트에서는 Github Pages의 원리를 짚어보고자 작성한 것이니 혹시 모르는 사람들은 한번 읽어보자.]]></summary></entry><entry><title type="html">[Github Pages] 2. 개발 블로그는 어디에 만들어야 하나요?</title><link href="http://localhost:4000/github.pages/blog2/" rel="alternate" type="text/html" title="[Github Pages] 2. 개발 블로그는 어디에 만들어야 하나요?" /><published>2023-04-01T00:00:00+09:00</published><updated>2023-04-01T00:00:00+09:00</updated><id>http://localhost:4000/github.pages/blog2</id><content type="html" xml:base="http://localhost:4000/github.pages/blog2/"><![CDATA[<blockquote>
   <p>글을 시작하기 앞서, 이 내용은 매우 주관적인 판단이 들어간 서술이 많다. 나야 보시다시피 Github Pages를 사용하지만 다른 사람들은 여러 이유로 다양한 플랫폼을 사용할 것이고, 그 부분을 지적하거나 문제시하는 게 아님을 분명히 밝힌다. 이 글은 어디까지나 개발 블로그로 사용되는 여러 플랫폼에 대해 이야기해보는 과정을 통해 개발 블로그를 처음 만드는 개발자들이 이런 부분을 고려했으면 좋겠다, 는 취지로 작성된 것이다.</p>
 </blockquote>
 
@@ -13,7 +80,10 @@
 <p><img src="https://user-images.githubusercontent.com/105341168/229183807-164771aa-00b8-4871-9816-d045e1623345.png" alt="img" /></p>
 
 <blockquote>
-  <p>예시 : <a href="https://jojoldu.tistory.com">기억보단 기록을</a></p>
+  <p>Example</p>
+  <ul>
+    <li>이동욱 님이 운영하시는, <a href="https://jojoldu.tistory.com">기억보단 기록을</a></li>
+  </ul>
 </blockquote>
 
 <p>2006년에 창립되어 네이버처럼 국내에서 보편적으로 많이 쓰이는 블로그 플랫폼이다. 옛날엔 초대장 시스템이 있어서 사용자들의 접근성이 다소 떨어졌는데, 이게 사라지고 나서는 많이들 사용하는 것 같다. 예전에는 다음이 운영했는데, 다음이랑 카카오가 합병된 이후로는 카카오가 운영중인 것 같다.<br /></p>
@@ -31,7 +101,10 @@
 <p><img src="https://user-images.githubusercontent.com/105341168/229189060-753356e0-10a1-424c-85e3-3df61b079214.png" alt="CleanShot 2023-04-01 at 02 24 20@2x" /></p>
 
 <blockquote>
-  <p>예시 : <a href="https://brunch.co.kr/@springboot#articles">에디의 기술블로그</a></p>
+  <p>Example</p>
+  <ul>
+    <li>옛날개발자 님이 운영하시는, <a href="https://brunch.co.kr/@springboot#articles">에디의 기술블로그</a></li>
+  </ul>
 </blockquote>
 
 <p>브런치는 2015년에 카카오가 글쓰기에 최적화된 플랫폼을 만든다는 야심찬 목표를 갖고 오픈한 블로그 플랫폼이다. 이곳에 글을 올리려면 작가 신청을 하고 에디터팀의 승인 심사에 합격해야 한다고 한다. 그래서 브런치에서 개발 블로그를 몇개 보긴 했는데도, 솔직히 난 소설 글쓰기 플랫폼으로 알고 있었다…<br /></p>
@@ -42,7 +115,11 @@
 <p><img src="https://user-images.githubusercontent.com/105341168/229185067-3110e063-e89a-4312-ab09-981074a7a522.png" alt="cc0998ee99506" /></p>
 
 <blockquote>
-  <p>예시 : <a href="https://medium.com/@moonformeli">Moon 님의 medium</a>, <a href="https://medium.com/@moonformeli">박상권 님의 medium</a></p>
+  <p>Example</p>
+  <ul>
+    <li>Moon 님이 운영하시는, <a href="https://medium.com/@moonformeli">medium</a></li>
+    <li>박상권 님이 운영하시는, <a href="https://medium.com/@moonformeli">medium</a></li>
+  </ul>
 </blockquote>
 
 <p>미디엄은 2012년 <a href="https://ko.m.wikipedia.org/wiki/에번_윌리엄스_(기업인)">에반 윌리엄스</a>가 만든 소셜 네트워크 서비스이다. 플랫폼을 처음 보았을 때에는 트위터나 링크드인과 같은 소셜 네트워크 서비스의 느낌이 강해 보였는데, 글을 작성하려 할 때 나오는 메모장 화면이 직관적이라 굉장히 좋았다. (미디엄이 글 쓸 때 나오는 한글 폰트가 구리다는 얘기가 많은데, 확장 프로그램 깔면 해결되는 부분이라 생각해 일단 나는 고려하지 않았다.)<br /></p>
@@ -53,7 +130,10 @@
 <p><img src="https://user-images.githubusercontent.com/105341168/229185749-c6702213-0a15-49c2-9f54-8255d8c81402.jpg" alt="notion1411" /></p>
 
 <blockquote>
-  <p>예시 : <a href="https://younho9.notion.site/younho9-Blog-9ed630c8603541bab20662b4854a891f">younho9 님의 notion</a></p>
+  <p>Example</p>
+  <ul>
+    <li>younho9 님이 운영하시는, <a href="https://younho9.notion.site/younho9-Blog-9ed630c8603541bab20662b4854a891f">notion</a></li>
+  </ul>
 </blockquote>
 
 <p>나는 옛날부터 노트에 무언가를 적는 것을 선호해서 스마트폰을 산 뒤로 애플 메모, 네이버 메모, 마이크로스프트 원노트, 에버노트 순으로 메모 앱을 사용했는데 뭔가 아쉬운 점이 한두 개씩은 있엇다. 그런데 노션을 2019년즘에 처음 사용하고 나서는 너무 만족해서 쭈욱 사용하고 있다. 메모 앱으로는.<br /></p>
@@ -84,7 +164,11 @@
 <p><img src="https://user-images.githubusercontent.com/105341168/229191108-c3f52e0c-4b2b-46af-9e07-5c59bd89183d.jpeg" alt="image" /></p>
 
 <blockquote>
-  <p>예시 : <a href="https://jbee.io">JBEE.io</a>, <a href="https://johngrib.github.io">기억 보조용 위키</a></p>
+  <p>Example</p>
+  <ul>
+    <li>한재엽 님이 운영하시는, <a href="https://jbee.io">JBEE.io</a></li>
+    <li>이종립 님이 운영하시는, <a href="https://johngrib.github.io">기억 보조용 위키</a></li>
+  </ul>
 </blockquote>
 
 <p>Github Blog라는 하나의 서비스가 존재하는 건 아니고, Github가 제공하는 Github Pages를 이용해 Github 저장소에 블로그나 웹 사이트 같은 웹 서비스를 호스팅하는 방식이다. 아무래도 지금 내가 사용하고 있는 거기도 하고 지난 6개월간 공부하고 경험한 것도 있기에 이 부분을 조금 상세히 언급해보고자 한다.</p>
@@ -93,14 +177,14 @@
   <li>긍정적인 점
     <ul>
       <li>커스터마이징의 자유도가 엄청나게 높다. 나처럼 Github Pages용 오픈 소스 테마을 이용해도 되고 아예 처음부터 설계해 만드는 것 또한 가능하다. 구글 검색에 내 블로그를 노출시킬 수도 있고, 구글 애드센스를 통해 광고를 달아줄 수도 있다.</li>
-      <li>Github에 저장소로 올라가는 방식으므로 Github와 연동이 된다. 로컬에서 블로그를 쉽게 편집하고 관리할 수 있으며, 커밋과 푸시로 글을 등록하면 된다. Github 저장소에 백업이 되어 있기 때문에 이를 다운받아 사용할 수도 있고, 필요한 경우 롤백하는 것도 가능하다.</li>
+      <li>Github에 저장소로 올라가는 방식으므로 Github와 연동이 된다. 로컬에서 블로그를 쉽게 편집하고 관리할 수 있으며, commit과 push로 글을 등록하면 된다. Github 저장소에 백업이 되어 있기 때문에 이를 다운받아 사용할 수도 있고, 필요한 경우 롤백하는 것도 가능하다.</li>
       <li>마크다운 형식으로 작성하는 것을 지원하고, 코드 블룩이나 인용 블록 또한 지원한다. 게시글 하나하나가 .md 파일이라 나중에 플랫폼을 이전한다 하더라도 이를 다시 활용하는 것 또한 가능하다. 
 <br /><br /></li>
     </ul>
   </li>
   <li>복합적인 점
     <ul>
-      <li>워드프레스 블로그처럼 진입장벽이 높다. 처음에 웹 사이트의 소스 코드를 올리거나 수정하는 작업이 필요하므로 최소한 깃이랑 마크다운을 어떻게 사용하는지는 알아야 한다. 블로그를 이것저것 건들려고 한다면 백엔드 관련 지식이 요구되고, 커스터마이징을 해보려면 간단한 프론트엔드 관련 지식 또한 필요해진다. 물론 웹 개발자를 지망한다면 이런 일련의 과정을 한번 하는 것도 도움이 된다.</li>
+      <li>워드프레스 블로그만큼은 아니지만, 진입장벽이 존재한다. 처음에 웹 사이트의 소스 코드를 올리거나 수정하는 작업이 필요하므로 최소한 git이랑 markdown을 어떻게 사용하는지는 알아야 한다. 블로그를 이것저것 건드려보려고 한다면 백엔드 관련 지식이 요구되고, 커스터마이징을 해보려면 간단한 프론트엔드 관련 지식 또한 필요해진다. 물론 웹 개발자를 지망한다면 이런 일련의 과정을 한번 하는 것도 도움이 된다.</li>
       <li>Github 저장소에 올라가는 방식이므로 저장소 내의 소스 코드가 모두 공개된다. 블로그를 노출시키고 싶지만 블로그 내부까지 노출시키고 싶지 않는다면, 유료 걔정으로 전환해서 비공개로 전환해야 한다.</li>
       <li>하나의 Github 저장소는 용량과 트래픽에 제한이 존재한다. (1GB의 최대 용량, 월 100GB의 트래픽 제한) 제한을 넘어서 사용하려면 Cloudflare과 같은 CDN을 추가로 사용해야 한다. 일단은 한도 내에서만 쓰면 무료인 것은 장점이지만, 한도를 넘어버린다면 돈을 써야하니 용량이 있는 파일을 올리는 것과 같은 경우에 주의할 필요가 있다.
 <br /><br /></li>
@@ -116,12 +200,15 @@
   </li>
 </ul>
 
-<p>나는 Github Pages 블로그를 운영하는 것은 장단점이 매우 명확해 개개인마다의 호불호가 엄청 갈릴 수 밖에 없다고 생각한다. 실제로 Github Pages 블로그를 운영하시다가 다른 블로그 플랫폼으로 이주하시는 분들도 많이 보았고 나 또한 블로그를 개설하면서, 그리고 개설된 블로그를 운영하면서도 이주할지말지에 대해 많이 고민했었다.<br /></p>
+<p>나는 Github Pages 블로그를 운영하는 것은 장단점이 매우 명확해 개개인마다의 호불호가 엄청 갈릴 수 밖에 없다고 생각한다. 실제로 Github Pages 블로그를 운영하시다가 다른 블로그 플랫폼으로 이주하시는 분들도 많이 보았고 나 또한 블로그를 개설하면서, 그리고 개설된 블로그를 운영하면서도 이주할지말지에 대해 많이 고민했었다. <br /></p>
 
-<p>그럼에도 내가 Github Pages를 계속해서 운영하는지는… 다음 포스트에서 이야기하도록 하자!</p>
+<p>그래도 내가 Github Pages 블로그를 운영하는 데에는 <b>git을 이용해 블로그를 관리할 수 있다는 것</b>과 <b>블로그 운영을 통해 웹 개발의 전반적인 과정을 학습해볼 수 있다는 점</b>이 가장 큰 이유인 것 같다. Github Pages 블로그를 개설할 때에는, 정말 아무것도 모르는 감자 (…)라서 많이 헤맸다. 그래서 처음에는 블로그와 연동되는 git에 대해 공부하고자 <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=302554047">Do it! 지옥에서 온 문서 관리자 깃 &amp; 깃허브 입문</a>이라는 도서를 구매해서 공부해보고, 그 다음에는 블로그를 커스터마이징해보려고 <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=260564604">Do it! HTML+CSS+자바스크립트 웹 표준의 정석</a>이라는 도서를 구매해서 공부해보고 이를 최대한 적용해보는 식으로 실습하였다. 이렇게 블로그를 성장시키려고 노력하는 과정 속에서 나 또한 많이 성장할 수 있었고, 앞으로도 이런 blog-driven이 잘 이루어졌으면 하는 것이 내 바램이다.</p>
 
 <blockquote>
-  <p>참고 : <a href="https://velog.io/@productuidev/PREV-Portfolio-1-ProjectBlog#개발-블로그--github">개발자 취업준비 (포트폴리오/블로그)</a></p>
+  <p>Reference</p>
+  <ul>
+    <li>productuidev 님이 작성하신, <a href="https://velog.io/@productuidev/PREV-Portfolio-1-ProjectBlog#개발-블로그--github">개발자 취업준비 (포트폴리오/블로그)</a></li>
+  </ul>
 </blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github.Pages" /><summary type="html"><![CDATA[글을 시작하기 앞서, 이 내용은 매우 주관적인 판단이 들어간 서술이 많다. 나야 보시다시피 Github Pages를 사용하지만 다른 사람들은 여러 이유로 다양한 플랫폼을 사용할 것이고, 그 부분을 지적하거나 문제시하는 게 아님을 분명히 밝힌다. 이 글은 어디까지나 개발 블로그로 사용되는 여러 플랫폼에 대해 이야기해보는 과정을 통해 개발 블로그를 처음 만드는 개발자들이 이런 부분을 고려했으면 좋겠다, 는 취지로 작성된 것이다.]]></summary></entry><entry><title type="html">[Github Pages] 1. 개발자에게 개발 블로그는 왜 필요한가요?</title><link href="http://localhost:4000/github.pages/blog1/" rel="alternate" type="text/html" title="[Github Pages] 1. 개발자에게 개발 블로그는 왜 필요한가요?" /><published>2023-03-31T00:00:00+09:00</published><updated>2023-03-31T00:00:00+09:00</updated><id>http://localhost:4000/github.pages/blog1</id><content type="html" xml:base="http://localhost:4000/github.pages/blog1/"><![CDATA[<blockquote>
   <p>내가 아직 취업 시장에 발도 담구지 않은 대학생인데 내가 개발 블로그의 필요성에 대해 논하는 것이 의미가 있는 걸까? 라는 의문이 들어 작년에 작성한 글에서는 이 부분을 짚어보지 않았다. 하지만 이 부분을 뺀 채로 블로그를 운영하다보니, 처음에 내가 가졌었던 생각이나 느낌이 희석되어 여러 가지를 이유로 들며 블로그 운영을 게을리한 것 같다. 그래서 지난 6개월간 내가 작성한 내용을 다시 정리하기 앞서, 이 부분에 대해 이야기하고자 한다.</p>
 </blockquote>
@@ -150,5 +237,9 @@
 <p>요즘 IT 기업들이 지원자의 개발 블로그나 Github의 주소를 요구하는 것 또한 그런 맥락일 것이다. 기업 입장에서는 모든 점에서 뛰어난 인재를 채용하고자 하겠지만, 그것은 매우 소수이다. 그래서 기업은 지원자의 잠재력 또한 확인해 평가하고자 노력한다. 그리고 이런 부분은 개발과 직접적으로 관련되어 있지만 단순한 결과물의 집합체인 이력서나 포트폴리오보다는, 성장하는 데에 있어 중요한 가치를 엿볼 수 있는 개발 블로그나 Github에 잘 들어난다.</p>
 
 <blockquote>
-  <p>참고 : <a href="https://taegon.kim/archives/7107">개발자가 블로그를 운영해야 할 이유</a>, <a href="https://velog.io/@productuidev/PREV-Portfolio-1-ProjectBlog#개발-블로그--github">개발자 취업준비 (포트폴리오/블로그)</a></p>
+  <p>Reference</p>
+  <ul>
+    <li>코드쓰는사림 님이 작성하신, <a href="https://taegon.kim/archives/7107">개발자가 블로그를 운영해야 할 이유</a></li>
+    <li>productuidev 님이 작성하신, <a href="https://velog.io/@productuidev/PREV-Portfolio-1-ProjectBlog#개발-블로그--github">개발자 취업준비 (포트폴리오/블로그)</a></li>
+  </ul>
 </blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github.Pages" /><summary type="html"><![CDATA[내가 아직 취업 시장에 발도 담구지 않은 대학생인데 내가 개발 블로그의 필요성에 대해 논하는 것이 의미가 있는 걸까? 라는 의문이 들어 작년에 작성한 글에서는 이 부분을 짚어보지 않았다. 하지만 이 부분을 뺀 채로 블로그를 운영하다보니, 처음에 내가 가졌었던 생각이나 느낌이 희석되어 여러 가지를 이유로 들며 블로그 운영을 게을리한 것 같다. 그래서 지난 6개월간 내가 작성한 내용을 다시 정리하기 앞서, 이 부분에 대해 이야기하고자 한다.]]></summary></entry></feed>
