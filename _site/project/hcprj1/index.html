@@ -1,0 +1,833 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[H.C.Prj] 04/04 진행 내용 - pocj8ur4in’s blog</title>
+<meta name="description" content="현재 내가 다니고 있는 대학교에는 1학기 동안 자기가 원하는 수업을 설계하고 이를 전행하여 교수님들께 평가받는 수업이 있는데, 내가 속해 있는 팀이 이번 학기에 이를 지원해 수강하게 되었다. 나는 이번 기회를 이용해 하나의 완성된 사이트를 배포하는 것을 목표로 하는 프로젝트를 진행하고자 하였다. 원래는 기획과 설계에 대한 글을 먼저 올리는 게 맞겠지만, 학교 행정상의 문제로 인해 이를 학기중에 게시하면 안된다고 전달받아서, 일단 Github 저장소에 커밋한 내용을 기반으로 매일 진행한 내용들과 내가 코드를 쓰면서 참고한 내용들을 정리하고자 한다. 일단은 하루하루 공부한 내용을 기록하는 TIL처럼, 매일 진행한 커밋 하나하나에 대해 글을 쓰는 것이 목표이다.">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[H.C.Prj] 04/04 진행 내용">
+<meta property="og:url" content="http://localhost:4000/project/hcprj1/">
+
+
+  <meta property="og:description" content="현재 내가 다니고 있는 대학교에는 1학기 동안 자기가 원하는 수업을 설계하고 이를 전행하여 교수님들께 평가받는 수업이 있는데, 내가 속해 있는 팀이 이번 학기에 이를 지원해 수강하게 되었다. 나는 이번 기회를 이용해 하나의 완성된 사이트를 배포하는 것을 목표로 하는 프로젝트를 진행하고자 하였다. 원래는 기획과 설계에 대한 글을 먼저 올리는 게 맞겠지만, 학교 행정상의 문제로 인해 이를 학기중에 게시하면 안된다고 전달받아서, 일단 Github 저장소에 커밋한 내용을 기반으로 매일 진행한 내용들과 내가 코드를 쓰면서 참고한 내용들을 정리하고자 한다. 일단은 하루하루 공부한 내용을 기록하는 TIL처럼, 매일 진행한 커밋 하나하나에 대해 글을 쓰는 것이 목표이다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-04-04T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2023-04-04T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/project/hcprj1/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">카테고리</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">태그</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#project" itemprop="item"><span itemprop="name">Project</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">[H.C.Prj] 04/04 진행 내용</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[H.C.Prj] 04/04 진행 내용">
+    <meta itemprop="description" content="  현재 내가 다니고 있는 대학교에는 1학기 동안 자기가 원하는 수업을 설계하고 이를 전행하여 교수님들께 평가받는 수업이 있는데, 내가 속해 있는 팀이 이번 학기에 이를 지원해 수강하게 되었다. 나는 이번 기회를 이용해 하나의 완성된 사이트를 배포하는 것을 목표로 하는 프로젝트를 진행하고자 하였다. 원래는 기획과 설계에 대한 글을 먼저 올리는 게 맞겠지만, 학교 행정상의 문제로 인해 이를 학기중에 게시하면 안된다고 전달받아서, 일단 Github 저장소에 커밋한 내용을 기반으로 매일 진행한 내용들과 내가 코드를 쓰면서 참고한 내용들을 정리하고자 한다. 일단은 하루하루 공부한 내용을 기록하는 TIL처럼, 매일 진행한 커밋 하나하나에 대해 글을 쓰는 것이 목표이다.">
+    <meta itemprop="datePublished" content="2023-04-04T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2023-04-04T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/project/hcprj1/" class="u-url" itemprop="url">[H.C.Prj] 04/04 진행 내용
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#1-chore저장소-생성">#1. chore:저장소 생성</a></li><li><a href="#2-chore프로젝트-생성">#2. chore:프로젝트 생성</a></li><li><a href="#3-chore멀티모듈-구성">#3. chore:멀티모듈 구성</a></li><li><a href="#4-chorespotless-적용">#4. chore:spotless 적용</a></li><li><a href="#5-choregithub-workflows-생성">#5. chore:github workflows 생성</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <blockquote>
+  <p>현재 내가 다니고 있는 대학교에는 1학기 동안 자기가 원하는 수업을 설계하고 이를 전행하여 교수님들께 평가받는 수업이 있는데, 내가 속해 있는 팀이 이번 학기에 이를 지원해 수강하게 되었다. 나는 이번 기회를 이용해 하나의 완성된 사이트를 배포하는 것을 목표로 하는 프로젝트를 진행하고자 하였다. 원래는 기획과 설계에 대한 글을 먼저 올리는 게 맞겠지만, 학교 행정상의 문제로 인해 이를 학기중에 게시하면 안된다고 전달받아서, 일단 Github 저장소에 커밋한 내용을 기반으로 매일 진행한 내용들과 내가 코드를 쓰면서 참고한 내용들을 정리하고자 한다. 일단은 하루하루 공부한 내용을 기록하는 <code class="language-plaintext highlighter-rouge">TIL</code>처럼, 매일 진행한 커밋 하나하나에 대해 글을 쓰는 것이 목표이다.</p>
+</blockquote>
+
+<h2 id="1-chore저장소-생성">#1. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/2ad124287e375c06ff417fbc2b4555b73aa303c4">chore:저장소 생성</a></h2>
+
+<ul>
+  <li>git에서 <code class="language-plaintext highlighter-rouge">add</code>, <code class="language-plaintext highlighter-rouge">commit</code>, <code class="language-plaintext highlighter-rouge">push</code>  등의 명령어로 변경 내용을 관리할 수 있는 <code class="language-plaintext highlighter-rouge">.git</code> 파일을 생성하였다.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">.git</code> 파일의 내부 구조와 관련해서 <a href="https://tecoble.techcourse.co.kr/post/2021-07-08-dot-git/">해당 포스트</a>를 참고하였다.
+<br /><br /></li>
+    </ul>
+  </li>
+  <li>git이 관리하지 않을 파일을 지정하기 위한 <code class="language-plaintext highlighter-rouge">.gitignore</code> 파일을 생성하였다.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">.gitignore</code> 파일과 관련해서 <a href="https://kyu9341.github.io/Git/2020/08/23/git_gitignore/">해당 포스트</a>를 참고하였다.</li>
+      <li><a href="https://github.com/Hongik-Challenge/hc-backend/commit/2ad124287e375c06ff417fbc2b4555b73aa303c4#diff-bc37d034bad564583790a46f19d807abfe519c5671395fd494d8cce506c42947"><code>commit</code> 내용</a>은 <a href="https://www.toptal.com/developers/gitignore">gitignore.io</a>을 참고해 작성하였다.
+<br /><br /></li>
+    </ul>
+  </li>
+  <li>협업에서의 원활한 의사소통을 위해 commit message convention을 정해 git에 <code class="language-plaintext highlighter-rouge">commit</code>할 때 참고하고자 하였다.
+    <ul>
+      <li>제일 많이 사용되고 있는 <a href="https://udacity.github.io/git-styleguide/">유다시티 커밋 메시지 스타일 가이드</a>를 참고해 아래의 원칙을 작성하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. message structure
+- type:subject
+- body
+
+2. type
+- feat : 새로운 기능 도입
+- fix : 버그 수정
+- docs : 문서 수정
+- style : 코드 포맷팅 (크드 변경이 없는 경우)
+- refactor : 코드 리펙토링
+- test : 테스트 코드 추가
+- chore : 빌드 업무 및 패키지 매니저 수정
+
+3. subject
+- 제목에 해당하는 subject는 현재시제로 50자 내외에서 작성한다.
+
+4. body
+- 본문에 해당하는 body는 부연설명이 필요한 경우에만 작성한다.
+</code></pre></div></div>
+
+<h2 id="2-chore프로젝트-생성">#2. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/6a018a31584d5468d8a2b5a6aa1a31124d3a31b9">chore:프로젝트 생성</a></h2>
+
+<ul>
+  <li>Gradle을 빌드하기 위한 <code class="language-plaintext highlighter-rouge">build.gradle</code> 파일의 plugins와 repositories를 작성하였다.
+    <ul>
+      <li>Gradle과 관련해서 <a href="https://velog.io/@appti/series/gradle">해당 포스트</a>와 <a href="https://araikuma.tistory.com/category/IT%20개발/Gradle">해당 포스트</a>를 참고하였다.
+<br /><br /></li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.10'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+</code></pre></div></div>
+
+<h2 id="3-chore멀티모듈-구성">#3. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/1e1d43da4c6072c8e25a82c6eb2d7da3382e51f3">chore:멀티모듈 구성</a></h2>
+
+<ul>
+  <li>프로젝트의 내부를 기존의 root 모듈에 sub 모듈인 Api, Common, Domain, Infrastructure 모듈을 포함시킨 멀티모듈 구조로 변경하였다.
+    <ul>
+      <li>멀티모듈의 설계와 관련해서 <a href="https://velog.io/@freesky/DDD-Start-Architecture">해당 포스트</a>를 참고하였다. 사실 <a href="https://techblog.woowahan.com/2637/">이 포스트</a>를 참고해 설계하려 했지만 이해가 잘 되지 않아 일단 보류했다.</li>
+      <li>지금 글을 쓰는 중에 의존 관계를 잘못 작성했다는 사실을 발견해버려서 (…) 그 부분을 수정한 다음에 계층 구조를 표현하도록 하고, <code class="language-plaintext highlighter-rouge">build.gradle</code>과 <code class="language-plaintext highlighter-rouge">settings.gradle</code>에 대한 내용만 서술하도록 하겠다.
+<br /><br /></li>
+    </ul>
+  </li>
+  <li>sub 모듈들을 하나의 디렉토리에서 관리하기 위해 <code class="language-plaintext highlighter-rouge">settings.gradle</code> 파일을 작성하였다.
+    <ul>
+      <li>원래 모듈을 생성하는 과정에서 자동으로 작성되는 것으로 알고 있는데 안되서 직접 작성하였다.</li>
+      <li><code class="language-plaintext highlighter-rouge">setting.gradle</code>이 아니라 <code class="language-plaintext highlighter-rouge">settings.gradle</code>이다… 이거 하나를 못 찾아서 새벽을 지새웠다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rootProject.name = 'HongikChallenge'
+include 'Api'
+include 'Common'
+include 'Domain'
+include 'Infrastructure'
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">build.gradle</code>에 subprojects와 allprojects 블록을 추가해 하위 모듈과 전체 모듈을 제어할 수 있도록 하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>allprojects{
+
+}
+
+subprojects{
+    group = 'HongikChallenge'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '17'
+
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'java-library'
+    apply plugin: 'io.spring.dependency-management'
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>어노테이션 기반으로 반복적으로 작성하는 코드를 자동완성해주는 lombok 라이브러리를 subprojects에 다음과 같은 dependencies으로 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>compileOnly 'org.projectlombok:lombok'
+annotationProcessor 'org.projectlombok:lombok'
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>testImplementation 'org.springframework.boot:spring-boot-starter-test'
+</code></pre></div></div>
+
+<ul>
+  <li>lombok을 테스팅 환경에서 사용하기 위해 <a href="https://jundragon.tistory.com/9">해당 포스트</a>를 참고해 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에 다음과 같은 dependencies으로 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>testCompileOnly 'org.projectlombok:lombok'
+testAnnotationProcessor 'org.projectlombok:lombok'
+</code></pre></div></div>
+
+<ul>
+  <li>Java에서 단위 테스트를 하기 하기 위해 <a href="https://math-coding.tistory.com/158">해당 포스트</a>를 참고해 JUnit5 프레임워크를 사용할 수 있도록 <code class="language-plaintext highlighter-rouge">build.gradle</code>을 변경하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.named('test') {
+        useJUnitPlatform()
+}
+</code></pre></div></div>
+
+<ul>
+  <li>스프링 어플리케이션에서 Junit, Hamcrest, Mockito 등으로 테스트를 가능하게 하도록 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에 다음과 같은 dependencies으로 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>testImplementation 'org.springframework.boot:spring-boot-starter-test'
+</code></pre></div></div>
+
+<ul>
+  <li>JUnit5 API를 테스팅 환경에서 사용하기 위해 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에 다음과 같은 dependencies으로 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+</code></pre></div></div>
+
+<ul>
+  <li>멀티모듈 프로젝트를 빌드했을 때 <code class="language-plaintext highlighter-rouge">bootJar.enabled = false</code>으로 선언된 root 모듈이 빌드된 배포본에 포함되지 않는 오류가 나는 것을 방지하고자 <a href="https://java.ihoney.pe.kr/512">해당 포스트</a>를 참고해 <code class="language-plaintext highlighter-rouge">build.gradle</code>과 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에 <code class="language-plaintext highlighter-rouge">jar.enabled = true</code>을 추가하였다. (원래는 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 allprojects에 작성하였으나, 오류가 발생해 불가피하게 수정했다.)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bootJar.enabled = false
+jar.enabled = true
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Task 'wrapper' not found in project ':project'</code> 오류를 해결하고자 <a href="https://hororolol.tistory.com/546">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper를 사용해서 빌드 환경을 맞추었다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>task wrapper(type: Wrapper) {
+    gradleVersion = '4.4'    
+    distributionUrl = distributionUrl.replace("bin", "all")
+}
+</code></pre></div></div>
+
+<ul>
+  <li>위의 오류를 해결하는 과정에서 <code class="language-plaintext highlighter-rouge">Cannot add task 'wrapper' as a task with that name already exists</code> 오류가 발생해 <a href="https://taegyunum.tistory.com/entry/Cannot-add-task-wrapper-as-a-task-with-that-name-already-exists">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper의 형식을 변경해 해결하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wrapper {
+        gradleVersion = '4.4'
+        distributionUrl = distributionUrl.replace("bin", "all")
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">:prepareKotlinBuildScriptModel Task fails in a Java project</code> 오류를 해결하고자 <a href="https://charactermail.tistory.com/351">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 <code class="language-plaintext highlighter-rouge">prepareKotlinBuildScriptModel</code>을 새로운 task로 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.register("prepareKotlinBuildScriptModel"){}
+</code></pre></div></div>
+
+<h2 id="4-chorespotless-적용">#4. chore:spotless 적용</h2>
+<ul>
+  <li>Junit에 대한 코드 포맷팅 및 유지보수를 위해 <a href="https://nesoy.github.io/articles/2020-04/Spotless">해당 게시글</a>을 참고해 spotless 플러그인을 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id "com.diffplug.spotless" version "6.16.0"
+</code></pre></div></div>
+
+<ul>
+  <li>sub 모듈에서도 spotless 플러그인이 적용될 수 있도록 <a href="https://keelim.tistory.com/entry/안드로이드-멀티-모듈-공통-gradle-그리고-ktlint-적용을-해보자">해당 게시글</a>을 참고해 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 별개로 생성했다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spotless {
+    version = "6.16.0"
+
+    java {
+        // 특정 파일에만 적용
+        target("**/*.java")
+
+        // import 순서 정의
+        importOrder()
+
+        // 사용하지 않는 import 제거
+        removeUnusedImports()
+
+        // 구글 자바 포맷 적용
+        googleJavaFormat().aosp()
+
+        // 공백 제거
+        trimTrailingWhitespace()
+
+        // 끝부분 New Line 처리
+        endWithNewline()
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>그리고 sub 모듈에서도 spotless 플러그인이 적용될 수 있도록 root 모듈에 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 적용시켰다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply from: "$rootDir/spotless.gradle"
+</code></pre></div></div>
+
+<h2 id="5-choregithub-workflows-생성">#5. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/c0356c825568ef932a317c5677190c8ea8a9d741">chore:github workflows 생성</a></h2>
+<ul>
+  <li>Github에서 제공하는 workflow 자동화 도구인 Github Actions을 사용해 Github flow을 관리할 수 있도록 한다.
+    <ul>
+      <li>Github Action과 관련해서 <a href="https://zzsza.github.io/development/2020/06/06/github-action/">해당 게시글</a>을 참고하였다.
+<br /><br /></li>
+    </ul>
+  </li>
+  <li>Github flow는 <a href="https://velog.io/@pond1029/Git-Workflow">해당 게시글</a>을 참고해 작성하였다.
+    <ol>
+      <li>개인 작업은 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치에서 작업하고, 작업이 끝나면 <code class="language-plaintext highlighter-rouge">pull request</code>를 생성한다.</li>
+      <li><code class="language-plaintext highlighter-rouge">pull request</code>에서 코드를 리뷰한 후에 문제가 없으면 <code class="language-plaintext highlighter-rouge">master</code> 브랜치로 병합한다.</li>
+      <li>master 브랜치에 병합하면 배포 작업을 바로 수행한다. (CI 자동화)
+<br /><br /></li>
+    </ol>
+  </li>
+  <li>3번의 CI 자동화 부분을 먼저 생성하고, 1번과 2번은 그 다음에 작성하려 한다.
+    <ul>
+      <li><a href="https://devjem.tistory.com/76">해당 게시글</a>을 참고하여 Github Actions에서 Gradle을 캐싱할 수 있도록 하였다.</li>
+      <li><a href="https://velog.io/@bagt/Github-Actions를-통한-배포">해당 게시글</a>을 참고하여 AWS를 통한 배포 자동화 (CI)를 위해 빌드된 프로젝트를 미리 압축하도록 하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: ci
+
+on:
+  push:
+    branches: [ "main", "dev" ]
+  pull_request:
+    branches: [ "main", "dev" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+
+      - name: Gradle Caching
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: $-gradle-$
+          restore-keys: |
+            $-gradle-
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+        shell: bash
+
+      - name: Build with Gradle
+        run: ./gradlew build
+        shell: bash
+
+      - name: Make zip file
+        run: zip -r ./deploy.zip .
+        shell: bash
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#project" class="page__taxonomy-item p-category" rel="tag">Project</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-04-04">April 4, 2023</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BH.C.Prj%5D+04%2F04+%EC%A7%84%ED%96%89+%EB%82%B4%EC%9A%A9%20http%3A%2F%2Flocalhost%3A4000%2Fproject%2Fhcprj1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fproject%2Fhcprj1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fproject%2Fhcprj1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/github.pages/blog3/" class="pagination--pager" title="[Github Pages] 3. Github Pages 블로그 소개
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/github.pages/blog3/" rel="permalink">[Github Pages] 3. Github Pages 블로그 소개
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  사실 이전 포스트에서 Github Pages에 대한 내용이 있어 좀 중복되는 느낌이 들 수도 있다. 하지만, 이 포스트에서는 Github Pages의 원리를 짚어보고자 작성한 것이니 혹시 모르는 사람들은 한번 읽어보자.
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/github.pages/blog2/" rel="permalink">[Github Pages] 2. 개발 블로그는 어디에 만들어야 하나요?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  글을 시작하기 앞서, 이 내용은 매우 주관적인 판단이 들어간 서술이 많다. 나야 보시다시피 Github Pages를 사용하지만 다른 사람들은 여러 이유로 다양한 플랫폼을 사용할 것이고, 그 부분을 지적하거나 문제시하는 게 아님을 분명히 밝힌다. 이 글은 어디까지나 개발 블로그...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/github.pages/blog1/" rel="permalink">[Github Pages] 1. 개발자에게 개발 블로그는 왜 필요한가요?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  내가 아직 취업 시장에 발도 담구지 않은 대학생인데 내가 개발 블로그의 필요성에 대해 논하는 것이 의미가 있는 걸까? 라는 의문이 들어 작년에 작성한 글에서는 이 부분을 짚어보지 않았다. 하지만 이 부분을 뺀 채로 블로그를 운영하다보니, 처음에 내가 가졌었던 생각이나 느낌이 ...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 pocj8ur4in. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/project/hcprj1/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/project/hcprj1"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://pocj8ur4in.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>
