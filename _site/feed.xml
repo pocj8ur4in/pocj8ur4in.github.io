@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-04T18:19:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[H.C.Prj] 04/04 진행 내용</title><link href="http://localhost:4000/project/hcprj1/" rel="alternate" type="text/html" title="[H.C.Prj] 04/04 진행 내용" /><published>2023-04-04T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/project/hcprj1</id><content type="html" xml:base="http://localhost:4000/project/hcprj1/"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-04T22:51:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[HongikChallenge] 04/04 진행 내용</title><link href="http://localhost:4000/hongikchallenge/hcprj1/" rel="alternate" type="text/html" title="[HongikChallenge] 04/04 진행 내용" /><published>2023-04-04T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/hongikchallenge/hcprj1</id><content type="html" xml:base="http://localhost:4000/hongikchallenge/hcprj1/"><![CDATA[<blockquote>
   <p>현재 내가 다니고 있는 대학교에는 1학기 동안 자기가 원하는 수업을 설계하고 이를 전행하여 교수님들께 평가받는 수업이 있는데, 내가 속해 있는 팀이 이번 학기에 이를 지원해 수강하게 되었다. 나는 이번 기회를 이용해 하나의 완성된 사이트를 배포하는 것을 목표로 하는 프로젝트를 진행하고자 하였다. 원래는 기획과 설계에 대한 글을 먼저 올리는 게 맞겠지만, 학교 행정상의 문제로 인해 이를 학기중에 게시하면 안된다고 전달받아서, 일단 Github 저장소에 커밋한 내용을 기반으로 매일 진행한 내용들과 내가 코드를 쓰면서 참고한 내용들을 정리하고자 한다. 일단은 하루하루 공부한 내용을 기록하는 <code class="language-plaintext highlighter-rouge">TIL</code>처럼, 매일 진행한 커밋 하나하나에 대해 글을 쓰는 것이 목표이다.</p>
 </blockquote>
 
@@ -266,51 +266,73 @@ jar.enabled = true
       <li><a href="https://velog.io/@bagt/Github-Actions를-통한-배포">해당 게시글</a>을 참고하여 AWS를 통한 배포 자동화 (CI)를 위해 빌드된 프로젝트를 미리 압축하도록 하였다.</li>
     </ul>
   </li>
-</ul>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="HongikChallenge" /><summary type="html"><![CDATA[현재 내가 다니고 있는 대학교에는 1학기 동안 자기가 원하는 수업을 설계하고 이를 전행하여 교수님들께 평가받는 수업이 있는데, 내가 속해 있는 팀이 이번 학기에 이를 지원해 수강하게 되었다. 나는 이번 기회를 이용해 하나의 완성된 사이트를 배포하는 것을 목표로 하는 프로젝트를 진행하고자 하였다. 원래는 기획과 설계에 대한 글을 먼저 올리는 게 맞겠지만, 학교 행정상의 문제로 인해 이를 학기중에 게시하면 안된다고 전달받아서, 일단 Github 저장소에 커밋한 내용을 기반으로 매일 진행한 내용들과 내가 코드를 쓰면서 참고한 내용들을 정리하고자 한다. 일단은 하루하루 공부한 내용을 기록하는 TIL처럼, 매일 진행한 커밋 하나하나에 대해 글을 쓰는 것이 목표이다.]]></summary></entry><entry><title type="html">[Github Pages] 4. Github Pages 블로그 개설</title><link href="http://localhost:4000/github%20pages/blog4/" rel="alternate" type="text/html" title="[Github Pages] 4. Github Pages 블로그 개설" /><published>2023-04-03T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/github%20pages/blog4</id><content type="html" xml:base="http://localhost:4000/github%20pages/blog4/"><![CDATA[<blockquote>
+  <p>이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나 그때쯤 작성한 글들 대부분이 너무 나열식으로 쓰였고, 출처에 대한 언급이 많이 부실해 (모르는 부분이 있어 찾으려 하면 출처가 없어서 나도 찾지 못한다…), 부족한 점들을 보완하기 위해 다시 작성되었다.<br />
+그리고 현재 작성자의 실행 환경의 OS가 MacOS임을 미리 밝혀둔다. 아마 근시일 내에는 기기를 바꿀 계획이 없으니, 동일한 OS를 사용하시는 분들은 그대로 진행해주시면 된다.</p>
+</blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: ci
+<h2 id="1-ruby-설치">1. Ruby 설치</h2>
+<p>macOS는 Ruby가 기본적으로 설치되어 있으니, 터미널을 실행하고 다음 명령어를 입력해 Ruby의 설치 여부를 확인한다.</p>
 
-on:
-  push:
-    branches: [ "main", "dev" ]
-  pull_request:
-    branches: [ "main", "dev" ]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby -v
+// ruby X.X.X 출력 : 정상 설치
+// "zsh: command not found: ruby" 출력 : 설치 오류
+</code></pre></div></div>
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+<h2 id="2-jekyll-설치">2. Jekyll 설치</h2>
+<p>터미널 창에 gem install 명령어를 입력해 Jekyll을 설치한다. 참고로 gem은 분산 패키지로, 라이브러리의 작성, 공개, 설치를 도와주는 시스템이다.</p>
 
-    steps:
-      - uses: actions/checkout@v3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll
+</code></pre></div></div>
 
-      - name: Set JDK 17
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'adopt'
+<p>그리고 터미널 창에 다음 명령어를 입력해 Jekyll가 정상적으로 설치되었는지 확인한다.</p>
 
-      - name: Gradle Caching
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: $-gradle-$
-          restore-keys: |
-            $-gradle-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll -v
+// jekyll X.X.X 출력 : 정상 설치
+// "zsh: command not found: jekyll" 출력 : 설치 오류
+</code></pre></div></div>
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x ./gradlew
-        shell: bash
+<h2 id="3-jekyll-theme-선택">3. Jekyll theme 선택</h2>
+<p>이전 포스트에서 Jekyll은 레이아웃에 해당하는 templates과 컨텐츠에 해당하는 contents를 합쳐 HTML 문서로 미리 빌드해 저장하고, 이를 방문자에게 보여준다고 설명한 바 있다. 그런데 대부분의 블로거들은 레이아웃의 중요성은 알지만 이를 어떻게 구성해야할지 몰라 막막할 것이다. 그런 블로거들을 위해 존재하는 것이 Jekyll theme이다.<br /></p>
 
-      - name: Build with Gradle
-        run: ./gradlew build
-        shell: bash
+<p>Jekyll theme은 다른 사람들이 미리 작업해놓은 templates으로, 많은 Jekyll theme들이 무료로 공개되어 있다. 무료 Jekyll 중에 사람들이 많이 사용하는 것이 <a href="https://mmistakes.github.io/minimal-mistakes/">minimal-mistakes</a>이다. 간결하고 깔끔한 디자인과 꾸준한 업데이트, 그리고 무엇보다 엄청난 양의 한글 래퍼런스 (…)로 인해 나 역시도 minimal-mistakes을 기반으로 블로그를 개설하였기에, 앞으로 진행할 블로그 개설 역시 minimal-mistakes를 기반으로 진행한다.<br /></p>
 
-      - name: Make zip file
-        run: zip -r ./deploy.zip .
-        shell: bash
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Project" /><summary type="html"><![CDATA[현재 내가 다니고 있는 대학교에는 1학기 동안 자기가 원하는 수업을 설계하고 이를 전행하여 교수님들께 평가받는 수업이 있는데, 내가 속해 있는 팀이 이번 학기에 이를 지원해 수강하게 되었다. 나는 이번 기회를 이용해 하나의 완성된 사이트를 배포하는 것을 목표로 하는 프로젝트를 진행하고자 하였다. 원래는 기획과 설계에 대한 글을 먼저 올리는 게 맞겠지만, 학교 행정상의 문제로 인해 이를 학기중에 게시하면 안된다고 전달받아서, 일단 Github 저장소에 커밋한 내용을 기반으로 매일 진행한 내용들과 내가 코드를 쓰면서 참고한 내용들을 정리하고자 한다. 일단은 하루하루 공부한 내용을 기록하는 TIL처럼, 매일 진행한 커밋 하나하나에 대해 글을 쓰는 것이 목표이다.]]></summary></entry><entry><title type="html">[Github Pages] 3. Github Pages 블로그 소개</title><link href="http://localhost:4000/github.pages/blog3/" rel="alternate" type="text/html" title="[Github Pages] 3. Github Pages 블로그 소개" /><published>2023-04-02T00:00:00+09:00</published><updated>2023-04-02T00:00:00+09:00</updated><id>http://localhost:4000/github.pages/blog3</id><content type="html" xml:base="http://localhost:4000/github.pages/blog3/"><![CDATA[<blockquote>
+<p>먼저 <a href="https://github.com/mmistakes/minimal-mistakes">minimal-mistakes Github 페이지</a>에서 <code class="language-plaintext highlighter-rouge">.zip</code> 파일을 다운로드한 후 압축을 해제한다. 그리고 아래 사진을 참고하여 필요한 파일 및 디렉토리만 남기고 나머지는 삭제한다. (아, 기존에 존재하지 않는 <code class="language-plaintext highlighter-rouge">_post</code>와 <code class="language-plaintext highlighter-rouge">_page</code> 디렉토리는 추후에 사용할 예정이니 미리 생성해두자.)</p>
+
+<p><img width="228" alt="blog1-1" src="https://user-images.githubusercontent.com/105341168/229804167-bbb75af4-6ec4-4683-9753-0f2cbf7d97bb.png" /></p>
+
+<h2 id="4-로컬에서-웹-호스팅">4. 로컬에서 웹 호스팅</h2>
+<p>터미널 창에 다음 명령어를 입력해 Gemfile을 설치하기 위한 bundler를 사용해보자. 그러면 <code class="language-plaintext highlighter-rouge">.jekyll-cache</code> 폴더와 <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> 파일이 생성된다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler
+</code></pre></div></div>
+
+<p>bundler 설치가 완료되면, 터미널 창에 다음 명령어를 입력해 Gemfile을 검사해 필요한 목록을 설치할 수 있다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
+</code></pre></div></div>
+
+<p>이제 터미널 창에 다음 명령어를 입력하여 블로그를 로컬에서 호스팅해보자.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve
+</code></pre></div></div>
+
+<p><a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a>으로 접속하면 minimal-mistakes이 적용된 블로그 화면을 확인할 수 있다.</p>
+
+<h2 id="4-github-pages에서-웹-호스팅">4. GitHub Pages에서 웹 호스팅</h2>
+
+<p>이제 Github에 <code class="language-plaintext highlighter-rouge">(Github ID).github.io</code>의 형식으로 원격 저장소를 생성하자. 다음은 내 블로그가 저장된 원격 저장소 이미지이다.</p>
+
+<p><img width="535" alt="blog1-2" src="https://user-images.githubusercontent.com/105341168/229810964-1fb40be8-4fc9-4949-89b2-1eb4b77fa0ff.png" /></p>
+
+<p>그리고 지금까지 정리한 내용들을 포함한 디렉터리를 github에 push하면, <code class="language-plaintext highlighter-rouge">https://(Github ID).github.io</code>를 주소로 하는 블로그가 생성된 것을 확인해볼 수 있다. 그리고 <code class="language-plaintext highlighter-rouge">https://github.com/(Github ID)/(Github ID).github.io/actions</code>에서 블로그가 빌드된 기록을 확인할 수 있다. 만약 원격 저장소에서 푸시된 내용에 대한 빌드 작업이 실패한다면, 그 내용의 배포가 진행되지 않은 것을 확인해볼 수 있다.</p>
+
+<blockquote>
+  <p>Reference</p>
+  <ul>
+    <li>SW developer 님이 작성하신, <a href="https://devinlife.com/howto/">GitHub Pages 블로그 따라하기</a></li>
+  </ul>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나 그때쯤 작성한 글들 대부분이 너무 나열식으로 쓰였고, 출처에 대한 언급이 많이 부실해 (모르는 부분이 있어 찾으려 하면 출처가 없어서 나도 찾지 못한다…), 부족한 점들을 보완하기 위해 다시 작성되었다. 그리고 현재 작성자의 실행 환경의 OS가 MacOS임을 미리 밝혀둔다. 아마 근시일 내에는 기기를 바꿀 계획이 없으니, 동일한 OS를 사용하시는 분들은 그대로 진행해주시면 된다.]]></summary></entry><entry><title type="html">[Github Pages] 3. Github Pages 블로그 소개</title><link href="http://localhost:4000/github%20pages/blog3/" rel="alternate" type="text/html" title="[Github Pages] 3. Github Pages 블로그 소개" /><published>2023-04-02T00:00:00+09:00</published><updated>2023-04-02T00:00:00+09:00</updated><id>http://localhost:4000/github%20pages/blog3</id><content type="html" xml:base="http://localhost:4000/github%20pages/blog3/"><![CDATA[<blockquote>
   <p>사실 이전 포스트에서 Github Pages에 대한 내용이 있어 좀 중복되는 느낌이 들 수도 있다. 하지만, 이 포스트에서는 Github Pages의 원리를 짚어보고자 작성한 것이니 혹시 모르는 사람들은 한번 읽어보자.</p>
 </blockquote>
 
@@ -326,7 +348,7 @@ jobs:
 
 <p>그러나 빌드할 때마다 모든 웹 페이지를 생성하는 작업을 매번 하다보니, 컨텐츠를 자주 업데이트하는 웹 사이트나 규모가 커 빌드 시간이 오래 걸리는 웹 사이트에서는 큰 비효율성이 발생해 SSG보다는 다른 렌더링 기술을 사용한다. 그래서 SSG는 개인 블로그와 같이 컨텐츠의 변경이 자주 일어나지 않은, 소규모 웹 사이트를 제작할 때 많이 쓰이는 기술이다. (SSG 외에도 SPA, SSR과 같은 렌더링 기술이 있는데, 달레 님께서 <a href="https://www.daleseo.com/spa-ssg-ssr/">SPA와 SSG, 그리고 SSR</a>이라는 글에서 잘 정리해주셨으니 참고하길 바란다.)<br /></p>
 
-<p>지금 현재 내가 사용하고 있는 Github Pages 테마인 <a href="https://mmistakes.github.io/minimal-mistakes/">Minimal Mistakes</a>는 Jekyll을 정적 웹사이트 생성기로 사용한다. Jekyll 외에도 Hexo, Hugo와 같은 여러 정적 웹사이트 생성기들이 존재하는데, 이들을 간단하게 비교해보자.</p>
+<p>지금 현재 내가 사용하고 있는 Github Pages 테마인 <a href="https://mmistakes.github.io/minimal-mistakes/">Minimal Mistakes</a>는 Jekyll을 정적 웹사이트 생성기로 사용해 웹 사이트를 정적으로 생성한다. Jekyll 외에도 Hexo, Hugo와 같은 여러 정적 웹사이트 생성기들이 존재하는데, 이들을 간단하게 비교해보자.</p>
 
 <ul>
   <li><a href="https://jekyllrb-ko.github.io">Jekyll</a>
@@ -361,7 +383,7 @@ jobs:
 
 <p><img src="https://user-images.githubusercontent.com/105341168/229413193-0534897e-6fdc-4c1a-888e-8e2e011045c5.jpg" alt="jekyll-logo" /></p>
 
-<p>사실 SSG 중에 Jekyll이 좋은 거 같아 골랐다기보단, Minimal Mistakes 테마가 내 마음에 들어서 설치했는데 그게 Jekyll을 쓰더라…의 흐름으로 쓰게 된 거고, Jekyll 말고도 다른 SSG가 있는 것을 알게 된 이후에도 어차피 다 같은 SSG인데 Jekyll 말고 굳이 다른 거를 배워서 쓸 필요성을 못 느끼겠어서 Jekyll을 계속 사용하고 있긴 하다. 일단 Jekyll이 어떤 방식으로 동작하는지 정리해보겠다. (사실 SSG와 동일한 원리인데, 이를 구체화한 것으로 생각하면 된다.)<br /></p>
+<p>사실 SSG 중에 Jekyll이 좋은 거 같아 골랐다기보단, Minimal Mistakes 테마가 내 마음에 들어서 설치했는데 구글링해보니 다들 Jekyll을 쓰더라…의 흐름으로 쓰게 된 거고, Jekyll 말고도 다른 SSG가 있는 것을 알게 된 이후에도 어차피 다 같은 SSG인데 Jekyll 말고 굳이 다른 거를 배워서 쓸 필요성을 못 느껴서 (물론 Jekyll이 문제가 많다고 느끼면 다른 SSG를 사용할지에 대해 고민해봐야 할 것이다.) Jekyll을 계속 사용하고 있긴 하다. 일단 Jekyll이 어떤 방식으로 동작하는지 정리해보겠다. (사실 SSG와 동일한 원리인데, 이를 구체화한 것으로 생각하면 된다.)<br /></p>
 
 <p>Jekyll은 동적 웹 사이트 (Dynamic Web Site)과 동일하게, 레이아웃에 해당하는 templates과 컨텐츠에 해당하는 contents를 분리해 저장한다. (이때 Jekyll에서 templates을 작성할 때 사용하는 언어가 Liquid이고, contents를 작성할 때 사용하는 언어가 markdown이다.) 하지만 동적 사이트와 달리, Jekyll은 templates와 contents을 합친 HTML 문서를 미리 빌드해 저장하고, 방문자가 요청을 보내면 정적 컨텐츠에 해당하는 HTML 문서를 전송한다.<br /></p>
 
@@ -377,7 +399,7 @@ jobs:
     <li>SW developer 님이 작성하신, <a href="https://devinlife.com/howto/">GitHub Pages 블로그 따라하기</a></li>
     <li>Wheel 님이 작성하신, <a href="https://heekangpark.github.io/categories#jekyll">지킬 (Jekyll)</a></li>
   </ul>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github.Pages" /><summary type="html"><![CDATA[사실 이전 포스트에서 Github Pages에 대한 내용이 있어 좀 중복되는 느낌이 들 수도 있다. 하지만, 이 포스트에서는 Github Pages의 원리를 짚어보고자 작성한 것이니 혹시 모르는 사람들은 한번 읽어보자.]]></summary></entry><entry><title type="html">[Github Pages] 2. 개발 블로그는 어디에 만들어야 하나요?</title><link href="http://localhost:4000/github.pages/blog2/" rel="alternate" type="text/html" title="[Github Pages] 2. 개발 블로그는 어디에 만들어야 하나요?" /><published>2023-04-01T00:00:00+09:00</published><updated>2023-04-01T00:00:00+09:00</updated><id>http://localhost:4000/github.pages/blog2</id><content type="html" xml:base="http://localhost:4000/github.pages/blog2/"><![CDATA[<blockquote>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[사실 이전 포스트에서 Github Pages에 대한 내용이 있어 좀 중복되는 느낌이 들 수도 있다. 하지만, 이 포스트에서는 Github Pages의 원리를 짚어보고자 작성한 것이니 혹시 모르는 사람들은 한번 읽어보자.]]></summary></entry><entry><title type="html">[Github Pages] 2. 개발 블로그는 어디에 만들어야 하나요?</title><link href="http://localhost:4000/github%20pages/blog2/" rel="alternate" type="text/html" title="[Github Pages] 2. 개발 블로그는 어디에 만들어야 하나요?" /><published>2023-04-01T00:00:00+09:00</published><updated>2023-04-01T00:00:00+09:00</updated><id>http://localhost:4000/github%20pages/blog2</id><content type="html" xml:base="http://localhost:4000/github%20pages/blog2/"><![CDATA[<blockquote>
   <p>글을 시작하기 앞서, 이 내용은 매우 주관적인 판단이 들어간 서술이 많다. 나야 보시다시피 Github Pages를 사용하지만 다른 사람들은 여러 이유로 다양한 플랫폼을 사용할 것이고, 그 부분을 지적하거나 문제시하는 게 아님을 분명히 밝힌다. 이 글은 어디까지나 개발 블로그로 사용되는 여러 플랫폼에 대해 이야기해보는 과정을 통해 개발 블로그를 처음 만드는 개발자들이 이런 부분을 고려했으면 좋겠다, 는 취지로 작성된 것이다.</p>
 </blockquote>
 
@@ -521,7 +543,7 @@ jobs:
   <ul>
     <li>productuidev 님이 작성하신, <a href="https://velog.io/@productuidev/PREV-Portfolio-1-ProjectBlog#개발-블로그--github">개발자 취업준비 (포트폴리오/블로그)</a></li>
   </ul>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github.Pages" /><summary type="html"><![CDATA[글을 시작하기 앞서, 이 내용은 매우 주관적인 판단이 들어간 서술이 많다. 나야 보시다시피 Github Pages를 사용하지만 다른 사람들은 여러 이유로 다양한 플랫폼을 사용할 것이고, 그 부분을 지적하거나 문제시하는 게 아님을 분명히 밝힌다. 이 글은 어디까지나 개발 블로그로 사용되는 여러 플랫폼에 대해 이야기해보는 과정을 통해 개발 블로그를 처음 만드는 개발자들이 이런 부분을 고려했으면 좋겠다, 는 취지로 작성된 것이다.]]></summary></entry><entry><title type="html">[Github Pages] 1. 개발자에게 개발 블로그는 왜 필요한가요?</title><link href="http://localhost:4000/github.pages/blog1/" rel="alternate" type="text/html" title="[Github Pages] 1. 개발자에게 개발 블로그는 왜 필요한가요?" /><published>2023-03-31T00:00:00+09:00</published><updated>2023-03-31T00:00:00+09:00</updated><id>http://localhost:4000/github.pages/blog1</id><content type="html" xml:base="http://localhost:4000/github.pages/blog1/"><![CDATA[<blockquote>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[글을 시작하기 앞서, 이 내용은 매우 주관적인 판단이 들어간 서술이 많다. 나야 보시다시피 Github Pages를 사용하지만 다른 사람들은 여러 이유로 다양한 플랫폼을 사용할 것이고, 그 부분을 지적하거나 문제시하는 게 아님을 분명히 밝힌다. 이 글은 어디까지나 개발 블로그로 사용되는 여러 플랫폼에 대해 이야기해보는 과정을 통해 개발 블로그를 처음 만드는 개발자들이 이런 부분을 고려했으면 좋겠다, 는 취지로 작성된 것이다.]]></summary></entry><entry><title type="html">[Github Pages] 1. 개발자에게 개발 블로그는 왜 필요한가요?</title><link href="http://localhost:4000/github%20pages/blog1/" rel="alternate" type="text/html" title="[Github Pages] 1. 개발자에게 개발 블로그는 왜 필요한가요?" /><published>2023-03-31T00:00:00+09:00</published><updated>2023-03-31T00:00:00+09:00</updated><id>http://localhost:4000/github%20pages/blog1</id><content type="html" xml:base="http://localhost:4000/github%20pages/blog1/"><![CDATA[<blockquote>
   <p>내가 아직 취업 시장에 발도 담구지 않은 대학생인데 내가 개발 블로그의 필요성에 대해 논하는 것이 의미가 있는 걸까? 라는 의문이 들어 작년에 작성한 글에서는 이 부분을 짚어보지 않았다. 하지만 이 부분을 뺀 채로 블로그를 운영하다보니, 처음에 내가 가졌었던 생각이나 느낌이 희석되어 여러 가지를 이유로 들며 블로그 운영을 게을리한 것 같다. 그래서 지난 6개월간 내가 작성한 내용을 다시 정리하기 앞서, 이 부분에 대해 이야기하고자 한다.</p>
 </blockquote>
 
@@ -554,4 +576,4 @@ jobs:
     <li>코드쓰는사림 님이 작성하신, <a href="https://taegon.kim/archives/7107">개발자가 블로그를 운영해야 할 이유</a></li>
     <li>productuidev 님이 작성하신, <a href="https://velog.io/@productuidev/PREV-Portfolio-1-ProjectBlog#개발-블로그--github">개발자 취업준비 (포트폴리오/블로그)</a></li>
   </ul>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github.Pages" /><summary type="html"><![CDATA[내가 아직 취업 시장에 발도 담구지 않은 대학생인데 내가 개발 블로그의 필요성에 대해 논하는 것이 의미가 있는 걸까? 라는 의문이 들어 작년에 작성한 글에서는 이 부분을 짚어보지 않았다. 하지만 이 부분을 뺀 채로 블로그를 운영하다보니, 처음에 내가 가졌었던 생각이나 느낌이 희석되어 여러 가지를 이유로 들며 블로그 운영을 게을리한 것 같다. 그래서 지난 6개월간 내가 작성한 내용을 다시 정리하기 앞서, 이 부분에 대해 이야기하고자 한다.]]></summary></entry></feed>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[내가 아직 취업 시장에 발도 담구지 않은 대학생인데 내가 개발 블로그의 필요성에 대해 논하는 것이 의미가 있는 걸까? 라는 의문이 들어 작년에 작성한 글에서는 이 부분을 짚어보지 않았다. 하지만 이 부분을 뺀 채로 블로그를 운영하다보니, 처음에 내가 가졌었던 생각이나 느낌이 희석되어 여러 가지를 이유로 들며 블로그 운영을 게을리한 것 같다. 그래서 지난 6개월간 내가 작성한 내용을 다시 정리하기 앞서, 이 부분에 대해 이야기하고자 한다.]]></summary></entry></feed>

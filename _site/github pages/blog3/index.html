@@ -23,7 +23,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
 <meta property="og:title" content="[Github Pages] 3. Github Pages 블로그 소개">
-<meta property="og:url" content="http://localhost:4000/github.pages/blog3/">
+<meta property="og:url" content="http://localhost:4000/github%20pages/blog3/">
 
 
   <meta property="og:description" content="사실 이전 포스트에서 Github Pages에 대한 내용이 있어 좀 중복되는 느낌이 들 수도 있다. 하지만, 이 포스트에서는 Github Pages의 원리를 짚어보고자 작성한 것이니 혹시 모르는 사람들은 한번 읽어보자.">
@@ -47,7 +47,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/github.pages/blog3/">
+<link rel="canonical" href="http://localhost:4000/github%20pages/blog3/">
 
 
 
@@ -170,7 +170,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#github.pages" itemprop="item"><span itemprop="name">Github.pages</span></a>
+          <a href="/categories/#github-pages" itemprop="item"><span itemprop="name">Github pages</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -201,7 +201,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/github.pages/blog3/" class="u-url" itemprop="url">[Github Pages] 3. Github Pages 블로그 소개
+            <a href="http://localhost:4000/github%20pages/blog3/" class="u-url" itemprop="url">[Github Pages] 3. Github Pages 블로그 소개
 </a>
           </h1>
           
@@ -254,7 +254,7 @@
 
 <p>그러나 빌드할 때마다 모든 웹 페이지를 생성하는 작업을 매번 하다보니, 컨텐츠를 자주 업데이트하는 웹 사이트나 규모가 커 빌드 시간이 오래 걸리는 웹 사이트에서는 큰 비효율성이 발생해 SSG보다는 다른 렌더링 기술을 사용한다. 그래서 SSG는 개인 블로그와 같이 컨텐츠의 변경이 자주 일어나지 않은, 소규모 웹 사이트를 제작할 때 많이 쓰이는 기술이다. (SSG 외에도 SPA, SSR과 같은 렌더링 기술이 있는데, 달레 님께서 <a href="https://www.daleseo.com/spa-ssg-ssr/">SPA와 SSG, 그리고 SSR</a>이라는 글에서 잘 정리해주셨으니 참고하길 바란다.)<br /></p>
 
-<p>지금 현재 내가 사용하고 있는 Github Pages 테마인 <a href="https://mmistakes.github.io/minimal-mistakes/">Minimal Mistakes</a>는 Jekyll을 정적 웹사이트 생성기로 사용한다. Jekyll 외에도 Hexo, Hugo와 같은 여러 정적 웹사이트 생성기들이 존재하는데, 이들을 간단하게 비교해보자.</p>
+<p>지금 현재 내가 사용하고 있는 Github Pages 테마인 <a href="https://mmistakes.github.io/minimal-mistakes/">Minimal Mistakes</a>는 Jekyll을 정적 웹사이트 생성기로 사용해 웹 사이트를 정적으로 생성한다. Jekyll 외에도 Hexo, Hugo와 같은 여러 정적 웹사이트 생성기들이 존재하는데, 이들을 간단하게 비교해보자.</p>
 
 <ul>
   <li><a href="https://jekyllrb-ko.github.io">Jekyll</a>
@@ -289,7 +289,7 @@
 
 <p><img src="https://user-images.githubusercontent.com/105341168/229413193-0534897e-6fdc-4c1a-888e-8e2e011045c5.jpg" alt="jekyll-logo" /></p>
 
-<p>사실 SSG 중에 Jekyll이 좋은 거 같아 골랐다기보단, Minimal Mistakes 테마가 내 마음에 들어서 설치했는데 그게 Jekyll을 쓰더라…의 흐름으로 쓰게 된 거고, Jekyll 말고도 다른 SSG가 있는 것을 알게 된 이후에도 어차피 다 같은 SSG인데 Jekyll 말고 굳이 다른 거를 배워서 쓸 필요성을 못 느끼겠어서 Jekyll을 계속 사용하고 있긴 하다. 일단 Jekyll이 어떤 방식으로 동작하는지 정리해보겠다. (사실 SSG와 동일한 원리인데, 이를 구체화한 것으로 생각하면 된다.)<br /></p>
+<p>사실 SSG 중에 Jekyll이 좋은 거 같아 골랐다기보단, Minimal Mistakes 테마가 내 마음에 들어서 설치했는데 구글링해보니 다들 Jekyll을 쓰더라…의 흐름으로 쓰게 된 거고, Jekyll 말고도 다른 SSG가 있는 것을 알게 된 이후에도 어차피 다 같은 SSG인데 Jekyll 말고 굳이 다른 거를 배워서 쓸 필요성을 못 느껴서 (물론 Jekyll이 문제가 많다고 느끼면 다른 SSG를 사용할지에 대해 고민해봐야 할 것이다.) Jekyll을 계속 사용하고 있긴 하다. 일단 Jekyll이 어떤 방식으로 동작하는지 정리해보겠다. (사실 SSG와 동일한 원리인데, 이를 구체화한 것으로 생각하면 된다.)<br /></p>
 
 <p>Jekyll은 동적 웹 사이트 (Dynamic Web Site)과 동일하게, 레이아웃에 해당하는 templates과 컨텐츠에 해당하는 contents를 분리해 저장한다. (이때 Jekyll에서 templates을 작성할 때 사용하는 언어가 Liquid이고, contents를 작성할 때 사용하는 언어가 markdown이다.) 하지만 동적 사이트와 달리, Jekyll은 templates와 contents을 합친 HTML 문서를 미리 빌드해 저장하고, 방문자가 요청을 보내면 정적 컨텐츠에 해당하는 HTML 문서를 전송한다.<br /></p>
 
@@ -324,7 +324,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#github-pages" class="page__taxonomy-item p-category" rel="tag">Github.Pages</a>
+      <a href="/categories/#github-pages" class="page__taxonomy-item p-category" rel="tag">Github Pages</a>
     
     </span>
   </p>
@@ -341,22 +341,22 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BGithub+Pages%5D+3.+Github+Pages+%EB%B8%94%EB%A1%9C%EA%B7%B8+%EC%86%8C%EA%B0%9C%20http%3A%2F%2Flocalhost%3A4000%2Fgithub.pages%2Fblog3%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5BGithub+Pages%5D+3.+Github+Pages+%EB%B8%94%EB%A1%9C%EA%B7%B8+%EC%86%8C%EA%B0%9C%20http%3A%2F%2Flocalhost%3A4000%2Fgithub%2520pages%2Fblog3%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fgithub.pages%2Fblog3%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fgithub%2520pages%2Fblog3%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgithub.pages%2Fblog3%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgithub%2520pages%2Fblog3%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/github.pages/blog2/" class="pagination--pager" title="[Github Pages] 2. 개발 블로그는 어디에 만들어야 하나요?
+      <a href="/github%20pages/blog2/" class="pagination--pager" title="[Github Pages] 2. 개발 블로그는 어디에 만들어야 하나요?
 ">이전</a>
     
     
-      <a href="/project/hcprj1/" class="pagination--pager" title="[H.C.Prj] 04/04 진행 내용
+      <a href="/github%20pages/blog4/" class="pagination--pager" title="[Github Pages] 4. Github Pages 블로그 개설
 ">다음</a>
     
   </nav>
@@ -381,7 +381,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/project/hcprj1/" rel="permalink">[H.C.Prj] 04/04 진행 내용
+        <a href="/hongikchallenge/hcprj1/" rel="permalink">[HongikChallenge] 04/04 진행 내용
 </a>
       
     </h2>
@@ -399,7 +399,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          5 분 소요
+          4 분 소요
         
       </span>
     
@@ -421,7 +421,47 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/github.pages/blog2/" rel="permalink">[Github Pages] 2. 개발 블로그는 어디에 만들어야 하나요?
+        <a href="/github%20pages/blog4/" rel="permalink">[Github Pages] 4. Github Pages 블로그 개설
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나 그때쯤 작성한 글들 대부분이 너무 나열식으...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/github%20pages/blog2/" rel="permalink">[Github Pages] 2. 개발 블로그는 어디에 만들어야 하나요?
 </a>
       
     </h2>
@@ -461,7 +501,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/github.pages/blog1/" rel="permalink">[Github Pages] 1. 개발자에게 개발 블로그는 왜 필요한가요?
+        <a href="/github%20pages/blog1/" rel="permalink">[Github Pages] 1. 개발자에게 개발 블로그는 왜 필요한가요?
 </a>
       
     </h2>
@@ -563,8 +603,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4000/github.pages/blog3/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/github.pages/blog3"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "http://localhost:4000/github%20pages/blog3/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/github%20pages/blog3"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
