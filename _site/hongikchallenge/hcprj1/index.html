@@ -218,7 +218,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          4 분 소요
+          3 분 소요
         
       </span>
     
@@ -233,7 +233,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#1-chore저장소-생성">#1. chore:저장소 생성</a></li><li><a href="#2-chore프로젝트-생성">#2. chore:프로젝트 생성</a></li><li><a href="#3-chore멀티모듈-구성">#3. chore:멀티모듈 구성</a></li><li><a href="#4-chorespotless-적용">#4. chore:spotless 적용</a></li><li><a href="#5-choregithub-workflows-생성">#5. chore:github workflows 생성</a></li></ul>
+              <ul class="toc__menu"><li><a href="#1-chore저장소-생성">#1. chore:저장소 생성</a></li><li><a href="#2-chore프로젝트-생성">#2. chore:프로젝트 생성</a></li><li><a href="#3-chore멀티모듈-구성">#3. chore:멀티모듈 구성</a></li><li><a href="#4-chorespotless-적용">#4. chore:spotless 적용</a></li></ul>
 
             </nav>
           </aside>
@@ -312,11 +312,15 @@ repositories {
 <ul>
   <li>프로젝트의 내부를 기존의 root 모듈에 sub 모듈인 Api, Common, Domain, Infrastructure 모듈을 포함시킨 멀티모듈 구조로 변경하였다.
     <ul>
-      <li>멀티모듈의 설계와 관련해서 <a href="https://velog.io/@freesky/DDD-Start-Architecture">해당 포스트</a>를 참고하였다. 사실 <a href="https://techblog.woowahan.com/2637/">이 포스트</a>를 참고해 설계하려 했지만 이해가 잘 되지 않아 일단 보류했다.</li>
-      <li>지금 글을 쓰는 중에 의존 관계를 잘못 작성했다는 사실을 발견해버려서 (…) 그 부분을 수정한 다음에 계층 구조를 표현하도록 하고, <code class="language-plaintext highlighter-rouge">build.gradle</code>과 <code class="language-plaintext highlighter-rouge">settings.gradle</code>에 대한 내용만 서술하도록 하겠다.
-<br /><br /></li>
+      <li>멀티모듈의 설계와 관련해서 <a href="https://velog.io/@freesky/DDD-Start-Architecture">해당 포스트</a>를 참고하였다.</li>
+      <li>사실 <a href="https://techblog.woowahan.com/2637/">이 포스트</a>를 참고해 설계하려 했지만 이해가 잘 되지 않아 보류하였다. (Common 계층에 모두 의존되는 것이 문제라는 것은 파악하고 있다.)</li>
     </ul>
   </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/229998528-d407801c-d03e-4bb2-8e63-4a57fa102846.png" alt="CleanShot 2023-04-05 at 15 26 56@2x" /></p>
+
+<ul>
   <li>sub 모듈들을 하나의 디렉토리에서 관리하기 위해 <code class="language-plaintext highlighter-rouge">settings.gradle</code> 파일을 작성하였다.
     <ul>
       <li>원래 모듈을 생성하는 과정에서 자동으로 작성되는 것으로 알고 있는데 안되서 직접 작성하였다.</li>
@@ -484,30 +488,6 @@ jar.enabled = true
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply from: "$rootDir/spotless.gradle"
 </code></pre></div></div>
 
-<h2 id="5-choregithub-workflows-생성">#5. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/c0356c825568ef932a317c5677190c8ea8a9d741">chore:github workflows 생성</a></h2>
-<ul>
-  <li>Github에서 제공하는 workflow 자동화 도구인 Github Actions을 사용해 Github flow을 관리할 수 있도록 한다.
-    <ul>
-      <li>Github Action과 관련해서 <a href="https://zzsza.github.io/development/2020/06/06/github-action/">해당 게시글</a>을 참고하였다.
-<br /><br /></li>
-    </ul>
-  </li>
-  <li>Github flow는 <a href="https://velog.io/@pond1029/Git-Workflow">해당 게시글</a>을 참고해 작성하였다.
-    <ol>
-      <li>개인 작업은 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치에서 작업하고, 작업이 끝나면 <code class="language-plaintext highlighter-rouge">pull request</code>를 생성한다.</li>
-      <li><code class="language-plaintext highlighter-rouge">pull request</code>에서 코드를 리뷰한 후에 문제가 없으면 <code class="language-plaintext highlighter-rouge">master</code> 브랜치로 병합한다.</li>
-      <li>master 브랜치에 병합하면 배포 작업을 바로 수행한다. (CI 자동화)
-<br /><br /></li>
-    </ol>
-  </li>
-  <li>3번의 CI 자동화 부분을 먼저 생성하고, 1번과 2번은 그 다음에 작성하려 한다.
-    <ul>
-      <li><a href="https://devjem.tistory.com/76">해당 게시글</a>을 참고하여 Github Actions에서 Gradle을 캐싱할 수 있도록 하였다.</li>
-      <li><a href="https://velog.io/@bagt/Github-Actions를-통한-배포">해당 게시글</a>을 참고하여 AWS를 통한 배포 자동화 (CI)를 위해 빌드된 프로젝트를 미리 압축하도록 하였다.</li>
-    </ul>
-  </li>
-</ul>
-
         
       </section>
 
@@ -557,7 +537,8 @@ jar.enabled = true
 ">이전</a>
     
     
-      <a href="#" class="pagination--pager disabled">다음</a>
+      <a href="/hongikchallenge/hcprj2/" class="pagination--pager" title="[HongikChallenge] 04/06 진행 내용
+">다음</a>
     
   </nav>
 
@@ -571,6 +552,46 @@ jar.enabled = true
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/hongikchallenge/hcprj2/" rel="permalink">[HongikChallenge] 04/06 진행 내용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  #5에 해당하는 commit을 보면 이틀 전에 생성해 push한 것인데, 저장소는 작성일을 오늘 날짜로 인식하고 있다. 그 부분은 사실 이전 내용에 오류가 있어 내가 Amend 명렁을 실행해버려서 그렇다… (원격 저장소의 commit한 기록들이 다 달라져버리니, 협업할 때에는...</p>
+  </article>
+</div>
+
         
           
 
@@ -691,46 +712,6 @@ jar.enabled = true
 
     <p class="archive__item-excerpt" itemprop="description">
   글을 시작하기 앞서, 이 내용은 매우 주관적인 판단이 들어간 서술이 많다. 나야 보시다시피 Github Pages를 사용하지만 다른 사람들은 여러 이유로 다양한 플랫폼을 사용할 것이고, 그 부분을 지적하거나 문제시하는 게 아님을 분명히 밝힌다. 이 글은 어디까지나 개발 블로그...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/github%20pages/blog1/" rel="permalink">[Github Pages] 1. 개발자에게 개발 블로그는 왜 필요한가요?
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  내가 아직 취업 시장에 발도 담구지 않은 대학생인데 내가 개발 블로그의 필요성에 대해 논하는 것이 의미가 있는 걸까? 라는 의문이 들어 작년에 작성한 글에서는 이 부분을 짚어보지 않았다. 하지만 이 부분을 뺀 채로 블로그를 운영하다보니, 처음에 내가 가졌었던 생각이나 느낌이 ...</p>
   </article>
 </div>
 

@@ -49,7 +49,8 @@ body {
 
   .page__content {
     /* paragraph indents */
-    p {
+    p,
+    li {
       line-height: 2; // 가독성을 위해 줄 간격 추가
     }
   }
