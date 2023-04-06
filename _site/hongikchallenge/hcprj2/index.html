@@ -218,7 +218,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 분 소요
+          3 분 소요
         
       </span>
     
@@ -233,7 +233,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#5-choregithub-workflows-생성">#5. chore:github workflows 생성</a></li><li><a href="#6-choreswagger3-설정">#6. chore:Swagger3 설정</a></li><li><a href="#7-fixgithub-workflows-수정">#7. fix:github workflows 수정</a></li></ul>
+              <ul class="toc__menu"><li><a href="#5-choregithub-workflows-생성">#5. chore:github workflows 생성</a></li><li><a href="#6-choreswagger3-설정">#6. chore:Swagger3 설정</a></li><li><a href="#7-fixgithub-workflows-수정">#7. fix:github workflows 수정</a></li><li><a href="#8-chorejacoco-설정">#8. chore:Jacoco 설정</a></li></ul>
 
             </nav>
           </aside>
@@ -325,8 +325,92 @@ because "this.condition" is null
 <br /><br /></li>
     </ul>
   </li>
-  <li>굉장히 긴 시행착오 끝에, 도커 허브에 파일 올라가는 거까지 확인하였다. 이 내용과 관련해선 <a href="https://zzang9ha.tistory.com/404">이 포스트</a>가 제일 잘 정리된 거 같다. (AWS 배포까지 설명하시고 계시는데, 이 부분도 조만간 다룰 예정이다.)</li>
+  <li>굉장히 긴 시행착오 끝에, 도커 허브에 파일 올라가는 거까지 확인하였다. 오류 수정이라 자세한 내용은 따로 다루지 않을 것이다. 여러 포스트들을 참고해 해결했는데, <a href="https://zzang9ha.tistory.com/404">이 포스트</a>가 제일 잘 정리된 거 같다. (AWS 배포까지 설명하시고 계시는데, 이 부분도 조만간 다룰 예정이다.)</li>
 </ul>
+
+<h2 id="8-chorejacoco-설정">#8. chore:Jacoco 설정</h2>
+<ul>
+  <li>sub 모듈에 코드 커버리지 도구인 Jacoco를 도입하기 위해, <a href="https://seller-lee.github.io/java-code-coverage-tool-part2">이 게시글</a>을 참고하였다.
+    <ul>
+      <li>코드 커버리지와 관련해, <a href="https://seller-lee.github.io/java-code-coverage-tool-part1">이 게시글</a>을 참고하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = '0.8.9'
+}
+</code></pre></div></div>
+
+<ul>
+  <li>추후 SonarQube의 연동을 위해 jacocoTestReports task를 설정하였다. html, csv, xml 형태로 저장할 수 있게 해주고, xml 파일은 저장하는 경로를 다르게 설정하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestReport {
+    dependsOn test
+    reports {
+        html.enabled true
+        csv.enabled true
+        xml.enabled true
+        xml.destination file("${buildDir}/reports/jacoco.xml")
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>원하는 코드 커버리지를 설정하고, 커버리지를 만족하는지 여부를 확인하는 데에 쓰이는 jacocoTestCoverageVerification task를 설정했는데… 이 정도는 되어야 통과된다, 라는 기준을 잘 모르겠어서 일단 이 내용은 코드에서 제외하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                counter = 'BRANCH'
+                value = 'COVEREDRATIO'
+                minimum = 0.90
+            }
+
+            limit {
+                counter = 'LINE'
+                value = 'COVEREDRATIO'
+                minimum = 0.80
+            }
+
+            limit {
+                counter = 'LINE'
+                value = 'TOTALCOUNT'
+                maximum = 200
+            }
+        }
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>추가로 QueryDSL가 자동으로 생성하는 QDomain 클래스를 코드 커버리지에서 제외하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestCoverageVerification {
+    def Qdomains = []
+
+    for (qPattern in '*.QA'..'*.QZ') { // qPattern = '*.QA', '*.QB', ... '*.QZ'
+        Qdomains.add(qPattern + '*')
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>그런데 계속 <code class="language-plaintext highlighter-rouge">./gradlew test --console verbose</code>를 하는데 계속 빌드가 안되더라…정말 미치는 줄 알았다. 이것저것 다 건들어도 안되서 구글링해보니 jacoco의 버전을 올려보라는 <a href="https://stackoverflow.com/questions/53911122/how-to-fix-error-while-creating-report-jacoco">답변</a>이 있길래, 설마? 하면서 했는데 성공했다. (이런 오류가 제일 싫더라)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacoco {
+    toolVersion = '0.8.7'
+}
+</code></pre></div></div>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230381060-a2972bf0-8abb-4c92-b493-d19c3912106d.png" alt="CleanShot 2023-04-06 at 21 38 28@2x" /></p>
 
         
       </section>

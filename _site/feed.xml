@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-06T04:37:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[HongikChallenge] 04/06 진행 내용</title><link href="http://localhost:4000/hongikchallenge/hcprj2/" rel="alternate" type="text/html" title="[HongikChallenge] 04/06 진행 내용" /><published>2023-04-06T00:00:00+09:00</published><updated>2023-04-06T00:00:00+09:00</updated><id>http://localhost:4000/hongikchallenge/hcprj2</id><content type="html" xml:base="http://localhost:4000/hongikchallenge/hcprj2/"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-06T22:46:50+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[HongikChallenge] 04/06 진행 내용</title><link href="http://localhost:4000/hongikchallenge/hcprj2/" rel="alternate" type="text/html" title="[HongikChallenge] 04/06 진행 내용" /><published>2023-04-06T00:00:00+09:00</published><updated>2023-04-06T00:00:00+09:00</updated><id>http://localhost:4000/hongikchallenge/hcprj2</id><content type="html" xml:base="http://localhost:4000/hongikchallenge/hcprj2/"><![CDATA[<blockquote>
   <p>#5에 해당하는 <code class="language-plaintext highlighter-rouge">commit</code>을 보면 이틀 전에 생성해 <code class="language-plaintext highlighter-rouge">push</code>한 것인데, 저장소는 작성일을 오늘 날짜로 인식하고 있다. 그 부분은 사실 이전 내용에 오류가 있어 내가 <code class="language-plaintext highlighter-rouge">Amend</code> 명렁을 실행해버려서 그렇다… (원격 저장소의 <code class="language-plaintext highlighter-rouge">commit</code>한 기록들이 다 달라져버리니, 협업할 때에는 절대 하면 안되는 짓이다. 다시는 그러지 말자.)</p>
 </blockquote>
 
@@ -85,8 +85,92 @@ because "this.condition" is null
 <br /><br /></li>
     </ul>
   </li>
-  <li>굉장히 긴 시행착오 끝에, 도커 허브에 파일 올라가는 거까지 확인하였다. 이 내용과 관련해선 <a href="https://zzang9ha.tistory.com/404">이 포스트</a>가 제일 잘 정리된 거 같다. (AWS 배포까지 설명하시고 계시는데, 이 부분도 조만간 다룰 예정이다.)</li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="HongikChallenge" /><summary type="html"><![CDATA[#5에 해당하는 commit을 보면 이틀 전에 생성해 push한 것인데, 저장소는 작성일을 오늘 날짜로 인식하고 있다. 그 부분은 사실 이전 내용에 오류가 있어 내가 Amend 명렁을 실행해버려서 그렇다… (원격 저장소의 commit한 기록들이 다 달라져버리니, 협업할 때에는 절대 하면 안되는 짓이다. 다시는 그러지 말자.)]]></summary></entry><entry><title type="html">[HongikChallenge] 04/04 진행 내용</title><link href="http://localhost:4000/hongikchallenge/hcprj1/" rel="alternate" type="text/html" title="[HongikChallenge] 04/04 진행 내용" /><published>2023-04-04T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/hongikchallenge/hcprj1</id><content type="html" xml:base="http://localhost:4000/hongikchallenge/hcprj1/"><![CDATA[<blockquote>
+  <li>굉장히 긴 시행착오 끝에, 도커 허브에 파일 올라가는 거까지 확인하였다. 오류 수정이라 자세한 내용은 따로 다루지 않을 것이다. 여러 포스트들을 참고해 해결했는데, <a href="https://zzang9ha.tistory.com/404">이 포스트</a>가 제일 잘 정리된 거 같다. (AWS 배포까지 설명하시고 계시는데, 이 부분도 조만간 다룰 예정이다.)</li>
+</ul>
+
+<h2 id="8-chorejacoco-설정">#8. chore:Jacoco 설정</h2>
+<ul>
+  <li>sub 모듈에 코드 커버리지 도구인 Jacoco를 도입하기 위해, <a href="https://seller-lee.github.io/java-code-coverage-tool-part2">이 게시글</a>을 참고하였다.
+    <ul>
+      <li>코드 커버리지와 관련해, <a href="https://seller-lee.github.io/java-code-coverage-tool-part1">이 게시글</a>을 참고하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = '0.8.9'
+}
+</code></pre></div></div>
+
+<ul>
+  <li>추후 SonarQube의 연동을 위해 jacocoTestReports task를 설정하였다. html, csv, xml 형태로 저장할 수 있게 해주고, xml 파일은 저장하는 경로를 다르게 설정하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestReport {
+    dependsOn test
+    reports {
+        html.enabled true
+        csv.enabled true
+        xml.enabled true
+        xml.destination file("${buildDir}/reports/jacoco.xml")
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>원하는 코드 커버리지를 설정하고, 커버리지를 만족하는지 여부를 확인하는 데에 쓰이는 jacocoTestCoverageVerification task를 설정했는데… 이 정도는 되어야 통과된다, 라는 기준을 잘 모르겠어서 일단 이 내용은 코드에서 제외하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                counter = 'BRANCH'
+                value = 'COVEREDRATIO'
+                minimum = 0.90
+            }
+
+            limit {
+                counter = 'LINE'
+                value = 'COVEREDRATIO'
+                minimum = 0.80
+            }
+
+            limit {
+                counter = 'LINE'
+                value = 'TOTALCOUNT'
+                maximum = 200
+            }
+        }
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>추가로 QueryDSL가 자동으로 생성하는 QDomain 클래스를 코드 커버리지에서 제외하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestCoverageVerification {
+    def Qdomains = []
+
+    for (qPattern in '*.QA'..'*.QZ') { // qPattern = '*.QA', '*.QB', ... '*.QZ'
+        Qdomains.add(qPattern + '*')
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>그런데 계속 <code class="language-plaintext highlighter-rouge">./gradlew test --console verbose</code>를 하는데 계속 빌드가 안되더라…정말 미치는 줄 알았다. 이것저것 다 건들어도 안되서 구글링해보니 jacoco의 버전을 올려보라는 <a href="https://stackoverflow.com/questions/53911122/how-to-fix-error-while-creating-report-jacoco">답변</a>이 있길래, 설마? 하면서 했는데 성공했다. (이런 오류가 제일 싫더라)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacoco {
+    toolVersion = '0.8.7'
+}
+</code></pre></div></div>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230381060-a2972bf0-8abb-4c92-b493-d19c3912106d.png" alt="CleanShot 2023-04-06 at 21 38 28@2x" /></p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="HongikChallenge" /><summary type="html"><![CDATA[#5에 해당하는 commit을 보면 이틀 전에 생성해 push한 것인데, 저장소는 작성일을 오늘 날짜로 인식하고 있다. 그 부분은 사실 이전 내용에 오류가 있어 내가 Amend 명렁을 실행해버려서 그렇다… (원격 저장소의 commit한 기록들이 다 달라져버리니, 협업할 때에는 절대 하면 안되는 짓이다. 다시는 그러지 말자.)]]></summary></entry><entry><title type="html">[HongikChallenge] 04/04 진행 내용</title><link href="http://localhost:4000/hongikchallenge/hcprj1/" rel="alternate" type="text/html" title="[HongikChallenge] 04/04 진행 내용" /><published>2023-04-04T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/hongikchallenge/hcprj1</id><content type="html" xml:base="http://localhost:4000/hongikchallenge/hcprj1/"><![CDATA[<blockquote>
   <p>현재 내가 다니고 있는 대학교에는 1학기 동안 자기가 원하는 수업을 설계하고 이를 전행하여 교수님들께 평가받는 수업이 있는데, 내가 속해 있는 팀이 이번 학기에 이를 지원해 수강하게 되었다. 나는 이번 기회를 이용해 하나의 완성된 사이트를 배포하는 것을 목표로 하는 프로젝트를 진행하고자 하였다. 원래는 기획과 설계에 대한 글을 먼저 올리는 게 맞겠지만, 학교 행정상의 문제로 인해 이를 학기중에 게시하면 안된다고 전달받아서, 일단 Github 저장소에 커밋한 내용을 기반으로 매일 진행한 내용들과 내가 코드를 쓰면서 참고한 내용들을 정리하고자 한다. 일단은 하루하루 공부한 내용을 기록하는 <code class="language-plaintext highlighter-rouge">TIL</code>처럼, 매일 진행한 커밋 하나하나에 대해 글을 쓰는 것이 목표이다.</p>
 </blockquote>
 
