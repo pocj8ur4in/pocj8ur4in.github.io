@@ -1,0 +1,590 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[HongikChallenge] 04/07 진행 내용 - pocj8ur4in’s blog</title>
+<meta name="description" content="#9. chore:AWS 연동    먼저 해당 포스트를 참고하여, AWS EC2를 구축하였다. (인파_, 그는 신?)">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[HongikChallenge] 04/07 진행 내용">
+<meta property="og:url" content="http://localhost:4000/hongikchallenge/hcprj3/">
+
+
+  <meta property="og:description" content="#9. chore:AWS 연동    먼저 해당 포스트를 참고하여, AWS EC2를 구축하였다. (인파_, 그는 신?)">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-04-07T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2023-04-07T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/hongikchallenge/hcprj3/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">카테고리</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">태그</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#hongikchallenge" itemprop="item"><span itemprop="name">Hongikchallenge</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">[HongikChallenge] 04/07 진행 내용</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[HongikChallenge] 04/07 진행 내용">
+    <meta itemprop="description" content="#9. chore:AWS 연동  먼저 해당 포스트를 참고하여, AWS EC2를 구축하였다. (인파_, 그는 신?)">
+    <meta itemprop="datePublished" content="2023-04-07T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2023-04-07T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/hongikchallenge/hcprj3/" class="u-url" itemprop="url">[HongikChallenge] 04/07 진행 내용
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#9-choreaws-연동">#9. chore:AWS 연동</a></li><li><a href="#10-choresonarqube-적용">#10. chore:SonarQube 적용</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="9-choreaws-연동">#9. chore:AWS 연동</h2>
+<ul>
+  <li>먼저 <a href="https://inpa.tistory.com/entry/AWS-📚-EC2-개념-사용-구축-세팅-💯-정리-인스턴스-EBS-AMI#">해당 포스트</a>를 참고하여, AWS EC2를 구축하였다. (인파_, 그는 신?)</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230547734-9c3f85a5-0485-45da-a8e0-8a0546c49bb5.png" alt="CleanShot 2023-04-07 at 14 34 44@2x" /></p>
+
+<ul>
+  <li>아래의 이미지처럼 웹에서 AWS EC2 인스턴스 접속을 시도해도 오류가 나길래, <a href="https://blog.naver.com/zacra/222844559692">해당 포스트</a>를 참고하여 인바운드 규칙을 변경해 해결하였다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230416268-09737055-f1d3-4838-aef8-6e2535330112.png" alt="CleanShot 2023-04-06 at 23 47 46@2x" /></p>
+
+<ul>
+  <li>근데 생각해보니 SSH 클라이언트를 허용했는데 그거로 접속하면 되지 않나? 해서, 미리 발급받은 페어 키로 접속했다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230547896-12fa0f5d-599e-46c1-a35f-7153271c0425.png" alt="CleanShot 2023-04-07 at 14 36 03@2x" /></p>
+
+<ul>
+  <li>그런데 리눅스 기반으로 생성된 EC2에 내부적인 오류가 많다고 들어서, 우분투 기반으로 다시 만들어서 SSH 클라이언트까지 다시 접속했다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230549633-b8598af9-324a-4543-b146-eee6de1bba76.png" alt="CleanShot 2023-04-07 at 14 50 14@2x" /></p>
+
+<h2 id="10-choresonarqube-적용">#10. chore:SonarQube 적용</h2>
+<ul>
+  <li><a href="https://velog.io/@sihyung92/how-to-apply-sonarqube">해당 포스트</a>를 참고하여, 정적 코드 커버리지 툴인 SonarQube을 적용하였다.</li>
+</ul>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#hongikchallenge" class="page__taxonomy-item p-category" rel="tag">HongikChallenge</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-04-07">April 7, 2023</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BHongikChallenge%5D+04%2F07+%EC%A7%84%ED%96%89+%EB%82%B4%EC%9A%A9%20http%3A%2F%2Flocalhost%3A4000%2Fhongikchallenge%2Fhcprj3%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fhongikchallenge%2Fhcprj3%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fhongikchallenge%2Fhcprj3%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/hongikchallenge/hcprj2/" class="pagination--pager" title="[HongikChallenge] 04/06 진행 내용
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/hongikchallenge/hcprj2/" rel="permalink">[HongikChallenge] 04/06 진행 내용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  #5에 해당하는 commit을 보면 이틀 전에 생성해 push한 것인데, 저장소는 작성일을 오늘 날짜로 인식하고 있다. 그 부분은 사실 이전 내용에 오류가 있어 내가 Amend 명렁을 실행해버려서 그렇다… (원격 저장소의 commit한 기록들이 다 달라져버리니, 협업할 때에는...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/hongikchallenge/hcprj1/" rel="permalink">[HongikChallenge] 04/04 진행 내용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  현재 내가 다니고 있는 대학교에는 1학기 동안 자기가 원하는 수업을 설계하고 이를 전행하여 교수님들께 평가받는 수업이 있는데, 내가 속해 있는 팀이 이번 학기에 이를 지원해 수강하게 되었다. 나는 이번 기회를 이용해 하나의 완성된 사이트를 배포하는 것을 목표로 하는 프로젝트를...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/github%20pages/blog4/" rel="permalink">[Github Pages] 4. Github Pages 블로그 개설
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나 그때쯤 작성한 글들 대부분이 너무 나열식으...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/github%20pages/blog3/" rel="permalink">[Github Pages] 3. Github Pages 블로그 소개
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  사실 이전 포스트에서 Github Pages에 대한 내용이 있어 좀 중복되는 느낌이 들 수도 있다. 하지만, 이 포스트에서는 Github Pages의 원리를 짚어보고자 작성한 것이니 혹시 모르는 사람들은 한번 읽어보자.
+
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 pocj8ur4in. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/hongikchallenge/hcprj3/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/hongikchallenge/hcprj3"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://pocj8ur4in.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

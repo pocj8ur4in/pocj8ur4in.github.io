@@ -246,6 +246,7 @@
 <ul>
   <li>Github에서 제공하는 workflow 자동화 도구인 Github Actions을 사용해 Github flow을 관리하게 한다.
     <ul>
+      <li>또다른 CI/CD 도구인 Jenkins와 비교한 <a href="https://choseongho93.tistory.com/295">이 게시글</a>을 참고했을 때, 비교적 소규모 프로젝트인 우리의 경우에는 Github Action를 사용하는 게 좋을 것 같았다.</li>
       <li>Github Action과 관련해서 <a href="https://zzsza.github.io/development/2020/06/06/github-action/">해당 게시글</a>을 참고하였다.</li>
       <li>도커 이미지를 생성하는 것은 <a href="https://docs.github.com/en/actions/publishing-packages/publishing-docker-images&gt;">이 문서</a> 내용이 좋은 것 같다.
 <br /><br /></li>
@@ -293,9 +294,9 @@ jobs:
   <li>또한 도커 허브에 저장소를 생성하고, 계정에 대한 토큰을 발급받아 GitHub 저장소에 secret key로 등록시켰다.</li>
 </ul>
 
-<h2 id="6-choreswagger3-설정">#6. chore:Swagger3 설정</h2>
+<h2 id="6-choreswagger3-설정">#6. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/773ccdf11c5bee5b85e53423a818089e981c6898">chore:Swagger3 설정</a></h2>
 <ul>
-  <li><a href="https://velog.io/@dnwlsrla40/Swagger-Swagger3">해당 포스트</a>의 내용을 참고하여, REST 웹 서버로 요청되는 URL 리스트를 문서화 및 테스트 할 수 있는 Swagger3를 Api 모듈에 도입하였다. 
+  <li><a href="https://velog.io/@dnwlsrla40/Swagger-Swagger3">해당 포스트</a>의 내용을 참고하여, REST 웹 서버로 요청되는 URL 리스트를 문서화 및 테스트 할 수 있는 Swagger3를 Api 모듈에 도입하였다.
 <br /><br /></li>
   <li>Spring Boot 2.6 이상의 환경에서 Springfox3가 실행되지 않는 오류가 발생했다. 개발자 포럼에서도 자주 언급되는 유명한 이슈인데, 아직까지도 해결되지 않았다고 한다. Spring Boot 버전을 2.6 이하로 낮추는 것이 제일 안전한 방법이겠지만, 다른 해결책이 없나 구글링해보았더니 <a href="https://shanepark.tistory.com/366">이 포스트</a>에서 @EnableSwagger2 어노테이션 대신 @EnableWebMvc 어노테이션을 이용해 문제를 해결하길래 나도 적용해서 해결했다.
 <br /><br /></li>
@@ -316,7 +317,7 @@ because "this.condition" is null
   <li>그리고 이번 <code class="language-plaintext highlighter-rouge">commit</code>에서 GitHub workflow의 내용이 잘 적용되는지 확인하기 위해 <code class="language-plaintext highlighter-rouge">pull request</code>을 만들었다. 그런데 docker-compose하는 분을 잘못 입력해서 <code class="language-plaintext highlighter-rouge">pull request</code>가 실패하였다.</li>
 </ul>
 
-<h2 id="7-fixgithub-workflows-수정">#7. fix:github workflows 수정</h2>
+<h2 id="7-fixgithub-workflows-수정">#7. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/53500d50f4b8aafd11f7c1fd2034debfd97801b6">fix:github workflows 수정</a></h2>
 <p><img src="https://user-images.githubusercontent.com/105341168/230152494-732dd033-54cf-4954-8016-eaf57b00c42c.png" alt="CleanShot 2023-04-06 at 02 03 08@2x" /></p>
 <ul>
   <li>다소 난감한 상황이다. dev 브랜치는 이미 위의 <code class="language-plaintext highlighter-rouge">commit</code>을 반영된 상태인데 main 브랜치는 아직 반영되지 않은 상태이다. 그런데 main 브랜치에 <code class="language-plaintext highlighter-rouge">commit</code>을 적용해버린다면 dev 브랜치와는 영영 작별하는거고, dev 브랜치의 <code class="language-plaintext highlighter-rouge">commit</code>을 되돌리는 것은 이미 원격에 올라가서 불가능하다.
@@ -328,7 +329,7 @@ because "this.condition" is null
   <li>굉장히 긴 시행착오 끝에, 도커 허브에 파일 올라가는 거까지 확인하였다. 오류 수정이라 자세한 내용은 따로 다루지 않을 것이다. 여러 포스트들을 참고해 해결했는데, <a href="https://zzang9ha.tistory.com/404">이 포스트</a>가 제일 잘 정리된 거 같다. (AWS 배포까지 설명하시고 계시는데, 이 부분도 조만간 다룰 예정이다.)</li>
 </ul>
 
-<h2 id="8-chorejacoco-설정">#8. chore:Jacoco 설정</h2>
+<h2 id="8-chorejacoco-설정">#8. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/a10ebd2a12774c3a40484d6bf76c26f265180a41">chore:Jacoco 설정</a></h2>
 <ul>
   <li>sub 모듈에 코드 커버리지 도구인 Jacoco를 도입하기 위해, <a href="https://seller-lee.github.io/java-code-coverage-tool-part2">이 게시글</a>을 참고하였다.
     <ul>
@@ -461,7 +462,8 @@ jacoco {
 ">이전</a>
     
     
-      <a href="#" class="pagination--pager disabled">다음</a>
+      <a href="/hongikchallenge/hcprj3/" class="pagination--pager" title="[HongikChallenge] 04/07 진행 내용
+">다음</a>
     
   </nav>
 
@@ -475,6 +477,50 @@ jacoco {
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/hongikchallenge/hcprj3/" rel="permalink">[HongikChallenge] 04/07 진행 내용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">#9. chore:AWS 연동
+
+  먼저 해당 포스트를 참고하여, AWS EC2를 구축하였다. (인파_, 그는 신?)
+
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -595,46 +641,6 @@ jacoco {
 
 
 </p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/github%20pages/blog2/" rel="permalink">[Github Pages] 2. 개발 블로그는 어디에 만들어야 하나요?
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          7 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  글을 시작하기 앞서, 이 내용은 매우 주관적인 판단이 들어간 서술이 많다. 나야 보시다시피 Github Pages를 사용하지만 다른 사람들은 여러 이유로 다양한 플랫폼을 사용할 것이고, 그 부분을 지적하거나 문제시하는 게 아님을 분명히 밝힌다. 이 글은 어디까지나 개발 블로그...</p>
   </article>
 </div>
 
