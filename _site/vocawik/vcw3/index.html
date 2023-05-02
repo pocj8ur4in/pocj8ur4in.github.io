@@ -1,0 +1,823 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[vocawik] 4/19 진행 내용 - pocj8ur4in’s blog</title>
+<meta name="description" content="#3. init: 멀티모듈 세팅">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[vocawik] 4/19 진행 내용">
+<meta property="og:url" content="http://localhost:4000/vocawik/vcw3/">
+
+
+  <meta property="og:description" content="#3. init: 멀티모듈 세팅">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-04-19T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2023-04-19T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/vocawik/vcw3/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">카테고리</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">태그</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#vocawik" itemprop="item"><span itemprop="name">Vocawik</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">[vocawik] 4/19 진행 내용</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[vocawik] 4/19 진행 내용">
+    <meta itemprop="description" content="#3. init: 멀티모듈 세팅">
+    <meta itemprop="datePublished" content="2023-04-19T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2023-04-19T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/vocawik/vcw3/" class="u-url" itemprop="url">[vocawik] 4/19 진행 내용
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#3-init-멀티모듈-세팅">#3. init: 멀티모듈 세팅</a></li><li><a href="#4-chorespotless-적용">#4. chore:spotless 적용</a></li><li><a href="#5-init-git-hook과-gradle을-통한-spotless-자동화">#5. init: git hook과 gradle을 통한 spotless 자동화</a></li><li><a href="#6-init-모듈-내-applicationyml-세팅">#6. init: 모듈 내 application.yml 세팅</a></li><li><a href="#6-init-swagger3-적용">#6. init: swagger3 적용</a></li><li><a href="#8-chorejacoco-설정">#8. chore:Jacoco 설정</a></li><li><a href="#9-init-sonarqube-적용">#9. init: sonarqube 적용</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="3-init-멀티모듈-세팅"><a href="https://github.com/pocj8ur4in/vw-backend/commit/37de95d9208b2ba4a1877a70cf3b2b4e8235f801">#3</a>. init: 멀티모듈 세팅</h2>
+
+<p>프로젝트의 내부를 기존의 root 모듈에 sub 모듈인 api, batch, core, domain, infrastructure, socket 모듈을 포함시킨 멀티모듈 구조로 변경하였다.</p>
+
+<ul>
+  <li>sub 모듈들을 하나의 디렉토리에서 관리할 수 있도록 <code class="language-plaintext highlighter-rouge">settings.gradle</code> 파일을 작성하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rootProject.name = 'vw-backend'
+include 'vw-api'
+include 'vw-batch'
+include 'vw-core'
+include 'vw-domain'
+include 'vw-infrastructure'
+include 'vw-socket'
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">build.gradle</code>에 subprojects와 allprojects 블록을 추가해 하위 모듈과 전체 모듈을 제어할 수 있도록 하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>allprojects{
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    group = 'vocawik'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '17'
+
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'java-library'
+    apply plugin: 'io.spring.dependency-management'
+
+    dependencies {
+
+    }
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>반복된 코드를 어노테이션으로 자동완성하는 lombok 라이브러리를 사용하기 위해 subprojects에 의존성을 추가하였다.</li>
+  <li>스프링 어플리케이션에서 Junit 기반 테스트가 가능하도록 subprojects에 의존성을 추가하였다.</li>
+  <li><a href="https://jundragon.tistory.com/9">해당 포스트</a>를 참고해 lombok을 테스팅 환경에서 사용할 수 있도록 subprojects에 의존성을 추가하였다.</li>
+  <li>JUnit5 API를 테스팅 환경에서 사용할 수 있도록 subprojects에 의존성을 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dependencies {
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        testCompileOnly 'org.projectlombok:lombok'
+        testAnnotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    }
+</code></pre></div></div>
+
+<ul>
+  <li><a href="https://math-coding.tistory.com/158">해당 포스트</a>를 참고해 Java 단위 테스트를 위한 JUnit5 프레임워크를 위해 <code class="language-plaintext highlighter-rouge">build.gradle</code>을 변경하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.named('test') {
+        useJUnitPlatform()
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Task 'wrapper' not found in project ':project'</code> 오류를 해결하고자, <a href="https://hororolol.tistory.com/546">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper를 사용해서 빌드 환경을 맞추었다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>task wrapper(type: Wrapper) {
+    gradleVersion = '4.4'    
+    distributionUrl = distributionUrl.replace("bin", "all")
+}
+</code></pre></div></div>
+
+<ul>
+  <li>위의 오류를 해결하는 과정에서 <code class="language-plaintext highlighter-rouge">Cannot add task 'wrapper' as a task with that name already exists</code> 오류가 발생해, <a href="https://taegyunum.tistory.com/entry/Cannot-add-task-wrapper-as-a-task-with-that-name-already-exists">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper 형식을 변경하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wrapper {
+        gradleVersion = '4.4'
+        distributionUrl = distributionUrl.replace("bin", "all")
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">:prepareKotlinBuildScriptModel Task fails in a Java project</code> 오류를 해결하고자, <a href="https://charactermail.tistory.com/351">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 <code class="language-plaintext highlighter-rouge">prepareKotlinBuildScriptModel</code>을 새로운 task로 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.register("prepareKotlinBuildScriptModel"){}
+</code></pre></div></div>
+
+<h2 id="4-chorespotless-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/30d811bfeabefb5f35aaa0876d799ae563b85b7c">#4</a>. chore:spotless 적용</h2>
+
+<p>Junit에 대한 코드 포맷팅 및 유지보수를 위해 <a href="https://nesoy.github.io/articles/2020-04/Spotless">해당 게시글</a>을 참고해 spotless 플러그인을 추가하였다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id "com.diffplug.spotless" version "6.16.0"
+</code></pre></div></div>
+
+<ul>
+  <li>sub 모듈에서도 spotless 플러그인이 적용되도록 <a href="https://keelim.tistory.com/entry/안드로이드-멀티-모듈-공통-gradle-그리고-ktlint-적용을-해보자">해당 게시글</a>을 참고해 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 생성하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spotless {
+    version = "6.16.0"
+
+    java {
+        // 특정 파일에만 적용
+        target("**/*.java")
+
+        // import 순서 정의
+        importOrder()
+
+        // 사용하지 않는 import 제거
+        removeUnusedImports()
+
+        // 구글 자바 포맷 적용
+        googleJavaFormat().aosp()
+
+        // 공백 제거
+        trimTrailingWhitespace()
+
+        // 끝부분 New Line 처리
+        endWithNewline()
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>그리고 sub 모듈에서도 spotless 플러그인이 적용될 수 있도록 root 모듈에 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 적용시켰다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply from: "$rootDir/spotless.gradle"
+</code></pre></div></div>
+
+<h2 id="5-init-git-hook과-gradle을-통한-spotless-자동화"><a href="https://github.com/pocj8ur4in/vw-backend/commit/11cc84e6582621c90c698d3fdce67f41427897b4">#5</a>. init: git hook과 gradle을 통한 spotless 자동화</h2>
+
+<p>앞서 spotless를 적용하긴 했는데, spotless를 실행하는 것은 코드를 작성하고 이를 커밋하는 과정에서 까먹기 쉬운 작업이다. 그래서 <a href="https://techblog.woowahan.com/2530/">이 게시글</a>처럼 git hook으로 커밋을 하기 전에 spotless를 적용하는 것을 자동화하였다.<br /></p>
+
+<p>그런데 .git는 처음에 .gitignore을 통해 제외하기로 한 디렉토리이다. 나 혼자 작업을 진행한다면 위의 내용으로 충분하겠지만, 협업에서는 모두가 같은 내용을 적용하는 것이 중요하다. 그래서 root에 pre-commit 파일을 두고, gradle task를 이용해 빌드가 이루어질 때 pre-commit 파일을 .git에 이동하는 것을 추가하였다.</p>
+
+<h2 id="6-init-모듈-내-applicationyml-세팅"><a href="https://github.com/pocj8ur4in/vw-backend/commit/c70a1f7745384d0b2a209c079023b24df2a0874a">#6</a>. init: 모듈 내 application.yml 세팅</h2>
+
+<p><a href="https://tecoble.techcourse.co.kr/post/2022-10-04-active_profiles/">해당 게시글</a>을 참고하여 이전에 설장한 멀티모듈 내에 프로퍼티 설정을 관리하고 환경변수를 주입할 수 있는 application.yml 파일을 생성하였다.</p>
+
+<h2 id="6-init-swagger3-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/311e740cff2a31a07bce721140928114a0295501">#6</a>. init: swagger3 적용</h2>
+
+<p><a href="https://velog.io/@dnwlsrla40/Swagger-Swagger3">해당 포스트</a>의 내용을 참고하여, REST 웹 서버로 요청되는 URL 리스트를 문서화 및 테스트 할 수 있는 Swagger3를 Api 모듈 내에 도입하였다.</p>
+
+<ul>
+  <li>Spring Boot 2.6 이상의 환경에서 Springfox3가 실행되지 않는 오류가 발생했다. 개발자 포럼에서도 자주 언급되는 유명한 이슈인데, 아직까지도 해결되지 않았다고 한다. Spring Boot 버전을 2.6 이하로 낮추는 것이 제일 안전한 방법이겠지만, 다른 해결책이 없나 구글링해보았더니 <a href="https://shanepark.tistory.com/366">이 포스트</a>에서 @EnableSwagger2 어노테이션 대신 @EnableWebMvc 어노테이션을 이용해 문제를 해결하길래 나도 적용해서 해결했다.
+    <ul>
+      <li>그런데 @EnableWebMvc 어노테이션을 추가하는 건 어떤 의미를 가질까? 라는 질문에 <a href="https://goodgid.github.io/Spring-Enable-MVC-Annotation/">해당 포스트</a>의 내용을 참고해 답변해본다면, @EnableWebMvc는 Spring 프레임워크에서 여러 Config 값을 알아서 설정해주는데 아래의 오류를 일으키는 this.condition 부분도 알아서 설정해주는 것 같다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Caused by: java.lang.NullPointerException:
+Cannot invoke "org.springframework.web.servlet.mvc.
+condition.PatternsRequestCondition.getPatterns()"
+because "this.condition" is null
+</code></pre></div></div>
+
+<ul>
+  <li><a href="http://localhost:8080/swagger-ui/index.html">http://localhost:8080/swagger-ui/index.html</a>로 접속해보면 Swagger 페이지가 정상적으로 출력된다.</li>
+</ul>
+
+<h2 id="8-chorejacoco-설정"><a href="https://github.com/Hongik-Challenge/hc-backend/commit/a10ebd2a12774c3a40484d6bf76c26f265180a41">#8</a>. chore:Jacoco 설정</h2>
+
+<p><a href="https://seller-lee.github.io/java-code-coverage-tool-part2">해당 게시글</a>을 참고해 sub 모듈에 코드 커버리지 도구인 Jacoco를 도입하였다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = '0.8.9'
+}
+</code></pre></div></div>
+
+<ul>
+  <li>추후 SonarQube의 연동을 위해 jacocoTestReports task를 설정하였다. html, csv, xml 형태로 저장할 수 있게 해주고, xml 파일은 저장하는 경로를 다르게 설정하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestReport {
+    dependsOn test
+    reports {
+        html.enabled true
+        csv.enabled true
+        xml.enabled true
+        xml.destination file("${buildDir}/reports/jacoco.xml")
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>원하는 코드 커버리지를 설정하고, 커버리지를 만족하는지 여부를 확인하는 데에 쓰이는 jacocoTestCoverageVerification task를 설정하려 했으나 커버리지를 만족시키기 위해 설정해야 하는 기준을 판단하기 어려워 일단 이 내용은 코드에서 제외하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                counter = 'BRANCH'
+                value = 'COVEREDRATIO'
+                minimum = 0.90
+            }
+
+            limit {
+                counter = 'LINE'
+                value = 'COVEREDRATIO'
+                minimum = 0.80
+            }
+
+            limit {
+                counter = 'LINE'
+                value = 'TOTALCOUNT'
+                maximum = 200
+            }
+        }
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>추가로 QueryDSL가 자동으로 생성하는 QDomain 클래스를 코드 커버리지에서 제외하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestCoverageVerification {
+    def Qdomains = []
+
+    for (qPattern in '*.QA'..'*.QZ') { // qPattern = '*.QA', '*.QB', ... '*.QZ'
+        Qdomains.add(qPattern + '*')
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>그런데 <code class="language-plaintext highlighter-rouge">./gradlew test --console verbose</code>으로 실행해도 빌드가 성공하지 않았는데, jacoco의 버전을 올려보라는 <a href="https://stackoverflow.com/questions/53911122/how-to-fix-error-while-creating-report-jacoco">답변</a>을 적용해 해결하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacoco {
+    toolVersion = '0.8.7' -&gt; '0.8.9'
+}
+</code></pre></div></div>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230381060-a2972bf0-8abb-4c92-b493-d19c3912106d.png" /></p>
+
+<h2 id="9-init-sonarqube-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/5dc906b6d60e13cbcf0c093afad66cb0c5c9cfb3">#9</a>. init: sonarqube 적용</h2>
+<p><a href="https://kdevkr.github.io/static-analysis-performed-by-sonarqube-and-github-action/#소나큐브-시스템-구성">해당 게시글</a>을 참고해, Jacoco와 비슷한 코드 커버리지 도구인 sonarqube를 프로젝트 내에 도입하였다.</p>
+
+<ul>
+  <li>풀 리퀘스트가 종료되면서 개발 서버에 빌드 파일이 배포되기 전에 소나큐브가 실행되는 것을 목표로 하므로, 차후 작성된 github action에 이를 반영할 것이다.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#vocawik" class="page__taxonomy-item p-category" rel="tag">vocawik</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-04-19">April 19, 2023</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5Bvocawik%5D+4%2F19+%EC%A7%84%ED%96%89+%EB%82%B4%EC%9A%A9%20http%3A%2F%2Flocalhost%3A4000%2Fvocawik%2Fvcw3%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fvocawik%2Fvcw3%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fvocawik%2Fvcw3%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/vocawik/vcw2/" class="pagination--pager" title="[vocawik] 4/18 진행 내용
+">이전</a>
+    
+    
+      <a href="/vocawik/vcw4/" class="pagination--pager" title="[vocawik] 04/21 진행 내용
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/vocawik/vcw5/" rel="permalink">[vocawik] 04/23 진행 내용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/vocawik/vcw4/" rel="permalink">[vocawik] 04/21 진행 내용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          10 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">#10. init: github action 설정
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/vocawik/vcw2/" rel="permalink">[vocawik] 4/18 진행 내용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">#1. init: git 저장소 생성
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/vocawik/vcw1/" rel="permalink">[vocawik] 4/17 진행 내용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 pocj8ur4in. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/vocawik/vcw3/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/vocawik/vcw3"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://pocj8ur4in.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

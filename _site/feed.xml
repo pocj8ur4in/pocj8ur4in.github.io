@@ -1,50 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-07T16:07:10+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[HongikChallenge] 04/07 진행 내용</title><link href="http://localhost:4000/hongikchallenge/hcprj3/" rel="alternate" type="text/html" title="[HongikChallenge] 04/07 진행 내용" /><published>2023-04-07T00:00:00+09:00</published><updated>2023-04-07T00:00:00+09:00</updated><id>http://localhost:4000/hongikchallenge/hcprj3</id><content type="html" xml:base="http://localhost:4000/hongikchallenge/hcprj3/"><![CDATA[<h2 id="9-choreaws-연동">#9. chore:AWS 연동</h2>
-<ul>
-  <li>먼저 <a href="https://inpa.tistory.com/entry/AWS-📚-EC2-개념-사용-구축-세팅-💯-정리-인스턴스-EBS-AMI#">해당 포스트</a>를 참고하여, AWS EC2를 구축하였다. (인파_, 그는 신?)</li>
-</ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-23T20:54:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[vocawik] 04/23 진행 내용</title><link href="http://localhost:4000/vocawik/vcw5/" rel="alternate" type="text/html" title="[vocawik] 04/23 진행 내용" /><published>2023-04-23T00:00:00+09:00</published><updated>2023-04-23T00:00:00+09:00</updated><id>http://localhost:4000/vocawik/vcw5</id><content type="html" xml:base="http://localhost:4000/vocawik/vcw5/"><![CDATA[]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">[vocawik] 04/21 진행 내용</title><link href="http://localhost:4000/vocawik/vcw4/" rel="alternate" type="text/html" title="[vocawik] 04/21 진행 내용" /><published>2023-04-21T00:00:00+09:00</published><updated>2023-04-21T00:00:00+09:00</updated><id>http://localhost:4000/vocawik/vcw4</id><content type="html" xml:base="http://localhost:4000/vocawik/vcw4/"><![CDATA[<h2 id="10-init-github-action-설정"><a href="https://github.com/pocj8ur4in/vw-backend/commit/43382309f6d0b6506372670d090c02f4d1d28a26">#10</a>. init: github action 설정</h2>
 
-<p><img src="https://user-images.githubusercontent.com/105341168/230547734-9c3f85a5-0485-45da-a8e0-8a0546c49bb5.png" alt="CleanShot 2023-04-07 at 14 34 44@2x" /></p>
-
-<ul>
-  <li>아래의 이미지처럼 웹에서 AWS EC2 인스턴스 접속을 시도해도 오류가 나길래, <a href="https://blog.naver.com/zacra/222844559692">해당 포스트</a>를 참고하여 인바운드 규칙을 변경해 해결하였다.</li>
-</ul>
-
-<p><img src="https://user-images.githubusercontent.com/105341168/230416268-09737055-f1d3-4838-aef8-6e2535330112.png" alt="CleanShot 2023-04-06 at 23 47 46@2x" /></p>
-
-<ul>
-  <li>근데 생각해보니 SSH 클라이언트를 허용했는데 그거로 접속하면 되지 않나? 해서, 미리 발급받은 페어 키로 접속했다.</li>
-</ul>
-
-<p><img src="https://user-images.githubusercontent.com/105341168/230547896-12fa0f5d-599e-46c1-a35f-7153271c0425.png" alt="CleanShot 2023-04-07 at 14 36 03@2x" /></p>
-
-<ul>
-  <li>그런데 리눅스 기반으로 생성된 EC2에 내부적인 오류가 많다고 들어서, 우분투 기반으로 다시 만들어서 SSH 클라이언트까지 다시 접속했다.</li>
-</ul>
-
-<p><img src="https://user-images.githubusercontent.com/105341168/230549633-b8598af9-324a-4543-b146-eee6de1bba76.png" alt="CleanShot 2023-04-07 at 14 50 14@2x" /></p>
-
-<h2 id="10-choresonarqube-적용">#10. chore:SonarQube 적용</h2>
-<ul>
-  <li><a href="https://velog.io/@sihyung92/how-to-apply-sonarqube">해당 포스트</a>를 참고하여, 정적 코드 커버리지 툴인 SonarQube을 적용하였다.</li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="HongikChallenge" /><summary type="html"><![CDATA[#9. chore:AWS 연동 먼저 해당 포스트를 참고하여, AWS EC2를 구축하였다. (인파_, 그는 신?)]]></summary></entry><entry><title type="html">[HongikChallenge] 04/06 진행 내용</title><link href="http://localhost:4000/hongikchallenge/hcprj2/" rel="alternate" type="text/html" title="[HongikChallenge] 04/06 진행 내용" /><published>2023-04-06T00:00:00+09:00</published><updated>2023-04-06T00:00:00+09:00</updated><id>http://localhost:4000/hongikchallenge/hcprj2</id><content type="html" xml:base="http://localhost:4000/hongikchallenge/hcprj2/"><![CDATA[<blockquote>
-  <p>#5에 해당하는 <code class="language-plaintext highlighter-rouge">commit</code>을 보면 이틀 전에 생성해 <code class="language-plaintext highlighter-rouge">push</code>한 것인데, 저장소는 작성일을 오늘 날짜로 인식하고 있다. 그 부분은 사실 이전 내용에 오류가 있어 내가 <code class="language-plaintext highlighter-rouge">Amend</code> 명렁을 실행해버려서 그렇다… (원격 저장소의 <code class="language-plaintext highlighter-rouge">commit</code>한 기록들이 다 달라져버리니, 협업할 때에는 절대 하면 안되는 짓이다. 다시는 그러지 말자.)</p>
-</blockquote>
-
-<h2 id="5-choregithub-workflows-생성">#5. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/739bbdeccc0205e552d17215c788898f489e1581">chore:github workflows 생성</a></h2>
 <ul>
   <li>Github에서 제공하는 workflow 자동화 도구인 Github Actions을 사용해 Github flow을 관리하게 한다.
     <ul>
       <li>또다른 CI/CD 도구인 Jenkins와 비교한 <a href="https://choseongho93.tistory.com/295">이 게시글</a>을 참고했을 때, 비교적 소규모 프로젝트인 우리의 경우에는 Github Action를 사용하는 게 좋을 것 같았다.</li>
-      <li>Github Action과 관련해서 <a href="https://zzsza.github.io/development/2020/06/06/github-action/">해당 게시글</a>을 참고하였다.</li>
+      <li>Github Action과 관련해서 <a href="https://zzsza.github.io/development/2020/06/06/github-action/">해당 게시글</a>과 <a href="https://gmlwjd9405.github.io/2018/05/12/how-to-collaborate-on-GitHub-3.html">해당 게시글</a>을 참고하였다.</li>
       <li>도커 이미지를 생성하는 것은 <a href="https://docs.github.com/en/actions/publishing-packages/publishing-docker-images&gt;">이 문서</a> 내용이 좋은 것 같다.
 <br /><br /></li>
     </ul>
   </li>
   <li>Github flow는 <a href="https://velog.io/@pond1029/Git-Workflow">해당 게시글</a>을 참고해 아래와 같이 간단히 작성해보았다.
     <ol>
-      <li>개인 작업은 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치에서 작업하고, 작업이 끝나면 <code class="language-plaintext highlighter-rouge">pull request</code>를 생성한다.</li>
-      <li><code class="language-plaintext highlighter-rouge">pull request</code>에서 코드를 리뷰하고, 여기서 문제가 없으면 <code class="language-plaintext highlighter-rouge">main</code> 브랜치로 병합한다.</li>
-      <li><code class="language-plaintext highlighter-rouge">main</code> 브랜치에 병할할 때 배포 작업을 바로 수행한다.
+      <li>개인 작업은 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치에서 분리된 <code class="language-plaintext highlighter-rouge">feature</code>브랜치에서 작업하고, 작업이 끝나면 dev 브랜치에 대한 <code class="language-plaintext highlighter-rouge">pull request</code>를 생성한다.</li>
+      <li><code class="language-plaintext highlighter-rouge">pull request</code>에서 코드를 리뷰하고, 여기서 문제가 없으면 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치로 병합한다.</li>
+      <li><code class="language-plaintext highlighter-rouge">dev</code>에서 <code class="language-plaintext highlighter-rouge">main</code> 브랜치에 병할할 때 배포 작업을 수행한다.
 <br /><br /></li>
     </ol>
   </li>
@@ -82,30 +51,7 @@ jobs:
   <li>또한 도커 허브에 저장소를 생성하고, 계정에 대한 토큰을 발급받아 GitHub 저장소에 secret key로 등록시켰다.</li>
 </ul>
 
-<h2 id="6-choreswagger3-설정">#6. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/773ccdf11c5bee5b85e53423a818089e981c6898">chore:Swagger3 설정</a></h2>
-<ul>
-  <li><a href="https://velog.io/@dnwlsrla40/Swagger-Swagger3">해당 포스트</a>의 내용을 참고하여, REST 웹 서버로 요청되는 URL 리스트를 문서화 및 테스트 할 수 있는 Swagger3를 Api 모듈에 도입하였다.
-<br /><br /></li>
-  <li>Spring Boot 2.6 이상의 환경에서 Springfox3가 실행되지 않는 오류가 발생했다. 개발자 포럼에서도 자주 언급되는 유명한 이슈인데, 아직까지도 해결되지 않았다고 한다. Spring Boot 버전을 2.6 이하로 낮추는 것이 제일 안전한 방법이겠지만, 다른 해결책이 없나 구글링해보았더니 <a href="https://shanepark.tistory.com/366">이 포스트</a>에서 @EnableSwagger2 어노테이션 대신 @EnableWebMvc 어노테이션을 이용해 문제를 해결하길래 나도 적용해서 해결했다.
-<br /><br /></li>
-  <li>그런데 @EnableWebMvc 어노테이션을 추가하는 건 어떤 의미를 가질까? 라는 질문에 <a href="https://goodgid.github.io/Spring-Enable-MVC-Annotation/">해당 포스트</a>의 내용을 참고해 답변해본다면, @EnableWebMvc는 Spring 프레임워크에서 여러 Config 값을 알아서 설정해주는데 아래의 오류를 일으키는 <code class="language-plaintext highlighter-rouge">this.condition</code> 부분도 알아서 설정해주는 것 같다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Caused by: java.lang.NullPointerException:
-Cannot invoke "org.springframework.web.servlet.mvc.
-condition.PatternsRequestCondition.getPatterns()"
-because "this.condition" is null
-</code></pre></div></div>
-
-<ul>
-  <li>그런데 Springfox3 오류를 해결하는 글들에서 여러 답변들을 내놓는 것을 보아, 위의 해결 방법이 적합하지 않은 것일 수 있다. (알아서 설정한다는 부분이, 좀 걸린다.) 일단은 Swagger3를 도입하는 데에는 문제가 없으니 지금은 넘어가지만, 혹시 모를 문제가 생기는지 계속 확인해보자. 사실 SwaggerConfig 클래스도 그냥 기본적인 내용만 적은 거라 설정을 다시 한 번 수정해야 한다.
-<br /><br /></li>
-  <li><a href="http://localhost:8080/swagger-ui/index.html">http://localhost:8080/swagger-ui/index.html</a>로 접속해보면 Swagger 페이지가 정상적으로 출력된다.
-<br /><br /></li>
-  <li>그리고 이번 <code class="language-plaintext highlighter-rouge">commit</code>에서 GitHub workflow의 내용이 잘 적용되는지 확인하기 위해 <code class="language-plaintext highlighter-rouge">pull request</code>을 만들었다. 그런데 docker-compose하는 분을 잘못 입력해서 <code class="language-plaintext highlighter-rouge">pull request</code>가 실패하였다.</li>
-</ul>
-
-<h2 id="7-fixgithub-workflows-수정">#7. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/53500d50f4b8aafd11f7c1fd2034debfd97801b6">fix:github workflows 수정</a></h2>
+<h2 id="7-fixgithub-workflows-수정"><a href="https://github.com/Hongik-Challenge/hc-backend/commit/53500d50f4b8aafd11f7c1fd2034debfd97801b6">#7</a>. fix:github workflows 수정</h2>
 <p><img src="https://user-images.githubusercontent.com/105341168/230152494-732dd033-54cf-4954-8016-eaf57b00c42c.png" alt="CleanShot 2023-04-06 at 02 03 08@2x" /></p>
 <ul>
   <li>다소 난감한 상황이다. dev 브랜치는 이미 위의 <code class="language-plaintext highlighter-rouge">commit</code>을 반영된 상태인데 main 브랜치는 아직 반영되지 않은 상태이다. 그런데 main 브랜치에 <code class="language-plaintext highlighter-rouge">commit</code>을 적용해버린다면 dev 브랜치와는 영영 작별하는거고, dev 브랜치의 <code class="language-plaintext highlighter-rouge">commit</code>을 되돌리는 것은 이미 원격에 올라가서 불가능하다.
@@ -117,14 +63,578 @@ because "this.condition" is null
   <li>굉장히 긴 시행착오 끝에, 도커 허브에 파일 올라가는 거까지 확인하였다. 오류 수정이라 자세한 내용은 따로 다루지 않을 것이다. 여러 포스트들을 참고해 해결했는데, <a href="https://zzang9ha.tistory.com/404">이 포스트</a>가 제일 잘 정리된 거 같다. (AWS 배포까지 설명하시고 계시는데, 이 부분도 조만간 다룰 예정이다.)</li>
 </ul>
 
-<h2 id="8-chorejacoco-설정">#8. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/a10ebd2a12774c3a40484d6bf76c26f265180a41">chore:Jacoco 설정</a></h2>
+<h2 id="9-chorecicd-파이프라인-설정"><a href="https://github.com/Hongik-Challenge/hc-backend/commit/851a75061eb7dc932f849fa688e96a79b10aeef0">#9</a>. chore:CI/CD 파이프라인 설정</h2>
 <ul>
-  <li>sub 모듈에 코드 커버리지 도구인 Jacoco를 도입하기 위해, <a href="https://seller-lee.github.io/java-code-coverage-tool-part2">이 게시글</a>을 참고하였다.
+  <li>먼저 우리 프로젝트의 CI/CD 파이프라인은 아래 이미지와 유사하게 진행될 예정이다. 이전에 진행된 내용은 Github Action을 통해 도커 허브로 보내는 부분까지 진행되었다. 이번에는 <a href="https://goodgid.github.io/Github-Action-CI-CD-AWS-EC2/">해당 포스트</a>와 <a href="https://bcp0109.tistory.com/356">해당 포스트</a>를 참고하여, AWS EC2를 구축하고, 해당 EC2에 Elastic IP을 할당하였다.</li>
+</ul>
+
+<p><a href="https://velog.io/@apolontes/21.12.29-TIL45-무중단-배포-Github-Actions-Docker-AWS-EB"><img src="https://user-images.githubusercontent.com/105341168/230596272-8f5943f5-68cc-4e97-a931-7194e2acf266.png" /></a></p>
+
+<ul>
+  <li>도커 허브를 통해 EC2에 배포할 것이므로 사전에 도커 허브의 저장소를 만들어서 이전에 만든 Github workflow를 따라 빌드된 파일이 저장소에 업로드된 것을 확인하였다.
     <ul>
-      <li>코드 커버리지와 관련해, <a href="https://seller-lee.github.io/java-code-coverage-tool-part1">이 게시글</a>을 참고하였다.</li>
+      <li><a href="https://medium.com/day34/container-repository-comparsion-dd4826f6a683">해당 포스트</a>에서는 도커 허브와 AWS ECR을 비교하고 있는데, 우리의 경우에는 조금 더 익숙한 도커 허브를 사용할 계획이다.</li>
     </ul>
   </li>
 </ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230704906-10f6990d-2f72-4426-82ec-e4fb425efcee.png" alt="CleanShot 2023-04-08 at 14 24 44@2x" /></p>
+
+<ul>
+  <li>EC2의 인스턴스 유형은 프리티어인 t2.micro로, 운영 체제는 우분투로 설정하였다. (linux 기반 EC2는 자잘한 오류가 많다고 한다.)</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230702707-954aa971-fd6f-45c2-aa96-5c1fbbb7be9a.png" alt="CleanShot 2023-04-08 at 13 13 16@2x" /></p>
+
+<ul>
+  <li>아래 이미지와 같이 SSH로 접속해 EC2 내에 JDK와 CodeDeploy 플러그인을 설치하였다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230702762-5a56717a-322a-4de8-8e4a-54f71fc914dd.png" alt="CleanShot 2023-04-08 at 13 15 11@2x" /></p>
+
+<ul>
+  <li><a href="https://bcp0109.tistory.com/357">해당 포스트</a>를 참고하여, 아래 이미지와 같이 EC2에 연결할 데이터베이스를 위해 AWS RDS를 구축하였다.
+    <ul>
+      <li>해당 RDS의 RDBMS는 MysSQL로 설정하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230703114-8bd3cde8-8f10-40b6-9c32-fa7123e5c932.png" alt="CleanShot 2023-04-08 at 13 21 34@2x" /></p>
+
+<ul>
+  <li>해당 AWS RDS의 파라미터 그룹을 변경하여 저장하였다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230703499-8e8ceb25-d006-43e4-b73d-7007bbc68404.png" alt="CleanShot 2023-04-08 at 13 42 14@2x" /></p>
+
+<ul>
+  <li>아래 이미지와 같이 Intellij에서 RDS에 원격으로 접속되는 것까지 확인하였다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230703200-bc0ec63e-68c5-4ed8-8dfc-1caf6a607c6f.png" alt="CleanShot 2023-04-08 at 13 31 53@2x" /></p>
+
+<ul>
+  <li>EC2와 RDS의 연동을 위해 <a href="https://hiseon.me/linux/ubuntu/ubuntu-mysql-install/">해당 게시글</a>을 참고하여, EC2에 mysql-client를 설치하였다. 아래 이미지는 <code class="language-plaintext highlighter-rouge">sudo mysql_secure_installation</code>로 mysql를 초기화하였을 때 나오는 초기 설정으로, 래퍼런스가 정리되어 있지 않길래 나중에 필요할 때 확인할 수 있도록 첨부하였다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230704131-ee09fe07-d135-49fa-b2df-b24341ec6f5d.png" alt="CleanShot 2023-04-08 at 14 03 28@2x" /></p>
+
+<ul>
+  <li>mysql-client를 통해 EC2에서 RDS에 원격으로 접속되는 것까지 확인하였다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230704595-aa3b5417-85f2-4ba9-aa8a-20a83d9746e1.png" alt="CleanShot 2023-04-08 at 14 16 30@2x" /></p>
+
+<ul>
+  <li>추가로 GitHub Actions 또한 이를 반영해 동작하게 하기 위해, <a href="https://chb2005.tistory.com/191">해당 포스트</a>를 참고하여 yml 파일을 수정하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+
+- name: Application Run
+  uses: appleboy/ssh-action@v0.1.6
+  with:
+    host: $
+    username: $
+    key: $
+
+    script: |
+      sudo docker kill $
+      sudo docker rm -f $
+      sudo docker pull $/$:latest
+            
+      sudo docker run -p $:$ \
+      --name $ \
+      -e SPRING_DATASOURCE_URL=$ \
+      -e SPRING_DATASOURCE_USERNAME=$ \
+      -e SPRING_DATASOURCE_PASSWORD=$ \
+      -d $/$
+</code></pre></div></div>
+
+<h2 id="10-fixbootjar-task-수정"><a href="https://github.com/Hongik-Challenge/hc-backend/commit/28e71ab5941b45feb6bfee14ad1914b73238cd58">#10</a>. fix:bootJar task 수정</h2>
+
+<ul>
+  <li>지난번에 도커 허브에 올라온 빌드 파일을 실행했을 때 기본 Manifest 속성이 없다는 오류가 나오면서 정상적으로 작동이 되지 않는 것을 확인하였다. 찾아보니 내가 이전에 참고했던 <a href="https://gist.github.com/ihoneymon/a2ed116069af470fec0d08110604c5db">해당 게시글</a>처럼 오류를 해결한 경우도 있지만, 이 둘을 반대로 진행한 <a href="https://earth-95.tistory.com/132">이 포스트</a>와 같은 경우도 있음을 확인하였다. 왜 그럴까?
+    <ul>
+      <li>BootJar task와 Jar task는 빌드를 통해 jar 파일을 만드는 작업이다. 그런데 이 둘이 동시에 존재하는 이유는 Jar은 의존성이 포함되지 않고 소스 코드의 클래스 파일과 리소스 파일만 포함한 Plain Jar을, BootJar은 의존성까지 포함해 어플리케이션 실행이 가능한 executable Jar을 만들기 때문이다.</li>
+      <li>그러므로, 도커 이미지에 올라간 것은 Plain Jar라 실행이 되지 않는 것이라고 추측해볼 수 있다. 그래서 이를 고려해 build.gradle 파일을 수정하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bootJar.enabled = true
+jar.enabled = false
+</code></pre></div></div>
+
+<ul>
+  <li>그런데 이번엔 <code class="language-plaintext highlighter-rouge">Execution failed for task ':bootJar'.</code>이란 오류가 발생했다. 프로젝트의 build.gradle 파일을 보니 application이 없는 root 모듈에도 bootJar task를 실행시키는 것으로 되어 있어 수정하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bootJar.enabled = false
+</code></pre></div></div>
+
+<h2 id="13-docsexample-도메인-작성"><a href="https://github.com/Hongik-Challenge/hc-backend/commit/8d271922631c5b24bf620707daea803c4807c149">#13</a>. docs:Example 도메인 작성</h2>
+<ul>
+  <li>다른 팀원들이 도메인, API, 예외 처리에 대한 코드를 작성할 때 참고할 수 있도록 Example 코드를 작성하였다. 작성한 내용은 다음과 같다. (Example 코드인만큼 실제 코드가 어떤 역할을 하는지보다는, 해당 코드의 역할에 대한 개념을 설명하는 데에 초첨을 맞춰 서술한다.)
+<br /></li>
+  <li>Domain/ExampleEntity : 엔티티는 데이터베이스에 쓰일 필드와 여러 엔티티 간 연관관계를 정의한다. 아래의 2차원 테이블을 하나의 엔티티로 생각해보자. 우리는 이 테이블에 서비스에 필요한 정보를 활용할 수 있다. 이때 세로의 파란색 열 부분이 Column이 되고, 빨간색 부분과 같은 가로의 행 하나하나가 엔티티 객체라 볼 수 있다. 필드는 각각의 Column을 의미하는데, 엔티티 클래스에서 하나의 객체로 표현된다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/232203280-de59562c-8aca-403c-880a-bdbebbce2e98.png" alt="CleanShot 2023-04-15 at 18 11 03@2x" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    private Long example_id;
+
+    private String example_content;
+</code></pre></div></div>
+
+<ul>
+  <li>Domain/ExampleRepository : 엔티티는 위에서처럼 DB 구조를 표현한다면, 실제 DB의 값은 어떻게 접근할 수 있을까? 그리고 DB 값에 대한 CRUD는 어떻게 동작하는 것일까? 우리는 이를 위한 ExampleRepository를 인터페이스로 선언하고, JpaRepository를 상속하므로써 DB에 대한 접근 및 동작을 가능하게 해줄 예정이다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public interface ExampleRepository extends JpaRepository&lt;ExampleEntity, Long&gt; {}
+</code></pre></div></div>
+
+<ul>
+  <li>Domain/ExampleDomainService : 이제 데이터베이스에서 값을 받아왔으니, 실제 도메인에서 이루어지는 서비스를 정의할 차례이다. 당연히 DB에 접근할 수 있어야 할 것이고, Repository의 메서드를 활용한 서비스를 정의해야 한다. 여기서는 Example이므로 Repository에서 값을 찾아올 수 없는 오류를 일으키고, 정의한 오류 내용이 제대로 출력되는지 확인해보았다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class ExampleDomainService {
+    private final ExampleRepository exampleRepository;
+
+    public void exampleException() {
+      ...
+    }
+
+    public ExampleEntity exampleQuery(Long id) {
+      return exampleRepository
+                .findById(id)
+                .orElseThrow(() -&gt; new ExampleCodeException(400, "샘플 오류!", "Example 도메인에서 발생한 샘플 오류입니다."));
+    }
+
+    public ExampleEntity exampleSave(String content) {
+      ...
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>Common/Exception/ExampleException : 위 내용을 실제로 출력될 수 있도록 오류에 대한 포맷을 만들어보았다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class ExampleCodeException extends RuntimeException {
+    private int status;
+    private String code;
+    private String message;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>Api/ExampleApiService : 위의 내용이 내부에서 동작하는 도메인 모듈에서 이루어지는 작업이었다면, 이제 외부로 출력할 수 있게끔 Api 모듈에서 작업할 차례이다. 그런데 왜 서비스가 나오는지 의아할 수 있는데, 이 서비스는 사실 DomainService와 MVC, DTO 사이에 존재하는 서비스로, DomainService를 재활용할 수 있도록 해당 Api 계층에 의존하는 내용을 분리시킨 것이다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class ExampleApiService {
+    private final ExampleDomainService exampleDomainService;
+
+    public ExampleResponse getExample() {
+        ExampleEntity query = exampleDomainService.exampleQuery(1L);
+
+        return ExampleResponse.from(query);
+    }
+
+    public ExampleResponse createExample(){
+        ExampleEntity qwer = exampleDomainService.exampleSave("qwer");
+        return ExampleResponse.from(qwer);
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>Api/ExampleResponse : 요청 데이터 또는 응답 데이터를 하나의 객체로 주고받을 수 있는 DTO 클래스이다. 각 HandlerMethod에 대한 패러미터의 개수가 많아질 수 있고, 또 도메인 객체를 컨트롤러에서 분리하기 위해 사용하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class ExampleResponse {
+    private final Long id;
+    private final String content;
+
+    public static ExampleResponse from(ExampleEntity exampleEntity) {
+        return new ExampleResponse(
+                exampleEntity.getExample_id(), exampleEntity.getExample_content());
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>Api/ExampleController : 클라이언트의 요청을 직접 받을 엔드포인트 역할을 할 컨트롤러이다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class ExampleController {
+    private final ExampleApiService exampleApiService;
+
+    @GetMapping
+    public ExampleResponse get(){
+        return exampleApiService.getExample();
+    }
+
+    @PostMapping
+    public ExampleResponse create(){
+        return exampleApiService.createExample();
+    }
+}
+</code></pre></div></div>
+
+<h2 id="14-featdomainbasetimeentity-추가"><a href="https://github.com/Hongik-Challenge/hc-backend/commit/6209c2c954d5efd23d921c284ed13e1e37b764c3">#14</a>. feat/domain:BaseTimeEntity 추가</h2>
+<ul>
+  <li>생성 시간과 수정 시간을 자동으로 설정해주기 위해 JPA Auditing의 세부 기능 중 하나인 BaseTimeEntity를 추가하고, 이를 Example 도메인에 적용했다.
+    <ul>
+      <li>JPA Auditing은 데이터베이스에 데이터를 누가, 언제 데이터를 생성했는지, 수정했는지를 저장하는 업무를 담당한다. JPA Auditing을 이용하면 엔티티별로 동일한 필드명을 달고, 데이터를 넣어주는 코드를 중복적으로 짜지 않아도 된다.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>이전에 생성한 AWS EC2의 용량을 너무 작게 설정해 (8GB), RDS는 그대로 두면서 EC2 인스턴스를 다시 생성하게 되었다. 그래서 커밋과 별개로 인스턴스에서 진행했던 작업들을 다시 진행하게 되었는데, 해당 내용은 커밋된 내용은 아니지만 시스템 구축에 관련된 작업이기에 따로 정리할 필요성을 느껴 이 부분을 다시 작성하게 되었다. (사실 이전에 생성하면서 작성된 내용과 중복되는 작업인데, 그때는 너무 러프하게 작성한 것 같아 좀 자잘하게 작성할 계획이다.)</p>
+</blockquote>
+
+<h2 id="16-17-18-aws-ec2-인스턴스-설정"><a href="https://github.com/Hongik-Challenge/hc-backend/commit/201893e469562860397b89c25e3d81db884848c7">#16</a>, <a href="https://github.com/Hongik-Challenge/hc-backend/commit/2a513dc6b7b1c755c4b32ff233cc399f16d8323d">#17</a>, <a href="https://github.com/Hongik-Challenge/hc-backend/commit/fe3812f93790745b6b80e146ae25afb25990667a">#18</a>. AWS EC2 인스턴스 설정</h2>
+
+<ul>
+  <li>EC2의 인스턴스 유형은 프리티어인 t2.micro로, 용량은 15GB로 운영 체제는 우분투로 설정하였다. (linux 기반 EC2는 자잘한 오류가 많다고 한다.)  다음은 EC2 인스턴스 생성과 관련하여 설정한 부분이다.
+    <ul>
+      <li>IntelliJ나 터미널 등의 SSH 클라이언트 접속을 위한 프라이빗 키 파일을 생성하였다.</li>
+      <li>인스턴스에 대한 보안 그룹을 생성해, 인바운드 규칙과 아웃바운드 규칙을 지정하였다.</li>
+      <li>탄력적 IP 주소를 할당받아, 이를 인스턴스에 연결하였다.</li>
+      <li>IAM 역할을 변경하여 추후 연결할 데이터베이스 서버와 이미지 서버에 접근할 수 있게끔 하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230702707-954aa971-fd6f-45c2-aa96-5c1fbbb7be9a.png" alt="CleanShot 2023-04-08 at 13 13 16@2x" /></p>
+
+<ul>
+  <li>SSH에 접속하는 과정에서 <code class="language-plaintext highlighter-rouge">WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</code>라는 오류 메시지를 띄우면서, RSA 공유키 충돌 문제가 발생하였다. 그래서 <a href="https://kingsong.tistory.com/127">이 게시글</a>을 참고하여 known_hosts 파일을 지웠다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm /root/.ssh/known_hosts 
+</code></pre></div></div>
+
+<ul>
+  <li><a href="https://www.leafcats.com/168">SSH 클라이언트에 접속하여 사용자가 root 권한을 빌린다.</a></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo su
+</code></pre></div></div>
+
+<ul>
+  <li><a href="https://someone-life.tistory.com/17">패키지를 최신으로 업데이트하기 위해 이에 대한 확인 및 실행을 주기적으로 한다.</a>
+    <ul>
+      <li>패키지를 업데이트할 때나 패키지를 설치할 때마다 계속 핑크색 화면이랑 이런저런 log가 계속 나오는 게 신경쓰여 <a href="https://chhanz.github.io/linux/2022/08/01/ubuntu-22-04-needrestart/">해당 게시글</a>을 needrestart를 제거하고, Kernel Hint와 daemon 재시작 권고 설정 역시 비활성화하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt update &amp;&amp; sudo apt upgrade
+</code></pre></div></div>
+
+<ul>
+  <li>그런데 일괄적으로 업데이트가 안되는 패키지가 있길래, 업그레이드 가능한 패키지를 확인하고 이를 개별로 설치하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt list --upgradable
+apt install &lt;패키지명&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>(이전에 미처 체크하지 못한…) 디스크별 용량을 주기적으로 확인해두자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df -h
+</code></pre></div></div>
+
+<ul>
+  <li>AWS 서비스를 관리할 수 있도록 AWS CLI를 설치하였다. 이전에 IAM 역할을 잘 변경했다면, s3나 rds 명령어도 잘 작동될 것이다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install awscli
+</code></pre></div></div>
+
+<ul>
+  <li>SpringBoot 프로젝트를 빌드할 수 있도록 JDK를 설치하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install openjdk-17-jdk
+java -version
+javac -version
+</code></pre></div></div>
+
+<ul>
+  <li>추가로 <code class="language-plaintext highlighter-rouge">vim ~/.bashrc</code>으로 JDK의 환경변수를 설정하고, <code class="language-plaintext highlighter-rouge">source ~/.bashrc</code>로 이를 적용하였다. (변경된 내용은 <code class="language-plaintext highlighter-rouge">echo $JAVA_HOME</code>로 확인해볼 수 있다.)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
+export PATH=$PATH:$JAVA_HOME/bin
+</code></pre></div></div>
+
+<ul>
+  <li>아래의 명령어를 이용하여 도커를 설치하였는데, <code class="language-plaintext highlighter-rouge">Job for docker.service failed because the control process exited with error code</code>라는 오류가 발생하면서 도커가 실행되지 않아 <a href="https://dct-wonjung.tistory.com/entry/Docker-failed-control-process-exited-오류-해결">해당 게시글</a>을 통해 해결하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install docker.io 
+systemctl start docker
+systemctl enable docker
+</code></pre></div></div>
+
+<ul>
+  <li>이전에 프리티어가 메모리가 1기가밖에 안되어 소나큐브를 실행만 하면 계속 튕기는 일이 발생하였다. 사실 이런 일은 처음이라 감도 못 잡았다가 <a href="https://velog.io/@seungju0000/ec2-stop">이 게시글</a>로 어떤 일이 벌어지는지 대충이나마 이해하게 되었다. 그래서 이번에는 <a href="https://kth990303.tistory.com/361">해당 게시글</a>로 Swap File을 이용해 EC2 메모리 부족 현상을 해결해보고자 하였다.
+    <ul>
+      <li>스왑된 메모리는 <code class="language-plaintext highlighter-rouge">free</code> 명령어로 확인해볼 수 있다.</li>
+      <li><code class="language-plaintext highlighter-rouge">top</code> 명령어로 메모리 할당량을 프로세스 별로 확인해볼 수 있다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dd if=/dev/zero of=/swapfile bs=128M count=16
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+</code></pre></div></div>
+
+<ul>
+  <li>스왑된 메모리가 자동으로 마운트가 가능할 수 있도록 <code class="language-plaintext highlighter-rouge">vi /etc/fstab</code>으로 <code class="language-plaintext highlighter-rouge">/etc/fstab</code> 파일의 맨 밑줄에 해당 명령어를 작성하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/swapfile swap swap defaults 0 0
+</code></pre></div></div>
+
+<ul>
+  <li>그리고 톰캣을 설치하였는데, <a href="https://velog.io/@bonjaski0989/AWS-EC2-Linux-환경에서-톰캣-설치하기">이 게시글</a>에 잘 정리되어 있어 이를 그대로 작업하였다. (아, JAVA 환경변수는 이미 설정하였으므로 해당 부분만 제외하였다.)
+    <ul>
+      <li>톰캣을 매번 재시작할 수 있도록 <a href="https://velog.io/@bonjaski0989/EC2-Tomcat-서비스-등록">이 게시글</a>을 참고하였는데, 스크립트를 실행하는 과정에서 <code class="language-plaintext highlighter-rouge">files have no installation config</code>라는 오류가 발생하였다. 구글링해본 결과 Install 섹션을 활성화해야 한다고 하여 아래의 내용을 스크립트 파일에 추가하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Install]
+WantedBy=multi-user.target
+</code></pre></div></div>
+
+<ul>
+  <li>여러 개의 도커 컨테이너의 실행을 한 번에 관리할 수 있도록 도커 컴포즈를 설치하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+docker-compose --version
+</code></pre></div></div>
+
+<ul>
+  <li>도커로 SonarQube를 설치하였다. (사실 도커로 설치하지 않고 sonarqube를 설치한다면 아래의 작업들을 모두 진행해야 한다. 왜 아냐고? 다 했으니까… 근데 내가 설치한 자바 버전이랑 차이가 있어서 계속 오류가 났다.)
+    <ul>
+      <li>Java 설치, 환경설정</li>
+      <li>DB 설치</li>
+      <li>SonarQube에서 요구하는 DB table 생성</li>
+      <li>DB 계정 생성 및 권한설정</li>
+      <li>SonarQube 설치</li>
+      <li>SonarQube에 DB 정보 설정</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
+</code></pre></div></div>
+
+<ul>
+  <li>그리고 이에 맞춰 Github workflow를 수정하였는데, <code class="language-plaintext highlighter-rouge">Permission denied(public key)</code>라는 문구를 띄우면서 Github Actions이 제대로 동작하지 않아 여러 커밋을 보냈다. 근데 원인은 Actions secrets and variables를 잘못 작성한 것이였다; 꼭, -BEGIN-와 -END- 부분도 지우지 말고 넣자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-----BEGIN OPENSSH PRIVATE KEY-----
+...
+-----END OPENSSH PRIVATE KEY-----
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[#10. init: github action 설정]]></summary></entry><entry><title type="html">[vocawik] 4/19 진행 내용</title><link href="http://localhost:4000/vocawik/vcw3/" rel="alternate" type="text/html" title="[vocawik] 4/19 진행 내용" /><published>2023-04-19T00:00:00+09:00</published><updated>2023-04-19T00:00:00+09:00</updated><id>http://localhost:4000/vocawik/vcw3</id><content type="html" xml:base="http://localhost:4000/vocawik/vcw3/"><![CDATA[<h2 id="3-init-멀티모듈-세팅"><a href="https://github.com/pocj8ur4in/vw-backend/commit/37de95d9208b2ba4a1877a70cf3b2b4e8235f801">#3</a>. init: 멀티모듈 세팅</h2>
+
+<p>프로젝트의 내부를 기존의 root 모듈에 sub 모듈인 api, batch, core, domain, infrastructure, socket 모듈을 포함시킨 멀티모듈 구조로 변경하였다.</p>
+
+<ul>
+  <li>sub 모듈들을 하나의 디렉토리에서 관리할 수 있도록 <code class="language-plaintext highlighter-rouge">settings.gradle</code> 파일을 작성하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rootProject.name = 'vw-backend'
+include 'vw-api'
+include 'vw-batch'
+include 'vw-core'
+include 'vw-domain'
+include 'vw-infrastructure'
+include 'vw-socket'
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">build.gradle</code>에 subprojects와 allprojects 블록을 추가해 하위 모듈과 전체 모듈을 제어할 수 있도록 하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>allprojects{
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    group = 'vocawik'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '17'
+
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'java-library'
+    apply plugin: 'io.spring.dependency-management'
+
+    dependencies {
+
+    }
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>반복된 코드를 어노테이션으로 자동완성하는 lombok 라이브러리를 사용하기 위해 subprojects에 의존성을 추가하였다.</li>
+  <li>스프링 어플리케이션에서 Junit 기반 테스트가 가능하도록 subprojects에 의존성을 추가하였다.</li>
+  <li><a href="https://jundragon.tistory.com/9">해당 포스트</a>를 참고해 lombok을 테스팅 환경에서 사용할 수 있도록 subprojects에 의존성을 추가하였다.</li>
+  <li>JUnit5 API를 테스팅 환경에서 사용할 수 있도록 subprojects에 의존성을 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dependencies {
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        testCompileOnly 'org.projectlombok:lombok'
+        testAnnotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    }
+</code></pre></div></div>
+
+<ul>
+  <li><a href="https://math-coding.tistory.com/158">해당 포스트</a>를 참고해 Java 단위 테스트를 위한 JUnit5 프레임워크를 위해 <code class="language-plaintext highlighter-rouge">build.gradle</code>을 변경하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.named('test') {
+        useJUnitPlatform()
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Task 'wrapper' not found in project ':project'</code> 오류를 해결하고자, <a href="https://hororolol.tistory.com/546">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper를 사용해서 빌드 환경을 맞추었다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>task wrapper(type: Wrapper) {
+    gradleVersion = '4.4'    
+    distributionUrl = distributionUrl.replace("bin", "all")
+}
+</code></pre></div></div>
+
+<ul>
+  <li>위의 오류를 해결하는 과정에서 <code class="language-plaintext highlighter-rouge">Cannot add task 'wrapper' as a task with that name already exists</code> 오류가 발생해, <a href="https://taegyunum.tistory.com/entry/Cannot-add-task-wrapper-as-a-task-with-that-name-already-exists">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper 형식을 변경하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wrapper {
+        gradleVersion = '4.4'
+        distributionUrl = distributionUrl.replace("bin", "all")
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">:prepareKotlinBuildScriptModel Task fails in a Java project</code> 오류를 해결하고자, <a href="https://charactermail.tistory.com/351">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 <code class="language-plaintext highlighter-rouge">prepareKotlinBuildScriptModel</code>을 새로운 task로 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.register("prepareKotlinBuildScriptModel"){}
+</code></pre></div></div>
+
+<h2 id="4-chorespotless-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/30d811bfeabefb5f35aaa0876d799ae563b85b7c">#4</a>. chore:spotless 적용</h2>
+
+<p>Junit에 대한 코드 포맷팅 및 유지보수를 위해 <a href="https://nesoy.github.io/articles/2020-04/Spotless">해당 게시글</a>을 참고해 spotless 플러그인을 추가하였다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id "com.diffplug.spotless" version "6.16.0"
+</code></pre></div></div>
+
+<ul>
+  <li>sub 모듈에서도 spotless 플러그인이 적용되도록 <a href="https://keelim.tistory.com/entry/안드로이드-멀티-모듈-공통-gradle-그리고-ktlint-적용을-해보자">해당 게시글</a>을 참고해 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 생성하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spotless {
+    version = "6.16.0"
+
+    java {
+        // 특정 파일에만 적용
+        target("**/*.java")
+
+        // import 순서 정의
+        importOrder()
+
+        // 사용하지 않는 import 제거
+        removeUnusedImports()
+
+        // 구글 자바 포맷 적용
+        googleJavaFormat().aosp()
+
+        // 공백 제거
+        trimTrailingWhitespace()
+
+        // 끝부분 New Line 처리
+        endWithNewline()
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>그리고 sub 모듈에서도 spotless 플러그인이 적용될 수 있도록 root 모듈에 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 적용시켰다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply from: "$rootDir/spotless.gradle"
+</code></pre></div></div>
+
+<h2 id="5-init-git-hook과-gradle을-통한-spotless-자동화"><a href="https://github.com/pocj8ur4in/vw-backend/commit/11cc84e6582621c90c698d3fdce67f41427897b4">#5</a>. init: git hook과 gradle을 통한 spotless 자동화</h2>
+
+<p>앞서 spotless를 적용하긴 했는데, spotless를 실행하는 것은 코드를 작성하고 이를 커밋하는 과정에서 까먹기 쉬운 작업이다. 그래서 <a href="https://techblog.woowahan.com/2530/">이 게시글</a>처럼 git hook으로 커밋을 하기 전에 spotless를 적용하는 것을 자동화하였다.<br /></p>
+
+<p>그런데 .git는 처음에 .gitignore을 통해 제외하기로 한 디렉토리이다. 나 혼자 작업을 진행한다면 위의 내용으로 충분하겠지만, 협업에서는 모두가 같은 내용을 적용하는 것이 중요하다. 그래서 root에 pre-commit 파일을 두고, gradle task를 이용해 빌드가 이루어질 때 pre-commit 파일을 .git에 이동하는 것을 추가하였다.</p>
+
+<h2 id="6-init-모듈-내-applicationyml-세팅"><a href="https://github.com/pocj8ur4in/vw-backend/commit/c70a1f7745384d0b2a209c079023b24df2a0874a">#6</a>. init: 모듈 내 application.yml 세팅</h2>
+
+<p><a href="https://tecoble.techcourse.co.kr/post/2022-10-04-active_profiles/">해당 게시글</a>을 참고하여 이전에 설장한 멀티모듈 내에 프로퍼티 설정을 관리하고 환경변수를 주입할 수 있는 application.yml 파일을 생성하였다.</p>
+
+<h2 id="6-init-swagger3-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/311e740cff2a31a07bce721140928114a0295501">#6</a>. init: swagger3 적용</h2>
+
+<p><a href="https://velog.io/@dnwlsrla40/Swagger-Swagger3">해당 포스트</a>의 내용을 참고하여, REST 웹 서버로 요청되는 URL 리스트를 문서화 및 테스트 할 수 있는 Swagger3를 Api 모듈 내에 도입하였다.</p>
+
+<ul>
+  <li>Spring Boot 2.6 이상의 환경에서 Springfox3가 실행되지 않는 오류가 발생했다. 개발자 포럼에서도 자주 언급되는 유명한 이슈인데, 아직까지도 해결되지 않았다고 한다. Spring Boot 버전을 2.6 이하로 낮추는 것이 제일 안전한 방법이겠지만, 다른 해결책이 없나 구글링해보았더니 <a href="https://shanepark.tistory.com/366">이 포스트</a>에서 @EnableSwagger2 어노테이션 대신 @EnableWebMvc 어노테이션을 이용해 문제를 해결하길래 나도 적용해서 해결했다.
+    <ul>
+      <li>그런데 @EnableWebMvc 어노테이션을 추가하는 건 어떤 의미를 가질까? 라는 질문에 <a href="https://goodgid.github.io/Spring-Enable-MVC-Annotation/">해당 포스트</a>의 내용을 참고해 답변해본다면, @EnableWebMvc는 Spring 프레임워크에서 여러 Config 값을 알아서 설정해주는데 아래의 오류를 일으키는 this.condition 부분도 알아서 설정해주는 것 같다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Caused by: java.lang.NullPointerException:
+Cannot invoke "org.springframework.web.servlet.mvc.
+condition.PatternsRequestCondition.getPatterns()"
+because "this.condition" is null
+</code></pre></div></div>
+
+<ul>
+  <li><a href="http://localhost:8080/swagger-ui/index.html">http://localhost:8080/swagger-ui/index.html</a>로 접속해보면 Swagger 페이지가 정상적으로 출력된다.</li>
+</ul>
+
+<h2 id="8-chorejacoco-설정"><a href="https://github.com/Hongik-Challenge/hc-backend/commit/a10ebd2a12774c3a40484d6bf76c26f265180a41">#8</a>. chore:Jacoco 설정</h2>
+
+<p><a href="https://seller-lee.github.io/java-code-coverage-tool-part2">해당 게시글</a>을 참고해 sub 모듈에 코드 커버리지 도구인 Jacoco를 도입하였다.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply plugin: 'jacoco'
 
@@ -149,7 +659,7 @@ jacoco {
 </code></pre></div></div>
 
 <ul>
-  <li>원하는 코드 커버리지를 설정하고, 커버리지를 만족하는지 여부를 확인하는 데에 쓰이는 jacocoTestCoverageVerification task를 설정했는데… 이 정도는 되어야 통과된다, 라는 기준을 잘 모르겠어서 일단 이 내용은 코드에서 제외하였다.</li>
+  <li>원하는 코드 커버리지를 설정하고, 커버리지를 만족하는지 여부를 확인하는 데에 쓰이는 jacocoTestCoverageVerification task를 설정하려 했으나 커버리지를 만족시키기 위해 설정해야 하는 기준을 판단하기 어려워 일단 이 내용은 코드에서 제외하였다.</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestCoverageVerification {
@@ -191,70 +701,65 @@ jacoco {
 </code></pre></div></div>
 
 <ul>
-  <li>그런데 계속 <code class="language-plaintext highlighter-rouge">./gradlew test --console verbose</code>를 하는데 계속 빌드가 안되더라…정말 미치는 줄 알았다. 이것저것 다 건들어도 안되서 구글링해보니 jacoco의 버전을 올려보라는 <a href="https://stackoverflow.com/questions/53911122/how-to-fix-error-while-creating-report-jacoco">답변</a>이 있길래, 설마? 하면서 했는데 성공했다. (이런 오류가 제일 싫더라)</li>
+  <li>그런데 <code class="language-plaintext highlighter-rouge">./gradlew test --console verbose</code>으로 실행해도 빌드가 성공하지 않았는데, jacoco의 버전을 올려보라는 <a href="https://stackoverflow.com/questions/53911122/how-to-fix-error-while-creating-report-jacoco">답변</a>을 적용해 해결하였다.</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacoco {
-    toolVersion = '0.8.7'
+    toolVersion = '0.8.7' -&gt; '0.8.9'
 }
 </code></pre></div></div>
 
-<p><img src="https://user-images.githubusercontent.com/105341168/230381060-a2972bf0-8abb-4c92-b493-d19c3912106d.png" alt="CleanShot 2023-04-06 at 21 38 28@2x" /></p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="HongikChallenge" /><summary type="html"><![CDATA[#5에 해당하는 commit을 보면 이틀 전에 생성해 push한 것인데, 저장소는 작성일을 오늘 날짜로 인식하고 있다. 그 부분은 사실 이전 내용에 오류가 있어 내가 Amend 명렁을 실행해버려서 그렇다… (원격 저장소의 commit한 기록들이 다 달라져버리니, 협업할 때에는 절대 하면 안되는 짓이다. 다시는 그러지 말자.)]]></summary></entry><entry><title type="html">[HongikChallenge] 04/04 진행 내용</title><link href="http://localhost:4000/hongikchallenge/hcprj1/" rel="alternate" type="text/html" title="[HongikChallenge] 04/04 진행 내용" /><published>2023-04-04T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/hongikchallenge/hcprj1</id><content type="html" xml:base="http://localhost:4000/hongikchallenge/hcprj1/"><![CDATA[<blockquote>
-  <p>현재 내가 다니고 있는 대학교에는 1학기 동안 자기가 원하는 수업을 설계하고 이를 전행하여 교수님들께 평가받는 수업이 있는데, 내가 속해 있는 팀이 이번 학기에 이를 지원해 수강하게 되었다. 나는 이번 기회를 이용해 하나의 완성된 사이트를 배포하는 것을 목표로 하는 프로젝트를 진행하고자 하였다. 원래는 기획과 설계에 대한 글을 먼저 올리는 게 맞겠지만, 학교 행정상의 문제로 인해 이를 학기중에 게시하면 안된다고 전달받아서, 일단 Github 저장소에 커밋한 내용을 기반으로 매일 진행한 내용들과 내가 코드를 쓰면서 참고한 내용들을 정리하고자 한다. 일단은 하루하루 공부한 내용을 기록하는 <code class="language-plaintext highlighter-rouge">TIL</code>처럼, 매일 진행한 커밋 하나하나에 대해 글을 쓰는 것이 목표이다.</p>
-</blockquote>
+<p><img src="https://user-images.githubusercontent.com/105341168/230381060-a2972bf0-8abb-4c92-b493-d19c3912106d.png" /></p>
 
-<h2 id="1-chore저장소-생성">#1. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/2ad124287e375c06ff417fbc2b4555b73aa303c4">chore:저장소 생성</a></h2>
+<h2 id="9-init-sonarqube-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/5dc906b6d60e13cbcf0c093afad66cb0c5c9cfb3">#9</a>. init: sonarqube 적용</h2>
+<p><a href="https://kdevkr.github.io/static-analysis-performed-by-sonarqube-and-github-action/#소나큐브-시스템-구성">해당 게시글</a>을 참고해, Jacoco와 비슷한 코드 커버리지 도구인 sonarqube를 프로젝트 내에 도입하였다.</p>
 
 <ul>
-  <li>git에서 <code class="language-plaintext highlighter-rouge">add</code>, <code class="language-plaintext highlighter-rouge">commit</code>, <code class="language-plaintext highlighter-rouge">push</code>  등의 명령어로 변경 내용을 관리할 수 있는 <code class="language-plaintext highlighter-rouge">.git</code> 파일을 생성하였다.
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">.git</code> 파일의 내부 구조와 관련해서 <a href="https://tecoble.techcourse.co.kr/post/2021-07-08-dot-git/">해당 포스트</a>를 참고하였다.
-<br /><br /></li>
-    </ul>
-  </li>
-  <li>git이 관리하지 않을 파일을 지정하기 위한 <code class="language-plaintext highlighter-rouge">.gitignore</code> 파일을 생성하였다.
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">.gitignore</code> 파일과 관련해서 <a href="https://kyu9341.github.io/Git/2020/08/23/git_gitignore/">해당 포스트</a>를 참고하였다.</li>
-      <li><a href="https://github.com/Hongik-Challenge/hc-backend/commit/2ad124287e375c06ff417fbc2b4555b73aa303c4#diff-bc37d034bad564583790a46f19d807abfe519c5671395fd494d8cce506c42947"><code>commit</code> 내용</a>은 <a href="https://www.toptal.com/developers/gitignore">gitignore.io</a>을 참고해 작성하였다.
-<br /><br /></li>
-    </ul>
-  </li>
-  <li>협업에서의 원활한 의사소통을 위해 commit message convention을 정해 git에 <code class="language-plaintext highlighter-rouge">commit</code>할 때 참고하고자 하였다.
-    <ul>
-      <li>제일 많이 사용되고 있는 <a href="https://udacity.github.io/git-styleguide/">유다시티 커밋 메시지 스타일 가이드</a>를 참고해 아래의 원칙을 작성하였다.</li>
-    </ul>
-  </li>
+  <li>풀 리퀘스트가 종료되면서 개발 서버에 빌드 파일이 배포되기 전에 소나큐브가 실행되는 것을 목표로 하므로, 차후 작성된 github action에 이를 반영할 것이다.</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[#3. init: 멀티모듈 세팅]]></summary></entry><entry><title type="html">[vocawik] 4/18 진행 내용</title><link href="http://localhost:4000/vocawik/vcw2/" rel="alternate" type="text/html" title="[vocawik] 4/18 진행 내용" /><published>2023-04-18T00:00:00+09:00</published><updated>2023-04-18T00:00:00+09:00</updated><id>http://localhost:4000/vocawik/vcw2</id><content type="html" xml:base="http://localhost:4000/vocawik/vcw2/"><![CDATA[<h2 id="1-init-git-저장소-생성"><a href="https://github.com/pocj8ur4in/vw-backend/commit/4384ad841da379a51f6561c15c993395d6cdaad8">#1</a>. init: git 저장소 생성</h2>
+
+<p>먼저 작업물의 변경점과 버전을 관리하는 버전 관리 시스템 (VCS; Version Control System)을 도입할 것이다. 변경점 관리를 통해 협업하는 과정에서 누가 어떤 내용을 언제 수정했는지 확인할 수 있고, 버전 관리를 통해 작업하는 과정에서 작업물의 백업과 복구를 간편하게 수행할 수 있다. 여기서는 배포할 코드와 작업할 코드를 나눠 프로젝트를 진행할 수 있는 브랜치 (branch) 개념이 있고 대부분의 개발자에게 이미 익숙할 git을 사용하겠다.</p>
+
+<ul>
+  <li>.git 디렉터리를 생성하였다.</li>
+  <li>git이 관리하지 않을 파일을 지정하기 위해 .gitignore 파일을 생성하고, 그 내용은 <a href="https://www.toptal.com/developers/gitignore">gitignore.io</a>을 참고해 작성하였다.</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. message structure
-- type:subject
+<p>추가로 협업에서의 원활한 의사소통을 위한 commit message convention을 정하여, git에 커밋하는 메시지 제목과 내용에 반영하고자 한다. <a href="https://udacity.github.io/git-styleguide/">유다시티 커밋 메시지 스타일 가이드</a>를 참고해 아래의 원칙을 정하였다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- message structure
+  - type: subject
+  - body
+
+- type
+  - init : 초기 업무
+  - chore : 빌드 업무 및 패키지 매니저 수정
+  - feat : 새로운 기능 도입
+  - fix : 버그 수정
+  - docs : 문서 수정
+  - style : 코드 포맷팅 (크드 변경이 없는 경우)
+  - refactor : 코드 리펙토링
+  - test : 테스트 코드 추가
+
+- subject
+  - 제목에 해당하는 subject는 현재시제로 50자 내외에서 작성한다.
+
 - body
-
-2. type
-- feat : 새로운 기능 도입
-- fix : 버그 수정
-- docs : 문서 수정
-- style : 코드 포맷팅 (크드 변경이 없는 경우)
-- refactor : 코드 리펙토링
-- test : 테스트 코드 추가
-- chore : 빌드 업무 및 패키지 매니저 수정
-
-3. subject
-- 제목에 해당하는 subject는 현재시제로 50자 내외에서 작성한다.
-
-4. body
-- 본문에 해당하는 body는 부연설명이 필요한 경우에만 작성한다.
+  - 본문에 해당하는 body는 부연설명이 필요한 경우에만 작성한다.
 </code></pre></div></div>
 
-<h2 id="2-chore프로젝트-생성">#2. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/6a018a31584d5468d8a2b5a6aa1a31124d3a31b9">chore:프로젝트 생성</a></h2>
+<p>그리고 Git 원격 저장소를 웹에 호스팅하는 서비스인 Git 웹 호스팅 서비스를 도입할 것이다. 이를 통해 협업하는 과정에서 작업 내용을 빠르게 공유하고, webhook 기능을 통해 pull이나 pull request 같은 이벤트에 반응하여 작업이 실행되게 할 수 있다. 여기서는 데비옵스 (DevOps) 파이프라인 자동화 툴인 Github Actions나 업무의 생성, 진행상황, 해결을 추적하는 이슈 트래커 툴인 Github Issue 등의 서비스를 지원하고 대부분의 개발자에게 이미 익숙할 <a href="https://github.com">github</a>를 사용하겠다.</p>
 
 <ul>
-  <li>Gradle을 빌드하기 위한 <code class="language-plaintext highlighter-rouge">build.gradle</code> 파일의 plugins와 repositories를 작성하였다.
-    <ul>
-      <li>Gradle과 관련해서 <a href="https://velog.io/@appti/series/gradle">해당 포스트</a>와 <a href="https://araikuma.tistory.com/category/IT%20개발/Gradle">해당 포스트</a>를 참고하였다.
-<br /><br /></li>
-    </ul>
-  </li>
+  <li>github 계정에 프로젝트를 저장할 원격 저장소를 만들고, 로컬 저장소의 내용을 원격 저장소에 푸시하였다.</li>
+</ul>
+
+<h2 id="2-init-프로젝트-생성"><a href="https://github.com/pocj8ur4in/vw-backend/commit/c5cf75b5278c58afeca30d7f31239db7518c9b83">#2</a>. init: 프로젝트 생성</h2>
+
+<p>이제 웹 어플리케이션을 구현하기 위한 기술을 정할 차례이다. 사실 이 부분은 개발자 조직과 비즈니스 기획을 고려해 의사결정을 해야 하는 게 맞겠지만, 나에게 러닝커브가 적고 라이브러리 및 래퍼런스가 많이 존재하는 Java를 프로그래밍 언어로, Spring Boot를 웹 프레임워크로, Gradle을 의존성 관리 도구로 사용할 계획이다.</p>
+
+<ul>
+  <li>Gradle을 빌드하기 위한 <code class="language-plaintext highlighter-rouge">build.gradle</code> 파일의 plugins와 repositories를 작성하였다. .gradle 파일을 작성하는 방법은 <a href="https://velog.io/@appti/series/gradle">해당 포스트</a>와 <a href="https://araikuma.tistory.com/category/IT%20개발/Gradle">해당 포스트</a>를 참고하였다.</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins {
@@ -266,188 +771,7 @@ jacoco {
 repositories {
     mavenCentral()
 }
-</code></pre></div></div>
-
-<h2 id="3-chore멀티모듈-구성">#3. <a href="https://github.com/Hongik-Challenge/hc-backend/commit/1e1d43da4c6072c8e25a82c6eb2d7da3382e51f3">chore:멀티모듈 구성</a></h2>
-
-<ul>
-  <li>프로젝트의 내부를 기존의 root 모듈에 sub 모듈인 Api, Common, Domain, Infrastructure 모듈을 포함시킨 멀티모듈 구조로 변경하였다.
-    <ul>
-      <li>멀티모듈의 설계와 관련해서 <a href="https://velog.io/@freesky/DDD-Start-Architecture">해당 포스트</a>를 참고하였다.</li>
-      <li>사실 <a href="https://techblog.woowahan.com/2637/">이 포스트</a>를 참고해 설계하려 했지만 이해가 잘 되지 않아 보류하였다. (Common 계층에 모두 의존되는 것이 문제라는 것은 파악하고 있다.)</li>
-    </ul>
-  </li>
-</ul>
-
-<p><img src="https://user-images.githubusercontent.com/105341168/229998528-d407801c-d03e-4bb2-8e63-4a57fa102846.png" alt="CleanShot 2023-04-05 at 15 26 56@2x" /></p>
-
-<ul>
-  <li>sub 모듈들을 하나의 디렉토리에서 관리하기 위해 <code class="language-plaintext highlighter-rouge">settings.gradle</code> 파일을 작성하였다.
-    <ul>
-      <li>원래 모듈을 생성하는 과정에서 자동으로 작성되는 것으로 알고 있는데 안되서 직접 작성하였다.</li>
-      <li><code class="language-plaintext highlighter-rouge">setting.gradle</code>이 아니라 <code class="language-plaintext highlighter-rouge">settings.gradle</code>이다… 이거 하나를 못 찾아서 새벽을 지새웠다.</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rootProject.name = 'HongikChallenge'
-include 'Api'
-include 'Common'
-include 'Domain'
-include 'Infrastructure'
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">build.gradle</code>에 subprojects와 allprojects 블록을 추가해 하위 모듈과 전체 모듈을 제어할 수 있도록 하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>allprojects{
-
-}
-
-subprojects{
-    group = 'HongikChallenge'
-    version = '0.0.1-SNAPSHOT'
-    sourceCompatibility = '17'
-
-    repositories {
-        mavenCentral()
-    }
-
-    apply plugin: 'java'
-    apply plugin: 'org.springframework.boot'
-    apply plugin: 'java-library'
-    apply plugin: 'io.spring.dependency-management'
-
-    configurations {
-        compileOnly {
-            extendsFrom annotationProcessor
-        }
-    }
-}
-</code></pre></div></div>
-
-<ul>
-  <li>어노테이션 기반으로 반복적으로 작성하는 코드를 자동완성해주는 lombok 라이브러리를 subprojects에 다음과 같은 dependencies으로 추가하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>compileOnly 'org.projectlombok:lombok'
-annotationProcessor 'org.projectlombok:lombok'
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>testImplementation 'org.springframework.boot:spring-boot-starter-test'
-</code></pre></div></div>
-
-<ul>
-  <li>lombok을 테스팅 환경에서 사용하기 위해 <a href="https://jundragon.tistory.com/9">해당 포스트</a>를 참고해 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에 다음과 같은 dependencies으로 추가하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>testCompileOnly 'org.projectlombok:lombok'
-testAnnotationProcessor 'org.projectlombok:lombok'
-</code></pre></div></div>
-
-<ul>
-  <li>Java에서 단위 테스트를 하기 하기 위해 <a href="https://math-coding.tistory.com/158">해당 포스트</a>를 참고해 JUnit5 프레임워크를 사용할 수 있도록 <code class="language-plaintext highlighter-rouge">build.gradle</code>을 변경하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.named('test') {
-        useJUnitPlatform()
-}
-</code></pre></div></div>
-
-<ul>
-  <li>스프링 어플리케이션에서 Junit, Hamcrest, Mockito 등으로 테스트를 가능하게 하도록 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에 다음과 같은 dependencies으로 추가하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>testImplementation 'org.springframework.boot:spring-boot-starter-test'
-</code></pre></div></div>
-
-<ul>
-  <li>JUnit5 API를 테스팅 환경에서 사용하기 위해 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에 다음과 같은 dependencies으로 추가하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-</code></pre></div></div>
-
-<ul>
-  <li>멀티모듈 프로젝트를 빌드했을 때 <code class="language-plaintext highlighter-rouge">bootJar.enabled = false</code>으로 선언된 root 모듈이 빌드된 배포본에 포함되지 않는 오류가 나는 것을 방지하고자 <a href="https://java.ihoney.pe.kr/512">해당 포스트</a>를 참고해 <code class="language-plaintext highlighter-rouge">build.gradle</code>과 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에 <code class="language-plaintext highlighter-rouge">jar.enabled = true</code>을 추가하였다. (원래는 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 allprojects에 작성하였으나, 오류가 발생해 불가피하게 수정했다.)</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bootJar.enabled = false
-jar.enabled = true
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Task 'wrapper' not found in project ':project'</code> 오류를 해결하고자 <a href="https://hororolol.tistory.com/546">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper를 사용해서 빌드 환경을 맞추었다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>task wrapper(type: Wrapper) {
-    gradleVersion = '4.4'    
-    distributionUrl = distributionUrl.replace("bin", "all")
-}
-</code></pre></div></div>
-
-<ul>
-  <li>위의 오류를 해결하는 과정에서 <code class="language-plaintext highlighter-rouge">Cannot add task 'wrapper' as a task with that name already exists</code> 오류가 발생해 <a href="https://taegyunum.tistory.com/entry/Cannot-add-task-wrapper-as-a-task-with-that-name-already-exists">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper의 형식을 변경해 해결하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wrapper {
-        gradleVersion = '4.4'
-        distributionUrl = distributionUrl.replace("bin", "all")
-}
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">:prepareKotlinBuildScriptModel Task fails in a Java project</code> 오류를 해결하고자 <a href="https://charactermail.tistory.com/351">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 <code class="language-plaintext highlighter-rouge">prepareKotlinBuildScriptModel</code>을 새로운 task로 추가하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.register("prepareKotlinBuildScriptModel"){}
-</code></pre></div></div>
-
-<h2 id="4-chorespotless-적용">#4. chore:spotless 적용</h2>
-<ul>
-  <li>Junit에 대한 코드 포맷팅 및 유지보수를 위해 <a href="https://nesoy.github.io/articles/2020-04/Spotless">해당 게시글</a>을 참고해 spotless 플러그인을 추가하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id "com.diffplug.spotless" version "6.16.0"
-</code></pre></div></div>
-
-<ul>
-  <li>sub 모듈에서도 spotless 플러그인이 적용될 수 있도록 <a href="https://keelim.tistory.com/entry/안드로이드-멀티-모듈-공통-gradle-그리고-ktlint-적용을-해보자">해당 게시글</a>을 참고해 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 별개로 생성했다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spotless {
-    version = "6.16.0"
-
-    java {
-        // 특정 파일에만 적용
-        target("**/*.java")
-
-        // import 순서 정의
-        importOrder()
-
-        // 사용하지 않는 import 제거
-        removeUnusedImports()
-
-        // 구글 자바 포맷 적용
-        googleJavaFormat().aosp()
-
-        // 공백 제거
-        trimTrailingWhitespace()
-
-        // 끝부분 New Line 처리
-        endWithNewline()
-    }
-}
-</code></pre></div></div>
-
-<ul>
-  <li>그리고 sub 모듈에서도 spotless 플러그인이 적용될 수 있도록 root 모듈에 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 적용시켰다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply from: "$rootDir/spotless.gradle"
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="HongikChallenge" /><summary type="html"><![CDATA[현재 내가 다니고 있는 대학교에는 1학기 동안 자기가 원하는 수업을 설계하고 이를 전행하여 교수님들께 평가받는 수업이 있는데, 내가 속해 있는 팀이 이번 학기에 이를 지원해 수강하게 되었다. 나는 이번 기회를 이용해 하나의 완성된 사이트를 배포하는 것을 목표로 하는 프로젝트를 진행하고자 하였다. 원래는 기획과 설계에 대한 글을 먼저 올리는 게 맞겠지만, 학교 행정상의 문제로 인해 이를 학기중에 게시하면 안된다고 전달받아서, 일단 Github 저장소에 커밋한 내용을 기반으로 매일 진행한 내용들과 내가 코드를 쓰면서 참고한 내용들을 정리하고자 한다. 일단은 하루하루 공부한 내용을 기록하는 TIL처럼, 매일 진행한 커밋 하나하나에 대해 글을 쓰는 것이 목표이다.]]></summary></entry><entry><title type="html">[Github Pages] 4. Github Pages 블로그 개설</title><link href="http://localhost:4000/github%20pages/blog4/" rel="alternate" type="text/html" title="[Github Pages] 4. Github Pages 블로그 개설" /><published>2023-04-03T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/github%20pages/blog4</id><content type="html" xml:base="http://localhost:4000/github%20pages/blog4/"><![CDATA[<blockquote>
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[#1. init: git 저장소 생성]]></summary></entry><entry><title type="html">[vocawik] 4/17 진행 내용</title><link href="http://localhost:4000/vocawik/vcw1/" rel="alternate" type="text/html" title="[vocawik] 4/17 진행 내용" /><published>2023-04-17T00:00:00+09:00</published><updated>2023-04-17T00:00:00+09:00</updated><id>http://localhost:4000/vocawik/vcw1</id><content type="html" xml:base="http://localhost:4000/vocawik/vcw1/"><![CDATA[]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">[Github Pages] 4. Github Pages 블로그 개설</title><link href="http://localhost:4000/github%20pages/blog4/" rel="alternate" type="text/html" title="[Github Pages] 4. Github Pages 블로그 개설" /><published>2023-04-03T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/github%20pages/blog4</id><content type="html" xml:base="http://localhost:4000/github%20pages/blog4/"><![CDATA[<blockquote>
   <p>이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나 그때쯤 작성한 글들 대부분이 너무 나열식으로 쓰였고, 출처에 대한 언급이 많이 부실해 (모르는 부분이 있어 찾으려 하면 출처가 없어서 나도 찾지 못한다…), 부족한 점들을 보완하기 위해 다시 작성되었다.<br />
 그리고 현재 작성자의 실행 환경의 OS가 MacOS임을 미리 밝혀둔다. 아마 근시일 내에는 기기를 바꿀 계획이 없으니, 동일한 OS를 사용하시는 분들은 그대로 진행해주시면 된다.</p>
 </blockquote>
@@ -757,4 +1081,1871 @@ jar.enabled = true
     <li>코드쓰는사림 님이 작성하신, <a href="https://taegon.kim/archives/7107">개발자가 블로그를 운영해야 할 이유</a></li>
     <li>productuidev 님이 작성하신, <a href="https://velog.io/@productuidev/PREV-Portfolio-1-ProjectBlog#개발-블로그--github">개발자 취업준비 (포트폴리오/블로그)</a></li>
   </ul>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[내가 아직 취업 시장에 발도 담구지 않은 대학생인데 내가 개발 블로그의 필요성에 대해 논하는 것이 의미가 있는 걸까? 라는 의문이 들어 작년에 작성한 글에서는 이 부분을 짚어보지 않았다. 하지만 이 부분을 뺀 채로 블로그를 운영하다보니, 처음에 내가 가졌었던 생각이나 느낌이 희석되어 여러 가지를 이유로 들며 블로그 운영을 게을리한 것 같다. 그래서 지난 6개월간 내가 작성한 내용을 다시 정리하기 앞서, 이 부분에 대해 이야기하고자 한다.]]></summary></entry></feed>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[내가 아직 취업 시장에 발도 담구지 않은 대학생인데 내가 개발 블로그의 필요성에 대해 논하는 것이 의미가 있는 걸까? 라는 의문이 들어 작년에 작성한 글에서는 이 부분을 짚어보지 않았다. 하지만 이 부분을 뺀 채로 블로그를 운영하다보니, 처음에 내가 가졌었던 생각이나 느낌이 희석되어 여러 가지를 이유로 들며 블로그 운영을 게을리한 것 같다. 그래서 지난 6개월간 내가 작성한 내용을 다시 정리하기 앞서, 이 부분에 대해 이야기하고자 한다.]]></summary></entry><entry><title type="html">[F/E] CSS</title><link href="http://localhost:4000/frontend/css1/" rel="alternate" type="text/html" title="[F/E] CSS" /><published>2022-09-26T00:00:00+09:00</published><updated>2022-11-18T00:00:00+09:00</updated><id>http://localhost:4000/frontend/css1</id><content type="html" xml:base="http://localhost:4000/frontend/css1/"><![CDATA[<h2 id="css-cascading-style-sheet--웹-문서가-웹-사이트에-표현되는-방법을-기술하는-스타일시트-언어"><code class="language-plaintext highlighter-rouge">CSS</code> (<code class="language-plaintext highlighter-rouge">Cascading Style Sheet</code>) : 웹 문서가 웹 사이트에 표현되는 방법을 기술하는 스타일시트 언어</h2>
+
+<p><img src="https://velog.velcdn.com/images%2Fteo%2Fpost%2F30a6da36-0203-467a-962f-38e170f31f0e%2Fimage.png" /></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">~1996</code> : <code class="language-plaintext highlighter-rouge">HTML</code> 문서에 사용자가 원하는 스타일을 적용하고자 함</p>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Inline Style</code> : <code class="language-plaintext highlighter-rouge">HTML</code> 태그의 <code class="language-plaintext highlighter-rouge">style</code> 속성으로 태그의 속성을 일일이 적용</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p style="color: blue"&gt;
+    hello world
+&lt;/p&gt;
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Inline Style Sheet</code> : <code class="language-plaintext highlighter-rouge">HTML</code> 문서 내 <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> 태그로 한 문서의 스타일 적용</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;head&gt;
+    &lt;style&gt;
+        body { background-color: black; }
+    &lt;/style&gt;
+&lt;/head&gt;
+</code></pre></div></div>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">1996</code> : 레이아웃 및 디자인 정보로 인해 <code class="language-plaintext highlighter-rouge">HTML</code> 문서의 구조화가 어려워진 문제를 해결하기 위해 <code class="language-plaintext highlighter-rouge">CSS</code> 탄생</p>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Linking Style Sheet</code> : 내용으로부터 스타일 정보를 분리해 별도의 스타일시트 (<code class="language-plaintext highlighter-rouge">.css</code>) 파일을 만들고 <code class="language-plaintext highlighter-rouge">HTML</code> 문서와 연결</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="style.css"&gt;
+</code></pre></div></div>
+<h3 id="css-스타일시트-css-style-sheet--스타일을-선언하고-태그를-선택하는-css-ruleset의-집합"><code class="language-plaintext highlighter-rouge">CSS</code> 스타일시트 (<code class="language-plaintext highlighter-rouge">CSS Style Sheet</code>) : 스타일을 선언하고 태그를 선택하는 <code class="language-plaintext highlighter-rouge">CSS RuleSet</code>의 집합</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CSS</code> 선택자 (<code class="language-plaintext highlighter-rouge">CSS Selector</code>) : 어떤 <code class="language-plaintext highlighter-rouge">HTML</code> 태그나 <code class="language-plaintext highlighter-rouge">HTML</code> 속성을 꾸밀지 지정</li>
+  <li><code class="language-plaintext highlighter-rouge">CSS</code> 선언 (<code class="language-plaintext highlighter-rouge">CSS declaration</code>) : <code class="language-plaintext highlighter-rouge">CSS</code> 선택자에 대한 <code class="language-plaintext highlighter-rouge">CSS</code> 속성과 <code class="language-plaintext highlighter-rouge">CSS</code> 값을 정의
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">CSS</code> 속성 (<code class="language-plaintext highlighter-rouge">CSS Attributes</code>) : 선택자가 지정한 것을 어떤 속성으로 꾸밀지 지정</li>
+      <li><code class="language-plaintext highlighter-rouge">CSS</code> 변수 (<code class="language-plaintext highlighter-rouge">CSS Arguments</code>) : 지정된 속성을 어떻게 나타낼지 지정</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
+    CSS 속성 : CSS 값; /* CSS 선언 */
+}
+
+CSS 선택자 { /* 세미클론 (;)으로 선언을 구분해 여러 번의 선언 가능 */
+    CSS 속성1 : CSS 값1;
+    CSS 속성2 : CSS 값2;
+}
+
+
+CSS 선택자 { /* 작은따옴표 ('') 혹은 큰따옴표 ("")으로 값의 공백 처리 */
+    CSS 속성1 : 'CSS 값1';
+    CSS 속성2 : "CSS 값2";
+}
+</code></pre></div></div>
+
+<blockquote>
+  <p>! 같은 <code class="language-plaintext highlighter-rouge">CSS</code> 선택자나 <code class="language-plaintext highlighter-rouge">CSS</code> 속성이 선언되었다면? : <code class="language-plaintext highlighter-rouge">CSS RuleSet</code>에 대한 우선순위의 필요성</p>
+</blockquote>
+
+<h3 id="캐스케이딩-cascading--같은-css-선언이-여러-번-선언하였다면-나중에-선언된-것을-적용">캐스케이딩 (<code class="language-plaintext highlighter-rouge">Cascading</code>) : 같은 <code class="language-plaintext highlighter-rouge">CSS</code> 선언이 여러 번 선언하였다면, 나중에 선언된 것을 적용</h3>
+<ul>
+  <li>나중에 선언된 것이 먼저 선언된 것을 덮어버림 (<code class="language-plaintext highlighter-rouge">Override</code>)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 { /* 나중에 선언된 CSS 속성1의 값2가 적용된다. */
+    CSS 속성1 : CSS 값1;
+    CSS 속성1 : CSS 값2;
+}
+</code></pre></div></div>
+<ul>
+  <li>전역적인 것을 먼저 적용하고, 그 다음에 지역적인 것을 적용
+    <ul>
+      <li>부모 태그에서 선언된 속성은 자식 태그로 상속되어, 부모 자식에서 선언된 값이 적용된다.</li>
+      <li>자식 태그에서 상속받은 속성을 다시 선언되면, 자식 태그에서 선언된 값이 적용된다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p style="color: red"&gt;
+    &lt;span style="color: blue"&gt;
+        CSS 우선순위 : span의 font-color 속성이 p의 font-color 속성보다 높다.
+    &lt;/span&gt;
+&lt;/p&gt;
+</code></pre></div></div>
+
+<p style="font-size:15px; background-color: black; color: red">
+    <span style="color: blue">
+        CSS 우선순위 : span의 font-color 속성이 p의 font-color 속성보다 높다.
+    </span>
+</p>
+
+<h3 id="css-명시도-specificity--작성된-순서가-아닌-css-선언에-적용되는-가중치에-따라-우선순위-적용"><code class="language-plaintext highlighter-rouge">CSS</code> 명시도 (<code class="language-plaintext highlighter-rouge">Specificity</code>) : 작성된 순서가 아닌, <code class="language-plaintext highlighter-rouge">CSS</code> 선언에 적용되는 가중치에 따라 우선순위 적용</h3>
+<ul>
+  <li>가중치는 네 가지 기준을 숫자로 표현 (<code class="language-plaintext highlighter-rouge">0,0,0,0</code>) : 제일 앞의 숫자가 높을수록 높은 우선순위를 가짐
+    <ul>
+      <li>명시도가 동일할 경우, 나중에 선언된 것을 우선해 적용 (<code class="language-plaintext highlighter-rouge">Cascading</code>)</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>p..div &gt; span { color : green;} /* 몀시도 : 0,1,0,2 */
+b span {color : red;} /* 명시도 : 0,0,0,2 */
+</code></pre></div></div>
+
+<ul>
+  <li>첫번째 <code class="language-plaintext highlighter-rouge">0</code> : 인라인 스타일 (<code class="language-plaintext highlighter-rouge">inline style</code>)의 개수</li>
+  <li>세번째 <code class="language-plaintext highlighter-rouge">0</code> : 클래스, 가상 클래스, 속성 선택자의 개수</li>
+  <li>두번째 <code class="language-plaintext highlighter-rouge">0</code> : <code class="language-plaintext highlighter-rouge">ID</code> 선택자의 개수</li>
+  <li>네번째 <code class="language-plaintext highlighter-rouge">0</code> : 태그 선택자, 가상 요소 선택자의 개수</li>
+</ul>
+
+<h3 id="important--기존의-우선순위를-무시하고-해당-css-선언을-우선해-적용"><code class="language-plaintext highlighter-rouge">!important</code> : 기존의 우선순위를 무시하고 해당 <code class="language-plaintext highlighter-rouge">CSS</code> 선언을 우선해 적용</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 { */
+    CSS 속성1 : CSS 값1 !important;
+    CSS 속성1 : CSS 값2;
+}
+</code></pre></div></div>
+<h3 id="css-선택자-css-selector--html-문서에-스타일을-입힐-요소를-선택하는-문자">CSS 선택자 (<code class="language-plaintext highlighter-rouge">CSS Selector</code>) : <code class="language-plaintext highlighter-rouge">HTML</code> 문서에 스타일을 입힐 요소를 선택하는 문자</h3>
+<ul>
+  <li>여러 종류의 선택자를 중첩 가능 (<code class="language-plaintext highlighter-rouge">p.span</code>)</li>
+  <li>여러 종류의 선택자를 <code class="language-plaintext highlighter-rouge">space</code> 키로 구분해 동시에 선택 가능  (<code class="language-plaintext highlighter-rouge">p.span p.img</code>)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CSS 선택자 {
+    CSS 속성 : CSS 값;
+}
+</code></pre></div></div>
+
+<h4 id="전체-선택자---모든-요소를-선택하는-선택자">전체 선택자 <code class="language-plaintext highlighter-rouge">*</code> : 모든 요소를 선택하는 선택자</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* {
+  color: blue;
+}
+</code></pre></div></div>
+
+<h4 id="태그-선택자-tag--해당-태그의-요소를-선택하는-선택자">태그 선택자 <code class="language-plaintext highlighter-rouge">tag</code> : 해당 태그의 요소를 선택하는 선택자</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag {
+  color: aqua;
+}
+</code></pre></div></div>
+
+<h4 id="아이디-선택자-id--해당-아이디의-요소를-선택하는-선택자">아이디 선택자 <code class="language-plaintext highlighter-rouge">#id</code> : 해당 아이디의 요소를 선택하는 선택자</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#tag {
+  color: red;
+}
+</code></pre></div></div>
+
+<h4 id="클래스-선택자-class--해당-클래스의-요소를-선택하는-선택자">클래스 선택자 <code class="language-plaintext highlighter-rouge">.class</code> : 해당 클래스의 요소를 선택하는 선택자</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.class {
+  color: green;
+}
+</code></pre></div></div>
+
+<h4 id="후손-선택자-selector1-selector2--해당-선택자의-모든-하위-요소-중-하나를-지정해-선택하는-선택자">후손 선택자 <code class="language-plaintext highlighter-rouge">(selector1) (selector2)</code> : 해당 선택자의 모든 하위 요소 중 하나를 지정해 선택하는 선택자</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div tag {
+     color: yellow;
+}
+...
+&lt;div&gt;
+    &lt;tag&gt;
+        hello world
+    &lt;/tag&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;span&gt;
+        &lt;tag&gt;
+            hello world
+        &lt;/tag&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<h4 id="자손-선택자-selector1selector2--해당-선택자의-자식-요소-중-하나를-지정해-선택하는-선택자">자손 선택자 <code class="language-plaintext highlighter-rouge">(selector1)&gt;(selector2)</code> : 해당 선택자의 자식 요소 중 하나를 지정해 선택하는 선택자</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div &gt; tag{
+     color: purple;
+}
+...
+&lt;div&gt;
+    &lt;tag&gt;
+        hello world
+    &lt;/tag&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<h4 id="형제-선택자-selector1selector2--해당-선택자의-형제-요소-중-하나를-지정해-선택하는-선택자">형제 선택자 <code class="language-plaintext highlighter-rouge">(selector1)~(selector2)</code> : 해당 선택자의 형제 요소 중 하나를 지정해 선택하는 선택자</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div ~ tag{
+     color: pink;
+}
+...
+&lt;div&gt;
+    hello world
+&lt;/div&gt;
+&lt;tag&gt;
+    !
+&lt;/tag&gt;
+</code></pre></div></div>
+
+<h4 id="인접-형제-선택자-selector1selector2--선택자의-형제-중-바로-다음에-오는-요소를-선택하는-선택자">인접 형제 선택자 <code class="language-plaintext highlighter-rouge">(selector1)+(selector2)</code> : 선택자의 형제 중 바로 다음에 오는 요소를 선택하는 선택자</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div + tag{
+     color: gray;
+}
+...
+&lt;div&gt;
+    hello world
+&lt;/div&gt;
+&lt;tag&gt;
+    ?
+&lt;/tag&gt;
+&lt;tag&gt;
+    !
+&lt;/tag&gt;
+/* 첫번째 형제 요소인 "?"가 회색으로 출력 */
+</code></pre></div></div>
+
+<h4 id="속성-선택자-attr--태그에-해당-속성이-명시되어-있는-요소들을-모두-선택하는-선택자">속성 선택자 <code class="language-plaintext highlighter-rouge">[attr]</code> : 태그에 해당 속성이 명시되어 있는 요소들을 모두 선택하는 선택자</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">[attr = "A"]</code> : 해당 속성이 명시되어 있는 요소들 중 값이 일치하는 것들만 선택</li>
+  <li><code class="language-plaintext highlighter-rouge">[attr ~= "B"]</code> : 해당 속성이 명시되어 있는 요소들 (띄어쓰기로 여러 값이 저장된 요소 포함) 중 값이 일치하는 것들만 선택</li>
+  <li><code class="language-plaintext highlighter-rouge">[attr ^= "C"]</code> : 해당 속성이 명시되어 있는 요소들 중 값을 접두사로 가지는 것들만 선택</li>
+  <li><code class="language-plaintext highlighter-rouge">[attr $= "D"]</code> : 해당 속성이 명시되어 있는 요소들 중 값을 접미사로 가지는 것들만 선택</li>
+  <li><code class="language-plaintext highlighter-rouge">[attr *= "E"]</code> : 해당 속성이 명시되어 있는 요소들 중 값을 포함하는 것들만 선택</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag[attributes]{
+     color: white;
+}
+...
+&lt;tag attributes="true"&gt;
+    hello world
+&lt;/tag&gt;
+
+tag[attributes="attr"]{
+     color: yellow;
+}
+...
+&lt;tag attributes="attr"&gt;
+    hello world
+&lt;/tag&gt;
+</code></pre></div></div>
+
+<h4 id="가상-클래스-선택자-pseudo-class-selector--가상-클래스를-선택하는-선택자">가상 클래스 선택자 (<code class="language-plaintext highlighter-rouge">Pseudo-class Selector</code>) : 가상 클래스를 선택하는 선택자</h4>
+<ul>
+  <li>앵커 가상 클래스 : 어떤 요소에 대한 스타일을 추가하는 선택자
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">link</code> : 사용자가 이전에 방문하지 않은 요소에 대한 스타일을 추가하는 선택자</li>
+      <li><code class="language-plaintext highlighter-rouge">visited</code> : 사용자가 이전에 방문하였던 요소에 대한 스타일을 추가하는 선택자</li>
+      <li><code class="language-plaintext highlighter-rouge">:hover</code> : 사용자가 해당 요소에 커서를 접근시킬 때의 동적인 스타일을 추가하는 선택자</li>
+      <li><code class="language-plaintext highlighter-rouge">:active</code> : 사용자가 해당 요소를 클릭할 때의 동적인 스타일을 추가하는 선택자</li>
+      <li><code class="language-plaintext highlighter-rouge">:focus</code> : 사용자가 해당 요소에 키보드로 포커싱할 때의 동적인 스타일을 추가하는 선택자</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a:link {
+    color: black;
+}
+a:visited {
+    color: gray;
+}
+a:hover {
+    color: red;
+}
+a:active {
+    color: gray;
+}
+a:focus {
+    color: yellow;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>순서 가상 클래스 : 순서가 존재하는 요소의 특정 항목에 대한 스타일을 추가하는 선택자
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">:first-child</code> : <code class="language-plaintext highlighter-rouge">li</code>의 첫번쩨 요소에 대한 스타일를 추가하는 선택자</li>
+      <li><code class="language-plaintext highlighter-rouge">:last-child</code> : <code class="language-plaintext highlighter-rouge">li</code>의 마지막 요소에 대한 스타일를 추가하는 선택자</li>
+      <li><code class="language-plaintext highlighter-rouge">:nth-child(n)</code> : <code class="language-plaintext highlighter-rouge">li</code>의 <code class="language-plaintext highlighter-rouge">n</code>번쩨 요소에 대한 스타일를 추가하는 선택자</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ol li:first-child {
+    border-top: none;
+}
+ol li:last-child {
+    border-top: none;
+}
+ol li:nth-child(2) {
+    border-top: none;
+}
+</code></pre></div></div>
+
+<h4 id="가상-요소-선택자-pseudo-element-selector--가상-요소를-선택하는-선택자">가상 요소 선택자 (<code class="language-plaintext highlighter-rouge">Pseudo-element Selector</code>) : 가상 요소를 선택하는 선택자</h4>
+<ul>
+  <li>선택된 요소의 태그 안에 가상 요소가 자식 요소로 위치 (<code class="language-plaintext highlighter-rouge">::before</code> &gt; 컨텐츠 &gt; <code class="language-plaintext highlighter-rouge">::after</code> 순)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>선택자::가상 요소 {
+    property: value;
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">::before</code> : 요소 내용의 앞에 새 컨텐츠를 추가하는 선택자</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag::before {
+    content: "Hello, ";
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">::after</code> : 요소 내용의 뒤에 새 컨텐츠를 추가하는 선택자</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag::after {
+    content: "World! ";
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">::first-letter</code> : 요소의 첫번째 글자를 선택하는 선택자</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag::first-line {
+  color: orange;
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">::first-line</code> : 요소의 첫번째 줄을 선택하는 선택자</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag::first-line {
+  color: orange;
+}
+</code></pre></div></div>
+
+<blockquote>
+  <p>현재까지 배운 것을 토대로 여러 <code class="language-plaintext highlighter-rouge">HTML</code> 문서로 이루어진 가상의 웹사이트를 디자인한다고 가정해보자.</p>
+  <ul>
+    <li>각각의 태그에 혹은 문서에 스타일을 적용하는 경우를 배제하고, 스타일시트에 모든 스타일 정보가 존재한다고 가정하자.</li>
+    <li>모든 <code class="language-plaintext highlighter-rouge">HTML</code>문서가 <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;main&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>만 존재하고, 다음의 구조를 이룬다.</li>
+  </ul>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;body&gt;
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;p&gt; Hello World! &lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/body&gt;
+</code></pre></div>  </div>
+
+  <ul>
+    <li>그리고 스타일시트에는 다음과 같은 <code class="language-plaintext highlighter-rouge">CSS</code> 선택자만 사용한다고 가정하자.
+      <ul>
+        <li>문서의 전반적인 스타일을 적용하기 위한 <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code>를 지정할 선택자</li>
+        <li>메인 컨텐츠의 스타일을 적용하기 위한 <code class="language-plaintext highlighter-rouge">&lt;main&gt;</code>를 지정할 선택자</li>
+        <li>세부 컨텐츠의 스타일을 적용하기 위한 <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code>를 지정할 선택자</li>
+        <li>문단의 스타일을 적용하기 위한 <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>를 지정할 선택자</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><code class="language-plaintext highlighter-rouge">A</code>는 모든 문서의 “Hello World!”를 빨간색으로 적용하고 싶어서 태그에 스타일을 적용했다.</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>p {
+   color:green;
+}
+</code></pre></div>  </div>
+
+  <p>그런데 <code class="language-plaintext highlighter-rouge">B</code>가 특정 문서의 “Hello World!”를 초록색으로 적용하고 싶어서 <code class="language-plaintext highlighter-rouge">id</code>와 <code class="language-plaintext highlighter-rouge">#</code>를 사용했다.</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p id="sec2"&gt; Hello World! &lt;/p&gt;
+</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#sec {
+   color:green;
+}
+</code></pre></div>  </div>
+
+  <p><code class="language-plaintext highlighter-rouge">A</code>가 그걸 보고</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>p {
+   color:green;
+}
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">CSS</code>는 시대가 요구하는 의도대로 설계되었으나 산업의 급격한 발전으로 기존의 설계와 새로운 요구사항에 괴리가 발생
+      <ul>
+        <li><u>문서를 잘 표현하기 위해 설계된 방법 vs 어플리케이션을 잘 표현하기 위해 설계된 방법</u>
+          <ul>
+            <li>이를 절충하기 위해 기존의 의도와는 다른 방식으로 <code class="language-plaintext highlighter-rouge">CSS</code>를 사용해 화면을 표현</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><code class="language-plaintext highlighter-rouge">CSS</code>가 웹 문서가 웹 사이트에 표현하는 데에서 시작되었기에 대규모의 웹 서비스를 만드는 데에 근본적인 한계점 존재
+      <ul>
+        <li>그러므로, 이를 극복하기 위한 최신 기술들을 꾸준히 학습하고, 프로젝트에 도입해야 할 필요가 있다.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><img src="https://velog.velcdn.com/images%2Fteo%2Fpost%2Fdaba1ce2-4a19-4e4c-91fd-46423fde95b1%2Fimage.png" width="70%" /></p>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CSS</code> 변수 (<code class="language-plaintext highlighter-rouge">CSS variables</code>) : <code class="language-plaintext highlighter-rouge">CSS</code> 사용자 속성 (<code class="language-plaintext highlighter-rouge">CSS</code> 일반 속성과 동일한 문법으로 변수를 정의 가능)
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">var()</code> 함수 : <code class="language-plaintext highlighter-rouge">CSS</code> 변수값을 읽는 데에 사용</li>
+      <li><code class="language-plaintext highlighter-rouge">:root</code> : CSS 변수를 전역 변수로 정의</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.ex {
+    --variable-name: value;
+}
+
+:root {
+       --variable-name: value;
+}
+</code></pre></div></div>
+
+<h2 id="-박스-모델-box-model-관련-css-속성"># 박스 모델 (<code class="language-plaintext highlighter-rouge">Box Model</code>) 관련 <code class="language-plaintext highlighter-rouge">CSS</code> 속성</h2>
+<ul>
+  <li>모든 HTML 엘리멘트들은 박스 모양으로 구성되어 있음
+    <ul>
+      <li>마진 영역 (<code class="language-plaintext highlighter-rouge">Margin Area</code>)</li>
+      <li>테두리 영역 (<code class="language-plaintext highlighter-rouge">Border Area</code>)</li>
+      <li>패딩 영역 (<code class="language-plaintext highlighter-rouge">Padding Area</code>)</li>
+      <li>컨텐츠 영역 (<code class="language-plaintext highlighter-rouge">Content Area</code>)</li>
+    </ul>
+  </li>
+</ul>
+
+<div style="
+    background-color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    ">
+    <div style="
+            border-style: solid;
+            border-width: 5px;
+            border-color: red;
+            margin-left: 3%;
+            margin-right: 3%;
+            padding-bottom: 2%;">
+        마진 영역 (Margin Area)
+        <div style="
+            border-style: inherit;
+            border-width: inherit;
+            border-color: blue;
+            margin-left: inherit;
+            margin-right: inherit;
+            padding-bottom: inherit;">
+            테두리 영역 (Border Area)
+            <div style="
+                border-style: inherit;
+                border-width: inherit;
+                border-color: green;
+                margin-left: inherit;
+                margin-right: inherit;
+                padding-bottom: inherit;">
+                패딩 영역 (Padding Area)
+                <div style="
+                    border-style: inherit;
+                    border-width: inherit;
+                    border-color: purple;
+                    margin-left: inherit;
+                    margin-right: inherit;">
+                    컨텐츠 영역 (Content Area)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 id="width-height--박스의-가로-세로-길이를-지정하는-속성"><code class="language-plaintext highlighter-rouge">width</code>, <code class="language-plaintext highlighter-rouge">height</code> : 박스의 가로, 세로 길이를 지정하는 속성</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="
+    position: relative;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;"&gt;
+    &lt;div style="
+        position: absolute;
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: 70%;"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<div style="
+    position: relative;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;">
+    <div style="
+        position: absolute;
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: 70%;">
+    </div>
+</div>
+
+<h3 id="margin--마진에-값을-부여하는-속성"><code class="language-plaintext highlighter-rouge">margin</code> : 마진에 값을 부여하는 속성</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">margin-top:</code> : 위쪽 마진에 값을 부여하는 속성</li>
+  <li><code class="language-plaintext highlighter-rouge">margin-right:</code> : 오른쪽 마진에 값을 부여하는 속성</li>
+  <li><code class="language-plaintext highlighter-rouge">margin-bottom:</code> : 아랫쪽 마진에 값을 부여하는 속성</li>
+  <li><code class="language-plaintext highlighter-rouge">margin-left:</code> : 왼쪽 마진에 값을 부여하는 속성</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.box {
+    margin: xx yy zz ww;
+    /* xx는 위쪽 마진, yy는 오른쪽 마진, zz는 아랫쪽 마진, ww는 왼쪽 마진 */
+    margin-top: xx;
+    margin-right: yy;
+    margin-bottom: zz;
+    margin-left: ww;
+}
+</code></pre></div></div>
+
+<div style="
+    background-color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    ">
+    <div style="
+            background-color:red;
+            border-style: solid;
+            border-width: 5px;
+            border-color: red;
+            margin-left: 3%;
+            margin-right: 3%;">
+        margin-top
+        <div>
+            <div style="display: inline-block;">
+                margin-left<br /><br /><br />
+            </div>
+            <div style="
+                display: inline-block;
+                background-color: blue;
+                border-style: solid;
+                border-width: 5px;
+                border-color: blue;
+                margin-left: 5%;
+                margin-right: 5%;
+                padding-left: 8%;
+                padding-right: 8%;
+                padding-bottom: 2%;">
+                테두리 영역<br />(Border Area)
+                <div style="
+                    background-color:green;
+                    border-style: inherit;
+                    border-width: 5px;
+                    border-color: green;
+                    padding-left: 8%;
+                    padding-right: 8%;
+                    margin-left: inherit;
+                    margin-right: inherit;
+                    padding-bottom: 2%;">
+                    패딩 영역<br />(Padding Area)
+                    <div style="
+                        background-color:purple;
+                        border-style: inherit;
+                        border-width: inherit;
+                        border-color: purple;
+                        margin-left: inherit;
+                        margin-right: inherit;
+                        padding-bottom: inherit;">
+                        컨텐츠 영역 (Content Area)
+                    </div>
+                </div>
+            </div>
+            <div style="display: inline-block;">margin-right<br /><br /><br /></div>
+            </div>
+        <div>margin-bottom</div>
+    </div>
+</div>
+
+<h3 id="padding--패딩에-값을-부여하는-속성"><code class="language-plaintext highlighter-rouge">padding</code> : 패딩에 값을 부여하는 속성</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">padding-top:</code> : 위쪽 패딩에 값을 부여하는 속성</li>
+  <li><code class="language-plaintext highlighter-rouge">padding-right:</code> : 오른쪽 패딩에 값을 부여하는 속성</li>
+  <li><code class="language-plaintext highlighter-rouge">padding-bottom:</code> : 아랫쪽 패딩에 값을 부여하는 속성</li>
+  <li><code class="language-plaintext highlighter-rouge">padding-left:</code> : 왼쪽 패딩에 값을 부여하는 속성</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.box {
+    padding: xx yy zz ww;
+    /* xx는 위쪽 패딩, yy는 오른쪽 패딩, zz는 아랫쪽 패딩, ww는 왼쪽 패딩 */
+    padding-top: xx;
+    padding-right: xx;
+    padding-bottom: xx;
+    padding-left: xx;
+}
+</code></pre></div></div>
+
+<div style="
+    background-color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    ">
+    <div style="
+            border-style: solid;
+            border-width: 5px;
+            border-color: red;
+            background-color:red;
+            margin-left: 3%;
+            margin-right: 3%;
+            padding-bottom: 2%;">
+        마진 영역 (Margin Area)
+    <div style="
+            border-style: inherit;
+            border-width: inherit;
+            border-color: blue;
+            background-color:blue;
+            margin-left: inherit;
+            margin-right: inherit;
+            padding-bottom: inherit;">
+            테두리 영역 (Border Area)
+    <div style="
+        border-style: solid;
+        border-width: 5px;
+        border-color: green;
+        background-color:green;
+        margin-left: 10%;
+        margin-right: 10%;">
+        padding-top
+        <div style="display: flex;">
+            <div style="flex: 1;">
+                <br />padding-left
+            </div>
+           <div style="
+                flex: 1;
+                background-color:purple;
+                border-style: solid;
+                border-width: 5px;
+                border-color: purple;">
+                컨텐츠 영역<br />(Content Area)
+            </div>
+            <div style="flex: 1;"><br />padding-right</div>
+        </div>
+        <div>padding-bottom</div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<h3 id="border--테두리에-값을-부여하는-속성"><code class="language-plaintext highlighter-rouge">border</code> : 테두리에 값을 부여하는 속성</h3>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>border: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>medium, none, color</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: 120%">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>border: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>border-width</td>
+                                    <td>
+                                        <table style="font-size: 106%">
+                                            <thead>
+                                                <tr>
+                                                    <td>border-width: 값</td>
+                                                    <td>테두리의 두께 정도 지정</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>medium</td>
+                                                    <td>기본값</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>thick</td>
+                                                    <td>기본값보다 굵게</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>thin</td>
+                                                    <td>기본값보다 얇게</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>%, px, em, rem</td>
+                                                    <td>직접 테두리의 두께 정도 지정</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>border-style</td>
+                                    <td>
+                                        <table style="font-size: 106%">
+                                            <thead>
+                                                <tr>
+                                                    <td>border-style: 값</td>
+                                                    <td>테두리의 모양 지정</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>none</td>
+                                                    <td>테두리를 생성하지 않음 (기본값)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>dashed, dotted,<br />double, groove,<br />hidden, inset,<br /> outset, ridge,<br />solid</td>
+                                                    <td>여러 모양의 테두리를 생성</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>border-color</td>
+                                    <td>테두리의 색상 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>border-radius</td>
+                                    <td>%, px, em, rem 등으로 테두리의 모서리에 대한 둥근 정도 지정
+                                        <div style="text-align: left;">
+                                            <li>top-left-x</li>
+                                            <li>top-right-x</li>
+                                            <li>bottom-right-x</li>
+                                            <li>bottom-left-x</li>
+                                            <li>top-left-y</li>
+                                            <li>top-right-y</li>
+                                            <li>bottom-right-y</li>
+                                            <li>bottom-left-y</li>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="
+    background-color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    "&gt;
+    &lt;div style="
+        border: dashed 5px red;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 25%;
+        padding-bottom: inherit;"&gt;
+    dashed 5px red (border-radius: 25%)
+        &lt;div style="
+            border: dotted 3px blue;
+            margin-left: inherit;
+            margin-right: inherit;
+            padding-bottom: inherit;"&gt;
+        dotted 3px blue
+            &lt;div style="
+                border: double 7px green;
+                margin-left: inherit;
+                margin-right: inherit;
+                padding-bottom: inherit;"&gt;
+            double 7px green
+                &lt;div style="
+                    border: solid 3px gray;
+                    margin-left: inherit;
+                    margin-right: inherit;
+                    padding-bottom: inherit;"&gt;
+                    solid 3px gray
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<div style="
+    background-color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    ">
+    <div style="
+        border: dashed 5px red;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 25%;
+        padding-bottom: inherit;">
+    dashed 5px red (border-radius: 25%)
+        <div style="
+            border: dotted 3px blue;
+            margin-left: inherit;
+            margin-right: inherit;
+            padding-bottom: inherit;">
+        dotted 3px blue
+            <div style="
+                border: double 7px green;
+                margin-left: inherit;
+                margin-right: inherit;
+                padding-bottom: inherit;">
+            double 7px green
+                <div style="
+                    border: solid 3px gray;
+                    margin-left: inherit;
+                    margin-right: inherit;
+                    padding-bottom: inherit;">
+                    solid 3px gray
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 id="box-sizing--박스-크기의-기준을-지정하는-속성"><code class="language-plaintext highlighter-rouge">box-sizing</code> : 박스 크기의 기준을 지정하는 속성</h3>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>box-sizing: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>content-box</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: 120%">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>box-sizing: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>content-box</td>
+                                    <td>컨텐츠 영역을 기준으로 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>border-box</td>
+                                    <td>테두리 영역을 기준으로 지정</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.cb {
+    box-sizing: content-box;
+}
+.bb {
+    box-sizing: border-box;
+}
+.iib {
+    box-sizing: initial;
+}
+.ihb {
+    box-sizing: inherit;
+}
+</code></pre></div></div>
+
+<h2 id="-배경-관련-css-속성"># 배경 관련 <code class="language-plaintext highlighter-rouge">CSS</code> 속성</h2>
+
+<h3 id="background-color--배경의-색상을-지정하는-속성"><code class="language-plaintext highlighter-rouge">background-color</code> : 배경의 색상을 지정하는 속성</h3>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>background-color: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>transparent</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: 120%">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>background-color: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>transparent</td>
+                                    <td>배경색 없음</td>
+                                </tr>
+                                <tr>
+                                    <td>color</td>
+                                    <td>배경색 지정</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;"&gt;
+    &lt;div style="
+        position: absolute;
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: 70%;"&gt;
+        &lt;div style="
+            position: absolute;
+            background-color: black;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+            height: 70%;"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<div style="
+    position: relative;
+    background-color: black;
+    width: 200px;
+    height: 200px;">
+    <div style="
+        position: absolute;
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: 70%;">
+        <div style="
+            position: absolute;
+            background-color: black;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+            height: 70%;">
+        </div>
+    </div>
+</div>
+
+<h3 id="background-image--배경-이미지를-지정하는-속성"><code class="language-plaintext highlighter-rouge">background-image</code> : 배경 이미지를 지정하는 속성</h3>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>background-image: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>none</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: 120%">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>background-image: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>none</td>
+                                    <td>배경 이미지 사용 안함</td>
+                                </tr>
+                                <tr>
+                                    <td>url("")</td>
+                                    <td>배경 이미지 URL 지정</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">background-attachment</code> : 배경 이미지의 스크롤 여부를 지정하는 속성
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">scroll</code> : 내용을 스크롤하면 배경 이미지는 스크롤되지 않음</li>
+      <li><code class="language-plaintext highlighter-rouge">fixed</code> : 배경 이미지가 움직이지 않음</li>
+      <li><code class="language-plaintext highlighter-rouge">local</code> : 내용을 스크롤하면 배경 이미지는 스크롤</li>
+      <li><code class="language-plaintext highlighter-rouge">initial</code> : 현재의 속성값을 기본값으로 지정</li>
+      <li><code class="language-plaintext highlighter-rouge">inherit</code> : 부모 요소의 속성값 상속</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">background-position</code> : 배경 이미지의 위치를 지정하는 속성
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">x y</code> : 가로와 세로 위치 지정 (<code class="language-plaintext highlighter-rouge">left-right</code>, <code class="language-plaintext highlighter-rouge">center</code>, <code class="language-plaintext highlighter-rouge">top-bottom</code>, <code class="language-plaintext highlighter-rouge">%</code>, <code class="language-plaintext highlighter-rouge">length</code>)</li>
+      <li><code class="language-plaintext highlighter-rouge">initial</code> : 현재의 속성값을 기본값으로 지정</li>
+      <li><code class="language-plaintext highlighter-rouge">inherit</code> : 부모 요소의 속성값 상속</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">background-size</code> : 배경 이미지의 크기를 지정하는 속성
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">length</code> : 배경 이미지의 가로와 세로 크기나 백분율을 직접 지정</li>
+      <li><code class="language-plaintext highlighter-rouge">cover</code> : 가로/세로 비율을 유지하면서, 배경을 다 채울 수 있도록 이미지 조절</li>
+      <li><code class="language-plaintext highlighter-rouge">contain</code> : 가로/세로 비율을 유지하면서, 배경을 벗어나지 않도록 이미지 조절</li>
+      <li><code class="language-plaintext highlighter-rouge">initial</code> : 현재의 속성값을 기본값으로 지정</li>
+      <li><code class="language-plaintext highlighter-rouge">inherit</code> : 부모 요소의 속성값 상속</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="background-image: https://cdn.pixabay.com/photo/2020/10/21/04/01/leaves-5672036_1280.png;"&gt;
+    background-image
+&lt;/div&gt;
+</code></pre></div></div>
+
+<h3 id="overflow--컨텐츠가-요소의-크기를-벗어날-때의-처리-방법을-지정하는-속성"><code class="language-plaintext highlighter-rouge">overflow</code> : 컨텐츠가 요소의 크기를 벗어날 때의 처리 방법을 지정하는 속성</h3>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>overflow: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>visible</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: 120%">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>overflow: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>visible</td>
+                                    <td>박스를 넘어가도 내용을 표시</td>
+                                </tr>
+                                <tr>
+                                    <td>hidden</td>
+                                    <td>박스를 넘어간 부분은 표시하지 않음</td>
+                                </tr>
+                                <tr>
+                                    <td>scroll</td>
+                                    <td>무조건 스크롤바 표시</td>
+                                </tr>
+                                <tr>
+                                    <td>auto</td>
+                                    <td>박스를 넘어가면 스크롤바 표시</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div&gt;
+    &lt;div style="
+        width: 20%;
+        height: 150px;
+        background-color: black;
+        float: left;
+        overflow: visible;
+        margin-right: 5%;"&gt;
+            visible
+    &lt;/div&gt;
+    &lt;div style="
+        width: 20%;
+        height: 150px;
+        background-color: black;
+        float: left;
+        overflow: hidden;
+        margin-right: 5%;"&gt;
+            hidden
+    &lt;/div&gt;
+    &lt;div style="
+        width: 20%;
+        height: 150px;
+        background-color: black;
+        float: left;
+        overflow: scroll;
+        margin-right: 5%;"&gt;
+            scroll
+    &lt;/div&gt;
+    &lt;div style="
+        width: 20%;
+        height: 150px;
+        background-color: black;
+        float: left;
+        overflow: auto;
+        margin-right: 5%"&gt;
+            auto
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<div>
+    <div style="width: 20%;
+            height: 150px;
+            background-color: black;
+            float: left;
+            overflow: visible;
+            margin-right: 5%;">
+                자기가 무엇에 홀려 있음을 깨닫는다. 그 넉넉한 뱃길에 여태껏 알아보지 못하고, 숨바꼭질을 하고, 피하려 하고 총으로 쏘려고까지 한 일을 생각하면, 무엇에 씌었던 게 틀림없다. 큰 새 작은 새는 좋아서 미칠 듯이, 물속에 가라앉을 듯, 탁 스치고 지나가는가 하면, 되돌아오면서, 그렇다고 한다.
+    </div>
+    <div style="width: 20%;
+            height: 150px;
+            background-color: black;
+            float: left;
+            overflow: hidden;
+            margin-right: 5%;">
+                자기가 무엇에 홀려 있음을 깨닫는다. 그 넉넉한 뱃길에 여태껏 알아보지 못하고, 숨바꼭질을 하고, 피하려 하고 총으로 쏘려고까지 한 일을 생각하면, 무엇에 씌었던 게 틀림없다. 큰 새 작은 새는 좋아서 미칠 듯이, 물속에 가라앉을 듯, 탁 스치고 지나가는가 하면, 되돌아오면서, 그렇다고 한다.
+    </div>
+    <div style="width: 20%;
+            height: 150px;
+            background-color: black;
+            float: left;
+            overflow: scroll;
+            margin-right: 5%;">
+                자기가 무엇에 홀려 있음을 깨닫는다. 그 넉넉한 뱃길에 여태껏 알아보지 못하고, 숨바꼭질을 하고, 피하려 하고 총으로 쏘려고까지 한 일을 생각하면, 무엇에 씌었던 게 틀림없다. 큰 새 작은 새는 좋아서 미칠 듯이, 물속에 가라앉을 듯, 탁 스치고 지나가는가 하면, 되돌아오면서, 그렇다고 한다.
+    </div>
+    <div style="width: 20%;
+            height: 150px;
+            background-color: black;
+            float: left;
+            overflow: auto;
+            margin-right: 5%">
+                자기가 무엇에 홀려 있음을 깨닫는다. 그 넉넉한 뱃길에 여태껏 알아보지 못하고, 숨바꼭질을 하고, 피하려 하고 총으로 쏘려고까지 한 일을 생각하면, 무엇에 씌었던 게 틀림없다. 큰 새 작은 새는 좋아서 미칠 듯이, 물속에 가라앉을 듯, 탁 스치고 지나가는가 하면, 되돌아오면서, 그렇다고 한다.
+    </div>
+</div>
+<div style="height: 300px;"></div>
+
+<h3 id="z-index--요소들의-수직-위치를-지정하는-속성"><code class="language-plaintext highlighter-rouge">z-index</code> : 요소들의 수직 위치를 지정하는 속성</h3>
+<ul>
+  <li>숫자가 클수록 위에, 숫자가 작을수록 아래에 위치</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 수직 위치를 역순으로 배치
+&lt;div style="
+    width: 100px;
+	height: 100px;
+	position: absolute;
+    top: 30px;
+	left: 210px;
+    background-color: red;
+    z-index: 1;"&gt;&lt;/div&gt;
+&lt;div style="width: 100px;
+	height: 100px;
+	position: absolute;
+    top: 60px;
+	left: 270px;
+    background-color: blue;"&gt;&lt;/div&gt;
+&lt;div style="width: 100px;
+	height: 100px;
+    position: absolute;
+    top: 90px;
+	left: 240px;
+    background-color: green;
+    z-index: -1;"&gt;&lt;/div&gt;
+</code></pre></div></div>
+
+<h2 id="-글자-관련-css-속성"># 글자 관련 <code class="language-plaintext highlighter-rouge">CSS</code> 속성</h2>
+
+<h3 id="color--글자의-색상을-지정하는-속성"><code class="language-plaintext highlighter-rouge">color</code> : 글자의 색상을 지정하는 속성</h3>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>color: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>#000000</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: 120%">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>color: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>color</td>
+                                    <td>색상 지정</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="color:red"&gt;
+    hello world
+&lt;/div&gt;
+</code></pre></div></div>
+<div style="color: red; font-size: 15px; background-color: black;">
+    hello world
+</div>
+
+<h3 id="font-size--글자의-크기를-지정하는-속성"><code class="language-plaintext highlighter-rouge">font-size</code> : 글자의 크기를 지정하는 속성</h3>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>font-size: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>medium</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: 120%">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>font-size: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>medium</td>
+                                    <td>웹 브라우저에서 정한 기본값</td>
+                                </tr>
+                                <tr>
+                                    <td>xx-small, x-small, small, large, x-large, xx-large</td>
+                                    <td>기본값에 대한 상대적인 크기</td>
+                                </tr>
+                                <tr>
+                                    <td>smaller, larger</td>
+                                    <td>부모 요소의 글자 크기에 대한 상대적인 크기</td>
+                                </tr>
+                                <tr>
+                                    <td>px</td>
+                                    <td>글자 크기를 직접 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>%, em</td>
+                                    <td>부모 요소의 글자 크기에 대한 상대적인 글자 크기의 비율을 직접 지정</td>
+                                </tr>
+                                <tr>
+                                    <td>rem</td>
+                                    <td>최상위 요소의 글자 크기에 대한 상대적인 글자 크기의 비율을 직접 지정</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="font-size: xx-small"&gt;xx-small&lt;/div&gt;
+&lt;div style="font-size: x-small"&gt;x-small&lt;/div&gt;
+&lt;div style="font-size: small"&gt;small&lt;/div&gt;
+&lt;div style="font-size: medium"&gt;medium&lt;/div&gt;
+&lt;div style="font-size: large"&gt;large&lt;/div&gt;
+&lt;div style="font-size: x-large"&gt;x-large&lt;/div&gt;
+&lt;div style="font-size: xx-large"&gt;xx-large&lt;/div&gt;
+</code></pre></div></div>
+
+<div style="color: white; background-color: black;">
+    <div style="font-size: xx-small">xx-small</div>
+    <div style="font-size: x-small">x-small</div>
+    <div style="font-size: small">small</div>
+    <div style="font-size: medium">medium</div>
+    <div style="font-size: large">large</div>
+    <div style="font-size: x-large">x-large</div>
+    <div style="font-size: xx-large">xx-large</div>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="font-size: smaller"&gt;smaller&lt;/div&gt;
+&lt;div&gt;medium&lt;/div&gt;
+&lt;div style="font-size: larger"&gt;larger&lt;/div&gt;
+</code></pre></div></div>
+
+<div style="color: white; background-color: black;">
+    <div style="font-size: smaller">smaller</div>
+    <div>medium</div>
+    <div style="font-size: larger">larger</div>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="font-size: 10px"&gt;
+    10px
+    &lt;i style="font-size: 200%;"&gt;
+        20px
+        &lt;span style="font-size: 0.8em"&gt;
+            16px
+            &lt;b style="font-size: 1rem"&gt;
+                1rem
+            &lt;/b&gt;
+        &lt;/span&gt;
+    &lt;/i&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<div style="color: white; background-color: black; font-size: 10px">
+    10px
+    <i style="font-size: 200%;">
+        20px
+        <span style="font-size: 0.8em">
+            16px
+            <b style="font-size: 1rem">
+                1rem
+            </b>
+        </span>
+    </i>
+</div>
+
+<h3 id="font-family--글꼴을-지정하는-속성"><code class="language-plaintext highlighter-rouge">font-family</code> : 글꼴을 지정하는 속성</h3>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>font-family: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>웹 브라우저의 기본 글꼴</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: 120%">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>font-family: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>font</td>
+                                    <td>글꼴 이름 / 글꼴 유형</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="font-family: (지정할 글꼴);"&gt;
+    지정된 글꼴로 출력합니다.
+&lt;/div&gt;
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="font-family: (지정할 글꼴1), (지정할 글꼴2);"&gt;
+    지정된 글꼴1로 출력하되 (i) 해당 글꼴이 존재하지 않는다면 (ii) 표현할 수 없다면, 지정된 글꼴2로 출력합니다.
+&lt;/div&gt;
+</code></pre></div></div>
+
+<h3 id="font-weight--글자의-굵기-정도를-지정하는-속성"><code class="language-plaintext highlighter-rouge">font-weight</code> : 글자의 굵기 정도를 지정하는 속성</h3>
+<ul>
+  <li>나타낼 수 있는 굵기의 정도는 글꼴마다 다름</li>
+</ul>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>font-weight: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>normal</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>Y</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: 120%">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>font-weight: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>normal</td>
+                                    <td>보통 굵기 (400)</td>
+                                </tr>
+                                <tr>
+                                    <td>bold</td>
+                                    <td>굵은 굵기 (700)</td>
+                                </tr>
+                                <tr>
+                                    <td>bolder</td>
+                                    <td>상속된 값보다 굵은 크기</td>
+                                </tr>
+                                <tr>
+                                    <td>lighter</td>
+                                    <td>상속된 값보다 얇은 크기</td>
+                                </tr>
+                                <tr>
+                                    <td>number</td>
+                                    <td>굵기 정도를 직접 지정</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="font-weight: normal"&gt;
+    &lt;div style="font-weight: lighter"&gt;normal-lighter&lt;/div&gt;
+    normal
+    &lt;div style="font-weight: bolder"&gt;normal-bolder&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="font-weight: bold"&gt;
+    &lt;div style="font-weight: lighter"&gt;bold-lighter&lt;/div&gt;
+    bold
+    &lt;div style="font-weight: bolder"&gt;bold-bolder&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<div style="color: white; font-size: 15px; background-color: black;">
+    <div style="font-weight: normal">
+        <div style="font-weight: lighter">normal-lighter</div>
+        normal
+        <div style="font-weight: bolder">normal-bolder</div>
+    </div>
+    <div style="font-weight: bold">
+        <div style="font-weight: lighter">bold-lighter</div>
+        bold
+        <div style="font-weight: bolder">bold-bolder</div>
+    </div>
+</div>
+
+<h2 id="-텍스트-관련-css-속성"># 텍스트 관련 <code class="language-plaintext highlighter-rouge">CSS</code> 속성</h2>
+
+<h3 id="text-align--텍스트를-정렬하는-속성"><code class="language-plaintext highlighter-rouge">text-align</code> : 텍스트를 정렬하는 속성</h3>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>text-align: 문법</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>left</td>
+                <td>왼쪽 정렬</td>
+            </tr>
+            <tr>
+                <td>right</td>
+                <td>오른쪽 정렬</td>
+            </tr>
+            <tr>
+                <td>center</td>
+                <td>가운데 정렬</td>
+            </tr>
+            <tr>
+                <td>justify</td>
+                <td>양쪽 정렬</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="text-align: left;"&gt;바다는 크레파스보다 진한 푸르고 육중한 비늘을 무겁게 뒤채면서, 숨을 쉰다.&lt;/div&gt;
+&lt;div style="text-align: right;"&gt;중립국으로 가는 석방 포로를 실은 인도 배 타고르호는, 흰 페인트로 말쑥하게 칠한 삼천 톤의 몸을 떨면서, 물건처럼 빼곡이 들어찬 동지나 바다의 훈김을 헤치며 미끄려져 간다.&lt;/div&gt;
+&lt;div style="text-align: center;"&gt;석방 포로 이명준(李明俊)은, 오른편의 곧장 갑판으로 통한 사닥다리를 타고 내려가, 배 뒤쪽 난간에 가서, 거기에 기대어 선다.&lt;/div&gt;
+&lt;div style="text-align: justify;"&gt;담배를 꺼내 물고 라이터를 켜댔으나 바람에 이내 꺼지고 하여, 몇 번이나 그르친 끝에, 그 자리에 쭈그리고 앉아서 오른팔로 얼굴을 가리고 간신히 댕긴다.&lt;/div&gt;
+</code></pre></div></div>
+
+<div style="color: white; font-size: 15px; background-color: black;">
+    <div style="text-align: left;">바다는 크레파스보다 진한 푸르고 육중한 비늘을 무겁게 뒤채면서, 숨을 쉰다.</div>
+    <div style="text-align: right;">중립국으로 가는 석방 포로를 실은 인도 배 타고르호는, 흰 페인트로 말쑥하게 칠한 삼천 톤의 몸을 떨면서, 물건처럼 빼곡이 들어찬 동지나 바다의 훈김을 헤치며 미끄려져 간다.</div>
+    <div style="text-align: center;">석방 포로 이명준(李明俊)은, 오른편의 곧장 갑판으로 통한 사닥다리를 타고 내려가, 배 뒤쪽 난간에 가서, 거기에 기대어 선다.</div>
+    <div style="text-align: justify;">담배를 꺼내 물고 라이터를 켜댔으나 바람에 이내 꺼지고 하여, 몇 번이나 그르친 끝에, 그 자리에 쭈그리고 앉아서 오른팔로 얼굴을 가리고 간신히 댕긴다.</div>
+</div>
+
+<h3 id="text-decoration--텍스트을-꾸미는-선을-지정하는-속성"><code class="language-plaintext highlighter-rouge">text-decoration</code> : 텍스트을 꾸미는 선을 지정하는 속성</h3>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>text-decoration: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>none</td>
+            </tr>
+            <tr>
+                <td>상속 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>애니메이션 여부</td>
+                <td>N</td>
+            </tr>
+            <tr>
+                <td>문법</td>
+                <td>
+                    <div style="font-size: 120%">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>text-decoration: 값</td>
+                                    <td>설명</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>none</td>
+                                    <td>선을 만들지 않음</td>
+                                </tr>
+                                <tr>
+                                    <td>line-through</td>
+                                    <td>취소선 생성</td>
+                                </tr>
+                                <tr>
+                                    <td>overline</td>
+                                    <td>윗줄 생성</td>
+                                </tr>
+                                <tr>
+                                    <td>underline</td>
+                                    <td>밑줄 생성</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="text-decoration: none"&gt;none&lt;/div&gt;
+&lt;div style="text-decoration: line-through"&gt;line-through&lt;/div&gt;
+&lt;div style="text-decoration: overline"&gt;overline&lt;/div&gt;
+&lt;div style="text-decoration: underline"&gt;underline&lt;/div&gt;
+&lt;div style="text-decoration: line-through overline underline"&gt;text-decoration&lt;/div&gt;
+</code></pre></div></div>
+
+<div style="color: white; font-size: 15px; background-color: black;">
+    <div style="text-decoration: none">none</div>
+    <div style="text-decoration: line-through">line-through</div>
+    <div style="text-decoration: overline">overline</div>
+    <div style="text-decoration: underline">underline</div>
+    <div style="text-decoration: line-through overline underline">text-decoration</div>
+</div>
+
+<h3 id="columns--여러-개의-문단을-만드는-속성"><code class="language-plaintext highlighter-rouge">columns</code> : 여러 개의 문단을 만드는 속성</h3>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>columns: 속성</td>
+                <td>설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>기본값</td>
+                <td>auto</td>
+            </tr>
+            <tr>
+                <td>속성값</td>
+                <td>문단의 최대 개수 or 문단의 최소 가로 길이</td>
+            </tr>
+         </tbody>
+    </table>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="columns: 3;"&gt;자기가 무엇에 홀려 있음을 깨닫는다. 그 넉넉한 뱃길에 여태껏 알아보지 못하고, 숨바꼭질을 하고, 피하려 하고 총으로 쏘려고까지 한 일을 생각하면, 무엇에 씌었던 게 틀림없다. 큰 새 작은 새는 좋아서 미칠 듯이, 물속에 가라앉을 듯, 탁 스치고 지나가는가 하면, 되돌아오면서, 그렇다고 한다. 무덤을 이기고 온, 못 잊을 고운 각시들이, 손짓해 본다. 내 딸아. 비로소 마음이 놓인다. 옛날, 어느 벌판에서 겪은 신내림이, 문득 떠오른다. 그러자, 언젠가 전에, 이렇게 이 배를 타고 가다가, 그 벌판을 지금처럼 떠올린 일이, 그리고 딸을 부르던 일이, 이렇게 마음이 놓이던 일이 떠올랐다. 거울 속에 비친 남자는 활짝 웃고 있다.&lt;/div&gt;
+</code></pre></div></div>
+
+<div style="color: white; font-size: 15px; background-color: black;">
+    <div style="columns: 3;">자기가 무엇에 홀려 있음을 깨닫는다. 그 넉넉한 뱃길에 여태껏 알아보지 못하고, 숨바꼭질을 하고, 피하려 하고 총으로 쏘려고까지 한 일을 생각하면, 무엇에 씌었던 게 틀림없다. 큰 새 작은 새는 좋아서 미칠 듯이, 물속에 가라앉을 듯, 탁 스치고 지나가는가 하면, 되돌아오면서, 그렇다고 한다. 무덤을 이기고 온, 못 잊을 고운 각시들이, 손짓해 본다. 내 딸아. 비로소 마음이 놓인다. 옛날, 어느 벌판에서 겪은 신내림이, 문득 떠오른다. 그러자, 언젠가 전에, 이렇게 이 배를 타고 가다가, 그 벌판을 지금처럼 떠올린 일이, 그리고 딸을 부르던 일이, 이렇게 마음이 놓이던 일이 떠올랐다. 거울 속에 비친 남자는 활짝 웃고 있다.</div>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div style="columns: 150px;"&gt;자기가 무엇에 홀려 있음을 깨닫는다. 그 넉넉한 뱃길에 여태껏 알아보지 못하고, 숨바꼭질을 하고, 피하려 하고 총으로 쏘려고까지 한 일을 생각하면, 무엇에 씌었던 게 틀림없다. 큰 새 작은 새는 좋아서 미칠 듯이, 물속에 가라앉을 듯, 탁 스치고 지나가는가 하면, 되돌아오면서, 그렇다고 한다. 무덤을 이기고 온, 못 잊을 고운 각시들이, 손짓해 본다. 내 딸아. 비로소 마음이 놓인다. 옛날, 어느 벌판에서 겪은 신내림이, 문득 떠오른다. 그러자, 언젠가 전에, 이렇게 이 배를 타고 가다가, 그 벌판을 지금처럼 떠올린 일이, 그리고 딸을 부르던 일이, 이렇게 마음이 놓이던 일이 떠올랐다. 거울 속에 비친 남자는 활짝 웃고 있다.&lt;/div&gt;
+</code></pre></div></div>
+
+<div style="color: white; font-size: 15px; background-color: black;">
+    <div style="columns: 150px;">자기가 무엇에 홀려 있음을 깨닫는다. 그 넉넉한 뱃길에 여태껏 알아보지 못하고, 숨바꼭질을 하고, 피하려 하고 총으로 쏘려고까지 한 일을 생각하면, 무엇에 씌었던 게 틀림없다. 큰 새 작은 새는 좋아서 미칠 듯이, 물속에 가라앉을 듯, 탁 스치고 지나가는가 하면, 되돌아오면서, 그렇다고 한다. 무덤을 이기고 온, 못 잊을 고운 각시들이, 손짓해 본다. 내 딸아. 비로소 마음이 놓인다. 옛날, 어느 벌판에서 겪은 신내림이, 문득 떠오른다. 그러자, 언젠가 전에, 이렇게 이 배를 타고 가다가, 그 벌판을 지금처럼 떠올린 일이, 그리고 딸을 부르던 일이, 이렇게 마음이 놓이던 일이 떠올랐다. 거울 속에 비친 남자는 활짝 웃고 있다.</div>
+</div>
+
+<h2 id="-애니메이션-관련-css-속성"># 애니메이션 관련 <code class="language-plaintext highlighter-rouge">CSS</code> 속성</h2>
+
+<h3 id="transform--요소의-형태를-변화시키는-속성"><code class="language-plaintext highlighter-rouge">transform:</code> : 요소의 형태를 변화시키는 속성</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>transform: rotate( angle )  /* 요소를 angle (각의 크기)만큼 회전 (단위 : deg, turn) */
+transform: rotateX( angle ) /* 가로를 축으로 회전 */
+transform: rotateY( angle ) /* 세로를 축으로 회전 */
+
+transform: translate( Xpx, Ypx ) /* 요소를 가로축, 세로축 기준으로 이동 */
+transform: translateX( px ) /* 가로축을 기준으로 이동 */
+transform: translateY( px ) /* 세로축을 기준으로 이동 */
+
+transform: scale( X ) /* 가로와 세로를 모두 X배만큼 확대 */
+transform: scale( X, Y ) /* 가로로 X배만큼 확대, 세로로 Y배만큼 확대 */
+transform: scaleX( X ) /* 가로로 X배만큼 확대 */
+transform: scaleY( Y ) /* 세로로 Y배만큼 확대 */
+
+transform: skewX( Xdeg ) // 가로 뱡향으로 비틈
+transform: skewY( Ydeg ) // 세로 뱡향으로 비틈
+transform: skewX( Xdeg, Ydeg ) // 가로 뱡향으로 X도만큼, 세로 방향으로 Y도만큼 비틈
+</code></pre></div></div>
+
+<h3 id="animation--요소에-애니메이션-효과를-넣는-속성"><code class="language-plaintext highlighter-rouge">animation</code> : 요소에 애니메이션 효과를 넣는 속성</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@keyframes name { /* 애니메이션에 이름을 붙이고, 어떤 모양에서 어떤 모양으로 바꿀지 지정 */
+0% { ... } /* 시작할 때 요소의 모양 지정 */
+n% { ... } /* n%일 때 요소의 모양 지정 */
+100% { ... } /* 끝날 때 요소의 모양 지정 */}
+
+animation-name: /* 어떤 이름의 @keyframes를 사용할지 지정 */; 
+
+animation-duration: /* 애니메이션이 진행될 시간 지정 (단위: s 또는 ms) */;
+
+animation-timing-function: /* 애니메이션의 진행 속도 지정 */
+  /* cubic-bezier(n,n,n,n) 함수 : 애니메이션을 3차원 베지에 곡선에 맞게 표현 */
+  /* linear : cubic-bezier(0,0,1,1). 애니메이션 효과가 처음부터 끝까지 일정한 속도로 진행 */
+  /* ease : 기본값. cubic-bezier(0.25,0.1,0.25,1). 애니메이션 효과가 천천히 시작되어 빨라졌다가 다시 느려짐 */
+  /* ease-in : cubic-bezier(0.42,0,1,1). 애니메이션 효과가 천천히 시작됨 */
+  /* ease-out : cubic-bezier(0,0,0.58,1). 애니메이션 효과가 천천히 끝남 */
+  /* ease-in-out : cubic-bezier(0.42,0,0.58,1). 애니메이션 효과가 천천히 시작되어 천천히 끝남 */
+  /* steps(1,...) 함수 : 애니메이션을 스텝에 맞게 끝어서 표현 */
+  /* step-start : steps(1,start). 시작하는 지점에 스텝 */
+  /* step-end : steps(1,end). 끝나는 지점에 스텝 */
+
+animation-delay: /* 애니메이션이 시작하기 전에 대기하는 시간 지정 (단위: s 또는 ms) */;
+
+animation-iteration-count: /* 애니메이션이 반복하는 횟수 지정 */;
+
+animation-direction: /* 애니메이션이 진행하는 방향 지정 (normal | reverse | alternate | alternate-reverse) */;
+
+animation-fill-mode: /* 애니메이션 종료 후의 상태 지정 (none | forwards | backwards | both) */;
+
+animation-play-state : /* 애니메이션의 진행 여부 지정 (running | paused) */;
+</code></pre></div></div>
+
+<h3 id="transition--요소에-트랜지션-효과를-넣는-속성"><code class="language-plaintext highlighter-rouge">transition:</code> : 요소에 트랜지션 효과를 넣는 속성</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>transition-property: /* 트랜지션의 속성 지정 (none | all | property) */;
+
+transition-timing-function: /* 트랜지션의 진행 속도 지정 */;
+  /* cubic-bezier(n,n,n,n) 함수 : 애니메이션을 3차원 베지에 곡선에 맞게 표현 */
+  /* linear : cubic-bezier(0,0,1,1). 애니메이션 효과가 처음부터 끝까지 일정한 속도로 진행 */
+  /* ease : 기본값. cubic-bezier(0.25,0.1,0.25,1). 애니메이션 효과가 천천히 시작되어 빨라졌다가 다시 느려짐 */
+  /* ease-in : cubic-bezier(0.42,0,1,1). 애니메이션 효과가 천천히 시작됨 */
+  /* ease-out : cubic-bezier(0,0,0.58,1). 애니메이션 효과가 천천히 끝남 */
+  /* ease-in-out : cubic-bezier(0.42,0,0.58,1). 애니메이션 효과가 천천히 시작되어 천천히 끝남 */
+  /* steps(1,...) 함수 : 애니메이션을 스텝에 맞게 끝어서 표현 */
+  /* step-start : steps(1,start). 시작하는 지점에 스텝 */
+  /* step-end : steps(1,end). 끝나는 지점에 스텝 */
+
+transition-duration: /* 트랜지션이 진행될 시간 지정 (단위: s 또는 ms) */;
+
+transition-delay: /* 트랜지션이 시작하기 전에 대기하는 시간 지정 (단위: s 또는 ms) */;
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Frontend" /><category term="HTML" /><category term="CSS" /><summary type="html"><![CDATA[CSS (Cascading Style Sheet) : 웹 문서가 웹 사이트에 표현되는 방법을 기술하는 스타일시트 언어]]></summary></entry></feed>
