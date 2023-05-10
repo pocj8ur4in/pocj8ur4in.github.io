@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/frontend/html1/</loc>
-<lastmod>2022-11-17T00:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/frontend/css1/</loc>
-<lastmod>2022-11-18T00:00:00+09:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/github%20pages/blog1/</loc>
 <lastmod>2023-03-31T00:00:00+09:00</lastmod>
 </url>
@@ -25,10 +17,6 @@
 <lastmod>2023-04-04T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/vocawik/vcw1/</loc>
-<lastmod>2023-04-17T00:00:00+09:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/vocawik/vcw2/</loc>
 <lastmod>2023-04-18T00:00:00+09:00</lastmod>
 </url>
@@ -42,7 +30,7 @@
 </url>
 <url>
 <loc>http://localhost:4000/vocawik/vcw5/</loc>
-<lastmod>2023-04-23T00:00:00+09:00</lastmod>
+<lastmod>2023-05-02T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/categories/</loc>
@@ -55,9 +43,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/tags/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/page2/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/googlece206819820f99f5.html</loc>

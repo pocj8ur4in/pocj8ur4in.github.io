@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[vocawik] 4/19 진행 내용 - pocj8ur4in’s blog</title>
+<!-- begin _includes/seo.html --><title>[vocawik] 04/19 진행 내용 - pocj8ur4in’s blog</title>
 <meta name="description" content="#3. init: 멀티모듈 세팅">
 
 
@@ -22,7 +22,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[vocawik] 4/19 진행 내용">
+<meta property="og:title" content="[vocawik] 04/19 진행 내용">
 <meta property="og:url" content="http://localhost:4000/vocawik/vcw3/">
 
 
@@ -178,7 +178,7 @@
     
       
       
-        <li class="current">[vocawik] 4/19 진행 내용</li>
+        <li class="current">[vocawik] 04/19 진행 내용</li>
       
     
   </ol>
@@ -192,7 +192,7 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[vocawik] 4/19 진행 내용">
+    <meta itemprop="headline" content="[vocawik] 04/19 진행 내용">
     <meta itemprop="description" content="#3. init: 멀티모듈 세팅">
     <meta itemprop="datePublished" content="2023-04-19T00:00:00+09:00">
     <meta itemprop="dateModified" content="2023-04-19T00:00:00+09:00">
@@ -201,7 +201,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/vocawik/vcw3/" class="u-url" itemprop="url">[vocawik] 4/19 진행 내용
+            <a href="http://localhost:4000/vocawik/vcw3/" class="u-url" itemprop="url">[vocawik] 04/19 진행 내용
 </a>
           </h1>
           
@@ -233,7 +233,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#3-init-멀티모듈-세팅">#3. init: 멀티모듈 세팅</a></li><li><a href="#4-chorespotless-적용">#4. chore:spotless 적용</a></li><li><a href="#5-init-git-hook과-gradle을-통한-spotless-자동화">#5. init: git hook과 gradle을 통한 spotless 자동화</a></li><li><a href="#6-init-모듈-내-applicationyml-세팅">#6. init: 모듈 내 application.yml 세팅</a></li><li><a href="#6-init-swagger3-적용">#6. init: swagger3 적용</a></li><li><a href="#8-chorejacoco-설정">#8. chore:Jacoco 설정</a></li><li><a href="#9-init-sonarqube-적용">#9. init: sonarqube 적용</a></li></ul>
+              <ul class="toc__menu"><li><a href="#3-init-멀티모듈-세팅">#3. init: 멀티모듈 세팅</a></li><li><a href="#4-init-spotless-적용">#4. init: spotless 적용</a></li><li><a href="#5-init-git-hook과-gradle을-통한-spotless-자동화">#5. init: git hook과 gradle을 통한 spotless 자동화</a></li><li><a href="#6-init-모듈-내-applicationyml-세팅">#6. init: 모듈 내 application.yml 세팅</a></li><li><a href="#7-init-swagger3-적용">#7. init: swagger3 적용</a></li><li><a href="#8-init-jacoco-설정">#8. init: Jacoco 설정</a></li><li><a href="#9-init-sonarqube-적용">#9. init: sonarqube 적용</a></li></ul>
 
             </nav>
           </aside>
@@ -341,7 +341,7 @@ subprojects {
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.register("prepareKotlinBuildScriptModel"){}
 </code></pre></div></div>
 
-<h2 id="4-chorespotless-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/30d811bfeabefb5f35aaa0876d799ae563b85b7c">#4</a>. chore:spotless 적용</h2>
+<h2 id="4-init-spotless-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/30d811bfeabefb5f35aaa0876d799ae563b85b7c">#4</a>. init: spotless 적용</h2>
 
 <p>Junit에 대한 코드 포맷팅 및 유지보수를 위해 <a href="https://nesoy.github.io/articles/2020-04/Spotless">해당 게시글</a>을 참고해 spotless 플러그인을 추가하였다.</p>
 
@@ -394,7 +394,7 @@ subprojects {
 
 <p><a href="https://tecoble.techcourse.co.kr/post/2022-10-04-active_profiles/">해당 게시글</a>을 참고하여 이전에 설장한 멀티모듈 내에 프로퍼티 설정을 관리하고 환경변수를 주입할 수 있는 application.yml 파일을 생성하였다.</p>
 
-<h2 id="6-init-swagger3-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/311e740cff2a31a07bce721140928114a0295501">#6</a>. init: swagger3 적용</h2>
+<h2 id="7-init-swagger3-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/311e740cff2a31a07bce721140928114a0295501">#7</a>. init: swagger3 적용</h2>
 
 <p><a href="https://velog.io/@dnwlsrla40/Swagger-Swagger3">해당 포스트</a>의 내용을 참고하여, REST 웹 서버로 요청되는 URL 리스트를 문서화 및 테스트 할 수 있는 Swagger3를 Api 모듈 내에 도입하였다.</p>
 
@@ -416,7 +416,7 @@ because "this.condition" is null
   <li><a href="http://localhost:8080/swagger-ui/index.html">http://localhost:8080/swagger-ui/index.html</a>로 접속해보면 Swagger 페이지가 정상적으로 출력된다.</li>
 </ul>
 
-<h2 id="8-chorejacoco-설정"><a href="https://github.com/Hongik-Challenge/hc-backend/commit/a10ebd2a12774c3a40484d6bf76c26f265180a41">#8</a>. chore:Jacoco 설정</h2>
+<h2 id="8-init-jacoco-설정"><a href="https://github.com/Hongik-Challenge/hc-backend/commit/a10ebd2a12774c3a40484d6bf76c26f265180a41">#8</a>. init: Jacoco 설정</h2>
 
 <p><a href="https://seller-lee.github.io/java-code-coverage-tool-part2">해당 게시글</a>을 참고해 sub 모듈에 코드 커버리지 도구인 Jacoco를 도입하였다.</p>
 
@@ -536,7 +536,7 @@ jacoco {
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5Bvocawik%5D+4%2F19+%EC%A7%84%ED%96%89+%EB%82%B4%EC%9A%A9%20http%3A%2F%2Flocalhost%3A4000%2Fvocawik%2Fvcw3%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%5Bvocawik%5D+04%2F19+%EC%A7%84%ED%96%89+%EB%82%B4%EC%9A%A9%20http%3A%2F%2Flocalhost%3A4000%2Fvocawik%2Fvcw3%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fvocawik%2Fvcw3%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -547,7 +547,7 @@ jacoco {
       
   <nav class="pagination">
     
-      <a href="/vocawik/vcw2/" class="pagination--pager" title="[vocawik] 4/18 진행 내용
+      <a href="/vocawik/vcw2/" class="pagination--pager" title="[vocawik] 04/18 진행 내용
 ">이전</a>
     
     
@@ -576,7 +576,7 @@ jacoco {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/vocawik/vcw5/" rel="permalink">[vocawik] 04/23 진행 내용
+        <a href="/vocawik/vcw5/" rel="permalink">[vocawik] 05/02 진행 내용
 </a>
       
     </h2>
@@ -594,7 +594,7 @@ jacoco {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          5 분 소요
         
       </span>
     
@@ -602,7 +602,7 @@ jacoco {
 
 
     <p class="archive__item-excerpt" itemprop="description">
-</p>
+  원래는 초기 설정이 어느 정도 진행되면 바로 도메인을 정의하고 이를 바탕으로 데이터베이스 엔티티와 서비스를 설계 및 구현할 계획이었는데, 비염으로 인해 처방받은 약이 효과가 너무 좋아서 (…) 일주일 내내 컨디션이 너무 저조했고, 마침 시험 일정도 맞물려 좀 휴식을 취하게 되...</p>
   </article>
 </div>
 
@@ -634,7 +634,7 @@ jacoco {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          10 분 소요
+          7 분 소요
         
       </span>
     
@@ -657,7 +657,7 @@ jacoco {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/vocawik/vcw2/" rel="permalink">[vocawik] 4/18 진행 내용
+        <a href="/vocawik/vcw2/" rel="permalink">[vocawik] 04/18 진행 내용
 </a>
       
     </h2>
@@ -698,7 +698,7 @@ jacoco {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/vocawik/vcw1/" rel="permalink">[vocawik] 4/17 진행 내용
+        <a href="/github%20pages/blog4/" rel="permalink">[Github Pages] 4. Github Pages 블로그 개설
 </a>
       
     </h2>
@@ -716,7 +716,7 @@ jacoco {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          2 분 소요
         
       </span>
     
@@ -724,7 +724,7 @@ jacoco {
 
 
     <p class="archive__item-excerpt" itemprop="description">
-</p>
+  이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나 그때쯤 작성한 글들 대부분이 너무 나열식으...</p>
   </article>
 </div>
 
