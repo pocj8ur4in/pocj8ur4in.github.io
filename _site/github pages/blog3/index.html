@@ -248,9 +248,9 @@
 
 <h3 id="정적-웹사이트-생성기-ssg-static-site-generator">정적 웹사이트 생성기 (SSG; Static Site Generator)</h3>
 
-<p>많은 사람들이 Github Pages로 블로그를 사용하고 있어 이를 블로그 서비스로 인식하기 쉽지만, 사실 Github Pages는 Github에서 제공하는 정적 웹 사이트 호스팅 서비스이다. 그리고 정적 웹 사이트 호스팅 서비스를 가능하게 하는 것이 바로 SSG이다.<br /></p>
+<p>많은 사람들이 Github Pages로 블로그를 사용하고 있어 이를 블로그 서비스로 인식하기 쉽지만, 사실 Github Pages의 실체는! 바로 <b>Github에서 제공하는 정적 웹 사이트 호스팅 서비스</b>이다. 그리고 정적 웹 사이트 호스팅 서비스를 가능하게 하는 것이 바로 SSG란 것이다.<br /></p>
 
-<p>SSG로 생성된 사이트는 모든 웹 페이지를 미리 생성하고, 방문자로부터 요칭이 들어오면 미리 만든 웹 페이지를 그대로 응답해준다. 그러므로 서버와 클라이언트 모두 렌더링을 위한 작업이 거의 없기 때문에, SSG로 생성된 웹 사이트는 속도가 매우 빠른 장점을 가진다. 그리고 SSG로 생성된 사이트는 미리 만들어놓은 수많은 웹 페이지로 이루어져 있는 구조라 검색엔진 최적화 (SEO; Search Engine Optimization)가 뛰어나 검색엔진이 사이트를 크롤링하는 데에 적합하다.<br /></p>
+<p>SSG로 생성된 사이트는 모든 웹 페이지를 미리 생성하고, 방문자로부터 요청이 들어오면 미리 만든 웹 페이지를 그대로 응답해준다. 그러므로 서버와 클라이언트 모두 렌더링을 위한 작업이 거의 없기 때문에, SSG로 생성된 웹 사이트는 속도가 매우 빠른 장점을 가진다. 그리고 SSG로 생성된 사이트는 미리 만들어놓은 수많은 웹 페이지로 이루어져 있는 구조라 검색엔진 최적화 (SEO; Search Engine Optimization)가 뛰어나 검색엔진이 사이트를 크롤링하는 데에 적합하다.<br /></p>
 
 <p>그러나 빌드할 때마다 모든 웹 페이지를 생성하는 작업을 매번 하다보니, 컨텐츠를 자주 업데이트하는 웹 사이트나 규모가 커 빌드 시간이 오래 걸리는 웹 사이트에서는 큰 비효율성이 발생해 SSG보다는 다른 렌더링 기술을 사용한다. 그래서 SSG는 개인 블로그와 같이 컨텐츠의 변경이 자주 일어나지 않은, 소규모 웹 사이트를 제작할 때 많이 쓰이는 기술이다. (SSG 외에도 SPA, SSR과 같은 렌더링 기술이 있는데, 달레 님께서 <a href="https://www.daleseo.com/spa-ssg-ssr/">SPA와 SSG, 그리고 SSR</a>이라는 글에서 잘 정리해주셨으니 참고하길 바란다.)<br /></p>
 
@@ -313,6 +313,21 @@
       <footer class="page__meta">
         
         
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#github" class="page__taxonomy-item p-category" rel="tag">Github</a>
+    
+    </span>
+  </p>
+
+
 
 
   
@@ -381,7 +396,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/vocawik/vcw5/" rel="permalink">[vocawik] 05/02 진행 내용
+        <a href="/github%20pages/blog7/" rel="permalink">[Github Pages] 7. Github Pages 기능 추가
 </a>
       
     </h2>
@@ -399,7 +414,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          5 분 소요
+          최대 1 분 소요
         
       </span>
     
@@ -407,7 +422,7 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">
-  원래는 초기 설정이 어느 정도 진행되면 바로 도메인을 정의하고 이를 바탕으로 데이터베이스 엔티티와 서비스를 설계 및 구현할 계획이었는데, 비염으로 인해 처방받은 약이 효과가 너무 좋아서 (…) 일주일 내내 컨디션이 너무 저조했고, 마침 시험 일정도 맞물려 좀 휴식을 취하게 되...</p>
+  이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html을 다룰 줄 알면 금방 할 수 있는, 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를 해결하였는지, ...</p>
   </article>
 </div>
 
@@ -421,7 +436,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/vocawik/vcw4/" rel="permalink">[vocawik] 04/21 진행 내용
+        <a href="/github%20pages/blog6/" rel="permalink">[Github Pages] 6. Github Pages 블로그 포스트
 </a>
       
     </h2>
@@ -439,16 +454,15 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          7 분 소요
+          2 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">#10. init: github action 설정
-
-</p>
+    <p class="archive__item-excerpt" itemprop="description">
+  공들여 커스텀마이징한 블로그에 글이 없다는 것은 팥 없는 찐빵! 그런데 Github Pages에는 어떻게 글을 쓰는거지? 하는 분들을 위해 작성된 글이다. (Github Pages이나 Minimal Mistakes으로 처음 블로그를 운영하시는 분들의 시선에 맞춰 html, c...</p>
   </article>
 </div>
 
@@ -462,7 +476,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/vocawik/vcw3/" rel="permalink">[vocawik] 04/19 진행 내용
+        <a href="/github%20pages/blog5/" rel="permalink">[Github Pages] 5. Github Pages 블로그 설정
 </a>
       
     </h2>
@@ -487,7 +501,9 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">#3. init: 멀티모듈 세팅
+    <p class="archive__item-excerpt" itemprop="description">
+  솔직히 블로그 설정을 건드는 부분은 (그냥 내가 글을 잘 못쓰는 것일 수 있지만,) 글이 정보를 나열할 수 밖에 없다고 생각한다… 그래도 내가 시행착오를 겪었던 경험을 떠올리면서 하나하나 풀어서 작성하려 하였다… 미숙한 글이지만 남들에게 도움이 되었으면 정말 좋겠다…
+
 
 </p>
   </article>
@@ -503,7 +519,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/vocawik/vcw2/" rel="permalink">[vocawik] 04/18 진행 내용
+        <a href="/github%20pages/blog4/" rel="permalink">[Github Pages] 4. Github Pages 블로그 개설
 </a>
       
     </h2>
@@ -521,16 +537,15 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          2 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">#1. init: git 저장소 생성
-
-</p>
+    <p class="archive__item-excerpt" itemprop="description">
+  이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나… 그때쯤 작성한 글들 대부분이 너무 나열식...</p>
   </article>
 </div>
 
