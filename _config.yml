@@ -15,7 +15,7 @@ masthead_title           : "pocj8ur4in"
 breadcrumbs              : true
 words_per_minute         : 200
 comments:
-  provider               : "disqus"
+  provider               : 
   disqus:
     shortname            : pocj8ur4in
 reCaptcha:
@@ -168,6 +168,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-admin
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -176,7 +177,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
-
+  - jekyll-admin
 
 category_archive:
   type: liquid

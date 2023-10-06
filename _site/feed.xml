@@ -1,146 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-06T23:15:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Github Pages] 7. Github Pages 기능 추가</title><link href="http://localhost:4000/github%20pages/blog7/" rel="alternate" type="text/html" title="[Github Pages] 7. Github Pages 기능 추가" /><published>2023-05-05T00:00:00+09:00</published><updated>2023-05-10T00:00:00+09:00</updated><id>http://localhost:4000/github%20pages/blog7</id><content type="html" xml:base="http://localhost:4000/github%20pages/blog7/"><![CDATA[<blockquote>
-  <p>이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html을 다룰 줄 알면 금방 할 수 있는, 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를 해결하였는지, 에 대해 자세히 쓰고 싶었다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-07T01:20:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Github Pages] 6. Github Pages 블로그 기능 추가</title><link href="http://localhost:4000/github%20pages/blog6/" rel="alternate" type="text/html" title="[Github Pages] 6. Github Pages 블로그 기능 추가" /><published>2023-04-10T00:00:00+09:00</published><updated>2023-10-06T00:00:00+09:00</updated><id>http://localhost:4000/github%20pages/blog6</id><content type="html" xml:base="http://localhost:4000/github%20pages/blog6/"><![CDATA[<blockquote>
+  <p>이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html이나 css를 다룰 줄 알면 금방 할 수 있는, 혹은 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를 해결하였는지, 에 대해 자세히 쓰고 싶었다. 그래서 이 게시물은 다른 게시물들과 달리, 내가 블로그에서 부족하다고 느낀 점들을 계속 조금씩이라도 보충해나갈 계획이다.</p>
 </blockquote>
 
-<p>##</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><category term="Github" /><summary type="html"><![CDATA[이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html을 다룰 줄 알면 금방 할 수 있는, 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를 해결하였는지, 에 대해 자세히 쓰고 싶었다.]]></summary></entry><entry><title type="html">[Github Pages] 6. Github Pages 블로그 포스트</title><link href="http://localhost:4000/github%20pages/blog6/" rel="alternate" type="text/html" title="[Github Pages] 6. Github Pages 블로그 포스트" /><published>2023-04-10T00:00:00+09:00</published><updated>2023-04-10T00:00:00+09:00</updated><id>http://localhost:4000/github%20pages/blog6</id><content type="html" xml:base="http://localhost:4000/github%20pages/blog6/"><![CDATA[<blockquote>
-  <p>공들여 커스텀마이징한 블로그에 글이 없다는 것은 팥 없는 찐빵! 그런데 Github Pages에는 어떻게 글을 쓰는거지? 하는 분들을 위해 작성된 글이다. (Github Pages이나 Minimal Mistakes으로 처음 블로그를 운영하시는 분들의 시선에 맞춰 html, css 문법에 대한 내용은 다른 포스트로 옮겼으니 참고해주시기 바란다.)</p>
-</blockquote>
+<h2 id="1-블로그-댓글-feat-disqus---giscus">1. 블로그 댓글 (feat. disqus -&gt; giscus)</h2>
+<p>앞서 서술한 게시물을 보면 Github Pages는 정적 웹 사이트 호스팅 서비스라는 말이 있다. 모든 웹 페이지를 미리 생성하고, 방문자로부터 요청이 들어오면 미리 만든 웹 페이지를 그대로 응답한다는 건데, 사용자와 동적으로 정보를 주고받아야 하는 댓글 등의 기능은 불가능하다는 것이다.<br /></p>
 
-<h2 id="1-블로그-포스트-생성-및-머릿말-작성">1. 블로그 포스트 생성 및 머릿말 작성</h2>
-<p><code class="language-plaintext highlighter-rouge">_posts</code> 폴더에 <code class="language-plaintext highlighter-rouge">XXXX(YEAR)-XX(MONTH)-XX(DAY)-(NAME).md</code>을 생성해보자. 이때 YEAR, MONTH, DAY는 포스트가 작성된 연도, 월, 일이 되고 NAME은 포스트의 경로가 된다. 그리고 파일 상단에 위치할 머릿말을 작성하기 위해 아래와 같이 <code class="language-plaintext highlighter-rouge">---</code>에 둘러싸인 내용을 작성해보자.</p>
+<p>그래서 처음에는 댓글 플랫폼인 <a href="https://disqus.com">disqus</a>를 통해 이를 해결하고자 하였다. 방법은 간단한데, 사이트에 가입하고 무료 플랜을 구독한 다음에 <code class="language-plaintext highlighter-rouge">_config.yml</code>를 다음과 같이 수정해주기만 하면 된다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-title: "[Blog] macOS에서 Minimal Mistakes로 깃허브 블로그 만들기"
-
-categories:
-    - Github.io
-
-tag:
-    [HTML, JavaScript, SCSS, Ruby]
-
-toc: true
-toc_sticky: true
-
-date: 2022-09-26
-lastmod: 2022-09-26
----
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>comments:
+  provider               : "disqus"
+  disqus:
+    shortname            :         # disqus ID 지정
 </code></pre></div></div>
 
-<table>
-    <thead>
-        <tr>
-            <th>양식 이름</th>
-            <td>양식 설명</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>title</th>
-            <td>포스트 제목</td>
-        </tr>
-        <tr>
-            <th>categories</th>
-            <td>포스트 카테고리</td>
-        </tr>
-        <tr>
-            <th>tags</th>
-            <td>포스트 태그</td>
-        </tr>
-        <tr>
-            <th>toc</th>
-            <td>우측 상단의 목차</td>
-        </tr>
-        <tr>
-            <th>toc_label</th>
-            <td>목차 이름</td>
-        </tr>
-        <tr>
-            <th>toc_icon</th>
-            <td>목차 아이콘</td>
-        </tr>
-        <tr>
-            <th>toc_sticky</th>
-            <td>목차 고정 여부</td>
-        </tr>
-        <tr>
-            <th>date</th>
-            <td>포스트 작성일</td>
-        </tr>
-        <tr>
-            <th>lastmod</th>
-            <td>포스트 수정일</td>
-        </tr>
-        <tr>
-            <th>author_profile</th>
-            <td>프로필 창 표시 여부</td>
-        </tr>
-    </tbody>
-</table>
+<p>그런데 disqus에서 제공하는 기능인 ‘SNS로 댓글 달기’은 개발자 친화적인 기능은 아니였고, 또 나중에는 광고가 노출되기 시작했다. 그래서 대안으로 찾은 게 <a href="https://giscus.app/ko">giscus</a>인데, GitHub Discussions로 작동하고, 마크다운도 지원하면서 대댓글이나 반응과 같은 자잘한 기능들이 마음에 들었다.</p>
 
-<p>우리가 글을 작성하는 데에 사용할 <a href="https://www.markdownguide.org/getting-started/">Markdown</a>은 텍스트 기반의 마크업 (MarkUp) 언어로, 특수기호와 문자를 활용한 매우 간단한 구조의 문법을 사용해 보다 빠르게 컨텐츠를 작성할 수 있다! Github의 <code class="language-plaintext highlighter-rouge">README.md</code>가 대표적인 예시인데, Github Pages 역시 이를 활용해 문서를 작성하는 데에 사용한다. 마크다운 문법은 <a href="https://www.markdownguide.org">여기서</a> 상세히 설명하고 있으니 참고해서 작성하면 된다.</p>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/d0db9e9a-29a3-4529-918e-f9ae0ddc9b65" width="100%" /></p>
 
-<h2 id="2-포스트-내에-문자-박스-양식-넣어보기">2. 포스트 내에 문자 박스 양식 넣어보기</h2>
-<p>추가로 <code class="language-plaintext highlighter-rouge">minimal-mistakes theme</code>의 css로 설정된 스타일 요소를 class로 불러와 적용할 수 있는데, 그중 하나인 상자 양식을 활용해보자. Markdown (<code class="language-plaintext highlighter-rouge">.md</code>) 파일이니까 html 태그들을 쓰면 그대로 화면에 표현할 수 있다.</p>
+<p>적용하는 방법도 html 파일에 아래의 스크립트를 넣어주기만 하면 되는데, 나 같은 경우에는 Minimal Mistakes 테마에서 <code class="language-plaintext highlighter-rouge">_includes/social_share.html</code> 파일에 해당 구문을 넣어 적용시켰다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p class="notice--primary"&gt;
-  &lt;strong&gt;
-    이 항목은 현재 작성중입니다.
-  &lt;/strong&gt;&lt;br&gt;
-    &gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.
-&lt;/p&gt;
-
-&lt;p class="notice--info"&gt;
-  &lt;strong&gt;
-    이 항목은 macOS 기반으로 작성되었습니다.
-  &lt;/strong&gt;&lt;br&gt;
-    &gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.
-&lt;/p&gt;
-
-&lt;p class="notice--danger"&gt;
-  &lt;strong&gt;
-    이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.
-  &lt;/strong&gt;&lt;br&gt;
-    &gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.
-&lt;/p&gt;
-
-&lt;p class="notice--warning"&gt;
-  &lt;strong&gt;
-    이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.
-  &lt;/strong&gt;&lt;br&gt;
-    &gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.
-&lt;/p&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;section class="page__share"&gt;
+  &lt;script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&amp;A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async&gt;
+  &lt;/script&gt;
+&lt;/section&gt;
 </code></pre></div></div>
 
-<div style="background-color: black; padding: 2% 2% 2% 2%">
-  <p class="notice--primary">
-    <strong>
-      이 항목은 현재 작성중입니다.
-    </strong><br />
-      &gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.
-  </p>
+<h2 id="2-블로그-google-검색-노출-및-검색-설정">2. 블로그 Google 검색 노출 및 검색 설정</h2>
+<p>아무래도 블로그를 운영하다 보면 다른 사람들의 반응이 궁금할 때가 많은데, 아무것도 설정하지 않은 블로그는 검색되지 않는다는 사실을 깨닫고 해결책을 찾아보았다. <a href="https://search.google.com/search-console/about">Google Search Console</a>에서 내 도메인을 입력한 다음에 소유권 확인을 위해 다운받은 <code class="language-plaintext highlighter-rouge">.HTML</code>파일을 <code class="language-plaintext highlighter-rouge">root</code>에 위치시키만 하면 며칠 안으로 아래와 같이 적용된다.</p>
 
-  <p class="notice--info">
-    <strong>
-      이 항목은 macOS 기반으로 작성되었습니다.
-    </strong><br />
-      &gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.
-  </p>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5876c2af-191d-47d7-ab9e-f3c2c55bde32" width="70%" /></p>
 
-  <p class="notice--danger">
-    <strong>
-      이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.
-    </strong><br />
-      &gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.
-  </p>
+<p>추가로 블로그 포스트들이 검색 엔진에 검색되는 것을 가능하도록 진행할 작업들이 있는데, 먼저 <code class="language-plaintext highlighter-rouge">_config.yml</code> 파일에서 아래 설정들을 <code class="language-plaintext highlighter-rouge">true</code>로 설정한다.</p>
 
-  <p class="notice--warning">
-    <strong>
-      이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.
-    </strong><br />
-      &gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.
-  </p>
-</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><category term="Github" /><summary type="html"><![CDATA[공들여 커스텀마이징한 블로그에 글이 없다는 것은 팥 없는 찐빵! 그런데 Github Pages에는 어떻게 글을 쓰는거지? 하는 분들을 위해 작성된 글이다. (Github Pages이나 Minimal Mistakes으로 처음 블로그를 운영하시는 분들의 시선에 맞춰 html, css 문법에 대한 내용은 다른 포스트로 옮겼으니 참고해주시기 바란다.)]]></summary></entry><entry><title type="html">[Github Pages] 5. Github Pages 블로그 설정</title><link href="http://localhost:4000/github%20pages/blog5/" rel="alternate" type="text/html" title="[Github Pages] 5. Github Pages 블로그 설정" /><published>2023-04-05T00:00:00+09:00</published><updated>2023-04-08T00:00:00+09:00</updated><id>http://localhost:4000/github%20pages/blog5</id><content type="html" xml:base="http://localhost:4000/github%20pages/blog5/"><![CDATA[<blockquote>
-  <p>솔직히 블로그 설정을 건드는 부분은 (그냥 내가 글을 잘 못쓰는 것일 수 있지만,) 글이 정보를 나열할 수 밖에 없다고 생각한다… 그래도 내가 시행착오를 겪었던 경험을 떠올리면서 하나하나 풀어서 작성하려 하였다… 미숙한 글이지만 남들에게 도움이 되었으면 정말 좋겠다…</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>search                   : # 블로그 검색 여부 지정
+search_full_content      : # 블로그의 내용 검색 여부 지정
+</code></pre></div></div>
+
+<p>그리고 웹 크롤링을 위해 <a href="https://github.com/pocj8ur4in/pocj8ur4in.github.io/blob/main/sitemap.yml"><code class="language-plaintext highlighter-rouge">sitemap.yml</code></a>과 <code class="language-plaintext highlighter-rouge">robots.txt</code> 파일을 생성해 <code class="language-plaintext highlighter-rouge">root</code>에 위치시키면 된다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
+User-agent: *
+Allow: /
+
+# 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 차단
+User-agent: *
+Disallow: /
+
+# 구글 검색 로봇만 차단하고, 다른 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
+User-agent: Googlebot
+Disallow: /
+
+# 네이버 검색로봇만 차단하고, 다른 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
+User-agent: Yeti
+Disallow: /
+
+Sitemap: https://pocj8ur4in.github.io/sitemap.xml
+</code></pre></div></div>
+
+<p>만약에 블로그의 방문자 수 통계를 보고 싶다면, <a href="https://analytics.google.com/analytics/web/provision/#/provision">Google Analytics</a>를 가입한 후 애널리틱스 데이터 스트림을 설정하면 된다. 이때, 측정 ID를 복사한 후 <code class="language-plaintext highlighter-rouge">_config.yml</code> 파일을 다음과 같이 수정해야 한다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Analytics
+analytics:
+  provider               : "google-gtag"
+  google:
+    tracking_id          : "(측정 ID)"
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><category term="Github" /><summary type="html"><![CDATA[이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html이나 css를 다룰 줄 알면 금방 할 수 있는, 혹은 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를 해결하였는지, 에 대해 자세히 쓰고 싶었다. 그래서 이 게시물은 다른 게시물들과 달리, 내가 블로그에서 부족하다고 느낀 점들을 계속 조금씩이라도 보충해나갈 계획이다.]]></summary></entry><entry><title type="html">[Github Pages] 5. Github Pages 블로그 설정 &amp;amp; 포스트</title><link href="http://localhost:4000/github%20pages/blog5/" rel="alternate" type="text/html" title="[Github Pages] 5. Github Pages 블로그 설정 &amp;amp; 포스트" /><published>2023-04-05T00:00:00+09:00</published><updated>2023-04-08T00:00:00+09:00</updated><id>http://localhost:4000/github%20pages/blog5</id><content type="html" xml:base="http://localhost:4000/github%20pages/blog5/"><![CDATA[<blockquote>
+  <p>솔직히 블로그 설정을 건드는 부분은 내가 아는 정보들을 그대로 나열할 수 밖에 없다고 생각한다… 그래도 내가 시행착오를 겪었던 경험을 떠올리면서 하나하나 풀어서 작성하려 하였으니, 미숙한 글이지만 남들에게 도움이 되었으면 정말 좋겠다… 그리고 Github Pages이나 Minimal Mistakes으로 처음 블로그를 운영하시는 분들의 시선에 맞춰 html, css에 대한 자세한 내용은 다른 포스트로 옮겼으니 참고해주셨으면 한다.</p>
 </blockquote>
 
 <h2 id="1-블로그-기본-설정">1. 블로그 기본 설정</h2>
@@ -298,12 +237,147 @@ html {
 └── package.json
 </code></pre></div></div>
 
+<h2 id="3-블로그-포스트-작성-및-머릿말-작성">3. 블로그 포스트 작성 및 머릿말 작성</h2>
+<p><code class="language-plaintext highlighter-rouge">_posts</code> 폴더에 <code class="language-plaintext highlighter-rouge">XXXX(YEAR)-XX(MONTH)-XX(DAY)-(NAME).md</code>을 생성해보자. 이때 YEAR, MONTH, DAY는 포스트가 작성된 연도, 월, 일이 되고 NAME은 포스트의 경로가 된다. 그리고 파일 상단에 위치할 머릿말을 작성하기 위해 아래와 같이 <code class="language-plaintext highlighter-rouge">---</code>에 둘러싸인 내용을 작성해보자.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: "[Blog] macOS에서 Minimal Mistakes로 깃허브 블로그 만들기"
+
+categories:
+    - Github.io
+
+tag:
+    [HTML, JavaScript, SCSS, Ruby]
+
+toc: true
+toc_sticky: true
+
+date: 2022-09-26
+lastmod: 2022-09-26
+---
+</code></pre></div></div>
+
+<table>
+    <thead>
+        <tr>
+            <th>양식 이름</th>
+            <td>양식 설명</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>title</th>
+            <td>포스트 제목</td>
+        </tr>
+        <tr>
+            <th>categories</th>
+            <td>포스트 카테고리</td>
+        </tr>
+        <tr>
+            <th>tags</th>
+            <td>포스트 태그</td>
+        </tr>
+        <tr>
+            <th>toc</th>
+            <td>우측 상단의 목차</td>
+        </tr>
+        <tr>
+            <th>toc_label</th>
+            <td>목차 이름</td>
+        </tr>
+        <tr>
+            <th>toc_icon</th>
+            <td>목차 아이콘</td>
+        </tr>
+        <tr>
+            <th>toc_sticky</th>
+            <td>목차 고정 여부</td>
+        </tr>
+        <tr>
+            <th>date</th>
+            <td>포스트 작성일</td>
+        </tr>
+        <tr>
+            <th>lastmod</th>
+            <td>포스트 수정일</td>
+        </tr>
+        <tr>
+            <th>author_profile</th>
+            <td>프로필 창 표시 여부</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>우리가 글을 작성하는 데에 사용할 <a href="https://www.markdownguide.org/getting-started/">Markdown</a>은 텍스트 기반의 마크업 (MarkUp) 언어로, 특수기호와 문자를 활용한 매우 간단한 구조의 문법을 사용해 보다 빠르게 컨텐츠를 작성할 수 있다! Github의 <code class="language-plaintext highlighter-rouge">README.md</code>가 대표적인 예시인데, Github Pages 역시 이를 활용해 문서를 작성하는 데에 사용한다. 마크다운 문법은 <a href="https://www.markdownguide.org">여기서</a> 상세히 설명하고 있으니 참고하자.</p>
+
+<h2 id="4-블로그-포스트-내에-문자-박스-양식-넣어보기">4. 블로그 포스트 내에 문자 박스 양식 넣어보기</h2>
+<p>추가로 <code class="language-plaintext highlighter-rouge">minimal-mistakes theme</code>의 css로 설정된 스타일 요소를 class로 불러와 적용할 수 있는데, 그중 하나인 상자 양식을 활용해보자. Markdown (<code class="language-plaintext highlighter-rouge">.md</code>) 파일이니까 html 태그들을 쓰면 그대로 화면에 표현할 수 있다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p class="notice--primary"&gt;
+  &lt;strong&gt;
+    이 항목은 현재 작성중입니다.
+  &lt;/strong&gt;&lt;br&gt;
+    &gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.
+&lt;/p&gt;
+
+&lt;p class="notice--info"&gt;
+  &lt;strong&gt;
+    이 항목은 macOS 기반으로 작성되었습니다.
+  &lt;/strong&gt;&lt;br&gt;
+    &gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.
+&lt;/p&gt;
+
+&lt;p class="notice--danger"&gt;
+  &lt;strong&gt;
+    이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.
+  &lt;/strong&gt;&lt;br&gt;
+    &gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.
+&lt;/p&gt;
+
+&lt;p class="notice--warning"&gt;
+  &lt;strong&gt;
+    이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.
+  &lt;/strong&gt;&lt;br&gt;
+    &gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.
+&lt;/p&gt;
+</code></pre></div></div>
+
+<div style="background-color: black; padding: 2% 2% 2% 2%">
+  <p class="notice--primary">
+    <strong>
+      이 항목은 현재 작성중입니다.
+    </strong><br />
+      &gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.
+  </p>
+
+  <p class="notice--info">
+    <strong>
+      이 항목은 macOS 기반으로 작성되었습니다.
+    </strong><br />
+      &gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.
+  </p>
+
+  <p class="notice--danger">
+    <strong>
+      이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.
+    </strong><br />
+      &gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.
+  </p>
+
+  <p class="notice--warning">
+    <strong>
+      이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.
+    </strong><br />
+      &gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.
+  </p>
+</div>
+
 <blockquote>
   <p>Reference</p>
   <ul>
     <li><a href="http://jekyllrb-ko.github.io/docs/structure/">Jekyll 디렉토리 구조 (번역)</a></li>
   </ul>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><category term="Github" /><summary type="html"><![CDATA[솔직히 블로그 설정을 건드는 부분은 (그냥 내가 글을 잘 못쓰는 것일 수 있지만,) 글이 정보를 나열할 수 밖에 없다고 생각한다… 그래도 내가 시행착오를 겪었던 경험을 떠올리면서 하나하나 풀어서 작성하려 하였다… 미숙한 글이지만 남들에게 도움이 되었으면 정말 좋겠다…]]></summary></entry><entry><title type="html">[Github Pages] 4. Github Pages 블로그 개설</title><link href="http://localhost:4000/github%20pages/blog4/" rel="alternate" type="text/html" title="[Github Pages] 4. Github Pages 블로그 개설" /><published>2023-04-03T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/github%20pages/blog4</id><content type="html" xml:base="http://localhost:4000/github%20pages/blog4/"><![CDATA[<blockquote>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><category term="Github" /><summary type="html"><![CDATA[솔직히 블로그 설정을 건드는 부분은 내가 아는 정보들을 그대로 나열할 수 밖에 없다고 생각한다… 그래도 내가 시행착오를 겪었던 경험을 떠올리면서 하나하나 풀어서 작성하려 하였으니, 미숙한 글이지만 남들에게 도움이 되었으면 정말 좋겠다… 그리고 Github Pages이나 Minimal Mistakes으로 처음 블로그를 운영하시는 분들의 시선에 맞춰 html, css에 대한 자세한 내용은 다른 포스트로 옮겼으니 참고해주셨으면 한다.]]></summary></entry><entry><title type="html">[Github Pages] 4. Github Pages 블로그 개설</title><link href="http://localhost:4000/github%20pages/blog4/" rel="alternate" type="text/html" title="[Github Pages] 4. Github Pages 블로그 개설" /><published>2023-04-03T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/github%20pages/blog4</id><content type="html" xml:base="http://localhost:4000/github%20pages/blog4/"><![CDATA[<blockquote>
   <p>이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나… 그때쯤 작성한 글들 대부분이 너무 나열식으로 쓰였고, 출처에 대한 언급이 많이 부실해 (모르는 부분이 있어 찾으려 하면 출처가 없어서 나도 찾지 못한다…), 부족한 점들을 보완하기 위해 다시 작성되었다.<br />
 그리고 현재 작성자의 실행 환경의 OS가 MacOS임을 미리 밝혀둔다. 아마 근시일 내에는 기기를 바꿀 계획이 없으니, 동일한 OS를 사용하시는 분들은 그대로 진행해주시면 된다.</p>
 </blockquote>
