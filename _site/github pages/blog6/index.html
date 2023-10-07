@@ -233,7 +233,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#1-블로그-댓글-feat-disqus---giscus">1. 블로그 댓글 (feat. disqus -&gt; giscus)</a></li><li><a href="#2-블로그-google-검색-노출-및-검색-설정">2. 블로그 Google 검색 노출 및 검색 설정</a></li></ul>
+              <ul class="toc__menu"><li><a href="#1-블로그-댓글-feat-disqus-giscus">1. 블로그 댓글 (feat. disqus, giscus)</a></li><li><a href="#2-블로그-google-검색-노출-및-검색-설정">2. 블로그 Google 검색 노출 및 검색 설정</a></li></ul>
 
             </nav>
           </aside>
@@ -242,22 +242,22 @@
   <p>이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html이나 css를 다룰 줄 알면 금방 할 수 있는, 혹은 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를 해결하였는지, 에 대해 자세히 쓰고 싶었다. 그래서 이 게시물은 다른 게시물들과 달리, 내가 블로그에서 부족하다고 느낀 점들을 계속 조금씩이라도 보충해나갈 계획이다.</p>
 </blockquote>
 
-<h2 id="1-블로그-댓글-feat-disqus---giscus">1. 블로그 댓글 (feat. disqus -&gt; giscus)</h2>
+<h2 id="1-블로그-댓글-feat-disqus-giscus">1. 블로그 댓글 (feat. disqus, giscus)</h2>
 <p>앞서 서술한 게시물을 보면 Github Pages는 정적 웹 사이트 호스팅 서비스라는 말이 있다. 모든 웹 페이지를 미리 생성하고, 방문자로부터 요청이 들어오면 미리 만든 웹 페이지를 그대로 응답한다는 건데, 사용자와 동적으로 정보를 주고받아야 하는 댓글 등의 기능은 불가능하다는 것이다.<br /></p>
 
 <p>그래서 처음에는 댓글 플랫폼인 <a href="https://disqus.com">disqus</a>를 통해 이를 해결하고자 하였다. 방법은 간단한데, 사이트에 가입하고 무료 플랜을 구독한 다음에 <code class="language-plaintext highlighter-rouge">_config.yml</code>를 다음과 같이 수정해주기만 하면 된다.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>comments:
-  provider               : "disqus"
+  provider               : "disqus" # 댓글 제공자 지정
   disqus:
-    shortname            :         # disqus ID 지정
+    shortname            :          # disqus ID 지정
 </code></pre></div></div>
 
 <p>그런데 disqus에서 제공하는 기능인 ‘SNS로 댓글 달기’은 개발자 친화적인 기능은 아니였고, 또 나중에는 광고가 노출되기 시작했다. 그래서 대안으로 찾은 게 <a href="https://giscus.app/ko">giscus</a>인데, GitHub Discussions로 작동하고, 마크다운도 지원하면서 대댓글이나 반응과 같은 자잘한 기능들이 마음에 들었다.</p>
 
 <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/d0db9e9a-29a3-4529-918e-f9ae0ddc9b65" width="100%" /></p>
 
-<p>적용하는 방법도 html 파일에 아래의 스크립트를 넣어주기만 하면 되는데, 나 같은 경우에는 Minimal Mistakes 테마에서 <code class="language-plaintext highlighter-rouge">_includes/social_share.html</code> 파일에 해당 구문을 넣어 적용시켰다.</p>
+<p>적용하는 방법도 Github 앱을 저장소에 설치한 뒤에 html 파일에 아래의 스크립트를 넣어주기만 하면 되는데, 나 같은 경우에는 Minimal Mistakes 테마에서 <code class="language-plaintext highlighter-rouge">_includes/social_share.html</code> 파일에 해당 구문을 넣어 적용시켰다.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;section class="page__share"&gt;
   &lt;script src="https://giscus.app/client.js"
@@ -311,7 +311,7 @@ Disallow: /
 Sitemap: https://pocj8ur4in.github.io/sitemap.xml
 </code></pre></div></div>
 
-<p>만약에 블로그의 방문자 수 통계를 보고 싶다면, <a href="https://analytics.google.com/analytics/web/provision/#/provision">Google Analytics</a>를 가입한 후 애널리틱스 데이터 스트림을 설정하면 된다. 이때, 측정 ID를 복사한 후 <code class="language-plaintext highlighter-rouge">_config.yml</code> 파일을 다음과 같이 수정해야 한다.</p>
+<p>만약에 블로그의 방문자 수 통계를 보고 싶다면, <a href="https://analytics.google.com/analytics/web/provision/#/provision">Google Analytics</a>를 가입한 후 애널리틱스 데이터 스트림을 설정하면 된다. 이때, 측정 ID를 복사한 후 <code class="language-plaintext highlighter-rouge">_config.yml</code> 파일을 다음과 같이 수정하면 된다.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Analytics
 analytics:
