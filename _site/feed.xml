@@ -1,4 +1,637 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-11T12:43:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[vocawik] 07/07 진행 내용</title><link href="http://localhost:4000/vcw2/" rel="alternate" type="text/html" title="[vocawik] 07/07 진행 내용" /><published>2023-07-07T00:00:00+09:00</published><updated>2023-07-07T00:00:00+09:00</updated><id>http://localhost:4000/vcw2</id><content type="html" xml:base="http://localhost:4000/vcw2/"><![CDATA[<h2 id="1-init-git-저장소-생성"><a href="https://github.com/pocj8ur4in/vw-backend/commit/4dd2e5b458282cc895a7b38d3f2d3aa37ceabb65">#1</a>. init: git 저장소 생성</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-11T13:13:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[vocawik] 4. 07/13 진행 내용</title><link href="http://localhost:4000/vcw5/" rel="alternate" type="text/html" title="[vocawik] 4. 07/13 진행 내용" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/vcw5</id><content type="html" xml:base="http://localhost:4000/vcw5/"><![CDATA[<h2 id="10-init-github-actions를-통한-cicd-파이프라인-자동화"><a href="https://github.com/pocj8ur4in/vw-backend/commit/66b91ccbcce79d613f8beec47426d3dbc7eae408">#10</a>. init: Github Actions를 통한 CI/CD 파이프라인 자동화</h2>
+
+<p>이제 지속적 통합 및 배포를 위한 CI/CD 파이브라인에 대해 고민해볼 시간이다. Travis, Jenkins, github actions와 같은 CI/CD 관리 도구들이 있는데, <a href="https://choseongho93.tistory.com/295">이 게시글</a>을 참고했을 때 비교적 소규모 프로젝트인 우리의 경우에는 Jenkins에 비해 github action를 사용하는 것이 바람직해 보였다. 일단 Github Action과 Github Flow와 관련해서 <a href="https://zzsza.github.io/development/2020/06/06/github-action/">해당 게시글</a>과 <a href="https://gmlwjd9405.github.io/2018/05/12/how-to-collaborate-on-GitHub-3.html">해당 게시글</a>을 참고하였다. CI/CD 파이프라인을 아래와 같이 간단히 작성해보았다.</p>
+
+<ol>
+  <li>먼저 <code class="language-plaintext highlighter-rouge">master</code> 브랜치와 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치가 존재한다.</li>
+  <li>개인 작업은 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치에서 분리된 로컬 <code class="language-plaintext highlighter-rouge">feature</code>브랜치에서 작업한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">feature</code> 브랜치의 작업을 반영할 필요가 생길 때, <code class="language-plaintext highlighter-rouge">dev</code> 브랜치에 이를 병합하고 원격 저장소에도 이를 반영한다.</li>
+  <li>사이트에 작업을 반영해야 할 때 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치에서 <code class="language-plaintext highlighter-rouge">master</code> 브랜치로의 <code class="language-plaintext highlighter-rouge">pull request</code>를 생성한다. 이때 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치의 작업물이 빌드가 정상적으로 되는지?와 spotless가 제대로 적용되었는지?를 테스트하는 것을 <code class="language-plaintext highlighter-rouge">github flow</code>로 구현한다.</li>
+  <li>이 작업이 성공하면 병합이 이루이질 수 있게 하고, 또한 <code class="language-plaintext highlighter-rouge">pull request</code>를 종료할 수 있게끔 한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">pull request</code>가 종료될 때, <code class="language-plaintext highlighter-rouge">master</code> 브랜치의 테스트 및 배포 작업이 수행되는 것을 <code class="language-plaintext highlighter-rouge">github flow</code>로 구한현다.</li>
+  <li>배포는 도커 이미지를 생성한 다음 이를 도커 허브에 올리고 난 뒤, AWS에서 도커 컨테이너를 생성해 돌리게끔 한다.</li>
+</ol>
+
+<p>2명 이상의 작업을 진행할 때는 원격에서 <code class="language-plaintext highlighter-rouge">feature</code> 브랜치를 두어 이를 공유하고 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치에서 병합될 때에도 <code class="language-plaintext highlighter-rouge">github flow</code>를 동작시키는 게 맞겠지만, 나 혼자 작업하는 것이니 이를 편의상 생략하였다. 또한 협업에서는 보통 개발 서버와 운영 서버, 즉 2개 이상의 서버를 두어 개발하는데, 이 역시 비용상의 문제로 로컬 서버를 개발 서버로 하고 이를 운영 서버로 배포하는 흐름으로 할 것이니 양해를 구한다.</p>
+
+<ul>
+  <li>이를 위해 브랜치 구성을 dev 브랜치와 master 브랜치로 변경하였다. master 브랜치는 함부로 수정할 수 없도록 <a href="https://kotlinworld.com/292">해당 게시글</a>을 참고하여 Branch protection rules를 생성하였다.</li>
+  <li>CI 및 CD 파이프라인의 자동화를 위한 yml 파일을 작성하였다. 이제 작업물을 <code class="language-plaintext highlighter-rouge">pull request</code>를 열거나 종료하면, 빌드와 테스트 작업 혹은 빌드와 테스트 및 배포 작업이 자동화되어 실행된다.
+    <ul>
+      <li><a href="https://devjem.tistory.com/76">해당 게시글</a>을 참고하여 Github Actions에서 Gradle을 캐싱할 수 있도록 하였다.</li>
+      <li><a href="https://velog.io/@bagt/Github-Actions를-통한-배포">해당 게시글</a>을 참고하여 AWS를 통한 배포 자동화 (CI)를 위해 빌드된 프로젝트를 미리 압축하도록 하였다.</li>
+      <li>도커 이미지를 생성하는 것은 <a href="https://docs.github.com/en/actions/publishing-packages/publishing-docker-images&gt;">이 문서</a> 내용이 영문이지만 정말 좋다.
+<code class="language-plaintext highlighter-rouge">pull request</code>가 열리거나 종료하는 이벤트에 대한 트리거가 있어야 하는데… 기존에는 안되었는데 <a href="https://stackoverflow.com/questions/60710209/trigger-github-actions-only-when-pr-is-merged">이 포스트</a>에 따르면 된다고 해 이를 적용하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: pull_request_opened
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: [ 17 ]
+
+    steps:
+      - name: Check Out Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: $
+          distribution: 'corretto'
+
+      - name: Gradle Caching
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          restore-keys: |
+            $-gradle-
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+        shell: bash
+
+      - name: Check spotless
+        run: ./gradlew spotlessCheck
+
+      - name: Build with Gradle
+        run: ./gradlew build
+        shell: bash
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: pull_request_closed
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: [ 17 ]
+    outputs:
+      version: $
+
+    steps:
+      - name: Check Out The Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: $
+          distribution: 'corretto'
+
+      - name: Get the version
+        id: get_version
+        run: |
+          RELEASE_VERSION_WITHOUT_V="$(cut -d'v' -f2 &lt;&lt;&lt; ${GITHUB_REF#refs/*/})"
+          echo ::set-output name=VERSION::$RELEASE_VERSION_WITHOUT_V 
+
+      - name: Execute Gradle build
+        run: ./gradlew :Api:build --no-daemon
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: $
+          password: $
+
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: ./Api
+          push: true
+          tags: $/$
+
+      - name: Image digest
+        run: echo $
+
+      - name: Application Run
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: $
+          username: $
+          key: $
+
+          script: |
+            sudo docker stop $
+            sudo docker rm -f $
+            sudo docker pull $/$:latest
+            
+            sudo docker run -p 8080:$ \
+            --name $ \
+            -e SPRING_DATASOURCE_URL=$ \
+            -e SPRING_DATASOURCE_USERNAME=$ \
+            -e SPRING_DATASOURCE_PASSWORD=$ \
+            -d $/$
+
+            sudo docker image prune -a
+
+      - name: gradlew permission change
+        run: sudo chmod 755 gradlew
+
+      - name: Sonaqube Analysis
+        run: ./gradlew test sonarqube
+          -Dsonar.host.url=$
+          -Dsonar.projectKey=$
+          -Dsonar.projectName=$-$
+          -Dsonar.login=$
+</code></pre></div></div>
+
+<ul>
+  <li>지난번 프로젝트를 진행했을 때 도커 허브에 올라온 빌드 파일을 실행했을 때 기본 Manifest 속성이 없다는 오류가 나오면서 정상적으로 작동이 되지 않는 것을 확인하였다. 찾아보니 내가 이전에 참고했던 <a href="https://gist.github.com/ihoneymon/a2ed116069af470fec0d08110604c5db">해당 게시글</a>처럼 오류를 해결한 경우도 있지만, 이 둘을 반대로 진행한 <a href="https://earth-95.tistory.com/132">이 포스트</a>와 같은 경우도 있음을 확인하였다. 왜 그럴까?
+    <ul>
+      <li>BootJar task와 Jar task는 빌드를 통해 jar 파일을 만드는 작업이다. 그런데 이 둘이 동시에 존재하는 이유는 Jar은 의존성이 포함되지 않고 소스 코드의 클래스 파일과 리소스 파일만 포함한 Plain Jar을, BootJar은 의존성까지 포함해 어플리케이션 실행이 가능한 executable Jar을 만들기 때문이다.</li>
+      <li>그러므로, 도커 이미지에 올라간 것은 Plain Jar라 실행이 되지 않는 것이라고 추측해볼 수 있다. 그래서 이를 고려해 build.gradle 파일을 수정하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bootJar.enabled = true
+jar.enabled = false
+</code></pre></div></div>
+
+<ul>
+  <li>그런데 이번엔 <code class="language-plaintext highlighter-rouge">Execution failed for task ':bootJar'.</code>이란 오류가 발생했다. 프로젝트의 build.gradle 파일을 보니 application이 없는 모듈들에도 bootJar task를 실행시키는 것으로 되어 있어 수정하였다. 그리고 <code class="language-plaintext highlighter-rouge">Core</code> 모듈에서 test하는 부분 때문에 빌드가 안되는 현상이 일어나 일단 그 부분에 해당하는 클래스를 제외하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bootJar.enabled = false
+</code></pre></div></div>
+
+<p>여기까지가 github action에서 진행된 내용으로, 커밋에 반영된 내용이다. 그리고 아래부터는 그 외부에서 이루어진 작업들로, 솔직히 정말 오랜 시행착오가 있었는데 <a href="https://zzang9ha.tistory.com/404">이 포스트</a>가 제일 깔끔히 정리된 듯 하니 참고하면 좋을 듯 하다.</p>
+
+<ul>
+  <li>도커 허브에 저장소를 생성하고, 계정에 대한 토큰을 발급받아 GitHub 저장소에 secret key로 등록시켰다.
+    <ul>
+      <li><a href="https://medium.com/day34/container-repository-comparsion-dd4826f6a683">해당 포스트</a>에서는 도커 허브와 AWS ECR을 비교하고 있는데, 우리의 경우에는 필자가 조금 더 익숙한 도커 허브를 사용할 계획이다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/233852739-0dd8cb96-9cea-4d71-9721-45cec2a49cd8.png" /></p>
+
+<ul>
+  <li><a href="https://goodgid.github.io/Github-Action-CI-CD-AWS-EC2/">해당 포스트</a>와 <a href="https://bcp0109.tistory.com/356">해당 포스트</a>를 참고하여, AWS EC2를 구축하였다. EC2의 인스턴스 유형은 프리티어인 t2.micro로, 용량은 15GB로 운영 체제는 우분투로 설정하였다. (linux 기반 EC2는 자잘한 오류가 많다고 한다.)  다음은 EC2 인스턴스 생성과 관련하여 설정한 부분이다.
+    <ul>
+      <li>IntelliJ나 터미널 등의 SSH 클라이언트 접속을 위한 프라이빗 키 파일을 생성하였다.</li>
+      <li>인스턴스에 대한 보안 그룹을 생성해, 인바운드 규칙과 아웃바운드 규칙을 지정하였다.</li>
+      <li>탄력적 IP 주소를 할당받아, 이를 인스턴스에 연결하였다.</li>
+      <li>IAM 역할을 변경하여 추후 연결할 데이터베이스 서버와 이미지 서버에 접근할 수 있게끔 하였다.</li>
+      <li>해당 AWS RDS의 파라미터 그룹을 변경하여 저장하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230702707-954aa971-fd6f-45c2-aa96-5c1fbbb7be9a.png" /></p>
+
+<ul>
+  <li>SSH에 접속하는 과정에서 <code class="language-plaintext highlighter-rouge">WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!</code>라는 오류 메시지를 띄우면서, RSA 공유키 충돌 문제가 발생하였다. 그래서 <a href="https://kingsong.tistory.com/127">이 게시글</a>을 참고하여 known_hosts 파일을 지웠다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm /root/.ssh/known_hosts 
+</code></pre></div></div>
+
+<ul>
+  <li><a href="https://www.leafcats.com/168">SSH 클라이언트에 접속하여 사용자가 root 권한을 빌린다.</a></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo su
+</code></pre></div></div>
+
+<ul>
+  <li><a href="https://someone-life.tistory.com/17">패키지를 최신으로 업데이트하기 위해 이에 대한 확인 및 실행을 주기적으로 한다.</a>
+    <ul>
+      <li>패키지를 업데이트할 때나 패키지를 설치할 때마다 계속 핑크색 화면이랑 이런저런 log가 계속 나오는 게 신경쓰여 <a href="https://chhanz.github.io/linux/2022/08/01/ubuntu-22-04-needrestart/">해당 게시글</a>을 needrestart를 제거하고, Kernel Hint와 daemon 재시작 권고 설정 역시 비활성화하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt update &amp;&amp; sudo apt upgrade
+</code></pre></div></div>
+
+<ul>
+  <li>그런데 일괄적으로 업데이트가 안되는 패키지가 있길래, 업그레이드 가능한 패키지를 확인하고 이를 개별로 설치하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt list --upgradable
+apt install &lt;패키지명&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>디스크별 용량을 주기적으로 확인해두자. 지난번 프로젝트를 진행할 때 이 부분을 신경 쓰지 못해서 EC2를 한번 지워야 하는 경우가 있었다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>df -h
+</code></pre></div></div>
+
+<ul>
+  <li>AWS 서비스를 관리할 수 있도록 AWS CLI를 설치하였다. 이전에 IAM 역할을 잘 변경했다면, s3나 rds 명령어도 잘 작동될 것이다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install awscli
+</code></pre></div></div>
+
+<ul>
+  <li>SpringBoot 프로젝트를 빌드할 수 있도록 JDK를 설치하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install openjdk-17-jdk
+java -version
+javac -version
+</code></pre></div></div>
+
+<ul>
+  <li>추가로 <code class="language-plaintext highlighter-rouge">vim ~/.bashrc</code>으로 JDK의 환경변수를 설정하고, <code class="language-plaintext highlighter-rouge">source ~/.bashrc</code>로 이를 적용하였다. (변경된 내용은 <code class="language-plaintext highlighter-rouge">echo $JAVA_HOME</code>로 확인해볼 수 있다.)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
+export PATH=$PATH:$JAVA_HOME/bin
+</code></pre></div></div>
+
+<ul>
+  <li>아래의 명령어를 이용하여 도커를 설치하였는데, <code class="language-plaintext highlighter-rouge">Job for docker.service failed because the control process exited with error code</code>라는 오류가 발생하면서 도커가 실행되지 않아 <a href="https://dct-wonjung.tistory.com/entry/Docker-failed-control-process-exited-오류-해결">해당 게시글</a>을 통해 해결하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt install docker.io 
+systemctl start docker
+systemctl enable docker
+</code></pre></div></div>
+
+<ul>
+  <li>이전에 프리티어가 메모리가 1기가밖에 안되어 소나큐브를 실행만 하면 계속 튕기는 일이 발생하였다. 사실 이런 일은 처음이라 감도 못 잡았다가 <a href="https://velog.io/@seungju0000/ec2-stop">이 게시글</a>로 어떤 일이 벌어지는지 대충이나마 이해하게 되었다. 그래서 이번에는 <a href="https://kth990303.tistory.com/361">해당 게시글</a>로 Swap File을 이용해 EC2 메모리 부족 현상을 해결해보고자 하였다.
+    <ul>
+      <li>스왑된 메모리는 <code class="language-plaintext highlighter-rouge">free</code> 명령어로 확인해볼 수 있다.</li>
+      <li><code class="language-plaintext highlighter-rouge">top</code> 명령어로 메모리 할당량을 프로세스 별로 확인해볼 수 있다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dd if=/dev/zero of=/swapfile bs=128M count=16
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+</code></pre></div></div>
+
+<ul>
+  <li>스왑된 메모리가 자동으로 마운트가 가능할 수 있도록 <code class="language-plaintext highlighter-rouge">vi /etc/fstab</code>으로 <code class="language-plaintext highlighter-rouge">/etc/fstab</code> 파일의 맨 밑줄에 해당 명령어를 작성하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/swapfile swap swap defaults 0 0
+</code></pre></div></div>
+
+<ul>
+  <li>그리고 톰캣을 설치하였는데, <a href="https://velog.io/@bonjaski0989/AWS-EC2-Linux-환경에서-톰캣-설치하기">이 게시글</a>에 잘 정리되어 있어 이를 그대로 작업하였다. (아, JAVA 환경변수는 이미 설정하였으므로 해당 부분만 제외하였다.)
+    <ul>
+      <li>톰캣을 매번 재시작할 수 있도록 <a href="https://velog.io/@bonjaski0989/EC2-Tomcat-서비스-등록">이 게시글</a>을 참고하였는데, 스크립트를 실행하는 과정에서 <code class="language-plaintext highlighter-rouge">files have no installation config</code>라는 오류가 발생하였다. 구글링해본 결과 Install 섹션을 활성화해야 한다고 하여 아래의 내용을 스크립트 파일에 추가하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Install]
+WantedBy=multi-user.target
+</code></pre></div></div>
+
+<ul>
+  <li>여러 개의 도커 컨테이너의 실행을 한 번에 관리할 수 있도록 도커 컴포즈를 설치하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+docker-compose --version
+</code></pre></div></div>
+
+<ul>
+  <li>도커로 SonarQube를 설치하였다. (사실 도커로 설치하지 않고 sonarqube를 설치한다면 아래의 작업들을 모두 진행해야 한다. 왜 아냐고? 다 했으니까… 근데 내가 설치한 자바 버전이랑 차이가 있어서 계속 오류가 났다.)
+    <ul>
+      <li>Java 설치, 환경설정</li>
+      <li>DB 설치</li>
+      <li>SonarQube에서 요구하는 DB table 생성</li>
+      <li>DB 계정 생성 및 권한설정</li>
+      <li>SonarQube 설치</li>
+      <li>SonarQube에 DB 정보 설정</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
+</code></pre></div></div>
+
+<ul>
+  <li>그리고 이에 맞춰 Github workflow를 수정하였는데, <code class="language-plaintext highlighter-rouge">Permission denied(public key)</code>라는 문구를 띄우면서 Github Actions이 제대로 동작하지 않아 여러 커밋을 보냈다. 근데 원인은 Actions secrets and variables를 잘못 작성한 것이였다; 꼭, -BEGIN-와 -END- 부분도 지우지 말고 넣자.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-----BEGIN OPENSSH PRIVATE KEY-----
+...
+-----END OPENSSH PRIVATE KEY-----
+</code></pre></div></div>
+
+<ul>
+  <li><a href="https://bcp0109.tistory.com/357">해당 포스트</a>를 참고하여, 아래 이미지와 같이 EC2에 연결할 데이터베이스를 위해 AWS RDS를 구축하였다.
+    <ul>
+      <li>해당 RDS의 RDBMS는 MysSQL로 설정하였다.</li>
+    </ul>
+  </li>
+  <li>EC2와 RDS의 연동을 위해 <a href="https://hiseon.me/linux/ubuntu/ubuntu-mysql-install/">해당 게시글</a>을 참고하여, EC2에 mysql-client를 설치하였다. 아래 이미지는 <code class="language-plaintext highlighter-rouge">sudo mysql_secure_installation</code>로 mysql를 초기화하였을 때 나오는 초기 설정으로, 래퍼런스가 정리되어 있지 않길래 나중에 필요할 때 확인할 수 있도록 첨부하였다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230704131-ee09fe07-d135-49fa-b2df-b24341ec6f5d.png" /></p>
+
+<ul>
+  <li>mysql-client를 통해 EC2에서 RDS에 원격으로 접속되는 것까지 확인하였다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230704595-aa3b5417-85f2-4ba9-aa8a-20a83d9746e1.png" /></p>
+
+<ul>
+  <li>그리고 ECR에 연결되는 거는 잘 되는데, 외부 접속이 계속 안되서 정말 머리깨지는 줄 알았다. 내가 해주고 싶은 말은, <a href="https://gksdudrb922.tistory.com/240">꼭 라우팅 테이블을 확인하자.</a></li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/233852570-41bb4a68-9448-4dcd-8e14-116a80c37eed.png" /></p>
+
+<ul>
+  <li>추가로 GitHub Actions 또한 이를 반영해 동작하게 하기 위해, <a href="https://chb2005.tistory.com/191">해당 포스트</a>를 참고하여 yml 파일을 수정하였다.</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[#10. init: Github Actions를 통한 CI/CD 파이프라인 자동화]]></summary></entry><entry><title type="html">[vocawik] 3. 07/12 진행 내용</title><link href="http://localhost:4000/vcw4/" rel="alternate" type="text/html" title="[vocawik] 3. 07/12 진행 내용" /><published>2023-07-12T00:00:00+09:00</published><updated>2023-07-12T00:00:00+09:00</updated><id>http://localhost:4000/vcw4</id><content type="html" xml:base="http://localhost:4000/vcw4/"><![CDATA[<h2 id="9-init-swagger3-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/8103ea20b9e718e06a12d6cefd4c77a4a24826c5">#9</a>. init: Swagger3 적용</h2>
+
+<p><a href="https://velog.io/@dnwlsrla40/Swagger-Swagger3">해당 포스트</a>의 내용을 참고하여, REST 웹 서버로 요청되는 URL 리스트를 문서화 및 테스트 할 수 있는 Swagger3를 Api 모듈 내에 도입하였다.</p>
+
+<ul>
+  <li>Spring Boot 2.6 이상의 환경에서 Springfox3가 실행되지 않는 오류가 발생했다. 개발자 포럼에서도 자주 언급되는 유명한 이슈인데, 아직까지도 해결되지 않았다고 한다. Spring Boot 버전을 2.6 이하로 낮추는 것이 제일 안전한 방법이겠지만, 다른 해결책이 없나 구글링해보았더니 <a href="https://shanepark.tistory.com/366">이 포스트</a>에서 @EnableSwagger2 어노테이션 대신 @EnableWebMvc 어노테이션을 이용해 문제를 해결하길래 나도 적용해서 해결했다.
+    <ul>
+      <li>그런데 @EnableWebMvc 어노테이션을 추가하는 건 어떤 의미를 가질까? 라는 질문에 <a href="https://goodgid.github.io/Spring-Enable-MVC-Annotation/">해당 포스트</a>의 내용을 참고해 답변해본다면, @EnableWebMvc는 Spring 프레임워크에서 여러 Config 값을 알아서 설정해주는데 아래의 오류를 일으키는 this.condition 부분도 알아서 설정해주는 것 같다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Caused by: java.lang.NullPointerException:
+Cannot invoke "org.springframework.web.servlet.mvc.
+condition.PatternsRequestCondition.getPatterns()"
+because "this.condition" is null
+</code></pre></div></div>
+
+<ul>
+  <li><a href="http://localhost:8080/swagger-ui/index.html">http://localhost:8080/swagger-ui/index.html</a>로 접속해보면 Swagger 페이지가 정상적으로 출력된다.</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[#9. init: Swagger3 적용]]></summary></entry><entry><title type="html">[vocawik] 2. 07/11 진행 내용</title><link href="http://localhost:4000/vcw3/" rel="alternate" type="text/html" title="[vocawik] 2. 07/11 진행 내용" /><published>2023-07-11T00:00:00+09:00</published><updated>2023-07-11T00:00:00+09:00</updated><id>http://localhost:4000/vcw3</id><content type="html" xml:base="http://localhost:4000/vcw3/"><![CDATA[<h2 id="3-init-멀티모듈-세팅"><a href="https://github.com/pocj8ur4in/vw-backend/commit/fc0f6521f6a53169fc45dec379a307e119da4dc6">#3</a>. init: 멀티모듈 세팅</h2>
+
+<p>프로젝트의 내부를 기존의 root 모듈에 sub 모듈인 api, batch, core, domain, infrastructure, socket 모듈을 포함시킨 멀티모듈 구조로 변경하였다.</p>
+
+<ul>
+  <li>sub 모듈들을 하나의 디렉토리에서 관리할 수 있도록 <code class="language-plaintext highlighter-rouge">settings.gradle</code> 파일을 작성하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rootProject.name = 'vw-backend'
+include 'vw-api'
+include 'vw-batch'
+include 'vw-core'
+include 'vw-domain'
+include 'vw-infrastructure'
+include 'vw-socket'
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">build.gradle</code>에 subprojects와 allprojects 블록을 추가해 하위 모듈과 전체 모듈을 제어할 수 있도록 하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>allprojects{
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    group = 'vocawik'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '17'
+
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'java-library'
+    apply plugin: 'io.spring.dependency-management'
+
+    dependencies {
+
+    }
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>반복된 코드를 어노테이션으로 자동완성하는 lombok 라이브러리를 사용하기 위해 subprojects에 의존성을 추가하였다.</li>
+  <li>스프링 어플리케이션에서 Junit 기반 테스트가 가능하도록 subprojects에 의존성을 추가하였다.</li>
+  <li><a href="https://jundragon.tistory.com/9">해당 포스트</a>를 참고해 lombok을 테스팅 환경에서 사용할 수 있도록 subprojects에 의존성을 추가하였다.</li>
+  <li>JUnit5 API를 테스팅 환경에서 사용할 수 있도록 subprojects에 의존성을 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dependencies {
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        testCompileOnly 'org.projectlombok:lombok'
+        testAnnotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    }
+</code></pre></div></div>
+
+<ul>
+  <li><a href="https://math-coding.tistory.com/158">해당 포스트</a>를 참고해 Java 단위 테스트를 위한 JUnit5 프레임워크를 위해 <code class="language-plaintext highlighter-rouge">build.gradle</code>을 변경하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.named('test') {
+        useJUnitPlatform()
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Task 'wrapper' not found in project ':project'</code> 오류를 해결하고자, <a href="https://hororolol.tistory.com/546">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper를 사용해서 빌드 환경을 맞추었다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>task wrapper(type: Wrapper) {
+    gradleVersion = '4.4'    
+    distributionUrl = distributionUrl.replace("bin", "all")
+}
+</code></pre></div></div>
+
+<ul>
+  <li>위의 오류를 해결하는 과정에서 <code class="language-plaintext highlighter-rouge">Cannot add task 'wrapper' as a task with that name already exists</code> 오류가 발생해, <a href="https://taegyunum.tistory.com/entry/Cannot-add-task-wrapper-as-a-task-with-that-name-already-exists">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper 형식을 변경하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wrapper {
+        gradleVersion = '4.4'
+        distributionUrl = distributionUrl.replace("bin", "all")
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">:prepareKotlinBuildScriptModel Task fails in a Java project</code> 오류를 해결하고자, <a href="https://charactermail.tistory.com/351">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 <code class="language-plaintext highlighter-rouge">prepareKotlinBuildScriptModel</code>을 새로운 task로 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.register("prepareKotlinBuildScriptModel"){}
+</code></pre></div></div>
+
+<h2 id="4-init-spotless-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/68f5025c7d1886575a90b36bb4bad62072b2f59d">#4</a>. init: spotless 적용</h2>
+
+<p>Junit에 대한 코드 포맷팅 및 유지보수를 위해 <a href="https://nesoy.github.io/articles/2020-04/Spotless">해당 게시글</a>을 참고해 spotless 플러그인을 추가하였다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id "com.diffplug.spotless" version "6.16.0"
+</code></pre></div></div>
+
+<ul>
+  <li>sub 모듈에서도 spotless 플러그인이 적용되도록 <a href="https://keelim.tistory.com/entry/안드로이드-멀티-모듈-공통-gradle-그리고-ktlint-적용을-해보자">해당 게시글</a>을 참고해 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 생성하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spotless {
+    version = "6.16.0"
+
+    java {
+        // 특정 파일에만 적용
+        target("**/*.java")
+
+        // import 순서 정의
+        importOrder()
+
+        // 사용하지 않는 import 제거
+        removeUnusedImports()
+
+        // 구글 자바 포맷 적용
+        googleJavaFormat().aosp()
+
+        // 공백 제거
+        trimTrailingWhitespace()
+
+        // 끝부분 New Line 처리
+        endWithNewline()
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>그리고 sub 모듈에서도 spotless 플러그인이 적용될 수 있도록 root 모듈에 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 적용시켰다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply from: "$rootDir/spotless.gradle"
+</code></pre></div></div>
+
+<h2 id="5-init-git-hook과-gradle을-통한-spotless-자동화"><a href="https://github.com/pocj8ur4in/vw-backend/commit/4fed89c42bc0241e31123d7565b6781a11f83ccd">#5</a>. init: git hook과 gradle을 통한 spotless 자동화</h2>
+
+<p>앞서 spotless를 적용하긴 했는데, spotless를 실행하는 것은 코드를 작성하고 이를 커밋하는 과정에서 까먹기 쉬운 작업이다. 그래서 <a href="https://techblog.woowahan.com/2530/">이 게시글</a>처럼 git hook으로 커밋을 하기 전에 spotless를 적용하는 것을 자동화하였다.<br /></p>
+
+<p>그런데 .git는 처음에 .gitignore을 통해 제외하기로 한 디렉토리이다. 나 혼자 작업을 진행한다면 위의 내용으로 충분하겠지만, 협업에서는 모두가 같은 내용을 적용하는 것이 중요하다. 그래서 root에 pre-commit 파일을 두고, gradle task를 이용해 빌드가 이루어질 때 pre-commit 파일을 .git에 이동하는 것을 추가하였다.</p>
+
+<h2 id="6-init-모듈-내-applicationyml-설정"><a href="https://github.com/pocj8ur4in/vw-backend/commit/75770bf08a2f3d05548747d5b607700de63fa717">#6</a>. init: 모듈 내 application.yml 설정</h2>
+
+<p><a href="https://tecoble.techcourse.co.kr/post/2022-10-04-active_profiles/">해당 게시글</a>을 참고하여 이전에 설장한 멀티모듈 내에 프로퍼티 설정을 관리하고 환경변수를 주입할 수 있는 application.yml 파일을 생성하였다.</p>
+
+<h2 id="7-init-jacoco-설정"><a href="https://github.com/Hongik-Challenge/hc-backend/commit/a10ebd2a12774c3a40484d6bf76c26f265180a41">#7</a>. init: jacoco 설정</h2>
+
+<p><a href="https://seller-lee.github.io/java-code-coverage-tool-part2">해당 게시글</a>을 참고해 sub 모듈에 코드 커버리지 도구인 Jacoco를 도입하였다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = '0.8.9'
+}
+</code></pre></div></div>
+
+<ul>
+  <li>추후 SonarQube의 연동을 위해 jacocoTestReports task를 설정하였다. html, csv, xml 형태로 저장할 수 있게 해주고, xml 파일은 저장하는 경로를 다르게 설정하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestReport {
+    dependsOn test
+    reports {
+        html.enabled true
+        csv.enabled true
+        xml.enabled true
+        xml.destination file("${buildDir}/reports/jacoco.xml")
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>원하는 코드 커버리지를 설정하고, 커버리지를 만족하는지 여부를 확인하는 데에 쓰이는 jacocoTestCoverageVerification task를 설정하려 했으나 커버리지를 만족시키기 위해 설정해야 하는 기준을 판단하기 어려워 일단 이 내용은 코드에서 제외하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                counter = 'BRANCH'
+                value = 'COVEREDRATIO'
+                minimum = 0.90
+            }
+
+            limit {
+                counter = 'LINE'
+                value = 'COVEREDRATIO'
+                minimum = 0.80
+            }
+
+            limit {
+                counter = 'LINE'
+                value = 'TOTALCOUNT'
+                maximum = 200
+            }
+        }
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>추가로 QueryDSL가 자동으로 생성하는 QDomain 클래스를 코드 커버리지에서 제외하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestCoverageVerification {
+    def Qdomains = []
+
+    for (qPattern in '*.QA'..'*.QZ') { // qPattern = '*.QA', '*.QB', ... '*.QZ'
+        Qdomains.add(qPattern + '*')
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>그런데 <code class="language-plaintext highlighter-rouge">./gradlew test --console verbose</code>으로 실행해도 빌드가 성공하지 않았는데, jacoco의 버전을 올려보라는 <a href="https://stackoverflow.com/questions/53911122/how-to-fix-error-while-creating-report-jacoco">답변</a>을 적용해 해결하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacoco {
+    toolVersion = '0.8.7' -&gt; '0.8.9'
+}
+</code></pre></div></div>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230381060-a2972bf0-8abb-4c92-b493-d19c3912106d.png" /></p>
+
+<h2 id="8-init-sonarqube-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/5dc906b6d60e13cbcf0c093afad66cb0c5c9cfb3">#8</a>. init: sonarqube 적용</h2>
+<p><a href="https://kdevkr.github.io/static-analysis-performed-by-sonarqube-and-github-action/#소나큐브-시스템-구성">해당 게시글</a>을 참고해, Jacoco와 비슷한 코드 커버리지 도구인 sonarqube를 프로젝트 내에 도입하였다.</p>
+
+<ul>
+  <li>풀 리퀘스트가 종료되면서 개발 서버에 빌드 파일이 배포되기 전에 소나큐브가 실행되는 것을 목표로 하므로, 차후 작성된 github action에 이를 반영할 것이다.</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[#3. init: 멀티모듈 세팅]]></summary></entry><entry><title type="html">[vocawik] 1. 07/07 진행 내용</title><link href="http://localhost:4000/vcw2/" rel="alternate" type="text/html" title="[vocawik] 1. 07/07 진행 내용" /><published>2023-07-07T00:00:00+09:00</published><updated>2023-07-07T00:00:00+09:00</updated><id>http://localhost:4000/vcw2</id><content type="html" xml:base="http://localhost:4000/vcw2/"><![CDATA[<h2 id="1-init-git-저장소-생성"><a href="https://github.com/pocj8ur4in/vw-backend/commit/4dd2e5b458282cc895a7b38d3f2d3aa37ceabb65">#1</a>. init: git 저장소 생성</h2>
 
 <p>먼저 작업물의 변경점과 버전을 관리하는 버전 관리 시스템 (VCS; Version Control System)을 도입할 것이다. 변경점 관리를 통해 협업하는 과정에서 누가 어떤 내용을 언제 수정했는지 확인할 수 있고, 버전 관리를 통해 작업하는 과정에서 작업물의 백업과 복구를 간편하게 수행할 수 있다. 여기서는 배포할 코드와 작업할 코드를 나눠 프로젝트를 진행할 수 있는 브랜치 (branch) 개념이 있고 대부분의 개발자에게 이미 익숙할 git을 사용하겠다.</p>
 
@@ -742,2028 +1375,4 @@ lastmod: 2022-09-26
     <li>코드쓰는사림 님이 작성하신, <a href="https://taegon.kim/archives/7107">개발자가 블로그를 운영해야 할 이유</a></li>
     <li>productuidev 님이 작성하신, <a href="https://velog.io/@productuidev/PREV-Portfolio-1-ProjectBlog#개발-블로그--github">개발자 취업준비 (포트폴리오/블로그)</a></li>
   </ul>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[내가 아직 취업 시장에 발도 담구지 않은 대학생인데 내가 개발 블로그의 필요성에 대해 논하는 것이 의미가 있는 걸까? 라는 의문이 들어 작년에 작성한 글에서는 이 부분을 짚어보지 않았다. 하지만 이 부분을 뺀 채로 블로그를 운영하다보니, 처음에 내가 가졌었던 생각이나 느낌이 희석되면서, 여러 가지를 이유로 들며 블로그 운영을 게을리한 것 같다. 그래서 지난 1년간 내가 작성한 내용을 다시 정리하기 앞서, 이 부분에 대해 이야기하고자 한다.]]></summary></entry><entry><title type="html">[Language] 2. 자바 (Java)</title><link href="http://localhost:4000/java1/" rel="alternate" type="text/html" title="[Language] 2. 자바 (Java)" /><published>2023-01-03T00:00:00+09:00</published><updated>2023-01-03T00:00:00+09:00</updated><id>http://localhost:4000/java1</id><content type="html" xml:base="http://localhost:4000/java1/"><![CDATA[<h2 id="자바-java--객체지향-프로그래밍-언어">자바 (<code class="language-plaintext highlighter-rouge">Java</code>) : 객체지향 프로그래밍 언어</h2>
-<ul>
-  <li>객체지향 프로그래밍 (<code class="language-plaintext highlighter-rouge">OOP</code>) : 초기부터 객체지향 방법론에 의거해 객체 지향 프로그램 언어로 설계</li>
-  <li>플랫폼 독립적 : 동일한 프로그램 (<code class="language-plaintext highlighter-rouge">byte code</code>)이 여러 운영체제에서 실행 가능</li>
-</ul>
-
-<h2 id="자바-가상-머신-java-virtual-machine--서로-다른-플랫폼에서-동일한-자바-실행-환경-제공">자바 가상 머신 (<code class="language-plaintext highlighter-rouge">Java Virtual Machine</code>) : 서로 다른 플랫폼에서 동일한 자바 실행 환경 제공</h2>
-<ul>
-  <li>플랫폼 종속적 : 자바에서 소스 파일을 통해 생성된 바이트 코드를 <code class="language-plaintext highlighter-rouge">CPU</code>에 맞게 바이너리 코드로 해석한 후 실행
-    <ul>
-      <li>바이트 코드 (<code class="language-plaintext highlighter-rouge">byte code</code>) : <code class="language-plaintext highlighter-rouge">JVM</code>이 이해할 수 있는 언어로 변환된 자바 소스 코드</li>
-      <li>바이너리 코드 (<code class="language-plaintext highlighter-rouge">binary code</code>) : 컴퓨터가 이해할 수 있는 언어로 변환된 <code class="language-plaintext highlighter-rouge">1bit</code> 크기의 <code class="language-plaintext highlighter-rouge">0</code>과 <code class="language-plaintext highlighter-rouge">1</code>로 이루어진 이진 코드</li>
-    </ul>
-  </li>
-</ul>
-
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Jvm-architecture.png" width="75%" style="background-color: #ffff" /></p>
-
-<h3 id="클래스-로더-class-loader--jvm-내로-class-파일을-로드하고-이를-실행-엔진에-배치">클래스 로더 (<code class="language-plaintext highlighter-rouge">Class Loader</code>) : <code class="language-plaintext highlighter-rouge">JVM</code> 내로 <code class="language-plaintext highlighter-rouge">.class</code> 파일을 로드하고 이를 실행 엔진에 배치</h3>
-<ul>
-  <li>메소드 영역에 저장되는 데이터 : <code class="language-plaintext highlighter-rouge">FQCN</code> / 클래스, 인터페이스, <code class="language-plaintext highlighter-rouge">enum</code> / 메소드와 변수</li>
-</ul>
-
-<h4 id="1-로딩-loading--jvm이-시작할-때-3개의-클래스-로더가-순서대로-동작-마지막까지-클래스를-못찾으면-classfoundexception">(1) 로딩 (<code class="language-plaintext highlighter-rouge">Loading</code>) : <code class="language-plaintext highlighter-rouge">JVM</code>이 시작할 때, <code class="language-plaintext highlighter-rouge">3</code>개의 클래스 로더가 순서대로 동작 (마지막까지 클래스를 못찾으면, <code class="language-plaintext highlighter-rouge">ClassFoundException</code>)</h4>
-
-<ol>
-  <li>부트스트랩 클래스 로더 (<code class="language-plaintext highlighter-rouge">BootStrap ClassLoader</code>) : <code class="language-plaintext highlighter-rouge">JDK</code> 클래스 파일 (코어 자바 <code class="language-plaintext highlighter-rouge">API</code>) 로딩</li>
-  <li>플랫폼 클래스 로더 (<code class="language-plaintext highlighter-rouge">Platform ClassLoader</code>) : <code class="language-plaintext highlighter-rouge">JAVA_HOME/lib/ext</code> 또는 <code class="language-plaintext highlighter-rouge">java.ext.dirs</code>에 위치한 클래스 파일 로딩</li>
-  <li>시스템 클래스 로더 (<code class="language-plaintext highlighter-rouge">System ClassLoader</code>) : <code class="language-plaintext highlighter-rouge">classPath</code>나 <code class="language-plaintext highlighter-rouge">modulePath</code>에 위치한 클래스 파일 로딩</li>
-</ol>
-
-<h4 id="2-링크-linking--로드된-class-파일을-검사하고-이를-메소드-영역에-넣음">(2) 링크 (<code class="language-plaintext highlighter-rouge">Linking</code>) : 로드된 <code class="language-plaintext highlighter-rouge">.class</code> 파일을 검사하고 이를 메소드 영역에 넣음</h4>
-<ul>
-  <li>검증 (<code class="language-plaintext highlighter-rouge">Verify</code>) : <code class="language-plaintext highlighter-rouge">.class</code> 파일 형식이 유효한지 검사</li>
-  <li>준비 (<code class="language-plaintext highlighter-rouge">Preparation</code>) : 클래스 변수 (<code class="language-plaintext highlighter-rouge">static</code> 변수)와 기본값에 필요한 메모리를 준비</li>
-  <li>교체 (<code class="language-plaintext highlighter-rouge">Resolve</code>) : 심볼릭 메모리 래퍼런스를 메소드 영역에 있는 실제 래퍼런스로 교체</li>
-</ul>
-
-<h4 id="3-초기화-initialization--static-변수-또는-static-블록-내부의-값을-기본값으로-할당">(3) 초기화 (<code class="language-plaintext highlighter-rouge">Initialization</code>) : <code class="language-plaintext highlighter-rouge">static</code> 변수 또는 <code class="language-plaintext highlighter-rouge">static</code> 블록 내부의 값을 기본값으로 할당</h4>
-
-<h3 id="실행-엔진-execution-engine--클래스-로더에-의해-배치된-클래스의-바이트-코드를-실행">실행 엔진 (<code class="language-plaintext highlighter-rouge">Execution Engine</code>) : 클래스 로더에 의해 배치된 클래스의 바이트 코드를 실행</h3>
-<ul>
-  <li>자바 인터프리터 (<code class="language-plaintext highlighter-rouge">Java Interpreter</code>) : <code class="language-plaintext highlighter-rouge">JVM</code>에서 바이트 코드를 한줄씩 명령어 단위로 읽어 번역</li>
-  <li><code class="language-plaintext highlighter-rouge">JIT</code> 컴파일러 : 인터프리터 방식으로 실행하다가, 적절한 시점에 바이트 코드 전체를 바이너리 코드로 번역하고 직접 실행</li>
-  <li>가비지 콜렉터 (<code class="language-plaintext highlighter-rouge">Garbage Collector</code>) : 더 이상 사용되지 않는 인스턴스를 찾아 메모리에서 삭제해 메모리를 관리</li>
-</ul>
-
-<h3 id="런타임-데이터-에리어-runtime-data-area--프로그램을-수행하기-위해-운영체제에서-할당받은-메모리-공간">런타임 데이터 에리어 (<code class="language-plaintext highlighter-rouge">Runtime Data Area</code>) : 프로그램을 수행하기 위해 운영체제에서 할당받은 메모리 공간</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">PC</code> 레지스터 (<code class="language-plaintext highlighter-rouge">PC Register</code>) : 쓰레드 (<code class="language-plaintext highlighter-rouge">Thread</code>)가 시작될 때 생성되는 공간
-    <ul>
-      <li>쓰레드가 현재 실행할 스택 프레임을 가리키는 포인터 생성</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">JVM stack</code> : 프로그램 실행 과정에서 임시로 할당할 데이터를 저장 (메소드 호출 시 마다 각각의 스택 프레임 생성)</li>
-  <li><code class="language-plaintext highlighter-rouge">Native method stack</code> : 바이트 코드가 아닌 실제 실행할 수 있는 기계어로 작성된 프로그램을 실행</li>
-  <li>힙 (<code class="language-plaintext highlighter-rouge">Heap</code>) : 모든 쓰레드가 공유하는 객체 저장 (<code class="language-plaintext highlighter-rouge">new</code>로 생성된 객체와 배열 혹은 <code class="language-plaintext highlighter-rouge">String</code> 관련 자원이 저장 / <code class="language-plaintext highlighter-rouge">GC</code>에 의해 관리)
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Permanent Generation</code> : 생성된 객체들의 정보의 주소값이 저장 (리플렉션 (<code class="language-plaintext highlighter-rouge">Reflection</code>)으로 동적으로 클래스가 로드될 때 사용)
-        <ul>
-          <li>클래스 로더에 의해 로드된 클래스, 메소드 등에 대한 메타 정보가 저장 : <code class="language-plaintext highlighter-rouge">JVM</code>에 의해 사용</li>
-        </ul>
-      </li>
-      <li><code class="language-plaintext highlighter-rouge">New</code>/<code class="language-plaintext highlighter-rouge">Young</code> : 생명 주기가 짧은 객체를 <code class="language-plaintext highlighter-rouge">GC</code>의 대상으로 하는 영역 (<code class="language-plaintext highlighter-rouge">Minor GC</code> 발생)
-        <ul>
-          <li><code class="language-plaintext highlighter-rouge">Eden</code> : 객체들이 처음 생성되는 공간 (첫번째 <code class="language-plaintext highlighter-rouge">GC</code>가 발생)</li>
-          <li><code class="language-plaintext highlighter-rouge">Survivor 0, 1</code> : <code class="language-plaintext highlighter-rouge">Eden</code>에서 참조되는 객체들이 저장되는 공간 (<code class="language-plaintext highlighter-rouge">Major GC</code> 발생 : <code class="language-plaintext highlighter-rouge">Minor GC</code>에 비해 느림)</li>
-        </ul>
-      </li>
-      <li><code class="language-plaintext highlighter-rouge">Old</code> : 생명 주기가 긴 객체를 <code class="language-plaintext highlighter-rouge">GC</code>의 대상으로 하는 영역 (<code class="language-plaintext highlighter-rouge">New</code>/<code class="language-plaintext highlighter-rouge">Young</code>에서 일정 시간 참조되고 있는 객체들이 저장)</li>
-    </ul>
-  </li>
-  <li>메소드 영역 (<code class="language-plaintext highlighter-rouge">Method Area</code>) : 클래스를 메모리 공간에 처음 올릴 때 초기화되는 클래스 이름이나  <code class="language-plaintext highlighter-rouge">static</code> 메소드나 변수 저장
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Runtime Constant Pool</code> : 상수 자료형을 저장해 참조 (중복 방지)</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="자바-네이티브-인터페이스-java-native-interface--자바-네이티브-코드로-작성된-함수를-사용할-방법-제공">자바 네이티브 인터페이스 (<code class="language-plaintext highlighter-rouge">Java Native Interface</code>) : 자바 네이티브 코드로 작성된 함수를 사용할 방법 제공</h3>
-<ul>
-  <li>네이티브 메소드 라이브러리 (<code class="language-plaintext highlighter-rouge">Native Method Library</code>) : 자바 네이티브 코드로 작성된 라이브러리
-    <ul>
-      <li>자바 네이티브 코드 (<code class="language-plaintext highlighter-rouge">Java Native Code</code>) : <code class="language-plaintext highlighter-rouge">C/C++</code>이나 어셈블리어로 작성된 코드를 자바 어플리케이션에서 사용하도록 구현한 코드</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="변수-variable--데이터를-저장하는-공간">변수 (<code class="language-plaintext highlighter-rouge">variable</code>) : 데이터를 저장하는 공간</h2>
-<ul>
-  <li>원시 자료형 (<code class="language-plaintext highlighter-rouge">Primitive type</code>) : 선언 시 메모리 주소 위치 (<code class="language-plaintext highlighter-rouge">JVM stack</code>)에 실제 값이 저장
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">boolean</code> : <code class="language-plaintext highlighter-rouge">true</code> / <code class="language-plaintext highlighter-rouge">false</code> (초기값 : <code class="language-plaintext highlighter-rouge">false</code>)</li>
-      <li>문자 (<code class="language-plaintext highlighter-rouge">char</code>) : <code class="language-plaintext highlighter-rouge">''</code>를 이용해 표시 (초기값 : <code class="language-plaintext highlighter-rouge">'\0'</code>=<code class="language-plaintext highlighter-rouge">0</code>)</li>
-      <li>바이트 (<code class="language-plaintext highlighter-rouge">byte</code>) : 데이터를 나타내는 바이트 값 (초기값 : <code class="language-plaintext highlighter-rouge">0</code>)</li>
-      <li>정수 (<code class="language-plaintext highlighter-rouge">short</code>, <code class="language-plaintext highlighter-rouge">int</code>, <code class="language-plaintext highlighter-rouge">long</code>) : <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">4</code>, <code class="language-plaintext highlighter-rouge">8</code>바이트 크기 내의 정수 (초기값 : <code class="language-plaintext highlighter-rouge">0</code>)</li>
-      <li>실수 (<code class="language-plaintext highlighter-rouge">float</code>, <code class="language-plaintext highlighter-rouge">double</code>) : <code class="language-plaintext highlighter-rouge">4</code>, <code class="language-plaintext highlighter-rouge">8</code>바이트 크기 내의 실수 (초기값 : <code class="language-plaintext highlighter-rouge">0.0</code>)</li>
-    </ul>
-  </li>
-  <li>래퍼런스 자료형 (<code class="language-plaintext highlighter-rouge">Reference type</code>) : 선언 시 메모리 주소 위치에 실제 값이 가리키는 다른 주소를 저장  (실제 값은 <code class="language-plaintext highlighter-rouge">Heap</code>에 저장)
-    <ul>
-      <li>배열, 클래스, 인터페이스에 대한 래퍼런스</li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <p>주소값 지체을 저장하고 (<code class="language-plaintext highlighter-rouge">*</code>), 추출하는 (<code class="language-plaintext highlighter-rouge">&amp;</code>) 키워드를 제공하는 <code class="language-plaintext highlighter-rouge">C/C++</code>과 달리, 자바는 주소값의 추상화를 금지함 (<code class="language-plaintext highlighter-rouge">Call by value</code>만 가능)</p>
-</blockquote>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">var</code> : 데이터 타입을 명시하지 않아도 지역 변수의 타입을 자동으로 추론하는 키워드
-    <ul>
-      <li>지역 변수만 사용 가능 (<code class="language-plaintext highlighter-rouge">static</code> 적용 불가)</li>
-      <li>선언과 함께 명시적인 초기화를 반드시 해야 함</li>
-      <li><code class="language-plaintext highlighter-rouge">NULL</code>로 초기화할 수 없음</li>
-      <li>람다 표현식과 같이 사용할 수 없음</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var s = 'String';
-var n = 100;
-</code></pre></div></div>
-
-<h3 id="변수의-스코프-scope--변수가-유효한-범위">변수의 스코프 (<code class="language-plaintext highlighter-rouge">Scope</code>) : 변수가 유효한 범위</h3>
-<ul>
-  <li>접근 지정자 (<code class="language-plaintext highlighter-rouge">access modifier</code>) : 접근 가능한 수준 지정
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">public</code> : 어느 클래스에서든 해당 클래스에 대해 접근 가능</li>
-      <li><code class="language-plaintext highlighter-rouge">protected</code> : 해당 패키지와 같은 패키지 내에 있는 클래스와 상속받은 클래스가 해당 클래스에 접근 가능</li>
-      <li><code class="language-plaintext highlighter-rouge">default</code> : 해당 클래스와 같은 패키지 내에 있는 클래스만이 해당 클래스에 대해 접근 가능</li>
-      <li><code class="language-plaintext highlighter-rouge">private</code> : 해당 클래스 및 그 클래스를 포함한 클래스만이 해당 클래스에 대해 접근 가능</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="변수의-라이프타임-lifetime--변수가-메모리-영역에-저장되어-있는-시간">변수의 라이프타임 (<code class="language-plaintext highlighter-rouge">LifeTime</code>) : 변수가 메모리 영역에 저장되어 있는 시간</h3>
-<ul>
-  <li>인스턴스 변수 (<code class="language-plaintext highlighter-rouge">static block</code>과 <code class="language-plaintext highlighter-rouge">static method</code>를 제외한 클래스 전체) : 객체가 생성되어 메모리에 존재하는 동안</li>
-  <li>클래스 변수 (클래스 전체) : 클래스가 초기화되고 프로그램이 끝날 때까지</li>
-  <li>로컬 변수 (변수가 선언된 블록의 내부) : 변수 선언 이후부터 블록을 벗어날 때까지</li>
-</ul>
-
-<h3 id="변수의-형변환-type-conversion--현재의-타입을-다른-타입올-바꾸는-것">변수의 형변환 (<code class="language-plaintext highlighter-rouge">Type Conversion</code>) : 현재의 타입을 다른 타입올 바꾸는 것</h3>
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">boolean</code>을 제외한 나머지 기본 자료형 간의 타입 변환이 가능</p>
-</blockquote>
-
-<ul>
-  <li>타입 프로모션 (<code class="language-plaintext highlighter-rouge">Type Promotion</code>) : 범위가 작은 데이터 타입의 값을 더 큰 범위의 데이터 타입으로 할당 (묵시적 형변환)
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">byte</code> &lt; <code class="language-plaintext highlighter-rouge">short</code> &lt; <code class="language-plaintext highlighter-rouge">int</code> &lt; <code class="language-plaintext highlighter-rouge">long</code> &lt; <code class="language-plaintext highlighter-rouge">float</code> &lt; <code class="language-plaintext highlighter-rouge">double</code></li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int intN = 23;
-long longN = intN;
-</code></pre></div></div>
-
-<ul>
-  <li>캐스팅 (<code class="language-plaintext highlighter-rouge">Casting</code>) : 범위가 큰 데이터 타입의 값을 더 작은 범위의 데이터 타입으로 할당 (명시적 형변환)</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int n = 100;
-c = (char) n;
-</code></pre></div></div>
-
-<ul>
-  <li>업캐스팅 (<code class="language-plaintext highlighter-rouge">Up-Casting</code>) : 부모-자식 관계의 객체에서 자식 객체를 부모 객체로 형변환 (묵시적 형변환)</li>
-  <li>다운캐스팅 (<code class="language-plaintext highlighter-rouge">Down-Casting</code>) : 부모-자식 관계의 객체에서 부모 객체를 자식 객체로 형변환 (명시적 형변환)</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class MyClass {
-  String name;
-  String ID;
-
-  public MyClass(String name){
-    this.name = name;
-  }
-}
-
-class StudentClass extends MyClass {
-  String grade;
-
-  public StudentClass(String name){
-    super(name);
-  }
-}
-
-public class UpClass {
-  public Static void main(String[] args){
-    MyClass P;
-    StudentClass S = new StudentClass("I");
-    
-    P = S; // 업캐스팅 발생
-
-    System.out.println(P.name); // 컴파일 오류 없음
-
-    S = (StudentClass) P;   // 다운캐스팅 발생
-
-    System.out.println(S.name); // 컴파일 오류 없음
-  }
-}
-</code></pre></div></div>
-
-<h2 id="배열-array--인덱스-index와-그-인덱스에-대응하는-데이터들로-이루어진-선형-자료구조">배열 (<code class="language-plaintext highlighter-rouge">Array</code>) : 인덱스 (<code class="language-plaintext highlighter-rouge">Index</code>)와 그 인덱스에 대응하는 데이터들로 이루어진 선형 자료구조</h2>
-<ul>
-  <li>배열의 생성 : 배열 공간을 할당받는 과정 (배열에 대한 래퍼런스 변수 선언 + 배열 생성)
-    <ul>
-      <li>래퍼런스 변수 : 메모리 상에 생성된 인스턴스를 가리키는 데에 사용되는 변수 (배열의 주소 값을 가짐)</li>
-      <li><code class="language-plaintext highlighter-rouge">new</code> 연산자 : 클래스의 새로운 객체를 생성할 때, 객체를 저장할 메모리를 할당하고 생성자를 호출해 객체를 초기화하는 연산자</li>
-      <li><code class="language-plaintext highlighter-rouge">=</code> 연산자 : 스택의 래퍼런스 변수가 힙의 배열 데이터를 가리킴</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int[] intArray;
-intArray = new int [10];
-int[] intArray = new int [10];
-int[] intArray = {1,2,3,4,5,6,7,8,9};
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int[][] intArray2;
-int intArray2 = new int[2][3];
-int intArray2 = { {1, 2, 3}, {4, 5, 6} };
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">.length</code> 필드 : 배열이 가진 길이 (원소의 개수)를 반환</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>len = intArray.length
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>len1 = intArray2.length     // 2차원 배열이 가진 행의 개수
-len2 = intArray2[n].length  // 2차원 배열 중 n번째 행이 가진 열의 개수
-</code></pre></div></div>
-
-<ul>
-  <li>비정방형 배열 : 행마다 열의 개수가 서로 다른 배열</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int[][] intArray3 = new int[3][];
-intArray3[0] = new int[1];
-intArray3[1] = new int[2];
-intArray3[2] = new int[3];
-int intArray3 = { {0}, {1,2}, {3,4,5} };
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int intArray3[][] = { {0}, {1,2}, {3,4,5} };
-</code></pre></div></div>
-
-<ul>
-  <li>메소드의 배열 반환 : 실제 배열에 대한 래퍼런스가 반환</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int makeArray() {
-    int t = new int[4];
-    return t;
-}
-
-int[] intArr = makeArray();
-</code></pre></div></div>
-
-<ul>
-  <li>객체 배열 : 객체에 대한 래퍼런스를 원소로 갖는 배열</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Person[] people = new Person[20];
-
-for(int i = 0; i &lt; people.length; i++){
-    people[i] = new Person();
-    people[i].age = 20 + i;
-}
-</code></pre></div></div>
-
-<h2 id="객체-object--프로그램에서-사용되는-데이터-혹은-식별자에-의해-참조되는-공간">객체 (<code class="language-plaintext highlighter-rouge">Object</code>) : 프로그램에서 사용되는 데이터 혹은 식별자에 의해 참조되는 공간</h2>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">new</code> : 객체를 생성하는 연산자</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>P = new Person("A");
-P.age = 30;
-</code></pre></div></div>
-
-<ul>
-  <li>생성자 : 객체가 생성될 때 자동으로 호출되는 메소드 (객체에 필요한 초기화 수행)
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">this</code> : 객체 자신을 참조</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class MyClass {
-    int id;
-
-    public MyClass (int x) { // 생성자는 클래스 이름과 동일한 이름을 가짐
-        this.id = x;
-    }
-
-    public void MyFunc (int id) {
-        this.id = id;
-    } 
-}
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">this()</code> : 동일한 클래스 내의 다른 생성자를 호출할 때 사용 (반드시 생성자의 첫 문장에서 사용되어야 함)</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public MyClass {
-    String title;
-    int price;
-    int id = 0;
-
-    public MyClass(String title, int price, int id) {
-        this.title = title;
-        this.price = price;
-        this.id = id;
-        id += 1;
-    }
-
-    public MyClass(String title, int price, int id) {
-        this.title = title;
-        this.price = price;
-        this.id = id;
-        id += 1;
-    }
-
-    public MyClass(String title, int price) {
-        this(title, price, id);
-        id += 1;
-    }
-
-    public static void main(String[] args) {
-        MyClass mart1 = new MyClass("apple", 100, 1);
-        MyClass mart2 = new MyClass("banana", 200);
-    }
-}
-</code></pre></div></div>
-
-<ul>
-  <li>가비지 컬렉션 (<code class="language-plaintext highlighter-rouge">garbage Collection</code>) : <code class="language-plaintext highlighter-rouge">new</code>로 할당받은 후 사용하지 안게 된 객체의 메모리 공간을 적절한 시점에 자동으로 <code class="language-plaintext highlighter-rouge">JVM</code>에 반환
-    <ul>
-      <li>소멸자 (<code class="language-plaintext highlighter-rouge">delete</code>)로 객체의 소멸을 명시해야 하는 <code class="language-plaintext highlighter-rouge">C++</code>과 달리, 자바는 소멸자가 필요 없음</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="클래스-class--객체를-생성하기-위해-변수와-메소드를-정의하는-틀">클래스 (<code class="language-plaintext highlighter-rouge">Class</code>) : 객체를 생성하기 위해 변수와 메소드를 정의하는 틀</h2>
-<ul>
-  <li>필드 (<code class="language-plaintext highlighter-rouge">Field</code>) : 객체의 상태 혹은 속성 (인스턴스 변수, <code class="language-plaintext highlighter-rouge">static</code> 변수)</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class MyClass {
-    String name;
-    static long id;
-}
-</code></pre></div></div>
-
-<ul>
-  <li>메소드 (<code class="language-plaintext highlighter-rouge">method</code>) : 객체의 행동 (인스턴스 메소드, <code class="language-plaintext highlighter-rouge">static</code> 메소드)</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class MyClass {
-    string name;
-    long id;
-
-    string getName() {
-        return name;
-    }
-    
-    long getID() {
-        return id;
-    }
-
-    void setName(String name) {
-        this.name = name;
-    }
-
-    void setID(long id) {
-        this.id = id;
-    }
-}
-</code></pre></div></div>
-
-<ul>
-  <li>생성자 (<code class="language-plaintext highlighter-rouge">Constructor</code>) : 객체를 생성한 후에 필요한 초기화 작업을 수행하는 메소드</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class MyClass {
-    string name;
-    long id;
-
-    MyClass(String name, long id) {
-        this.name = name;
-        this.id = id;
-    }
-}
-</code></pre></div></div>
-
-<ul>
-  <li>초기화 블럭 (<code class="language-plaintext highlighter-rouge">Initializer</code>) : 객체를 생성한 후에 필요한 초기화 작업을 세분화
-    <ul>
-      <li>클래스 초기화 블럭 : 클래스가 최초로 로딩될 때</li>
-      <li>인스턴스 초기화 블럭 : 인스턴스가 생성되었을 때</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class MyClass {
-    string name;
-    static long id;
-        // 클래스 초기화 블럭
-    static {
-        id = 1;
-    }
-        // 인스턴스 초기화 블럭
-    {
-        name = "이름";
-        id += 1;
-    }
-}
-</code></pre></div></div>
-
-<blockquote>
-  <p>캡슐화 (<code class="language-plaintext highlighter-rouge">Encapsulation</code>) : 변수나 메소드는 반드시 클래스 내에서만 구현 가능 / 클래스 안의 내부 클래스 구현 가능</p>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class (클래스 이름) {
-    public static void main(String[] args {
-        ...
-    }
-
-    class (내부 클래스 1 이름) {
-        ...
-    }
-
-    static class (내부 클래스 2 이름) {
-        ...
-    }
-
-    void (내부 함수 이름)() {
-        ...
-    }
-
-   ...
-}
-</code></pre></div>  </div>
-
-  <p>상속 (<code class="language-plaintext highlighter-rouge">Inheritance</code>) : 부모 클래스에 정의된 필드와 메소드를 자식 클래스가 물려받는 것</p>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class Person {
-   Person() { ... }
-...
-}
-public class Student extends Person {
-  super(); // 부모 클래스의 생성자를 호출
-  ...
-}
-</code></pre></div>  </div>
-
-  <p><code class="language-plaintext highlighter-rouge">instanceof</code> : 객체의 타입을 검사하는 연산자 (상속 관계 &amp; 구현 관계 모두 포함)</p>
-
-  <p>```
-class Lee extends Student implements Person { … }</p>
-
-  <p>Lee lee = new Lee();
-assertThat(lee instanceof Lee).isTrue();
-assertThat(lee instanceof Student).isTrue();
-assertThat(lee instanceof Animal).isTrue();
-assertThat(lee instanceof Person).isTrue();</p>
-</blockquote>
-
-<blockquote>
-  <p>```</p>
-</blockquote>
-
-<h3 id="main--해당-클래스를-자바-어플리케이션에서-실행하는-메소드"><code class="language-plaintext highlighter-rouge">main()</code> : 해당 클래스를 자바 어플리케이션에서 실행하는 메소드</h3>
-<ul>
-  <li>접근 제어자 <code class="language-plaintext highlighter-rouge">public</code>  : 다른 모든 클래스에서 호출 가능 (클래스 외부의 <code class="language-plaintext highlighter-rouge">JVM</code>에 의해 호출되어야 하므로)</li>
-  <li><code class="language-plaintext highlighter-rouge">static</code> : 프로그램 시작부터 메모리에 저장됨 (프로그램이 시작할 때부터 <code class="language-plaintext highlighter-rouge">JVM</code>에 의해 호출되어야 하므로)</li>
-  <li><code class="language-plaintext highlighter-rouge">void</code> : 종료 코드를 등록하기 위해 <code class="language-plaintext highlighter-rouge">int</code>를 반환해야 하는 ```C``와 달리, 종료 코드를 등록할 필요 없음</li>
-  <li><code class="language-plaintext highlighter-rouge">String[] args</code> : 명령줄에 주어진 모든 인자를 문자열로 처리해 <code class="language-plaintext highlighter-rouge">main()</code>에 전달</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class (클래스 이름) {
-    public static void main(String[] args {
-        ...
-    }
-}
-</code></pre></div></div>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">static</code> : 모든 객체에 공통으로 사용하기 위해 정적으로 선언 (프로그램 시작부터 메모리에 저장)</p>
-
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">static</code> 메소드는 <code class="language-plaintext highlighter-rouge">static</code> 멤버만 사용할 수 있고, <code class="language-plaintext highlighter-rouge">this</code> 키워드를 사용할 수 없음</li>
-  </ul>
-</blockquote>
-
-<h3 id="final--오직-한-번만-할당할-수-있어-항상-같은-값을-가지는-entity를-정의할-때-사용하는-키워드"><code class="language-plaintext highlighter-rouge">final</code> : 오직 한 번만 할당할 수 있어 항상 같은 값을 가지는 <code class="language-plaintext highlighter-rouge">entity</code>를 정의할 때 사용하는 키워드</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">final</code> 클래스 : 클래스가 상속받을 수 없음</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public final class MyClass { ... }
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">final</code> 메소드 : 오버라이딩으로 수정할 수 없음</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public final class MySuperClass { 
-    protected final void MyFunc() { ... }
-}
-public final class MyClass extends MySuperClass { 
-    protected final void MyFunc() { ... } // 컴파일 오류
-}
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">final</code> 변수 : 한번 값을 할당하면 수정할 수 없는 상수 정의</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>static float Pl = 3.141592;
-</code></pre></div></div>
-
-<h2 id="어노테이션-annotation--컴파일--실행-과정에서-코드를-어떻게-처리해야-할지-알리는-메타-데이터">어노테이션 (<code class="language-plaintext highlighter-rouge">Annotation</code>) : 컴파일 &amp; 실행 과정에서 코드를 어떻게 처리해야 할지 알리는 메타 데이터</h2>
-<ul>
-  <li>클래스나 메소드 위에 붙으며, <code class="language-plaintext highlighter-rouge">@</code>로 시작 : 어노테이션의 유무나 어노테이션에 설정한 값을 통해 클래스를 다르게 실행</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Override // 메소드를 오버라이딩 (상속받은 부모 클래스나 인터페이스에서 해당 메소드가 없으면 컴파일 오류)
-</code></pre></div></div>
-
-<h2 id="자바-모듈-java-module--클래스-jar-패키지-수준의-코드-그룹화-제공">자바 모듈 (<code class="language-plaintext highlighter-rouge">Java Module</code>) : 클래스, <code class="language-plaintext highlighter-rouge">JAR</code>, 패키지 수준의 코드 그룹화 제공</h2>
-<ul>
-  <li>하나의 자바 어플리케이션은 하나 이상의 <code class="language-plaintext highlighter-rouge">.class</code> 파일로 구성</li>
-  <li>다수의 클래스 파일을 <code class="language-plaintext highlighter-rouge">.jar</code> 파일로 압축해 배포 및 실행 가능</li>
-  <li>서로 관련 있는 클래스들은 하나의 패키지로 묶어서 관리</li>
-</ul>
-
-<h2 id="jdk의-scanner-클래스--자바의-키-입력-key-input"><code class="language-plaintext highlighter-rouge">JDK</code>의 <code class="language-plaintext highlighter-rouge">Scanner</code> 클래스 : 자바의 키 입력 (<code class="language-plaintext highlighter-rouge">Key input</code>)</h2>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">String next()</code> : 문자열 타입으로 반환</li>
-  <li><code class="language-plaintext highlighter-rouge">Byte nextByte()</code> : 바이트 타입으로 반환</li>
-  <li><code class="language-plaintext highlighter-rouge">short nextShort()</code>, <code class="language-plaintext highlighter-rouge">int nextInt()</code>, <code class="language-plaintext highlighter-rouge">long nextLong()</code> : 정수 타입 (<code class="language-plaintext highlighter-rouge">short</code>, <code class="language-plaintext highlighter-rouge">int</code>, <code class="language-plaintext highlighter-rouge">long</code>)으로 반환</li>
-  <li><code class="language-plaintext highlighter-rouge">float nextFloat()</code>, <code class="language-plaintext highlighter-rouge">double nextDouble()</code> : 실수 타입 (<code class="language-plaintext highlighter-rouge">float</code>, <code class="language-plaintext highlighter-rouge">double</code>)으로 반환</li>
-  <li><code class="language-plaintext highlighter-rouge">String nextLine()</code> : 한 줄 전체 (<code class="language-plaintext highlighter-rouge">\n</code>)를 일고 문자열 타입으로 반환</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import java.util.Scanner;
-Scanner scan = new Scanner(System.in);
-String name = scan.nextLine();
-</code></pre></div></div>
-
-<blockquote>
-  <p>자바 표준 입력 스트림 <code class="language-plaintext highlighter-rouge">system.in</code> : 입력되는 키 값을 바이트 정보로 반환 (문자 정보로 변환)</p>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>InputSteamReader rd = new InputSteamReader(System.in); // 키보드 입력 스트림 생성
-int s = rd.read(); // 키보드로부터 문자 하나를 읽고 이를 s에 저장
-</code></pre></div>  </div>
-</blockquote>
-
-<h2 id="예외-처리-exception-handling--발생한-예외에-대해-작성한-프로그램-내에서-대응하는-것">예외 처리 (<code class="language-plaintext highlighter-rouge">Exception handling</code>) : 발생한 예외에 대해 작성한 프로그램 내에서 대응하는 것</h2>
-<ul>
-  <li>예외 (<code class="language-plaintext highlighter-rouge">Exception</code>) : 프로그램 실행 중에 발생하는 런타임 오류 (<code class="language-plaintext highlighter-rouge">Runtime error</code>)
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Checked Exception</code> : 컴파일러에 의해 예외 발생을 인지 (컴파일 오류)</li>
-      <li><code class="language-plaintext highlighter-rouge">Unchecked Exception</code> : <code class="language-plaintext highlighter-rouge">JVM</code>에서 예외 발생을 인지 (예외 객체 생성 후 처리)</li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <p>자바에서 자주 발생하는 예외</p>
-
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">NullPointerException</code> : <code class="language-plaintext highlighter-rouge">Null</code> 래퍼런스를 참조할 때 발생</li>
-    <li><code class="language-plaintext highlighter-rouge">ClassCastException</code> : 변환할 수 없는 타입응로 객체를 변환할 때 발생</li>
-    <li><code class="language-plaintext highlighter-rouge">IOException</code> : 입출력 동작 중에 인터럽트가 발생할 때 발생</li>
-    <li><code class="language-plaintext highlighter-rouge">NumberFormatException</code> : 문자열이 나타내는 숫자와 일치하지 않는 타입의 숫자로 변환할 때 발생</li>
-    <li><code class="language-plaintext highlighter-rouge">IllegalArgumentException</code> : 잘못된 인자를 전달할 때 발생</li>
-    <li><code class="language-plaintext highlighter-rouge">ArrayIndexOutOfBoundsException</code> : 배열의 범위를 벗어나 접근할 때 발생</li>
-    <li><code class="language-plaintext highlighter-rouge">NoSuchMethodException</code> : 런타임 시점에 존재하지 않는 메소드를 호출할 때 발생</li>
-  </ul>
-</blockquote>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">try-catch-finally</code> : 발생한 예외에 대한 예외처리를 하는 구문
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">try</code> : 오류가 발생할 것으로 예상되는 부분</li>
-      <li><code class="language-plaintext highlighter-rouge">catch</code> : 발생할 오류에 관련된 예외에 대해 대응할 부분</li>
-      <li><code class="language-plaintext highlighter-rouge">finally</code> : 예외 발생 여부에 상관없이 반드시 실행되어야 하는 부분</li>
-      <li><code class="language-plaintext highlighter-rouge">throws</code>: 예외 처리의 의무를 현재 예외가 발생한 메소드에서 그 메소드를 호출한 메소드로 전달</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public void funcA() {
-    try {
-        ...
-    } catch (Exception e) { // 예외가 발생할 때 생성된 예외 객체와 타입이 일치하면, 래퍼런스 변수가 생성된 예외 객체를 가리킴
-        ...
-    } finally {
-        ...
-    }
-}
-
-public void funcB() throws Exception { // throws로 예외 처리를 Exception로 전달
-    ...
-}
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Language" /><summary type="html"><![CDATA[자바 (Java) : 객체지향 프로그래밍 언어 객체지향 프로그래밍 (OOP) : 초기부터 객체지향 방법론에 의거해 객체 지향 프로그램 언어로 설계 플랫폼 독립적 : 동일한 프로그램 (byte code)이 여러 운영체제에서 실행 가능]]></summary></entry><entry><title type="html">[BE] 1. 스프링 (Spring) 기초</title><link href="http://localhost:4000/spring1/" rel="alternate" type="text/html" title="[BE] 1. 스프링 (Spring) 기초" /><published>2022-11-11T00:00:00+09:00</published><updated>2023-01-10T00:00:00+09:00</updated><id>http://localhost:4000/spring1</id><content type="html" xml:base="http://localhost:4000/spring1/"><![CDATA[<blockquote>
-  <p>해당 포스트는 <a href="https://www.inflearn.com/roadmaps/373">김영한의 스프링 입문 로드맵 강의</a>들을 바탕으로 작성되었습니다.</p>
-
-  <ul>
-    <li>해당 포스트의 소스 코드는 <a href="https://www.inflearn.com/course/스프링-입문-스프링부트/dashboard">스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술 (김영한)</a>를 바탕으로 작성되었습니다.</li>
-  </ul>
-</blockquote>
-
-<h2 id="객체지향-프로그래밍-oop--프로그램을-객체를-단위로-나누어-이들의-상호작용으로-서술하는-방식">객체지향 프로그래밍 (<code class="language-plaintext highlighter-rouge">OOP</code>) : 프로그램을 객체를 단위로 나누어 이들의 상호작용으로 서술하는 방식</h2>
-<ul>
-  <li>캡슐화 (<code class="language-plaintext highlighter-rouge">Encapsulation</code>) : 변수와 함수를 하나의 단위로 묶는 것</li>
-  <li>정보 은닉 (<code class="language-plaintext highlighter-rouge">Information Hiding</code>) : 프로그램의 구현을 외부로 드러나지 않게 내부로 감추는 것</li>
-  <li>상속 (<code class="language-plaintext highlighter-rouge">Inheritance</code>) : 자식 클래스가 부모 클래스의 특성과 기능을 그대로 물려받는 것</li>
-  <li>다형성 (<code class="language-plaintext highlighter-rouge">Polymorphism</code>) : 하나의 변수, 또는 함수가 상황에 따라 다른 의미로 해석되는 것</li>
-</ul>
-
-<h3 id="객체-지향-5원칙-solid--객체-지향을-올바르게-설계할-수-있도록-도와주는-원칙">객체 지향 5원칙 (<code class="language-plaintext highlighter-rouge">SOLID</code>) : 객체 지향을 올바르게 설계할 수 있도록 도와주는 원칙</h3>
-
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">SRP</code> (<code class="language-plaintext highlighter-rouge">Single Responsibility Principle</code>) : 객체는 오직 하나의 책임을 가져야 한다.
-    <ul>
-      <li>클래스를 설계할 때 어플리케이션의 경계를 정하고, 추상화로 어플리케이션 내에 필요한 속성과 메소드를 선택해 설계해야 한다.</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">OCP</code> (<code class="language-plaintext highlighter-rouge">Open Closed Principle</code>) : 객체는 확장에 대해 개방적이고 수정에 대해 폐쇄적이어야 한다.
-    <ul>
-      <li>클래스, 모듈, 함수와 다른 것들을 연동할 때는 상위 클래스나 인터페이스를 중간에 두어 직접적인 연동을 피하는 방식으로 설계되어야 한다.</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">LSP</code> (<code class="language-plaintext highlighter-rouge">Liskov Substitution Principle</code>) : 자식 클래스는 항상 자신의 부모 클래스를 대체할 수 있다.
-    <ul>
-      <li>자식 클래스의 인스턴스는 부모 클래스의 인스턴스 역할을 대신할 때에도 논리적으로 문제가 없어야 한다.</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">ISP</code> (<code class="language-plaintext highlighter-rouge">Interface Segregation Principle</code>) : 클라이언트에서 사용하지 않는 메서드는 사용해선 안 된다.
-    <ul>
-      <li>각 상황에 맞는 메소드만 클래스에게 제공하도록 인터페이스를 작게 나누어 설계해야 한다.</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">DIP</code> (<code class="language-plaintext highlighter-rouge">Dependency Inversion Principle</code>) : 자신보다 변하기 쉬운 것에 의존해선 안된다.
-    <ul>
-      <li>추상성이 높고 고수준의 클래스는 구체적이고 저수준의 클래스에 의존하지 않도록 설계해야 한다.</li>
-    </ul>
-  </li>
-</ol>
-
-<h3 id="자바-빈-java-bean--자바-객체를-재사용-가능하도록-컴포넌트화한-클래스">자바 빈 (<code class="language-plaintext highlighter-rouge">Java Bean</code>) : 자바 객체를 재사용 가능하도록 컴포넌트화한 클래스</h3>
-<ul>
-  <li>클래스는 반드시 패키지화되어야 한다.</li>
-  <li>멤버변수는 프로퍼티라고 부른다.</li>
-  <li>프로퍼티의 접근 제어자는 private이다.</li>
-  <li>데이터를 저장하는 필드와 그 데이터를 조작하기 위한 외부에서의 접근은 <code class="language-plaintext highlighter-rouge">getter</code>와 <code class="language-plaintext highlighter-rouge">setter</code> 메소드로 한다.</li>
-  <li>프로퍼티가 <code class="language-plaintext highlighter-rouge">boolean</code>이면, <code class="language-plaintext highlighter-rouge">get</code>가 아닌 <code class="language-plaintext highlighter-rouge">is</code>를 사용해도 된다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class MemberInfo {
-  private int id;
-  private String Name;
-  private String pw;
-  
-  public int getId() { return id; }
-  public void setId(int id) { this.id = id; }
-  public String getName() { return Name; }
-  public void setName(String name) { this.Name = name; }
-  public String getPw() { return pw; }
-  public void setPw(String pw) { this.pw = pw; }
-}
-</code></pre></div></div>
-
-<blockquote>
-  <p>….. 서버 사이드에서 어플리케이선을 개발할 때 자바 빈만으로 해결하지 못하는 문제가 발생한다.</p>
-
-  <ul>
-    <li>기존 어플리케이션에 필요한 비즈니스 로직만이 아닌, 시스템 서비스를 이용하는, <code class="language-plaintext highlighter-rouge">DB</code>와 트랜젝션 처리를 위한 프로그램이 추가로 필요하다.</li>
-    <li>각각의 어플리케이션 서버에는 독자적인 <code class="language-plaintext highlighter-rouge">API</code>이 제공되기에 어플리케이션의 컴포넌트화가 어렵다.</li>
-  </ul>
-</blockquote>
-
-<h3 id="ejb-j2ee-enterprise-java-bean--비즈니스-로직과-시스템-서비스-로직을-분산하고-두-로직-간의-규약을-규정"><code class="language-plaintext highlighter-rouge">EJB</code>, <code class="language-plaintext highlighter-rouge">J2EE</code> (<code class="language-plaintext highlighter-rouge">Enterprise Java Bean</code>) : 비즈니스 로직과 시스템 서비스 로직을 분산하고, 두 로직 간의 규약을 규정</h3>
-<ul>
-  <li>비즈니스 로직을 탑재한 부품을 <code class="language-plaintext highlighter-rouge">Enterprise Bean</code>이라 부른다.</li>
-  <li><code class="language-plaintext highlighter-rouge">DB</code>와 트랙젝션 처리 등의 시스템 서비스를 이용하는 부품을 컨테이너 (<code class="language-plaintext highlighter-rouge">Container</code>)라 부른다.</li>
-  <li>비즈니스 객체들을 관리하는 <code class="language-plaintext highlighter-rouge">EJB</code> 컨테이너에서 필요할 때마다 객체를 꺼내는 방식으로 객체들 간의 의존성을 해결한다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Stateless
-public class Service {
-
-  @PersistenceContext
-  private Manager Manager;
-
-  public void addCustomer(Customer customer) {
-    Manager.persist(customer);
-  }
-}
-</code></pre></div></div>
-
-<blockquote>
-  <p>….. <code class="language-plaintext highlighter-rouge">EJB</code>는 비즈니스 로직이 특정 <code class="language-plaintext highlighter-rouge">EJB</code> 컨테이너에 종속되는 문제가 발생한다. (기술 침투)</p>
-
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">EJB</code> 컨테이너를 사용하기 위한 코드 (상속 &amp; 구현)들이 많고, <code class="language-plaintext highlighter-rouge">EJB</code> 컨테이너가 없으면 불필요한 코드가 된다.</li>
-    <li>회사마다 <code class="language-plaintext highlighter-rouge">EJB</code> 컨테이너를 구현한 내용이 달라 다른 회사의 <code class="language-plaintext highlighter-rouge">EJB</code> 컨테이너로의 변경이 어렵다.</li>
-  </ul>
-</blockquote>
-
-<h2 id="스프링-spring--자바-java-기반의-웹-프레임워크-web-framework">스프링 (<code class="language-plaintext highlighter-rouge">spring</code>) : 자바 (<code class="language-plaintext highlighter-rouge">JAVA</code>) 기반의 웹 프레임워크 (<code class="language-plaintext highlighter-rouge">Web Framework</code>)</h2>
-<ul>
-  <li>순수 자바 객체 (<code class="language-plaintext highlighter-rouge">Plain Old Java Object</code>) 방식 : <code class="language-plaintext highlighter-rouge">POLO</code>
-    <ul>
-      <li>특정 인터페이스를 직접 구현하거나 상속받지 않아 기존 라이브러리 지원에 용이하고, 코드가 간결하고 객체가 가벼움</li>
-    </ul>
-  </li>
-  <li>관점 지향 프로그래밍 (<code class="language-plaintext highlighter-rouge">Aspect Oriented Programming</code>) : <code class="language-plaintext highlighter-rouge">AOP</code>
-    <ul>
-      <li>로깅, 트랜잭션, 보안 등 여러 모듈에서 공통적으로 사용하는 기능을 분리하여 관리할 수 있음</li>
-    </ul>
-  </li>
-  <li>의존성 주입 (<code class="language-plaintext highlighter-rouge">Dependency Injection</code>) : <code class="language-plaintext highlighter-rouge">DI</code>
-    <ul>
-      <li>프로그래밍 구성 요소 간 의존 관계를 소스코드 밖에서 설정을 통해 정의해 코드 재사용률을 높이고 모듈 간 결합도를 낮춤</li>
-    </ul>
-  </li>
-  <li>제어의 역전 (<code class="language-plaintext highlighter-rouge">Inversion of Control</code>) : <code class="language-plaintext highlighter-rouge">IoC</code>
-    <ul>
-      <li>객체의 생성부터 소멸까지의 제어권이 개발자가 아닌 프레임워크에게 있어 외부 라아브러리 코드가 개발자의 코드를 호출</li>
-    </ul>
-  </li>
-  <li>모델-뷰-컨트롤러 (<code class="language-plaintext highlighter-rouge">Model-View-Controller</code>) : <code class="language-plaintext highlighter-rouge">MVC</code> 패턴
-    <ul>
-      <li>사용자 인터페이스, 데이터 및 논리 제어의 구현에 사용되는 소프트웨어 디자인 패턴</li>
-    </ul>
-  </li>
-  <li>모듈화 디자인 (<code class="language-plaintext highlighter-rouge">Modulation</code>) : 한 프레임워크을 여러 기능적 구성요소 (<code class="language-plaintext highlighter-rouge">Module</code>)로 조합해 완성
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Core</code> : 제어의 역전 (<code class="language-plaintext highlighter-rouge">IOC</code>)과 의존성 주입 (<code class="language-plaintext highlighter-rouge">DI</code>) 기능 제공</li>
-      <li><code class="language-plaintext highlighter-rouge">DAO</code> : 자바 데이터베이스 커넥터 (<code class="language-plaintext highlighter-rouge">JDBC</code>) 추상 계층 제공 (<code class="language-plaintext highlighter-rouge">VO</code> 클래스로 접근)</li>
-      <li><code class="language-plaintext highlighter-rouge">ORM</code> : <code class="language-plaintext highlighter-rouge">ORM</code>이나 데이터베이스 <code class="language-plaintext highlighter-rouge">API</code>와의 통합 기능 제공</li>
-      <li><code class="language-plaintext highlighter-rouge">Web</code> : 웹 어플리케이션 구현과 관련된 기능 제공</li>
-      <li><code class="language-plaintext highlighter-rouge">JEE</code> : 엔터프라이즈 <code class="language-plaintext highlighter-rouge">J2EE</code> 스펙과 관한 기능 제공</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="스프링부트-springboot--스프링-프레임워크의-기술을-편리하게-사용할-수-있도록-지원">스프링부트 (<code class="language-plaintext highlighter-rouge">SpringBoot</code>) : 스프링 프레임워크의 기술을 편리하게 사용할 수 있도록 지원</h3>
-<ul>
-  <li>단독으로 실행할 수 있는 스프링 애플리케이션을 쉽게 생성하고 관리
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">dependencies</code>의 <code class="language-plaintext highlighter-rouge">starter</code> 라이브러리로 초기 환경에 필요한 라이브러리 설정 및 버전 관리의 자동화</li>
-      <li><code class="language-plaintext highlighter-rouge">XML</code> 파일을 자체적으로 빌드하여 스프링 프로젝트 내 객체 의존성 관리의 자동화</li>
-      <li>톰캣 (<code class="language-plaintext highlighter-rouge">Tomcat</code>)과 같은 내장 서버가 존재해 프로젝트 내의 서버 설치 및 버전 관리의 자동화</li>
-      <li>스프링 외부 라이브러리를 자동으로 구성</li>
-      <li>매트릭, 상태 확인, 외부 구성과 같은 프로덕션 준비 기능 제공</li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <p>그레이들 (<code class="language-plaintext highlighter-rouge">Gradle</code>) : 그루비 (<code class="language-plaintext highlighter-rouge">Groovy</code>) 기반의 스프링부트 빌드 자동화 툴</p>
-  <ul>
-    <li>기존에 사용되던 메이븐 (<code class="language-plaintext highlighter-rouge">Maven</code>)과 같은 구조화된 빌드 프레임워크
-      <ul>
-        <li><code class="language-plaintext highlighter-rouge">build.gradle</code>의 <code class="language-plaintext highlighter-rouge">dependencies</code>에서 스프링과 스프링부트의 라이브러리 설정 및 버전 관리 자동화</li>
-      </ul>
-    </li>
-    <li><code class="language-plaintext highlighter-rouge">JAVA</code>만 사용 가능한 메이븐과 달리 <code class="language-plaintext highlighter-rouge">C/C++</code>, <code class="language-plaintext highlighter-rouge">Python</code> 등의 다양한 언어 지원</li>
-    <li><code class="language-plaintext highlighter-rouge">XML</code>의 정적인 설정 정보에서 벗어나 도메인 언어인 그루비를 통해 코드로서의 설정 정보 구성</li>
-  </ul>
-</blockquote>
-
-<h2 id="프로젝트-환경설정--spring-initializr에서-스프링부트-view-페이지-제작">프로젝트 환경설정 : <a href="https://start.spring.io">spring initializr</a>에서 스프링부트 <code class="language-plaintext highlighter-rouge">View</code> 페이지 제작</h2>
-
-<p><img src="https://i.postimg.cc/SQGkY7xZ/Clean-Shot-2022-12-19-at-12-59-03-2x.png" border="0" /></p>
-
-<ul>
-  <li>빌드 관리 툴 : <code class="language-plaintext highlighter-rouge">Gradle</code></li>
-  <li>언어 : <code class="language-plaintext highlighter-rouge">JAVA</code></li>
-  <li>스프링부트 버전 : <code class="language-plaintext highlighter-rouge">SNAPSHOT</code>이 아닌 최신 버전</li>
-  <li>라이브러리 선택 : <code class="language-plaintext highlighter-rouge">spring Web</code> (웹), <code class="language-plaintext highlighter-rouge">tymeleaf</code> (<code class="language-plaintext highlighter-rouge">HTML</code>을 만드는 템플릿 엔진)</li>
-</ul>
-
-<p><img src="https://i.postimg.cc/nhrDPhWJ/Clean-Shot-2022-12-19-at-13-03-37-2x.png" /></p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">.idea</code> : 인텔리제이의 설정 파일이 위치한 디렉토리</li>
-  <li><code class="language-plaintext highlighter-rouge">gradle</code> : 그레이들의 설정 파일이 위치한 디렉토리</li>
-  <li><code class="language-plaintext highlighter-rouge">src</code> : 프로젝트가 위치 (<code class="language-plaintext highlighter-rouge">main</code>과 <code class="language-plaintext highlighter-rouge">test</code> 디렉토리가 분리된 구조가 표준으로 쓰임)
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">main</code> : <code class="language-plaintext highlighter-rouge">Java</code> 패키지와 소스 파일이 위치하는 <code class="language-plaintext highlighter-rouge">java</code> / <code class="language-plaintext highlighter-rouge">xml</code>, 설정 파일이 위치하는 <code class="language-plaintext highlighter-rouge">resources</code></li>
-      <li><code class="language-plaintext highlighter-rouge">test</code> : <code class="language-plaintext highlighter-rouge">test</code> 코드들과 관련된 소스 파일이 위치</li>
-    </ul>
-  </li>
-</ul>
-
-<p><img src="https://i.postimg.cc/prdWLpzV/Clean-Shot-2022-12-19-at-13-04-34-2x.png" /></p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">build.gradle</code> : <code class="language-plaintext highlighter-rouge">dependencies</code>에서 스프링과 스프링부트의 라이브러리 설정 및 버전 관리 자동화
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">plugins</code> : 그레이들에서 사용할 플러그인</li>
-      <li><code class="language-plaintext highlighter-rouge">group</code>, <code class="language-plaintext highlighter-rouge">version</code>, <code class="language-plaintext highlighter-rouge">sourceCompatibility</code> : 사전에 설정한 그룹명, 버전, <code class="language-plaintext highlighter-rouge">Java</code> 버전</li>
-      <li><code class="language-plaintext highlighter-rouge">repositories</code> : <code class="language-plaintext highlighter-rouge">dependencies</code>의 라이브러리를 가져올 사이트</li>
-      <li><code class="language-plaintext highlighter-rouge">dependencies</code> : 그레이들에 의해 관리되는 라이브러리</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="라이브러리-library--api를-바탕으로-플랫폼에서-바로-실행될-수-있도록-모듈화된-프로그램의-집합">라이브러리 (<code class="language-plaintext highlighter-rouge">Library</code>) : <code class="language-plaintext highlighter-rouge">API</code>를 바탕으로 플랫폼에서 바로 실행될 수 있도록 모듈화된 프로그램의 집합</h3>
-<ul>
-  <li>혼자서 완전하게 동작하는 것이 아닌 어느 특정한 부분만을 수행하도록 제작 : 기계어나 바이트 코드로 존재 (비휘발성 자원)
-    <ul>
-      <li>자바에서는 라이브러리를 <code class="language-plaintext highlighter-rouge">.jar</code> 형태로 배포</li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <ul>
-    <li>프레임워크 (<code class="language-plaintext highlighter-rouge">Framework</code>) : 특정한 문제 해결을 위해 클래스, 라이브러리, 인터페이스를 결합시킨 구조
-      <ul>
-        <li>모듈화 (<code class="language-plaintext highlighter-rouge">Modulation</code>) : 재사용 가능한 클래스와 라이브러리들을 그룹 단위로 융합시켜 제공</li>
-      </ul>
-    </li>
-    <li>프레임워크와 라이브러리의 차이? : 제어의 역전 (<code class="language-plaintext highlighter-rouge">IOC</code>)이 발생하는가?</li>
-  </ul>
-</blockquote>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">build.gradle</code>의 <code class="language-plaintext highlighter-rouge">dependencies</code>에서 그레이들을 통해 라이브러리가 관리되는 것을 확인 가능</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// build.gradle
-
-plugins {
-	id 'org.springframework.boot' version 'X.X.X'
-	id 'io.spring.dependency-management' version 'X.X.X.RELEASE'
-	id 'java'
-}
-
-repositories {  // repositories : 그레이들에 의존성 추가된 라이브러리 다운로드
-	mavenCentral()
-}
-
-dependencies {  // dependencies : 그레이들에 의존성 추가
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' 
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    compileOnly('org.springframework.boot:spring-boot-devtools')
-}
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Gradle</code>은 기본적으로 하나의 라이브러리에 관련된, 의존 관계에 있는 라이브러리를 모두 가져옴
-    <ul>
-      <li>왼쪽 탭의 외부 라이브러리를 통해 가져온 모든 라이브러리를 확인 가능</li>
-      <li>오른쪽 탭의 <code class="language-plaintext highlighter-rouge">Gradle</code>를 통해 라이브러리 간의 의존 관계를 확인 가능</li>
-    </ul>
-  </li>
-</ul>
-
-<p><a href="https://postimg.cc/RNYZnf5L" target="_blank"><img src="https://i.postimg.cc/6pW2gLMg/Clean-Shot-2022-12-19-at-13-51-55-2x.png" border="0" alt="Clean-Shot-2022-12-19-at-13-51-55-2x" /></a></p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">spring-boot-starter</code> 라이브러리 : <code class="language-plaintext highlighter-rouge">core</code>, <code class="language-plaintext highlighter-rouge">logging</code>, <code class="language-plaintext highlighter-rouge">spring boot</code> 등 필요한 모든 의존관계를 가져옴
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">logging</code> : 로깅을 위한 인터페이스로 <code class="language-plaintext highlighter-rouge">log4j</code>와 <code class="language-plaintext highlighter-rouge">logback</code>을 구현체로 가짐 (<code class="language-plaintext highlighter-rouge">system.out.~</code>이 아닌 <code class="language-plaintext highlighter-rouge">log</code>로 출력)</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">spring-boot-starter-web</code> 라이브러리 : <code class="language-plaintext highlighter-rouge">WAS</code>인 톰캣이 내장되어 있음</li>
-  <li><code class="language-plaintext highlighter-rouge">spring-boot-starter-test</code> 라이브러리 : <code class="language-plaintext highlighter-rouge">JUnit</code>, <code class="language-plaintext highlighter-rouge">mockito</code>, <code class="language-plaintext highlighter-rouge">assertj</code> 등 테스트 코드를 위한 라이브러리를 가져옴
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">JUnit</code> : 테스트 프레임워크</li>
-      <li><code class="language-plaintext highlighter-rouge">mockito</code> : 목 라이브러리</li>
-      <li><code class="language-plaintext highlighter-rouge">assertj</code> : 테스트 코드의 작성을 돕는 라이브러리</li>
-      <li><code class="language-plaintext highlighter-rouge">spring-test</code> : 스프링 통합 테스트를 지원</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">spring-boot-devtools</code> 라이브러리 : 어플리케이션 개발 시 유용한 기능을 제공
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Automatic Restart</code> : 브라우저로 전송되는 내용들에 대한 코드가 변경되면, 자동으로 어플리케이션을 재시작
-        <ul>
-          <li>“고급 설정 &gt; 선택 영역 없이 복사 또는 잘라내기 액션을 호출하면 현재 줄이 복사/잘라내기 되지 않습니다” 체크</li>
-          <li>“빌드, 실행, 배포 &gt; 컴파일러 &gt; 프로젝트 자동으로 빌드 (실행/디버그 중이 아닌 경우에만 작동)” 체크</li>
-        </ul>
-      </li>
-      <li><code class="language-plaintext highlighter-rouge">Property Defaults</code> : <code class="language-plaintext highlighter-rouge">thymeleaf</code>의 <code class="language-plaintext highlighter-rouge">Application cache</code> 값을 <code class="language-plaintext highlighter-rouge">false</code>로 설정해 개발 환경에서 캐싱 기능 비활성화
-        <ul>
-          <li><code class="language-plaintext highlighter-rouge">application.properties</code>에서 <code class="language-plaintext highlighter-rouge">spring.thymeleaf.cache</code> 값을 <code class="language-plaintext highlighter-rouge">false</code></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package hello.hellospring;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
-public class HelloApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(HelloApplication.class, args);
-	}
-}
-</code></pre></div></div>
-
-<p><a href="https://postimg.cc/VJmNm4z5" target="_blank"><img src="https://i.postimg.cc/vZ6x7Sj7/Clean-Shot-2022-12-19-at-13-17-29-2x.png" border="0" alt="Clean-Shot-2022-12-19-at-13-17-29-2x" /></a></p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">main.java.project</code>의 클래스를 실행하면, <a href="http://localhost:8080"><code>localhost:8080</code></a>으로 웹 어플리케이션에 접속 가능</li>
-</ul>
-
-<p><a href="https://postimg.cc/qgmfzLcz" target="_blank"><img src="https://i.postimg.cc/sDz3HHv9/Clean-Shot-2022-12-19-at-13-24-16-2x.png" border="0" alt="Clean-Shot-2022-12-19-at-13-24-16-2x" /></a></p>
-
-<blockquote>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">gradle</code>를 통해서 아닌, <code class="language-plaintext highlighter-rouge">Intellij IDEA</code>로 바로 빌드</li>
-  </ul>
-
-  <p><a href="https://postimg.cc/xNQvK7wM" target="_blank"><img src="https://i.postimg.cc/L5YxMFvC/Clean-Shot-2022-12-19-at-13-27-16-2x.png" border="0" alt="Clean-Shot-2022-12-19-at-13-27-16-2x" /></a></p>
-</blockquote>
-
-<h3 id="빌드-build--소스-코드를-브라우저에서-실행할-수-있는-하나의-소프트웨어로-변환하는-작업">빌드 (<code class="language-plaintext highlighter-rouge">Build</code>) : 소스 코드를 브라우저에서 실행할 수 있는 하나의 소프트웨어로 변환하는 작업</h3>
-<ul>
-  <li>컴파일, 테스팅, 배포 등의 과정의 집합</li>
-</ul>
-
-<blockquote>
-  <p>어플리케이션 종료 후 다음 명령어로 빌드 : 해당 경로의 <code class="language-plaintext highlighter-rouge">lib</code>에 <code class="language-plaintext highlighter-rouge">springmvc-0.0.1-SNAPSHOT.jar</code> 파일이 생성</p>
-</blockquote>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./gradlew build   // 프로젝트 빌드
-</code></pre></div></div>
-
-<blockquote>
-  <p>다음 명령어로 빌드된 파일로 <code class="language-plaintext highlighter-rouge">IDE</code> 없이 웹 어플리케이션을 동작</p>
-</blockquote>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ java -jar springmvc-0.0.1-SNAPSHOT.jar
-</code></pre></div></div>
-
-<h2 id="mvc--model-view-controller로-구분"><code class="language-plaintext highlighter-rouge">MVC</code> : <code class="language-plaintext highlighter-rouge">Model</code>, <code class="language-plaintext highlighter-rouge">View</code>, <code class="language-plaintext highlighter-rouge">Controller</code>로 구분</h2>
-<ul>
-  <li>모델 (<code class="language-plaintext highlighter-rouge">Model</code>) : 컨트롤러에서 데이터를 생성해 이를 뷰에 전달 (<code class="language-plaintext highlighter-rouge">HaspMap</code> 형태 : <code class="language-plaintext highlighter-rouge">key</code>와 <code class="language-plaintext highlighter-rouge">value</code>를 저장)</li>
-  <li>뷰 (<code class="language-plaintext highlighter-rouge">View</code>) : 정적 웹 페이지 형식의 <code class="language-plaintext highlighter-rouge">html</code> 파일
-    <ul>
-      <li>뷰 리졸버 (<code class="language-plaintext highlighter-rouge">View Resolver</code>) : 컨트롤러가 템플릿에 반환한 <code class="language-plaintext highlighter-rouge">html</code> 파일을 찾아 브라우저로 전달</li>
-    </ul>
-  </li>
-  <li>컨트롤러 (<code class="language-plaintext highlighter-rouge">Controller</code>) : 서버에서 온 요청을 받아 서버 로직을 수행한 후 그 결과를 다시 클라이언트에 전달</li>
-</ul>
-
-<h3 id="정적-웹-페이지-static-web-page--미리-저장된-파일-그대로-랜더링-과정-없이-전달되는-웹-페이지">정적 웹 페이지 (<code class="language-plaintext highlighter-rouge">Static Web Page</code>) : 미리 저장된 파일 그대로 랜더링 과정 없이 전달되는 웹 페이지</h3>
-
-<ul>
-  <li>일반적으로 <code class="language-plaintext highlighter-rouge">.html</code> 형식의 파일들로 저장되었다가 <code class="language-plaintext highlighter-rouge">HTTP</code>를 통해 전달
-    <ul>
-      <li>웹 서버는 사용자의 요쳥에 해당되는 웹 페이지를 보냄</li>
-    </ul>
-  </li>
-  <li>스프링부트에 내장 : <code class="language-plaintext highlighter-rouge">src.resources.static</code> 패키지에 <code class="language-plaintext highlighter-rouge">index.html</code>을 작성하면 첫 화면으로 표현
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">templates</code> 패키지에서 접속하려는 파일에 매핑된 컨트롤러가 없으면, <code class="language-plaintext highlighter-rouge">src.resources.static</code> 패키지에서 찾아 반환</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Title&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre></div></div>
-
-<p><a href="https://postimg.cc/56mpwdKM" target="_blank"><img src="https://i.postimg.cc/ncy5fnvM/Clean-Shot-2022-12-19-at-14-38-46-2x.png" border="0" alt="Clean-Shot-2022-12-19-at-14-38-46-2x" /></a></p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">http://localhost:8080</code>에 접속하면 에러 화면이 아닌, 탭 이름이 <code class="language-plaintext highlighter-rouge">Title</code>인 빈 화면 표시</li>
-</ul>
-
-<p><a href="https://postimg.cc/Z0yTHNgJ" target="_blank"><img src="https://i.postimg.cc/7PKfxMnJ/Clean-Shot-2022-12-19-at-15-35-32-2x.png" border="0" alt="Clean-Shot-2022-12-19-at-15-35-32-2x" /></a></p>
-
-<h3 id="동적-웹-페이지-dynamic-web-page--스크립트에-의해-처리된-후-생성되어-전달되는-웹-페이지">동적 웹 페이지 (<code class="language-plaintext highlighter-rouge">Dynamic Web Page</code>) : 스크립트에 의해 처리된 후 생성되어 전달되는 웹 페이지</h3>
-
-<blockquote>
-  <p><a href="https://www.thymeleaf.org">타임리프 (<code>thymeleaf</code>) 템플릿 엔진</a> : 정적인 <code class="language-plaintext highlighter-rouge">HTML</code>에 동적인 기능을 부여</p>
-</blockquote>
-
-<ul>
-  <li>웹 서버는 사용자의 요청을 해석해 데이터를 가공한 후 생성된 웹 페이지 전달
-    <ul>
-      <li>클라이언트 사이드 (<code class="language-plaintext highlighter-rouge">Client-side</code>) : 웹 서버가 <code class="language-plaintext highlighter-rouge">JSON</code> 파일을 전달하면, 브라우저에서 자바스크립트로 <code class="language-plaintext highlighter-rouge">HTML</code> 완성
-        <ul>
-          <li>장점 : 웹 페이지를 처음 로딩할 때 상대적으로 느리지만 유저와의 빠른 인터렉션 가능</li>
-          <li>단점 : 봇 크롤러들이 자바 스크립트를 읽지 못해 검색 엔진 최적화 불가능, 쿠키 외 사용자 정보를 담을 수 없음</li>
-        </ul>
-      </li>
-      <li>서버 사이드 (<code class="language-plaintext highlighter-rouge">Server-side</code>) : 클라이언트가 요청할 때마다 웹 서버에서 템플릿에 데이터를 포함한 <code class="language-plaintext highlighter-rouge">HTML</code>를 완성해 전달
-        <ul>
-          <li>장점 : 웹 페이지를 처음 로딩할 때 상대적으로 빠름</li>
-          <li>단점 : 새로운 요청마다 새로고침이 매번 발생해 비효율적임, 사용자에 대한 정보를 서버가 저장</li>
-        </ul>
-      </li>
-      <li><code class="language-plaintext highlighter-rouge">Ajax</code> 요청 : 클라이언트가 <code class="language-plaintext highlighter-rouge">Ajax Request</code>을 보내 서버에서 데이터를 받아 <code class="language-plaintext highlighter-rouge">HTML</code> 완성</li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">main.java.group</code>에 <code class="language-plaintext highlighter-rouge">helloController</code> 패키지를 생성하고, 그 안에 <code class="language-plaintext highlighter-rouge">helloController</code> 클래스를 작성</p>
-</blockquote>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// helloController.java
-
-package hello.hellospring.helloController;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-
-@Controller // 컨트롤러 역할을 부여하는 어노테이션
-
-public class helloController {
-    @GetMapping("hello")
-    public String hello (Model model) {  // Model model : 매개변수로 넣어줄 mvc의 model를 의미
-        model.addAttribute("data", "World!");  // 첫번째 패라미터를 두번째 패라미터로 치환
-        return "hello";   // 반환값이 들어오면 viewResolver가 resource:templates/ + {ViewName} + .html을 표현
-    }
-}
-</code></pre></div></div>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">resources.templates</code>에 <code class="language-plaintext highlighter-rouge">hello.html</code>를 작성하고 <a href="http://localhost:8080/hello"><code>localhost:8080/hello</code></a>에서 템플릿 엔진으로 표현된 페이지 확인</p>
-</blockquote>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? hello.html --&gt;
-
-&lt;!DOCTYPE HTML&gt;
-  &lt;html xmlns:th="http://www.thymeleaf.org"&gt;    &lt;!--? xmlns:th 태그로 타임리프 엔진 선언해 타임리프 문법을 사용 --&gt;
-  &lt;head&gt;
-    &lt;title&gt;dynamic&lt;/title&gt;
-    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p th:text="'Hello ' + ${data}" &gt;Let there be light&lt;/p&gt; &lt;!--? 컨트롤러롤 통해 받은 첫번째 패라미터를 두번째 패라미터로 치환 --&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre></div></div>
-
-<p><a href="https://postimg.cc/75D5vbkp" target="_blank"><img src="https://i.postimg.cc/Vk0nCbHL/Clean-Shot-2022-12-19-at-15-15-07-2x.png" border="0" alt="Clean-Shot-2022-12-19-at-15-15-07-2x" /></a></p>
-
-<blockquote>
-  <p>일반 텍스트인 <code class="language-plaintext highlighter-rouge">Let there be light</code> 대신 컨트롤러가 전달한 <code class="language-plaintext highlighter-rouge">attribute</code>의 값인 <code class="language-plaintext highlighter-rouge">Hello World!</code>가 출력</p>
-</blockquote>
-
-<p><a href="https://postimg.cc/mzngDN55" target="_blank"><img src="https://i.postimg.cc/mkLzmmNB/Clean-Shot-2022-12-19-at-15-34-12-2x.png" border="0" alt="Clean-Shot-2022-12-19-at-15-34-12-2x" /></a></p>
-
-<ol>
-  <li>웹 브라우저에 주소 (<code class="language-plaintext highlighter-rouge">localhost:8080/hello</code>) 입력</li>
-  <li>내장 톰캣 서버가 전달받은 주소를 스프링으로 전송</li>
-  <li>스프링이 <code class="language-plaintext highlighter-rouge">helloController</code>에 맵핑된 것을 확인하고 메소드 호출</li>
-  <li>스프링이 뷰 리졸버에 반환값과 <code class="language-plaintext highlighter-rouge">model(data:hello!)</code>를 전달</li>
-  <li>뷰 리졸버가 템플릿에 반환된 <code class="language-plaintext highlighter-rouge">hello</code>와 동일한 <code class="language-plaintext highlighter-rouge">.html</code> 파일을 찾음</li>
-  <li>타임리프 템플릿 엔진이 찾은 <code class="language-plaintext highlighter-rouge">.html</code> 파일을 렌더링</li>
-  <li>웹 브라우저가가 변환된 <code class="language-plaintext highlighter-rouge">.html</code> 파일을 화면에 표현</li>
-</ol>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">main.java.Controller</code>의 <code class="language-plaintext highlighter-rouge">helloController.java</code>와 <code class="language-plaintext highlighter-rouge">resources.templates</code>의 <code class="language-plaintext highlighter-rouge">hello-template.html</code> 수정</p>
-</blockquote>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// helloController.java
-
-package group.project.Controller;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-@Controller // 컨트롤러 역할을 부여하는 어노테이션
-
-public class helloController {
-    @GetMapping("hello-mvc")  // HTTP GET 요청을 처리하는 메소드를 맵핑해 ".../URL"에 따라 어떤 페이지를 보여줄지 결정하는 어노테이션
-    public String helloMvc (@RequestParam("name") String name, Model model) {
-    // @requestparam : 패러미터로 값을 전달. 만약 패러미터로 ?name=ddd을 전달받으면 메소드의 name 패러미터의 값은 ddd로 정해짐
-        model.addAttribute("name", name);   // 모델의 name attribute의 값을 ddd로 설정
-        return "hello-template";    // 반환값이 들어오면 viewResolver가 resource:templates/ + {ViewName} + .html을 표현
-    }
-}
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!--? hello-template.html --&gt;
-
-&lt;html xmlns:th="http://www.thymeleaf.org"&gt;
-    &lt;body&gt;
-        &lt;p th:text="'hello ' + ${name}"&gt;hello! empty&lt;/p&gt;
-        &lt;!--? 일반 텍스트를 컨트롤러가 전달한 attribute의 값으로 치환 --&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre></div></div>
-
-<blockquote>
-  <p><a href="localhost:8080/hello-mvc?name=입력값"><code>localhost:8080/hello-mvc?name=입력값</code></a>에서 템플릿 엔진으로 표현된 페이지 확인</p>
-</blockquote>
-
-<p><a href="https://postimg.cc/CzXktbMJ" target="_blank"><img src="https://i.postimg.cc/HkszrtqG/Clean-Shot-2022-12-19-at-15-32-17-2x.png" border="0" alt="Clean-Shot-2022-12-19-at-15-32-17-2x" /></a></p>
-
-<ol>
-  <li>웹 브라우저에 주소 (<code class="language-plaintext highlighter-rouge">localhost:8080/hello-mvc?name=입력값</code>) 입력</li>
-  <li>내장 톰캣 서버가 전달받은 주소를 스프링으로 전송</li>
-  <li>스프링이 <code class="language-plaintext highlighter-rouge">helloController</code>에 맵핑된 것을 확인하고 메소드 호출</li>
-  <li>스프링이 뷰 리졸버에 반환값과 <code class="language-plaintext highlighter-rouge">model(name:입력값)</code>를 전달</li>
-  <li>뷰 리졸버가 템플릿에 반환된 <code class="language-plaintext highlighter-rouge">hello-template</code>와 동일한 <code class="language-plaintext highlighter-rouge">.html</code> 파일을 찾음</li>
-  <li>타임리프 템플릿 엔진이 찾은 <code class="language-plaintext highlighter-rouge">.html</code> 파일을 렌더링</li>
-  <li>웹 브라우저가가 변환된 <code class="language-plaintext highlighter-rouge">.html</code> 파일을 화면에 표현</li>
-</ol>
-
-<h3 id="api-application-programming-interface--어플리케이션-프로그래밍-인터페이스"><code class="language-plaintext highlighter-rouge">API</code> (<code class="language-plaintext highlighter-rouge">Application Programming Interface</code>) : 어플리케이션 프로그래밍 인터페이스</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">@ResponseBody()</code> 어노테이션 : 뷰 리졸버가 작동하지 않아 페이지가 반환되지 않음
-    <ul>
-      <li>소스 코드가 반환돠는 템블릿과 달리, <code class="language-plaintext highlighter-rouge">HTTP</code>의 <code class="language-plaintext highlighter-rouge">body</code>에 직접 문자를 넣어 그대로 반환</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// helloController 수정
-
-package group.project.Controller;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-@Controller // 컨트롤러 역할을 부여하는 어노테이션
-
-public class helloController {
-  @GetMapping("hello-string")
-  @ResponseBody // @ResponseBody : HTTP의 body에 직접 데이터의 값을 넣겠 다는 의미
-  
-  public String helloString (@RequestParam (value = "name", required = false) String name){ // required : 패러미터 입력이 필수인지 설정
-    return "hello " + name; // 데이터 그 자체가 반환됨
-  }
-}
-</code></pre></div></div>
-
-<blockquote>
-  <p><a href="http://localhost:8080/hello-string?name=입력값">http://localhost:8080/hello-string?name=입력값</a>의 페이지 소스에서 문자열만 반환됨</p>
-</blockquote>
-
-<p><a href="https://postimg.cc/Hjh4XqMr" target="_blank"><img src="https://i.postimg.cc/rF8nXcFN/Clean-Shot-2022-12-19-at-15-54-57-2x.png" border="0" alt="Clean-Shot-2022-12-19-at-15-54-57-2x" /></a></p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">@ResponseBody()</code> 어노테이션의 <code class="language-plaintext highlighter-rouge">API</code> 방식 : <code class="language-plaintext highlighter-rouge">HTTP</code>의 <code class="language-plaintext highlighter-rouge">body</code>에 직접 객처를 넣으면, 객체가 <code class="language-plaintext highlighter-rouge">JSON</code> 방식으로 반환</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// helloController 수정
-
-package group.project.Controller;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-@Controller // 컨트롤러 역할을 부여하는 어노테이션
-
-public class helloController {
-  @GetMapping("hello-api")
-  @ResponseBody // @ResponseBody : HTTP의 body에 직접 데이터의 값을 넣겠다는 의미
-  
-  public String helloString (@RequestParam (value = "name", required = false) String name){
-    Hello hello = new Hello();
-    hello.setName(name);
-    
-    return hello; // // 객체를 JSON 방식으로 반환
-  }
-
-  static class Hello {  // 내부 클래스
-    private String name;
-    
-    public String getName() {
-      return name;
-    }
-
-    public void setName(String name) {
-      this.name = name;
-    }   
-  }
-}
-</code></pre></div></div>
-
-<blockquote>
-  <p><a href="http://localhost:8080/hello-string?name=입력값">http://localhost:8080/hello-string?name=입력값</a>의 페이지 소스에서 <code class="language-plaintext highlighter-rouge">JSON</code>이 반환</p>
-</blockquote>
-
-<p><a href="https://postimg.cc/bGfshTtY" target="_blank"><img src="https://i.postimg.cc/nLC7qSVm/Clean-Shot-2022-12-19-at-16-03-21-2x.png" border="0" alt="Clean-Shot-2022-12-19-at-16-03-21-2x" /></a></p>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">ResponseBody</code> 어노테이션을 사용한다는 것은?</p>
-
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">viewResolver</code> 대신 <code class="language-plaintext highlighter-rouge">HttpMessageConverter</code>가 동작
-      <ul>
-        <li>문자 처리는 <code class="language-plaintext highlighter-rouge">StringHttpMessageConverter</code>에서 처리</li>
-        <li>객체 처리는 <code class="language-plaintext highlighter-rouge">MappingJackson2HttpMessageConverter</code>에서 처리 : <code class="language-plaintext highlighter-rouge">JSON</code> 형식으로 반환</li>
-        <li>… 이외에도 <code class="language-plaintext highlighter-rouge">byte</code> 등의 처리는 내장된 여러 <code class="language-plaintext highlighter-rouge">HttpMessageConverter</code>에서 처리</li>
-      </ul>
-    </li>
-    <li><code class="language-plaintext highlighter-rouge">Controller</code>는 클라이언트의 <code class="language-plaintext highlighter-rouge">HTTP Accept Header</code>와 서버의 컨트롤러 반환 타입 정보를 조합해 동작시킬 <code class="language-plaintext highlighter-rouge">HttpMessageConverter</code> 선택</li>
-  </ul>
-</blockquote>
-
-<h2 id="예제-1--회원-관리-예제">예제 <code class="language-plaintext highlighter-rouge">1</code> : 회원 관리 예제</h2>
-
-<blockquote>
-  <p>비즈니스 요구 사항 정리</p>
-
-  <ul>
-    <li>데이터 : 회원의 아이디 (<code class="language-plaintext highlighter-rouge">ID</code>), 회원의 이름 (<code class="language-plaintext highlighter-rouge">NAME</code>)</li>
-    <li>기능 : 회원 등록, 회원 조회</li>
-    <li>가상의 시나리오 : <b>데이터베이스를 선정하지 않는다.</b></li>
-  </ul>
-</blockquote>
-
-<p><a href="https://postimg.cc/fkdvCxMM" target="_blank"><img src="https://i.postimg.cc/597kx3GQ/Clean-Shot-2022-12-30-at-12-30-03-2x.png" border="0" width="75%" /></a></p>
-
-<p><a href="https://postimg.cc/p91BGC9L" target="_blank"><img src="https://i.postimg.cc/FRhnKnN3/Clean-Shot-2022-12-30-at-12-30-36-2x.png" border="0" width="75%" /></a></p>
-
-<p><a href="https://postimg.cc/QHLfZffB" target="_blank"><img src="https://i.postimg.cc/QxCw5P5q/Clean-Shot-2022-12-30-at-12-31-36-2x.png" border="0" width="75%" /></a></p>
-
-<p><b>일반적인 웹 어플리케이션 계층 구조</b></p>
-
-<ul>
-  <li>웹 컨트롤러 : <code class="language-plaintext highlighter-rouge">MVC</code>에서의 컨트롤러</li>
-  <li>도메인 객체 : 회원, 주문, 쿠폰 등 주로 데이터베이스에 저장되고 관리되는 비즈니스 도메인 객체</li>
-  <li>서비스 : 도메인 객체를 이용해 핵심 비즈니스 로직을 구현</li>
-  <li>리포지토리 : 데이터베이스에 접근해 도메인 객체를 데이터베이스에 저장하고 관리</li>
-</ul>
-
-<p><b>클래스 의존 관계</b></p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">MemberRepository</code> : 데이터베이스를 선정되지 않았기에 인터페이스로 구현, 클래스를 변경 가능하도록 설계</li>
-  <li>스프링 빈과 <code>@Autowired</code>를 통한 패키지 내 컨테이너 객체 간의 의존성 주입 (<code>Dependency Injection</code>)</li>
-</ul>
-
-<h3 id="멤버-생성--mainjavaspringmembermanagementdomainmemberjava">멤버 생성 : <code class="language-plaintext highlighter-rouge">main.java.Spring.MemberManagement.Domain.Member.java</code></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class Member {
-    private Long ID;
-    private String NAME;
-
-    public Long getID() {
-        return ID;
-    }
-
-    public String getNAME() {
-        return NAME;
-    }
-
-    public void setID (Long ID){ this.ID = ID; }
-
-    public void setNAME (String NAME){ this.NAME = NAME; }
-}
-</code></pre></div></div>
-
-<h3 id="레포지토리-생성--mainjavaspringmembermanagementrepositorymemberrepositoryjava">레포지토리 생성 : <code class="language-plaintext highlighter-rouge">main.java.Spring.MemberManagement.Repository.MemberRepository.java</code></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public interface MemberRepository {
-    Member save(Member M);
-    Optional&lt;Member&gt; findByID(Long ID);
-    Optional&lt;Member&gt; findByNAME(String NAME);
-    List&lt;Member&gt; findAll();
-}
-</code></pre></div></div>
-
-<h3 id="레포지토리-인터페이스-생성--mainjavaspringmembermanagementrepositorymemorymemberrepositoryjava">레포지토리 인터페이스 생성 : <code class="language-plaintext highlighter-rouge">main.java.Spring.MemberManagement.Repository.MemoryMemberRepository.java</code></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Repository
-public class MemoryMemberRepository implements MemberRepository {
-    private Map&lt;Long, Member&gt; store = new HashMap&lt;&gt;();
-    private static long sequence = 0L;
-
-    @Override
-    public Member save(Member M) {
-        M.setID(++sequence);
-        store.put(M.getID(), M);
-        return M;
-    }
-
-    @Override
-    public Optional&lt;Member&gt; findByID(Long ID) {
-        return Optional.ofNullable(store.get(ID));
-    }
-
-    @Override
-    public Optional&lt;Member&gt; findByNAME(String NAME) {
-        return store.values().stream().filter(M -&gt; M.getNAME().equals(NAME)).findAny();
-    }
-
-    @Override
-    public List&lt;Member&gt; findAll() {
-        return new ArrayList&lt;&gt;(store.values());
-    }
-}
-</code></pre></div></div>
-
-<h3 id="서비스-작성--mainjavaspringmembermanagementservicememberservicejava">서비스 작성 : <code class="language-plaintext highlighter-rouge">main.java.Spring.MemberManagement.Service.MemberService.java</code></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Service
-public class MemberService {
-    private final MemberRepository memberRepository;
-
-    @Autowired
-    public MemberService(MemberRepository memberRepository) {
-        this.memberRepository = memberRepository;
-    }
-
-    public Long join (Member M) {
-        validateName(M);
-        memberRepository.save(M);
-
-        return M.getID();
-    }
-
-    private void validateName(Member M) {
-        memberRepository.findByNAME(M.getNAME()).ifPresent(m -&gt; {
-            throw new IllegalStateException("이미 존재하는 회원입니다.");
-        });
-    }
-
-    public List&lt;Member&gt; findMembers(){
-        return memberRepository.findAll();
-    }
-
-    public Optional&lt;Member&gt; findOne(Long memberID) {
-        return memberRepository.findByID(memberID);
-    }
-}
-</code></pre></div></div>
-
-<h3 id="레포지토리-테스트-케이스-생성--testjavaspringmembermanagementrepositorymemorymemberrepositorytestjava">레포지토리 테스트 케이스 생성 : <code class="language-plaintext highlighter-rouge">test.java.Spring.MemberManagement.Repository.MemoryMemberRepositoryTest.java</code></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class MemoryMemberRepositoryTest {
-    MemoryMemberRepository R = new MemoryMemberRepository();
-
-    @AfterEach
-    public void afterEach() {
-        R.clearStore();
-    }
-
-    @Test
-    public void save(){
-        Member M = new Member();
-        M.setNAME("Spring");
-
-        R.save(M);
-
-        Member Result = R.findByID(M.getID()).get();
-
-        assertThat(M).isEqualTo(Result);
-    }
-
-    @Test
-    public void findByName() {
-        Member M1 = new Member();
-        M1.setNAME("M1");
-        R.save(M1);
-        Member M2 = new Member();
-        M2.setNAME("M2");
-        R.save(M2);
-        Member Result = R.findByNAME("M1").get();
-        assertThat(Result).isEqualTo(M1);
-    }
-
-    @Test
-    public void findAll() {
-        Member M1 = new Member();
-        M1.setNAME("M1");
-        R.save(M1);
-        Member M2 = new Member();
-        M2.setNAME("M2");
-        R.save(M2);
-
-        List&lt;Member&gt; Result = R.findAll();
-
-        assertThat(Result.size()).isEqualTo(2);
-    }
-}
-</code></pre></div></div>
-
-<h3 id="서비스-테스트-케이스-생성--testjavaspringmembermanagementservicememberservicetestjava">서비스 테스트 케이스 생성 : <code class="language-plaintext highlighter-rouge">test.java.Spring.MemberManagement.Service.MemberServiceTest.java</code></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class MemberServiceTest {
-    MemoryMemberRepository R;
-    MemberService S;
-
-    @BeforeEach
-    public void beforeEach() {
-        R = new MemoryMemberRepository();
-        S = new MemberService(R);
-    }
-
-    @Test
-    void Register() {
-        Member M = new Member();
-        M.setNAME("Hello");
-        Long I = S.join(M);
-        Member Result = S.findOne(I).get();
-        assertThat(M.getNAME()).isEqualTo(Result.getNAME());
-    }
-
-    @Test
-    public void Exception() {
-        Member M1 = new Member();
-        M1.setNAME("M1");
-        R.save(M1);
-        Member M2 = new Member();
-        M2.setNAME("M2");
-        R.save(M2);
-
-        S.join(M1);
-
-        IllegalStateException e = assertThrows(IllegalStateException.class, () -&gt; S.join(M2));
-        assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
-    }
-}
-</code></pre></div></div>
-
-<h3 id="멤버-컨트롤러-생성--mainjavaspringmembermanagementcontrollermembercontrollerjava">멤버 컨트롤러 생성 : <code class="language-plaintext highlighter-rouge">main.java.Spring.MemberManagement.Controller.MemberController.java</code></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Controller
-public class MemberController {
-    private final MemberService S;
-
-    @Autowired
-    public MemberController(MemberService S){
-        this.S = S;
-    }
-
-    @GetMapping(value = "/members/new")
-    public String createForm() {
-        return "member/createMemberForm";
-    }
-
-    @PostMapping("/members/new")
-    public String create(MemberForm F) {
-        Member M = new Member();
-        M.setNAME(F.getNAME());
-
-        S.join(M);
-        return "redirect:/";
-    }
-
-    @GetMapping("/members")
-    public String list(Model MD){
-        List&lt;Member&gt; M = S.findAllMembers();
-        MD.addAttribute("M", M);
-        return "members/memberList";
-    }
-}
-</code></pre></div></div>
-
-<h3 id="홈-화면-컨트롤러-생성--mainjavaspringmembermanagementcontrollerhomecontrollerjava">홈 화면 컨트롤러 생성 : <code class="language-plaintext highlighter-rouge">main.java.Spring.MemberManagement.Controller.HomeController.java</code></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Controller
-public class HomeController {
-    @GetMapping("/")
-    public String home(){
-        return "home";
-    }
-}
-</code></pre></div></div>
-
-<h3 id="회원-등록-컨트롤러-생성--mainjavaspringmembermanagementcontrollermembercontrollerjava">회원 등록 컨트롤러 생성 : <code class="language-plaintext highlighter-rouge">main.java.Spring.MemberManagement.Controller.MemberController.java</code></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Controller
-public class MemberController {
-    private final MemberService S;
-
-    @Autowired
-    public MemberController(MemberService S){
-        this.S = S;
-    }
-
-    @GetMapping(value = "/members/new")
-    public String createForm() {
-        return "members/createMemberForm";
-    }
-
-    @PostMapping("/members/new")
-    public String create(MemberForm F) {
-        Member M = new Member();
-        M.setNAME(F.getNAME());
-
-        S.join(M);
-        return "redirect:/";
-    }
-
-    @GetMapping("/members")
-    public String list(Model MD){
-        List&lt;Member&gt; members = S.findMembers();
-        MD.addAttribute("members", members);
-        return "members/memberList";
-    }
-}
-</code></pre></div></div>
-
-<h3 id="멤버-폼-생성--mainjavaspringmembermanagementcontrollermemberformjava">멤버 폼 생성 : <code class="language-plaintext highlighter-rouge">main.java.Spring.MemberManagement.Controller.MemberForm.java</code></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class MemberForm {
-    private String NAME;
-
-    public MemberForm(String NAME) {
-        this.NAME = NAME;
-    }
-
-    public String getNAME() {
-        return NAME;
-    }
-}
-</code></pre></div></div>
-
-<h3 id="홈-화면-생성--mainjavaresourcestemplateshomehtml">홈 화면 생성 : <code class="language-plaintext highlighter-rouge">main.java.resources.templates.home.html</code></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
-&lt;html xmlns:th="http://www.thymeleaf.org"&gt;
-&lt;body&gt;
-&lt;div class="container"&gt;
-    &lt;div&gt;
-        &lt;h1&gt;Hello Spring&lt;/h1&gt;
-        &lt;p&gt;회원 기능&lt;/p&gt;
-        &lt;p&gt;
-            &lt;a href="/members/new"&gt;회원 가입&lt;/a&gt;
-            &lt;a href="/members"&gt;회원 목록&lt;/a&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre></div></div>
-
-<h3 id="회원-등록-화면-생성--mainjavaresourcestemplatescreatememberformhtml">회원 등록 화면 생성 : <code class="language-plaintext highlighter-rouge">main.java.resources.templates.createMemberForm.html</code></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE HTML&gt;
-&lt;html xmlns:th="http://www.thymeleaf.org"&gt;
-&lt;body&gt;
-&lt;div class="container"&gt;
-  &lt;form action="/members/new" method="post"&gt;
-    &lt;div class="form-group"&gt;
-      &lt;label for="NAME"&gt;이름&lt;/label&gt;
-      &lt;input type="text" id="NAME" name="NAME" placeholder="이름 입력 :"&gt;
-    &lt;/div&gt;
-    &lt;button type="submit"&gt;등록&lt;/button&gt;
-  &lt;/form&gt;
-&lt;/div&gt; &lt;!-- /container --&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre></div></div>
-
-<h3 id="회원-목록-화면-생성--mainjavaresourcestemplatesmemberlisthtml">회원 목록 화면 생성 : <code class="language-plaintext highlighter-rouge">main.java.resources.templates.memberList.html</code></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
-&lt;html xmlns:th="http://www.thymeleaf.org"&gt;
-&lt;body&gt;
-  &lt;div class="container"&gt;
-    &lt;div&gt;
-      &lt;table&gt;
-        &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt;#&lt;/th&gt;
-          &lt;th&gt;이름&lt;/th&gt;
-        &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-          &lt;tr th:each="member : ${members}"&gt;
-            &lt;td th:text="${member.ID}"&gt;&lt;/td&gt;
-            &lt;td th:text="${member.NAME}"&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-      &lt;/table&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre></div></div>
-
-<h3 id="스프링-aop-생성--mainjavaspringmembermanagementaoptimetraceaopjava">스프링 <code class="language-plaintext highlighter-rouge">AOP</code> 생성 : <code class="language-plaintext highlighter-rouge">main.java.Spring.MemberManagement.AOP.TimeTraceAOP.java</code></h3>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">AOP</code> : 어떤 로직을 기준으로 메인/서브 관점을 나눠 그 관점을 기준으로 각각을 모듈화</p>
-
-  <p><img src="https://i.postimg.cc/QN13vySm/Clean-Shot-2022-12-30-at-13-11-38-2x.png" border="0" width="50%" /></p>
-
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">Aspect</code>  : 관심사를 모듈화한 것</li>
-    <li><code class="language-plaintext highlighter-rouge">Target</code> : <code class="language-plaintext highlighter-rouge">Aspect</code>를 적용하는 클래스나 메서드</li>
-    <li><code class="language-plaintext highlighter-rouge">Advice</code> : 부가 기능을 담은 구현체</li>
-    <li><code class="language-plaintext highlighter-rouge">JoinPoint</code> : <code class="language-plaintext highlighter-rouge">Advice</code>가 적용될 시점</li>
-    <li><code class="language-plaintext highlighter-rouge">PointCut</code> : <code class="language-plaintext highlighter-rouge">JoinPoint</code>가 실행될 지점을 정의</li>
-  </ul>
-</blockquote>
-
-<ul>
-  <li>핵심 관심사항 (<code class="language-plaintext highlighter-rouge">Core Concern</code>) : 회원 가입, 회원 조회의 기능</li>
-  <li>공통 관심사항 (<code class="language-plaintext highlighter-rouge">Cross-cutting Concern</code>) : 회원 가입, 회원 조회의 기능이 실행하는 데에 걸리는 시간</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Component
-@EnableAspectJAutoProxy
-public class TimeTraceAOP {
-    public Object execute(MethodInvocationProceedingJoinPoint JP) throws Throwable{
-        long start = System.currentTimeMillis();
-
-        System.out.println("시작: " + JP.toString());
-
-        try {
-            return JP.proceed();
-        }finally {
-            long finish = System.currentTimeMillis();
-            long timeMs = finish - start;
-
-            System.out.println("종료: " + JP.toString() + " " + timeMs + "ms");
-        }
-    }
-}
-</code></pre></div></div>
-
-<blockquote>
-  <p>프록시 (<code class="language-plaintext highlighter-rouge">Proxy</code>) 방식의 <code class="language-plaintext highlighter-rouge">AOP</code> : 회원 컨트롤러에서 회원 서비스를 호출할 때 프록시 회원 서비스 호출</p>
-
-  <ul>
-    <li>프록시 <code class="language-plaintext highlighter-rouge">Controller</code> &gt; <code class="language-plaintext highlighter-rouge">Controller</code> &gt; 프록시 <code class="language-plaintext highlighter-rouge">Service</code> &gt; 실제 <code class="language-plaintext highlighter-rouge">Service</code> &gt; 프록시 <code class="language-plaintext highlighter-rouge">Repos</code> &gt; 실제 <code class="language-plaintext highlighter-rouge">Repos</code></li>
-  </ul>
-</blockquote>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Autowired // MemberController의 생성자에 추가해 프록시 주입 확인
-    public MemberController(MemberService memberService){
-        this.memberService = memberService;
-        System.out.println("memberService = " + memberService.getClass());
-    }
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="BackEnd" /><summary type="html"><![CDATA[해당 포스트는 김영한의 스프링 입문 로드맵 강의들을 바탕으로 작성되었습니다. 해당 포스트의 소스 코드는 스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술 (김영한)를 바탕으로 작성되었습니다.]]></summary></entry><entry><title type="html">[DevOps] 2. 도커 (Docker)</title><link href="http://localhost:4000/docker1/" rel="alternate" type="text/html" title="[DevOps] 2. 도커 (Docker)" /><published>2022-11-02T00:00:00+09:00</published><updated>2022-11-11T00:00:00+09:00</updated><id>http://localhost:4000/docker1</id><content type="html" xml:base="http://localhost:4000/docker1/"><![CDATA[<h2 id="가상화-virtualization--컴퓨터-자원-computer-resource의-추상화">가상화 (<code class="language-plaintext highlighter-rouge">Virtualization</code>) : 컴퓨터 자원 (<code class="language-plaintext highlighter-rouge">Computer Resource</code>)의 추상화</h2>
-
-<ul>
-  <li>하드웨어 종속성 배제 : 물리적인 하드웨어 자원을 논리적인 단위로 나누고 이를 통합해 가상의 자원을 활용</li>
-</ul>
-
-<h3 id="리소스-가상화-resource-virtualization--컴퓨터-내-특정-자원만을-추상화">리소스 가상화 (<code class="language-plaintext highlighter-rouge">Resource Virtualization</code>) : 컴퓨터 내 특정 자원만을 추상화</h3>
-<ul>
-  <li>(가상의) 메인 메모리 : 가상 메모리 (<code class="language-plaintext highlighter-rouge">Virtual Memory</code>)</li>
-  <li>(가상의) 저장 장치 : 클라우드 (<code class="language-plaintext highlighter-rouge">Cloud</code>)</li>
-  <li>(가상의) 그래픽 카드 : <code class="language-plaintext highlighter-rouge">vGPU</code></li>
-  <li>(가상의) 네트워크 : 가상 사설 네트워크 (<code class="language-plaintext highlighter-rouge">Virtual Personal Network</code>)</li>
-</ul>
-
-<h3 id="플랫폼-가상화-platform-virtualization--여러-개의-프로세스을-구동할-수-있는-플랫폼을-추상화">플랫폼 가상화 (<code class="language-plaintext highlighter-rouge">Platform Virtualization</code>) : 여러 개의 프로세스을 구동할 수 있는 플랫폼을 추상화</h3>
-<ul>
-  <li>에뮬레이션 (<code class="language-plaintext highlighter-rouge">Emulation</code>) : 다른 컴퓨터 프로세서를 위해 쓰인 운영체제와 응용 프로그램을 실행</li>
-  <li>하드웨어 수준 가상화 (<code class="language-plaintext highlighter-rouge">H/W-level Virtualization</code>) : 하드웨어 플랫폼 위의 하이퍼바이저를 통해 가상 머신을 관리함</li>
-  <li>
-    <p>운영체제 수준 가상화 (<code class="language-plaintext highlighter-rouge">O/S-level Virtualization</code>) : 운영체제의 커널이 각각의 격리된 프로세스를 동작시킴</p>
-  </li>
-  <li>
-    <h4 id="에뮬레이터-emulator--모든-하드웨어-자원의-동작을-소프트웨어로-대체">에뮬레이터 (<code class="language-plaintext highlighter-rouge">Emulator</code>) : 모든 하드웨어 자원의 동작을 소프트웨어로 대체</h4>
-    <ul>
-      <li>애뮬레이터 안의 응용 프로그램은 물리 하드웨어가 아닌 인터프리터 프로그램을 통해 실행 (<code class="language-plaintext highlighter-rouge">Java Virtual Machine</code>)
-        <ul>
-          <li>인터프리터 프로그램은 가상 머신에서 명령을 수행할 때마다 물리 CPU가 처리할 바이너리 코드 갱신</li>
-          <li>물리 CPU는 에뮬레이터를 실행하기 위한 바이너리 코드를 해석해 이를 대신 실행</li>
-        </ul>
-      </li>
-      <li>장점 : 아키텍쳐가 전혀 다른 하드웨어 역시 가상화할 수 있음 (vs 하이퍼바이저 : 가상화할 수 없음)</li>
-      <li>단점 : 물리 CPU 내에서 직접 실행할 때보다 비효율적임</li>
-    </ul>
-  </li>
-  <li>
-    <h4 id="하이퍼바이저-hypervisor--다수의-가상-머신을-생성-실행-제어하는-논리적-플랫폼으로써의-프로세스">하이퍼바이저 (<code class="language-plaintext highlighter-rouge">Hypervisor</code>) : 다수의 가상 머신을 생성, 실행, 제어하는 논리적 플랫폼으로써의 프로세스</h4>
-    <ul>
-      <li>하이퍼바이저 안의 응용 프로그램은 물리 하드웨어를 하이퍼바이저에 의해 제한적으로 사용</li>
-      <li>
-        <p>하드웨어 가상 머신 (<code class="language-plaintext highlighter-rouge">H/W Virtual Machine</code>) : 하이퍼바이저에 의해 생성된 가상 환경</p>
-      </li>
-      <li>
-        <h5 id="type-1-호스팅-hosting--하이퍼바이저가-일반-프로그램과-같이-운영체제의-소프트웨어-계층에서-실행">Type 1. 호스팅 (<code class="language-plaintext highlighter-rouge">Hosting</code>) : 하이퍼바이저가 일반 프로그램과 같이 운영체제의 소프트웨어 계층에서 실행</h5>
-        <ul>
-          <li>장점 : 가상의 하드웨어를 구동하기에 호스트 운영 체제에 큰 제약이 없음</li>
-          <li>단점 : 호스트 운영 체제 위에서 게스트 운영체제를 구동해 비교적 큰 오버헤드 가짐 / <code class="language-plaintext highlighter-rouge">GPU Passthrough</code> 미지원</li>
-        </ul>
-      </li>
-      <li>
-        <h5 id="type-2-네이티브-native--하이퍼바이저를-하드웨어에-직접-임베디드되어-실행">Type 2. 네이티브 (<code class="language-plaintext highlighter-rouge">Native</code>) : 하이퍼바이저를 하드웨어에 직접 임베디드되어 실행</h5>
-        <ul>
-          <li>장점 : 별도의 호스트 운영체제가 없어 오버헤드가 적음 / 하드웨어를 직접 제어하기에 효율적인 자원 사용 가능</li>
-          <li>단점 : 자체적인 가상 머신에 대한 관리 기능이 없기에, 이를 위한 별도의 컴퓨터나 콘솔이 필요</li>
-          <li>
-            <h6 id="전가상화-full-virtualization--하이퍼바이저에서-명령을-번역">전가상화 (<code class="language-plaintext highlighter-rouge">Full-Virtualization</code>) : 하이퍼바이저에서 명령을 번역</h6>
-            <ul>
-              <li>게스트 가상 머신이 요청한 명령은 하이퍼바이저가 실행한 관리용 가상 머신 <code class="language-plaintext highlighter-rouge">DOM</code>을 통해 하드웨어에 접근</li>
-              <li>하이퍼바이저가 각 가상 머신들의 모든 명령을 번역하여 실행하고, 이에 맞게 자원을 할당해야 함</li>
-            </ul>
-          </li>
-          <li>
-            <h6 id="반가상화-para-virtualization--게스트-가상-머신에서-명령을-번역">반가상화 (<code class="language-plaintext highlighter-rouge">Para-Virtualization</code>) : 게스트 가상 머신에서 명령을 번역</h6>
-            <ul>
-              <li>게스트 가상 머신이 하이퍼 콜 (<code class="language-plaintext highlighter-rouge">Hyper Call</code>)을 통해 하이퍼바이저에 명령을 직접 요청</li>
-              <li>게스트 가상 머신의 운영 체제가 하이퍼 콜을 요청할 수 있게 커널을 수정해야 함</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <h4 id="컨테이너-container--소프트웨어-패키지의-추상화">컨테이너 (<code class="language-plaintext highlighter-rouge">Container</code>) : 소프트웨어 패키지의 추상화</h4>
-    <ul>
-      <li>컨테이너는 프로세스가 동작하는 격리된 사용자 공간 인스턴스
-        <ul>
-          <li>하나의 응용 프로그램과 그 응용 프로그램의 동작을 위한 라이브러리로 구성</li>
-        </ul>
-      </li>
-      <li>
-        <p>운영체제의 커널은 여러 개의 격리된 컨테이너를 갖추어 각각의 개별적인 서버처럼 동작시킴</p>
-      </li>
-      <li>
-        <h5 id="리눅스-컨테이너-linux-container--리눅스에서-제공하는-운영체제-레벨의-가상화">리눅스 컨테이너 (<code class="language-plaintext highlighter-rouge">Linux Container</code>) : 리눅스에서 제공하는 운영체제 레벨의 가상화</h5>
-        <ul>
-          <li>커널 레벨의 격리된 (<code class="language-plaintext highlighter-rouge">isolated</code>) 공간만 제공할 뿐, 개발 및 서버 운영에 필요한 부가 기능 부족</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<div style="color: white; padding: 3% 2% 2% 2%; background-color: black;">
-사용자가 운영체제 A에서만 가능한 a, 운영체제 B에서만 가능한 b, 운영체제 C에서만 가능한 c을 동시에 실행한다고 가정한다면,
-<ul>
-  <li>에뮬레이션 : 응용 프로그램 ×3 ⊂ 에뮬레이트 운영체제 ×3 ⊂ 에뮬레이터 ×3 ⊂ 호스트 운영체제 ⊂ 하드웨어</li>
-  <li>Type 1. 호스팅 : 응용 프로그램 ×3 ⊂ 게스트 운영체제 ×3 ⊂ 하이퍼바이저 ⊂ 호스트 운영체제 ⊂ 하드웨어</li>
-  <li>Type 2. 네이티브 &gt; 전가상화 : 응용 프로그램 ×3 ⊂ 게스트 운영체제 ×3 ⊂ DOM ⊂ 하이퍼바이저 ⊂ 하드웨어</li>
-  <li>Type 2. 네이티브 &gt; 반가상화 : 응용 프로그램 ×3 ⊂ 수정된 게스트 운영체제 ×3 ⊂ 하이퍼바이저 ⊂ 하드웨어</li>
-  <li>운영체제 수준 가상화 : 컨테이너 프로세스 ×3 ⊂ 컨테이너 관리 소프트웨어 ⊂ 운영체제 ⊂ 하드웨어 </li>
-</ul>
-</div>
-
-<ul>
-  <li>Q. <code class="language-plaintext highlighter-rouge">MacOS</code>에서 도커로 윈도우 컨테이너를 실행하는 경우라면? : 응용 프로그램을 실행할 때 (O) 운영 체제를 실행할 때 (X)
-    <ul>
-      <li>윈도우 컨테이너 ⊂ 가상 머신 (호스팅) ⊂ 컨테이너 관리 소프트웨어 ⊂ 운영체제 ⊂ 하드웨어</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="도커-docker--컨테이너-기반-가상화-플랫폼-container-based-virtualization-platform">도커 (<code class="language-plaintext highlighter-rouge">Docker</code>) : 컨테이너 기반 가상화 플랫폼 (<code class="language-plaintext highlighter-rouge">Container-based Virtualization Platform</code>)</h2>
-
-<p><img src="https://pyrasis.com/assets/images/Docker-HOWTO/docker-containerized-appliction-blue-border_2.png.webp" width="50%" /></p>
-
-<ul>
-  <li><a href="https://www.docker.com">공식 홈페이지</a>에서 <code class="language-plaintext highlighter-rouge">.dmg</code> 파일을 다운로드 후 설치</li>
-  <li>터미널 창에 다음 명령어를 입력해 도커가 정상적으로 설치되었는지 확인</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker version // 현재 도커의 버전 확인
-
-Client:
- Cloud integration: ~
- Version:           ~
- API version:       ~
- Go version:        ~
-
-Server: ~
- Engine:
-  Version:          ~
-  API version:      ~
-  Go version:       ~
-</code></pre></div></div>
-<blockquote>
-  <p>Q. 클라이언트와 서버의 버전 정보가 따로 구성되어 있는 이유?</p>
-  <ul>
-    <li>도커가 클라이언트와 서버의 역할을 각각 수행할 수 있음
-      <ul>
-        <li>리눅스 터미널에 도커 명령어를 입력하면 도커 클라이언트가 도커 서버로 명령을 전송하고 이를 터미널에 출력</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<h3 id="q-도커를-쓰는-이유--비교적-효율적인-가상화-방식--통일된-개발-환경--배포의-동시성">Q. 도커를 쓰는 이유? : 비교적 효율적인 가상화 방식 + 통일된 개발 환경 + 배포의 동시성</h3>
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">Virtualization</code> : 응용 프로그램 실행 시 운영체제 수준 가상화 방식이 성능 손실이 더 적고 빠르게 동작한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">Development</code> : 운영체제에 상관없이 같은 환경에서 개발할 수 있게 해준다.</li>
-  <li><code class="language-plaintext highlighter-rouge">Deployment</code> : 서비스 환경과 응용 프로그램을 같이 배포할 수 있게 한다.</li>
-</ol>
-
-<h3 id="도커-파일-dockerfile--서버-운영-기록을-코드화해-저장한-파일---해당-시점의-도커-이미지-빌드">도커 파일 (<code class="language-plaintext highlighter-rouge">Dockerfile</code>) : 서버 운영 기록을 코드화해 저장한 파일 -&gt; 해당 시점의 도커 이미지 빌드</h3>
-
-<blockquote>
-  <p>눈송이 서버 (<code class="language-plaintext highlighter-rouge">Snowflakes Server</code>) : 각각의 서버마다 운영 기록이 다르기에 서로 모양이 다른 서버들이 공존하는 상황</p>
-  <ul>
-    <li>서버 간의 운영체제, 컴파일러, 설치된 패키지 등의 차이로 발생하는 문제 개선을 위해 서버 운영 기록 저장</li>
-  </ul>
-</blockquote>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">DSL</code> (<code class="language-plaintext highlighter-rouge">Domain-Specific Language</code>) : 도커 파일을 작성할 때 쓰는 언어 (도커 이미지의 생성 과정 표현)</li>
-</ul>
-
-<h3 id="q-도커-파일을-쓰는-이유--테스트-주도-개발의-순환에-부합한다">Q. 도커 파일을 쓰는 이유? : 테스트 주도 개발의 순환에 부합한다.</h3>
-<ul>
-  <li>테스트 주도 개발 (<code class="language-plaintext highlighter-rouge">Test Driven Development</code>) : 선 테스트 후 개발 사이클을 반복하는 개발 방법론</li>
-</ul>
-
-<div style="color: white; padding: 2% 1% 1% 1%; background-color: black;">
-<ol>
-  <li>테스트를 작성한다. : 도커 파일을 만든다.</li>
-  <li>테스트에 실패하고 코드를 수정한다. : 도커 이미지의 빌드에 실패하고 도커 파일을 수정한다.</li>
-  <li>테스트에 성공한다면, 중복된 코드 등을 리펙터링한다. : 도커 이미지의 빌드에 성공한다면, 도커 파일의 내용을 리펙터링하다.</li>
-  <li>처음으로 되돌아간다.</li>
-</ol>
-</div>
-
-<h3 id="도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보을-포함">도커 이미지 (<code class="language-plaintext highlighter-rouge">Docker Image</code>) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보을 포함</h3>
-<ul>
-  <li>상태값을 가지지 않음 (변하지 않는 값들을 저장) &lt;-&gt; 컨테이너 : 이미지가 실행된 살태 (변하는 값들을 저장)</li>
-  <li>이미지 레이어 : 도커 이미지는 여러 개의 읽기 전용 (<code class="language-plaintext highlighter-rouge">Read-Only</code>) 레이어로 구성되고, 파일 추가/생성 시 새로운 레이어를 생성
-    <ul>
-      <li>유니온 파일 시스템 (<code class="language-plaintext highlighter-rouge">Union File Systems</code>)읕 통해 여러 개의 레이어를 하나의 파일 시스템으로 활용</li>
-    </ul>
-  </li>
-  <li>컨테이너 레이어 : 컨테이너가 실행되면 이미지 레이어 위에 읽기/쓰기 (<code class="language-plaintext highlighter-rouge">Read-Write</code>) 레이어를 추가
-    <ul>
-      <li>컨테이너를 실행하면서 생성되거나 변경된 내용을 저장</li>
-    </ul>
-  </li>
-  <li>이미지 경로 : <code class="language-plaintext highlighter-rouge">URL</code> 방식으로 관리 -&gt; 뒤에 태그 (<code class="language-plaintext highlighter-rouge">/tag</code>)를 붙임</li>
-  <li><a href="https://hub.docker.com"> 도커 허브</a> (<code class="language-plaintext highlighter-rouge">Docker Hub</code>) : 도커 이미지를 서버에 무료로 공개하고 관리</li>
-</ul>
-
-<h3 id="q-도커-이미지를-쓰는-이유--도커-이미지와-도커-컨테이너들을-클래스나-인스턴스처럼-활용한다">Q. 도커 이미지를 쓰는 이유? : 도커 이미지와 도커 컨테이너들을 클래스나 인스턴스처럼 활용한다.</h3>
-<ul>
-  <li>도커는 해시 값 (= 컨테이너 ID)과 임의의 이름 (= 컨테이너 이름)를 통해 컨테이너를 구분하고 이들을 환경변수로 관리</li>
-</ul>
-
-<div style="color: white; padding: 3% 2% 2% 2%; background-color: black;">
-운영자가 지금까지 운영한 서버를 도커 이미지로 배포하고 도커 컨테이너에 설치한다면,
-<ul>
-  <li>도커 파일 : 지금까지 서버를 운영한 기록</li>
-  <li>도커 이미지 (도커 파일 + 실행 시점) : 지금부터 설치된 서버가 가질 초기값</li>
-  <li>도커 컨테이너 (도커 파일 + 환경 변수) : 지금부터 설치된 서버가 운영될 장소</li>
-</ul>
-</div>
-<ul>
-  <li>도커 안에서는 서버 역시 하나의 소프트웨어처럼 사용할 수 있고, 생성할 수 있는 컨테이너의 개수에도 제한이 없다.</li>
-</ul>
-
-<h2 id="도커-명령어-docker-command--docker-command-형식으로-구성">도커 명령어 (<code class="language-plaintext highlighter-rouge">Docker Command</code>) : <code class="language-plaintext highlighter-rouge">docker &lt;command&gt;</code> 형식으로 구성</h2>
-<ul>
-  <li>리눅스 터미널에 도커 명령어를 입력하면 도커 서버에서 이에 해당되는 작업 수행</li>
-  <li>항상 <code class="language-plaintext highlighter-rouge">root</code> 권한으로 실행되기에 <code class="language-plaintext highlighter-rouge">$ sudo</code>를 앞에 붙어야 함</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo usermod -aG docker $USER # 현재 사용자를 docker 그룹에 추가
-</code></pre></div></div>
-
-<div style="text-align: center;">
-    <table>
-        <thead>
-            <tr>
-                <td>docker 명령어</td>
-                <td>명령어 형식</td>
-                <td>명령어 설명</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>docker search</td>
-                <td>$ docker search [이미지]</td>
-                <td>도커 허브에서 이미지 검색</td>
-            </tr>
-            <tr>
-                <td>docker pull</td>
-                <td>$ docker pull [사용자명/] 이미지 [:태그]</td>
-                <td>도커 허브에서 이미지 다운로드<br />사용자명을 지정해 도커 허브에서 해당 사용자가 올린 이미지을 다운로드<br />태그로 버전을 지정해 다운로드 (latest : 최신 버전)</td>
-            </tr>
-            <tr>
-                <td>docker images</td>
-                <td>$ docker images</td>
-                <td>사용 가능한 모든 이미지 목록 확인</td>
-            </tr>
-            <tr>
-                <td>docker rmi</td>
-                <td>$ docker rmi 이미지 [:태그]</td>
-                <td>다운로드한 이미지 삭제<br />태그로 버전을 지정해 다운로드 (latest : 최신 버전)</td>
-            </tr>
-            <tr>
-                <td>docker run</td>
-                <td>$ docker run [옵션] [실행할 이미지]</td>
-                <td>이미지를 컨테이너로 생성한 뒤 컨테이너 실행<br />입력받은 이미지가 현재 없다면, 해당 이미지를 도커 허브에서 다운로드<br />실행할 파일을 지정해 직접 실행 가능 (여기서 빠져나오면 컨테이너가 정지)<br /><div style="text-align: center; font-size: 120%; padding: 2% 0% 0% 0%">
-    <table>
-        <thead>
-            <tr>
-                <td>docker run 옵션</td>
-                <td>옵션 설명</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>-d</td>
-                <td>백그라운드 모드 (detached mode)</td>
-            </tr>
-            <tr>
-                <td>-p [호스트 포트:컨테이너 포트]</td>
-                <td>호스트와 컨테이너의 포트를 연결 (port forwarding)<br />http://호스트 IP:호스트 포트로 컨테이너의 포트 접속</td>
-            </tr>
-            <tr>
-                <td>-v [호스트의 디렉터리]</td>
-                <td>호스트의 디렉터리를 컨테이너의 디렉터리에 연결 (mount)</td>
-            </tr>
-            <tr>
-                <td>-e [환경변수]</td>
-                <td>컨테이너 내에서 사용할 환경변수 설정 (environment variable)</td>
-            </tr>
-            <tr>
-                <td>--name [컨테이너 이름]</td>
-                <td>컨테이너 이름 설정 (container name)</td>
-            </tr>
-            <tr>
-                <td>-rm</td>
-                <td>프로세스 종료 시 컨테이너 자동으로 제거 (remove container)</td>
-            </tr>
-            <tr>
-                <td>-link [컨테이너 이름:주소]</td>
-                <td>컨테이너와 컨테이너 연결 (link container)<br />[주소:포트번호]로 컨테이너에 접속</td>
-            </tr>
-            <tr>
-                <td>-it</td>
-                <td>리눅스 터미널 입력을 위한 옵션 (interactive / Pseudo-tty)</td>
-            </tr>
-         </tbody>
-    </table>
-</div></td>
-            </tr>
-            <tr>
-              <td>docker ps</td>
-              <td>$ docker ps [옵션]</td>
-              <td>실행중인 모든 컨테이너 목록 확인<br />-a 옵션으로 정지된 컨테이너까지 모두 검색</td>
-            </tr>
-            <tr>
-              <td>docker start</td>
-              <td>$ docker start [컨테이너 이름 | 컨테이너 ID]</td>
-              <td>정지된 컨테이너 재시작</td>
-            </tr>
-            <tr>
-              <td>docker stop</td>
-              <td>$ docker exec [컨테이너 이름 | 컨테이너 ID]</td>
-              <td>실행 중인 컨테이너 정지</td>
-            </tr>
-            <tr>
-              <td>docker attach</td>
-              <td>$ docker attach [컨테이너 이름 | 컨테이너 ID]</td>
-              <td>실행 중인 컨테이너에 접속</td>
-            </tr>
-            <tr>
-              <td>docker exec</td>
-              <td>$ docker exec [컨테이너 이름 | 컨테이너 ID]<br />[명령] [매개 변수]</td>
-              <td>컨테이너 외부에서 컨테이너 내의 명령 실행</td>
-            </tr>
-            <tr>
-              <td>docker diff</td>
-              <td>$ docker diff [컨테이너 이름 | 컨테이너 ID]</td>
-              <td>컨테이너가 실행되면서 변경된 파일 목록 확인<br />A : 추가된 파일<br />C : 변경된 파일<br />D : 삭제된 파일</td>
-            </tr>
-            <tr>
-              <td>docker cp</td>
-              <td>$ docker cp [컨테이너 이름 | 컨테이너 ID]<br />[:컨테이너 경로] [호스트 경로]</td>
-              <td>컨테이너의 파일을 호스트의 디렉토리로 복사</td>
-            </tr>
-            <tr>
-              <td>docker attach</td>
-              <td>$ docker attach [컨테이너 이름 | 컨테이너 ID]</td>
-              <td>실행 중인 컨테이너에 접속</td>
-            </tr>
-            <tr>
-              <td>docker rm</td>
-              <td>$ docker exec [컨테이너 이름 | 컨테이너 ID]</td>
-              <td>생성된 컨테이너 삭제</td>
-            </tr>
-            <tr>
-              <td>docker commit</td>
-              <td>$ docker commit [옵션] [컨테이너 이름 | 컨테이너 ID]<br />[이미지 이름] [:태그]</td>
-              <td>컨테이너를 이미지 파일로 생성</td>
-            </tr>
-            <tr>
-              <td>docker build</td>
-              <td>$ docker build [옵션] [도커 파일 경로]<br />[--tag 이미지 이름 : 이미지 태그] </td>
-              <td>도커 파일에 설정된 내용대로 도커 이미지 생성<br />--tag 뒤에 이미지 이름와 이미지 태그를 설정할 수 있음</td>
-            </tr>
-            <tr>
-              <td>docker history</td>
-              <td>$ docker history [이미지 이름 | 이미지 ID] [:태그]</td>
-              <td>도커 파일에 설정된 내용대로 이미지 히스토리 생성</td>
-            </tr>
-            <tr>
-              <td>docker inspect</td>
-              <td>$ docker inspect<br />[이미지나 컨테이너 이름 | 이미지나 컨테이너 ID]</td>
-              <td>이미지나 컨테이너의 세부 정보 출력</td>
-            </tr>
-         </tbody>
-    </table>
-</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="DevOps" /><summary type="html"><![CDATA[가상화 (Virtualization) : 컴퓨터 자원 (Computer Resource)의 추상화]]></summary></entry></feed>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[내가 아직 취업 시장에 발도 담구지 않은 대학생인데 내가 개발 블로그의 필요성에 대해 논하는 것이 의미가 있는 걸까? 라는 의문이 들어 작년에 작성한 글에서는 이 부분을 짚어보지 않았다. 하지만 이 부분을 뺀 채로 블로그를 운영하다보니, 처음에 내가 가졌었던 생각이나 느낌이 희석되면서, 여러 가지를 이유로 들며 블로그 운영을 게을리한 것 같다. 그래서 지난 1년간 내가 작성한 내용을 다시 정리하기 앞서, 이 부분에 대해 이야기하고자 한다.]]></summary></entry></feed>
