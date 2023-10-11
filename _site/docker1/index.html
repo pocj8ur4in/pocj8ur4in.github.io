@@ -1,0 +1,909 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[DevOps] 2. 도커 (Docker) - pocj8ur4in’s blog</title>
+<meta name="description" content="가상화 (Virtualization) : 컴퓨터 자원 (Computer Resource)의 추상화">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[DevOps] 2. 도커 (Docker)">
+<meta property="og:url" content="http://localhost:4000/docker1/">
+
+
+  <meta property="og:description" content="가상화 (Virtualization) : 컴퓨터 자원 (Computer Resource)의 추상화">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-11-02T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2022-11-11T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/docker1/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[DevOps] 2. 도커 (Docker)</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[DevOps] 2. 도커 (Docker)">
+    <meta itemprop="description" content="가상화 (Virtualization) : 컴퓨터 자원 (Computer Resource)의 추상화">
+    <meta itemprop="datePublished" content="2022-11-02T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-11-11T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/docker1/" class="u-url" itemprop="url">[DevOps] 2. 도커 (Docker)
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#가상화-virtualization--컴퓨터-자원-computer-resource의-추상화">가상화 (Virtualization) : 컴퓨터 자원 (Computer Resource)의 추상화</a><ul><li><a href="#리소스-가상화-resource-virtualization--컴퓨터-내-특정-자원만을-추상화">리소스 가상화 (Resource Virtualization) : 컴퓨터 내 특정 자원만을 추상화</a></li><li><a href="#플랫폼-가상화-platform-virtualization--여러-개의-프로세스을-구동할-수-있는-플랫폼을-추상화">플랫폼 가상화 (Platform Virtualization) : 여러 개의 프로세스을 구동할 수 있는 플랫폼을 추상화</a><ul><li><a href="#에뮬레이터-emulator--모든-하드웨어-자원의-동작을-소프트웨어로-대체">에뮬레이터 (Emulator) : 모든 하드웨어 자원의 동작을 소프트웨어로 대체</a></li><li><a href="#하이퍼바이저-hypervisor--다수의-가상-머신을-생성-실행-제어하는-논리적-플랫폼으로써의-프로세스">하이퍼바이저 (Hypervisor) : 다수의 가상 머신을 생성, 실행, 제어하는 논리적 플랫폼으로써의 프로세스</a><ul><li><a href="#type-1-호스팅-hosting--하이퍼바이저가-일반-프로그램과-같이-운영체제의-소프트웨어-계층에서-실행">Type 1. 호스팅 (Hosting) : 하이퍼바이저가 일반 프로그램과 같이 운영체제의 소프트웨어 계층에서 실행</a></li><li><a href="#type-2-네이티브-native--하이퍼바이저를-하드웨어에-직접-임베디드되어-실행">Type 2. 네이티브 (Native) : 하이퍼바이저를 하드웨어에 직접 임베디드되어 실행</a><ul><li><a href="#전가상화-full-virtualization--하이퍼바이저에서-명령을-번역">전가상화 (Full-Virtualization) : 하이퍼바이저에서 명령을 번역</a></li><li><a href="#반가상화-para-virtualization--게스트-가상-머신에서-명령을-번역">반가상화 (Para-Virtualization) : 게스트 가상 머신에서 명령을 번역</a></li></ul></li></ul></li><li><a href="#컨테이너-container--소프트웨어-패키지의-추상화">컨테이너 (Container) : 소프트웨어 패키지의 추상화</a><ul><li><a href="#리눅스-컨테이너-linux-container--리눅스에서-제공하는-운영체제-레벨의-가상화">리눅스 컨테이너 (Linux Container) : 리눅스에서 제공하는 운영체제 레벨의 가상화</a></li></ul></li></ul></li></ul></li><li><a href="#도커-docker--컨테이너-기반-가상화-플랫폼-container-based-virtualization-platform">도커 (Docker) : 컨테이너 기반 가상화 플랫폼 (Container-based Virtualization Platform)</a><ul><li><a href="#q-도커를-쓰는-이유--비교적-효율적인-가상화-방식--통일된-개발-환경--배포의-동시성">Q. 도커를 쓰는 이유? : 비교적 효율적인 가상화 방식 + 통일된 개발 환경 + 배포의 동시성</a></li><li><a href="#도커-파일-dockerfile--서버-운영-기록을-코드화해-저장한-파일---해당-시점의-도커-이미지-빌드">도커 파일 (Dockerfile) : 서버 운영 기록을 코드화해 저장한 파일 -&gt; 해당 시점의 도커 이미지 빌드</a></li><li><a href="#q-도커-파일을-쓰는-이유--테스트-주도-개발의-순환에-부합한다">Q. 도커 파일을 쓰는 이유? : 테스트 주도 개발의 순환에 부합한다.</a></li><li><a href="#도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보을-포함">도커 이미지 (Docker Image) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보을 포함</a></li><li><a href="#q-도커-이미지를-쓰는-이유--도커-이미지와-도커-컨테이너들을-클래스나-인스턴스처럼-활용한다">Q. 도커 이미지를 쓰는 이유? : 도커 이미지와 도커 컨테이너들을 클래스나 인스턴스처럼 활용한다.</a></li></ul></li><li><a href="#도커-명령어-docker-command--docker-command-형식으로-구성">도커 명령어 (Docker Command) : docker &lt;command&gt; 형식으로 구성</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="가상화-virtualization--컴퓨터-자원-computer-resource의-추상화">가상화 (<code class="language-plaintext highlighter-rouge">Virtualization</code>) : 컴퓨터 자원 (<code class="language-plaintext highlighter-rouge">Computer Resource</code>)의 추상화</h2>
+
+<ul>
+  <li>하드웨어 종속성 배제 : 물리적인 하드웨어 자원을 논리적인 단위로 나누고 이를 통합해 가상의 자원을 활용</li>
+</ul>
+
+<h3 id="리소스-가상화-resource-virtualization--컴퓨터-내-특정-자원만을-추상화">리소스 가상화 (<code class="language-plaintext highlighter-rouge">Resource Virtualization</code>) : 컴퓨터 내 특정 자원만을 추상화</h3>
+<ul>
+  <li>(가상의) 메인 메모리 : 가상 메모리 (<code class="language-plaintext highlighter-rouge">Virtual Memory</code>)</li>
+  <li>(가상의) 저장 장치 : 클라우드 (<code class="language-plaintext highlighter-rouge">Cloud</code>)</li>
+  <li>(가상의) 그래픽 카드 : <code class="language-plaintext highlighter-rouge">vGPU</code></li>
+  <li>(가상의) 네트워크 : 가상 사설 네트워크 (<code class="language-plaintext highlighter-rouge">Virtual Personal Network</code>)</li>
+</ul>
+
+<h3 id="플랫폼-가상화-platform-virtualization--여러-개의-프로세스을-구동할-수-있는-플랫폼을-추상화">플랫폼 가상화 (<code class="language-plaintext highlighter-rouge">Platform Virtualization</code>) : 여러 개의 프로세스을 구동할 수 있는 플랫폼을 추상화</h3>
+<ul>
+  <li>에뮬레이션 (<code class="language-plaintext highlighter-rouge">Emulation</code>) : 다른 컴퓨터 프로세서를 위해 쓰인 운영체제와 응용 프로그램을 실행</li>
+  <li>하드웨어 수준 가상화 (<code class="language-plaintext highlighter-rouge">H/W-level Virtualization</code>) : 하드웨어 플랫폼 위의 하이퍼바이저를 통해 가상 머신을 관리함</li>
+  <li>
+    <p>운영체제 수준 가상화 (<code class="language-plaintext highlighter-rouge">O/S-level Virtualization</code>) : 운영체제의 커널이 각각의 격리된 프로세스를 동작시킴</p>
+  </li>
+  <li>
+    <h4 id="에뮬레이터-emulator--모든-하드웨어-자원의-동작을-소프트웨어로-대체">에뮬레이터 (<code class="language-plaintext highlighter-rouge">Emulator</code>) : 모든 하드웨어 자원의 동작을 소프트웨어로 대체</h4>
+    <ul>
+      <li>애뮬레이터 안의 응용 프로그램은 물리 하드웨어가 아닌 인터프리터 프로그램을 통해 실행 (<code class="language-plaintext highlighter-rouge">Java Virtual Machine</code>)
+        <ul>
+          <li>인터프리터 프로그램은 가상 머신에서 명령을 수행할 때마다 물리 CPU가 처리할 바이너리 코드 갱신</li>
+          <li>물리 CPU는 에뮬레이터를 실행하기 위한 바이너리 코드를 해석해 이를 대신 실행</li>
+        </ul>
+      </li>
+      <li>장점 : 아키텍쳐가 전혀 다른 하드웨어 역시 가상화할 수 있음 (vs 하이퍼바이저 : 가상화할 수 없음)</li>
+      <li>단점 : 물리 CPU 내에서 직접 실행할 때보다 비효율적임</li>
+    </ul>
+  </li>
+  <li>
+    <h4 id="하이퍼바이저-hypervisor--다수의-가상-머신을-생성-실행-제어하는-논리적-플랫폼으로써의-프로세스">하이퍼바이저 (<code class="language-plaintext highlighter-rouge">Hypervisor</code>) : 다수의 가상 머신을 생성, 실행, 제어하는 논리적 플랫폼으로써의 프로세스</h4>
+    <ul>
+      <li>하이퍼바이저 안의 응용 프로그램은 물리 하드웨어를 하이퍼바이저에 의해 제한적으로 사용</li>
+      <li>
+        <p>하드웨어 가상 머신 (<code class="language-plaintext highlighter-rouge">H/W Virtual Machine</code>) : 하이퍼바이저에 의해 생성된 가상 환경</p>
+      </li>
+      <li>
+        <h5 id="type-1-호스팅-hosting--하이퍼바이저가-일반-프로그램과-같이-운영체제의-소프트웨어-계층에서-실행">Type 1. 호스팅 (<code class="language-plaintext highlighter-rouge">Hosting</code>) : 하이퍼바이저가 일반 프로그램과 같이 운영체제의 소프트웨어 계층에서 실행</h5>
+        <ul>
+          <li>장점 : 가상의 하드웨어를 구동하기에 호스트 운영 체제에 큰 제약이 없음</li>
+          <li>단점 : 호스트 운영 체제 위에서 게스트 운영체제를 구동해 비교적 큰 오버헤드 가짐 / <code class="language-plaintext highlighter-rouge">GPU Passthrough</code> 미지원</li>
+        </ul>
+      </li>
+      <li>
+        <h5 id="type-2-네이티브-native--하이퍼바이저를-하드웨어에-직접-임베디드되어-실행">Type 2. 네이티브 (<code class="language-plaintext highlighter-rouge">Native</code>) : 하이퍼바이저를 하드웨어에 직접 임베디드되어 실행</h5>
+        <ul>
+          <li>장점 : 별도의 호스트 운영체제가 없어 오버헤드가 적음 / 하드웨어를 직접 제어하기에 효율적인 자원 사용 가능</li>
+          <li>단점 : 자체적인 가상 머신에 대한 관리 기능이 없기에, 이를 위한 별도의 컴퓨터나 콘솔이 필요</li>
+          <li>
+            <h6 id="전가상화-full-virtualization--하이퍼바이저에서-명령을-번역">전가상화 (<code class="language-plaintext highlighter-rouge">Full-Virtualization</code>) : 하이퍼바이저에서 명령을 번역</h6>
+            <ul>
+              <li>게스트 가상 머신이 요청한 명령은 하이퍼바이저가 실행한 관리용 가상 머신 <code class="language-plaintext highlighter-rouge">DOM</code>을 통해 하드웨어에 접근</li>
+              <li>하이퍼바이저가 각 가상 머신들의 모든 명령을 번역하여 실행하고, 이에 맞게 자원을 할당해야 함</li>
+            </ul>
+          </li>
+          <li>
+            <h6 id="반가상화-para-virtualization--게스트-가상-머신에서-명령을-번역">반가상화 (<code class="language-plaintext highlighter-rouge">Para-Virtualization</code>) : 게스트 가상 머신에서 명령을 번역</h6>
+            <ul>
+              <li>게스트 가상 머신이 하이퍼 콜 (<code class="language-plaintext highlighter-rouge">Hyper Call</code>)을 통해 하이퍼바이저에 명령을 직접 요청</li>
+              <li>게스트 가상 머신의 운영 체제가 하이퍼 콜을 요청할 수 있게 커널을 수정해야 함</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h4 id="컨테이너-container--소프트웨어-패키지의-추상화">컨테이너 (<code class="language-plaintext highlighter-rouge">Container</code>) : 소프트웨어 패키지의 추상화</h4>
+    <ul>
+      <li>컨테이너는 프로세스가 동작하는 격리된 사용자 공간 인스턴스
+        <ul>
+          <li>하나의 응용 프로그램과 그 응용 프로그램의 동작을 위한 라이브러리로 구성</li>
+        </ul>
+      </li>
+      <li>
+        <p>운영체제의 커널은 여러 개의 격리된 컨테이너를 갖추어 각각의 개별적인 서버처럼 동작시킴</p>
+      </li>
+      <li>
+        <h5 id="리눅스-컨테이너-linux-container--리눅스에서-제공하는-운영체제-레벨의-가상화">리눅스 컨테이너 (<code class="language-plaintext highlighter-rouge">Linux Container</code>) : 리눅스에서 제공하는 운영체제 레벨의 가상화</h5>
+        <ul>
+          <li>커널 레벨의 격리된 (<code class="language-plaintext highlighter-rouge">isolated</code>) 공간만 제공할 뿐, 개발 및 서버 운영에 필요한 부가 기능 부족</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div style="color: white; padding: 3% 2% 2% 2%; background-color: black;">
+사용자가 운영체제 A에서만 가능한 a, 운영체제 B에서만 가능한 b, 운영체제 C에서만 가능한 c을 동시에 실행한다고 가정한다면,
+<ul>
+  <li>에뮬레이션 : 응용 프로그램 ×3 ⊂ 에뮬레이트 운영체제 ×3 ⊂ 에뮬레이터 ×3 ⊂ 호스트 운영체제 ⊂ 하드웨어</li>
+  <li>Type 1. 호스팅 : 응용 프로그램 ×3 ⊂ 게스트 운영체제 ×3 ⊂ 하이퍼바이저 ⊂ 호스트 운영체제 ⊂ 하드웨어</li>
+  <li>Type 2. 네이티브 &gt; 전가상화 : 응용 프로그램 ×3 ⊂ 게스트 운영체제 ×3 ⊂ DOM ⊂ 하이퍼바이저 ⊂ 하드웨어</li>
+  <li>Type 2. 네이티브 &gt; 반가상화 : 응용 프로그램 ×3 ⊂ 수정된 게스트 운영체제 ×3 ⊂ 하이퍼바이저 ⊂ 하드웨어</li>
+  <li>운영체제 수준 가상화 : 컨테이너 프로세스 ×3 ⊂ 컨테이너 관리 소프트웨어 ⊂ 운영체제 ⊂ 하드웨어 </li>
+</ul>
+</div>
+
+<ul>
+  <li>Q. <code class="language-plaintext highlighter-rouge">MacOS</code>에서 도커로 윈도우 컨테이너를 실행하는 경우라면? : 응용 프로그램을 실행할 때 (O) 운영 체제를 실행할 때 (X)
+    <ul>
+      <li>윈도우 컨테이너 ⊂ 가상 머신 (호스팅) ⊂ 컨테이너 관리 소프트웨어 ⊂ 운영체제 ⊂ 하드웨어</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="도커-docker--컨테이너-기반-가상화-플랫폼-container-based-virtualization-platform">도커 (<code class="language-plaintext highlighter-rouge">Docker</code>) : 컨테이너 기반 가상화 플랫폼 (<code class="language-plaintext highlighter-rouge">Container-based Virtualization Platform</code>)</h2>
+
+<p><img src="https://pyrasis.com/assets/images/Docker-HOWTO/docker-containerized-appliction-blue-border_2.png.webp" width="50%" /></p>
+
+<ul>
+  <li><a href="https://www.docker.com">공식 홈페이지</a>에서 <code class="language-plaintext highlighter-rouge">.dmg</code> 파일을 다운로드 후 설치</li>
+  <li>터미널 창에 다음 명령어를 입력해 도커가 정상적으로 설치되었는지 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker version // 현재 도커의 버전 확인
+
+Client:
+ Cloud integration: ~
+ Version:           ~
+ API version:       ~
+ Go version:        ~
+
+Server: ~
+ Engine:
+  Version:          ~
+  API version:      ~
+  Go version:       ~
+</code></pre></div></div>
+<blockquote>
+  <p>Q. 클라이언트와 서버의 버전 정보가 따로 구성되어 있는 이유?</p>
+  <ul>
+    <li>도커가 클라이언트와 서버의 역할을 각각 수행할 수 있음
+      <ul>
+        <li>리눅스 터미널에 도커 명령어를 입력하면 도커 클라이언트가 도커 서버로 명령을 전송하고 이를 터미널에 출력</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h3 id="q-도커를-쓰는-이유--비교적-효율적인-가상화-방식--통일된-개발-환경--배포의-동시성">Q. 도커를 쓰는 이유? : 비교적 효율적인 가상화 방식 + 통일된 개발 환경 + 배포의 동시성</h3>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">Virtualization</code> : 응용 프로그램 실행 시 운영체제 수준 가상화 방식이 성능 손실이 더 적고 빠르게 동작한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">Development</code> : 운영체제에 상관없이 같은 환경에서 개발할 수 있게 해준다.</li>
+  <li><code class="language-plaintext highlighter-rouge">Deployment</code> : 서비스 환경과 응용 프로그램을 같이 배포할 수 있게 한다.</li>
+</ol>
+
+<h3 id="도커-파일-dockerfile--서버-운영-기록을-코드화해-저장한-파일---해당-시점의-도커-이미지-빌드">도커 파일 (<code class="language-plaintext highlighter-rouge">Dockerfile</code>) : 서버 운영 기록을 코드화해 저장한 파일 -&gt; 해당 시점의 도커 이미지 빌드</h3>
+
+<blockquote>
+  <p>눈송이 서버 (<code class="language-plaintext highlighter-rouge">Snowflakes Server</code>) : 각각의 서버마다 운영 기록이 다르기에 서로 모양이 다른 서버들이 공존하는 상황</p>
+  <ul>
+    <li>서버 간의 운영체제, 컴파일러, 설치된 패키지 등의 차이로 발생하는 문제 개선을 위해 서버 운영 기록 저장</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">DSL</code> (<code class="language-plaintext highlighter-rouge">Domain-Specific Language</code>) : 도커 파일을 작성할 때 쓰는 언어 (도커 이미지의 생성 과정 표현)</li>
+</ul>
+
+<h3 id="q-도커-파일을-쓰는-이유--테스트-주도-개발의-순환에-부합한다">Q. 도커 파일을 쓰는 이유? : 테스트 주도 개발의 순환에 부합한다.</h3>
+<ul>
+  <li>테스트 주도 개발 (<code class="language-plaintext highlighter-rouge">Test Driven Development</code>) : 선 테스트 후 개발 사이클을 반복하는 개발 방법론</li>
+</ul>
+
+<div style="color: white; padding: 2% 1% 1% 1%; background-color: black;">
+<ol>
+  <li>테스트를 작성한다. : 도커 파일을 만든다.</li>
+  <li>테스트에 실패하고 코드를 수정한다. : 도커 이미지의 빌드에 실패하고 도커 파일을 수정한다.</li>
+  <li>테스트에 성공한다면, 중복된 코드 등을 리펙터링한다. : 도커 이미지의 빌드에 성공한다면, 도커 파일의 내용을 리펙터링하다.</li>
+  <li>처음으로 되돌아간다.</li>
+</ol>
+</div>
+
+<h3 id="도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보을-포함">도커 이미지 (<code class="language-plaintext highlighter-rouge">Docker Image</code>) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보을 포함</h3>
+<ul>
+  <li>상태값을 가지지 않음 (변하지 않는 값들을 저장) &lt;-&gt; 컨테이너 : 이미지가 실행된 살태 (변하는 값들을 저장)</li>
+  <li>이미지 레이어 : 도커 이미지는 여러 개의 읽기 전용 (<code class="language-plaintext highlighter-rouge">Read-Only</code>) 레이어로 구성되고, 파일 추가/생성 시 새로운 레이어를 생성
+    <ul>
+      <li>유니온 파일 시스템 (<code class="language-plaintext highlighter-rouge">Union File Systems</code>)읕 통해 여러 개의 레이어를 하나의 파일 시스템으로 활용</li>
+    </ul>
+  </li>
+  <li>컨테이너 레이어 : 컨테이너가 실행되면 이미지 레이어 위에 읽기/쓰기 (<code class="language-plaintext highlighter-rouge">Read-Write</code>) 레이어를 추가
+    <ul>
+      <li>컨테이너를 실행하면서 생성되거나 변경된 내용을 저장</li>
+    </ul>
+  </li>
+  <li>이미지 경로 : <code class="language-plaintext highlighter-rouge">URL</code> 방식으로 관리 -&gt; 뒤에 태그 (<code class="language-plaintext highlighter-rouge">/tag</code>)를 붙임</li>
+  <li><a href="https://hub.docker.com"> 도커 허브</a> (<code class="language-plaintext highlighter-rouge">Docker Hub</code>) : 도커 이미지를 서버에 무료로 공개하고 관리</li>
+</ul>
+
+<h3 id="q-도커-이미지를-쓰는-이유--도커-이미지와-도커-컨테이너들을-클래스나-인스턴스처럼-활용한다">Q. 도커 이미지를 쓰는 이유? : 도커 이미지와 도커 컨테이너들을 클래스나 인스턴스처럼 활용한다.</h3>
+<ul>
+  <li>도커는 해시 값 (= 컨테이너 ID)과 임의의 이름 (= 컨테이너 이름)를 통해 컨테이너를 구분하고 이들을 환경변수로 관리</li>
+</ul>
+
+<div style="color: white; padding: 3% 2% 2% 2%; background-color: black;">
+운영자가 지금까지 운영한 서버를 도커 이미지로 배포하고 도커 컨테이너에 설치한다면,
+<ul>
+  <li>도커 파일 : 지금까지 서버를 운영한 기록</li>
+  <li>도커 이미지 (도커 파일 + 실행 시점) : 지금부터 설치된 서버가 가질 초기값</li>
+  <li>도커 컨테이너 (도커 파일 + 환경 변수) : 지금부터 설치된 서버가 운영될 장소</li>
+</ul>
+</div>
+<ul>
+  <li>도커 안에서는 서버 역시 하나의 소프트웨어처럼 사용할 수 있고, 생성할 수 있는 컨테이너의 개수에도 제한이 없다.</li>
+</ul>
+
+<h2 id="도커-명령어-docker-command--docker-command-형식으로-구성">도커 명령어 (<code class="language-plaintext highlighter-rouge">Docker Command</code>) : <code class="language-plaintext highlighter-rouge">docker &lt;command&gt;</code> 형식으로 구성</h2>
+<ul>
+  <li>리눅스 터미널에 도커 명령어를 입력하면 도커 서버에서 이에 해당되는 작업 수행</li>
+  <li>항상 <code class="language-plaintext highlighter-rouge">root</code> 권한으로 실행되기에 <code class="language-plaintext highlighter-rouge">$ sudo</code>를 앞에 붙어야 함</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo usermod -aG docker $USER # 현재 사용자를 docker 그룹에 추가
+</code></pre></div></div>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>docker 명령어</td>
+                <td>명령어 형식</td>
+                <td>명령어 설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>docker search</td>
+                <td>$ docker search [이미지]</td>
+                <td>도커 허브에서 이미지 검색</td>
+            </tr>
+            <tr>
+                <td>docker pull</td>
+                <td>$ docker pull [사용자명/] 이미지 [:태그]</td>
+                <td>도커 허브에서 이미지 다운로드<br />사용자명을 지정해 도커 허브에서 해당 사용자가 올린 이미지을 다운로드<br />태그로 버전을 지정해 다운로드 (latest : 최신 버전)</td>
+            </tr>
+            <tr>
+                <td>docker images</td>
+                <td>$ docker images</td>
+                <td>사용 가능한 모든 이미지 목록 확인</td>
+            </tr>
+            <tr>
+                <td>docker rmi</td>
+                <td>$ docker rmi 이미지 [:태그]</td>
+                <td>다운로드한 이미지 삭제<br />태그로 버전을 지정해 다운로드 (latest : 최신 버전)</td>
+            </tr>
+            <tr>
+                <td>docker run</td>
+                <td>$ docker run [옵션] [실행할 이미지]</td>
+                <td>이미지를 컨테이너로 생성한 뒤 컨테이너 실행<br />입력받은 이미지가 현재 없다면, 해당 이미지를 도커 허브에서 다운로드<br />실행할 파일을 지정해 직접 실행 가능 (여기서 빠져나오면 컨테이너가 정지)<br /><div style="text-align: center; font-size: 120%; padding: 2% 0% 0% 0%">
+    <table>
+        <thead>
+            <tr>
+                <td>docker run 옵션</td>
+                <td>옵션 설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>-d</td>
+                <td>백그라운드 모드 (detached mode)</td>
+            </tr>
+            <tr>
+                <td>-p [호스트 포트:컨테이너 포트]</td>
+                <td>호스트와 컨테이너의 포트를 연결 (port forwarding)<br />http://호스트 IP:호스트 포트로 컨테이너의 포트 접속</td>
+            </tr>
+            <tr>
+                <td>-v [호스트의 디렉터리]</td>
+                <td>호스트의 디렉터리를 컨테이너의 디렉터리에 연결 (mount)</td>
+            </tr>
+            <tr>
+                <td>-e [환경변수]</td>
+                <td>컨테이너 내에서 사용할 환경변수 설정 (environment variable)</td>
+            </tr>
+            <tr>
+                <td>--name [컨테이너 이름]</td>
+                <td>컨테이너 이름 설정 (container name)</td>
+            </tr>
+            <tr>
+                <td>-rm</td>
+                <td>프로세스 종료 시 컨테이너 자동으로 제거 (remove container)</td>
+            </tr>
+            <tr>
+                <td>-link [컨테이너 이름:주소]</td>
+                <td>컨테이너와 컨테이너 연결 (link container)<br />[주소:포트번호]로 컨테이너에 접속</td>
+            </tr>
+            <tr>
+                <td>-it</td>
+                <td>리눅스 터미널 입력을 위한 옵션 (interactive / Pseudo-tty)</td>
+            </tr>
+         </tbody>
+    </table>
+</div></td>
+            </tr>
+            <tr>
+              <td>docker ps</td>
+              <td>$ docker ps [옵션]</td>
+              <td>실행중인 모든 컨테이너 목록 확인<br />-a 옵션으로 정지된 컨테이너까지 모두 검색</td>
+            </tr>
+            <tr>
+              <td>docker start</td>
+              <td>$ docker start [컨테이너 이름 | 컨테이너 ID]</td>
+              <td>정지된 컨테이너 재시작</td>
+            </tr>
+            <tr>
+              <td>docker stop</td>
+              <td>$ docker exec [컨테이너 이름 | 컨테이너 ID]</td>
+              <td>실행 중인 컨테이너 정지</td>
+            </tr>
+            <tr>
+              <td>docker attach</td>
+              <td>$ docker attach [컨테이너 이름 | 컨테이너 ID]</td>
+              <td>실행 중인 컨테이너에 접속</td>
+            </tr>
+            <tr>
+              <td>docker exec</td>
+              <td>$ docker exec [컨테이너 이름 | 컨테이너 ID]<br />[명령] [매개 변수]</td>
+              <td>컨테이너 외부에서 컨테이너 내의 명령 실행</td>
+            </tr>
+            <tr>
+              <td>docker diff</td>
+              <td>$ docker diff [컨테이너 이름 | 컨테이너 ID]</td>
+              <td>컨테이너가 실행되면서 변경된 파일 목록 확인<br />A : 추가된 파일<br />C : 변경된 파일<br />D : 삭제된 파일</td>
+            </tr>
+            <tr>
+              <td>docker cp</td>
+              <td>$ docker cp [컨테이너 이름 | 컨테이너 ID]<br />[:컨테이너 경로] [호스트 경로]</td>
+              <td>컨테이너의 파일을 호스트의 디렉토리로 복사</td>
+            </tr>
+            <tr>
+              <td>docker attach</td>
+              <td>$ docker attach [컨테이너 이름 | 컨테이너 ID]</td>
+              <td>실행 중인 컨테이너에 접속</td>
+            </tr>
+            <tr>
+              <td>docker rm</td>
+              <td>$ docker exec [컨테이너 이름 | 컨테이너 ID]</td>
+              <td>생성된 컨테이너 삭제</td>
+            </tr>
+            <tr>
+              <td>docker commit</td>
+              <td>$ docker commit [옵션] [컨테이너 이름 | 컨테이너 ID]<br />[이미지 이름] [:태그]</td>
+              <td>컨테이너를 이미지 파일로 생성</td>
+            </tr>
+            <tr>
+              <td>docker build</td>
+              <td>$ docker build [옵션] [도커 파일 경로]<br />[--tag 이미지 이름 : 이미지 태그] </td>
+              <td>도커 파일에 설정된 내용대로 도커 이미지 생성<br />--tag 뒤에 이미지 이름와 이미지 태그를 설정할 수 있음</td>
+            </tr>
+            <tr>
+              <td>docker history</td>
+              <td>$ docker history [이미지 이름 | 이미지 ID] [:태그]</td>
+              <td>도커 파일에 설정된 내용대로 이미지 히스토리 생성</td>
+            </tr>
+            <tr>
+              <td>docker inspect</td>
+              <td>$ docker inspect<br />[이미지나 컨테이너 이름 | 이미지나 컨테이너 ID]</td>
+              <td>이미지나 컨테이너의 세부 정보 출력</td>
+            </tr>
+         </tbody>
+    </table>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#devops" class="page__taxonomy-item p-category" rel="tag">DevOps</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-11-11">November 11, 2022</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BDevOps%5D+2.+%EB%8F%84%EC%BB%A4+%28Docker%29%20http%3A%2F%2Flocalhost%3A4000%2Fdocker1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdocker1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/os1/" class="pagination--pager" title="[CS] 1. 운영체제 (Operation System)
+">이전</a>
+    
+    
+      <a href="/spring1/" class="pagination--pager" title="[BE] 1. 스프링 (Spring) 기초
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/vcw2/" rel="permalink">[vocawik] 07/07 진행 내용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">#1. init: git 저장소 생성
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog6/" rel="permalink">[Github Pages] 6. Github Pages 블로그 기능 추가
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html이나 css를 다룰 줄 알면 금방 할 수 있는, 혹은 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog5/" rel="permalink">[Github Pages] 5. Github Pages 블로그 설정 &amp; 포스트
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  솔직히 블로그 설정을 건드는 부분은 내가 아는 정보들을 그대로 나열할 수 밖에 없다고 생각한다… 그래도 내가 시행착오를 겪었던 경험을 떠올리면서 하나하나 풀어서 작성하려 하였으니, 미숙한 글이지만 남들에게 도움이 되었으면 정말 좋겠다… 그리고 Github Pages이나 Min...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog4/" rel="permalink">[Github Pages] 4. Github Pages 블로그 개설
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나… 그때쯤 작성한 글들 대부분이 너무 나열식...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 pocj8ur4in. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

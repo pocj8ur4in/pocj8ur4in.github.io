@@ -1,0 +1,2424 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[CS] 1. 운영체제 (Operation System) - pocj8ur4in’s blog</title>
+<meta name="description" content="운영체제 (Operation System) : 사용자가 컴퓨터에서 실행한 프로그램을 관리하고 제어    컴퓨터 시스템 자원의 효율적인 관리 (Performance) : 하드웨어 자원을 각각의 사용자 응용 프로그램에 적절히 분배            하드웨어 자원 (Hardware Resource) : CPU 시간, 기억 장치 및 디스크 영역, I/O 장치           사용자 편의성 제공 (Convenience) : 사용자가 더 편리하게 사용할 수 있는 환경을 구성">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[CS] 1. 운영체제 (Operation System)">
+<meta property="og:url" content="http://localhost:4000/os1/">
+
+
+  <meta property="og:description" content="운영체제 (Operation System) : 사용자가 컴퓨터에서 실행한 프로그램을 관리하고 제어    컴퓨터 시스템 자원의 효율적인 관리 (Performance) : 하드웨어 자원을 각각의 사용자 응용 프로그램에 적절히 분배            하드웨어 자원 (Hardware Resource) : CPU 시간, 기억 장치 및 디스크 영역, I/O 장치           사용자 편의성 제공 (Convenience) : 사용자가 더 편리하게 사용할 수 있는 환경을 구성">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-10-07T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2022-12-12T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/os1/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[CS] 1. 운영체제 (Operation System)</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[CS] 1. 운영체제 (Operation System)">
+    <meta itemprop="description" content="운영체제 (Operation System) : 사용자가 컴퓨터에서 실행한 프로그램을 관리하고 제어  컴퓨터 시스템 자원의 효율적인 관리 (Performance) : 하드웨어 자원을 각각의 사용자 응용 프로그램에 적절히 분배          하드웨어 자원 (Hardware Resource) : CPU 시간, 기억 장치 및 디스크 영역, I/O 장치        사용자 편의성 제공 (Convenience) : 사용자가 더 편리하게 사용할 수 있는 환경을 구성">
+    <meta itemprop="datePublished" content="2022-10-07T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-12-12T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/os1/" class="u-url" itemprop="url">[CS] 1. 운영체제 (Operation System)
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          35 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#운영체제-operation-system--사용자가-컴퓨터에서-실행한-프로그램을-관리하고-제어">운영체제 (Operation System) : 사용자가 컴퓨터에서 실행한 프로그램을 관리하고 제어</a><ul><li><a href="#부팅-booting--컴퓨터를-시작할-때-자기-자신을-구동시킬-프로그램을-스스로-불러내는-동작">부팅 (Booting) : 컴퓨터를 시작할 때 자기 자신을 구동시킬 프로그램을 스스로 불러내는 동작</a></li><li><a href="#일괄-처리-시스템-batch-processing-system--프로그램-수행-과정의-자동화">일괄 처리 시스템 (Batch Processing System) : 프로그램 수행 과정의 자동화</a></li><li><a href="#시분할-시스템-time-sharing-system--cpu가-프로그램을-수행하는-시간을-제한">시분할 시스템 (Time-sharing System) : CPU가 프로그램을 수행하는 시간을 제한</a></li><li><a href="#다중-프로그래밍-시스템-multiprogramming-system--메모리에-여러-응용-프로그램을-적재시켜-idle-상태-최소화">다중 프로그래밍 시스템 (Multiprogramming System) : 메모리에 여러 응용 프로그램을 적재시켜 idle 상태 최소화</a></li><li><a href="#인터럽트-기반-시스템-interrupt-based-system--인터럽트-발생-시-isr에-맞는-처리-수행">인터럽트 기반 시스템 (Interrupt-based System) : 인터럽트 발생 시 ISR에 맞는 처리 수행</a></li><li><a href="#이중-모드-dual-mode-execution--유저-user-모드와-커널-kernel-모드를-나눔">이중 모드 (Dual Mode Execution) : 유저 (User) 모드와 커널 (Kernel) 모드를 나눔</a><ul><li><a href="#하드웨어-보호-hw-protection--잘못된-명령이나-접근으로부터-보호하기-위해-운영체제에서-내부-인터럽트를-발생">하드웨어 보호 (H/W Protection) : 잘못된 명령이나 접근으로부터 보호하기 위해 운영체제에서 내부 인터럽트를 발생</a><ul><li><a href="#입출력-장치-보호-io-protection--in-out과-같은-입출력-명령을-특권-명령으로-지정해-운영체제를-통해-수행">입출력 장치 보호 (I/O Protection) : in, out과 같은 입출력 명령을 특권 명령으로 지정해 운영체제를 통해 수행</a></li><li><a href="#메모리-보호-memory-protection--cpu와-메인-메모리-간-주소-버스에-mmu-memory-management-unit를-설치">메모리 보호 (Memory Protection) : CPU와 메인 메모리 간 주소 버스에 MMU (Memory Management Unit)를 설치</a></li><li><a href="#cpu-보호-cpu-protection--타이머-timer를-두어-일정-시간이-지나면-타이머-인터럽트를-발생시킴">CPU 보호 (CPU Protection) : 타이머 (Timer)를 두어 일정 시간이 지나면 타이머 인터럽트를 발생시킴</a></li></ul></li></ul></li></ul></li><li><a href="#프로세스-process--실제-메인-메모리에-할당되어-실행-중인-프로그램">프로세스 (Process) : 실제 메인 메모리에 할당되어 실행 중인 프로그램</a><ul><li><a href="#프로세스의-생성과-종료-creation-and-destruction-of-process">프로세스의 생성과 종료 (Creation and Destruction of Process)</a></li><li><a href="#프로세스-컨트롤-블록-process-control-block--프로세스에-대한-모든-정보를-저장하는-곳">프로세스 컨트롤 블록 (Process Control Block) : 프로세스에 대한 모든 정보를 저장하는 곳</a><ul><li><a href="#프로세스-상태-process-status--각-단계들에서-상태-전이가-일어나-다음-단계로-넘어감">프로세스 상태 (Process Status) : 각 단계들에서 상태 전이가 일어나 다음 단계로 넘어감</a></li></ul></li><li><a href="#프로세스-큐-process-queue--커널이-프로세스-스케줄링을-위해-데이터-영역에서-관리하는-큐">프로세스 큐 (Process Queue) : 커널이 프로세스 스케줄링을 위해 데이터 영역에서 관리하는 큐</a><ul><li><a href="#스케줄러-cpu-scheduler--프로세스-순서를-정해-프로세스-큐에-올릴-것을-결정하는-커널의-코드">스케줄러 (CPU Scheduler) : 프로세스 순서를 정해 프로세스 큐에 올릴 것을 결정하는 커널의 코드</a><ul><li><a href="#문맥-전환-context-switching--cpu가-실행중인-프로세스를-멈추고-다른-프로세스를-실행하는-작업">문맥 전환 (Context Switching) : CPU가 실행중인 프로세스를 멈추고 다른 프로세스를 실행하는 작업</a></li></ul></li></ul></li></ul></li><li><a href="#cpu-스케줄링-cpu-scheduling--cpu-스케줄러에서-어느-프로세스를-다음에-실행할지-지정">CPU 스케줄링 (CPU Scheduling) : CPU 스케줄러에서 어느 프로세스를 다음에 실행할지 지정</a><ul><li><a href="#cpu-스케줄링-척도-cpu-scheduling-criteria--cpu-스케줄링의-효율을-분석하는-기준">CPU 스케줄링 척도 (CPU Scheduling Criteria) : CPU 스케줄링의 효율을 분석하는 기준</a></li><li><a href="#선입선출-first-come-first-served-스케줄링--가장-먼저-작업을-요청한-프로세스를-먼저-수행">선입선출 (First-Come, First-Served) 스케줄링 : 가장 먼저 작업을 요청한 프로세스를 먼저 수행</a></li><li><a href="#최단작업-shortest-job-first-스케줄링--시간이-가장-짧게-수행되는-프로세스를-먼저-수행">최단작업 (Shortest-Job-First) 스케줄링 : 시간이 가장 짧게 수행되는 프로세스를 먼저 수행</a></li><li><a href="#우선순위-priority-스케줄링--우선순위가-가장-높은-프로세스를-먼저-수행">우선순위 (Priority) 스케줄링 : 우선순위가 가장 높은 프로세스를 먼저 수행</a></li><li><a href="#라운드-로빈-round-robin-스케줄링--원-모양으로-모든-프로세스를-돌아가면서-수행">라운드 로빈 (Round-Robin) 스케줄링 : 원 모양으로 모든 프로세스를 돌아가면서 수행</a></li><li><a href="#멀티레벨-큐-multi-level-queue-스케줄링--각-프로세스-그룹에-따른-큐를-두어-수행">멀티레벨 큐 (Multi-level Queue) 스케줄링 : 각 프로세스 그룹에 따른 큐를 두어 수행</a></li><li><a href="#멀티레벨-피드백-큐-multi-level-feedback-queue-스케줄링--멀테레벨-큐에-피드백-추가">멀티레벨 피드백 큐 (Multi-level Feedback Queue) 스케줄링 : 멀테레벨 큐에 피드백 추가</a></li></ul></li><li><a href="#프로세스-간-통신-inter-process-communication--프로세스들-간에-서로-데이터를-주고받는-행위">프로세스 간 통신 (Inter-Process Communication) : 프로세스들 간에 서로 데이터를 주고받는 행위</a><ul><li><a href="#공유-메모리-shared-memory--협력-프로세스-간-하나의-공유-메모리-영역을-만들어-상호-통신">공유 메모리 (Shared Memory) : 협력 프로세스 간 하나의 공유 메모리 영역을 만들어 상호 통신</a></li><li><a href="#메시지-패싱-message-passing--협력-프로세스-간-각자의-메시지를-운영-체제에-전달해-통신">메시지 패싱 (Message Passing) : 협력 프로세스 간 각자의 메시지를 운영 체제에 전달해 통신</a></li></ul></li><li><a href="#쓰레드-thread--프로세스-내부의-흐름">쓰레드 (Thread) : 프로세스 내부의 흐름</a><ul><li><a href="#다중-쓰레드-multi-threads---하나의-프로세스에-쓰레드가-2개-이상-존재">다중 쓰레드 (Multi-Threads) :  하나의 프로세스에 쓰레드가 2개 이상 존재</a></li><li><a href="#다중-쓰레드-모델-multi-threads-models---2개-이상의-쓰레드로-구성된-모델">다중 쓰레드 모델 (Multi-Threads Models) :  2개 이상의 쓰레드로 구성된 모델</a><ul><li><a href="#many-to-one-모델--한-커널-쓰레드가-여러-유저-쓰레드-처리">Many-to-One 모델 : 한 커널 쓰레드가 여러 유저 쓰레드 처리</a></li><li><a href="#one-to-one-모델--유저-쓰레드-한-개당-커널-쓰레드를-대응시켜-처리">One-to-One 모델 : 유저 쓰레드 한 개당 커널 쓰레드를 대응시켜 처리</a></li><li><a href="#many-to-many-모델--여러-유저-쓰레드가-여러-커널-쓰레드-처리">Many-to-Many 모델 : 여러 유저 쓰레드가 여러 커널 쓰레드 처리</a></li><li><a href="#two-level-모델--중요한-작업은-one-to-one으로-나머지는-many-to-one으로-처리">Two-Level 모델 : 중요한 작업은 One-to-One으로, 나머지는 Many-to-One으로 처리</a></li></ul></li></ul></li><li><a href="#메인-메모리-관리-main-memory-management">메인 메모리 관리 (Main Memory Management)</a><ul><li><a href="#메모리-계층-memory-hierarchy--각각의-특징이-있는-저장-장치를-혼용해-효율성-극대화">메모리 계층 (Memory hierarchy) : 각각의 특징이 있는 저장 장치를 혼용해 효율성 극대화</a></li><li><a href="#q-cpu가-한-번에-한-프로세스를-수행하면--mono-programming">Q. CPU가 한 번에 한 프로세스를 수행하면? : Mono-Programming</a></li><li><a href="#q-만약-메모리-추상화를-사용하지-않는다면--모든-프로그램이-물리-메모리를-직접-사용">Q. 만약 메모리 추상화를 사용하지 않는다면? : 모든 프로그램이 물리 메모리를 직접 사용</a><ul><li><a href="#p1-프로텍션-protection--한-프로세스가-운영체제나-다른-프로세스의-파티션을-침범하지-못하게-해야-함">P1. 프로텍션 (Protection) : 한 프로세스가 운영체제나 다른 프로세스의 파티션을 침범하지 못하게 해야 함</a></li><li><a href="#p2-리로케이트-relocation--변수-주소나-프로시저-주소에-대한-접근에-차이가-발생">P2. 리로케이트 (Relocation) : 변수 주소나 프로시저 주소에 대한 접근에 차이가 발생</a></li></ul></li><li><a href="#주소-바인딩-address-binding--프로세스의-논리적-주소를-물리적-메모리-주소로-연결">주소 바인딩 (Address Binding) : 프로세스의 논리적 주소를 물리적 메모리 주소로 연결</a><ul><li><a href="#mmu의-재배치-레지스터-relocation-register--각-프로세스의-논리-공간을-메모리의-물리-공간으로-연속해-매핑">MMU의 재배치 레지스터 (Relocation Register) : 각 프로세스의 논리 공간을 메모리의 물리 공간으로 연속해 매핑</a></li></ul></li><li><a href="#스와핑-swapping--메모리에-로드된-프로세스-중에-장기간-미사용된-프로세스를-하드-디스크에-이미지-형태로-저장">스와핑 (Swapping) : 메모리에 로드된 프로세스 중에 장기간 미사용된 프로세스를 하드 디스크에 이미지 형태로 저장</a><ul><li><a href="#동적-메모리-파티션-dynamic-memory-partitions--프로그램이-메모리에-로드될-때마다-파티션을-나누고-할당">동적 메모리 파티션 (Dynamic memory partitions) : 프로그램이 메모리에 로드될 때마다 파티션을 나누고 할당</a></li><li><a href="#contiguous-memory-allocation--메모리에-새로-생성된-프로세스들을-위한-메모리-공간-할당">Contiguous Memory Allocation : 메모리에 새로 생성된 프로세스들을 위한 메모리 공간 할당</a></li></ul></li></ul></li><li><a href="#페이징-paging--프로그램과-메모리를-일정한-크기로-나눔">페이징 (Paging) : 프로그램과 메모리를 일정한 크기로 나눔</a><ul><li><a href="#페이지-폴트-page-fault--페이지가-메모리에-매핑되어-있지-않음을-파악하면-cpu에서-트랩-발생">페이지 폴트 (Page Fault) : 페이지가 메모리에 매핑되어 있지 않음을 파악하면 CPU에서 트랩 발생</a></li><li><a href="#페이징-테이블-page-table--가상-페이지-번호-vpn를-페이지-프레임-번호-pfn로-매핑">페이징 테이블 (Page Table) : 가상 페이지 번호 (VPN)를 페이지 프레임 번호 (PFN)로 매핑</a></li><li><a href="#tlbs-translation-lookaside-buffers--페이징의-속도를-높이고-큰-가상-주소-공간을-지원하는-기법">TLBs (Translation Lookaside Buffers) : 페이징의 속도를 높이고, 큰 가상 주소 공간을 지원하는 기법</a></li><li><a href="#다단계-페이지-테이블-multi-level-page-table">다단계 페이지 테이블 (Multi-level Page Table)</a></li><li><a href="#역-페이지-테이블-inverted-page-table">역 페이지 테이블 (Inverted Page Table)</a></li></ul></li><li><a href="#페이지-교체-알고리즘-page-replacement-algorithm--페이지-폴트-발생-시-교체할-페이지를-선택">페이지 교체 알고리즘 (Page Replacement Algorithm) : 페이지 폴트 발생 시 교체할 페이지를 선택</a><ul><li><a href="#최적-페이지-교체-알고리즘-optimal-page-replacement-algorithm--가장-오래-사용되지-않을-페이지-교체">최적 페이지 교체 알고리즘 (Optimal Page Replacement Algorithm) : 가장 오래 사용되지 않을 페이지 교체</a></li><li><a href="#nru-not-recently-used-페이지-교체-알고리즘--최근에-사용되지-않은-페이지를-교체">NRU (Not Recently Used) 페이지 교체 알고리즘 : 최근에 사용되지 않은 페이지를 교체</a></li><li><a href="#fifo-페이지-교체-알고리즘--메모리에-가장-먼저-로드된-페이지를-교체">FIFO 페이지 교체 알고리즘 : 메모리에 가장 먼저 로드된 페이지를 교체</a></li><li><a href="#second-chance-페이지-교체-알고리즘--메모리에-가장-먼저-로드된-페이지의-r을-검사한-후-교체">Second-Chance 페이지 교체 알고리즘 : 메모리에 가장 먼저 로드된 페이지의 R을 검사한 후 교체</a></li><li><a href="#clock-페이지-교체-알고리즘--시계-모양-원형-리스트를-구성하고-화살표가-가리키는-페이지의-r을-검사한-후-교체">Clock 페이지 교체 알고리즘 : 시계 모양 원형 리스트를 구성하고, 화살표가 가리키는 페이지의 R을 검사한 후 교체</a></li><li><a href="#lru-페이지-교체-알고리즘--가장-오랫동안-사용되지-않은-페이지를-교체">LRU 페이지 교체 알고리즘 : 가장 오랫동안 사용되지 않은 페이지를 교체</a><ul><li><a href="#lru의-하드웨어-구현-1--64bit-카운터">LRU의 하드웨어 구현 1 : 64bit 카운터</a></li><li><a href="#lru의-하드웨어-구현-2--nn-bit로-구성된-행렬을-갖는-lru-하드웨어">LRU의 하드웨어 구현 2 : N*N bit로 구성된 행렬을 갖는 LRU 하드웨어</a></li><li><a href="#lru의-소프트웨어-구현-1--nfu-not-frequently-used">LRU의 소프트웨어 구현 1 : NFU (Not Frequently Used)</a></li><li><a href="#lru의-소프트웨어-구현-2--에이징-aging">LRU의 소프트웨어 구현 2 : 에이징 (Aging)</a></li><li><a href="#워킹-세트-알고리즘-the-working-set-page-replacement-algorithm--페이지-집합을-관리">워킹 세트 알고리즘 (The Working Set Page Replacement Algorithm) : 페이지 집합을 관리</a></li></ul></li><li><a href="#세그멘테이션-segmentation--하나의-가상-주소를-제공하는-페이징과-달리-여러-개의-가상-주소-제공">세그멘테이션 (Segmentation) : 하나의 가상 주소를 제공하는 페이징과 달리, 여러 개의 가상 주소 제공</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="운영체제-operation-system--사용자가-컴퓨터에서-실행한-프로그램을-관리하고-제어">운영체제 (<code class="language-plaintext highlighter-rouge">Operation System</code>) : 사용자가 컴퓨터에서 실행한 프로그램을 관리하고 제어</h2>
+<ul>
+  <li>컴퓨터 시스템 자원의 효율적인 관리 (<code class="language-plaintext highlighter-rouge">Performance</code>) : 하드웨어 자원을 각각의 사용자 응용 프로그램에 적절히 분배
+    <ul>
+      <li>하드웨어 자원 (<code class="language-plaintext highlighter-rouge">Hardware Resource</code>) : CPU 시간, 기억 장치 및 디스크 영역, I/O 장치</li>
+    </ul>
+  </li>
+  <li>사용자 편의성 제공 (<code class="language-plaintext highlighter-rouge">Convenience</code>) : 사용자가 더 편리하게 사용할 수 있는 환경을 구성</li>
+</ul>
+
+<div style="color: white; padding: 2% 0% 2% 0%; background-color: black;">
+<ul>
+  <li>프로세스 관리 (Process Management)</li>
+  <li>메인 메모리 관리 (Main Memory Management)</li>
+  <li>파일 관리(File Management)</li>
+  <li>저장 장치 관리 (Storage Management)</li>
+  <li>I/O 장치 관리 (I/O Device Management)</li>
+  <li>시스템 호출 (System call)</li>
+</ul>
+</div>
+
+<h3 id="부팅-booting--컴퓨터를-시작할-때-자기-자신을-구동시킬-프로그램을-스스로-불러내는-동작">부팅 (<code class="language-plaintext highlighter-rouge">Booting</code>) : 컴퓨터를 시작할 때 자기 자신을 구동시킬 프로그램을 스스로 불러내는 동작</h3>
+<ul>
+  <li>메인 메모리 (<code class="language-plaintext highlighter-rouge">Main Memory</code>) : 즉시 필요한 데이터를 저장하는 주 기억 장치
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">RAM</code> : 휘발성 주 기억 장치 (전원이 꺼지면 모든 내용이 지워짐)
+        <ul>
+          <li>코드 영역 (<code class="language-plaintext highlighter-rouge">Code Area</code>) : 실행할 프로그램의 코드가 저장되는 영역
+            <ul>
+              <li>CPU는 이 영역에 저장된 명령어를 하나씩 호출해 수행함</li>
+            </ul>
+          </li>
+          <li>데이터 영역 (<code class="language-plaintext highlighter-rouge">Data Area</code>) : 실행할 프로그램의 전역 변수와 정적 변수가 저장된 영역
+            <ul>
+              <li>프로그램 시작 시 할당, 프로그램 종료 시 소멸</li>
+            </ul>
+          </li>
+          <li>스택 영역 (<code class="language-plaintext highlighter-rouge">Stack Area</code>) : 실행할 프로그램의 함수 호출과 관련된 지역 변수와 매개 변수가 정적으로 저장된 영역
+            <ul>
+              <li>후입선출 (<code class="language-plaintext highlighter-rouge">Last-In, First-Out</code>) 방식에 따른 동작 : <code class="language-plaintext highlighter-rouge">PUSH</code>로 데이터를 저장하고, <code class="language-plaintext highlighter-rouge">POP</code>로 데이터를 인출</li>
+              <li>메모리의 높은 주소에서 메모리의 낮은 주소의 방향으로 할당</li>
+              <li>함수 호출 시 할당, 함수 호출 종료 시 소멸</li>
+            </ul>
+          </li>
+          <li>힙 영역 (<code class="language-plaintext highlighter-rouge">Heap Area</code>) : 사용자에 의해 동적으로 할당되고 해제되는 전역 변수가 저장되는 영역
+            <ul>
+              <li>할당되는 변수의 크기 제한이 없음 : 크기 제한이 존재하는 스택에 비해 액세스 속도가 상대적으로 느림</li>
+              <li>CPU에 의해 효율적으로 관리되는 스택 영역과 달리, 사용자가 힙 영역을 관리해야 함
+                <ul>
+                  <li>메모리 단편화 (<code class="language-plaintext highlighter-rouge">Memory Fragmentation</code>) : 사용 가능한 메모리가 존재하지만, 할당이 불가능한 상태</li>
+                </ul>
+              </li>
+              <li>메모리의 낮은 주소에서 메모리의 높은 주소의 방향으로 할당</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">ROM</code> : 비휘발성 주 기억 장치 (전원이 꺼져도 그 안의 내용이 계속 유지)
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">POST</code> (<code class="language-plaintext highlighter-rouge">Power-On Self-Test</code>) : (부팅 시 가장 처음 실행되는 프로그램) 현재 컴퓨터의 상태 검사</li>
+          <li>부트 로더 (<code class="language-plaintext highlighter-rouge">Boot Loader</code>) : (<code class="language-plaintext highlighter-rouge">POST</code> 다음에 실행되는 프로그램) 보조 기억 장치의 운영체제를 탐색 후 <code class="language-plaintext highlighter-rouge">RAM</code>에 할당
+            <ul>
+              <li>보조 기억 장치에서 <code class="language-plaintext highlighter-rouge">RAM</code>으로 할당된 운영체제는 컴퓨터 전원이 꺼질 때까지 상주 (<code class="language-plaintext highlighter-rouge">Resident</code>)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">SSD</code>/<code class="language-plaintext highlighter-rouge">HDD</code> : 운영체제가 저장된 보조 기억 장치
+    <ul>
+      <li>커널 (<code class="language-plaintext highlighter-rouge">Kernel</code>) : 운영체제가 수행하는 모든 작업이 저장</li>
+      <li>명령어 해석기 (<code class="language-plaintext highlighter-rouge">Shell</code>) : 사용자가 요청하는 명령어를 해석해 커널에 요청하고 결과를 출력
+        <ul>
+          <li>응용 프로그램 (<code class="language-plaintext highlighter-rouge">Application</code>) : 운영체제 위에서 수행되며, 운영체제가 지원하는 자원만을 사용 가능</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="일괄-처리-시스템-batch-processing-system--프로그램-수행-과정의-자동화">일괄 처리 시스템 (<code class="language-plaintext highlighter-rouge">Batch Processing System</code>) : 프로그램 수행 과정의 자동화</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Resident Monitor</code> : 프로세서에 할당하기 위해 (컴파일 -&gt; 링크 -&gt; 로딩)의 과정을 하나의 프로그램으로 작성</li>
+</ul>
+
+<h3 id="시분할-시스템-time-sharing-system--cpu가-프로그램을-수행하는-시간을-제한">시분할 시스템 (<code class="language-plaintext highlighter-rouge">Time-sharing System</code>) : CPU가 프로그램을 수행하는 시간을 제한</h3>
+<ul>
+  <li>스위칭 (<code class="language-plaintext highlighter-rouge">Switching</code>) : 프로그램이 일정 시간 실행되면 <code class="language-plaintext highlighter-rouge">Time Out</code>을 발생시켜 다음 프로그램으로 넘어가게 함</li>
+  <li>다중 작업 (<code class="language-plaintext highlighter-rouge">Multitasking</code>) : CPU가 짧은 시간 내에 여러 프로그램을 스위칭해 동시에 작업하는 것처럼 보이게 함
+    <ul>
+      <li>CPU 스케줄링 (<code class="language-plaintext highlighter-rouge">CPU Scheduling</code>) : CPU가 어느 프로그램을 실행할지 선택하는 작업</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="다중-프로그래밍-시스템-multiprogramming-system--메모리에-여러-응용-프로그램을-적재시켜-idle-상태-최소화">다중 프로그래밍 시스템 (<code class="language-plaintext highlighter-rouge">Multiprogramming System</code>) : 메모리에 여러 응용 프로그램을 적재시켜 idle 상태 최소화</h3>
+<ul>
+  <li>프로그램 실행 시에 계산을 담당하는 <code class="language-plaintext highlighter-rouge">CPU</code>와 입출력을 담당하는 <code class="language-plaintext highlighter-rouge">I/O</code> 장치가 교대로 실행
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">idle</code>상태 : I/O 장치가 실행되는 동안 CPU가 아무런 작업도 하지 않는 상태</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="인터럽트-기반-시스템-interrupt-based-system--인터럽트-발생-시-isr에-맞는-처리-수행">인터럽트 기반 시스템 (<code class="language-plaintext highlighter-rouge">Interrupt-based System</code>) : 인터럽트 발생 시 <code class="language-plaintext highlighter-rouge">ISR</code>에 맞는 처리 수행</h3>
+<ul>
+  <li>인터럽트 (<code class="language-plaintext highlighter-rouge">Interrupt</code>) : 프로그램 실행 중에 예기치 않은 상황이 발생할 경우 이를 CPU에 알리는 전기 신호
+    <ul>
+      <li>외부 인터럽트 (<code class="language-plaintext highlighter-rouge">Eternal Interrupt</code>) = 하드웨어 인터럽트 (<code class="language-plaintext highlighter-rouge">Hardware Interrupt</code>)</li>
+      <li>내부 인터럽트 (<code class="language-plaintext highlighter-rouge">Internal Interrupt</code>) = 소프트웨어 언터럽트 (<code class="language-plaintext highlighter-rouge">Software Interrupt</code>)
+        <ul>
+          <li>예외 (<code class="language-plaintext highlighter-rouge">Exception</code>)</li>
+          <li>시스템 호출 (<code class="language-plaintext highlighter-rouge">System call</code>)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>인터럽트 서비스 루틴 (<code class="language-plaintext highlighter-rouge">Interrupt Service Routine</code>) : 인터럽트 신호를 처리하기 위한 방법을 내포한 운영체제 내의 코드</li>
+</ul>
+
+<h3 id="이중-모드-dual-mode-execution--유저-user-모드와-커널-kernel-모드를-나눔">이중 모드 (<code class="language-plaintext highlighter-rouge">Dual Mode Execution</code>) : 유저 (<code class="language-plaintext highlighter-rouge">User</code>) 모드와 커널 (<code class="language-plaintext highlighter-rouge">Kernel</code>) 모드를 나눔</h3>
+
+<blockquote>
+  <p>! 문제 : 어떤 작업이 자원을 계속해서 점유하는 일과 같이 컴퓨터의 작업 효율을 저해하는 행위로부터 보호할 수단을 필요</p>
+</blockquote>
+
+<ul>
+  <li>CPU 내 레지스터 (<code class="language-plaintext highlighter-rouge">Register</code>)의 <code class="language-plaintext highlighter-rouge">Mode-Bit</code>를 플래그 (<code class="language-plaintext highlighter-rouge">flag</code>)로 활용해 나타냄 (커낼 모드 : <code class="language-plaintext highlighter-rouge">0</code>, 유저 모드 : <code class="language-plaintext highlighter-rouge">1</code>)</li>
+  <li>각 명령어에 <code class="language-plaintext highlighter-rouge">Mode-Bit</code>를 넣어 시스템 내의 <code class="language-plaintext highlighter-rouge">Mode-Bit</code>와 같을 시에만 명령어 수행</li>
+  <li>특권 명령어 (<code class="language-plaintext highlighter-rouge">Privileged Instruction</code>) : 커널 모드에서만 내릴 수 있는 명령어
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">STOP</code>, <code class="language-plaintext highlighter-rouge">HALT</code>, <code class="language-plaintext highlighter-rouge">RESET</code>, <code class="language-plaintext highlighter-rouge">SET_TIMER</code> 등</li>
+      <li>유저 모드에서는 특권 명령어를 내릴 수 없음 (내부 인터럽트를 발생해 해당 명령어를 요청한 프로그램을 강제 종료)</li>
+    </ul>
+  </li>
+  <li>시스템 호출 (<code class="language-plaintext highlighter-rouge">System Call</code>) : <code class="language-plaintext highlighter-rouge">Mode-Bit</code>를 바꾸는 행위 (<code class="language-plaintext highlighter-rouge">INT 80</code>)
+    <ul>
+      <li>사용자가 하드웨어의 자원에 접근할 때, 프로그램에서 시스템 호출을 발생시켜 운영체제에 위임해 커널 모드로 처리</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li>컴퓨터가 부팅되는 과정 : 커널 모드</li>
+    <li>응용 프로그램이 실행되는 과정 : 커널 모드</li>
+    <li>응용 프로그램이 실행되는 중일 때 : 유저 모드</li>
+    <li>인터럽트가 발생한 후 처리하는 과정 : 커널 모드</li>
+    <li>인터럽트를 처리한 후 : 유저 모드</li>
+  </ul>
+</blockquote>
+
+<h4 id="하드웨어-보호-hw-protection--잘못된-명령이나-접근으로부터-보호하기-위해-운영체제에서-내부-인터럽트를-발생">하드웨어 보호 (<code class="language-plaintext highlighter-rouge">H/W Protection</code>) : 잘못된 명령이나 접근으로부터 보호하기 위해 운영체제에서 내부 인터럽트를 발생</h4>
+
+<blockquote>
+  <p>! 문제 : 정보들이 여러 I/O 장치를 통해 컴퓨터로 입출력되는 과정에서 장치 간 혹은 데이터 간의 혼선이 발생할 수 있음</p>
+</blockquote>
+
+<h5 id="입출력-장치-보호-io-protection--in-out과-같은-입출력-명령을-특권-명령으로-지정해-운영체제를-통해-수행">입출력 장치 보호 (<code class="language-plaintext highlighter-rouge">I/O Protection</code>) : <code class="language-plaintext highlighter-rouge">in</code>, <code class="language-plaintext highlighter-rouge">out</code>과 같은 입출력 명령을 특권 명령으로 지정해 운영체제를 통해 수행</h5>
+<ul>
+  <li>입출력 수행 시에는 관리자 모드로 전환해 특권 명령을 내림
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Privileged Instruction Violation</code> : 사용자가 입출력 명령을 직접 내린 경우 프로그램을 강제 종료</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>! 문제 : 다른 사용자나 운영체제에 할당된 메모리 영역에 접근해 정보나 프로그램을 해킹할 수 있음</p>
+</blockquote>
+
+<h5 id="메모리-보호-memory-protection--cpu와-메인-메모리-간-주소-버스에-mmu-memory-management-unit를-설치">메모리 보호 (<code class="language-plaintext highlighter-rouge">Memory Protection</code>) : CPU와 메인 메모리 간 주소 버스에 <code class="language-plaintext highlighter-rouge">MMU</code> (<code class="language-plaintext highlighter-rouge">Memory Management Unit</code>)를 설치</h5>
+<ul>
+  <li>두 개의 레지스터를 통해 해당 프로그램의 주소 범위를 저장</li>
+  <li>사용자에 할당된 메모리 영역을 벗어난 주소값을 가져오지 못하게 함</li>
+  <li><code class="language-plaintext highlighter-rouge">MMU</code> 설정은 운영체제만 변경 가능
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Segment Violation</code> : 만약 사용자에 할당된 메모리 영역을 벗어난 주소값이 <code class="language-plaintext highlighter-rouge">MMU</code>에 들어오면 내부 인터럽트를 발생시킴</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>! 문제 : 프로그램에서의 무한 루프로 인해 CPU가 독점되어 다른 프로그램이 수행되지 못할 수 있음</p>
+</blockquote>
+
+<h5 id="cpu-보호-cpu-protection--타이머-timer를-두어-일정-시간이-지나면-타이머-인터럽트를-발생시킴">CPU 보호 (<code class="language-plaintext highlighter-rouge">CPU Protection</code>) : 타이머 (<code class="language-plaintext highlighter-rouge">Timer</code>)를 두어 일정 시간이 지나면 타이머 인터럽트를 발생시킴</h5>
+<ul>
+  <li>타이머 (<code class="language-plaintext highlighter-rouge">Timer</code>) : 무한 루프나 자원 독점을 막기 위해 특정 시간이 지나면 타이머 인터럽트를 발생시킴
+    <ul>
+      <li>타이머 인터럽트 (<code class="language-plaintext highlighter-rouge">Timer Interrupt</code>) : 해당 인터럽트의 ISR에서 CPU는 각 프로그램의 CPU 점유 시간을 측정해 분배</li>
+      <li>운영체제는 타이머가 끝난 작업을 종료시키고 스케줄링 (<code class="language-plaintext highlighter-rouge">Scheduling</code>) 이전에 타이머 실행</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="프로세스-process--실제-메인-메모리에-할당되어-실행-중인-프로그램">프로세스 (<code class="language-plaintext highlighter-rouge">Process</code>) : 실제 메인 메모리에 할당되어 실행 중인 프로그램</h2>
+<ul>
+  <li>프로그램은 보조 기억 장치에서 아무런 동작을 하지 않은 상태</li>
+  <li>어떤 요청에 의해 메인 메모리에 할당되어 CPU를 사용하면서 실행</li>
+  <li>각각의 프로세스는 CPU에 의해 샐행된 후 …를 생성 (메인 메모리를 효율적으로 사용해야 함)
+    <ul>
+      <li>프로세스 테이블 엔트리 = 프로세스 컨트롤 블록 (<code class="language-plaintext highlighter-rouge">Process Control Block</code>)</li>
+      <li>주소 공간 (<code class="language-plaintext highlighter-rouge">Address Space</code>)
+        <ul>
+          <li>코드 세그먼트 (<code class="language-plaintext highlighter-rouge">Code Segment</code>) : 프로그램 소스 코드가 저장</li>
+          <li>데이터 세그먼트 (<code class="language-plaintext highlighter-rouge">Data Segment</code>) : 전역 변수가 저장</li>
+          <li>스택 세그먼트 (<code class="language-plaintext highlighter-rouge">Stack Segment</code>) : 지역변수와 매개변수가 저장</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>지역변수와 매개 변수가 후입선출의 방식을 따른 스택에 저장되기에, 전역 변수를 먼저 선언해 메인 메모리의 공간 절약 가능</p>
+</blockquote>
+
+<h3 id="프로세스의-생성과-종료-creation-and-destruction-of-process">프로세스의 생성과 종료 (<code class="language-plaintext highlighter-rouge">Creation and Destruction of Process</code>)</h3>
+<ul>
+  <li>최초의 프로세스인 <code class="language-plaintext highlighter-rouge">Init</code>의 생성은 부팅된 운영체제가 처음 수행하는 작업 중 하나</li>
+  <li>생성된 프로세스가 다른 프로세스를 생성하는 과정을 반복
+    <ul>
+      <li>프로세스의 생성을 위한 시스템 호출 : <code class="language-plaintext highlighter-rouge">fork()</code></li>
+      <li>프로세스의 종료를 위한 시스템 호출 : <code class="language-plaintext highlighter-rouge">exit()</code></li>
+    </ul>
+  </li>
+  <li>생성된 모든 프로세스는 자신을 식별할 수 있는 고유의 정수값인 <code class="language-plaintext highlighter-rouge">PID</code>을 가짐
+    <ul>
+      <li>생성된 모든 프로세스는 자신을 생성한 사용자 고유의 <code class="language-plaintext highlighter-rouge">UID</code> 값 또한 가짐 (부모와 자식이 동일한 값)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://i.stack.imgur.com/6RGIe.jpg" width="30%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>프로세스 트리 (<code class="language-plaintext highlighter-rouge">Process Tree</code>) : 부모 프로세스인 A에서 자식 프로세스인 B, C, D가 파생되어 생성
+    <ul>
+      <li>부모 프로세스 : 프로세스를 생성한 프로세스</li>
+      <li>자식 프로세스 : 프로세스로부터 생성된 프로세스</li>
+      <li>형제 프로세스 : 같은 부모 프로세스에서 파생된 자식 프로세스</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="프로세스-컨트롤-블록-process-control-block--프로세스에-대한-모든-정보를-저장하는-곳">프로세스 컨트롤 블록 (<code class="language-plaintext highlighter-rouge">Process Control Block</code>) : 프로세스에 대한 모든 정보를 저장하는 곳</h3>
+<ul>
+  <li>CPU는 여러 프로세스를 빈번히 전환하면서 수행하기에 각 프로세스의 데이터를 저장해야 작업을 이어서 수행할 수 있음</li>
+  <li>운영체제 내에서 프로세스를 관리하는 코드 부분에 저장
+    <ul>
+      <li>프로세스 컨트롤 블록에 데이터를 저장하고 복원하는 시간 역시 다중 작업을 위해 각 프로세스에 할당되는 시간에 포함</li>
+    </ul>
+  </li>
+  <li>프로세스 상태 (<code class="language-plaintext highlighter-rouge">Process Status</code>), 프로그램 카운터 (<code class="language-plaintext highlighter-rouge">Program Counter</code>), 스택 포인터 (<code class="language-plaintext highlighter-rouge">Stack Pointer</code>), 파일 디스크립터 (<code class="language-plaintext highlighter-rouge">File Descriptors</code>) 등의 정보 포함</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/70577652-12841080-1bef-11ea-8f1c-5c0e0d94c132.png" width="80%" style="margin-left: 2%" /></p>
+
+<h4 id="프로세스-상태-process-status--각-단계들에서-상태-전이가-일어나-다음-단계로-넘어감">프로세스 상태 (<code class="language-plaintext highlighter-rouge">Process Status</code>) : 각 단계들에서 상태 전이가 일어나 다음 단계로 넘어감</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">New</code> : 프로그램이 메인 메모리에 할당된 상태</li>
+  <li><code class="language-plaintext highlighter-rouge">Ready</code> : 프로세스가 언제든 실행 가능한 상태; 할당된 프로그램이 실행되기 위한 모든 준비를 마친 상태로 대기된 상태
+    <ul>
+      <li>n개의 작업이 있을 때, CPU의 프로세서는 스케줄러의 0~(n-1)번, 즉 n개의 작업을 번갈아 처리</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Running</code> : CPU가 해당 프로세스를 실제로 실행중인 상태</li>
+  <li><code class="language-plaintext highlighter-rouge">Waiting</code>=<code class="language-plaintext highlighter-rouge">Blocked</code> : <code class="language-plaintext highlighter-rouge">Running</code>이 불가능한 상태
+    <ul>
+      <li>프로세스가 끝나지 않은 시점에 해당되는 I/O 정보가 없어 작업할 수 없음</li>
+      <li><code class="language-plaintext highlighter-rouge">Waiting</code>가 끝나면 다시 CPU에 실행되기 위해 <code class="language-plaintext highlighter-rouge">Ready</code>로 돌아가야 함</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Terminated</code> : 프로세스가 완전히 종료된 상태</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/70577651-11eb7a00-1bef-11ea-9866-0c659728be9e.png" width="80%" style="margin-left: 2%" /></p>
+
+<blockquote>
+  <ul>
+    <li>I/O 작업으로 인한 상태 변화 : <code class="language-plaintext highlighter-rouge">Running</code> -&gt; <code class="language-plaintext highlighter-rouge">Waiting</code> -&gt; <code class="language-plaintext highlighter-rouge">Ready</code> -&gt; <code class="language-plaintext highlighter-rouge">Running</code></li>
+    <li>시간 초과로 인터럽트에 의한 상태 변화 : <code class="language-plaintext highlighter-rouge">Running</code> -&gt; <code class="language-plaintext highlighter-rouge">Ready</code> -&gt; <code class="language-plaintext highlighter-rouge">Running</code></li>
+  </ul>
+</blockquote>
+
+<h3 id="프로세스-큐-process-queue--커널이-프로세스-스케줄링을-위해-데이터-영역에서-관리하는-큐">프로세스 큐 (<code class="language-plaintext highlighter-rouge">Process Queue</code>) : 커널이 프로세스 스케줄링을 위해 데이터 영역에서 관리하는 큐</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Ready Queue</code> : 프로세스 상태가 <code class="language-plaintext highlighter-rouge">Ready</code>인 프로세스들이 CPU 제어를 기다리는 큐
+    <ul>
+      <li>어떤 CPU 스케줄링 알고리즘을 선택하는지에 따라 CPU 제어 순서가 달라짐</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Job Queue</code> : 보조 기억 장치의 프로그램이 실행되기 위해 메인 메모리의 할당 순서를 기다리는 큐
+    <ul>
+      <li>시스템 내의 모든 프로세스 관리 : <code class="language-plaintext highlighter-rouge">Ready Queue</code>, <code class="language-plaintext highlighter-rouge">Device Queue</code>에 속한 모든 프로세스 포함</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Device Queue</code> : 프로세스 상태가 <code class="language-plaintext highlighter-rouge">Waiting</code>인 프로세스들이 CPU 외의 자원을 기다리는 큐
+    <ul>
+      <li>기다리는 자원들마다 큐가 할당되며, 해당 자원이 사용되면 인터럽트를 발생시키고 <code class="language-plaintext highlighter-rouge">Ready Queue</code>로 이동</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/53879660-5ccdd500-4052-11e9-972d-11ba3faeb3e3.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>각 큐는 프로세스의 프로세스 컨트롤 블록을 가리키는 포인터 방식으로 연결 리스트를 구현</li>
+</ul>
+
+<h4 id="스케줄러-cpu-scheduler--프로세스-순서를-정해-프로세스-큐에-올릴-것을-결정하는-커널의-코드">스케줄러 (<code class="language-plaintext highlighter-rouge">CPU Scheduler</code>) : 프로세스 순서를 정해 프로세스 큐에 올릴 것을 결정하는 커널의 코드</h4>
+<ul>
+  <li>장기 스케줄러 (<code class="language-plaintext highlighter-rouge">Long-term Scheduler</code>) : 생성된 프로세스 중 어떤 것을 <code class="language-plaintext highlighter-rouge">Job Queue</code>에서 <code class="language-plaintext highlighter-rouge">Ready Queue</code>으로 이동시킬지 선택
+    <ul>
+      <li>장기 스케줄러는 현재 메모리에 할당된 프로세스의 개수 (<code class="language-plaintext highlighter-rouge">Degree of multiprogramming</code>)를 제어</li>
+      <li>장기 스케줄러는 <code class="language-plaintext highlighter-rouge">I/O bound Process</code>,<code class="language-plaintext highlighter-rouge">CPU bound Process</code>를 메인 메모리에 적절히 할당해야 함
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">I/O bound Process</code> : I/O 작업 (입출력) 비중이 높은 프로세스</li>
+          <li><code class="language-plaintext highlighter-rouge">CPU bound Process</code> : CPU 작업 (계산) 비중이 높은 프로세스</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>중기 스케줄러 (<code class="language-plaintext highlighter-rouge">Medium-term Scheduler</code>) : 실행 중인 프로세스 중 보조 저장 장치로 옮길 것을 주기적으로 검사
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Swapping</code> (<code class="language-plaintext highlighter-rouge">Swap-out</code>↔<code class="language-plaintext highlighter-rouge">Swap-in</code>) : <code class="language-plaintext highlighter-rouge">Swap-in</code>할 때 이전 공간으로 재할당되는 것은 보장되지 않음
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">Swap-out</code> : 메인 메모리에서 우선 순위가 은 프로세스를 통째로 보조 기억 장치로 저장</li>
+          <li><code class="language-plaintext highlighter-rouge">Swap-in</code> : 나중에 해당 프로세스가 다시 사용되려 할 때 보조 기억 장치에서 메인 메모리에 다시 할당</li>
+        </ul>
+      </li>
+      <li>중기 스케줄러 또한 현재 메모리에 할당된 프로세스의 개수 (<code class="language-plaintext highlighter-rouge">Degree of multiprogramming</code>)를 제어</li>
+    </ul>
+  </li>
+  <li>단기 스케줄러 (<code class="language-plaintext highlighter-rouge">Short-term Scheduler</code>) : <code class="language-plaintext highlighter-rouge">Ready Queue</code> 내에서 프로세스들 중 어떤 것을 다음에 실행시킬지 선택
+    <ul>
+      <li>CPU 스케줄러 (<code class="language-plaintext highlighter-rouge">CPU Scheduler</code>) 라고도 부르며, 시분할 시스템에서 <code class="language-plaintext highlighter-rouge">Time Out</code>이 발생하면 호출</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="문맥-전환-context-switching--cpu가-실행중인-프로세스를-멈추고-다른-프로세스를-실행하는-작업">문맥 전환 (<code class="language-plaintext highlighter-rouge">Context Switching</code>) : CPU가 실행중인 프로세스를 멈추고 다른 프로세스를 실행하는 작업</h5>
+<ul>
+  <li>문맥 (<code class="language-plaintext highlighter-rouge">Context</code>) : 각 프로세스 컨트롤 블록 내에서 표현
+    <ul>
+      <li>하드웨어 문맥 : 프로그램 카운터 정보와 레지스터 정보를 저장</li>
+      <li>프로세스 주소 공간 : 각 프로세스가 갖고 있는 독자적인 주소 공간에 위치</li>
+    </ul>
+  </li>
+  <li>CPU 스케줄러 : CPU가 어느 프로세스를 다음에 실행할지 지정</li>
+  <li>디스패쳐 (<code class="language-plaintext highlighter-rouge">Dispatcher</code>) : 문맥 전환이 발생하면 <code class="language-plaintext highlighter-rouge">Ready</code>에서 <code class="language-plaintext highlighter-rouge">Running</code>으로 상태 전이
+    <ul>
+      <li>문맥 전환 오버헤드 (<code class="language-plaintext highlighter-rouge">Context Switching Overhead</code>) : 문맥 전환이 발생할 때마다 디스패쳐를 매번 실행시킴<br /><br /></li>
+    </ul>
+  </li>
+</ul>
+
+<ol>
+  <li>CPU에서 실행중인 프로세스의 데이터는 해당 프로세스의 프로세스 컨트롤 블록에 갱신</li>
+  <li>새로 시작될 프로세스의 프로세스 컨트롤 블록를 CPU로 복원</li>
+  <li>캐시와 <code class="language-plaintext highlighter-rouge">Translation Lookup Buffer</code>를 재설정</li>
+</ol>
+
+<blockquote>
+  <ul>
+    <li>시스템 호출로 인한 인터럽트 발생 시 :
+      <ul>
+        <li>실행 중인 프로세스의 문맥을 프로세스 컨트롤 블록에 갱신하나, 문맥 전환은 이루어지지 않음</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h2 id="cpu-스케줄링-cpu-scheduling--cpu-스케줄러에서-어느-프로세스를-다음에-실행할지-지정">CPU 스케줄링 (<code class="language-plaintext highlighter-rouge">CPU Scheduling</code>) : CPU 스케줄러에서 어느 프로세스를 다음에 실행할지 지정</h2>
+<ul>
+  <li>선점 (<code class="language-plaintext highlighter-rouge">Preemptive</code>) : 한 프로세스가 CPU를 점유하는 동안, 다른 프로세스가 CPU를 강제로 점유할 수 있음</li>
+  <li>비선점 (<code class="language-plaintext highlighter-rouge">Non-Preemptive</code>) : 한 프로세스가 CPU를 점유하는 동안, 다른 프로세스가 CPU를 점유할 수 없음 (예외 : <code class="language-plaintext highlighter-rouge">I/O</code> 발생)</li>
+</ul>
+
+<h3 id="cpu-스케줄링-척도-cpu-scheduling-criteria--cpu-스케줄링의-효율을-분석하는-기준">CPU 스케줄링 척도 (<code class="language-plaintext highlighter-rouge">CPU Scheduling Criteria</code>) : CPU 스케줄링의 효율을 분석하는 기준</h3>
+<ul>
+  <li>CPU 점유율 (<code class="language-plaintext highlighter-rouge">CPU Utilization</code>) : 현재 CPU가 작업을 수행하는 비율 -&gt; 높을수록 좋음</li>
+  <li>처리율 (<code class="language-plaintext highlighter-rouge">Throughput</code>) : 단위 시간 당 완료되는 프로세스의 개수 -&gt; 많을수록 좋음</li>
+  <li>소요 시간 (<code class="language-plaintext highlighter-rouge">Turnaround Time</code>) : 프로세스가 생성된 시간부터 종료되는 데까지 걸린 시간 -&gt; 짧을수록 좋음</li>
+  <li>대기 시간 (<code class="language-plaintext highlighter-rouge">Waiting Time</code>) : CPU 제어를 위해 <code class="language-plaintext highlighter-rouge">Ready Queue</code>에서”만” 대기한 시간 -&gt; 짧을수록 좋음
+    <ul>
+      <li>평균 대기 시간 (<code class="language-plaintext highlighter-rouge">Average Waiting Time</code>) : (각 프로세스들의 대기 시간의 합) / (프로세스들의 개수)</li>
+    </ul>
+  </li>
+  <li>응답 시간 (<code class="language-plaintext highlighter-rouge">Response Time</code>) : <code class="language-plaintext highlighter-rouge">Interactive System</code>에서 입력에 대한 반응 시간 -&gt; 짧을수록 좋음</li>
+</ul>
+
+<h3 id="선입선출-first-come-first-served-스케줄링--가장-먼저-작업을-요청한-프로세스를-먼저-수행">선입선출 (<code class="language-plaintext highlighter-rouge">First-Come, First-Served</code>) 스케줄링 : 가장 먼저 작업을 요청한 프로세스를 먼저 수행</h3>
+<ul>
+  <li>비선점 (<code class="language-plaintext highlighter-rouge">Non-Preemptive</code>)</li>
+  <li>들어온 순서대로 작업을 수행한다고 해도 그것이 반드시 효율적이지 않음
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Convoy Effect</code> : CPU를 많이 점유하는 프로세스가 먼저 수행되어 나머지 프로세스들이 그만큼 오래 대기하는 것</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <table style="text-align: center">
+ 	<thead>
+		<tr>
+			<th>Process</th>
+			<th>Burst Time (msec)</th>
+		</tr>
+	</thead>
+   	<tbody>
+      <tr>
+        <td>P1</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>24</td>
+      </tr>
+    </tbody>
+</table>
+  <ul>
+    <li>FCFS Scheduling : (CPU에 요청받은 순서대로) P1, P2, P3 순으로 처리한다.
+      <ul>
+        <li>Average Waiting Time : (0 + 3 + 6) / 3 = 3msec</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <table style="text-align: center">
+ 	<thead>
+		<tr>
+			<th>Process</th>
+			<th>Burst Time (msec)</th>
+		</tr>
+	</thead>
+   	<tbody>
+      <tr>
+        <td>P1</td>
+        <td>24</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+</table>
+  <ul>
+    <li>FCFS Scheduling : (CPU에 요청받은 순서대로) P1, P2, P3 순으로 처리한다.
+      <ul>
+        <li>Average Waiting Time : (0 + 24 + 27) / 3 = 17msec</li>
+      </ul>
+    </li>
+    <li>CPU를 오래 점유하는 P3로 인해 상대적으로 빠른 처리가 가능한 P1과 2가 오래 대기하는 Convoy Effect이 발생!</li>
+  </ul>
+</blockquote>
+
+<h3 id="최단작업-shortest-job-first-스케줄링--시간이-가장-짧게-수행되는-프로세스를-먼저-수행">최단작업 (<code class="language-plaintext highlighter-rouge">Shortest-Job-First</code>) 스케줄링 : 시간이 가장 짧게 수행되는 프로세스를 먼저 수행</h3>
+<ul>
+  <li>비선점 (<code class="language-plaintext highlighter-rouge">Non-Preemptive</code>), 선점 (<code class="language-plaintext highlighter-rouge">Preemptive</code>)</li>
+  <li>일반적으로 가장 빠른 평균 대기 시간을 가지나, 현실에서는 각 프로세스의 CPU 점유 시간이 주어져 있지 않기에 비현실적</li>
+</ul>
+
+<blockquote>
+  <table style="text-align: center">
+ 	<thead>
+		<tr>
+			<th>Process</th>
+			<th>Burst Time (msec)</th>
+		</tr>
+	</thead>
+   	<tbody>
+      <tr>
+        <td>P1</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>P4</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+</table>
+  <ul>
+    <li>FCFS Scheduling : (CPU에 요청받은 순서대로) P1, P2, P3, P4 순으로 처리한다.
+      <ul>
+        <li>Average Waiting Time : (0 + 6 + 14 + 21) / 4 = 10.25msec</li>
+      </ul>
+    </li>
+    <li>SJF Scheduling : (작업 시간이 짧은 순서대로) P4, P1, P3, P2 순으로 처리한다.
+      <ul>
+        <li>Average Waiting Time : (0 + 3 + 9 + 16) / 4 = 7msec</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h3 id="우선순위-priority-스케줄링--우선순위가-가장-높은-프로세스를-먼저-수행">우선순위 (<code class="language-plaintext highlighter-rouge">Priority</code>) 스케줄링 : 우선순위가 가장 높은 프로세스를 먼저 수행</h3>
+<ul>
+  <li>비선점 (<code class="language-plaintext highlighter-rouge">Non-Preemptive</code>), 선점 (<code class="language-plaintext highlighter-rouge">Preemptive</code>)</li>
+  <li>우선순위는 정수값으로 표현되며, 값이 작을수록 우선순위가 높음</li>
+</ul>
+
+<blockquote>
+  <table style="text-align: center">
+ 	<thead>
+		<tr>
+			<th>Process</th>
+			<th>Burst Time (msec)</th>
+      <th>Priority</th>
+		</tr>
+	</thead>
+   	<tbody>
+      <tr>
+        <td>P1</td>
+        <td>10</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>2</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>P4</td>
+        <td>1</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>P5</td>
+        <td>5</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+</table>
+  <ul>
+    <li>Priority Scheduling : (우선순위가 높은 순서대로) P2, P5, P1, P3, P4 순으로 처리한다.
+      <ul>
+        <li>Average Waiting Time : (0 + 1 + 6 + 16 + 18) / 5 = 8.2 msec</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h3 id="라운드-로빈-round-robin-스케줄링--원-모양으로-모든-프로세스를-돌아가면서-수행">라운드 로빈 (<code class="language-plaintext highlighter-rouge">Round-Robin</code>) 스케줄링 : 원 모양으로 모든 프로세스를 돌아가면서 수행</h3>
+<ul>
+  <li>선점 (<code class="language-plaintext highlighter-rouge">Preemptive</code>)</li>
+  <li>시분할 시스템에서 CPU가 한 프로세스를 일정 시간 수행한 후, 이를 대기 상태로 보내고 다음 프로세스를 수행하는 것을 반복
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Time Quantum</code> : CPU가 한 프로세스를 수행하는 시간 -&gt; 스케줄리의 효율성이 <code class="language-plaintext highlighter-rouge">Time Quantum</code>의 크기에 의존</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <table style="text-align: center">
+ 	<thead>
+		<tr>
+			<th>Process</th>
+			<th>Burst Time (msec)</th>
+      <th>Time Quantum</th>
+		</tr>
+	</thead>
+   	<tbody>
+      <tr>
+        <td>P1</td>
+        <td>7</td>
+        <td rowspan="3">4msec</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>4</td>
+      </tr>
+    </tbody>
+</table>
+  <ul>
+    <li>RP Scheduling : (CPU에 요청받은 순서대로) P1, P2, P3, 그리고 (완료하지 못한) P1 순으로 처리한다.
+      <ul>
+        <li>Average Waiting Time : (4 + 8 + 12) / 3 = 8 msec</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <table style="text-align: center">
+ 	<thead>
+		<tr>
+			<th>Process</th>
+			<th>Burst Time (msec)</th>
+      <th>Time Quantum</th>
+		</tr>
+	</thead>
+   	<tbody>
+      <tr>
+        <td>P1</td>
+        <td>7</td>
+        <td rowspan="3">3msec</td>
+      </tr>
+      <tr>
+        <td>P2</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>P3</td>
+        <td>4</td>
+      </tr>
+    </tbody>
+</table>
+  <ul>
+    <li>RP Scheduling : (CPU에 요청받은 순서대로) P1, P2, P3, (완료하지 못한) P1, P2, P3, 그리고 P1 순으로 처리한다.
+      <ul>
+        <li>Average Waiting Time : (12 + 13 + 14) / 3 = 13 msec</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h3 id="멀티레벨-큐-multi-level-queue-스케줄링--각-프로세스-그룹에-따른-큐를-두어-수행">멀티레벨 큐 (<code class="language-plaintext highlighter-rouge">Multi-level Queue</code>) 스케줄링 : 각 프로세스 그룹에 따른 큐를 두어 수행</h3>
+<ul>
+  <li>프로세스 그룹 : 프로세스를 기준에 따라 여러 그룹으로 나누고, 각 그룹에 따른 큐 배치
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Interactive Process</code> : 유저 수준 &gt; 데이터를 바로바로 처리 (<code class="language-plaintext highlighter-rouge">I/O bound Process</code>)</li>
+      <li><code class="language-plaintext highlighter-rouge">Batch Process</code> : 유저 수준 &gt; 일정 시간에 데이터를 한번에 처리 (<code class="language-plaintext highlighter-rouge">CPU bound Process</code>)</li>
+    </ul>
+  </li>
+  <li>우선순위에 따라 대기할 큐를 지정할 수 있고, 각 큐마다 서로 다른 스케줄링 방식을 사용 가능</li>
+</ul>
+
+<h3 id="멀티레벨-피드백-큐-multi-level-feedback-queue-스케줄링--멀테레벨-큐에-피드백-추가">멀티레벨 피드백 큐 (<code class="language-plaintext highlighter-rouge">Multi-level Feedback Queue</code>) 스케줄링 : 멀테레벨 큐에 피드백 추가</h3>
+<ul>
+  <li>멀티레벨 큐처럼 프로세스를 여러 그룹으로 나누고, 각 그룹에 따른 큐 배치
+    <ul>
+      <li>모든 프로세스들은 처음에는 무조건 우선순위가 가장 높은 큐에서 대기 (vs 멀티레벨 큐 : 우선순위에 따른 큐 지정 가능)</li>
+    </ul>
+  </li>
+  <li>피드백 (<code class="language-plaintext highlighter-rouge">Feedback</code>) : <code class="language-plaintext highlighter-rouge">time out</code>이 발생한 프로세스를 보다 낮은 우선순위의 큐로 격하
+    <ul>
+      <li>우선순위와 <code class="language-plaintext highlighter-rouge">CPU burst</code>가 반비례 : <code class="language-plaintext highlighter-rouge">I/O bound Process</code>는 높은 우선순위, <code class="language-plaintext highlighter-rouge">CPU bound Process</code>는 낮은 우선순위</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="프로세스-간-통신-inter-process-communication--프로세스들-간에-서로-데이터를-주고받는-행위">프로세스 간 통신 (<code class="language-plaintext highlighter-rouge">Inter-Process Communication</code>) : 프로세스들 간에 서로 데이터를 주고받는 행위</h2>
+<ul>
+  <li>독립 프로세스 (<code class="language-plaintext highlighter-rouge">Independent Process</code>) : (단일 처리 시스템에서) 다른 프로세스에 독립적으로 실행되는 동기적 프로세스</li>
+  <li>협력 프로세스 (<code class="language-plaintext highlighter-rouge">Cooperating Process</code>) : 실행중인 다른 프로세스와의 상호 작용을 통해 수행되는 비동기적 프로세스</li>
+</ul>
+
+<h3 id="공유-메모리-shared-memory--협력-프로세스-간-하나의-공유-메모리-영역을-만들어-상호-통신">공유 메모리 (<code class="language-plaintext highlighter-rouge">Shared Memory</code>) : 협력 프로세스 간 하나의 공유 메모리 영역을 만들어 상호 통신</h3>
+<blockquote>
+  <p>공유 메모리 세그먼트 : 공유 메모리 영역은 공유 메모리 세그먼트를 생성하는 프로세스의 주소 공간에 위치</p>
+</blockquote>
+
+<ul>
+  <li>장점 : 커널 의존성이 낮아 속도가 빠르고, 유저 레벨에서의 IPC가 가능해 자유로운 통신이 가능</li>
+  <li>단점 : 자원과 데이터를 공유하기에 동기화 문제가 발생</li>
+</ul>
+
+<h3 id="메시지-패싱-message-passing--협력-프로세스-간-각자의-메시지를-운영-체제에-전달해-통신">메시지 패싱 (<code class="language-plaintext highlighter-rouge">Message Passing</code>) : 협력 프로세스 간 각자의 메시지를 운영 체제에 전달해 통신</h3>
+<ul>
+  <li>장점 : 별도의 구축 없이 커널만을 이용하기에 비교적 구현이 쉬움</li>
+  <li>단점 : 커널을 이용할 때마다, 시스템 호출에 따른 문맥 전환이 매번 발생 (문맥 복사 2번 수행, 문맥 전환 오버헤드 발생)</li>
+</ul>
+
+<h2 id="쓰레드-thread--프로세스-내부의-흐름">쓰레드 (<code class="language-plaintext highlighter-rouge">Thread</code>) : 프로세스 내부의 흐름</h2>
+<ul>
+  <li>CPU를 구성하는 기본 단위로, 일반적으로 하나의 프로세스은 하나의 쓰레드가 존재</li>
+  <li>하나의 쓰레드는 고유한 <code class="language-plaintext highlighter-rouge">Thread ID</code>, <code class="language-plaintext highlighter-rouge">Program Counter</code>, <code class="language-plaintext highlighter-rouge">Register Set</code> 및 <code class="language-plaintext highlighter-rouge">Stack</code>을 가짐</li>
+</ul>
+
+<h3 id="다중-쓰레드-multi-threads---하나의-프로세스에-쓰레드가-2개-이상-존재">다중 쓰레드 (<code class="language-plaintext highlighter-rouge">Multi-Threads</code>) :  하나의 프로세스에 쓰레드가 2개 이상 존재</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Concurrent</code> : 한 프로세스에서 여러 쓰레드가 빠른 시간 간격으로 스위칭되어 동시에 실행되는 것처럼 보임
+    <ul>
+      <li>여러 쓰레드들이 하나의 프로세스 안에 속하면서 <code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">data</code> 메모리 공간과 프로세스 자원 <code class="language-plaintext highlighter-rouge">file</code>과 <code class="language-plaintext highlighter-rouge">I/O</code> 공유</li>
+      <li>메시지 패싱 X (운영 체제를 거치지 않고도 통신 가능), 공유 메모리 X (공유 메모리를 만들지 않아도 됨)
+        <ul>
+          <li>멀티 프로세스에 비해 문맥 전환 시간이 짧고, 메모리와 자원의 할당이 더 효율적</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>운영체제가 다중 쓰레드를 지원 : 현대 운영체제에서의 문맥 전환은 프로세스가 아닌 쓰레드 단위로 이루어짐
+    <ul>
+      <li>하나의 프로세스 안에서 여러 쓰레드가 수행되다가 다른 프로세스로 넘어가 그 프로세스의 쓰레드를 수행함
+        <ul>
+          <li>웹 브라우저 : 화면을 출력하는 쓰레드와 데이터를 읽어오는 쓰레드가 따로 수행</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="다중-쓰레드-모델-multi-threads-models---2개-이상의-쓰레드로-구성된-모델">다중 쓰레드 모델 (<code class="language-plaintext highlighter-rouge">Multi-Threads Models</code>) :  2개 이상의 쓰레드로 구성된 모델</h3>
+<ul>
+  <li>유저 쓰레드 (<code class="language-plaintext highlighter-rouge">User Thread</code>) : 유저 레벨의 쓰레드 라이브러리를 통해 관리되는 쓰레드</li>
+  <li>커널 쓰레드 (<code class="language-plaintext highlighter-rouge">Kernel Thread</code>) :  운영체제가 제공하고 직접 관리하는 쓰레드</li>
+</ul>
+
+<h4 id="many-to-one-모델--한-커널-쓰레드가-여러-유저-쓰레드-처리"><code class="language-plaintext highlighter-rouge">Many-to-One</code> 모델 : 한 커널 쓰레드가 여러 유저 쓰레드 처리</h4>
+<ul>
+  <li>병목 현상 : 시스템 호출이 발생하면, 모든 유저 쓰레드가 대기해야 함</li>
+</ul>
+
+<h4 id="one-to-one-모델--유저-쓰레드-한-개당-커널-쓰레드를-대응시켜-처리"><code class="language-plaintext highlighter-rouge">One-to-One</code> 모델 : 유저 쓰레드 한 개당 커널 쓰레드를 대응시켜 처리</h4>
+<ul>
+  <li>커널 쓰레드가 과도하게 생성되어 비효율적임</li>
+</ul>
+
+<h4 id="many-to-many-모델--여러-유저-쓰레드가-여러-커널-쓰레드-처리"><code class="language-plaintext highlighter-rouge">Many-to-Many</code> 모델 : 여러 유저 쓰레드가 여러 커널 쓰레드 처리</h4>
+<ul>
+  <li>커널 쓰레드의 수는 유저 쓰레드의 수보다 작거나 같게 해야 함</li>
+</ul>
+
+<h4 id="two-level-모델--중요한-작업은-one-to-one으로-나머지는-many-to-one으로-처리"><code class="language-plaintext highlighter-rouge">Two-Level</code> 모델 : 중요한 작업은 <code class="language-plaintext highlighter-rouge">One-to-One</code>으로, 나머지는 <code class="language-plaintext highlighter-rouge">Many-to-One</code>으로 처리</h4>
+
+<h2 id="메인-메모리-관리-main-memory-management">메인 메모리 관리 (<code class="language-plaintext highlighter-rouge">Main Memory Management</code>)</h2>
+<ul>
+  <li>메모리 공간은 기본적으로 주소 (<code class="language-plaintext highlighter-rouge">address</code>)와 데이터 (<code class="language-plaintext highlighter-rouge">data</code>)로 구성되어 있음
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">CPU</code>는 주소를 가지고 메인 메모리에 요청을 하거나 해당 주소에 계산 결과를 저장</li>
+      <li>메인 메모리는 <code class="language-plaintext highlighter-rouge">CPU</code>가 요구하는 주소에 저장되어 있는 데이터를 <code class="language-plaintext highlighter-rouge">CPU</code>에게 전달</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821877-d74f5380-4ce6-11e9-8888-e63816796f65.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>프로그램의 빌드는 소스 파일, 목적 파일, 실행 파일 순서로 생성
+    <ul>
+      <li>소스 파일 (<code class="language-plaintext highlighter-rouge">Source file</code>) : 고수준 언어 또는 어셈블리어
+        <ul>
+          <li>컴파일 단계 : 소스 파일은 컴파일러 또는 어셈블러에 의해 컴파일 또는 어셈블하여 목적 파일 생성</li>
+        </ul>
+      </li>
+      <li>목적 파일 (<code class="language-plaintext highlighter-rouge">Object file</code>) : 컴파일된 결과 또는 어셈블된 결과
+        <ul>
+          <li>링크 단계 : 목적 파일은 링커 (<code class="language-plaintext highlighter-rouge">Linker</code>)에 의해 하드 디스크의 라이브러리을 찾아 정보를 추가해 실행 파일 생성</li>
+        </ul>
+      </li>
+      <li>실행 파일 (<code class="language-plaintext highlighter-rouge">Executable file</code>) : 링크된 결과
+        <ul>
+          <li>로드 단계 : 실행 파일은 로더 (<code class="language-plaintext highlighter-rouge">Loader</code>)에 의해 메인 메모리에 할당</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821878-d74f5380-4ce6-11e9-98e8-a43b086a4837.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>빌드된 프로그램은 <code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">data</code>, <code class="language-plaintext highlighter-rouge">stack</code> 영역으로 구분됨
+    <ul>
+      <li>단순히 생성된 프로그램은 <code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">data</code> 영역만 존재</li>
+      <li>로드 단계에서 프로그램이 실행을 위해 메모리에 적재되었을 때, 운영체제에 의해 <code class="language-plaintext highlighter-rouge">stack</code> 영역이 추가됨</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="메모리-계층-memory-hierarchy--각각의-특징이-있는-저장-장치를-혼용해-효율성-극대화">메모리 계층 (<code class="language-plaintext highlighter-rouge">Memory hierarchy</code>) : 각각의 특징이 있는 저장 장치를 혼용해 효율성 극대화</h3>
+<ul>
+  <li>메모리 매니저 (<code class="language-plaintext highlighter-rouge">Memory Manager</code>) : 메모리 하이라키를 관리하는 관리 시스템의 일부분</li>
+</ul>
+
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9986554C5C76482528" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>캐시 (<code class="language-plaintext highlighter-rouge">Cash</code>) : 빠르고, 비싸고, 휘발성</li>
+  <li>메인 메모리 (<code class="language-plaintext highlighter-rouge">Main Memory</code>) : 캐시보다 느리고, 캐시보다 싸고, 휘발성</li>
+  <li>디스크 스토리지 (<code class="language-plaintext highlighter-rouge">Disk Storage</code>) : 메인 메모리보다 느리고, 메인 메모리보다 싸고, 비휘발성</li>
+</ul>
+
+<blockquote>
+  <p>메모리 계층 구조를 통해 프로그래머가 사용하기 좋은 모델로 <b>추상화</b>하고, 운영체제를 통해 이 추상회된 객체를 관리한다.</p>
+</blockquote>
+
+<h3 id="q-cpu가-한-번에-한-프로세스를-수행하면--mono-programming">Q. <code class="language-plaintext highlighter-rouge">CPU</code>가 한 번에 한 프로세스를 수행하면? : <code class="language-plaintext highlighter-rouge">Mono-Programming</code></h3>
+
+<ul>
+  <li>메인 프레임 (<code class="language-plaintext highlighter-rouge">mainframe</code>) : <code class="language-plaintext highlighter-rouge">RAM</code> 위의 <code class="language-plaintext highlighter-rouge">OS</code>에 유저 프로그램이 주소로 연결되어 존재</li>
+  <li>임베디드 시스템 (<code class="language-plaintext highlighter-rouge">Embedded System</code>) : <code class="language-plaintext highlighter-rouge">OS</code>가 위치한 <code class="language-plaintext highlighter-rouge">ROM</code> 아래에 유저 프로그램이 주소로 연결되어 존재</li>
+  <li>퍼스널 컴퓨터 (<code class="language-plaintext highlighter-rouge">personal computer</code>) : 메인 프레임 + <code class="language-plaintext highlighter-rouge">ROM</code> 위 장치 관리자가 유저 프로그램 위에서 <code class="language-plaintext highlighter-rouge">OS</code>의 관리를 받음</li>
+</ul>
+
+<blockquote>
+  <p>하단 내용은, <code class="language-plaintext highlighter-rouge">CPU</code>가 여러 프로세스를 돌아가면서 수행하는 <code class="language-plaintext highlighter-rouge">Multi-Programming</code> 환경이라 가정한다.</p>
+</blockquote>
+
+<h3 id="q-만약-메모리-추상화를-사용하지-않는다면--모든-프로그램이-물리-메모리를-직접-사용">Q. 만약 메모리 추상화를 사용하지 않는다면? : 모든 프로그램이 물리 메모리를 직접 사용</h3>
+<ul>
+  <li>프로그래머에게 제공되는 메모리 영역 : 실제 물리 메모리 (0 ~ (실제 물리 메모리의 크기))
+    <ul>
+      <li>각 주소는 <code class="language-plaintext highlighter-rouge">n</code>비트로 구성된 셀 (<code class="language-plaintext highlighter-rouge">Cell</code>)로 정의</li>
+    </ul>
+  </li>
+  <li>하드웨어의 도움 없이 두 프로그램이 동시에 메모리에서 실행된다는 것은 불가능
+    <ul>
+      <li>메모리의 프로세스를 이미지 형태로 디스크에 저장하고, 실행할 프로그램을 메모리로 스와핑 (<code class="language-plaintext highlighter-rouge">Swapping</code>)할 수는 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>! 메모리 추상화를 사용하지 않는다고 했으니, 메모리 계층 구조 또한 존재하지 않는거네?</p>
+  <ul>
+    <li><b>아니다.</b> 메모리를 추상화하는 방법 중 하나로, <b>메모리 추상화를 사용하지 않는 것</b>이다.
+      <ul>
+        <li>{ a, b, c, d, … } 를 추상화하는 방법 (1) := alphabetic</li>
+        <li>{ a, b, c, d, … } 를 추상화하는 방법 (2) := { a, b, c, d, … }</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>… 운영체제는 메모리 계층 구조를 이루는 캐시, 메인 메모리, 디스크 스토리지를 이에 해당하는 물리 주소를 통해 직접 접근한다.</p>
+  <ul>
+    <li>그런데, 물리 주소를 직접 접근하는 방법에는 <code class="language-plaintext highlighter-rouge">Protection &amp; Relocation</code> 이슈가 존재한다.</li>
+  </ul>
+</blockquote>
+
+<h4 id="p1-프로텍션-protection--한-프로세스가-운영체제나-다른-프로세스의-파티션을-침범하지-못하게-해야-함">P1. 프로텍션 (<code class="language-plaintext highlighter-rouge">Protection</code>) : 한 프로세스가 운영체제나 다른 프로세스의 파티션을 침범하지 못하게 해야 함</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">IBM360</code>모델 : 프로텍션 코드 (<code class="language-plaintext highlighter-rouge">Protection code</code>)
+    <ul>
+      <li>프로세스의 <code class="language-plaintext highlighter-rouge">PSW</code>에는 <code class="language-plaintext highlighter-rouge">4bit</code> 키 (<code class="language-plaintext highlighter-rouge">key</code>)가 포함 / 메모리를 <code class="language-plaintext highlighter-rouge">2KB</code> 블럭 단위로 나누고, 각 블록에 <code class="language-plaintext highlighter-rouge">4bit</code> 프로텍션 코드 할당</li>
+      <li>수행되는 프로세스는 자신의 <code class="language-plaintext highlighter-rouge">PSW</code> 키와 액세스하고 있는 블럭의 프로텍션 코드를 비교해, 일치하지 않으면 트랩 발생</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="p2-리로케이트-relocation--변수-주소나-프로시저-주소에-대한-접근에-차이가-발생">P2. 리로케이트 (<code class="language-plaintext highlighter-rouge">Relocation</code>) : 변수 주소나 프로시저 주소에 대한 접근에 차이가 발생</h4>
+<ul>
+  <li>컴파일된 <code class="language-plaintext highlighter-rouge">.exe</code> 파일을 파티션에 로드해 실행할 때, 바이너리 파일에 명시된대로 접근하는 대신 파티션을 기준으로 접근해야 함
+    <ul>
+      <li>컴파일된 <code class="language-plaintext highlighter-rouge">.exe</code> 파일을 파티션 A와 B에 각각 로드해 실행할 때, 각 파티션을 기준으로 접근해야 함</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>컴파일된 <code class="language-plaintext highlighter-rouge">.exe</code> 파일의 첫번째 명령어가 100번지에 있는 프로시저 콜이라고 가정하면…</p>
+  <ul>
+    <li>해당 파일을 파티션에 로드해 실행했을 때 : <del>0 + 100번지로 접근</del> (파티션의 시작 주소) + 100번지로 접근</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">IBM360</code>모델 : 정적 재배치 (<code class="language-plaintext highlighter-rouge">Static Relocation</code>)
+    <ul>
+      <li>프로그램이 메모리에 로드될 때, 파티션을 기준으로 접근하도록 명령어 수정
+        <ul>
+          <li>링커가 프로그램의 어떤 부분이 리로케이트되어야 하는지 알아야 함</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="주소-바인딩-address-binding--프로세스의-논리적-주소를-물리적-메모리-주소로-연결">주소 바인딩 (<code class="language-plaintext highlighter-rouge">Address Binding</code>) : 프로세스의 논리적 주소를 물리적 메모리 주소로 연결</h3>
+<ul>
+  <li>주소 공간 (<code class="language-plaintext highlighter-rouge">address space</code>) : 프로세스가 메모리에 접근할 때 사용하는 주소들의 집합
+    <ul>
+      <li>각 프로세스들은 자신들만의 주소 공간을 가짐 -&gt; <code class="language-plaintext highlighter-rouge">logical address</code></li>
+    </ul>
+  </li>
+  <li>프로그램이 어떤 주소를 사용해도, 메인 메모리에 할당된 주소를 찾아가도록 해야 함
+    <ul>
+      <li>논리 주소 (<code class="language-plaintext highlighter-rouge">logical address</code>) : CPU에서 사용하는 주소. 메모리 내 프로세스의 독립적인 공간</li>
+      <li>물리 주소 (<code class="language-plaintext highlighter-rouge">physical address</code>) : 메인 메모리에서 사용하는 주소. 하드웨어에 의해 정해진 주소 공간</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>… 그러므로 프로그램이 할당된 실제 메모리 주소 공간의 위치는 프로그램을 실행하는 <code class="language-plaintext highlighter-rouge">CPU</code>에 전혀 영향을 미치지 않음</p>
+  <ul>
+    <li>그럼 어떻게 각각의 프로세스들에게 서로 다른 주소 공간을 제공할 수 있을까?</li>
+  </ul>
+</blockquote>
+
+<h4 id="mmu의-재배치-레지스터-relocation-register--각-프로세스의-논리-공간을-메모리의-물리-공간으로-연속해-매핑"><code class="language-plaintext highlighter-rouge">MMU</code>의 재배치 레지스터 (<code class="language-plaintext highlighter-rouge">Relocation Register</code>) : 각 프로세스의 논리 공간을 메모리의 물리 공간으로 연속해 매핑</h4>
+<ul>
+  <li>동적 재배치 (<code class="language-plaintext highlighter-rouge">Dynamic relocation</code>) : 프로세스의 논리 주소를 메모리의 물리 주소으로 변경
+    <ul>
+      <li>베이스 레지스터 (<code class="language-plaintext highlighter-rouge">Base Register</code>) : (파티션의 시작 주소)</li>
+      <li>리미트 레지스터 (<code class="language-plaintext highlighter-rouge">Limit Register</code>) : (파티션의 크기)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821880-d7e7ea00-4ce6-11e9-944e-3be89338213f.png" width="80%" style="margin-left: 2%" /></p>
+
+<ol>
+  <li>현재 프로그램이 파티션에 로드되었을 때, 프로그램이 로드된 파티션의 크기를 리미트 레지스터의 값에 저장</li>
+  <li><code class="language-plaintext highlighter-rouge">CPU</code>는 메인 메모리에서 주소가 사용 가능한지 여부를 생각하지 않고, 명시된 그대로 물리 주소를 사용하려고 함</li>
+  <li><code class="language-plaintext highlighter-rouge">CPU</code>가 명령어를 수행할 때마다, 프로세스가 참조하려는 주소에 베이스 레지스터의 값을 더해 수행 (<code class="language-plaintext highlighter-rouge">Relocation</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">CPU</code>가 명령어를 수행할 때마다, 프로세스가 참조하려는 주소가 리미트 레지스터의 값과 동일하거나 큰지 확인 (<code class="language-plaintext highlighter-rouge">Protection</code>)
+    <ul>
+      <li>O : 프로텍션 바이오레이션 (<code class="language-plaintext highlighter-rouge">Protection Violation</code>) 발생시켜 메모리 참조를 중단</li>
+      <li>X : 프로세스가 참조하려는 주소에 베이스 레지스터의 값을 더한 값을 메모리 버스에 보냄</li>
+    </ul>
+  </li>
+</ol>
+
+<blockquote>
+  <p>Q. 그럼 베이스 레지스터 &amp; 리미트 레지스터를 사용하면 이젠 더 이상 문제가 없는걸까?</p>
+  <ul>
+    <li>모든 메모리 참조마다 덧셈과 비교 연산이 요구되기에, 비교적 시간이 오래 걸림 : 특히 덧셈 연산이!
+      <ul>
+        <li>블로트웨어 (<code class="language-plaintext highlighter-rouge">Bloatware</code>) : 메모리의 크기를 증가하는 속도를 소프트웨어의 크기가 증가하는 속도가 역전</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2Fe9a93b26-58ff-4ab0-8b6b-2a8b3cb3cdfd%2F정적재배치2.PNG" width="80%" style="margin-left: 2%" /></p>
+
+  <ul>
+    <li>정적 메모리 파티션 (<code class="language-plaintext highlighter-rouge">Fixed memory partitions</code>) : 메모리를 파티션 여러 개로 미리 나누고 프로세스 할당
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">Multiple input Queues</code> : 도착한 작업을 크기에 맞는 가장 작은 파티션에 넣음</li>
+        <li><code class="language-plaintext highlighter-rouge">Single input Queue</code> : 도착한 작업을 수용할 큐를 하나만 배정해 먼저 도착한 작업을 먼저 실행하게끔 함</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><img src="https://examradar.com/wp-content/uploads/2019/02/fixed-memory-partition.png" width="80%" style="margin-left: 2%" /></p>
+
+  <blockquote>
+    <p>정적 메모리 파티션은 메모리가 시스템이 구동할 모든 프로세스를 적재할 만큼의 용량을 가져야 성립한다. 그러나,</p>
+    <ul>
+      <li>시스템이 구동할 모든 프로세스들이 필요한 메모리의 전체 크기는 실제 <code class="language-plaintext highlighter-rouge">RAM</code> 용량보다 크다.</li>
+      <li>프로그램이 시작하기 전에 이미 실행 중인 프로세스들이 적재되어 있다.</li>
+    </ul>
+  </blockquote>
+
+  <p>… <b>모든 프로세스들을 계속 적재하기엔, 물리 메모리 크기에 한계가 있다</b>는 문제를 해결하기 위해 2가지 해결책이 제시되었다.</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">Swapping</code> : 한 프로세스의 전체 이미지가 메모리로 적재되어 실행되다가 더 이상 실행되지 않으면 디스크로 이동</li>
+    <li><code class="language-plaintext highlighter-rouge">Virtual Memory</code> : 한 프로세스의 전체 이미지가 아닌 일부만 메모리에 있어도 프로세스의 실행이 가능</li>
+  </ul>
+</blockquote>
+
+<h3 id="스와핑-swapping--메모리에-로드된-프로세스-중에-장기간-미사용된-프로세스를-하드-디스크에-이미지-형태로-저장">스와핑 (<code class="language-plaintext highlighter-rouge">Swapping</code>) : 메모리에 로드된 프로세스 중에 장기간 미사용된 프로세스를 하드 디스크에 이미지 형태로 저장</h3>
+<ul>
+  <li>프로세스 이미지 (<code class="language-plaintext highlighter-rouge">Process Image</code>) : 프로그램이 메모리에 로드되고 실행되어 데이터가 변경된 프로세스
+    <ul>
+      <li>하드 디스크에 존재하는 <code class="language-plaintext highlighter-rouge">.exe</code>, <code class="language-plaintext highlighter-rouge">.app</code>에 데이터가 변경되었기에 이를 하드 디스크의 <code class="language-plaintext highlighter-rouge">backing store</code>에 저장
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">swap-out</code> : 메인 메모리 -&gt; <code class="language-plaintext highlighter-rouge">Backing store</code></li>
+          <li><code class="language-plaintext highlighter-rouge">swap-in</code> : <code class="language-plaintext highlighter-rouge">Backing store</code> -&gt; 메인 메모리</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F79e932b4-c55f-4e27-aaaf-381605691e27%2F스와핑1.PNG" width="80%" style="margin-left: 2%" /></p>
+
+<blockquote>
+  <p>… <code class="language-plaintext highlighter-rouge">backing store</code>는 메인 메모리의 모든 프로세스가 <code class="language-plaintext highlighter-rouge">swap-out</code>될 때 데어터의 소실 없이 저장할 수 있어야 한다.</p>
+  <ul>
+    <li>그러므로, 하드 디스크에서 <code class="language-plaintext highlighter-rouge">backing store</code>이 할당받는 크기는 <b>최소 메인 메모리의 크기</b>라 예상할 수 있다.</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://miro.medium.com/max/1200/1*QnOhzkY2mIXFKM-SoXh_8w.jpeg" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>(a) 각 프로그램의 데이터 세그먼트가 늘어날 공간을 미리 확보</li>
+  <li>(b) 각 프로그램의 세그먼트를 프로그램 텍스트 / 데이터 세그먼트 / 스택 세그먼트로 나눔
+    <ul>
+      <li>프로그램 텍스 위의 데이터 세그먼트와 스택 세그먼트가 서로를 향해 자라게끔 함
+        <ul>
+          <li>힙 (<code class="language-plaintext highlighter-rouge">Heap</code>) 영역 (<code class="language-plaintext highlighter-rouge">Room for growth</code>) : 사용자가 동적으로 할당할 영역
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">malloc</code>, <code class="language-plaintext highlighter-rouge">calloc</code> 등의 명령어로 관리</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="동적-메모리-파티션-dynamic-memory-partitions--프로그램이-메모리에-로드될-때마다-파티션을-나누고-할당">동적 메모리 파티션 (<code class="language-plaintext highlighter-rouge">Dynamic memory partitions</code>) : 프로그램이 메모리에 로드될 때마다 파티션을 나누고 할당</h4>
+<ul>
+  <li>운영체제가 동적으로 할당된 프로세스를 관리 : 힙 영역이 커지므로, 프로세스의 확장을 위한 공간이 할당되어야 함</li>
+</ul>
+
+<p><img src="https://examradar.com/wp-content/uploads/2019/03/Memory-Management-with-Bitmap.png" width="66%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>(b) <code class="language-plaintext highlighter-rouge">Bit Maps</code> 사용 : 맵에 <code class="language-plaintext highlighter-rouge">X</code>비트를 관장할 <code class="language-plaintext highlighter-rouge">Y</code>개의 할당 단위 (<code class="language-plaintext highlighter-rouge">allocation unit</code>)
+    <ul>
+      <li>단위 유닛이 메모리에 할당되어 있으면 유닛의 값을 1, 할당되어 있지 않으면 0 (<code class="language-plaintext highlighter-rouge">flag bit</code>)</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li>할당 단위가 작아지면? : 유닛의 개수 <code class="language-plaintext highlighter-rouge">Y</code>가 커진다.
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">Y</code>를 표현할 <code class="language-plaintext highlighter-rouge">flag bit</code>가 많이 필요하므로, 맵의 크기가 커져 맵을 탐색할 때의 성능이 저하된다.</li>
+      </ul>
+    </li>
+    <li>할당 단위가 커지면? : 유닛의 개수 <code class="language-plaintext highlighter-rouge">Y</code>가 작아진다.
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">Y</code>를 표현할 <code class="language-plaintext highlighter-rouge">flag bit</code>가 적게 필요하므로, 비트맵의 공간이 작아진다.</li>
+        <li>마지막 프로세스에 빈 공간 역시 커져 더 많은 메모리 공간이 낭비될 가능성이 있다.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>… <code class="language-plaintext highlighter-rouge">Bit Maps</code>의 문제점 : 프로세스가 <code class="language-plaintext highlighter-rouge">k</code>개의 할당 단위를 요구할 때, 맵에서 <code class="language-plaintext highlighter-rouge">k</code>개의 0비트를 연속해서 찾아야 한다.</p>
+</blockquote>
+
+<ul>
+  <li>(c) <code class="language-plaintext highlighter-rouge">Linked Lists</code> 사용 : 메모리의 낮은 주소부터 링크드 리스트의 노드가 있음
+    <ul>
+      <li>각 엔트리는 <code class="language-plaintext highlighter-rouge">P</code> (프로세스) or <code class="language-plaintext highlighter-rouge">H</code> (홀)을 표현하는 <code class="language-plaintext highlighter-rouge">flag</code> / 시작 주소 / 길이 / 다음 엔트리를 가리키는 포인터로 구성</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li>프로세스 종료 시 <code class="language-plaintext highlighter-rouge">Linked Lists</code>를 업데이트하는 방법
+      <ul>
+        <li>종료되는 프로세스는 일반적으로 2개의 이웃을 가짐 : 이웃은 다른 프로세스가 차지한 공간이거나 빈 공간임</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL0MnsZnPlU2O0BnlViAvrs8Ge5bJtE5VhIQ&amp;usqp=CAU" width="66%" style="margin-left: 2%" /></p>
+
+  <ul>
+    <li>(a) <code class="language-plaintext highlighter-rouge">X</code>에 해당되는 엔트리를 <code class="language-plaintext highlighter-rouge">X</code>에서 <code class="language-plaintext highlighter-rouge">H</code>로 바꿔 갱신</li>
+    <li>(b), (c) 2개의 엔트리를 통합해 하나로 표현</li>
+    <li>(d) 3개의 엔트리를 통합해 하나로 표현</li>
+  </ul>
+</blockquote>
+
+<h4 id="contiguous-memory-allocation--메모리에-새로-생성된-프로세스들을-위한-메모리-공간-할당"><code class="language-plaintext highlighter-rouge">Contiguous Memory Allocation</code> : 메모리에 새로 생성된 프로세스들을 위한 메모리 공간 할당</h4>
+<ul>
+  <li>메모리 단편화 (<code class="language-plaintext highlighter-rouge">Memory fragmentation</code>) : 메인 메모리에 흩어진 홀들이 불연속적으로 할당된 상태 (<code class="language-plaintext highlighter-rouge">scattered holes</code>)
+    <ul>
+      <li>홀 (<code class="language-plaintext highlighter-rouge">Hole</code>) : 메인 메모리에서 프로세스가 할당되지 않은 영역</li>
+    </ul>
+  </li>
+  <li>외부 단편화 (<code class="language-plaintext highlighter-rouge">External fragmentation</code>) : 프로세스를 할당할 크기가 충분하나, 메모리 단편화로 할당이 불가능한 상태</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821882-d8808080-4ce6-11e9-8ff3-193fa79c04a3.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">First-fit</code> : 프로세스 크기보다 크거나 같은 홀을 탐색하는 순서 중에서 가장 먼저 찾은 홀에 프로세스 할당</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821883-d8808080-4ce6-11e9-8c2d-c84b878d21ea.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Best-fit</code> : 할당할 프로세스 크기와 홀의 크기 차이가 가장 작은 홀에 프로세스 할당</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821885-d8808080-4ce6-11e9-9473-db032d7eeb3a.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Worst-fit</code> : 할당할 프로세스 크기와 홀의 크기 차이가 가장 큰 홀에 프로세스 할당
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Best-fit</code>을 사용하였다가 다른 프로세스가 쓰지 못할 정도의 홀이 생겼을 때를 위한 대안</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821887-d9191700-4ce6-11e9-9b00-fa92272b8b7d.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Compaction</code> : 메모리 여러 곳에 흩어져있는 홀들을 강제로 하나로 병합
+    <ul>
+      <li>홀을 옮기는 오버헤드가 매우 크고, 어느 홀을 옮겨야 빠르게 합칠 수 있는지에 대한 최적 알고리즘이 존재하지 않음</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>일반적으로 할당 속도는 <code class="language-plaintext highlighter-rouge">First-fit</code>가 가장 빠르고, 메모리 이용률은 <code class="language-plaintext highlighter-rouge">First-fit</code>와 <code class="language-plaintext highlighter-rouge">Best-fit</code>이 비슷한 성능을 보인다.</p>
+  <ul>
+    <li>하지만 <code class="language-plaintext highlighter-rouge">Best-fit</code>을 사용하더라도, 외부 단편화로 인해 여전히 전체 메모리의 1/3 정도를 낭비한다.</li>
+  </ul>
+</blockquote>
+
+<h2 id="페이징-paging--프로그램과-메모리를-일정한-크기로-나눔">페이징 (<code class="language-plaintext highlighter-rouge">Paging</code>) : 프로그램과 메모리를 일정한 크기로 나눔</h2>
+<ul>
+  <li>가상 주소 (<code class="language-plaintext highlighter-rouge">Virtual address</code>) : 프로그램이 가상 메모리에서 참조하는 주소
+    <ul>
+      <li>가상 메모리 (<code class="language-plaintext highlighter-rouge">Virtual Memory</code>)가 있다면, 각 프로그램은 자신의 고유한 가상 주소 공간을 가짐
+        <ul>
+          <li>가상 메모리 사용 <code class="language-plaintext highlighter-rouge">O</code> : 가상 주소가 그대로 메모리 버스에 실려 물리 주소가 됨</li>
+          <li>가상 메모리 사용 <code class="language-plaintext highlighter-rouge">X</code> : 가상 주소가 <code class="language-plaintext highlighter-rouge">MMU</code>에 의해 물리 주소로 매핑</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F77cc13d2-02da-4be4-9ff6-369f0dbc4b26%2F페이징2.PNG" width="66%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>가상 주소 공간과 물리 주소 공간은 고정된 크기 단위의 유닛들로 동일하게 나뉜다.
+    <ul>
+      <li>가상 페이지 (<code class="language-plaintext highlighter-rouge">Virtual Page</code>) : 가상 주소 공간을 나눈 조각. 각 페이지는 연속된 주소를 가짐</li>
+      <li>페이지 프레임 (<code class="language-plaintext highlighter-rouge">Page Frame</code>) : 물리 메모리를 나눈 조각.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li>다음 그림에서는 가상 주소 공간을 <code class="language-plaintext highlighter-rouge">64KB</code>, 물리 메모리 공간을 <code class="language-plaintext highlighter-rouge">32KB</code>, 유닛 크기는 <code class="language-plaintext highlighter-rouge">4KB</code>로 가정하고 있다.</li>
+  </ul>
+
+  <p><img src="https://d2vlcm61l7u1fs.cloudfront.net/media%2F814%2F8145fa33-a835-4aec-b761-957da632ac81%2FphpBxgNnp.png" width="80%" style="margin-left: 2%" /></p>
+  <ul>
+    <li>논리 주소 (<code class="language-plaintext highlighter-rouge">logical address</code>) : 세그먼트 (<code class="language-plaintext highlighter-rouge">segment</code>) + 오프셋 (<code class="language-plaintext highlighter-rouge">offset</code>)
+      <ul>
+        <li>세그먼트 (<code class="language-plaintext highlighter-rouge">segment</code>) : <code class="language-plaintext highlighter-rouge">64KB</code>의 고정된 길이와 시작 위치으로만 구성</li>
+        <li>오프셋 (<code class="language-plaintext highlighter-rouge">offset</code>) : 세그먼트의 시작 지점에서 실제 주소까지 떨어진 거리</li>
+      </ul>
+    </li>
+    <li>가상 주소 (<code class="language-plaintext highlighter-rouge">virtual address</code>) : <code class="language-plaintext highlighter-rouge">single 32-bit unsigned integer</code>
+      <ul>
+        <li>가상 페이지는 <code class="language-plaintext highlighter-rouge">16</code>진수로 표현 (<code class="language-plaintext highlighter-rouge">16bit</code>) : <code class="language-plaintext highlighter-rouge">0x00000000</code> ~ <code class="language-plaintext highlighter-rouge">0xffffffff</code>의 범위 (<code class="language-plaintext highlighter-rouge">4096bit</code>=<code class="language-plaintext highlighter-rouge">4KB</code>)</li>
+      </ul>
+    </li>
+    <li>물리 주소 (<code class="language-plaintext highlighter-rouge">physical address</code>) : 물리 메모리에서 각각의 셀 (<code class="language-plaintext highlighter-rouge">cell</code>)의 주소
+      <ul>
+        <li>페이지 프레임은 가상 페이지가 매핑되는 물리 메모리의 일부분(<code class="language-plaintext highlighter-rouge">4096bit</code>=<code class="language-plaintext highlighter-rouge">4KB</code>)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <blockquote>
+    <p>명령어 <code class="language-plaintext highlighter-rouge">MOV REG, 0</code>을 수행한다고 가정해보자.</p>
+    <ul>
+      <li>이 명령어에서 접근하는 가상 주소 0는 MMU로 전달된다.</li>
+      <li>MMU는 해당 가상 주소가 가상 페이지 0에 속한 것임을 확인한다.</li>
+      <li>MMU는 가상 페이지 0에 매핑된 물리 주소의 페이지 프레임이 2임을 계산한다.</li>
+      <li>가상 주소 0은 물리 주소 8192로 변환되고, 이 물리 주소가 메모리 버스에 실린다.</li>
+    </ul>
+  </blockquote>
+
+  <p>… MMU가 가상 페이지를 페이지 프레임에 매핑하는 것만으론 가상 주소 공간이 물리 주소 공간보다 큰 문제를 해결하지 못한다.</p>
+</blockquote>
+
+<h3 id="페이지-폴트-page-fault--페이지가-메모리에-매핑되어-있지-않음을-파악하면-cpu에서-트랩-발생">페이지 폴트 (<code class="language-plaintext highlighter-rouge">Page Fault</code>) : 페이지가 메모리에 매핑되어 있지 않음을 파악하면 <code class="language-plaintext highlighter-rouge">CPU</code>에서 트랩 발생</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">present</code> 비트 : 어떤 페이지가 실제 메모리에 존재하는지 표현하는 비트 (가상 페이지에 <code class="language-plaintext highlighter-rouge">X</code>로 표현)
+    <ul>
+      <li>페이지가 메모리에 매핑되어 있지 않으면, <code class="language-plaintext highlighter-rouge">CPU</code>에서 트랩을 발생시켜 운영체제에 이를 알림</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Page Fault</code>가 발생하면, 운영체제는 적게 사용되고 있는 페이지 프레임을 하나 선택
+    <ul>
+      <li>선택한 페이지가 수정되었다면 (<code class="language-plaintext highlighter-rouge">dirty</code> 상태) 이를 디스크에 기록하고, 수정되지 않았다면 (<code class="language-plaintext highlighter-rouge">clean</code> 상태) 디스크에 존재하는 것과 동일하니 기록하지 않음</li>
+      <li>선택한 기존 페이지의 내용을 지우고, 참조하려는 페이지의 내용을 페이지 프레임에 적재</li>
+      <li>선택한 기존 페이지 프레임을 <code class="language-plaintext highlighter-rouge">X</code>로, 참조한 페이지 프레임을 숫자로 매핑시켜 가상 페이지 맵 수정</li>
+      <li>트랩이 발생한 명령어를 다시 실행</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>명령어 <code class="language-plaintext highlighter-rouge">MOV REG, 24576</code>을 수행하였을 때 <code class="language-plaintext highlighter-rouge">Page Fault</code>가 발생해 OS에서 페이지 프레임 1을 교체하려 한다고 가정해보자.</p>
+  <ul>
+    <li>가상 페이지 1이 더 이상 매핑되지 않음 (<code class="language-plaintext highlighter-rouge">X</code>)을 표시한다.</li>
+    <li>가상 페이지 7이 페이지 프레임 1에 매핑되었음을 표시한다.</li>
+  </ul>
+</blockquote>
+
+<h3 id="페이징-테이블-page-table--가상-페이지-번호-vpn를-페이지-프레임-번호-pfn로-매핑">페이징 테이블 (<code class="language-plaintext highlighter-rouge">Page Table</code>) : 가상 페이지 번호 (<code class="language-plaintext highlighter-rouge">VPN</code>)를 페이지 프레임 번호 (<code class="language-plaintext highlighter-rouge">PFN</code>)로 매핑</h3>
+
+<blockquote>
+  <p>위의 매핑 정보를 바탕으로 가상 주소 <code class="language-plaintext highlighter-rouge">8196</code>를 물리 주소 <code class="language-plaintext highlighter-rouge">24580</code>로 변환하는 과정을 가정해 살펴보자.</p>
+
+  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F1e02251d-f340-4f21-a40a-ece83ef34966%2F페이지테이블1.PNG" width="80%" style="margin-left: 2%" /></p>
+
+  <ul>
+    <li>16비트 크기를 갖는 가상 주소는 <code class="language-plaintext highlighter-rouge">VPN</code>와 오프셋으로 구분된다.
+      <ul>
+        <li>페이지 번호는 페이지 테이블의 인덱스로 사용된다.</li>
+      </ul>
+    </li>
+    <li>페이지 테이블에는 <code class="language-plaintext highlighter-rouge">VPN</code>에 대응되는 <code class="language-plaintext highlighter-rouge">PFN</code>이 기록되어 있다.
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">present</code> 비트가 1이면, 페이지 테이블의 <code class="language-plaintext highlighter-rouge">PFN</code> 3비트와 가상 주소의 오프셋 12비트가 결합해 물리 주소가 된다.</li>
+      </ul>
+    </li>
+    <li>물리 주소를 주소 출력 레지스터를 통해 메모리 버스로 전달해 참조한다.</li>
+  </ul>
+
+  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F3e57db8f-32a6-4eb8-9aae-401f58178f5a%2F페이징주소변환.PNG" width="80%" style="margin-left: 2%" /></p>
+</blockquote>
+
+<ul>
+  <li>페이지 테이블엔 디스크에 존재하는 페이지의 디스크 주소에 대한 정보가 없음 (<code class="language-plaintext highlighter-rouge">Page Fault</code> : 운영체제 내부에서 처리)
+    <ul>
+      <li>메모리에 존재하는 페이지 주소에 대한 정보만 존재 : 하드웨어가 가상 주소를 물리 주소로 변경할 때 사용</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://examradar.com/wp-content/uploads/2019/03/page-table-entry.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>페이지 테이블의 각 페이지에 존재하는 정보
+    <ul>
+      <li>페이지 프레임 번호 (<code class="language-plaintext highlighter-rouge">PFN</code>) : 가상 주소를 물리 주소로 매핑
+        <ul>
+          <li>해당 페이지가 매핑된 물리 주소 결정</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Present</code> 비트 : <code class="language-plaintext highlighter-rouge">PFN</code>이 유효한지 아닌지 결정 (가상 주소가 사용될 때마다 확인)
+        <ul>
+          <li>0 (<code class="language-plaintext highlighter-rouge">X</code>)이면 해당 엔트리에 대응되는 페이지가 물리 메모리에 존재하지 않는 상태 (트랩 발생)</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Protection</code> 비트 : 어떤 접근이 허용되는지 표시
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">write</code>, <code class="language-plaintext highlighter-rouge">read</code>, <code class="language-plaintext highlighter-rouge">execute</code></li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Modify</code> 비트 : 페이지가 수정되었는지 아닌지 확인
+        <ul>
+          <li>페이지의 내용이 <code class="language-plaintext highlighter-rouge">write</code>되면, 하드웨어가 자동으로 비트를 1로 세팅
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">Modify</code> 비트가 1 (<code class="language-plaintext highlighter-rouge">dirty</code>)이면, 페이지 프레임이 교체될 때 디스크에 기록되어야 함</li>
+              <li><code class="language-plaintext highlighter-rouge">Modify</code> 비트가 0 (<code class="language-plaintext highlighter-rouge">clean</code>)이면, 페이지 프레임이 교체될 때 새로운 내용으로 덮어씌워도 됨</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Reference</code> 비트 : 해당 페이지가 <code class="language-plaintext highlighter-rouge">write</code> 또는 <code class="language-plaintext highlighter-rouge">read</code>로 접근되었을 때 설정
+        <ul>
+          <li>운영체제가 <code class="language-plaintext highlighter-rouge">Page Fault</code>의 처리를 위해 교체할 페이지 프레임을 선택할 때 사용</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Cashing Disabled</code> 비트 : 해당 페이지가 캐싱될 수 있는지 여부
+        <ul>
+          <li>페이지가 메모리가 아닌 장치 레지스터에 매핑되어 있을 때 실행</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <blockquote>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">64bit</code> 주소를 사용하는 컴퓨터는 가상 주소 공간이 <code class="language-plaintext highlighter-rouge">2^64byte</code></li>
+      <li>가상 주소 공간의 한 페이지가 <code class="language-plaintext highlighter-rouge">4KB = 2^12byte</code>이면,
+        <ul>
+          <li>페이지 테이블의 엔트리 개수는 전체 공간을 한 페이지로 나눈 <code class="language-plaintext highlighter-rouge">2^52</code>개</li>
+          <li>엔트리 하나당 <code class="language-plaintext highlighter-rouge">4byte</code>의 크기를 가진다면, 페이지 테이블의 크기는 <code class="language-plaintext highlighter-rouge">2^52 * 4byte</code></li>
+        </ul>
+      </li>
+    </ul>
+  </blockquote>
+
+  <p>… 페이징은 다음 두 가지 문제를 해결해야 한다.</p>
+  <ul>
+    <li>가상 주소 공간이 커지면, 페이지 테이블의 크기 (= 페이지 테이블 엔트리의 개수) 또한 증가한다.
+      <ul>
+        <li>페이지 테이블을 유지하기 위해 필요한 메모리의 크기가 클 수 있음</li>
+      </ul>
+    </li>
+    <li>가상 주소에서 물리 주소로의 변환이 빠르게 이루어져야 한다.
+      <ul>
+        <li>메모리를 참조하는 오버헤드가 작아야 함</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h3 id="tlbs-translation-lookaside-buffers--페이징의-속도를-높이고-큰-가상-주소-공간을-지원하는-기법"><code class="language-plaintext highlighter-rouge">TLBs</code> (<code class="language-plaintext highlighter-rouge">Translation Lookaside Buffers</code>) : 페이징의 속도를 높이고, 큰 가상 주소 공간을 지원하는 기법</h3>
+
+<blockquote>
+  <p>대부분의 프로그램들은 적은 개수의 페이지를 집중적으로 참조하는 경향이 있다.</p>
+  <ul>
+    <li>페이지 테이블의 일부 엔트리만이 높은 빈도로 참조되고, 나머지 엔트리는 낮은 빈도로 참조된다.</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">TLB</code> : 페이지 테이블의 참조 없이 가상 주소를 물리 주소로 매핑할 수 있는 작은 크기의 메모리
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">MMU</code> 내부에 존재하며, 적은 개수의 엔트리를 가짐
+        <ul>
+          <li>각각의 <code class="language-plaintext highlighter-rouge">TLB</code> 엔트리는 한 페이지에 대한 정보를 포함</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F8b9807f3-f9d5-437a-8110-25ff5a9aad4a%2FTLB2.PNG" width="80%" style="margin-left: 2%" /></p>
+
+  <ol>
+    <li><code class="language-plaintext highlighter-rouge">MMU</code>는 주소 변환을 할 때 요청된 가상 페이지가 <code class="language-plaintext highlighter-rouge">TLB</code>에 있는지 검색</li>
+    <li>가상 페이지가 존재하고 보호코드를 위반하지 않으면, 대응되는 페이지 프레임을 사용하여 주소 변환을 실행</li>
+    <li><code class="language-plaintext highlighter-rouge">TLB</code>가 존재하지 않으면, <code class="language-plaintext highlighter-rouge">TLB miss</code> 발생. <code class="language-plaintext highlighter-rouge">MMU</code>는 페이지 테이블에서 해당 페이지 테이블 엔트리를 검색</li>
+    <li>그리고 <code class="language-plaintext highlighter-rouge">TLB</code> 엔트리 중 하나를 선택해 그 내용을 교체. 페이지 테이블에 없는 수정 비트는 페이지 테이블에 기록</li>
+    <li>찾은 페이지 테이블 엔트리를 <code class="language-plaintext highlighter-rouge">TLB</code> 엔트리에 기록 (이때 다시 참조한다면 <code class="language-plaintext highlighter-rouge">TLB hit</code>로 처리)</li>
+    <li>새로운 정보가 적재될 때는 페이지 테이블 엔트리에 있는 내용이 적재</li>
+  </ol>
+</blockquote>
+
+<ul>
+  <li>메모리 계층 구조에서 발생할 수 있는 <code class="language-plaintext highlighter-rouge">miss</code>의 경우의 수 : <code class="language-plaintext highlighter-rouge">2^3</code>가지 <code class="language-plaintext highlighter-rouge">-&gt;</code> 실제 발생 가능한 경우의 수 : <code class="language-plaintext highlighter-rouge">5</code>가지</li>
+</ul>
+<div style="text-align: center;">
+  <table>
+	  <thead>
+		  <tr>
+			  <td>Cache</td>
+        <td>TLB</td>
+        <td>Virtual Memory</td>
+        <td>발생 가능 여부</td>
+			  <td>설명</td>
+		  </tr>
+	  </thead>
+	  <tbody>
+		  <tr>
+			  <td>hit</td>
+        <td>hit</td>
+        <td>hit</td>
+        <td>가능 (최선)</td>
+			  <td>(1) TLB가 hit이므로, 페이지 테이블을 확인할 필요 없이 가상 주소를 물리 주소로 변환 (메인 메모리 접근 X)<br />(2) Cache가 hit이므로, 변환한 물리적 주소로 캐시에 접근하면 데이터를 가져올 수 있음</td>
+		  </tr>
+		  <tr>
+			  <td>miss</td>
+        <td>hit</td>
+        <td>hit</td>
+        <td>가능</td>
+			  <td>(1) TLB가 hit이므로, 페이지 테이블을 확인할 필요 없이 가상 주소를 물리 주소로 변환 (메인 메모리 접근 X)<br />(2) Cache가 miss이므로, 변환한 물리적 주소로 캐시에 접근하면 데이터를 가져올 수 없음<br />(3) Virtual Memory가 hit이므로, 캐시에 데이터를 불러오기 위해 메모리에 접근하면 데이터를 가져올 수 있음<br />(4) 메모리에서 캐시로 가져온 데이터를 CPU에 전달</td>
+		  </tr>
+      <tr>
+			  <td>hit</td>
+        <td>miss</td>
+        <td>hit</td>
+        <td>가능</td>
+			  <td>(1) TLB가 miss이므로, 페이지 테이블에 접근 (메인 메모리 접근 O)<br />(2) Virtual Memory가 hit이므로, 가상 주소를 물리 주소로 변환<br />(3) Cache가 hit이므로, 변환한 물리 주소로 캐시에 접근해 캐시에 있는 데이터를 CPU에 전달</td>
+		  </tr>
+      <tr>
+			  <td>miss</td>
+        <td>miss</td>
+        <td>hit</td>
+        <td>가능</td>
+			  <td>(1) TLB가 miss이므로, 페이지 테이블에 접근 (메인 메모리 접근 O)<br />(2) Virtual Memory가 hit이므로, 가상 주소를 물리 주소로 변환<br />(3) Cache가 miss이므로, 변환한 물리 주소로 캐시에 접근하면 캐시 내에 데이터가 없음<br />(4) 메인 메모리에서 해당 데이터를 캐시로 가져와 CPU에 전달</td>
+		  </tr>
+      <tr>
+			  <td>miss</td>
+        <td>miss</td>
+        <td>miss</td>
+        <td>가능 (최악)</td>
+			  <td>(1) TLB가 miss이므로, 페이지 테이블에 접근 (메인 메모리 접근 O)<br />(2) Virtual Memory가 miss이므로 (Page fault), 하드 디스크에서 데이터를 직접 가져와 페이지 테이블을 업데이트<br />(3) 이제 TLB가 miss &gt; hit이므로, 가상 주소를 물리 주소로 변환 가능.<br />(4) Cache가 miss이므로, 변환한 물리 주소로 캐시에 접근하면 캐시 내에 데이터가 없음<br />(5) 메인 메모리에서 해당 데이터를 캐시로 가져와 CPU에 전달</td>
+		  </tr>
+      <tr>
+			  <td>miss</td>
+        <td>hit</td>
+        <td>miss</td>
+        <td>불가능</td>
+			  <td>메모리 계층 구조 위반 : Page fault인데 TLB가 hit일 수 없음</td>
+		  </tr>
+      <tr>
+			  <td>hit</td>
+        <td>hit</td>
+        <td>miss</td>
+        <td>불가능</td>
+			  <td>메모리 계층 구조 위반 : Page fault인데 TLB가 hit일 수 없음</td>
+		  </tr>
+      <tr>
+			  <td>hit</td>
+        <td>miss</td>
+        <td>miss</td>
+        <td>불가능</td>
+			  <td>메모리 계층 구조 위반 : Page fault인데 Cache가 hit일 수 없음 (캐시에 데이터가 있을 수 없음)</td>
+		  </tr>
+	  </tbody>
+  </table>
+</div>
+
+<blockquote>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">TLB miss</code>인 경우 : 페이지 테이블에는 정보가 있지만, <code class="language-plaintext highlighter-rouge">TLB</code>에 그 정보가 들어있지 않을 때
+      <ul>
+        <li>해결책 : 페이지 테이블의 페이지 엔트리 내 데이터를 가져와 <code class="language-plaintext highlighter-rouge">TLB</code>에 넣음</li>
+      </ul>
+    </li>
+    <li><code class="language-plaintext highlighter-rouge">Page fault</code>인 경우 : <code class="language-plaintext highlighter-rouge">TLB</code>에도 정보가 없고, 페이지 테이블에도 그 정보가 없을 때
+      <ul>
+        <li>운영체제는 권한을 받아 하드 디스크의 데이터를 페이지 테이블에 가져오고, <code class="language-plaintext highlighter-rouge">TLB</code>에 가져온 데이터를 넣음</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h3 id="다단계-페이지-테이블-multi-level-page-table">다단계 페이지 테이블 (<code class="language-plaintext highlighter-rouge">Multi-level Page Table</code>)</h3>
+<ul>
+  <li>페이지 테이블을 페이지 프레임 크기로 나눔
+    <ul>
+      <li>해당 페이지 테이블의 페이지가 <code class="language-plaintext highlighter-rouge">invalid</code>하면 메모리에 할당하지 않음</li>
+      <li>기존의 단일한 페이지 테이블을 트리 구조로 연결</li>
+    </ul>
+  </li>
+  <li>페이지 디렉토리 (<code class="language-plaintext highlighter-rouge">Page Dictionary</code>) : 페이지 프레임의 유무를 확인하는 자료구조
+    <ul>
+      <li>적어도 하나의 <code class="language-plaintext highlighter-rouge">PFN</code>이 <code class="language-plaintext highlighter-rouge">valid</code>하다면, 페이지 디렉토리의 해당 엔트리는 존재함</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTAyMTlfOCAg/MDAxNTUwNTA2MjIzODAw.Wv_UIJMhp3-_COSDHBtsqEz0OCp91j4zEc3Vr4lmWHQg.qFb-bL0s7WgeO7btb1857Ifsk_KZqW063BUihRmZd-wg.PNG.babobigi/Page_Table_비교.png?type=w2" width="80%" style="margin-left: 2%" /></p>
+
+  <ul>
+    <li>기존의 페이지 테이블에서, 가운데에 위치한 페이지는 메모리에 할당되어 있음</li>
+    <li>다단계 페이지 테이블에서, 가운데에 위치한 페이지는 메모리에 할당되어 있지 않음</li>
+  </ul>
+
+  <p>다단계 페이지 테이블에서의 모든 페이지 테이블은 항상 메모리에 유지될 필요가 없다.</p>
+</blockquote>
+
+<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2Fcf85f3b3-985d-4872-9030-eb337ae7dbbe%2F2단계페테2.PNG" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>필요한 페이지 테이블만 메모리에 할당해 절약, 페이지 디렉토리로 물리 메모리의 빈 공간에 페이지 테이블 엔트리 생성 가능</li>
+  <li>기존의 <code class="language-plaintext highlighter-rouge">TLB Miss</code>가 2번 늘어나 주소 변환이 2번 필요하고, <code class="language-plaintext highlighter-rouge">TLB Miss</code>를 처리해 메모리를 최적화하는 로직이 복잡해짐</li>
+</ul>
+
+<h3 id="역-페이지-테이블-inverted-page-table">역 페이지 테이블 (<code class="language-plaintext highlighter-rouge">Inverted Page Table</code>)</h3>
+<ul>
+  <li>빠른 하드웨어 레지스터로 구성된 단일한 페이지 테이블 사용
+    <ul>
+      <li>페이지 테이블의 각 엔트리는 하나의 메모리 프레임에 대응</li>
+    </ul>
+  </li>
+  <li>크기가 고정된 페이지 테이블에 프로세스를 맵핑
+    <ul>
+      <li>프로세스 실행 시 운영체제는 메모리에 존재하는 프로세스의 페이지 테이블 전체를 하드웨어 레지스터 배열에 적재</li>
+    </ul>
+  </li>
+  <li>논리 주소는 <code class="language-plaintext highlighter-rouge">PID</code>, <code class="language-plaintext highlighter-rouge">PFN</code>, <code class="language-plaintext highlighter-rouge">offset</code>으로 구성</li>
+  <li>물리 주소는 <code class="language-plaintext highlighter-rouge">MFN</code>와 <code class="language-plaintext highlighter-rouge">offset</code>으로 구성</li>
+</ul>
+
+<p><img src="https://i0.wp.com/blog.skby.net/wp-content/uploads/2020/03/역페이지테이블-구성도.png" width="80%" style="margin-left: 2%" /></p>
+
+<ol>
+  <li>논리 주소의 <code class="language-plaintext highlighter-rouge">PID</code>와 <code class="language-plaintext highlighter-rouge">PFN</code> 정보를 바탕으로 페이지 테이블에서 동일한 엔트리 탐색</li>
+  <li>페이지 테이블에서 <code class="language-plaintext highlighter-rouge">PID</code>와 <code class="language-plaintext highlighter-rouge">PFN</code>가 일치하는 (<code class="language-plaintext highlighter-rouge">MFN</code>)번째 항목을 발견</li>
+  <li><code class="language-plaintext highlighter-rouge">MFN</code>과 <code class="language-plaintext highlighter-rouge">Offset</code> 정보를 바탕으로 확인된 메모리 주소에 접근</li>
+</ol>
+
+<blockquote>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">64bit</code> 주소를 사용하는 컴퓨터에서 <code class="language-plaintext highlighter-rouge">256MB</code>의 물리 메모리가 <code class="language-plaintext highlighter-rouge">4KB</code> 페이지 프레임 <code class="language-plaintext highlighter-rouge">2^18</code>개로 구성되었다고 가정하자.
+      <ul>
+        <li>페이지 테이블을 사용할 때의 페이지 테이블의 엔트리 개수는,
+          <ul>
+            <li>가상 주소 공간인 <code class="language-plaintext highlighter-rouge">2^64byte</code>을 한 페이지 프레임의 크기 <code class="language-plaintext highlighter-rouge">4KB = 2^12byte</code>로 나눈 <code class="language-plaintext highlighter-rouge">2^52</code>개</li>
+          </ul>
+        </li>
+        <li>역 페이지 테이블을 사용할 때의 페이지 테이블의 엔트리 개수는 물리 메모리의 페이지 프레임의 개수와 같으므로,
+          <ul>
+            <li>물리 메모리 크기 <code class="language-plaintext highlighter-rouge">256MB = 2^28byte</code>를 한 페이지 프레임의 크기 <code class="language-plaintext highlighter-rouge">4KB = 2^12byte</code>로 나눈 <code class="language-plaintext highlighter-rouge">2^16</code>개</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>프로세스 실행 중엔 페이지 테이블을 위한 추가적인 메모리 참조가 필요 없음 (프로세스 확장이 페이지 테이블과 무관)</li>
+  <li>페이지 테이블이 커질수록 구현을 위한 비용이 증가하고, 최악의 경우 페이지 테이블 전체를 적재해야 함 ex) 문맥 교환</li>
+</ul>
+
+<h2 id="페이지-교체-알고리즘-page-replacement-algorithm--페이지-폴트-발생-시-교체할-페이지를-선택">페이지 교체 알고리즘 (<code class="language-plaintext highlighter-rouge">Page Replacement Algorithm</code>) : 페이지 폴트 발생 시 교체할 페이지를 선택</h2>
+<ul>
+  <li>교체한 페이지가 다시 필요해져 페이지 폴트가 발생하는 비율을 줄여야 함 : 자주 사용되지 않을 페이지를 선택해야 함
+    <ul>
+      <li>제거할 페이지 중 최고의 페이지는 가장 긴 시간동안 접근하지 않을 페이지</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="최적-페이지-교체-알고리즘-optimal-page-replacement-algorithm--가장-오래-사용되지-않을-페이지-교체">최적 페이지 교체 알고리즘 (<code class="language-plaintext highlighter-rouge">Optimal Page Replacement Algorithm</code>) : 가장 오래 사용되지 않을 페이지 교체</h3>
+<ul>
+  <li>운영체제가 모든 페이지 참조를 수집했다고 가정하면, 각 페이지들이 몇개의 명령어 뒤에 처음으로 참조되는지 알 수 있음</li>
+  <li>그 중 가장 많은 명령어 뒤에 참조되는 페이지를 교체</li>
+</ul>
+
+<blockquote>
+  <p>페이지 폴트가 발생했을 때, 운영체제가 각 페이지들이 어느 시점에 참조되는지 알 수 없음</p>
+  <ul>
+    <li>프로세스를 처음 돌린 뒤에 수집된 정보를 바탕으로 사용 가능</li>
+  </ul>
+</blockquote>
+
+<h3 id="nru-not-recently-used-페이지-교체-알고리즘--최근에-사용되지-않은-페이지를-교체"><code class="language-plaintext highlighter-rouge">NRU</code> (<code class="language-plaintext highlighter-rouge">Not Recently Used</code>) 페이지 교체 알고리즘 : 최근에 사용되지 않은 페이지를 교체</h3>
+<ul>
+  <li>가상 메모리를 지원할 때, 각 페이지마다 운영체제가 페이지 사용 정보를 수집하기 위한 2개의 상태 비트를 유지
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">R</code> (<code class="language-plaintext highlighter-rouge">Reference</code> 비트) : 페이지가 참조될 때마다 설정 (<code class="language-plaintext highlighter-rouge">read</code>/<code class="language-plaintext highlighter-rouge">write</code>)</li>
+      <li><code class="language-plaintext highlighter-rouge">M</code> (<code class="language-plaintext highlighter-rouge">Modify</code> 비트) : 페이지가 수정될 때 마다 설정 (<code class="language-plaintext highlighter-rouge">clean</code>/<code class="language-plaintext highlighter-rouge">dirty</code>)</li>
+    </ul>
+  </li>
+  <li>최근에 참조되지 않은 페이지를 참조된 페이지와 구별하기 위해 주기적으로 (<code class="language-plaintext highlighter-rouge">clock tick</code>마다) <code class="language-plaintext highlighter-rouge">R</code>비트를 0으로 초기화</li>
+  <li>페이지를 4개의 클래스로 분류
+    <ul>
+      <li>클래스 0 : <code class="language-plaintext highlighter-rouge">R = 0, M = 0</code></li>
+      <li>클래스 1 : <code class="language-plaintext highlighter-rouge">R = 0, M = 1</code></li>
+      <li>클래스 2 : <code class="language-plaintext highlighter-rouge">R = 1, M = 0</code></li>
+      <li>클래스 3 : <code class="language-plaintext highlighter-rouge">R = 1, M = 1</code></li>
+    </ul>
+  </li>
+  <li>페이지 폴트가 발생했을 때, 낮은 클래스에 있는 페이지 중 하나를 랜덤으로 교체
+    <ul>
+      <li>참조도, 수정도 안된 클래스 3에 속한 페이지가 있으면 내쫓고,</li>
+      <li>없으면 최소 한 사이클에서 참조되지 않은 클래스 2에 속한 페이지가 있으면 내쫓고,</li>
+      <li>없으면 자주 참조되지만 수정되지 않은 클래스 1에 속한 페이지가 있으면 내쫓고,</li>
+      <li>없으면 참조도, 수정도 이루어진 클래스 0에 속한 페이지가 있으면 내쫓는다.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>가장 최근에 참조되지 않은, 변경된 페이지를 교체하는 것이 집중적으로 참조된, 변경되지 않은 페이지를 교체하는 것보다 좋음</p>
+</blockquote>
+
+<h3 id="fifo-페이지-교체-알고리즘--메모리에-가장-먼저-로드된-페이지를-교체"><code class="language-plaintext highlighter-rouge">FIFO</code> 페이지 교체 알고리즘 : 메모리에 가장 먼저 로드된 페이지를 교체</h3>
+<ul>
+  <li>메모리에 페이지들이 들어온 순서대로 링크드 리스트를 <code class="language-plaintext highlighter-rouge">sorting</code></li>
+  <li>페이지 폴트가 발생하면, 맨 앞에 들어온 것을 교체</li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li>메모리에 오래 있던 페이지가 자주 사용되는 페이지일 수 있음</li>
+  </ul>
+
+  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2Fc2b04476-5991-4656-a6d9-88aa883fa467%2Ffifo.PNG" width="80%" style="margin-left: 2%" /></p>
+
+  <ul>
+    <li>벨레이디의 모순 (<code class="language-plaintext highlighter-rouge">Belady's anomaly</code>) : 페이지 프레임이 늘어나면, 페이지 폴트의 개수가 오히려 늘어나는 경우</li>
+  </ul>
+
+  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2Fe11c56af-54cc-45e8-93de-579d7b35e4e4%2F파이포.PNG" width="80%" style="margin-left: 2%" /></p>
+</blockquote>
+
+<h3 id="second-chance-페이지-교체-알고리즘--메모리에-가장-먼저-로드된-페이지의-r을-검사한-후-교체"><code class="language-plaintext highlighter-rouge">Second-Chance</code> 페이지 교체 알고리즘 : 메모리에 가장 먼저 로드된 페이지의 <code class="language-plaintext highlighter-rouge">R</code>을 검사한 후 교체</h3>
+<ul>
+  <li>메모리에 페이지들이 들어온 순서대로 링크드 리스트를 <code class="language-plaintext highlighter-rouge">sorting</code></li>
+  <li>페이지 폴트가 발생하면, 가장 오래된 페이지의 <code class="language-plaintext highlighter-rouge">R</code>을 검사
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">R = 0</code>이면, 이 페이지는 최근에 사용되지 않은 페이지이므로 교체해도 됨</li>
+      <li><code class="language-plaintext highlighter-rouge">R = 1</code>이면, 이 페이지를 맨 뒤로 옮기고, <code class="language-plaintext highlighter-rouge">R</code>를 0으로 초기화 (적재 시간도 현재시간으로 갱신)하고 다시 검사</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>자주 참조되는 페이지를 교체할 가능성이 있는 <code class="language-plaintext highlighter-rouge">FIFO</code>를 개선</p>
+  <ul>
+    <li>하지만, 페이지를 리스트 맨 뒤로 이동시켜아 하기 때문에 동작의 효율성이 떨어질 수 있음</li>
+  </ul>
+</blockquote>
+
+<h3 id="clock-페이지-교체-알고리즘--시계-모양-원형-리스트를-구성하고-화살표가-가리키는-페이지의-r을-검사한-후-교체"><code class="language-plaintext highlighter-rouge">Clock</code> 페이지 교체 알고리즘 : 시계 모양 원형 리스트를 구성하고, 화살표가 가리키는 페이지의 <code class="language-plaintext highlighter-rouge">R</code>을 검사한 후 교체</h3>
+<ul>
+  <li>메모리에 페이지들이 들어온 순서대로 원형 리스트를 <code class="language-plaintext highlighter-rouge">sorting</code></li>
+  <li>페이지 폴트가 발생하면, 화살표가 가리키는 페이지의 <code class="language-plaintext highlighter-rouge">R</code>을 검사
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">R = 0</code>이면, 최근에 사용되지 않은 페이지이므로 이 페이지 대신 새로운 페이지 삽입 후 화살표를 다음 페이지로 이동</li>
+      <li><code class="language-plaintext highlighter-rouge">R = 1</code>이면, 이 페이지의 <code class="language-plaintext highlighter-rouge">R</code>를 0으로 초기화하고 그 다음 페이지를 검사</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2Fdcdc8fb8-202a-4637-a819-b7429c6b47ff%2F클록페이지교체.PNG" width="80%" style="margin-left: 2%" /></p>
+
+<h3 id="lru-페이지-교체-알고리즘--가장-오랫동안-사용되지-않은-페이지를-교체"><code class="language-plaintext highlighter-rouge">LRU</code> 페이지 교체 알고리즘 : 가장 오랫동안 사용되지 않은 페이지를 교체</h3>
+<ul>
+  <li>메모리에 페이지들이 들어온 순서대로 링크드 리스트를 <code class="language-plaintext highlighter-rouge">sorting</code>
+    <ul>
+      <li>가장 최근에 사용된 것을 리스트의 맨 앞에, 가장 오래된 것을 리스트의 맨 뒤에 오게끔 배치</li>
+    </ul>
+  </li>
+  <li>페이지 폴트가 발생하면, 가장 맨뒤에 있는 페이지를 추출</li>
+</ul>
+
+<blockquote>
+  <p>모든 메모리의 참조마다 리스트를 갱신해야 함 : 리스트에서 페이지를 탐색, 삭제, 이동하는 작업은 오래 걸림</p>
+</blockquote>
+
+<h4 id="lru의-하드웨어-구현-1--64bit-카운터"><code class="language-plaintext highlighter-rouge">LRU</code>의 하드웨어 구현 1 : <code class="language-plaintext highlighter-rouge">64bit</code> 카운터</h4>
+<ul>
+  <li>카운터가 명령을 실행할 때마다 <code class="language-plaintext highlighter-rouge">C</code>값을 1씩 증가</li>
+  <li>각 페이지 테이블 엔트리는 카운터 값을 저장할 수 있는 공간을 가짐</li>
+  <li>메모리가 참조될 때마다 참조된 메모리를 담고 있는 페이지를 가리키는 페이지 테이블 엔트리에 <code class="language-plaintext highlighter-rouge">C</code>값 저장</li>
+  <li>페이지 폴트가 발생하면, 모든 페이지 테이블 엔트리의 <code class="language-plaintext highlighter-rouge">C</code>값을 조사해 가장 적은 값을 갖는 페이지를 교체
+<br /><br /></li>
+</ul>
+
+<h4 id="lru의-하드웨어-구현-2--nn-bit로-구성된-행렬을-갖는-lru-하드웨어"><code class="language-plaintext highlighter-rouge">LRU</code>의 하드웨어 구현 2 : <code class="language-plaintext highlighter-rouge">N*N bit</code>로 구성된 행렬을 갖는 <code class="language-plaintext highlighter-rouge">LRU</code> 하드웨어</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">N</code>개의 페이지 프레임 -&gt; <code class="language-plaintext highlighter-rouge">N*N bit</code>로 구성된 행렬 : 행렬의 모든 값의 초기값은 <code class="language-plaintext highlighter-rouge">0</code></li>
+  <li>페이지 프레임 <code class="language-plaintext highlighter-rouge">k</code>가 참조되면, <code class="language-plaintext highlighter-rouge">LRU</code> 하드웨어는
+    <ul>
+      <li>행렬에서 <code class="language-plaintext highlighter-rouge">k</code>번째 행의 모든 비트를 <code class="language-plaintext highlighter-rouge">1</code>로 설정</li>
+      <li><code class="language-plaintext highlighter-rouge">k</code>번째 열의 모든 비트를 <code class="language-plaintext highlighter-rouge">0</code>으로 설정</li>
+    </ul>
+  </li>
+  <li>행의 이진 값이 가장 작은 행에 대응되는 페이지 프레임이 가장 과거에 참조된 것</li>
+</ul>
+
+<blockquote>
+  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2Ffae59bc5-f57f-4328-9afc-aea0bbccdfcc%2Flrumatrix.PNG" width="80%" style="margin-left: 2%" /></p>
+
+  <p>페이지가 <code class="language-plaintext highlighter-rouge">0,1,2,3,2,1,0,3,2,3</code> 순으로 참조되었다고 가정하자.</p>
+  <ol>
+    <li>일단 <code class="language-plaintext highlighter-rouge">1</code>행을 모두 <code class="language-plaintext highlighter-rouge">1</code>로 <code class="language-plaintext highlighter-rouge">0</code>열을 <code class="language-plaintext highlighter-rouge">0</code>으로 초기화</li>
+    <li><code class="language-plaintext highlighter-rouge">1</code>행을 모두 <code class="language-plaintext highlighter-rouge">1</code>로, <code class="language-plaintext highlighter-rouge">1</code>열을 모두 <code class="language-plaintext highlighter-rouge">0</code>으로 초기화</li>
+    <li>페이지 폴트가 발생하면, 행 값이 제일 낮은 프레임을 교체
+      <ul>
+        <li>만약 그림 <code class="language-plaintext highlighter-rouge">j</code>에서 페이지 폴트가 발생하였으면, <code class="language-plaintext highlighter-rouge">2</code>행이 가장 낮으므로 프레임 <code class="language-plaintext highlighter-rouge">2</code>를 교체</li>
+      </ul>
+    </li>
+  </ol>
+</blockquote>
+
+<h4 id="lru의-소프트웨어-구현-1--nfu-not-frequently-used"><code class="language-plaintext highlighter-rouge">LRU</code>의 소프트웨어 구현 1 : <code class="language-plaintext highlighter-rouge">NFU</code> (<code class="language-plaintext highlighter-rouge">Not Frequently Used</code>)</h4>
+<ul>
+  <li>각 페이지마다 각 페이지들이 얼마나 자주 참조되었는지 알려줄 소프트웨어 카운터를 유지 (카운터의 초기값은 0)</li>
+  <li>클록 인터럽트가 발생할 때마다 운영체제는 메모리의 모든 페이지를 검사하여 <code class="language-plaintext highlighter-rouge">R</code>의 값을 소프트웨어 카운터에 더함</li>
+  <li>페이지 폴트가 발생하면, 가장 적은 카운터 값을 갖는 페이지가 교체</li>
+</ul>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">NFU</code>에는 잊어버리는 기능이 부재되어 있다.</p>
+  <ul>
+    <li>다중 패스 컴파일러의 경우 : 패스 1에서 자주 참조된 페이지들은 높은 카운터 값을 가지고, 이는 패스 2에서도 유지</li>
+    <li>만일 패스 1이 그 이후 다른 패스들보다 더 긴 실행 시간을 가진다면 혹은 패스 1에서 더 많은 참조가 일어난다면, 패스 1에서 실행된 페이지들은 그 이후 패스에서 사용되는 페이지들에 비해 더 큰 카운터 값을 가짐</li>
+    <li>그러므로 패스 1에서 사용되던 더 이상 사용되지 않는 페이지가 아닌, 현재 패스에서 사용하는 유용한 페이지들을 교체</li>
+  </ul>
+</blockquote>
+
+<h4 id="lru의-소프트웨어-구현-2--에이징-aging"><code class="language-plaintext highlighter-rouge">LRU</code>의 소프트웨어 구현 2 : 에이징 (<code class="language-plaintext highlighter-rouge">Aging</code>)</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">NFU</code>를 기반으로, 다음의 사항을 변경한다.
+    <ol>
+      <li><code class="language-plaintext highlighter-rouge">R</code>를 더하기 전에 오른쪽으로 1비트 시프트한다.</li>
+      <li><code class="language-plaintext highlighter-rouge">R</code>는 오른쪽 비트가 아닌 왼쪽 최상위 비트에 추가된다.</li>
+    </ol>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2Feec8658e-0cbd-4fe7-b748-0792f10fa9dc%2FAGING.PNG" width="80%" style="margin-left: 2%" /></p>
+  <ul>
+    <li>시간 순서를 구별할 정보를 기록
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">LRU</code> : 오직 하나의 비트로 참조 여부만 기록했기에, 페이지 3과 5 중 어떤 페이지가 더 먼저 참조되었는지 모른다.</li>
+        <li>에이징 : 시간 순서를 구별할 정보를 기록했기에, 2번의 클록 틱 전에 1번 더 참조된 페이지 5 대신 3을 교체한다.</li>
+      </ul>
+    </li>
+    <li>과거에 대한 정보를 제한
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">NFU</code> : 과거에 대한 정보를 모두 기억하기에 10번째 전에 참조되었는지, 100번 전에 참조되었는지 알 수 없다.</li>
+        <li>에이징 : 최대 <code class="language-plaintext highlighter-rouge">N</code>번 전에 정보를 기록할 <code class="language-plaintext highlighter-rouge">N</code>비트만이 존재해, 과거에 대한 정보를 제한된다.</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h4 id="워킹-세트-알고리즘-the-working-set-page-replacement-algorithm--페이지-집합을-관리">워킹 세트 알고리즘 (<code class="language-plaintext highlighter-rouge">The Working Set Page Replacement Algorithm</code>) : 페이지 집합을 관리</h4>
+
+<blockquote>
+  <ul>
+    <li>스레싱 (<code class="language-plaintext highlighter-rouge">Thrashing</code>) : 멀티 프로그래밍의 정도가 높아져 페이지 폴트가 계속 발생해 페이지 교체 시간이 길어지는 현상
+      <ul>
+        <li>멀티 프로그래밍의 정도가 높은 경우 : 여러 프로세스를 동시에 많이 돌려 프로세스가 충분한 페이지를 가지지 못함
+          <ul>
+            <li>어느 순간부터 <code class="language-plaintext highlighter-rouge">CPU</code> 점유율이 하락한다. (프로세스는 스와핑하느라 바쁜데, <code class="language-plaintext highlighter-rouge">CPU</code>는 아무것도 안한다.)</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><img src="https://mblogthumb-phinf.pstatic.net/MjAxODExMDRfMjQ0/MDAxNTQxMzE5Mjc3ODM1.bCiSuD2-2aXc04gk2DAj-JDCsK_x9DU4qbT8oxnDboMg.b6_rzAgTlHnGXp01pLYY2MXkldo5oXJ3lihOgoDxk7Ug.PNG.qbxlvnf11/7eDqXQF.png?type=w800" width="80%" style="margin-left: 2%" /></p>
+
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">Demand Paging</code> : 실제로 필요할 때 (요청이 있으면) 그 page를 메모리에 올린다.
+      <ul>
+        <li>프로세스가 시작될 때 메모리에는 어떤 페이지도 존재하지 않음</li>
+        <li><code class="language-plaintext highlighter-rouge">CPU</code>가 첫 명령어를 <code class="language-plaintext highlighter-rouge">fetch</code>하면 페이지 폴트를 통해 운영체제가 로드</li>
+      </ul>
+    </li>
+    <li>참조의 지역성 (<code class="language-plaintext highlighter-rouge">Locality of reference</code>) : 프로세스는 작은 페이지만을 집중적으로 참조하는 경향이 있음
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">locality set</code> : 집중적으로 참조되는 해당 페이지의 집합</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>워킹 세트 (<code class="language-plaintext highlighter-rouge">Working Set</code>) <code class="language-plaintext highlighter-rouge">W(K, T)</code> : 프로세스가 현재 사용하고 있는 페이지의 집합
+    <ul>
+      <li>워킹 세트에서의 <code class="language-plaintext highlighter-rouge">locality set</code> : 프로세스가 일정 시간 원활히 수행되기 위해 한꺼번에 올라와야 하는 페이지들의 집합</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>워킹 세트를 (시간 <code class="language-plaintext highlighter-rouge">T</code>)에 대해, 가장 최근에 (횟수 <code class="language-plaintext highlighter-rouge">K</code>번) 발생한 메모리 참조에 의해 사용된 페이지의 집합이라 가정하면,</p>
+  <ul>
+    <li>뒤의 페이지가 앞의 페이지를 포함하니 <code class="language-plaintext highlighter-rouge">K</code>를 늘리수록 커지다가, (가상 페이지의 개수가 한정되어 있어) 한 곳에 수렴</li>
+  </ul>
+
+  <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg1a1RbKAR6Xz4RjQ0lNoOr_jPwb1u1lXW1w&amp;usqp=CAU" width="50%" style="margin-left: 2%" /></p>
+</blockquote>
+
+<ul>
+  <li>워킹 세트 모델 (<code class="language-plaintext highlighter-rouge">Working Set</code>)
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">PrePaging</code> : 각 프로세스의 워킹 세트를 추적하다가, 프로세스가 실행되기 전에 그 프로세스의 워킹 세트를 미리 로드</li>
+      <li>주기적인 인터럽트가 <code class="language-plaintext highlighter-rouge">R</code>을 일정 시간마다 초기화</li>
+      <li>페이지 폴트가 발생하면, 페이지 테이블을 스캔해서 쫓아낼 페이지를 탐색</li>
+      <li>해당 프로세스의 워킹 세트 전체를 한꺼번에 메모리에 올라갈 수 있는 경우에만 메모리에 할당
+        <ul>
+          <li>그렇지 않을 경우, 모든 페이지 프레임들을 모두 반납시키고 디스크로 <code class="language-plaintext highlighter-rouge">swap-out</code> (스레싱 방지)
+<br /><br /></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>워킹 세트 윈도우 (<code class="language-plaintext highlighter-rouge">Working Set Window</code>) : 올라올 워킹 세트를 결정 (워킹 세트 윈도우의 크기 : <code class="language-plaintext highlighter-rouge">T</code>)
+    <ul>
+      <li>페이지가 참조된 시점부터 <code class="language-plaintext highlighter-rouge">T</code> 시간 동안 메모리에 유지하고, 그 시점이 지나면 메모리에서 지움</li>
+    </ul>
+  </li>
+  <li>메모리에 있는 프로세스들의 워킹 세트 크기의 합이 페이지 프레임의 수보다 클 경우 : 일부 프로세스를 <code class="language-plaintext highlighter-rouge">swap-out</code>
+    <ul>
+      <li>남은 프로세스의 워킹 세트가 메모리에 모두 올라가게 해 이를 우선적으로 충족 (멀티프로그래밍의 정도를 줄임)</li>
+    </ul>
+  </li>
+  <li>워킹 세트를 모두 할당한 후에도 페이지 프레임이 남을 때, <code class="language-plaintext highlighter-rouge">swap-out</code>된 프로세스를 다시 메모리에 올려서 워킹 세트를 재할당</li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li>현재 가상 시간 (<code class="language-plaintext highlighter-rouge">Current virtual time</code>) : 프로세스가 시작된 후에 CPU를 실제 사용한 시간</li>
+    <li>마지막으로 사용한 시간 (<code class="language-plaintext highlighter-rouge">Time of last use</code>)</li>
+  </ul>
+
+  <p><img src="https://camo.githubusercontent.com/d45e4dee2f521e74871e7a94b7af0510f03e27256546b5aaef4892cb6cee44ef/68747470733a2f2f736c696465706c617965722e636f6d2f736c6964652f313635393339362f372f696d616765732f32342f576f726b696e672b7365742b616c676f726974686d2b6167652b2533442b63757272656e742b7669727475616c2b74696d652b2545322538302539332b74696d652b6f662b6c6173742b7573652e6a7067" width="80%" style="margin-left: 2%" /></p>
+
+  <ul>
+    <li>페이지의 현재 가상 시간이 <code class="language-plaintext highlighter-rouge">2204</code>일 때 페이지 폴트가 발생하면,
+      <ul>
+        <li>페이지 테이블을 모두 스캔하면서 <code class="language-plaintext highlighter-rouge">R</code>을 체크한다.</li>
+        <li><code class="language-plaintext highlighter-rouge">R = 1</code> : 마지막으로 페이지를 사용한 시간을 현재 가상 시간으로 바꾼다.</li>
+        <li><code class="language-plaintext highlighter-rouge">R = 0</code> : <code class="language-plaintext highlighter-rouge">age</code> = (현재 가상 시간 - 마지막으로 페이지를 사용한 시간)와 <code class="language-plaintext highlighter-rouge">T</code> 비교
+          <ul>
+            <li><code class="language-plaintext highlighter-rouge">age &gt; T</code> : 워킹 세트에 그 페이지가 포함되어 있지 않으므로, 그 페이지를 지우고 게속 스캔한다.</li>
+            <li><code class="language-plaintext highlighter-rouge">age &lt;= T</code> : 가장 큰 <code class="language-plaintext highlighter-rouge">age</code>를 만드는 페이지를 기억하고 계속 스캔한다.</li>
+          </ul>
+        </li>
+        <li>마지막까지 스캔했을 때 (모든 엔트리가 <code class="language-plaintext highlighter-rouge">age &lt;= T</code>이면), 가장 큰 <code class="language-plaintext highlighter-rouge">age</code>를 만드는 페이지를 지운다.</li>
+        <li>모든 엔트리가 <code class="language-plaintext highlighter-rouge">R = 1</code>이면 (가장 큰 <code class="language-plaintext highlighter-rouge">age</code>를 만드는 페이지를 기억하지 않는다면), 한 페이지를 랜덤으로 지운다.</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h3 id="세그멘테이션-segmentation--하나의-가상-주소를-제공하는-페이징과-달리-여러-개의-가상-주소-제공">세그멘테이션 (<code class="language-plaintext highlighter-rouge">Segmentation</code>) : 하나의 가상 주소를 제공하는 페이징과 달리, 여러 개의 가상 주소 제공</h3>
+<ul>
+  <li>프로세스를 논리적 내용을 기반으로 나누어서 메모리에 배치
+    <ul>
+      <li>세그멘테이션 기법에서의 프로세스는 세그멘트 (<code class="language-plaintext highlighter-rouge">segment</code>)의 집합
+        <ul>
+          <li>각 세그먼트는 자기만의 선형적인 주소 공간을 가짐</li>
+        </ul>
+      </li>
+      <li>페이징 기법에서는 주소 공간이 서로 충돌될 수 있지만, 세그멘테이션에서는 동적으로 테이블이 커지거나 줄어듬
+<br /><br /></li>
+    </ul>
+  </li>
+  <li>세그먼트 테이블 : 각 엔트리의 논리 주소는 <code class="language-plaintext highlighter-rouge">&lt;segment-number, offset&gt;</code>
+    <ul>
+      <li>페이징과 달리 세그먼트의 크기는 일정하지 않기에 테이블에 <code class="language-plaintext highlighter-rouge">limit</code> 정보가 추가로 담겨 있음</li>
+      <li>만약 세그먼트의 크기를 초과하는 주소가 들어오면 인터럽트가 발생해 프로세스가 강제 종료</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fol2eM%2FbtrnC38FGmG%2FKv5nbXQG2rCUeck0pRS8I0%2Fimg.png" width="80%" style="margin-left: 2%" /></p>
+
+  <ul>
+    <li>논리 주소 (2, 100) : 물리 주소 4400번지</li>
+    <li>논리 주소 (1, 500) : 인터럽트로 인해 프로세스가 강제로 종료 (범위 벗어남)</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>세그멘테이션의 장점
+    <ul>
+      <li>보호 : 세그먼테이션도 페이징처럼 <code class="language-plaintext highlighter-rouge">r, w, x</code>를 테이블에 추가하는데, 프로세스를 논리적으로 나눠 비트 설정이 간단</li>
+      <li>공유 : 세그먼테이션은 정확히 code 영역만 나누기에 다른 영역을 포함할 확률이 높은 페이징보다 더 효율적</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>…하지만 세그멘테이션은 외부 단편화 문제를 해결하지 못해, 현재는 페이징 기법을 대부분 사용한다.</p>
+
+  <ul>
+    <li>외부 단편화 : 메모리 할당을 처음 시작할 때 크기가 서로 다른 프로세스로 인해 다양한 크기의 홀이 발생 (<code class="language-plaintext highlighter-rouge">checkerboarding</code>)
+      <ul>
+        <li>세그먼트를 논리적인 단위로 나눈 세그멘테이션 역시 외부 단편화로 인해 메모리 낭비가 큼</li>
+      </ul>
+    </li>
+    <li>세그멘테이션을 페이징 (<code class="language-plaintext highlighter-rouge">Paged segmentation</code>) : 펜티엄 (<code class="language-plaintext highlighter-rouge">Pentium</code>)
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">cs</code>, <code class="language-plaintext highlighter-rouge">ds</code>, <code class="language-plaintext highlighter-rouge">ss</code>를 각각의 세그먼트가 아닌 하나의 주소 공간으로 통일해서 사용
+          <ul>
+            <li>그러므로 <code class="language-plaintext highlighter-rouge">cs</code>, <code class="language-plaintext highlighter-rouge">ds</code>, <code class="language-plaintext highlighter-rouge">ss</code>는 다 같은 셀렉터 값을 가짐</li>
+          </ul>
+        </li>
+        <li>세그먼트와 페이지가 동시에 존재하기 때문에 주소 변환도 2번
+          <ul>
+            <li><code class="language-plaintext highlighter-rouge">CPU</code>의 세그먼트 테이블에서 주소 변환, 그리고 다음 페이지 테이블에서 주소 변환</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#computer-science" class="page__taxonomy-item p-category" rel="tag">Computer Science</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-12-12">December 12, 2022</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BCS%5D+1.+%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C+%28Operation+System%29%20http%3A%2F%2Flocalhost%3A4000%2Fos1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fos1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/git1/" class="pagination--pager" title="[DevOps] 1. 깃 (Git)
+">이전</a>
+    
+    
+      <a href="/docker1/" class="pagination--pager" title="[DevOps] 2. 도커 (Docker)
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/vcw2/" rel="permalink">[vocawik] 07/07 진행 내용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">#1. init: git 저장소 생성
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog6/" rel="permalink">[Github Pages] 6. Github Pages 블로그 기능 추가
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html이나 css를 다룰 줄 알면 금방 할 수 있는, 혹은 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog5/" rel="permalink">[Github Pages] 5. Github Pages 블로그 설정 &amp; 포스트
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  솔직히 블로그 설정을 건드는 부분은 내가 아는 정보들을 그대로 나열할 수 밖에 없다고 생각한다… 그래도 내가 시행착오를 겪었던 경험을 떠올리면서 하나하나 풀어서 작성하려 하였으니, 미숙한 글이지만 남들에게 도움이 되었으면 정말 좋겠다… 그리고 Github Pages이나 Min...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog4/" rel="permalink">[Github Pages] 4. Github Pages 블로그 개설
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나… 그때쯤 작성한 글들 대부분이 너무 나열식...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 pocj8ur4in. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,804 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[DevOps] 1. 깃 (Git) - pocj8ur4in’s blog</title>
+<meta name="description" content="버전 관리 (Version Control) : 특정한 시간 기준으로 파일 변화를 저장하고 관리">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[DevOps] 1. 깃 (Git)">
+<meta property="og:url" content="http://localhost:4000/git1/">
+
+
+  <meta property="og:description" content="버전 관리 (Version Control) : 특정한 시간 기준으로 파일 변화를 저장하고 관리">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-10-06T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2022-11-16T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/git1/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[DevOps] 1. 깃 (Git)</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[DevOps] 1. 깃 (Git)">
+    <meta itemprop="description" content="버전 관리 (Version Control) : 특정한 시간 기준으로 파일 변화를 저장하고 관리">
+    <meta itemprop="datePublished" content="2022-10-06T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-11-16T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/git1/" class="u-url" itemprop="url">[DevOps] 1. 깃 (Git)
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#버전-관리-version-control--특정한-시간-기준으로-파일-변화를-저장하고-관리">버전 관리 (Version Control) : 특정한 시간 기준으로 파일 변화를 저장하고 관리</a><ul><li><a href="#1-로컬-버전-관리-local-version-control">1. 로컬 버전 관리 (Local Version Control)</a></li><li><a href="#2-중앙집중식-버전-관리-central-version-control--서브-머신-svn">2. 중앙집중식 버전 관리 (Central Version Control) : 서브 머신 (SVN)</a></li><li><a href="#3-분산형-버전-관리-distributed-version-control--깃-git">3. 분산형 버전 관리 (Distributed Version Control) : 깃 (Git)</a></li></ul></li><li><a href="#깃-git--분산형-버전-관리-시스템-distributed-version-control-system">깃 (Git) : 분산형 버전 관리 시스템 (Distributed Version Control System)</a><ul><li><a href="#gitignore-디렉터리--버전-관리를-하지-않을-파일이나-디렉터리-혹은-파일-확장자를-설정">.gitignore 디렉터리 : 버전 관리를 하지 않을 파일이나 디렉터리, 혹은 파일 확장자를 설정</a></li><li><a href="#readmemd-파일--프로젝트에-대한-설명과-사용-방법-license-등의-내용을-작성">README.md 파일 : 프로젝트에 대한 설명과 사용 방법, LICENSE 등의 내용을 작성</a></li><li><a href="#git-디렉터리--깃의-버전을-저장할-로컬-저장소">.git 디렉터리 : 깃의 버전을 저장할 로컬 저장소</a></li></ul></li><li><a href="#깃-명령어-git-command--git-command-형식으로-구성">깃 명령어 (Git Command) : git &lt;command&gt; 형식으로 구성</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="버전-관리-version-control--특정한-시간-기준으로-파일-변화를-저장하고-관리">버전 관리 (<code class="language-plaintext highlighter-rouge">Version Control</code>) : 특정한 시간 기준으로 파일 변화를 저장하고 관리</h2>
+
+<ul>
+  <li>버전 (<code class="language-plaintext highlighter-rouge">Version</code>) : 어떤 파일이 수정된 기록이나 그 파일이 수정된 내용</li>
+</ul>
+
+<h3 id="1-로컬-버전-관리-local-version-control">1. 로컬 버전 관리 (<code class="language-plaintext highlighter-rouge">Local Version Control</code>)</h3>
+<ul>
+  <li>로컬 사용자가 서버 없이 로컬 컴퓨터 내의 데이터베이스를 이용해 파일의 변경 정보 관리
+    <ul>
+      <li>협업에서 사용하기 어려움, 내부 정보가 손상되면 복구할 방법이 없음</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-중앙집중식-버전-관리-central-version-control--서브-머신-svn">2. 중앙집중식 버전 관리 (<code class="language-plaintext highlighter-rouge">Central Version Control</code>) : 서브 머신 (<code class="language-plaintext highlighter-rouge">SVN</code>)</h3>
+<ul>
+  <li>클라이언트가 최종본를 관리하는 데이터베이스 서버로부터 개별 파일을 로컬에 다운로드, 수정본을 서버에 올림
+    <ul>
+      <li>데이터베이스 서버에 의존적, 협업 규모가 커지면 수정 충돌 문제 발생 (유사 사례 : <a href="https://namu.wiki/w/편집%20충돌">나무위키의 편집 충돌</a>)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3-분산형-버전-관리-distributed-version-control--깃-git">3. 분산형 버전 관리 (<code class="language-plaintext highlighter-rouge">Distributed Version Control</code>) : 깃 (<code class="language-plaintext highlighter-rouge">Git</code>)</h3>
+<ul>
+  <li>클라이언트가 원격 저장소에서 전체 기록과 각 기록을 추적할 수 있는 정보를 포함한 데이터를 로컬 저장소에 저장
+    <ul>
+      <li>클라이언트가 자신의 작업을 원격 저장소에 독립적인 로컬 저장소에 버전별로 저장하고 관리</li>
+      <li>여러 클라이언트들의 작업을 여러 로컬 저장소로 다원화해 각 클라이언트는 충돌의 염려 없이 작업 가능</li>
+      <li>필요한 경우에 클라이언트가 서버의 원격 저장소에 원하는 버전을 통합 (서버 단위의 편집 버전을 +1)
+        <ul>
+          <li>클라이언트는 원격 저장소에 자신의 작업을 통합시킬 때만 서버와 통신하면 됨</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="깃-git--분산형-버전-관리-시스템-distributed-version-control-system"><a href="https://git-scm.com">깃</a> (<code class="language-plaintext highlighter-rouge">Git</code>) : 분산형 버전 관리 시스템 (<code class="language-plaintext highlighter-rouge">Distributed Version Control System</code>)</h2>
+<ul>
+  <li>터미널 창에 다음 명령어를 입력해 <a href="https://pocj8ur4in.github.io/mac/homebrew1/"><code>homebrew</code></a>를 통해 <code class="language-plaintext highlighter-rouge">git</code> 설치</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install git
+</code></pre></div></div>
+
+<h3 id="gitignore-디렉터리--버전-관리를-하지-않을-파일이나-디렉터리-혹은-파일-확장자를-설정"><code class="language-plaintext highlighter-rouge">.gitignore</code> 디렉터리 : 버전 관리를 하지 않을 파일이나 디렉터리, 혹은 파일 확장자를 설정</h3>
+
+<ul>
+  <li>특정한 이름을 가진 파일 제외</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>filename.txt
+</code></pre></div></div>
+
+<ul>
+  <li>특정한 확장자를 가진 파일 제외</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*.txt
+</code></pre></div></div>
+
+<ul>
+  <li>특정한 경로 아래의 파일 제외</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder/
+</code></pre></div></div>
+
+<ul>
+  <li>특정한 경로 아래의 특정한 확장자를 가진 파일 제외</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>folder/filename.txt
+</code></pre></div></div>
+
+<ul>
+  <li>예외 만들기</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>!filename.txt
+</code></pre></div></div>
+
+<h3 id="readmemd-파일--프로젝트에-대한-설명과-사용-방법-license-등의-내용을-작성"><code class="language-plaintext highlighter-rouge">README.md</code> 파일 : 프로젝트에 대한 설명과 사용 방법, <code class="language-plaintext highlighter-rouge">LICENSE</code> 등의 내용을 작성</h3>
+<ul>
+  <li>기존의 <code><a href="_posts/2022-10-29-markdown1.md">Markdown</a></code>에 깃허브에서만 사용 가능한 기능을 추가한 <code class="language-plaintext highlighter-rouge">Github Flavored Markdown</code>을 이용</li>
+  <li><code class="language-plaintext highlighter-rouge">Github</code> 프로젝트 레포지토리 페이지에서 <code class="language-plaintext highlighter-rouge">README.md</code>가 표현된 것을 확인 가능
+    <ul>
+      <li>자신의 아이디와 같은 이름의 레포지토리의 <code class="language-plaintext highlighter-rouge">README.md</code>는 해당 사용자의 깃허브 프로필에 표시됨</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fb18y0K%2FbtruITygdgC%2FV4XYZs3D0ZMlzqlkHZkH9k%2Fimg.png" /></p>
+
+<ul>
+  <li><a href="https://shields.io">뱃지</a> : 해당 사이트에서 뱃지의 구성 요소들을 직접 지정해 생성한 후 <code class="language-plaintext highlighter-rouge">img</code> 태그로 삽입</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="https://img.shields.io/badge/(아이콘 내용)-(아이콘 색상)?style=flat-square&amp;logo=(로고 이름)&amp;logoColor=(로고 색상)"/&gt;
+</code></pre></div></div>
+
+<p><img alt="GitHub followers" src="https://img.shields.io/github/followers/pocj8ur4in?style=social" /></p>
+
+<ul>
+  <li><a href="https://hits.seeyoufarm.com">방문자 수</a> : 해당 사이트에서 <code class="language-plaintext highlighter-rouge">Target URL</code>과 로고를 선택한 후 <code class="language-plaintext highlighter-rouge">a</code> 태그로 삽입</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;a href="https://github.com/pocj8ur4in"&gt; ... &lt;/a&gt;
+</code></pre></div></div>
+
+<p><a href="https://github.com/pocj8ur4in"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fseondal&amp;count_bg=%23000000&amp;title_bg=%23000000&amp;icon=github.svg&amp;icon_color=%23E7E7E7&amp;title=GitHub&amp;edge_flat=false)" /></a></p>
+
+<ul>
+  <li><a href="https://github.com/mazassumnida/mazassumnida"><code>Solved.ac</code> 티어</a> : 해당 사이트에서 마크다운 언어로 삽입</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[![Solved.ac 프로필]
+(http://mazassumnida.wtf/api/v2/generate_badge?boj={백준ID})]
+(https://solved.ac/백준ID)
+</code></pre></div></div>
+
+<p><img src="https://camo.githubusercontent.com/82c9b109cd774ae61438576d5cece4102c8844e1bd1db3a3767dca13eaf93fee/687474703a2f2f6d617a617373756d6e6964612e7774662f6170692f76322f67656e65726174655f62616467653f626f6a3d73747261774a49" /></p>
+
+<ul>
+  <li><a href="https://github.com/mazassumnida/mazandi"><code>Solved.ac</code> 잔디</a> : 해당 사이트에서 <code class="language-plaintext highlighter-rouge">img</code> 태그로 삽입</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="http://mazandi.herokuapp.com/api?handle={백준ID}&amp;theme=warm"/&gt;
+</code></pre></div></div>
+
+<p><img src="http://mazandi.herokuapp.com/api?handle=pocj8ur4in&amp;theme=warm" /></p>
+
+<ul>
+  <li><a href="https://github.com/mazassumnida/mazandi">자주 사용한 언어</a> : 해당 사이트에서 마크다운 언어로 삽입</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[![Top Langs]
+(https://github-readme-stats.vercel.app/api/top-langs/?username=깃허브ID)]
+(https://github.com/깃허브ID/github-readme-stats)
+</code></pre></div></div>
+
+<p><img src="https://camo.githubusercontent.com/fbf4f4aadb79493225ed43d6daca84015eafa94d496ef07bbf723200e12f923c/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d616e7572616768617a7261" /></p>
+
+<ul>
+  <li><a href="https://github.com/kyechan99/capsule-render"><code>Header &amp; Footer</code></a> : 해당 사이트에서 마크다운 언어로 삽입</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![header]
+(https://capsule-render.vercel.app/api?type=모양&amp;color=auto&amp;height=높이&amp;section=header&amp;text=내용&amp;fontSize=폰트크기)
+</code></pre></div></div>
+<p><img src="https://camo.githubusercontent.com/0da1f68bf3ed97f972472f31e1dbf68514bc3f72761bf300f8474f53ffab7932/68747470733a2f2f63617073756c652d72656e6465722e76657263656c2e6170702f6170693f747970653d776176696e6726636f6c6f723d6175746f266865696768743d3330302673656374696f6e3d68656164657226746578743d63617073756c6525323072656e64657226666f6e7453697a653d393026616e696d6174696f6e3d66616465496e26666f6e74416c69676e593d333826646573633d4465636f7261746525323047697448756225323050726f66696c652532306f72253230616e792532305265706f2532306c696b652532306d65212664657363416c69676e593d35312664657363416c69676e3d3632" /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Footer]
+(https://capsule-render.vercel.app/api?type=모양&amp;color=auto&amp;height=높이&amp;section=header&amp;text=내용&amp;fontSize=폰트크기)
+</code></pre></div></div>
+<p><img src="https://camo.githubusercontent.com/2d4943deac939925b872b56f5dae84d2f2da502ebabb3da5b51fd6750fef5947/68747470733a2f2f63617073756c652d72656e6465722e76657263656c2e6170702f6170693f747970653d7761766526636f6c6f723d6175746f266865696768743d3230302673656374696f6e3d666f6f74657226746578743d4e6f772532305573652532306d652126666f6e7453697a653d3930" /></p>
+
+<h3 id="git-디렉터리--깃의-버전을-저장할-로컬-저장소"><code class="language-plaintext highlighter-rouge">.git</code> 디렉터리 : 깃의 버전을 저장할 로컬 저장소</h3>
+<ul>
+  <li>버전 (<code class="language-plaintext highlighter-rouge">Version</code>) : 어떤 파일이 수정된 기록이나 그 파일이 수정된 내용
+    <ul>
+      <li>작업 트리 (<code class="language-plaintext highlighter-rouge">working tree</code>) : 파일 수정, 저장 등의 작업을 하는 작업 디렉터리
+        <ul>
+          <li>스테이징 (<code class="language-plaintext highlighter-rouge">Staging</code>) : 작업 트리에서 작업한 파일을 버전으로 만들기 위해 스테이지로 이동</li>
+        </ul>
+      </li>
+      <li>스테이지 (<code class="language-plaintext highlighter-rouge">stage</code>) : 버전으로 만들 파일이 대기하는 스테이징 영역
+        <ul>
+          <li>커밋 (<code class="language-plaintext highlighter-rouge">Commit</code>) : 스테이지에서 대기중인 파일을 버전으로 만들어 레포지토리에 저장</li>
+        </ul>
+      </li>
+      <li>레포지토리 (<code class="language-plaintext highlighter-rouge">repository</code>) : 스테이지에서 대기하고 있던 파일들을 버전으로 만들어 저장하는 저장소</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="깃-명령어-git-command--git-command-형식으로-구성">깃 명령어 (<code class="language-plaintext highlighter-rouge">Git Command</code>) : <code class="language-plaintext highlighter-rouge">git &lt;command&gt;</code> 형식으로 구성</h2>
+<blockquote>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">git</code> : 깃 명령 다음에 입력할 수 있는 명령어 옵션 확인</li>
+  </ul>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git
+...
+</code></pre></div>  </div>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git init</code> : 깃 저장소를 만들 디렉터리 초기화 (깃 저장소인 <code class="language-plaintext highlighter-rouge">.git</code> 디렉터리가 생성)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git init
+Initialized empty Git repository in ...
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git status</code> :  깃의 현재 상태 확인
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">untracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있지 않습니다. (파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">false</code>)</li>
+      <li><code class="language-plaintext highlighter-rouge">tracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있습니다. (파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">true</code>)
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">unmodified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되지 않았습니다.
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">Working tree clean</code></li>
+            </ul>
+          </li>
+          <li><code class="language-plaintext highlighter-rouge">modified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되었으나 스테이징되지 않았습니다.
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">Changes not stage for commit:</code></li>
+            </ul>
+          </li>
+          <li><code class="language-plaintext highlighter-rouge">staged</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되었고 스테이징되었습니다.
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">Changes to be committed:</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
+On branch master  // 현재 master 브랜치에 위치해 있음
+No commits yet    // 아직 커밋한 파일이 존재하지 않음
+nothing to commit // 현재 커밋한 파일이 존재하지 않음
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git status
+On branch master
+No commits yet
+untracked files   // untracked 상태 : 아직 버전 관리하지 않은 파일들이 존재함
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git add</code> : 작업 트리에서 스테이지로 스테이징</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git add helloWorld.txt
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git commit</code> : 스테이지에 있는 파일을 버전으로 커밋
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">-m</code> 옵션을 통해 커밋과 함께 메시지 저장</li>
+      <li><code class="language-plaintext highlighter-rouge">-am</code> 옵션을 통해 스테이징과 커밋을 동시에 처리</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git commit -m "message1"
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git log</code> : 레포지토리에 저장된 버전 정보 확인
+    <ul>
+      <li>커밋 해시 (<code class="language-plaintext highlighter-rouge">commit hash</code>) : 커밋을 구별하는 ID (<code class="language-plaintext highlighter-rouge">HEAD-&gt;master</code> : 해당 버전이 가장 최신임을 표시)</li>
+      <li>작성자 (<code class="language-plaintext highlighter-rouge">Author</code>) : <code class="language-plaintext highlighter-rouge">git config --global user</code>를 통해 입력한 사용자 정보 (이름과 이메일)</li>
+      <li>작성일 (<code class="language-plaintext highlighter-rouge">Date</code>) : 버전이 작성된 시각</li>
+      <li>커밋 메시지 (<code class="language-plaintext highlighter-rouge">commit message</code>) : <code class="language-plaintext highlighter-rouge">git commit -m</code>을 통해 저장된 메시지</li>
+    </ul>
+  </li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#devops" class="page__taxonomy-item p-category" rel="tag">DevOps</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-11-16">November 16, 2022</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BDevOps%5D+1.+%EA%B9%83+%28Git%29%20http%3A%2F%2Flocalhost%3A4000%2Fgit1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgit1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/css1/" class="pagination--pager" title="[FE] 2. CSS
+">이전</a>
+    
+    
+      <a href="/os1/" class="pagination--pager" title="[CS] 1. 운영체제 (Operation System)
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/vcw2/" rel="permalink">[vocawik] 07/07 진행 내용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">#1. init: git 저장소 생성
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog6/" rel="permalink">[Github Pages] 6. Github Pages 블로그 기능 추가
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html이나 css를 다룰 줄 알면 금방 할 수 있는, 혹은 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog5/" rel="permalink">[Github Pages] 5. Github Pages 블로그 설정 &amp; 포스트
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  솔직히 블로그 설정을 건드는 부분은 내가 아는 정보들을 그대로 나열할 수 밖에 없다고 생각한다… 그래도 내가 시행착오를 겪었던 경험을 떠올리면서 하나하나 풀어서 작성하려 하였으니, 미숙한 글이지만 남들에게 도움이 되었으면 정말 좋겠다… 그리고 Github Pages이나 Min...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/blog4/" rel="permalink">[Github Pages] 4. Github Pages 블로그 개설
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나… 그때쯤 작성한 글들 대부분이 너무 나열식...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 pocj8ur4in. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

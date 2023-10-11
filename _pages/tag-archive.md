@@ -1,5 +1,5 @@
 ---
-title: "분류:태그"
+title: "모아보기"
 permalink: /tags/
 layout: tags
 author_profile: false

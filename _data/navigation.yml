@@ -1,6 +1,3 @@
 main:
-  - title: "카테고리"
-    url: /categories/
-
-  - title: "태그"
+  - title: "모아보기"
     url: /tags/
