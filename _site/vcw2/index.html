@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[vocawik] 1. 07/10 진행 내용 - pocj8ur4in’s blog</title>
-<meta name="description" content="#1. init: git 저장소 생성">
+<!-- begin _includes/seo.html --><title>[vocawik] 2. 07/11, 07/12 진행 내용 - pocj8ur4in’s blog</title>
+<meta name="description" content="vocawik 프로젝트의 #3. init: 멀티모듈 프로젝트 세팅 ~ #9. init: Swagger3 적용에 대한 내용입니다.">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[vocawik] 1. 07/10 진행 내용">
+<meta property="og:title" content="[vocawik] 2. 07/11, 07/12 진행 내용">
 <meta property="og:url" content="http://localhost:4000/vcw2/">
 
 
-  <meta property="og:description" content="#1. init: git 저장소 생성">
+  <meta property="og:description" content="vocawik 프로젝트의 #3. init: 멀티모듈 프로젝트 세팅 ~ #9. init: Swagger3 적용에 대한 내용입니다.">
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-  <meta property="article:published_time" content="2023-07-10T00:00:00+09:00">
+  <meta property="article:published_time" content="2023-07-11T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2023-07-10T00:00:00+09:00">
+  <meta property="article:modified_time" content="2023-07-12T00:00:00+09:00">
 
 
 
@@ -166,7 +166,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">[vocawik] 1. 07/10 진행 내용</li>
+        <li class="current">[vocawik] 2. 07/11, 07/12 진행 내용</li>
       
     
   </ol>
@@ -180,16 +180,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[vocawik] 1. 07/10 진행 내용">
-    <meta itemprop="description" content="#1. init: git 저장소 생성">
-    <meta itemprop="datePublished" content="2023-07-10T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2023-07-10T00:00:00+09:00">
+    <meta itemprop="headline" content="[vocawik] 2. 07/11, 07/12 진행 내용">
+    <meta itemprop="description" content="  vocawik 프로젝트의 #3. init: 멀티모듈 프로젝트 세팅 ~ #9. init: Swagger3 적용에 대한 내용입니다.">
+    <meta itemprop="datePublished" content="2023-07-11T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2023-07-12T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/vcw2/" class="u-url" itemprop="url">[vocawik] 1. 07/10 진행 내용
+            <a href="http://localhost:4000/vcw2/" class="u-url" itemprop="url">[vocawik] 2. 07/11, 07/12 진행 내용
 </a>
           </h1>
           
@@ -206,7 +206,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          6 분 소요
         
       </span>
     
@@ -221,67 +221,294 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#1-init-git-저장소-생성">#1. init: git 저장소 생성</a></li><li><a href="#2-init-프로젝트-생성">#2. init: 프로젝트 생성</a></li></ul>
+              <ul class="toc__menu"><li><a href="#3-init-멀티모듈-프로젝트-세팅">#3. init: 멀티모듈 프로젝트 세팅</a></li><li><a href="#4-init-spotless-적용">#4. init: spotless 적용</a></li><li><a href="#5-init-git-hook과-gradle을-통한-spotless-자동화">#5. init: git hook과 gradle을 통한 spotless 자동화</a></li><li><a href="#6-init-모듈-내-applicationyml-설정">#6. init: 모듈 내 application.yml 설정</a></li><li><a href="#7-init-jacoco-설정">#7. init: jacoco 설정</a></li><li><a href="#8-init-sonarqube-적용">#8. init: sonarqube 적용</a></li><li><a href="#9-init-swagger3-적용">#9. init: Swagger3 적용</a></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="1-init-git-저장소-생성"><a href="https://github.com/pocj8ur4in/vw-backend/commit/4dd2e5b458282cc895a7b38d3f2d3aa37ceabb65">#1</a>. init: git 저장소 생성</h2>
+        <blockquote>
+  <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #3. init: 멀티모듈 프로젝트 세팅 ~ #9. init: Swagger3 적용에 대한 내용입니다.</p>
+</blockquote>
 
-<p>가장 먼저 작업물의 변경점과 버전을 관리하는 버전 관리 시스템 (VCS; Version Control System)을 도입할 것이다. 변경점 관리를 통해 협업하는 과정에서 누가 어떤 내용을 언제 수정했는지 확인할 수 있고, 버전 관리를 통해 작업하는 과정에서 작업물의 백업과 복구를 간편하게 수행할 수 있다. 여기서는 배포할 코드와 작업할 코드를 나눠 프로젝트를 진행할 수 있는 브랜치 (branch) 개념이 있고 대부분의 개발자에게 이미 익숙할 <a href="https://git-scm.com">git</a>을 사용하겠다.</p>
+<h2 id="3-init-멀티모듈-프로젝트-세팅"><a href="https://github.com/pocj8ur4in/vw-backend/commit/fc0f6521f6a53169fc45dec379a307e119da4dc6">#3</a>. init: 멀티모듈 프로젝트 세팅</h2>
+
+<p>프로젝트의 내부를 기존의 root 모듈에 sub 모듈인 api, batch, core, domain, infrastructure, socket 모듈을 포함시킨 멀티모듈 구조로 변경하였다. (추가: 이후에 batch, infrastructure, socket 모듈을 도입할 계획이다.)</p>
 
 <ul>
-  <li>.git 디렉터리를 생성하였다.</li>
-  <li>git이 관리하지 않을 파일을 지정하기 위해 .gitignore 파일을 생성하고, 그 내용은 <a href="https://www.toptal.com/developers/gitignore">gitignore.io</a>을 참고해 작성하였다.</li>
+  <li>sub 모듈들을 하나의 디렉토리에서 관리할 수 있도록 <code class="language-plaintext highlighter-rouge">settings.gradle</code> 파일을 작성하였다.</li>
 </ul>
 
-<p>추가로 앞으로 있을 수 있는 협업에서의 원활한 의사소통을 위한 커밋 메세지 컨벤션 (commit message convention) 을 정하여, git에 커밋하는 메시지 제목과 내용에 반영하고자 한다. 여기서는 <a href="https://udacity.github.io/git-styleguide/">유다시티 커밋 메시지 스타일 가이드</a>를 참고해 다음과 같은 원칙을 정하였다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- message structure
-  - type: subject
-  - body
-
-- type
-  - init : 초기 업무
-  - chore : 빌드 업무 및 패키지 매니저 수정
-  - feat : 새로운 기능 도입
-  - fix : 버그 수정
-  - docs : 문서 수정
-  - style : 코드 포맷팅 (크드 변경이 없는 경우)
-  - refactor : 코드 리펙토링
-  - test : 테스트 코드 추가
-
-- subject
-  - 제목에 해당하는 subject는 현재시제로 50자 내외에서 작성한다.
-
-- body
-  - 본문에 해당하는 body는 부연설명이 필요한 경우에만 작성한다.
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rootProject.name = 'vw-backend'
+include 'vw-api'
+include 'vw-batch'
+include 'vw-core'
+include 'vw-domain'
+include 'vw-infrastructure'
+include 'vw-socket'
 </code></pre></div></div>
 
-<p>그리고 Git 원격 저장소를 웹에 호스팅하는 서비스인 Git 웹 호스팅 서비스를 도입할 것이다. 이를 통해 협업하는 과정에서 작업 내용을 빠르게 공유하고, webhook 기능을 통해 pull이나 pull request 같은 이벤트에 반응하여 작업이 실행되게 할 수 있다. 여기서는 데비옵스 (DevOps) 파이프라인 자동화 툴인 Github Actions나 업무의 생성, 진행상황, 해결을 추적하는 이슈 트래커 툴인 Github Issue 등의 서비스를 지원하고 대부분의 개발자에게 이미 익숙할 <a href="https://github.com">Github</a>를 사용하겠다.</p>
-
 <ul>
-  <li>github 계정에 프로젝트를 저장할 원격 저장소를 만들고, 로컬 저장소의 내용을 원격 저장소에 푸시하였다.</li>
+  <li><code class="language-plaintext highlighter-rouge">build.gradle</code>에 subprojects와 allprojects 블록을 추가해 하위 모듈과 전체 모듈을 제어할 수 있도록 하였다.</li>
 </ul>
 
-<h2 id="2-init-프로젝트-생성"><a href="https://github.com/pocj8ur4in/vw-backend/commit/fc26e92fe1235029c2b14c6aa45cc6419aaaa5cd">#2</a>. init: 프로젝트 생성</h2>
-
-<p>이제 웹 어플리케이션을 구현하기 위한 기술을 정할 차례이다. 사실 이 부분은 개발자 조직과 비즈니스 기획을 고려해 의사결정을 해야 하는 게 맞겠지만, 나에게 러닝커브가 적고 라이브러리 및 래퍼런스가 많이 존재하는 Java를 프로그래밍 언어로, Spring Boot를 웹 프레임워크로, Gradle을 의존성 관리 도구로 사용할 계획이다.</p>
-
-<ul>
-  <li>Gradle을 빌드하기 위한 <code class="language-plaintext highlighter-rouge">build.gradle</code> 파일의 plugins와 repositories를 작성하였다. .gradle 파일을 작성하는 방법은 <a href="https://velog.io/@appti/series/gradle">해당 포스트</a>와 <a href="https://araikuma.tistory.com/category/IT%20개발/Gradle">해당 포스트</a>를 참고하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins {
-    id 'java'
-    id 'org.springframework.boot' version '2.7.10'
-    id 'io.spring.dependency-management' version '1.1.0'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>allprojects{
+    repositories {
+        mavenCentral()
+    }
 }
 
-repositories {
-    mavenCentral()
+subprojects {
+    group = 'vocawik'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '17'
+
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'java-library'
+    apply plugin: 'io.spring.dependency-management'
+
+    dependencies {
+        ...
+    }
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
 }
 </code></pre></div></div>
+
+<ul>
+  <li>반복된 코드를 어노테이션으로 자동완성하는 lombok 라이브러리를 사용하기 위해 subprojects에 의존성을 추가하였다.</li>
+  <li>스프링 어플리케이션에서 Junit 기반 테스트가 가능하도록 subprojects에 의존성을 추가하였다.</li>
+  <li><a href="https://jundragon.tistory.com/9">해당 포스트</a>를 참고해 lombok을 테스팅 환경에서 사용할 수 있도록 subprojects에 의존성을 추가하였다.</li>
+  <li>JUnit5 API를 테스팅 환경에서 사용할 수 있도록 subprojects에 의존성을 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dependencies {
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        testCompileOnly 'org.projectlombok:lombok'
+        testAnnotationProcessor 'org.projectlombok:lombok'
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    }
+</code></pre></div></div>
+
+<ul>
+  <li><a href="https://math-coding.tistory.com/158">해당 포스트</a>를 참고해 Java 단위 테스트를 위한 JUnit5 프레임워크를 위해 <code class="language-plaintext highlighter-rouge">build.gradle</code>을 변경하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.named('test') {
+        // useJUnitPlatform : test task에 JUnit Platform을 사용하도록 지정
+        useJUnitPlatform()
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Task 'wrapper' not found in project ':project'</code> 오류를 해결하고자, <a href="https://hororolol.tistory.com/546">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper를 사용해서 빌드 환경을 맞추었다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>task wrapper(type: Wrapper) {
+    gradleVersion = '7.4'    
+    distributionUrl = distributionUrl.replace("bin", "all")
+}
+</code></pre></div></div>
+
+<ul>
+  <li>위의 오류를 해결하는 과정에서 <code class="language-plaintext highlighter-rouge">Cannot add task 'wrapper' as a task with that name already exists</code> 오류가 발생해, <a href="https://taegyunum.tistory.com/entry/Cannot-add-task-wrapper-as-a-task-with-that-name-already-exists">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper 형식을 변경하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wrapper {
+        gradleVersion = '7.4'
+        distributionUrl = distributionUrl.replace("bin", "all")
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">:prepareKotlinBuildScriptModel Task fails in a Java project</code> 오류를 해결하고자, <a href="https://charactermail.tistory.com/351">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 <code class="language-plaintext highlighter-rouge">prepareKotlinBuildScriptModel</code>을 새로운 empty task로 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.register("prepareKotlinBuildScriptModel"){}
+</code></pre></div></div>
+
+<h2 id="4-init-spotless-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/68f5025c7d1886575a90b36bb4bad62072b2f59d">#4</a>. init: spotless 적용</h2>
+
+<p>Junit에 대한 코드 포맷팅 및 유지보수를 위해 <a href="https://nesoy.github.io/articles/2020-04/Spotless">해당 게시글</a>을 참고해 spotless 플러그인을 추가하였다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id "com.diffplug.spotless" version "6.16.0"
+</code></pre></div></div>
+
+<ul>
+  <li>sub 모듈에서도 spotless 플러그인이 적용되도록 <a href="https://keelim.tistory.com/entry/안드로이드-멀티-모듈-공통-gradle-그리고-ktlint-적용을-해보자">해당 게시글</a>을 참고해 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 생성하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spotless {
+    version = "6.16.0"
+
+    java {
+        // 특정 파일에만 적용
+        target("**/*.java")
+
+        // import 순서 정의
+        importOrder()
+
+        // 사용하지 않는 import 제거
+        removeUnusedImports()
+
+        // 구글 자바 포맷 적용
+        googleJavaFormat().aosp()
+
+        // 공백 제거
+        trimTrailingWhitespace()
+
+        // 끝부분 New Line 처리
+        endWithNewline()
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>그리고 sub 모듈에서도 spotless 플러그인이 적용될 수 있도록 root 모듈에 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 적용시켰다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply from: "$rootDir/spotless.gradle"
+</code></pre></div></div>
+
+<h2 id="5-init-git-hook과-gradle을-통한-spotless-자동화"><a href="https://github.com/pocj8ur4in/vw-backend/commit/4fed89c42bc0241e31123d7565b6781a11f83ccd">#5</a>. init: git hook과 gradle을 통한 spotless 자동화</h2>
+
+<p>앞서 spotless를 적용하긴 했는데, spotless를 실행하는 것은 코드를 작성하고 이를 커밋하는 과정에서 까먹기 쉬운 작업이다. 그래서 <a href="https://techblog.woowahan.com/2530/">이 게시글</a>처럼 git hook으로 커밋을 하기 전에 spotless를 적용하는 것을 자동화하였다.<br /></p>
+
+<p>그런데 .git는 처음에 .gitignore을 통해 제외하기로 한 디렉토리이다. 나 혼자 작업을 진행한다면 위의 내용으로 충분하겠지만, 협업에서는 모두가 같은 내용을 적용하는 것이 중요하다. 그래서 root에 pre-commit 파일을 두고, gradle task를 이용해 빌드가 이루어질 때 pre-commit 파일을 .git에 이동하는 것을 추가하였다.</p>
+
+<h2 id="6-init-모듈-내-applicationyml-설정"><a href="https://github.com/pocj8ur4in/vw-backend/commit/75770bf08a2f3d05548747d5b607700de63fa717">#6</a>. init: 모듈 내 application.yml 설정</h2>
+
+<p><a href="https://tecoble.techcourse.co.kr/post/2022-10-04-active_profiles/">해당 게시글</a>을 참고하여 이전에 설장한 멀티모듈 내에 프로퍼티 설정을 관리하고 환경변수를 주입할 수 있는 application.yml 파일을 생성하였다.</p>
+
+<h2 id="7-init-jacoco-설정"><a href="https://github.com/Hongik-Challenge/hc-backend/commit/a10ebd2a12774c3a40484d6bf76c26f265180a41">#7</a>. init: jacoco 설정</h2>
+
+<p><a href="https://seller-lee.github.io/java-code-coverage-tool-part2">해당 게시글</a>을 참고해 sub 모듈에 코드 커버리지 도구인 Jacoco를 도입하였다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = '0.8.9'
+}
+</code></pre></div></div>
+
+<ul>
+  <li>추후 SonarQube의 연동을 위해 jacocoTestReports task를 설정하였다. html, csv, xml 형태로 저장할 수 있게 해주고, xml 파일은 저장하는 경로를 다르게 설정하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestReport {
+    dependsOn test
+    reports {
+        html.enabled true
+        csv.enabled true
+        xml.enabled true
+        xml.destination file("${buildDir}/reports/jacoco.xml")
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>원하는 코드 커버리지를 설정하고, 커버리지를 만족하는지 여부를 확인하는 데에 쓰이는 jacocoTestCoverageVerification task를 설정하려 했으나 커버리지를 만족시키기 위해 설정해야 하는 기준을 판단하기 어려워 일단 이 내용은 코드에서 제외하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                counter = 'BRANCH'
+                value = 'COVEREDRATIO'
+                minimum = 0.90
+            }
+
+            limit {
+                counter = 'LINE'
+                value = 'COVEREDRATIO'
+                minimum = 0.80
+            }
+
+            limit {
+                counter = 'LINE'
+                value = 'TOTALCOUNT'
+                maximum = 200
+            }
+        }
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>추가로 QueryDSL가 자동으로 생성하는 QDomain 클래스를 코드 커버리지에서 제외하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestCoverageVerification {
+    def Qdomains = []
+
+    for (qPattern in '*.QA'..'*.QZ') { // qPattern = '*.QA', '*.QB', ... '*.QZ'
+        Qdomains.add(qPattern + '*')
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>그런데 <code class="language-plaintext highlighter-rouge">./gradlew test --console verbose</code>으로 실행해도 빌드가 성공하지 않았는데, jacoco의 버전을 올려보라는 <a href="https://stackoverflow.com/questions/53911122/how-to-fix-error-while-creating-report-jacoco">답변</a>을 적용해 해결하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacoco {
+    toolVersion = '0.8.7' -&gt; '0.8.9'
+}
+</code></pre></div></div>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/230381060-a2972bf0-8abb-4c92-b493-d19c3912106d.png" /></p>
+
+<h2 id="8-init-sonarqube-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/5dc906b6d60e13cbcf0c093afad66cb0c5c9cfb3">#8</a>. init: sonarqube 적용</h2>
+<p><a href="https://kdevkr.github.io/static-analysis-performed-by-sonarqube-and-github-action/#소나큐브-시스템-구성">해당 게시글</a>을 참고해, Jacoco와 비슷한 코드 커버리지 도구인 sonarqube를 프로젝트 내에 도입하였다.</p>
+
+<ul>
+  <li>pull request가 종료되면서 개발 서버에 빌드 파일이 배포되기 전에 소나큐브가 실행되는 것을 목표로 하므로, 차후 작성된 github action에 이를 반영할 것이다.</li>
+</ul>
+
+<h2 id="9-init-swagger3-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/8103ea20b9e718e06a12d6cefd4c77a4a24826c5">#9</a>. init: Swagger3 적용</h2>
+
+<p><a href="https://velog.io/@dnwlsrla40/Swagger-Swagger3">해당 포스트</a>의 내용을 참고하여, REST 웹 서버로 요청되는 URL 리스트를 문서화 및 테스트 할 수 있는 Swagger3를 Api 모듈 내에 도입하였다.</p>
+
+<ul>
+  <li>Spring Boot 2.6 이상의 환경에서 Springfox3가 실행되지 않는 오류가 발생했다. 개발자 포럼에서도 자주 언급되는 유명한 이슈인데, 아직까지도 해결되지 않았다고 한다. Spring Boot 버전을 2.6 이하로 낮추는 것이 제일 안전한 방법이겠지만, 다른 해결책이 없나 구글링해보았더니 <a href="https://shanepark.tistory.com/366">이 포스트</a>에서 @EnableSwagger2 어노테이션 대신 @EnableWebMvc 어노테이션을 이용해 문제를 해결하길래 나도 적용해서 해결했다.
+    <ul>
+      <li>그런데 @EnableWebMvc 어노테이션을 추가하는 건 어떤 의미를 가질까? 라는 질문에 <a href="https://goodgid.github.io/Spring-Enable-MVC-Annotation/">해당 포스트</a>의 내용을 참고해 답변해본다면, @EnableWebMvc는 Spring 프레임워크에서 여러 Config 값을 알아서 설정해주는데 아래의 오류를 일으키는 this.condition 부분도 알아서 설정해주는 것 같다.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Caused by: java.lang.NullPointerException:
+Cannot invoke "org.springframework.web.servlet.mvc.
+condition.PatternsRequestCondition.getPatterns()"
+because "this.condition" is null
+</code></pre></div></div>
+
+<ul>
+  <li><a href="http://localhost:8080/swagger-ui/index.html">http://localhost:8080/swagger-ui/index.html</a>로 접속해보면 Swagger 페이지가 정상적으로 출력된다.</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/vw-backend/assets/105341168/3204e09d-eb05-4af4-afd6-e2f4bf34276c" style="padding-left: 10%; padding-right: 10%" /></p>
+
+<hr />
+<p>추가로 직접 하나씩 작업해보면서 몇 가지 의문이 든 부분이 있는데, 이를 여기에 조금 적어둘까 한다. 먼저 현재까지 내가 작업한 배포 과정이 정말 사이트를 운영하는 데에 정말 적합한지? 에 대한 고찰이다. 일단 내 처음 계획은, master 브랜치에 작업한 내용을 병합하기 위한 PR이 종료될 때 -&gt; github action에서 도커 허브로 이미지를 올리고 -&gt; AWS 인스턴스 내의 도커에서 올라간 이미지에 대한 컨테이너를 실행하는 것이다. 원래는 난 내 로직이 괜찮다고 생각했는데, 내가 간과한 부분이 하나 있었다.</p>
+
+<p>AWS 인스턴스 내에서 도커를 설치하고 이미지에 대한 컨테이너를 실행하는 것은 괜찮은데, 새로운 이미지에 대한 컨테이너를 실행해야 할 때가 문제이다. 이전 이미지에 대한 컨테이너를 종료하고 이를 삭제한 다음에 새로운 이미지에 대한 컨테이너를 실행하는 과정에서 약간의 소요 시간이 생기지 않을까?</p>
+
+<p>약간의 딜레이가 뭐가 문제인건데?, 라고 생각할 수도 있겠지만, 구글이나 아마존 같이 세계를 대상으로 실시간으로 동작하는 사이트들이 이러면 어마어마한 손실이 날 것이다. 그래서 이들은 무중단 배포 (Zero-downtime Deployment) 전략을 통해 서비스를 중단되지 않는 상태로 유지하려 한다. (개념에 대한 자세한 내용과 세부 전략은 <a href="https://hudi.blog/zero-downtime-deployment/">이 포스트</a>를 참고해주길 바란다.) 여기서 등장하는 게 로드밸런서 (LoadBalancer)인데,  nginx나 HAProxy와 같은 제품들이 존재하고, AWS 역시 이를 지원하니 실제 운영 서버를 만들 때 이를 적용해볼 생각이다.</p>
+
+<p>그리고 또 든 생각은, 내가 앞으로 만들 프로젝트가 모놀리식이 아닌 마이크로 서비스에 가깝게 구현되려면 어떻게 해야 하는가? 에 대한 고찰이다. 뜬금없지만 문득 그런 생각이 든 이유는, “마이크로서비스는 작은 서비스들을 많이 만들자는 거 아냐? 그러면 서비스 단위로 모듈을 나눠야 하는 게 맞는 거 아닌가?” 라는 의문이 들었기 때문이다.</p>
+
+<p>응용 계층은 어쩔 수 없다고 하더라도, 그 아래는 서비스 단위로 UserService, WikiService 이런 식으로 존재해도 되는 거 아닌가? 라고 생각을 했는데, 이러면 공통으로 사용 가능한, Common 코드가 불필요하게 반복될 수 있을 것 같았다. 예를 들어 사용자가 원하는 이미지를 클라우드에 업로드하는 기능이 있다고 가정하면, 사용자 프로필로도 사용될 수 있을 것이고, 게시물에도 사용될 수 있을 것이고… 암튼 많이 사용될 건데 이를 일일이 넣는 것은 전혀 객체지향적이지 않다. 그러므로 이미지를 클라우드에 업로드하는 기능과 같이 중복될 수 있는 코드들은 초기 설계 및 구현할 때나 리팩토링할 때 무조건 분리해서 재사용하는 식으로 해야 할 필요성을 느끼게 되었다.</p>
+
+<p>그러면 재사용 가능한 코드들이 담긴 (이 프로젝트에서는 Core) 계층에 모든 모듈이 의존되는 것 아니냐! 라고 충분히 우려를 표할 수 있다. 보통 DDD 계층 구조를 그린 것들을 보면 Presentation 계층, Application 계층, Domain 계층, Infrastructure 계층으로 이루어져 있는데, 나는 각각의 계층에 해당하는 모듈 (Application 계층과 Domain 계층은 여기서 따로 구현하지 않고 Domain 계층 하나로 합쳐져 있다)들에, 앞서 Common한 코드들이 담긴 Core 모듈과 외부 모듈에 해당하는 Batch와 Socket 계층을 추가하였다. 그런데 내가 만든 Core 모듈을 보면 build.gradle 파일이 없는 것을 알 수 있다. 나는 여기에 util과 같은 Java Class만 정의할 생각이기에, 외부 의존성을 두지 않는 제약 사항을 걸 것이다.</p>
 
         
       </section>
@@ -308,7 +535,7 @@ repositories {
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-07-10">July 10, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-07-12">July 12, 2023</time></p>
 
       </footer>
       
@@ -331,7 +558,7 @@ repositories {
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5Bvocawik%5D+1.+07%2F10+%EC%A7%84%ED%96%89+%EB%82%B4%EC%9A%A9%20http%3A%2F%2Flocalhost%3A4000%2Fvcw2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5Bvocawik%5D+2.+07%2F11%2C+07%2F12+%EC%A7%84%ED%96%89+%EB%82%B4%EC%9A%A9%20http%3A%2F%2Flocalhost%3A4000%2Fvcw2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fvcw2%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
@@ -341,11 +568,11 @@ repositories {
       
   <nav class="pagination">
     
-      <a href="/blog6/" class="pagination--pager" title="[Github Pages] 6. Github Pages 블로그 기능 추가
+      <a href="/vcw1/" class="pagination--pager" title="[vocawik] 1. 07/10 진행 내용
 ">이전</a>
     
     
-      <a href="/vcw3/" class="pagination--pager" title="[vocawik] 2. 07/11 진행 내용
+      <a href="/vcw3/" class="pagination--pager" title="[vocawik] 4. 07/13 진행 내용
 ">다음</a>
     
   </nav>
@@ -370,7 +597,7 @@ repositories {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/rtw1/" rel="permalink">[Road To WTC] 1. 우테코 6기 지원
+        <a href="/rtw1/" rel="permalink">[WTC] 1. 우아한테크코스 6기 지원
 </a>
       
     </h2>
@@ -411,48 +638,7 @@ repositories {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/vcw5/" rel="permalink">[vocawik] 4. 07/13 진행 내용
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          8 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">#10. init: Thymeleaf 적용
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/vcw4/" rel="permalink">[vocawik] 3. 07/12 진행 내용
+        <a href="/vcw4/" rel="permalink">[vocawik] 5. 07/14, 07/17 진행 내용
 </a>
       
     </h2>
@@ -477,7 +663,9 @@ repositories {
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">#9. init: Swagger3 적용
+    <p class="archive__item-excerpt" itemprop="description">
+  vocawik 프로젝트의 #12. init: Spring Security 적용 ~ #13. init: lombok.config 파일 추가에 대한 내용입니다.
+
 
 </p>
   </article>
@@ -493,7 +681,7 @@ repositories {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/vcw3/" rel="permalink">[vocawik] 2. 07/11 진행 내용
+        <a href="/vcw3/" rel="permalink">[vocawik] 4. 07/13 진행 내용
 </a>
       
     </h2>
@@ -511,14 +699,59 @@ repositories {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 분 소요
+          8 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">#3. init: 멀티모듈 프로젝트 세팅
+    <p class="archive__item-excerpt" itemprop="description">
+  vocawik 프로젝트의 #10. init: Thymeleaf 적용 ~ #11. init: Github Actions를 통한 CI/CD 파이프라인 자동화에 대한 내용입니다.
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/vcw1/" rel="permalink">[vocawik] 1. 07/10 진행 내용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  vocawik 프로젝트의 #1. init: git 저장소 생성 ~ #2. init: 프로젝트 생성에 대한 내용입니다.
+
 
 </p>
   </article>
