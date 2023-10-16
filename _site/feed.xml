@@ -1,53 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-15T16:49:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[WTC] 1. 우아한테크코스 6기 지원</title><link href="http://localhost:4000/rtw1/" rel="alternate" type="text/html" title="[WTC] 1. 우아한테크코스 6기 지원" /><published>2023-10-12T00:00:00+09:00</published><updated>2023-10-12T00:00:00+09:00</updated><id>http://localhost:4000/rtw1</id><content type="html" xml:base="http://localhost:4000/rtw1/"><![CDATA[<p><img src="https://oopy.lazyrockets.com/api/v2/notion/image?src=https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ff71cbdcd-b763-41af-9bbb-42abdb18bd6a%2F69e2de4a-172d-48cd-a2df-bf15e681c8b5%2F%25E1%2584%258B%25E1%2585%25AE%25E1%2584%258B%25E1%2585%25A1%25E1%2584%2592%25E1%2585%25A1%25E1%2586%25AB%25E1%2584%2590%25E1%2585%25A6%25E1%2584%258F%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25A9%25E1%2584%2589%25E1%2585%25B3_%25E1%2584%2591%25E1%2585%25A9%25E1%2584%2589%25E1%2585%25B3%25E1%2584%2590%25E1%2585%25A5%25E1%2584%258B%25E1%2585%25B0%25E1%2586%25B8%25E1%2584%258B%25E1%2585%25B5%25E1%2584%2586%25E1%2585%25B5%25E1%2584%258C%25E1%2585%25B5_%25E1%2584%2587%25E1%2585%25A2%25E1%2584%2580%25E1%2585%25A7%25E1%2586%25BC%25E1%2584%2590%25E1%2585%25AE%25E1%2584%2586%25E1%2585%25A7%25E1%2586%25BC.png&amp;blockId=84cc5703-691d-4428-9c83-6212c9a585ce" style="padding-left: 20%; padding-right: 20%;" /></p>
-
-<h2 id="우아한테크코스-6기-지원-시점-나의-상황">우아한테크코스 6기 지원 시점 나의 상황</h2>
-<p>이제 졸업을 앞둔 4학년 2학기가 된 나인데, 같은 학과를 다니는 내 친구나 지인들에 비하면 나는 아직까지 공부한 것도 부족하고, 내세울 만한 개발 경험도 없다고 생각하였다. 대학교 4년 동안 학교 수업만 들었고, 프로젝트는 교내 프로그램을 통해 진행한 것이 한 번, 그 외에는 토이 플젝로 해본 경험 (그것도 지금 진행중인…) 밖에 없었다.</p>
-
-<p>그래서 우아한테크코스에 대해서는 어느 정도 알고는 있었지만, 내가 지원하기엔 너무 높은 게 아닌가? 라며 주저하고 있었다. 그렇지만 이번에 공채를 준비하면서 하나의 채용 프로세스를 준비해본 경험이 매우 귀중한 것이고, 또 일단 여러 개를 지원해봐야 하나라도 성공할 확률이 오른다는 생각이 들었다. 더욱이 우테코의 선발 프로세스는 자기소개서 - 프리코스 - 최종 코딩 테스트의 과정으로 구성되어 있는데, 프리코스와 같이 어느 정도 시간이 주어지는 유형의 과제는 어떻게든 완성할 자신이 있었다.</p>
-
-<h2 id="우아한테크코스-6기-자기소개서">우아한테크코스 6기 자기소개서</h2>
-
-<h3 id="1-프로그래밍-교육-이력">1. 프로그래밍 교육 이력</h3>
-<blockquote>
-  <p>고등학교/대학교 전공을 포함하여 부전공, 복수전공, 그 외 교육 기관이 있는 경우 쉼표로 구분해 작성해 주세요. 해당 사항이 없는 경우, “없음”을 입력해 주세요. (예. OO학과, 국비지원, 부트캠프, 독학) (200자 이내)</p>
-</blockquote>
-
-<p>현재 대학교에서 컴퓨터공학과 4학년 2학기를 재학중이며, 다른 부트캠프나 국비지원 프로그램은 경험해본 적이 없다고 솔직하게 적었다.</p>
-
-<h3 id="2-효과적인-학습-방식과-경험">2. 효과적인 학습 방식과 경험</h3>
-<blockquote>
-  <p>프로그래밍 학습을 하고 장기간 개발자로 살아가기 위해, 본인만의 효과적인 학습 방식을 찾는 것은 매우 중요합니다. 프로그래밍이 아니더라도 지금까지의 모든 학습 경험을 되돌아봤을 때, <b>본인에게 유용했던 학습 방식을 찾아낸 과정과 경험</b>을 공유해 주세요. 그리고 이 경험은 현재 본인의 프로그래밍 학습 과정에 어떻게 적용되고 있나요? (1000자 이내)</p>
-</blockquote>
-
-<p>문과에서 공대로 교차지원으로 온거라 다른 친구들에 비해 많이 뒤쳐진다는 느낌을 받음
-그래서 친구 한명을 붙잡고 둘이 카페 가서 아침부터 저녁까지 같이 공부하면서 질문을 많이 함
-근데 친구 또한 잘 모르는 것도 있고 해서 인원을 더 늘려보자고 제안
-그래서 스터디 그룹을 만들어서 목표를 설정하고 한 학기에 걸쳐 매주 만나서 진행해보았음
-1년에 걸쳐서 깃허브 블로그를 운영하였음</p>
-
-<h3 id="3-성장-중-겪은-실패와-극복">3. 성장 중 겪은 실패와 극복</h3>
-<blockquote>
-  <p>좋은 개발자가 되려면 성장 과정에서 많은 실패와 어려움이 기다리고 있습니다. <b>나의 성장을 위한 경험 중 실패나 어려움을 해결하기 위해 어떤 시도를 했고 여기서 얻은 배움</b>은 무엇인가요? 이런 경험이 현재 여러분의 성장 방식에 어떤 영향을 주고 있는지 이야기해 주세요.(혼자 겪은 경험도 좋고, 타인과 함께한 협업과정에서의 실패와 어려움도 좋습니다.) (1000자 이내)</p>
-</blockquote>
-
-<p>4학년 1학기에 교내 프로그램인 ‘홍익챌린지’를 통해서 다른 사람들과 협업하여 프로젝트를 진행한 적이 있음
-이 프로그램은 타과와의 협업을 목표로 하였기에 처음으로 타과 학우들과 의사소통을 하였는데 생각보다 어려웠음
-상대방의 분야에 대해 모르는 부분이 많아서 그랬던 거 같았음, 그래서</p>
-
-<h3 id="4-오랜-시간-몰입했던-경험-그리고-도전">4. 오랜 시간 몰입했던 경험 그리고 도전</h3>
-<blockquote>
-  <p>진정한 몰입은 즐거움과 동시에 성장을 이끌어냅니다. <b>여러분이 오랜 시간 동안 주도적으로 몰입했던 경험</b>은 무엇이었나요? 그 과정에서 어떤 도전을 마주했고, 이 경험으로 무엇을 배우고 얻었는지 ‘구체적으로’ 이야기해 주세요.(반드시 소프트웨어에 대한 경험이 아니어도 괜찮습니다. 만약 몰입한 경험의 결과물을 함께 보여주실 수 있다면 더 좋습니다.) (1000자 이내)</p>
-</blockquote>
-
-<h3 id="5-원하는-프로그래머-모습">5. 원하는 프로그래머 모습</h3>
-<blockquote>
-  <p><b>여러분이 되고 싶은 프로그래머의 모습</b>은 무엇인가요? 그 모습에 가까워지기 위해 현재 어떤 구체적인 노력을 기울이고 있는지 알려주세요. 여기에 만약 우아한테크코스가 없다고 가정한다면 어떻게 성장해 나갈 것인지도 이야기해 주세요. (1000자 이내)</p>
-</blockquote>
-
-<h3 id="6-url">6. URL</h3>
-<blockquote>
-  <p>작성한 몰입 경험과 관련된 개인 블로그, GitHub, 그 외 증빙 자료 등이 있다면 입력해 주세요. 여러 개가 있는 경우 Notion, Google 문서 등으로 하나로 묶어 주세요. 링크를 공유하실 때는 공개 권한으로 접근 가능한지 확인해 주세요.</p>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="WTC" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">[vocawik] 5. 07/14, 07/17 진행 내용</title><link href="http://localhost:4000/vcw4/" rel="alternate" type="text/html" title="[vocawik] 5. 07/14, 07/17 진행 내용" /><published>2023-07-14T00:00:00+09:00</published><updated>2023-07-17T00:00:00+09:00</updated><id>http://localhost:4000/vcw4</id><content type="html" xml:base="http://localhost:4000/vcw4/"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-16T19:06:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[vocawik] 4. 07/13 ~ 07/17 진행 내용</title><link href="http://localhost:4000/vcw4/" rel="alternate" type="text/html" title="[vocawik] 4. 07/13 ~ 07/17 진행 내용" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-17T00:00:00+09:00</updated><id>http://localhost:4000/vcw4</id><content type="html" xml:base="http://localhost:4000/vcw4/"><![CDATA[<blockquote>
   <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #12. init: Spring Security 적용 ~ #13. init: lombok.config 파일 추가에 대한 내용입니다.</p>
 </blockquote>
 
@@ -55,183 +6,225 @@
 
 <p>Spring Security는 인증과 권한에 대한 기능을 제공하는 Java Spring의 하위 프레임워크이다. 여기서 인증 (Authorization)은 로그인을, 권한 (Authorize)은 인증된 사용자가 어떤 것을 할 수 있는지를 의미한다.</p>
 
-<h2 id="init-lombokconfig-파일-추가"><a href="https://github.com/pocj8ur4in/vw-backend/commit/9cb184acf937a1b779806475a4d7a65549411cd3">init: lombok.config 파일 추가</a></h2>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[vocawik 프로젝트의 #12. init: Spring Security 적용 ~ #13. init: lombok.config 파일 추가에 대한 내용입니다.]]></summary></entry><entry><title type="html">[vocawik] 3. 07/13 진행 내용</title><link href="http://localhost:4000/vcw3/" rel="alternate" type="text/html" title="[vocawik] 3. 07/13 진행 내용" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/vcw3</id><content type="html" xml:base="http://localhost:4000/vcw3/"><![CDATA[<blockquote>
-  <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #10. init: Thymeleaf 적용 ~ #11. init: Github Actions를 통한 CI/CD 파이프라인 자동화에 대한 내용입니다.</p>
+<h2 id="init-lombokconfig-파일-추가"><a href="https://github.com/pocj8ur4in/vw-backend/commit/9cb184acf937a1b779806475a4d7a65549411cd3">init: lombok.config 파일 추가</a></h2>
+
+<hr />
+<p>추가로 직접 하나씩 작업해보면서 몇 가지 의문이 든 부분이 있는데, 이를 여기에 조금 적어둘까 한다. 먼저 현재까지 내가 작업한 배포 과정이 정말 사이트를 운영하는 데에 정말 적합한지? 에 대한 고찰이다. 일단 내 처음 계획은, master 브랜치에 작업한 내용을 병합하기 위한 PR이 종료될 때 -&gt; github action에서 도커 허브로 이미지를 올리고 -&gt; AWS 인스턴스 내의 도커에서 올라간 이미지에 대한 컨테이너를 실행하는 것이다. 원래는 난 내 로직이 괜찮다고 생각했는데, 내가 간과한 부분이 하나 있었다.</p>
+
+<p>AWS 인스턴스 내에서 도커를 설치하고 이미지에 대한 컨테이너를 실행하는 것은 괜찮은데, 새로운 이미지에 대한 컨테이너를 실행해야 할 때가 문제이다. 이전 이미지에 대한 컨테이너를 종료하고 이를 삭제한 다음에 새로운 이미지에 대한 컨테이너를 실행하는 과정에서 약간의 소요 시간이 생기지 않을까?</p>
+
+<p>약간의 딜레이가 뭐가 문제인건데?, 라고 생각할 수도 있겠지만, 구글이나 아마존 같이 세계를 대상으로 실시간으로 동작하는 사이트들이 이러면 어마어마한 손실이 날 것이다. 그래서 이들은 무중단 배포 (Zero-downtime Deployment) 전략을 통해 서비스를 중단되지 않는 상태로 유지하려 한다. (개념에 대한 자세한 내용과 세부 전략은 <a href="https://hudi.blog/zero-downtime-deployment/">이 포스트</a>를 참고해주길 바란다.) 여기서 등장하는 게 로드밸런서 (LoadBalancer)인데,  nginx나 HAProxy와 같은 제품들이 존재하고, AWS 역시 이를 지원하니 실제 운영 서버를 만들 때 이를 적용해볼 생각이다.</p>
+
+<p>그리고 또 든 생각은, 내가 앞으로 만들 프로젝트가 모놀리식이 아닌 마이크로 서비스에 가깝게 구현되려면 어떻게 해야 하는가? 에 대한 고찰이다. 뜬금없지만 문득 그런 생각이 든 이유는, “마이크로서비스는 작은 서비스들을 많이 만들자는 거 아냐? 그러면 서비스 단위로 모듈을 나눠야 하는 게 맞는 거 아닌가?” 라는 의문이 들었기 때문이다.</p>
+
+<p>응용 계층은 어쩔 수 없다고 하더라도, 그 아래는 서비스 단위로 UserService, WikiService 이런 식으로 존재해도 되는 거 아닌가? 라고 생각을 했는데, 이러면 공통으로 사용 가능한, Common 코드가 불필요하게 반복될 수 있을 것 같았다. 예를 들어 사용자가 원하는 이미지를 클라우드에 업로드하는 기능이 있다고 가정하면, 사용자 프로필로도 사용될 수 있을 것이고, 게시물에도 사용될 수 있을 것이고… 암튼 많이 사용될 건데 이를 일일이 넣는 것은 전혀 객체지향적이지 않다. 그러므로 이미지를 클라우드에 업로드하는 기능과 같이 중복될 수 있는 코드들은 초기 설계 및 구현할 때나 리팩토링할 때 무조건 분리해서 재사용하는 식으로 해야 할 필요성을 느끼게 되었다.</p>
+
+<p>그러면 재사용 가능한 코드들이 담긴 (이 프로젝트에서는 Core) 계층에 모든 모듈이 의존되는 것 아니냐! 라고 충분히 우려를 표할 수 있다. 보통 DDD 계층 구조를 그린 것들을 보면 Presentation 계층, Application 계층, Domain 계층, Infrastructure 계층으로 이루어져 있는데, 나는 각각의 계층에 해당하는 모듈 (Application 계층과 Domain 계층은 여기서 따로 구현하지 않고 Domain 계층 하나로 합쳐져 있다)들에, 앞서 Common한 코드들이 담긴 Core 모듈과 외부 모듈에 해당하는 Batch와 Socket 계층을 추가하였다. 그런데 내가 만든 Core 모듈을 보면 build.gradle 파일이 없는 것을 알 수 있다. 나는 여기에 util과 같은 Java Class만 정의할 생각이기에, 외부 의존성을 두지 않는 제약 사항을 걸 것이다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[vocawik 프로젝트의 #12. init: Spring Security 적용 ~ #13. init: lombok.config 파일 추가에 대한 내용입니다.]]></summary></entry><entry><title type="html">[vocawik] 3. 07/12 진행 내용</title><link href="http://localhost:4000/vcw3/" rel="alternate" type="text/html" title="[vocawik] 3. 07/12 진행 내용" /><published>2023-07-12T00:00:00+09:00</published><updated>2023-07-12T00:00:00+09:00</updated><id>http://localhost:4000/vcw3</id><content type="html" xml:base="http://localhost:4000/vcw3/"><![CDATA[<blockquote>
+  <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #9. init: Swagger3 적용 ~ #11. init: Thymeleaf 적용에 대한 내용입니다.</p>
 </blockquote>
 
-<h2 id="10-init-thymeleaf-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/c283ce8e7734c2810b459ba053f6a144f3e4143b">#10</a>. init: Thymeleaf 적용</h2>
+<h2 id="9-init-swagger3-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/8103ea20b9e718e06a12d6cefd4c77a4a24826c5">#9</a>. init: Swagger3 적용</h2>
 
-<p>서버에서 클라이언트에게 응답할 브라우저 화면을 만들어줄 차례이다. MVC 구조에서 View에 해당되는 역할인데, 대다수의 웹 사이트들이 JSP나 Thymeleaf를 사용하는 것으로 알고 있어 이에 대해 정리하고자 한다.</p>
+<p>REST 웹 서버로 요청되는 URL 리스트를 문서화 및 테스트 할 수 있는 Swagger3를 Api 모듈 내에 도입하였다.</p>
 
-<p>먼저 JSP (JavaServer Pages)는 HTML 코드에 Java 코드를 넣어 동적인 웹 페이지를 생성하는 Java 기반 서버 사이드 템플릿 엔진 (Server Side Template Engine)이다. 확장자는 .jsp를 사용한다. 파일을 보면 HTML 문서 내에 &lt;% … %&gt;에 둘러싸인 부분이 있는데 이를 서블릿 클래스로 변환하고 컴파일해 실행한다. 이때 JSP 파일을 서블릿 클래스로 변환하고 실행시켜 주는 역할을 하는 것이 바로 Tomcat과 같은 서블릿 컨테이너 (Servlet Container)이다. 말로 적으면 난해하니 아래 순서대로 하나씩 보자.</p>
+<blockquote>
+  <ul>
+    <li>처음엔 Springfox3 라이브러리의 Swagger를 사용하였는데 Springfox3가 실행되지 않는 오류가 발생했다. 개발자 포럼에서도 자주 언급되는 유명한 이슈인데, Spring Boot 2.6 이상의 환경에서 발생하는 이 오류는 아직까지도 해결되지 않았다고 한다. Spring Boot 버전을 2.6 이하로 낮추는 것이 제일 안전한 방법이겠지만, 다른 해결책이 없나 구글링해보았더니 <a href="https://shanepark.tistory.com/366">이 포스트</a>에서 @EnableSwagger2 어노테이션 대신 @EnableWebMvc 어노테이션을 이용해 문제를 해결하길래 나도 적용해서 해결했다.</li>
+    <li>그런데 @EnableWebMvc 어노테이션을 추가하는 건 어떤 의미를 가질까? 라는 질문에 <a href="https://goodgid.github.io/Spring-Enable-MVC-Annotation/">해당 포스트</a>의 내용을 참고해 답변해본다면, @EnableWebMvc는 Spring 프레임워크에서 여러 Config 값을 알아서 설정해주는데 아래의 오류를 일으키는 this.condition 부분도 알아서 설정해주는 것 같다.</li>
+  </ul>
 
-<ol>
-  <li>웹 클라이언트 : 웹 서버에 웹 페이지 요청</li>
-  <li>웹 서버 : 요청받은 웹 페이지에 해당되는 JSP 실행</li>
-  <li>JSP : JSP를 서블릿 코드 (.java)로 변환</li>
-  <li>웹 서버 : 서블릿 코드를 컴파일해 실행 가능한 bytecode (.class)로 변환</li>
-  <li>웹 서버 : 실행 결과로 생성된 HTML 문서를 웹 클라이언트에 응답</li>
-  <li>웹 클라이언트 : 브라우저에서 HTML 문서를 웹 페이지 형태로 출력</li>
-</ol>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Caused by: java.lang.NullPointerException:
+Cannot invoke "org.springframework.web.servlet.mvc.
+condition.PatternsRequestCondition.getPatterns()"
+because "this.condition" is null
+</code></pre></div>  </div>
 
-<p><a href="https://www.thymeleaf.org">Thymeleaf</a>은 html, xml, js, css 등을 처리할 수 있는 Java 템플릿 엔진이다. Thymeleaf의 주요 목적은 유지관리가 수월한 템플릿을 작성하는 것인데, html 태그에 속성 (th:~)을 직접 추가하면 Thymeleaf가 html 파일을 파싱하여 웹 페이지에 동적으로 값을 추가하거나 처리할 수 있다. 이런 템플릿은 Natural Template을 통해 제공되는데, 이는 서버 사이드 렌더링에 필요한 데이터가 없어도 프로토타입을 볼 수 있도록 해주는 것을 의미한다. 그래서 JSP와 달리 서버의 도움 없이도 뷰를 볼 수도 있다. 또한 thymeleaf는 .war로만 export가 가능한 JSP와 달리 .jar로 export가 가능해 이 역시 서버의 도움 없이 브라우저에 화면을 띄워볼 수 있다.</p>
+  <ul>
+    <li>그러나 <a href="https://mvnrepository.com/artifact/io.springfox/springfox-swagger2">Springfox3 라이브러리의 Swagger는 2020년 이후로 업데이트가 중지되었다는 것</a>을 알게 되었고, <a href="https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui">이를 대체하면서 최근까지도 업데이트가 이루어진 Spingdoc 라이브러리의 Swagger</a>를 적용하게 되었다.</li>
+  </ul>
+</blockquote>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:3.1.1'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dependencies {
+    // 'org.springdoc:springdoc-openapi-starter-webmvc-ui'
+    // : SpringDoc OpenAPI를 통해 자동으로 API 문서를 생성하여 Swagger UI를 통해 보여줌
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
+
+}
 </code></pre></div></div>
 
-<p>Thymeleaf 역시도 Gradle를 통해서 사용할 버전의 의존성을 추가해주면 된다. 아무래도 Thymeleaf를 처음 써보는 거라 Thymeleaf의 내부 동작 과정까지는 쓰지 못했는데 추후에 이 부분은 추가해야겠다… (<a href="https://velog.io/@youngerjesus/Spring-Thymeleaf-와-동작-과정">이 게시물</a>의 내용이 잘 정리된 것 같다.)</p>
+<ul>
+  <li>다음과 같이 <code class="language-plaintext highlighter-rouge">SwaggerConfig</code> 클래스를 통해 Swagger UI를 통해 보여질 OpenAPI 문서를 정의하였다.</li>
+</ul>
 
-<h2 id="11-init-github-actions를-통한-cicd-파이프라인-자동화"><a href="https://github.com/pocj8ur4in/vw-backend/commit/66b91ccbcce79d613f8beec47426d3dbc7eae408">#11</a>. init: Github Actions를 통한 CI/CD 파이프라인 자동화</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.api.config;
 
-<p>지속적 통합 및 배포를 위한 CI/CD 파이브라인에 대해 고민해볼 시간이다. Travis, Jenkins, github actions와 같은 CI/CD 관리 도구들이 있는데, <a href="https://choseongho93.tistory.com/295">이 게시글</a>을 참고했을 때 비교적 소규모 프로젝트인 우리의 경우에는 Jenkins에 비해 github action를 사용하는 것이 바람직해 보였다. 일단 Github Action과 Github Flow와 관련해서 <a href="https://zzsza.github.io/development/2020/06/06/github-action/">해당 게시글</a>과 <a href="https://gmlwjd9405.github.io/2018/05/12/how-to-collaborate-on-GitHub-3.html">해당 게시글</a>을 참고하였다. CI/CD 파이프라인을 아래와 같이 간단히 작성해보았다.</p>
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
+import lombok.RequiredArgsConstructor;
+import org.springdoc.core.models.GroupedOpenApi;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-<ol>
-  <li>먼저 <code class="language-plaintext highlighter-rouge">master</code> 브랜치와 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치가 존재한다.</li>
-  <li>개인 작업은 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치에서 분리된 로컬 <code class="language-plaintext highlighter-rouge">feature</code>브랜치에서 작업한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">feature</code> 브랜치의 작업을 반영할 필요가 생길 때, <code class="language-plaintext highlighter-rouge">dev</code> 브랜치에 이를 병합하고 원격 저장소에도 이를 반영한다.</li>
-  <li>사이트에 작업을 반영해야 할 때 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치에서 <code class="language-plaintext highlighter-rouge">master</code> 브랜치로의 <code class="language-plaintext highlighter-rouge">pull request</code>를 생성한다. 이때 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치의 작업물이 빌드가 정상적으로 되는지?와 spotless가 제대로 적용되었는지?를 테스트하는 것을 <code class="language-plaintext highlighter-rouge">github flow</code>로 구현한다.</li>
-  <li>이 작업이 성공하면 병합이 이루이질 수 있게 하고, 또한 <code class="language-plaintext highlighter-rouge">pull request</code>를 종료할 수 있게끔 한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">pull request</code>가 종료될 때, <code class="language-plaintext highlighter-rouge">master</code> 브랜치의 테스트 및 배포 작업이 수행되는 것을 <code class="language-plaintext highlighter-rouge">github flow</code>로 구한현다.</li>
-  <li>배포는 도커 이미지를 생성한 다음 이를 도커 허브에 올리고 난 뒤, AWS에서 도커 컨테이너를 생성해 돌리게끔 한다.</li>
-</ol>
+// 제목, 버전과 같은 OpenAPI 문서의 정보 정의
+@OpenAPIDefinition(info = @Info(title = "vocawik api", version = "v1"))
+@RequiredArgsConstructor
+@Configuration
+public class SwaggerConfig {
+    @Bean
+    public GroupedOpenApi groupedOpenApi() {
+        String[] paths = {"/v1/**"};
 
-<p>2명 이상의 작업을 진행할 때는 원격에서 <code class="language-plaintext highlighter-rouge">feature</code> 브랜치를 두어 이를 공유하고 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치에서 병합될 때에도 <code class="language-plaintext highlighter-rouge">github flow</code>를 동작시키는 게 맞겠지만, 나 혼자 작업하는 것이니 이를 편의상 생략하였다. 또한 협업에서는 보통 개발 서버와 운영 서버, 즉 2개 이상의 서버를 두어 개발하는데, 이 역시 비용상의 문제로 로컬 서버를 개발 서버로 하고 이를 운영 서버로 배포하는 흐름으로 할 것이니 양해를 구한다.</p>
+        // GroupedOpenApi : 그룹화된 OpenAPI 스펙을 담은 객체
+        return GroupedOpenApi.builder().group("vocawik").pathsToMatch(paths).build();
+    }
+}
+
+</code></pre></div></div>
+
+<p><img src="https://github.com/pocj8ur4in/vw-backend/assets/105341168/3204e09d-eb05-4af4-afd6-e2f4bf34276c" style="padding-left: 10%; padding-right: 10%" /></p>
 
 <ul>
-  <li>이를 위해 브랜치 구성을 dev 브랜치와 master 브랜치로 변경하였다. master 브랜치는 함부로 수정할 수 없도록 <a href="https://kotlinworld.com/292">해당 게시글</a>을 참고하여 Branch protection rules를 생성하였다.</li>
-  <li>CI 및 CD 파이프라인의 자동화를 위한 yml 파일을 작성하였다. 이제 작업물을 <code class="language-plaintext highlighter-rouge">pull request</code>를 열거나 종료하면, 빌드와 테스트 작업 혹은 빌드와 테스트 및 배포 작업이 자동화되어 실행된다.
+  <li><a href="http://localhost:8080/swagger-ui/index.html">http://localhost:8080/swagger-ui/index.html</a>로 접속해보면 Swagger 페이지가 정상적으로 출력된다.</li>
+</ul>
+
+<blockquote>
+  <p>Swagger와 별개로 스프링부트 어플리케이션을 실행할 때 나오는 SPRING.JPA.OPEN-IN-VIEW 경고 메세지가 신경쓰였다. OSIV (Open Session In View) 설정이 true일 경우엔 지나치게 오랜 기간 데이터베이스 커넥션을 유지해 시스템 장애를 일으킬 수 있다고 한다. 그러나 OSIV가 꺼져 있으면 모든 지연 로디을 트랜잭션 안에서 처리하는 문제가 발생해 트랜잭션이 끝나기 전에 지연 로딩을 강제로 호출해야 된다. 일단 이 점들을 인지하고 있다가, 추후에 문제가 터지면 이 부분을 고쳐야할 checklist로 적어두었다.</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> jpa:
+   # SPRING.JPA.OPEN-IN-VIEW 로그 오류 해결
+   open-in-view: false
+</code></pre></div>  </div>
+</blockquote>
+
+<h2 id="10-init-github-actions를-통한-cicd-파이프라인-자동화"><a href="https://github.com/pocj8ur4in/vw-backend/commit/66b91ccbcce79d613f8beec47426d3dbc7eae408">#10</a>. init: Github Actions를 통한 CI/CD 파이프라인 자동화</h2>
+
+<p>지속적 통합 및 배포를 위한 CI/CD 파이브라인에 대해 고민해볼 시간이다. Travis, Jenkins, github actions와 같은 CI/CD 관리 도구들이 있는데, <a href="https://choseongho93.tistory.com/295">이 게시글</a>을 참고했을 때 비교적 소규모 프로젝트인 나의 경우에는 Jenkins에 비해 github action를 사용하는 것이 바람직해 보였다. 일단 Github Action과 Github Flow와 관련해서 <a href="https://zzsza.github.io/development/2020/06/06/github-action/">해당 게시글</a>과 <a href="https://gmlwjd9405.github.io/2018/05/12/how-to-collaborate-on-GitHub-3.html">해당 게시글</a>을 참고하였다.</p>
+
+<p>2명 이상의 작업을 진행할 때는 원격에서 <code class="language-plaintext highlighter-rouge">feature</code> 브랜치를 두어 이를 공유하고 <code class="language-plaintext highlighter-rouge">dev</code> 브랜치에서 병합될 때에도 <code class="language-plaintext highlighter-rouge">github flow</code>를 동작시키는 게 맞겠지만, 나 혼자 작업하는 것이니 편의상 생략하였다. 또한 협업에서는 보통 개발 서버와 운영 서버, 즉 2개 이상의 서버를 두어 개발하는데, 이 역시도 비용상의 문제로 로컬 서버를 개발 서버로 하고 이를 운영 서버로 배포하는 흐름으로 할 것이니 미리 양해를 구한다.</p>
+
+<ul>
+  <li>master 브랜치는 함부로 수정할 수 없도록 <a href="https://kotlinworld.com/292">해당 게시글</a>을 참고하여 Branch protection rules를 생성하였다.</li>
+  <li>CI 및 CD 파이프라인의 자동화를 위한 <code class="language-plaintext highlighter-rouge">CI&amp;CD Pipeline.yml</code>을 작성하였다. 이제 작업물을 <code class="language-plaintext highlighter-rouge">push</code>가 이루어질 때, 빌드와 테스트 작업 혹은 빌드와 테스트 및 배포 작업이 자동화되어 실행된다.
     <ul>
       <li><a href="https://devjem.tistory.com/76">해당 게시글</a>을 참고하여 Github Actions에서 Gradle을 캐싱할 수 있도록 하였다.</li>
       <li><a href="https://velog.io/@bagt/Github-Actions를-통한-배포">해당 게시글</a>을 참고하여 AWS를 통한 배포 자동화 (CI)를 위해 빌드된 프로젝트를 미리 압축하도록 하였다.</li>
-      <li>도커 이미지를 생성하는 것은 <a href="https://docs.github.com/en/actions/publishing-packages/publishing-docker-images&gt;">이 문서</a> 내용이 영문이지만 정말 좋다.
-<code class="language-plaintext highlighter-rouge">pull request</code>가 열리거나 종료하는 이벤트에 대한 트리거가 있어야 하는데… 기존에는 안되었던 것으로 아는데 <a href="https://stackoverflow.com/questions/60710209/trigger-github-actions-only-when-pr-is-merged">이 포스트</a>에 따르면 된다고 해 이를 적용하였다.</li>
     </ul>
   </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: pull_request_opened
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Github Actions의 workflow 이름 정의
+name: CI&amp;CD Pipeline
 
+# 이벤트 트리거 설정
 on:
-  pull_request:
-    types:
-      - opened
+  push:
+    branches:
+      - master
 
+# 실행 환경 설정
 jobs:
-  build:
+  push:
     runs-on: ubuntu-latest
-    strategy:
+    strategy: # matrix : 동일한 workflow를 여러 가지 다른 환경에서 실행시킴
       matrix:
         java-version: [ 17 ]
 
     steps:
-      - name: Check Out Repository
+      # 레포지토리를 체크아웃하여 워크스페이스에 가져옴
+      - name: Check Out The Repository
         uses: actions/checkout@v3
 
+      # Java 환경 설정
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
           java-version: $
           distribution: 'corretto'
 
+      # 버전 정보 추출
+      - name: Get the version
+        id: get_version
+        run: |
+          RELEASE_VERSION_WITHOUT_V="$(cut -d'v' -f2 &lt;&lt;&lt; ${GITHUB_REF#refs/*/})"
+          echo ::set-output name=VERSION::$RELEASE_VERSION_WITHOUT_V
+
+      # Gradle 캐싱 설정
       - name: Gradle Caching
         uses: actions/cache@v3
         with:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper
+          key: $-gradle-$
           restore-keys: |
             $-gradle-
 
+      # gradlew 스크립트에 실행 권한 부여
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
         shell: bash
 
+      # Spotless 코드 포매터를 실행해 코드 스타일 확인
       - name: Check spotless
         run: ./gradlew spotlessCheck
 
-      - name: Build with Gradle
-        run: ./gradlew build
-        shell: bash
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: pull_request_closed
-
-on:
-  pull_request:
-    types:
-      - closed
-
-jobs:
-  if_merged:
-    if: github.event.pull_request.merged == true
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        java-version: [ 17 ]
-    outputs:
-      version: $
-
-    steps:
-      - name: Check Out The Repository
-        uses: actions/checkout@v3
-
-      - name: Set up Java
-        uses: actions/setup-java@v3
-        with:
-          java-version: $
-          distribution: 'corretto'
-
-      - name: Get the version
-        id: get_version
-        run: |
-          RELEASE_VERSION_WITHOUT_V="$(cut -d'v' -f2 &lt;&lt;&lt; ${GITHUB_REF#refs/*/})"
-          echo ::set-output name=VERSION::$RELEASE_VERSION_WITHOUT_V 
-
+      # Gradle로 vw-api 모듈 빌드
       - name: Execute Gradle build
-        run: ./gradlew :Api:build --no-daemon
+        run: ./gradlew :vw-api:build --no-daemon
 
+      # Docker 빌드 툴인 Docker Buildx 설정
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
+      # Docker Hub에 로그인
       - name: Login to Docker Hub
         uses: docker/login-action@v2
         with:
           username: $
           password: $
 
+      # Docker 이미지 빌드 및 Docker Hub에 푸시
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./Api
+          context: ./vw-api
           push: true
           tags: $/$
 
+      # 빌드된 Docker 이미지의 디제스트 값 출력
       - name: Image digest
         run: echo $
 
+      # EC2 인스턴스 내에서 Docker 컨테이너를 실행하여 애플리케이션을 실행
       - name: Application Run
         uses: appleboy/ssh-action@v0.1.6
         with:
           host: $
           username: $
           key: $
-
           script: |
+            # 이전에 실행 중인 도커 컨테이너 중지
             sudo docker stop $
+
+            # 이전에 실행 중인 도커 컨테이너 강제로 삭제
             sudo docker rm -f $
+
+            # 최신 도커 이미지를 Docker Hub에서 EC2 인스턴스로 가져옴
             sudo docker pull $/$:latest
-            
-            sudo docker run -p 8080:$ \
-            --name $ \
-            -e SPRING_DATASOURCE_URL=$ \
-            -e SPRING_DATASOURCE_USERNAME=$ \
-            -e SPRING_DATASOURCE_PASSWORD=$ \
-            -d $/$
 
-            sudo docker image prune -a
+            # 새로운 도커 컨테이너 실행
+            sudo docker run -p $:8080 \
+              --name $ \
+              -d $/$
 
+            # 모든 미사용 도커 이미지를 삭제
+            sudo docker image prune -a -f
+      
+
+      # gradlew 스크립트의 권한 변경
       - name: gradlew permission change
         run: sudo chmod 755 gradlew
 
+      # Sonaqube 분석
       - name: Sonaqube Analysis
         run: ./gradlew test sonarqube
           -Dsonar.host.url=$
@@ -241,7 +234,7 @@ jobs:
 </code></pre></div></div>
 
 <ul>
-  <li>지난번 프로젝트를 진행했을 때 도커 허브에 올라온 빌드 파일을 실행했을 때 기본 Manifest 속성이 없다는 오류가 나오면서 정상적으로 작동이 되지 않는 것을 확인하였다. 찾아보니 내가 이전에 참고했던 <a href="https://gist.github.com/ihoneymon/a2ed116069af470fec0d08110604c5db">해당 게시글</a>처럼 오류를 해결한 경우도 있지만, 이 둘을 반대로 진행한 <a href="https://earth-95.tistory.com/132">이 포스트</a>와 같은 경우도 있음을 확인하였다. 왜 그럴까?
+  <li>지난번에 프로젝트를 진행했을 때 도커 허브에 올라온 빌드 파일을 실행했을 때 기본 Manifest 속성이 없다는 오류가 나오면서 정상적으로 작동이 되지 않는 것을 확인하였다. 이를 찾아보니 내가 이전에 참고했던 <a href="https://gist.github.com/ihoneymon/a2ed116069af470fec0d08110604c5db">해당 게시글</a>처럼 오류를 해결한 경우도 있지만, 이 둘을 반대로 진행한 <a href="https://earth-95.tistory.com/132">이 포스트</a>와 같은 경우도 있음을 확인하였다. 왜 그럴까?
     <ul>
       <li>BootJar task와 Jar task는 빌드를 통해 jar 파일을 만드는 작업이다. 그런데 이 둘이 동시에 존재하는 이유는 Jar은 의존성이 포함되지 않고 소스 코드의 클래스 파일과 리소스 파일만 포함한 Plain Jar을, BootJar은 의존성까지 포함해 어플리케이션 실행이 가능한 executable Jar을 만들기 때문이다.</li>
       <li>그러므로, 도커 이미지에 올라간 것은 Plain Jar라 실행이 되지 않는 것이라고 추측해볼 수 있다. 그래서 이를 고려해 build.gradle 파일을 수정하였다.</li>
@@ -260,7 +253,7 @@ jar.enabled = false
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bootJar.enabled = false
 </code></pre></div></div>
 
-<p>여기까지가 github action에서 진행된 내용으로, 커밋에 반영된 내용이다. 그리고 아래부터는 그 외부에서 이루어진 작업들로, 솔직히 정말 오랜 시행착오가 있었는데 <a href="https://zzang9ha.tistory.com/404">이 포스트</a>가 제일 깔끔히 정리된 듯 하니 참고하면 좋을 듯 하다.</p>
+<p>여기까지가 해당 커밋에서 반영된 내용이다. 그리고 아래부터는 그 외부에서 이루어진 작업들로, 솔직히 이 부분은 여러 차례 시행착오가 있었는데 이를 남기지 않으면 분명 나중에 다시 고생할 것 같아 글로 남긴다. <a href="https://zzang9ha.tistory.com/404">이 포스트</a>가 내가 작업한 내용에 제일 근접하면서도 깔끔히 정리된 듯 하니 참고하면 좋을 듯 하다.</p>
 
 <ul>
   <li>도커 허브에 저장소를 생성하고, 계정에 대한 토큰을 발급받아 GitHub 저장소에 secret key로 등록시켰다.
@@ -454,145 +447,75 @@ docker-compose --version
 
 <ul>
   <li>추가로 GitHub Actions 또한 이를 반영해 동작하게 하기 위해, <a href="https://chb2005.tistory.com/191">해당 포스트</a>를 참고하여 yml 파일을 수정하였다.</li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[vocawik 프로젝트의 #10. init: Thymeleaf 적용 ~ #11. init: Github Actions를 통한 CI/CD 파이프라인 자동화에 대한 내용입니다.]]></summary></entry><entry><title type="html">[vocawik] 2. 07/11, 07/12 진행 내용</title><link href="http://localhost:4000/vcw2/" rel="alternate" type="text/html" title="[vocawik] 2. 07/11, 07/12 진행 내용" /><published>2023-07-11T00:00:00+09:00</published><updated>2023-07-12T00:00:00+09:00</updated><id>http://localhost:4000/vcw2</id><content type="html" xml:base="http://localhost:4000/vcw2/"><![CDATA[<blockquote>
-  <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #3. init: 멀티모듈 프로젝트 세팅 ~ #9. init: Swagger3 적용에 대한 내용입니다.</p>
+</ul>
+
+<h2 id="11-init-thymeleaf-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/c283ce8e7734c2810b459ba053f6a144f3e4143b">#11</a>. init: Thymeleaf 적용</h2>
+
+<p>서버에서 클라이언트에게 응답할 브라우저 화면을 만들어줄 차례이다. MVC 구조에서 뷰 (View) 에 해당되는 역할인데, 대다수의 웹 사이트들이 JSP나 Thymeleaf를 사용하는 것으로 알고 있어 이에 대해 정리하고자 한다.</p>
+
+<p>JSP (JavaServer Pages)는 HTML 코드에 Java 코드를 넣어 동적인 웹 페이지를 생성하는 Java 기반 서버 사이드 템플릿 엔진 (Server Side Template Engine)이다. 확장자는 .jsp를 사용한다. 파일을 보면 HTML 문서 내에 <code class="language-plaintext highlighter-rouge">&lt;% ... %&gt;</code>에 둘러싸인 부분이 있는데 이를 서블릿 클래스로 변환하고 컴파일해 실행한다. 이때 JSP 파일을 서블릿 클래스로 변환하고 실행시켜 주는 역할을 하는 것이 바로 Tomcat과 같은 서블릿 컨테이너 (Servlet Container)이다. 말로 적으면 난해하니 아래 순서대로 하나씩 보자.</p>
+
+<ol>
+  <li>웹 클라이언트 : 웹 서버에 웹 페이지 요청</li>
+  <li>웹 서버 : 요청받은 웹 페이지에 해당되는 JSP 실행</li>
+  <li>JSP : JSP를 서블릿 코드 (.java)로 변환</li>
+  <li>웹 서버 : 서블릿 코드를 컴파일해 실행 가능한 bytecode (.class)로 변환</li>
+  <li>웹 서버 : 실행 결과로 생성된 HTML 문서를 웹 클라이언트에 응답</li>
+  <li>웹 클라이언트 : 브라우저에서 HTML 문서를 웹 페이지 형태로 출력</li>
+</ol>
+
+<p><a href="https://www.thymeleaf.org">Thymeleaf</a>은 html, xml, js, css 등을 처리할 수 있는 Java 템플릿 엔진이다. Thymeleaf의 주요 목적은 유지관리가 수월한 템플릿을 작성하는 것인데, html 태그에 속성 (th:~)을 직접 추가하면 Thymeleaf가 html 파일을 파싱하여 웹 페이지에 동적으로 값을 추가하거나 처리할 수 있다. 이런 템플릿은 Natural Template을 통해 제공되는데, 이는 서버 사이드 렌더링에 필요한 데이터가 없어도 프로토타입을 볼 수 있도록 해주는 것을 의미한다. 그래서 JSP와 달리 서버의 도움 없이도 뷰를 볼 수도 있다. 또한 thymeleaf는 .war로만 export가 가능한 JSP와 달리 .jar로 export가 가능해 이 역시 서버의 도움 없이 브라우저에 화면을 띄워볼 수 있다.</p>
+
+<ul>
+  <li>Thymeleaf은 Gradle를 통해 의존성을 추가하면 따로 설정할 부분 없이 바로 적용해볼 수 있다. (아무래도 Thymeleaf는 처음 사용해본 거라 Thymeleaf의 기본 문법이나 내부 동작 과정까지는 쓰지 못했는데 추후에 이 부분은 별개의 포스트로 추가해야겠다…)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dependencies {
+    // 'org.springframework.boot:spring-boot-starter-thymeleaf' : Java 기반 서버 사이드 렌더링 템플릿 엔진
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:3.1.1'
+    ...
+}
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[vocawik 프로젝트의 #9. init: Swagger3 적용 ~ #11. init: Thymeleaf 적용에 대한 내용입니다.]]></summary></entry><entry><title type="html">[vocawik] 2. 07/11 진행 내용</title><link href="http://localhost:4000/vcw2/" rel="alternate" type="text/html" title="[vocawik] 2. 07/11 진행 내용" /><published>2023-07-11T00:00:00+09:00</published><updated>2023-07-11T00:00:00+09:00</updated><id>http://localhost:4000/vcw2</id><content type="html" xml:base="http://localhost:4000/vcw2/"><![CDATA[<blockquote>
+  <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #4. init: spotless 적용 ~ #8. init: sonarqube 적용에 대한 내용입니다.</p>
 </blockquote>
-
-<h2 id="3-init-멀티모듈-프로젝트-세팅"><a href="https://github.com/pocj8ur4in/vw-backend/commit/fc0f6521f6a53169fc45dec379a307e119da4dc6">#3</a>. init: 멀티모듈 프로젝트 세팅</h2>
-
-<p>프로젝트의 내부를 기존의 root 모듈에 sub 모듈인 api, batch, core, domain, infrastructure, socket 모듈을 포함시킨 멀티모듈 구조로 변경하였다. (추가: 이후에 batch, infrastructure, socket 모듈을 도입할 계획이다.)</p>
-
-<ul>
-  <li>sub 모듈들을 하나의 디렉토리에서 관리할 수 있도록 <code class="language-plaintext highlighter-rouge">settings.gradle</code> 파일을 작성하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rootProject.name = 'vw-backend'
-include 'vw-api'
-include 'vw-batch'
-include 'vw-core'
-include 'vw-domain'
-include 'vw-infrastructure'
-include 'vw-socket'
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">build.gradle</code>에 subprojects와 allprojects 블록을 추가해 하위 모듈과 전체 모듈을 제어할 수 있도록 하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>allprojects{
-    repositories {
-        mavenCentral()
-    }
-}
-
-subprojects {
-    group = 'vocawik'
-    version = '0.0.1-SNAPSHOT'
-    sourceCompatibility = '17'
-
-    apply plugin: 'java'
-    apply plugin: 'org.springframework.boot'
-    apply plugin: 'java-library'
-    apply plugin: 'io.spring.dependency-management'
-
-    dependencies {
-        ...
-    }
-
-    configurations {
-        compileOnly {
-            extendsFrom annotationProcessor
-        }
-    }
-}
-</code></pre></div></div>
-
-<ul>
-  <li>반복된 코드를 어노테이션으로 자동완성하는 lombok 라이브러리를 사용하기 위해 subprojects에 의존성을 추가하였다.</li>
-  <li>스프링 어플리케이션에서 Junit 기반 테스트가 가능하도록 subprojects에 의존성을 추가하였다.</li>
-  <li><a href="https://jundragon.tistory.com/9">해당 포스트</a>를 참고해 lombok을 테스팅 환경에서 사용할 수 있도록 subprojects에 의존성을 추가하였다.</li>
-  <li>JUnit5 API를 테스팅 환경에서 사용할 수 있도록 subprojects에 의존성을 추가하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dependencies {
-        compileOnly 'org.projectlombok:lombok'
-        annotationProcessor 'org.projectlombok:lombok'
-        testImplementation 'org.springframework.boot:spring-boot-starter-test'
-        testCompileOnly 'org.projectlombok:lombok'
-        testAnnotationProcessor 'org.projectlombok:lombok'
-        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-    }
-</code></pre></div></div>
-
-<ul>
-  <li><a href="https://math-coding.tistory.com/158">해당 포스트</a>를 참고해 Java 단위 테스트를 위한 JUnit5 프레임워크를 위해 <code class="language-plaintext highlighter-rouge">build.gradle</code>을 변경하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.named('test') {
-        // useJUnitPlatform : test task에 JUnit Platform을 사용하도록 지정
-        useJUnitPlatform()
-}
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Task 'wrapper' not found in project ':project'</code> 오류를 해결하고자, <a href="https://hororolol.tistory.com/546">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper를 사용해서 빌드 환경을 맞추었다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>task wrapper(type: Wrapper) {
-    gradleVersion = '7.4'    
-    distributionUrl = distributionUrl.replace("bin", "all")
-}
-</code></pre></div></div>
-
-<ul>
-  <li>위의 오류를 해결하는 과정에서 <code class="language-plaintext highlighter-rouge">Cannot add task 'wrapper' as a task with that name already exists</code> 오류가 발생해, <a href="https://taegyunum.tistory.com/entry/Cannot-add-task-wrapper-as-a-task-with-that-name-already-exists">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper 형식을 변경하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wrapper {
-        gradleVersion = '7.4'
-        distributionUrl = distributionUrl.replace("bin", "all")
-}
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">:prepareKotlinBuildScriptModel Task fails in a Java project</code> 오류를 해결하고자, <a href="https://charactermail.tistory.com/351">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 <code class="language-plaintext highlighter-rouge">prepareKotlinBuildScriptModel</code>을 새로운 empty task로 추가하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tasks.register("prepareKotlinBuildScriptModel"){}
-</code></pre></div></div>
 
 <h2 id="4-init-spotless-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/68f5025c7d1886575a90b36bb4bad62072b2f59d">#4</a>. init: spotless 적용</h2>
 
-<p>Junit에 대한 코드 포맷팅 및 유지보수를 위해 <a href="https://nesoy.github.io/articles/2020-04/Spotless">해당 게시글</a>을 참고해 spotless 플러그인을 추가하였다.</p>
+<p>Junit의 코드 포맷팅 및 유지보수를 위해 <a href="https://nesoy.github.io/articles/2020-04/Spotless">해당 게시글</a>을 참고해 <code class="language-plaintext highlighter-rouge">spotless</code> 플러그인을 추가하였다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id "com.diffplug.spotless" version "6.16.0"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins {
+    ...
+
+    // 'com.diffplug.spotless' : 코드 파일의 포맷팅 규칙을 정의하고, 코드에 적용될 자동 포맷팅 작업을 설정
+    id 'com.diffplug.spotless' version '6.16.0'
+}
 </code></pre></div></div>
 
 <ul>
-  <li>sub 모듈에서도 spotless 플러그인이 적용되도록 <a href="https://keelim.tistory.com/entry/안드로이드-멀티-모듈-공통-gradle-그리고-ktlint-적용을-해보자">해당 게시글</a>을 참고해 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 생성하였다.</li>
+  <li>sub 모듈에도 해당 플러그인이 적용되도록 <a href="https://keelim.tistory.com/entry/안드로이드-멀티-모듈-공통-gradle-그리고-ktlint-적용을-해보자">해당 게시글</a>을 참고해 외부 스크립트 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 생성하였다.</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spotless {
+    // Spotless 플러그인의 버전을 6.16.0으로 설정
     version = "6.16.0"
 
+    // Java 소스 파일(**/*.java)에 대한 포맷팅과 스타일을 지정
     java {
-        // 특정 파일에만 적용
         target("**/*.java")
 
-        // import 순서 정의
+        // importOrder() : import문의 순서 정렬
         importOrder()
 
-        // 사용하지 않는 import 제거
+        // removeUnusedImports() : 사용되지 않는 import문 제거
         removeUnusedImports()
 
-        // 구글 자바 포맷 적용
+        // googleJavaFormat().aosp() : Google Java 스타일 가이드에 따른 코드 포맷팅
         googleJavaFormat().aosp()
 
-        // 공백 제거
+        // trimTrailingWhitespace() : 라인 끝의 공백 제거
         trimTrailingWhitespace()
 
-        // 끝부분 New Line 처리
+        // endWithNewline() : 파일의 맨 마지막에 빈 줄 추가
         endWithNewline()
     }
 }
@@ -602,27 +525,103 @@ subprojects {
   <li>그리고 sub 모듈에서도 spotless 플러그인이 적용될 수 있도록 root 모듈에 <code class="language-plaintext highlighter-rouge">spotless.gradle</code> 파일을 적용시켰다.</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply from: "$rootDir/spotless.gradle"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// apply from : Gradle 빌드 스크립트에서 외부 스크립트 파일을 프로젝트에 적용
+apply from: "$rootDir/spotless.gradle"
 </code></pre></div></div>
 
 <h2 id="5-init-git-hook과-gradle을-통한-spotless-자동화"><a href="https://github.com/pocj8ur4in/vw-backend/commit/4fed89c42bc0241e31123d7565b6781a11f83ccd">#5</a>. init: git hook과 gradle을 통한 spotless 자동화</h2>
 
 <p>앞서 spotless를 적용하긴 했는데, spotless를 실행하는 것은 코드를 작성하고 이를 커밋하는 과정에서 까먹기 쉬운 작업이다. 그래서 <a href="https://techblog.woowahan.com/2530/">이 게시글</a>처럼 git hook으로 커밋을 하기 전에 spotless를 적용하는 것을 자동화하였다.<br /></p>
 
-<p>그런데 .git는 처음에 .gitignore을 통해 제외하기로 한 디렉토리이다. 나 혼자 작업을 진행한다면 위의 내용으로 충분하겠지만, 협업에서는 모두가 같은 내용을 적용하는 것이 중요하다. 그래서 root에 pre-commit 파일을 두고, gradle task를 이용해 빌드가 이루어질 때 pre-commit 파일을 .git에 이동하는 것을 추가하였다.</p>
+<p>그런데 .git는 처음에 .gitignore을 통해 제외하기로 한 디렉토리이다. 나 혼자 작업을 진행한다면 위의 내용으로 충분하겠지만, 협업에서는 모두가 같은 내용을 적용하는 것이 중요하다. 그래서 root에 <code class="language-plaintext highlighter-rouge">pre-commit</code> 파일을 두고, gradle task를 이용해 빌드가 이루어질 때 pre-commit 파일을 .git에 이동하는 것을 추가하였다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // 'pre-commit'을 '.git/hooks' 디렉토리에 설치
+    task installGitHooks(type: Copy) {
+        from new File(rootProject.rootDir, 'pre-commit')
+        into { new File(rootProject.rootDir, '.git/hooks') }
+    }
+
+    // 'installGitHooks'을 'build' 작업의 의존성으로 설정
+    build.dependsOn installGitHooks
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pre-commit</code> 파일은 깃 스테이지에 올라간 파일들에 대해 spotlessApply를 실행하고 변경된 파일들을 다시 추가한다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 스테이지에 올라간 파일 목록 가져오기
+stagedFiles=$(git diff --staged --name-only)
+
+# spotlessApply 실행
+./gradlew spotlessApply
+
+# 각 파일에 대해 주석 처리
+for file in $stagedFiles; do
+  # 파일인 경우에만 주석 처리
+  if test -f "$file"; then
+    # 파일을 스테이지에 추가
+    git add "$file"
+  fi
+done
+</code></pre></div></div>
 
 <h2 id="6-init-모듈-내-applicationyml-설정"><a href="https://github.com/pocj8ur4in/vw-backend/commit/75770bf08a2f3d05548747d5b607700de63fa717">#6</a>. init: 모듈 내 application.yml 설정</h2>
 
-<p><a href="https://tecoble.techcourse.co.kr/post/2022-10-04-active_profiles/">해당 게시글</a>을 참고하여 이전에 설장한 멀티모듈 내에 프로퍼티 설정을 관리하고 환경변수를 주입할 수 있는 application.yml 파일을 생성하였다.</p>
+<p><a href="https://tecoble.techcourse.co.kr/post/2022-10-04-active_profiles/">해당 게시글</a>을 참고하여 이전에 설장한 멀티모듈 내에 프로퍼티 설정을 관리하고 환경변수를 주입할 수 있는 application.yml 파일을 생성하였다. 일단 다음과 같은 템플릿을 만들어 적용시켰는데, 추후에 필요한 경우 이를 수정할 생각이다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+---
+# 개발 (dev) 프로파일
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+---
+# 스테이징 (staging) 프로파일
+spring:
+  config:
+    activate:
+      on-profile: staging
+
+---
+# 운영 (production) 프로파일
+spring:
+  config:
+    activate:
+      on-profile: production
+
+</code></pre></div></div>
+
+<ul>
+  <li>지난번에 작업하였을 때에 멀티모듈을 동작시키는 과정에서 외부 모듈의 yml 파일들을 가져오지 못하는 경우가 있었다. 그래서 XXXApplication.java의 XXXApplication 클래스에 System.setProperty를 통해 시스템 프로퍼티를 가져와 이를 설정으로 가져오게끔 하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.api;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ApiApplication {
+    public static void main(String[] args) { // 추가된 부분
+        System.setProperty(
+                "spring.config.name", "application, application-domain, application-core");
+
+        SpringApplication.run(ApiApplication.class, args);
+    }
+}
+</code></pre></div></div>
 
 <h2 id="7-init-jacoco-설정"><a href="https://github.com/Hongik-Challenge/hc-backend/commit/a10ebd2a12774c3a40484d6bf76c26f265180a41">#7</a>. init: jacoco 설정</h2>
 
-<p><a href="https://seller-lee.github.io/java-code-coverage-tool-part2">해당 게시글</a>을 참고해 sub 모듈에 코드 커버리지 도구인 Jacoco를 도입하였다.</p>
+<p><a href="https://seller-lee.github.io/java-code-coverage-tool-part2">해당 게시글</a>을 참고해 sub 모듈에 코드 커버리지 도구인 Jacoco를 도입하였다. Jacoco도 spotless처럼 외부 스크립트를 통해 관리하고자 하였다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apply plugin: 'jacoco'
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>subprojects {
+    // 'jacoco' : Java 코드의 코드 커버리지를 측정
+    apply plugin: 'jacoco'
 
-jacoco {
-    toolVersion = '0.8.9'
+    apply from: "$rootDir/jacoco.gradle"
 }
 </code></pre></div></div>
 
@@ -630,19 +629,53 @@ jacoco {
   <li>추후 SonarQube의 연동을 위해 jacocoTestReports task를 설정하였다. html, csv, xml 형태로 저장할 수 있게 해주고, xml 파일은 저장하는 경로를 다르게 설정하였다.</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestReport {
-    dependsOn test
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacoco {
+    toolVersion = '0.8.9' // Jacoco 도구 버전 설정
+}
+
+test {
+    finalizedBy jacocoTestReport // 테스트가 완료된 후에 jacocoTestReport 태스크 실행
+}
+
+jacocoTestReport {
+    dependsOn test // jacocoTestReport 태스크가 실행되기 전에 test 태스크 실행
     reports {
-        html.enabled true
-        csv.enabled true
-        xml.enabled true
-        xml.destination file("${buildDir}/reports/jacoco.xml")
+        html.enabled true // HTML 형식의 보고서 생성
+        csv.enabled true // CSV 형식의 보고서 생성
+        xml.enabled true // XML 형식의 보고서 생성
+    }
+
+    def Qdomains = []
+
+    for (qPattern in '*.QA'..'*.QZ') { // Q 패턴을 가진 도메인을 Qdomains에 추가
+        Qdomains.add(qPattern + '*')
+    }
+
+    afterEvaluate {
+        classDirectories.setFrom(
+                files(classDirectories.files.collect {
+                    fileTree(dir: it, excludes: [] + Qdomains)
+                        // Q 패턴을 가진 도메인을 제외한 classDirectories 설정
+                })
+        )
+    }
+
+    finalizedBy 'jacocoTestCoverageVerification'
+        // jacocoTestCoverageVerification 태스크가 실행된 후에 jacocoTestReport 태스크 실행
+}
+
+    violationRules {
+        rule {
+            enabled = true
+            excludes = [] + Qdomains // Q 패턴을 가진 도메인을 제외하고 규칙을 적용
+        }
     }
 }
+
 </code></pre></div></div>
 
 <ul>
-  <li>원하는 코드 커버리지를 설정하고, 커버리지를 만족하는지 여부를 확인하는 데에 쓰이는 jacocoTestCoverageVerification task를 설정하려 했으나 커버리지를 만족시키기 위해 설정해야 하는 기준을 판단하기 어려워 일단 이 내용은 코드에서 제외하였다.</li>
+  <li>원하는 코드 커버리지를 설정하고, 커버리지를 만족하는지 여부를 확인하는 데에 쓰일 수 있는 jacocoTestCoverageVerification task를 설정하려 했으나, 커버리지를 만족시키기 위해 설정해야 하는 기준을 판단하기 어려워 다음의 내용은 일단 제외하였다.</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestCoverageVerification {
@@ -671,16 +704,16 @@ jacoco {
 </code></pre></div></div>
 
 <ul>
-  <li>추가로 QueryDSL가 자동으로 생성하는 QDomain 클래스를 코드 커버리지에서 제외하였다.</li>
+  <li>대신 QueryDSL가 자동으로 생성하는 QDomain 클래스를 코드 커버리지에서 제외하였다.</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacocoTestCoverageVerification {
     def Qdomains = []
 
-    for (qPattern in '*.QA'..'*.QZ') { // qPattern = '*.QA', '*.QB', ... '*.QZ'
+    for (qPattern in '*.QA'..'*.QZ') { // Q 패턴을 가진 도메인을 Qdomains에 추가
         Qdomains.add(qPattern + '*')
     }
-}
+    ...
 </code></pre></div></div>
 
 <ul>
@@ -697,52 +730,26 @@ jacoco {
 <h2 id="8-init-sonarqube-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/5dc906b6d60e13cbcf0c093afad66cb0c5c9cfb3">#8</a>. init: sonarqube 적용</h2>
 <p><a href="https://kdevkr.github.io/static-analysis-performed-by-sonarqube-and-github-action/#소나큐브-시스템-구성">해당 게시글</a>을 참고해, Jacoco와 비슷한 코드 커버리지 도구인 sonarqube를 프로젝트 내에 도입하였다.</p>
 
-<ul>
-  <li>pull request가 종료되면서 개발 서버에 빌드 파일이 배포되기 전에 소나큐브가 실행되는 것을 목표로 하므로, 차후 작성된 github action에 이를 반영할 것이다.</li>
-</ul>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins { 
+    // 'org.sonarqube' : 정적 코드 분석을 통해 버그, 취약점, 코드 스멜 등을 감지하고,
+    // 이를 바탕으로 한 보고서를 생성하여 소프트웨어의 품질을 관리
+    id 'org.sonarqube' version '4.0.0.2929'
+    ...
+}
 
-<h2 id="9-init-swagger3-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/8103ea20b9e718e06a12d6cefd4c77a4a24826c5">#9</a>. init: Swagger3 적용</h2>
-
-<p><a href="https://velog.io/@dnwlsrla40/Swagger-Swagger3">해당 포스트</a>의 내용을 참고하여, REST 웹 서버로 요청되는 URL 리스트를 문서화 및 테스트 할 수 있는 Swagger3를 Api 모듈 내에 도입하였다.</p>
-
-<ul>
-  <li>Spring Boot 2.6 이상의 환경에서 Springfox3가 실행되지 않는 오류가 발생했다. 개발자 포럼에서도 자주 언급되는 유명한 이슈인데, 아직까지도 해결되지 않았다고 한다. Spring Boot 버전을 2.6 이하로 낮추는 것이 제일 안전한 방법이겠지만, 다른 해결책이 없나 구글링해보았더니 <a href="https://shanepark.tistory.com/366">이 포스트</a>에서 @EnableSwagger2 어노테이션 대신 @EnableWebMvc 어노테이션을 이용해 문제를 해결하길래 나도 적용해서 해결했다.
-    <ul>
-      <li>그런데 @EnableWebMvc 어노테이션을 추가하는 건 어떤 의미를 가질까? 라는 질문에 <a href="https://goodgid.github.io/Spring-Enable-MVC-Annotation/">해당 포스트</a>의 내용을 참고해 답변해본다면, @EnableWebMvc는 Spring 프레임워크에서 여러 Config 값을 알아서 설정해주는데 아래의 오류를 일으키는 this.condition 부분도 알아서 설정해주는 것 같다.</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Caused by: java.lang.NullPointerException:
-Cannot invoke "org.springframework.web.servlet.mvc.
-condition.PatternsRequestCondition.getPatterns()"
-because "this.condition" is null
+apply from: "$rootDir/sonarqube.gradle"
+...
 </code></pre></div></div>
 
 <ul>
-  <li><a href="http://localhost:8080/swagger-ui/index.html">http://localhost:8080/swagger-ui/index.html</a>로 접속해보면 Swagger 페이지가 정상적으로 출력된다.</li>
-</ul>
-
-<p><img src="https://github.com/pocj8ur4in/vw-backend/assets/105341168/3204e09d-eb05-4af4-afd6-e2f4bf34276c" style="padding-left: 10%; padding-right: 10%" /></p>
-
-<hr />
-<p>추가로 직접 하나씩 작업해보면서 몇 가지 의문이 든 부분이 있는데, 이를 여기에 조금 적어둘까 한다. 먼저 현재까지 내가 작업한 배포 과정이 정말 사이트를 운영하는 데에 정말 적합한지? 에 대한 고찰이다. 일단 내 처음 계획은, master 브랜치에 작업한 내용을 병합하기 위한 PR이 종료될 때 -&gt; github action에서 도커 허브로 이미지를 올리고 -&gt; AWS 인스턴스 내의 도커에서 올라간 이미지에 대한 컨테이너를 실행하는 것이다. 원래는 난 내 로직이 괜찮다고 생각했는데, 내가 간과한 부분이 하나 있었다.</p>
-
-<p>AWS 인스턴스 내에서 도커를 설치하고 이미지에 대한 컨테이너를 실행하는 것은 괜찮은데, 새로운 이미지에 대한 컨테이너를 실행해야 할 때가 문제이다. 이전 이미지에 대한 컨테이너를 종료하고 이를 삭제한 다음에 새로운 이미지에 대한 컨테이너를 실행하는 과정에서 약간의 소요 시간이 생기지 않을까?</p>
-
-<p>약간의 딜레이가 뭐가 문제인건데?, 라고 생각할 수도 있겠지만, 구글이나 아마존 같이 세계를 대상으로 실시간으로 동작하는 사이트들이 이러면 어마어마한 손실이 날 것이다. 그래서 이들은 무중단 배포 (Zero-downtime Deployment) 전략을 통해 서비스를 중단되지 않는 상태로 유지하려 한다. (개념에 대한 자세한 내용과 세부 전략은 <a href="https://hudi.blog/zero-downtime-deployment/">이 포스트</a>를 참고해주길 바란다.) 여기서 등장하는 게 로드밸런서 (LoadBalancer)인데,  nginx나 HAProxy와 같은 제품들이 존재하고, AWS 역시 이를 지원하니 실제 운영 서버를 만들 때 이를 적용해볼 생각이다.</p>
-
-<p>그리고 또 든 생각은, 내가 앞으로 만들 프로젝트가 모놀리식이 아닌 마이크로 서비스에 가깝게 구현되려면 어떻게 해야 하는가? 에 대한 고찰이다. 뜬금없지만 문득 그런 생각이 든 이유는, “마이크로서비스는 작은 서비스들을 많이 만들자는 거 아냐? 그러면 서비스 단위로 모듈을 나눠야 하는 게 맞는 거 아닌가?” 라는 의문이 들었기 때문이다.</p>
-
-<p>응용 계층은 어쩔 수 없다고 하더라도, 그 아래는 서비스 단위로 UserService, WikiService 이런 식으로 존재해도 되는 거 아닌가? 라고 생각을 했는데, 이러면 공통으로 사용 가능한, Common 코드가 불필요하게 반복될 수 있을 것 같았다. 예를 들어 사용자가 원하는 이미지를 클라우드에 업로드하는 기능이 있다고 가정하면, 사용자 프로필로도 사용될 수 있을 것이고, 게시물에도 사용될 수 있을 것이고… 암튼 많이 사용될 건데 이를 일일이 넣는 것은 전혀 객체지향적이지 않다. 그러므로 이미지를 클라우드에 업로드하는 기능과 같이 중복될 수 있는 코드들은 초기 설계 및 구현할 때나 리팩토링할 때 무조건 분리해서 재사용하는 식으로 해야 할 필요성을 느끼게 되었다.</p>
-
-<p>그러면 재사용 가능한 코드들이 담긴 (이 프로젝트에서는 Core) 계층에 모든 모듈이 의존되는 것 아니냐! 라고 충분히 우려를 표할 수 있다. 보통 DDD 계층 구조를 그린 것들을 보면 Presentation 계층, Application 계층, Domain 계층, Infrastructure 계층으로 이루어져 있는데, 나는 각각의 계층에 해당하는 모듈 (Application 계층과 Domain 계층은 여기서 따로 구현하지 않고 Domain 계층 하나로 합쳐져 있다)들에, 앞서 Common한 코드들이 담긴 Core 모듈과 외부 모듈에 해당하는 Batch와 Socket 계층을 추가하였다. 그런데 내가 만든 Core 모듈을 보면 build.gradle 파일이 없는 것을 알 수 있다. 나는 여기에 util과 같은 Java Class만 정의할 생각이기에, 외부 의존성을 두지 않는 제약 사항을 걸 것이다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[vocawik 프로젝트의 #3. init: 멀티모듈 프로젝트 세팅 ~ #9. init: Swagger3 적용에 대한 내용입니다.]]></summary></entry><entry><title type="html">[vocawik] 1. 07/10 진행 내용</title><link href="http://localhost:4000/vcw1/" rel="alternate" type="text/html" title="[vocawik] 1. 07/10 진행 내용" /><published>2023-07-10T00:00:00+09:00</published><updated>2023-07-10T00:00:00+09:00</updated><id>http://localhost:4000/vcw1</id><content type="html" xml:base="http://localhost:4000/vcw1/"><![CDATA[<blockquote>
-  <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #1. init: git 저장소 생성 ~ #2. init: 프로젝트 생성에 대한 내용입니다.</p>
+  <li>pull request가 종료되면서 개발 서버에 빌드 파일이 배포되기 전에 소나큐브가 실행되는 것을 목표로 하므로, 차후 작성된 github action에 이를 반영할 것이다.</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[vocawik 프로젝트의 #4. init: spotless 적용 ~ #8. init: sonarqube 적용에 대한 내용입니다.]]></summary></entry><entry><title type="html">[vocawik] 1. 07/10 진행 내용</title><link href="http://localhost:4000/vcw1/" rel="alternate" type="text/html" title="[vocawik] 1. 07/10 진행 내용" /><published>2023-07-10T00:00:00+09:00</published><updated>2023-07-10T00:00:00+09:00</updated><id>http://localhost:4000/vcw1</id><content type="html" xml:base="http://localhost:4000/vcw1/"><![CDATA[<blockquote>
+  <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #1. init: git 저장소 생성 ~ #3. init: 멀티모듈 프로젝트 세팅에 대한 내용입니다.</p>
 </blockquote>
 
 <h2 id="1-init-git-저장소-생성"><a href="https://github.com/pocj8ur4in/vw-backend/commit/4dd2e5b458282cc895a7b38d3f2d3aa37ceabb65">#1</a>. init: git 저장소 생성</h2>
 
-<p>가장 먼저 작업물의 변경점과 버전을 관리하는 버전 관리 시스템 (VCS; Version Control System)을 도입할 것이다. 변경점 관리를 통해 협업하는 과정에서 누가 어떤 내용을 언제 수정했는지 확인할 수 있고, 버전 관리를 통해 작업하는 과정에서 작업물의 백업과 복구를 간편하게 수행할 수 있다. 여기서는 배포할 코드와 작업할 코드를 나눠 프로젝트를 진행할 수 있는 브랜치 (branch) 개념이 있고 대부분의 개발자에게 이미 익숙할 <a href="https://git-scm.com">git</a>을 사용하겠다.</p>
+<p>가장 먼저 진행할 작업은 작업물의 변경점과 버전을 관리하는 버전 관리 시스템 (VCS; Version Control System)을 도입할 것이다. 변경점 관리를 통해 협업하는 과정에서 누가 어떤 내용을 언제 수정했는지 확인할 수 있고, 버전 관리를 통해 작업하는 과정에서 작업물의 백업과 복구를 간편하게 수행할 수 있다. 여기서는 배포할 코드와 작업할 코드를 나눠 프로젝트를 진행할 수 있는 브랜치 (branch) 개념이 있고 대부분의 개발자에게 이미 익숙할 <a href="https://git-scm.com">git</a>을 사용하겠다.</p>
 
 <ul>
   <li>.git 디렉터리를 생성하였다.</li>
@@ -775,7 +782,7 @@ because "this.condition" is null
 <p>그리고 Git 원격 저장소를 웹에 호스팅하는 서비스인 Git 웹 호스팅 서비스를 도입할 것이다. 이를 통해 협업하는 과정에서 작업 내용을 빠르게 공유하고, webhook 기능을 통해 pull이나 pull request 같은 이벤트에 반응하여 작업이 실행되게 할 수 있다. 여기서는 데비옵스 (DevOps) 파이프라인 자동화 툴인 Github Actions나 업무의 생성, 진행상황, 해결을 추적하는 이슈 트래커 툴인 Github Issue 등의 서비스를 지원하고 대부분의 개발자에게 이미 익숙할 <a href="https://github.com">Github</a>를 사용하겠다.</p>
 
 <ul>
-  <li>github 계정에 프로젝트를 저장할 원격 저장소를 만들고, 로컬 저장소의 내용을 원격 저장소에 푸시하였다.</li>
+  <li>github 계정에 프로젝트를 저장할 원격 저장소를 만들고, 현재 로컬 저장소의 내용을 원격 저장소에 푸시하였다.</li>
 </ul>
 
 <h2 id="2-init-프로젝트-생성"><a href="https://github.com/pocj8ur4in/vw-backend/commit/fc26e92fe1235029c2b14c6aa45cc6419aaaa5cd">#2</a>. init: 프로젝트 생성</h2>
@@ -783,19 +790,185 @@ because "this.condition" is null
 <p>이제 웹 어플리케이션을 구현하기 위한 기술을 정할 차례이다. 사실 이 부분은 개발자 조직과 비즈니스 기획을 고려해 의사결정을 해야 하는 게 맞겠지만, 나에게 러닝커브가 적고 라이브러리 및 래퍼런스가 많이 존재하는 Java를 프로그래밍 언어로, Spring Boot를 웹 프레임워크로, Gradle을 의존성 관리 도구로 사용할 계획이다.</p>
 
 <ul>
-  <li>Gradle을 빌드하기 위한 <code class="language-plaintext highlighter-rouge">build.gradle</code> 파일의 plugins와 repositories를 작성하였다. .gradle 파일을 작성하는 방법은 <a href="https://velog.io/@appti/series/gradle">해당 포스트</a>와 <a href="https://araikuma.tistory.com/category/IT%20개발/Gradle">해당 포스트</a>를 참고하였다.</li>
+  <li>Gradle을 빌드하기 위한 <code class="language-plaintext highlighter-rouge">build.gradle</code> 파일의 <code class="language-plaintext highlighter-rouge">plugins</code>와 <code class="language-plaintext highlighter-rouge">repositories</code>를 작성하였다.
+    <ul>
+      <li>.<code class="language-plaintext highlighter-rouge">gradle</code> 파일을 작성하는 방법은 <a href="https://velog.io/@appti/series/gradle">해당 포스트</a>와 <a href="https://araikuma.tistory.com/category/IT%20개발/Gradle">해당 포스트</a>를 참고하였다.</li>
+    </ul>
+  </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plugins {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Gradle 플러그인
+plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.7.10'
+
+    // Spring Framework 기반의 자바 애플리케이션의 개발 및 실행을 지원하는 프레임워크
+    id 'org.springframework.boot' version '3.1.1'
+
+    // Spring Boot 기반의 Gradle 프로젝트에서 의존성 버전을 관리하고 정의하는 플러그인
     id 'io.spring.dependency-management' version '1.1.0'
 }
 
+// Gradle 빌드 스크립트에서 Maven Central Repository를 프로젝트의 의존성 해결을 위한 저장소로 사용
 repositories {
     mavenCentral()
 }
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[vocawik 프로젝트의 #1. init: git 저장소 생성 ~ #2. init: 프로젝트 생성에 대한 내용입니다.]]></summary></entry><entry><title type="html">[Github Pages] 6. Github Pages 블로그 기능 추가</title><link href="http://localhost:4000/blog6/" rel="alternate" type="text/html" title="[Github Pages] 6. Github Pages 블로그 기능 추가" /><published>2023-04-10T00:00:00+09:00</published><updated>2023-10-06T00:00:00+09:00</updated><id>http://localhost:4000/blog6</id><content type="html" xml:base="http://localhost:4000/blog6/"><![CDATA[<blockquote>
+</code></pre></div></div>
+
+<h2 id="3-init-멀티모듈-프로젝트-세팅"><a href="https://github.com/pocj8ur4in/vw-backend/commit/fc0f6521f6a53169fc45dec379a307e119da4dc6">#3</a>. init: 멀티모듈 프로젝트 세팅</h2>
+
+<p>프로젝트의 내부를 기존의 rootProject인 <code class="language-plaintext highlighter-rouge">vw-backend</code>에 sub 모듈인 <code class="language-plaintext highlighter-rouge">api</code>, <code class="language-plaintext highlighter-rouge">core</code>, <code class="language-plaintext highlighter-rouge">domain</code> 모듈을 포함시킨 멀티모듈 구조로 변경하였다.</p>
+
+<ul>
+  <li>sub 모듈들을 하나의 디렉토리에서 관리할 수 있도록 <code class="language-plaintext highlighter-rouge">settings.gradle</code> 파일을 작성하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// rootProject : Gradle 프로젝트 구조에서 최상위 프로젝트를 나타내는 객체
+// - .name : 루트 프로젝트의 이름을 지정
+rootProject.name = 'vw-backend'
+
+// - include : 하위 프로젝트의 디렉토리 이름을 지정해 해당 디렉토리 안에 있는 빌드 스크립트를 실행
+include 'vw-api'
+include 'vw-core'
+include 'vw-domain'
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">build.gradle</code>에 subprojects와 allprojects 블록을 추가해 하위 모듈과 전체 모듈을 제어할 수 있도록 하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// plugins {} : Gradle 플러그인
+// - Gradle 7.0 이상에선 apply plugin: '(plugin-id)' 대신 plugins { id '(plugin-id)' } 사용을 권장
+plugins {
+    // 'java' : Gradle에 내장된 Java 플러그인을 프로젝트에 적용
+    id 'java'
+
+    // 'org.springframework.boot' : Spring Framework 기반의 자바 애플리케이션의 개발 및 실행을 지원하는 프레임워크
+    id 'org.springframework.boot' version '3.1.1'
+
+    // 'io.spring.dependency-management' : Spring Boot 기반의 Gradle 프로젝트에서 의존성 버전을 관리하는 플러그인
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+// allprojects {} : Gradle 빌드 스크립트에서 모든 프로젝트에 공통으로 적용되는 설정을 지정
+allprojects {
+    // group : 모든 프로젝트의 고유한 식별자인 group을 지정
+    group = 'vocawik'
+
+    // version : 모든 프로젝트의 릴리스 또는 빌드 버전을 나타내는 version을 지정
+    version = '0.0.1-SNAPSHOT'
+
+    // sourceCompatibility : 모든 프로젝트의 소스 호환성을 Java 17로 설정
+    sourceCompatibility = '17'
+
+    // 모든 프로젝트의 Gradle 빌드 스크립트에서 Maven Central Repository를 프로젝트의 의존성 해결을 위한 저장소로 사용
+    repositories {
+        mavenCentral()
+    }
+}
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// subprojects {} : Gradle 빌드 스크립트에서 하위 프로젝트에 공통으로 적용되는 설정을 지정
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    // java-library : Java 소스 코드를 컴파일하고 라이브러리 파일 (JAR) 형태로 빌드하는 플러그인
+    apply plugin: 'java-library'
+
+    // 멀티모듈 프로젝트에서 bootJar 파일 생성 비활성화 &amp; Jar 파일 생성화
+    bootJar.enabled = false
+    jar.enabled = true
+
+    dependencies {
+      ...
+    }
+
+    // configurations {} : Gradle 빌드 스크립트에서 의존성 구성을 정의
+    configurations {
+        compileOnly {
+            // - extendsFrom : 특정 구성이 다른 구성을 확장하도록 지정
+            extendsFrom annotationProcessor
+        }
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>반복 코드를 어노테이션으로 자동완성하는 lombok 라이브러리를 사용하기 위해 subprojects에 의존성을 추가하였다.</li>
+  <li>스프링 어플리케이션에서 Junit 기반 테스트가 가능하도록 subprojects에 의존성을 추가하였다.</li>
+  <li><a href="https://jundragon.tistory.com/9">해당 포스트</a>를 참고해 lombok을 테스팅 환경에서 사용할 수 있도록 subprojects에 의존성을 추가하였다.</li>
+  <li>JUnit5 API를 테스팅 환경에서 사용할 수 있도록 subprojects에 의존성을 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // dependencies {} : Gradle 빌드 스크립트에서 프로젝트 의존성을 정의
+    // - implementation : 컴파일 및 런타임 의존성 선언
+    // - testImplementation : 테스트 코드를 작성하고 실행하기 위해 필요한 의존성 정의
+    // - api : 컴파일 및 런타임 시에, 그리고 프로젝트를 사용하는 다른 모듈에서 해당 의존성을 사용할 수 있도록 선언
+    // - compileOnly : 컴파일 시에만 필요한 의존성 정의
+    // - runtimeOnly : 런타임 시에만 필요한 의존성 정의
+    // - testCompileOnly : 테스트 코드 컴파일 시에만 필요한 의존성 정의
+    // - testRuntimeOnly : 테스트 실행 시에만 필요한 의존성 정의
+    // - annotationProcessor : 컴파일 시에 어노테이션 프로세서 활성화
+    // - testAnnotationProcessor : 테스트 코드 컴파일 시에 어노테이션 프로세서 활성화
+    dependencies {
+        // 'org.projectlombok:lombok' : Lombok 에노테이션을 사용해 소스 코드를 자동으로 생성
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+        testCompileOnly 'org.projectlombok:lombok'
+        testAnnotationProcessor 'org.projectlombok:lombok'
+
+        // 'org.springframework.boot:spring-boot-starter-test' : Spring Boot 어플리케이션의 단위 테스트, 통합 테스트, 모의 객체 등을 지원
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+        // 'org.junit.jupiter:junit-jupiter-api:5.8.1' : Java 프로그래밍 언어를 위한 단위 테스트 프레임워크
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    }
+</code></pre></div></div>
+
+<ul>
+  <li><a href="https://math-coding.tistory.com/158">해당 포스트</a>를 참고해 Java 단위 테스트를 위한 JUnit5 프레임워크를 위해 <code class="language-plaintext highlighter-rouge">build.gradle</code>을 변경하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // tasks.named : 특정 이름을 가진 task를 선택하고 해당 task에 대한 구성을 수행
+    tasks.named('test') {
+        // useJUnitPlatform : test task에 JUnit Platform을 사용하도록 지정
+        useJUnitPlatform()
+    }
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Task 'wrapper' not found in project ':project'</code> 오류를 해결하고자, <a href="https://hororolol.tistory.com/546">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper를 사용해서 빌드 환경을 맞추었다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>task wrapper(type: Wrapper) {
+    gradleVersion = '7.4'    
+    distributionUrl = distributionUrl.replace("bin", "all")
+}
+</code></pre></div></div>
+
+<ul>
+  <li>위 오류를 해결하는 과정에서 <code class="language-plaintext highlighter-rouge">Cannot add task 'wrapper' as a task with that name already exists</code> 오류가 발생해, <a href="https://taegyunum.tistory.com/entry/Cannot-add-task-wrapper-as-a-task-with-that-name-already-exists">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 gradle wrapper 형식을 변경하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // wrapper {} : Gradle 빌드 도구를 프로젝트에 내장시켜 빌드 환경의 일관성을 유지하는 Gradle Wrapper의 설정을 정의
+    wrapper {
+        // gradleVersion : 사용할 Gradle 버전을 지정
+        gradleVersion = '7.4'
+
+        // distributionUrl : Gradle 빌드 도구의 다운로드 위치를 지정
+        // (기존 다운로드 URL에서 "bin"을 "all"로 변경하여 Gradle의 모든 버전을 다운로드)
+        distributionUrl = distributionUrl.replace("bin", "all")
+    }
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">:prepareKotlinBuildScriptModel Task fails in a Java project</code> 오류를 해결하고자, <a href="https://charactermail.tistory.com/351">해당 포스트</a>를 참고하여 <code class="language-plaintext highlighter-rouge">build.gradle</code>의 subprojects에서 <code class="language-plaintext highlighter-rouge">prepareKotlinBuildScriptModel</code>을 새로운 empty task로 추가하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // 'prepareKotlinBuildScriptModel'라는 이름의 empty task 등록
+    tasks.register('prepareKotlinBuildScriptModel'){}
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[vocawik 프로젝트의 #1. init: git 저장소 생성 ~ #3. init: 멀티모듈 프로젝트 세팅에 대한 내용입니다.]]></summary></entry><entry><title type="html">[Github Pages] 6. Github Pages 블로그 기능 추가</title><link href="http://localhost:4000/blog6/" rel="alternate" type="text/html" title="[Github Pages] 6. Github Pages 블로그 기능 추가" /><published>2023-04-10T00:00:00+09:00</published><updated>2023-10-06T00:00:00+09:00</updated><id>http://localhost:4000/blog6</id><content type="html" xml:base="http://localhost:4000/blog6/"><![CDATA[<blockquote>
   <p>이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html이나 css를 다룰 줄 알면 금방 할 수 있는, 혹은 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를 해결하였는지, 에 대해 자세히 쓰고 싶었다. 그래서 이 게시물은 다른 게시물들과 달리, 내가 블로그에서 부족하다고 느낀 점들을 계속 조금씩이라도 보충해나갈 계획이다.</p>
 </blockquote>
 
@@ -1451,4 +1624,37 @@ lastmod: 2022-09-26
   <ul>
     <li>productuidev 님이 작성하신, <a href="https://velog.io/@productuidev/PREV-Portfolio-1-ProjectBlog#개발-블로그--github">개발자 취업준비 (포트폴리오/블로그)</a></li>
   </ul>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[글을 시작하기 앞서 말할 부분이 있다. 이번 포스트의 내용은 나의 주관적인 판단이 들어간 서술이 많다. 나야 보시다시피 Github Pages를 사용하지만 다른 사람들은 여러 이유로 다양한 플랫폼을 사용할 것이고, 그 부분을 지적하거나 문제시하는 게 아님을 분명히 밝히고 싶다. 이 글은 어디까지나 개발 블로그로 사용되는 여러 플랫폼에 대해 이야기해보는 과정을 통해 개발 블로그를 처음 만드는 개발자들이 이런 부분을 고려했으면 좋겠다, 는 취지로 작성된 것이다.]]></summary></entry></feed>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[글을 시작하기 앞서 말할 부분이 있다. 이번 포스트의 내용은 나의 주관적인 판단이 들어간 서술이 많다. 나야 보시다시피 Github Pages를 사용하지만 다른 사람들은 여러 이유로 다양한 플랫폼을 사용할 것이고, 그 부분을 지적하거나 문제시하는 게 아님을 분명히 밝히고 싶다. 이 글은 어디까지나 개발 블로그로 사용되는 여러 플랫폼에 대해 이야기해보는 과정을 통해 개발 블로그를 처음 만드는 개발자들이 이런 부분을 고려했으면 좋겠다, 는 취지로 작성된 것이다.]]></summary></entry><entry><title type="html">[Github Pages] 1. 개발자에게 개발 블로그는 왜 필요한가요?</title><link href="http://localhost:4000/blog1/" rel="alternate" type="text/html" title="[Github Pages] 1. 개발자에게 개발 블로그는 왜 필요한가요?" /><published>2023-03-31T00:00:00+09:00</published><updated>2023-03-31T00:00:00+09:00</updated><id>http://localhost:4000/blog1</id><content type="html" xml:base="http://localhost:4000/blog1/"><![CDATA[<blockquote>
+  <p>내가 아직 취업 시장에 발도 담구지 않은 대학생인데 내가 개발 블로그의 필요성에 대해 논하는 것이 의미가 있는 걸까? 라는 의문이 들어 작년에 작성한 글에서는 이 부분을 짚어보지 않았다. 하지만 이 부분을 뺀 채로 블로그를 운영하다보니, 처음에 내가 가졌었던 생각이나 느낌이 희석되면서, 여러 가지를 이유로 들며 블로그 운영을 게을리한 것 같다. 그래서 지난 1년간 내가 작성한 내용을 다시 정리하기 앞서, 이 부분에 대해 이야기하고자 한다.</p>
+</blockquote>
+
+<h2 id="1-블로그에-글을-쓰는-과정-또한-하나의-공부가-될-수-있다">1. 블로그에 글을 쓰는 과정 또한 하나의 공부가 될 수 있다.</h2>
+<p>사실 글을 쓰는 과정은 엄청나게 귀찮다. 글을 쓰기 위한 소재도 미리 준비해야 하고, 그 소재에 대해 모르는 부분을 공부해야 하고, 내가 잘못된 내용을 적는 게 아닌지 검토하는 과정 또한 거쳐야 하고… 하지만 <b>내가 이전에 공부하거나 경함한 내용을 자세하고 정확히 설명하기 위해 노력하면서, 그 내용에 대한 나의 이해도가 올라가는 것 같다.</b> 이전에 블로그에 글을 쓰기 전의 나는 수업 끝나면 다시 책을 펴보지 않았지만, 지금은 블로그에 글을 쓰기 위해서라도 최대한 기록을 남기려고 노력한다. 이러면서 내가 단순히 개념으로 머릿속에 집어넣은 내용을 블로그의 문장이나 예시로 설명하면서, 내용을 이해하는 것을 넘어서 개념을 응용하는 능력 또한 증진되는 것 같다.<br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/229170501-4f26985a-ab1a-437a-812c-f9db6ee50863.jpg" alt="pexels-armando-are-3759364" /></p>
+
+<p>글을 쓰는 것과 같이 누군가에게 무언가를 설명하려고 노력하는 행위를 나만 성장하는 데에 있어 도움이 된다고 느낀 건 아닌지, <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=290172950">실용주의 프로그래머</a>라는 책에서는 프로그래머가 고무 오리 인형에게 코드 한 줄씩 설명하는 <a href="https://ko.wikipedia.org/wiki/고무_오리_디버깅">고무 오리 디버깅 (rubber duck debugging)</a>으로 무언가를 설명해본 경험의 중요성을 강조한다. 이처럼 무언가를 설명해보는 경험이 계속 축적되다보면, 나중엔 무엇을 배우든간에 그것을 어떻게 설명해볼지에 대해 미리 생각해보게 될 것이다.<br /></p>
+
+<p>그리고 당연하지만, <b>글은 하나의 기록이고 그 자체로 나의 history가 된다.</b> 자신이 공부하고 경험한 것을 기록하는 것은, 당연하지만 내가 기억하는 것보다 더 오래 보존된다. 나는 공부를 하거나 이런저런 자료를 참고한 것을 모으는 방법에 대해 늘 고민하곤 했는데 (예를 들면 즐겨찾기에 등록하는 것이나 PDF를 저장하는 것. 2가지 모두 단점이 명확해 중간에 그만두었다), 역시 코드의 주석처럼 글을 쓸 때 바로바로 참고한 내용을 링크를 걸어주는 방법이 제일 즉각적이고 직관적인 것 같다. 또한 만약 생각이나 회고을 적어둔 경우에는 내가 이런 생각을 했구나, 하면서 나중에 참고하기도 좋다.</p>
+
+<h2 id="2-블로그를-운영하는-것이-성장의-동기가-될-수-있다">2. 블로그를 운영하는 것이 성장의 동기가 될 수 있다.</h2>
+<p>나는 어렸을 때부터 무언가를 수집하는 것을 좋아했다. 초등학교 때는 TCG 게임의 카드들을 수집해 컬렉터 앨범을 만드는 것을 좋아했고, 중학교 때에는 코인 홀더에 담을 프루프를 사기 위해 용돈을 모아본 적도 있다. 블로그에 글을 쓰는 것 또한 내가 인터넷이나 서적 곳곳에 퍼져 있는 지식들을 수집해 하나의 모음집을 만든다고 느꼈기에 처음 개설하였을 때부터 블로그를 운영하는 데에 애착이 갔다.<br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/229171570-0609a126-3177-47d8-aa22-1e179c6b7f9e.jpg" alt="pexels-canva-studio-3194523" /></p>
+
+<p>그래서 나는 <b>Blog-driven, 즉 블로그를 운영하기 위해 공부하고 경험하면서 나 또한 성장한다는 개념에 대해 긍정적으로 생각한다.</b> 대다수의 사람들이 보통 블로그에 글을 쓰면서 Blog-driven이 이루어진다고 생각하는데, 나는 Blog-driven이 더 포괄적인 개념이라고 생각한다. 블로그를 계속해서 살아있는 상태로 유지하려면 단순히 블로그에 글을 쓰는 것만이 아닌, 블로그를 개선하고 유지보수하는 과정 또한 필요하다. 지난 1년간 블로그를 운영하면서 알게 모르게 시행착오를 거친 부분이 꽤 되는데 웹 개발을 공부하면서 이를 블로그에 대입해 생각해보기도 하고, 블로그에 적용시켜볼 계획도 세우기도 하는 식으로 앞으로 나아가는 데에 큰 도움이 되었던 것 같다.<br /></p>
+
+<h2 id="3-운영하는-블로그가-개발자에게-새로운-기회를-줄-수-있다">3. 운영하는 블로그가 개발자에게 새로운 기회를 줄 수 있다.</h2>
+<p>내가 이번에 대학교 4학년이 되면서 느낀 점이 있다면, <b>나를 포장하고 홍보하는 것 또한 정말 중요하다는 것이다.</b> 수능은 모든 학생을 일렬로 세우고 점수로 평가하지만, 사회에는 어떤 절대적인 기준이 존재하지 않으므로 사람들이 나를 평가할 수 있는 input data를 내가 스스로 가공해 제공할 필요성이 있다. 특히 개발자는 다른 직업보다 정보를 활용하는 능력이 뛰어나다보니, Github 프로필을 만들거나 포트폴리오 사이트를 만드는 것과 같이 나에 대한 정보를 공유하는 것 또한 매우 활발하다.<br /></p>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/229171850-d6723260-8a79-48d0-a288-7e9a55c29f21.jpg" alt="pexels-markus-winkler-4584830" /></p>
+
+<p>요즘 IT 기업들이 지원자의 개발 블로그나 Github의 주소를 요구하는 것 또한 그런 맥락일 것이다. 기업 입장에서는 모든 점에서 뛰어난 인재를 채용하고자 하겠지만, 그것은 매우 소수이다. 그래서 기업은 지원자의 잠재력 또한 확인해 평가하고자 노력한다. 그리고 이런 부분은 개발과 직접적으로 관련되어 있지만 단순한 결과물의 집합체인 이력서나 포트폴리오보다는, 성장하는 데에 있어 중요한 가치를 엿볼 수 있는 개발 블로그나 Github에 잘 들어나는 것 같다.</p>
+
+<blockquote>
+  <p>Reference</p>
+  <ul>
+    <li>코드쓰는사림 님이 작성하신, <a href="https://taegon.kim/archives/7107">개발자가 블로그를 운영해야 할 이유</a></li>
+    <li>productuidev 님이 작성하신, <a href="https://velog.io/@productuidev/PREV-Portfolio-1-ProjectBlog#개발-블로그--github">개발자 취업준비 (포트폴리오/블로그)</a></li>
+  </ul>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[내가 아직 취업 시장에 발도 담구지 않은 대학생인데 내가 개발 블로그의 필요성에 대해 논하는 것이 의미가 있는 걸까? 라는 의문이 들어 작년에 작성한 글에서는 이 부분을 짚어보지 않았다. 하지만 이 부분을 뺀 채로 블로그를 운영하다보니, 처음에 내가 가졌었던 생각이나 느낌이 희석되면서, 여러 가지를 이유로 들며 블로그 운영을 게을리한 것 같다. 그래서 지난 1년간 내가 작성한 내용을 다시 정리하기 앞서, 이 부분에 대해 이야기하고자 한다.]]></summary></entry></feed>
