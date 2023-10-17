@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[MacOS] 1. 홈브류 (Homebrew) - pocj8ur4in’s blog</title>
-<meta name="description" content="Homebrew : macOS용 패키지 관리 어플리케이션 (Package Management Application)">
+<!-- begin _includes/seo.html --><title>[vocawik] 16. 08/15 진행 내용 - pocj8ur4in’s blog</title>
+<meta name="description" content="vocawik 프로젝트의 #35. feat(domain): 회원가입 유효성 검사 (→ ajax)에 대한 내용입니다.">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -22,32 +22,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[MacOS] 1. 홈브류 (Homebrew)">
-<meta property="og:url" content="http://localhost:4000/homebrew1/">
+<meta property="og:title" content="[vocawik] 16. 08/15 진행 내용">
+<meta property="og:url" content="http://localhost:4000/vcw16/">
 
 
-  <meta property="og:description" content="Homebrew : macOS용 패키지 관리 어플리케이션 (Package Management Application)">
-
-
-
+  <meta property="og:description" content="vocawik 프로젝트의 #35. feat(domain): 회원가입 유효성 검사 (→ ajax)에 대한 내용입니다.">
 
 
 
 
-  <meta property="article:published_time" content="2022-09-26T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2022-09-26T00:00:00+09:00">
+  <meta property="article:published_time" content="2023-08-15T00:00:00+09:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2023-08-15T00:00:00+09:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/homebrew1/">
+
+<link rel="canonical" href="http://localhost:4000/vcw16/">
 
 
 
@@ -166,7 +166,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">[MacOS] 1. 홈브류 (Homebrew)</li>
+        <li class="current">[vocawik] 16. 08/15 진행 내용</li>
       
     
   </ol>
@@ -180,16 +180,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[MacOS] 1. 홈브류 (Homebrew)">
-    <meta itemprop="description" content="Homebrew : macOS용 패키지 관리 어플리케이션 (Package Management Application)">
-    <meta itemprop="datePublished" content="2022-09-26T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2022-09-26T00:00:00+09:00">
+    <meta itemprop="headline" content="[vocawik] 16. 08/15 진행 내용">
+    <meta itemprop="description" content="  vocawik 프로젝트의 #35. feat(domain): 회원가입 유효성 검사 (→ ajax)에 대한 내용입니다.">
+    <meta itemprop="datePublished" content="2023-08-15T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2023-08-15T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/homebrew1/" class="u-url" itemprop="url">[MacOS] 1. 홈브류 (Homebrew)
+            <a href="http://localhost:4000/vcw16/" class="u-url" itemprop="url">[vocawik] 16. 08/15 진행 내용
 </a>
           </h1>
           
@@ -206,7 +206,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          최대 1 분 소요
         
       </span>
     
@@ -221,197 +221,16 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#homebrew--macos용-패키지-관리-어플리케이션-package-management-application">Homebrew : macOS용 패키지 관리 어플리케이션 (Package Management Application)</a><ul><li><a href="#homebrew-설치">Homebrew 설치</a></li><li><a href="#cask-package-설치">cask Package 설치</a></li><li><a href="#mas-package-설치">mas Package 설치</a></li><li><a href="#homebrew-명령어">Homebrew 명령어</a></li><li><a href="#cask-명령어">cask 명령어</a></li><li><a href="#mas-명령어">mas 명령어</a></li><li><a href="#homebrew-삭제">Homebrew 삭제</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#35-featdomain-회원가입-유효성-검사--ajax">#35. feat(domain): 회원가입 유효성 검사 (→ ajax)</a></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="homebrew--macos용-패키지-관리-어플리케이션-package-management-application"><a href="https://brew.sh">Homebrew</a> : macOS용 패키지 관리 어플리케이션 (Package Management Application)</h2>
+        <blockquote>
+  <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #35. feat(domain): 회원가입 유효성 검사 (→ ajax)에 대한 내용입니다.</p>
+</blockquote>
 
-<ul>
-  <li>일반적으로 커맨드라인 도구나 시스템 패키지 설치에 사용</li>
-  <li>cask Package : GUI 어플리케이션 설치도 가능하게 해주는 Homebrew 확장 패키지</li>
-  <li>mas Package : App Store 어플리케이션 설치도 가능하게 해주는 Homebrew 확장 패키지</li>
-</ul>
-
-<h3 id="homebrew-설치">Homebrew 설치</h3>
-<ul>
-  <li>터미널 실행 후 다음 명령어를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-</code></pre></div></div>
-
-<ul>
-  <li>터미널 창에 다음 명령어를 입력해 Homebrew가 정상적으로 설치되었는지 확인</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew --version
-// "Homebrew X.X.X" 출력 : 정상 설치
-// "zsh: command not found: brew" 출력 : 설치 오류
-</code></pre></div></div>
-
-<h3 id="cask-package-설치">cask Package 설치</h3>
-<ul>
-  <li>터미널 창에 다음 명령어를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install cask
-</code></pre></div></div>
-
-<ul>
-  <li>터미널 창에 다음 명령어를 입력해 cask Package가 정상적으로 설치되었는지 확인</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew list
-</code></pre></div></div>
-
-<h3 id="mas-package-설치">mas Package 설치</h3>
-<ul>
-  <li>터미널 창에 다음 명령어를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install mas
-</code></pre></div></div>
-
-<ul>
-  <li>터미널 창에 다음 명령어를 입력해 mas Package가 정상적으로 설치되었는지 확인</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew list
-</code></pre></div></div>
-
-<h3 id="homebrew-명령어">Homebrew 명령어</h3>
-
-<table>
-    <thead>
-        <tr>
-            <th>Homebrew 명령어 이름</th>
-            <th>Homebrew 명령어 설명</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>brew --version</th>
-            <td>Homebrew의 버전 정보 확인</td>
-        </tr>
-        <tr>
-            <th>brew doctor</th>
-            <td>Homebrew 설치 환경을 검사</td>
-        </tr>
-        <tr>
-            <th>brew update</th>
-            <td>Homebrew를 최신 버전으로 업데이트</td>
-        </tr>
-        <tr>
-            <th>brew list</th>
-            <td>설치된 패키지를 확인</td>
-        </tr>
-        <tr>
-            <th>brew upgrade</th>
-            <td>설치된 모든 패키지를 업데이트</td>
-        </tr>
-        <tr>
-            <th>brew search (패키지명)</th>
-            <td>해당 패키지가 설치되어 있는지 검색</td>
-        </tr>
-        <tr>
-            <th>brew install (패키지명)</th>
-            <td>해당 패키지를 최신 버전으로 설치</td>
-        </tr>
-        <tr>
-            <th>brew info (패키지명)</th>
-            <td>해당 패키지의 정보 확인</td>
-        </tr>
-        <tr>
-            <th>brew upgrade (패키지명)</th>
-            <td>해당 패키지를 업데이트</td>
-        </tr>
-        <tr>
-            <th>brew uninstall (패키지명)</th>
-            <td>해당 패키지를 삭제</td>
-        </tr>
-        <tr>
-            <th>brew outdated</th>
-            <td>최신 버전이 존재하는 패키지 확인</td>
-        </tr>
-        <tr>
-            <th>brew cleanup (패키지명)</th>
-            <td>해당 패키지의 구버전에 해당하는 파일 삭제</td>
-        </tr>
-    </tbody>
-</table>
-
-<h3 id="cask-명령어">cask 명령어</h3>
-<ul>
-  <li>기존의 brew 명령어 뒤에 <code class="language-plaintext highlighter-rouge">--cask</code>를 추가</li>
-</ul>
-
-<h3 id="mas-명령어">mas 명령어</h3>
-
-<table>
-    <thead>
-        <tr>
-            <th>mas 명령어 이름</th>
-            <th>mas 명령어 설명</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>mas version</th>
-            <td>mas의 버전 정보 확인</td>
-        </tr>
-        <tr>
-            <th>mas list</th>
-            <td>mas로 설치된 패키지 확인</td>
-        </tr>
-        <tr>
-            <th>mas upgrade</th>
-            <td>mas로 설치된 모든 패키지를 최신 버전으로 업데이트</td>
-        </tr>
-        <tr>
-            <th>mas search (검색어)</th>
-            <td>앱스토어에서 해당 검색어와 일치하는 패키지 검색</td>
-        </tr>
-        <tr>
-            <th>mas install (패키지 ID)</th>
-            <td>해당되는 ID를 가진 패키지를 최신 버전으로 설치</td>
-        </tr>
-        <tr>
-            <th>mas upgrade (패키지 ID)</th>
-            <td>해당되는 ID를 가진 패키지를 최신 버전으로 업데이트</td>
-        </tr>
-        <tr>
-            <th>mas uninstall (패키지명)</th>
-            <td>mas로 설치된 해당 패키지를 삭제</td>
-        </tr>
-        <tr>
-            <th>mas outdated</th>
-            <td>mas로 설치된 패키지 중 최신 버전이 존재하는 패키지 확인</td>
-        </tr>
-    </tbody>
-</table>
-
-<h3 id="homebrew-삭제">Homebrew 삭제</h3>
-<ul>
-  <li>터미널 실행 후 다음 명령어를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Homebrew로 설치한 모든 package를 일괄 삭제
-brew remove --force --ignore-dependencies $(brew list)
-
-// Homebrew 삭제
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
-</code></pre></div></div>
-
-<ul>
-  <li>터미널 창에 다음 명령어를 입력해 Homebrew가 정상적으로 삭제되었는지 확인</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew --version
-// "zsh: command not found: brew" 출력 : 정상 삭제
-// "Homebrew X.X.X" 출력 : 삭제 오류
-</code></pre></div></div>
+<h2 id="35-featdomain-회원가입-유효성-검사--ajax"><a href="https://github.com/pocj8ur4in/vw-backend/commit/6099445808d5f4ec3c56a63cda1462362206938f">#35</a>. feat(domain): 회원가입 유효성 검사 (→ ajax)</h2>
 
         
       </section>
@@ -428,7 +247,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#macos" class="page__taxonomy-item p-category" rel="tag">MacOS</a>
+      <a href="/tags/#vocawik" class="page__taxonomy-item p-category" rel="tag">vocawik</a>
     
     </span>
   </p>
@@ -438,7 +257,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-09-26">September 26, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-08-15">August 15, 2023</time></p>
 
       </footer>
       
@@ -461,9 +280,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BMacOS%5D+1.+%ED%99%88%EB%B8%8C%EB%A5%98+%28Homebrew%29%20http%3A%2F%2Flocalhost%3A4000%2Fhomebrew1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5Bvocawik%5D+16.+08%2F15+%EC%A7%84%ED%96%89+%EB%82%B4%EC%9A%A9%20http%3A%2F%2Flocalhost%3A4000%2Fvcw16%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fhomebrew1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fvcw16%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
 </section>
 
@@ -471,11 +290,11 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
       
   <nav class="pagination">
     
-      <a href="/algorithm1/" class="pagination--pager" title="[Algorithm] 1. 알고리즘 (Algorithm)과 복잡도 (Complexity)
+      <a href="/vcw15/" class="pagination--pager" title="[vocawik] 15. 08/08 진행 내용
 ">이전</a>
     
     
-      <a href="/css1/" class="pagination--pager" title="[FE] 2. CSS
+      <a href="/vcw17/" class="pagination--pager" title="[vocawik] 17. 08/31 진행 내용
 ">다음</a>
     
   </nav>
@@ -629,7 +448,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/vcw16/" rel="permalink">[vocawik] 16. 08/15 진행 내용
+        <a href="/vcw15/" rel="permalink">[vocawik] 15. 08/08 진행 내용
 </a>
       
     </h2>
@@ -655,7 +474,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 
     <p class="archive__item-excerpt" itemprop="description">
-  vocawik 프로젝트의 #35. feat(domain): 회원가입 유효성 검사 (→ ajax)에 대한 내용입니다.
+  vocawik 프로젝트의 #34. feat(domain): 회원가입 유효성 검사에 대한 내용입니다.
 
 
 </p>

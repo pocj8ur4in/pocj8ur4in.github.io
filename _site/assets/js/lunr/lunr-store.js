@@ -118,4 +118,94 @@ var store = [{
         "tags": ["vocawik"],
         "url": "/vcw4/",
         "teaser": null
+      },{
+        "title": "[vocawik] 5. 07/18 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #14. init: 멀티모듈 infra 모듈 추가 ~ #15. init: domain 이벤트 publisher 및 aop 추가에 대한 내용입니다.    #14. init: 멀티모듈 infra 모듈 추가   현재 api, core, domain의 멀티모듈 구조에 infra 영역에 해당하는 모듈을 추가하기로 하였다. core 모듈에서 실제 구현 기술에 해당하는 부분을 분리시켜 core 모듈에 최대한 논리적인 개념만 남겨 core 모듈로의 과도한 의존성을 줄이고, domain, api 모듈에 중복될 수 있는 구현 기술들을 infra 모듈에서 제공하는 기술로 도메인 혹은 프레젠테이션 영역에 필요한 기능을 개발하도록 하였다.      setting.gradle로 infra 모듈을 빌드하였다.   rootProject.name = 'vw-backend'  // - include : 하위 프로젝트의 디렉토리 이름을 지정해 해당 디렉토리 안에 있는 빌드 스크립트를 실행 include 'vw-api' include 'vw-core' include 'vw-domain' include 'vw-infra' // 추가된 부분      build.gradle에 infra의 의존성을 추가하였다.   dependencies {     ...     implementation project(':vw-domain')     implementation project(':vw-core')     implementation project(':vw-infra') // 추가된 부분 }      domain, api 모듈에서 해당 기술을 사용할 수 있도록 각 모듈에 의존성을 추가하고, core 모듈에 존재하는 논리적인 개념을 사용할 수 있도록 해당 모듈에 core 모듈의 의존성을 추가하였다.   #15. init: domain 이벤트 publisher 및 aop 추가      도메인 이벤트는 바운디드 컨텐스트 간에 정보를 주고받는 수단으로 활용되면서, Aggregate 간 일괄선을 유지하는 데에 사용되는 방법이다. 이를 적용할 수 있도록 먼저 스프링 비동기 처리를 활성화하자.   package vw.domain.common.config;  import org.springframework.context.annotation.Configuration; import org.springframework.scheduling.annotation.AsyncConfigurer; import org.springframework.scheduling.annotation.EnableAsync;  @EnableAsync // 스프링 비동기 처리 활성화 @Configuration // 해당 클래스를 스프링의 설정 클래스로 지정 public class EnableAsyncConfig implements AsyncConfigurer {     // 'AsyncConfigurer' : 비동기 처리에 필요한 구성 요소를 제공 }      ApplicationEventPublisher를 활용해 도메인 이벤트를 발행 및 처리하는 BaseEventPublisher 클래스를 생성하였다.            raise : 도메인 이벤트를 발행       set : 도메인 이벤트를 설정       reset : 도메인 이벤트를 제거           package vw.domain.common.event;  import org.springframework.context.ApplicationEventPublisher;  public class BaseEventPublisher { // ApplicationEventPublisher를 활용하여 도메인 이벤트를 발행 및 처리     private static ThreadLocal&lt;ApplicationEventPublisher&gt; publisherLocal = new ThreadLocal&lt;&gt;();      public static void raise(DomainEvent event) { // 도메인 이벤트를 발행         // 이벤트가 null인 경우에는 종료         if (event == null) return;          // 현재 스레드의 ApplicationEventPublisher를 사용하여 이벤트를 발행         if (publisherLocal.get() != null) {             publisherLocal.get().publishEvent(event);         }     }      public static void set(             ApplicationEventPublisher publisher) { // 현재 스레드의 ApplicationEventPublisher를 설정         publisherLocal.set(publisher);     }      public static void reset() { // 현재 스레드의 ApplicationEventPublisher를 제거         publisherLocal.remove();     } }      ApplicationEventPublisherAware으로 트랜잭션과 관련된 메서드 실행 시 도메인 이벤트 처리하는 BaseEventPublisherAspect 클래스를 생성하였다.   package vw.domain.common.event;  import org.aspectj.lang.ProceedingJoinPoint; import org.aspectj.lang.annotation.Around; import org.aspectj.lang.annotation.Aspect; import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression; import org.springframework.context.ApplicationEventPublisher; import org.springframework.context.ApplicationEventPublisherAware; import org.springframework.stereotype.Component;  @Aspect //  해당 클래스가 AOP의 Aspect 역할을 수행함을 표시 @Component // 해당 클래스를 스프링의 컴포넌트로 등록 @ConditionalOnExpression(         \"${ableDomainEvent:true}\") // 지정된 표현식 ${ableDomainEvent:true}이 true인 경우에만 해당 Aspect가 활성화 public class BaseEventPublisherAspect         implements ApplicationEventPublisherAware { // AOP를 사용해 트랜잭션과 관련된 메서드 실행 시 도메인 이벤트 처리      private ApplicationEventPublisher publisher;     private ThreadLocal&lt;Boolean&gt; threadLocal = new ThreadLocal&lt;&gt;();      @Around(             \"@annotation(org.springframework.transaction.annotation.Transactional)\")                     // @Transactional이 적용된 메서드를 감싸는 Aspect를 정의     public Object handleEvent(ProceedingJoinPoint joinPoint)             throws Throwable { // @Transactional이 적용된 메서드를 감싸는 방식으로 도메인 이벤트를 처리하는 Aspect 클래스          Boolean appliedValue = threadLocal.get();         boolean nested;          if (appliedValue != null &amp;&amp; appliedValue) { // 중첩된 트랙잭션이 있는지 확인             nested = true;         } else {             nested = false;             threadLocal.set(Boolean.TRUE);         }          // 중첩된 트랜잭션에 속하지 않으면, 이벤트 발행을 위한 ApplicationEventPublisher를 설정         if (!nested) BaseEventPublisher.set(publisher);          try {             // 원본 메서드 실행             return joinPoint.proceed();         } finally {             // 중첩된 트랜잭션에 속하지 않은 경우, 설정을 초기화             if (!nested) {                 BaseEventPublisher.reset();                 threadLocal.remove();             }         }     }      @Override     public void setApplicationEventPublisher(ApplicationEventPublisher eventPublisher) {         // Spring으로부터 ApplicationEventPublisher를 주입받아 멤버 변수에 할당         this.publisher = eventPublisher;     } }     추상 클래스 DomainEvent로 이벤트가 발행되었을 때 이벤트 발생 시간을 기록하도록 하였다.   package vw.domain.common.event;  import java.time.LocalDateTime; import lombok.Getter;  @Getter public abstract class DomainEvent {     private final LocalDateTime timestamp; // 이벤트 발생 시간      public DomainEvent() {         this.timestamp = LocalDateTime.now();     } }  ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw5/",
+        "teaser": null
+      },{
+        "title": "[vocawik] 6. 07/19 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #16. init: Exception 및 ErrorCode 추가 ~ #17. init: JPA Auditing 추가에 대한 내용입니다.    #16. init: Exception 및 ErrorCode 추가   #17. init: JPA Auditing 추가   ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw6/",
+        "teaser": null
+      },{
+        "title": "[vocawik] 7. 07/20 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #18. feat(domain): User 도메인 설정에 대한 내용입니다.    #18. feat(domain): User 도메인 설정   ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw7/",
+        "teaser": null
+      },{
+        "title": "[vocawik] 8. 07/21 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #19. feat(domain): BaseDateTime 엔티티 추가 ~ #23. fix(domain): User 도메인 제약조건 추가에 대한 내용입니다.    #19. feat(domain): BaseDateTime 엔티티 추가   #20. feat(infra): feign 적용   #21. feat(infra): redis 적용   #22. fix: IllegalArgumentException at PropertyPlaceholderHelper 해결   #23. fix(domain): User 도메인 제약조건 추가  ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw8/",
+        "teaser": null
+      },{
+        "title": "[vocawik] 9. 07/27 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #24. feat: validation 적용 ~ #28. feat: jjwt 적용 및 설정에 대한 내용입니다.    #24. feat: validation 적용   #25. feat(infra): redisson 적용   #26. test: User 도메인 테스트 코드 추가   #27. chore: ForwardedHeaderFilter 추가   #28. feat: jjwt 적용 및 설정  ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw9/",
+        "teaser": null
+      },{
+        "title": "[vocawik] 10. 07/30 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #29. feat(domain): 일반 회원가입 구현에 대한 내용입니다.    #29. feat(domain): 일반 회원가입 구현  ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw10/",
+        "teaser": null
+      },{
+        "title": "[vocawik] 11. 07/30 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #30. feat(domain): 일반 로그인 구현에 대한 내용입니다.    #30. feat(domain): 일반 로그인 구현  ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw11/",
+        "teaser": null
+      },{
+        "title": "[vocawik] 12. 08/01 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #31. feat(api): home, user controller 구현에 대한 내용입니다.    #31. feat(api): home, user controller 구현  ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw12/",
+        "teaser": null
+      },{
+        "title": "[vocawik] 13. 08/02 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #32. feat(api): search, post controller 구현에 대한 내용입니다.    #32. feat(api): search, post controller 구현  ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw13/",
+        "teaser": null
+      },{
+        "title": "[vocawik] 14. 08/05 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #33. feat(api/search): searchFilter 추가에 대한 내용입니다.    #33. feat(api/search): searchFilter 추가  ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw14/",
+        "teaser": null
+      },{
+        "title": "[vocawik] 15. 08/08 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #34. feat(domain): 회원가입 유효성 검사에 대한 내용입니다.    #34. feat(domain): 회원가입 유효성 검사  ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw15/",
+        "teaser": null
+      },{
+        "title": "[vocawik] 16. 08/15 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #35. feat(domain): 회원가입 유효성 검사 (→ ajax)에 대한 내용입니다.    #35. feat(domain): 회원가입 유효성 검사 (→ ajax)  ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw16/",
+        "teaser": null
+      },{
+        "title": "[vocawik] 17. 08/31 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #36. feat(domain): 일반 회원가입 이메일 인증 구현에 대한 내용입니다.    #36. feat(domain): 일반 회원가입 이메일 인증 구현  ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw17/",
+        "teaser": null
+      },{
+        "title": "[vocawik] 18. 09/26 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #37. feat(domain): ArtistDomain, SongDomain, VocalistDomain 설정에 대한 내용입니다.    #37. feat(domain): ArtistDomain, SongDomain, VocalistDomain 설정  ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw18/",
+        "teaser": null
+      },{
+        "title": "[vocawik] 19. 10/14 진행 내용",
+        "excerpt":"   vocawik 프로젝트의 #38. fix(domain): SongDomain, ArtistDomain 수정에 대한 내용입니다.    #38. fix(domain): SongDomain, ArtistDomain 수정  ","categories": [],
+        "tags": ["vocawik"],
+        "url": "/vcw19/",
+        "teaser": null
       }]
