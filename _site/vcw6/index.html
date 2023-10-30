@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[vocawik] 6. 07/19 진행 내용 - pocj8ur4in’s blog</title>
-<meta name="description" content="vocawik 프로젝트의 #16. init: Exception 및 ErrorCode 추가 ~ #17. init: JPA Auditing 추가에 대한 내용입니다.">
+<!-- begin _includes/seo.html --><title>[vocawik] 6. 07/19, 07/20 진행 내용 - pocj8ur4in’s blog</title>
+<meta name="description" content="vocawik 프로젝트의 #16. init: Exception 및 ErrorCode 추가 ~ #18. feat(domain): User 도메인 설정에 대한 내용입니다.">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[vocawik] 6. 07/19 진행 내용">
+<meta property="og:title" content="[vocawik] 6. 07/19, 07/20 진행 내용">
 <meta property="og:url" content="http://localhost:4000/vcw6/">
 
 
-  <meta property="og:description" content="vocawik 프로젝트의 #16. init: Exception 및 ErrorCode 추가 ~ #17. init: JPA Auditing 추가에 대한 내용입니다.">
+  <meta property="og:description" content="vocawik 프로젝트의 #16. init: Exception 및 ErrorCode 추가 ~ #18. feat(domain): User 도메인 설정에 대한 내용입니다.">
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-  <meta property="article:modified_time" content="2023-07-19T00:00:00+09:00">
+  <meta property="article:modified_time" content="2023-07-20T00:00:00+09:00">
 
 
 
@@ -166,7 +166,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">[vocawik] 6. 07/19 진행 내용</li>
+        <li class="current">[vocawik] 6. 07/19, 07/20 진행 내용</li>
       
     
   </ol>
@@ -180,16 +180,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[vocawik] 6. 07/19 진행 내용">
-    <meta itemprop="description" content="  vocawik 프로젝트의 #16. init: Exception 및 ErrorCode 추가 ~ #17. init: JPA Auditing 추가에 대한 내용입니다.">
+    <meta itemprop="headline" content="[vocawik] 6. 07/19, 07/20 진행 내용">
+    <meta itemprop="description" content="  vocawik 프로젝트의 #16. init: Exception 및 ErrorCode 추가 ~ #18. feat(domain): User 도메인 설정에 대한 내용입니다.">
     <meta itemprop="datePublished" content="2023-07-19T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2023-07-19T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2023-07-20T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/vcw6/" class="u-url" itemprop="url">[vocawik] 6. 07/19 진행 내용
+            <a href="http://localhost:4000/vcw6/" class="u-url" itemprop="url">[vocawik] 6. 07/19, 07/20 진행 내용
 </a>
           </h1>
           
@@ -206,7 +206,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          4 분 소요
         
       </span>
     
@@ -221,16 +221,43 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#16-init-exception-및-errorcode-추가">#16. init: Exception 및 ErrorCode 추가</a></li><li><a href="#17-init-jpa-auditing-추가">#17. init: JPA Auditing 추가</a></li></ul>
+              <ul class="toc__menu"><li><a href="#16-init-exception-및-errorcode-추가">#16. init: Exception 및 ErrorCode 추가</a></li><li><a href="#17-init-jpa-auditing-추가">#17. init: JPA Auditing 추가</a></li><li><a href="#18-featdomain-user-도메인-설정">#18. feat(domain): User 도메인 설정</a></li></ul>
 
             </nav>
           </aside>
         
         <blockquote>
-  <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #16. init: Exception 및 ErrorCode 추가 ~ #17. init: JPA Auditing 추가에 대한 내용입니다.</p>
+  <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #16. init: Exception 및 ErrorCode 추가 ~ #18. feat(domain): User 도메인 설정에 대한 내용입니다.</p>
 </blockquote>
 
 <h2 id="16-init-exception-및-errorcode-추가"><a href="https://github.com/pocj8ur4in/vw-backend/commit/d877198b2b27cc6e48c30c2ac77a524d0d8a56ed">#16</a>. init: Exception 및 ErrorCode 추가</h2>
+<p>만약 사용자가 잘못된 방식이나 접근을 하였을 때, 서버에서는 이에 대한 예외 처리를 할 것이다. 하지만 표준으로 명시된 예외 처리 메시지를 띄우는 것은 사용자 친화적인 방식이 아닐 뿐더러, 우리 서비스의 취약점을 노출시킬 수 있다. 예를 들어 사용자가 회원가입을 할 때 서버 내에 중복된 아이디를 제출하였다고 가정하자. 그렇다면 JDBC API는 SQLException을 발생시킬 것인데, 이를 그대로 사용자에게 전달한다면 예외 발생만 알 수 있을 뿐, 왜 발생했는지 알 수 없는 상황이 발생한다. 그러므로 예외 (Exception) 및 이에 대한 에러 코드 (ErrorCode)를 커스텀마이징할 필요성이 있다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public void register() throws SQLException {
+    ...
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">BaseCodeException</code>는 런타임 오류를 처리하는 RuntimeException를 상속해 어떤 클래스가 실행 중일 때 발생할 수 있는 Exception를 처리할 클래스이다. 만약 어떤 예외가 발생한다면 이에 대한 원인 (baseErrorCode의 ErrorReason)을 반환한다 (getErrorReason).</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.core.exception;
+
+import vw.core.dto.BaseErrorReason;
+
+public class BaseCodeException extends RuntimeException { // 실행 시 발생하는 예외를 나타냄 (RuntimeException 상속)
+    private BaseErrorCode baseErrorCode; // 예외 발생 시에 해당 예외의 원인을 BaseErrorCode 객체에 저장
+
+    public BaseErrorReason getErrorReason() { // 해당 예외의 원인을 반환
+        return this.baseErrorCode.getErrorReason();
+    }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>이를 위해 오류의 원인을 나타내는 DTO 클래스 <code class="language-plaintext highlighter-rouge">BaseErrorReason</code>를 작성하였다. 앞으로는 <code class="language-plaintext highlighter-rouge">public enum GlobalErrorCode implements BaseErrorReason { ... }</code>와 같이 <code class="language-plaintext highlighter-rouge">BaseErrorReason</code>를 주입받아 오류의 원인을 커스텀마이징할 것이다.</li>
+</ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.core.dto;
 
@@ -245,6 +272,26 @@ public class BaseErrorReason { // 오류의 원인을 나타내는 DTO
     private final String reason; // 오류의 원인
 }
 </code></pre></div></div>
+
+<ul>
+  <li>에러의 원인을 반환할 인터페이스인 <code class="language-plaintext highlighter-rouge">BaseErrorCode</code>를 작성하였다. 추가로 예외에 대한 설명을 문자열 형태로도 반환할 수 있게끔 <code class="language-plaintext highlighter-rouge">getExplainError()</code>를 작성하였는데, 이는 다음에 설명할 부분인 <code class="language-plaintext highlighter-rouge">ExplainError</code>라는 커스텀 어노테이션을 생성하는 것과 이어져 그때 한번에 설명하겠다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.core.exception;
+
+import vw.core.dto.BaseErrorReason;
+
+public interface BaseErrorCode {
+    public BaseErrorReason getErrorReason(); // 에러의 원인을 반환
+
+    String getExplainError() throws NoSuchFieldException; // 예외에 대한 설명을 문자열로 반환
+    // NoSuchFieldException : Reflection을 사용하여 Field를 접근하려고 할 때, 해당 필드가 존재하지 않는 경우에 발생
+}
+</code></pre></div></div>
+
+<ul>
+  <li>오류에 대한 응답을 나타내는 DTO 클래스 <code class="language-plaintext highlighter-rouge">BaseErrorResponse</code>를 작성하였다. 근데 사실 이를 활용해서 프론트에 응답을 하는 게 맞는데, 이에 대한 생각이 못해버려 <code class="language-plaintext highlighter-rouge">BaseErrorReason</code>으로만 처리하는 방식으로 다 구현해놓았다. 지금 다시 생각해보면 <code class="language-plaintext highlighter-rouge">BaseErrorReason</code> 객체와 오류가 발생한 시간 및 경로를 포함하는 <code class="language-plaintext highlighter-rouge">BaseErrorResponse</code>를 활용하는 게 맞고, 이를 처리할 핸들러 클래스르 나중에 변경해두어야 겠다…</li>
+</ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.core.dto;
 
@@ -279,32 +326,13 @@ public class BaseErrorResponse { // 오류에 대한 응답을 나타내는 DTO
 }
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.core.exception;
-
-import vw.core.dto.BaseErrorReason;
-
-public class BaseCodeException extends RuntimeException { // 실행 시 발생하는 예외를 나타냄 (RuntimeException 상속)
-    private BaseErrorCode baseErrorCode; // 예외 발생 시에 해당 예외의 원인을 BaseErrorCode 객체에 저장
-
-    public BaseErrorReason getErrorReason() { // 해당 예외의 원인을 반환
-        return this.baseErrorCode.getErrorReason();
-    }
-}
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.core.exception;
-
-import vw.core.dto.BaseErrorReason;
-
-public interface BaseErrorCode {
-    public BaseErrorReason getErrorReason(); // 에러의 원인을 반환
-
-    String getExplainError() throws NoSuchFieldException; // 예외에 대한 설명을 문자열로 반환
-    // NoSuchFieldException : Reflection을 사용하여 Field를 접근하려고 할 때, 해당 필드가 존재하지 않는 경우에 발생
-}
-</code></pre></div></div>
-
 <h2 id="17-init-jpa-auditing-추가"><a href="https://github.com/pocj8ur4in/vw-backend/commit/b21e88c86f0b54352a94d629125f544464b54537">#17</a>. init: JPA Auditing 추가</h2>
+
+<p>JPA를 사용하여 도메인을 관계형 데이터베이스 테이블에 매핑하다 보면, 도메인들이 공통으로 가지는 필드 및 칼럼들 (ex. 생성자, 수정자, 생성일자, 수정일자, 식별자 등)이 존재한다. 특히 생성자, 수정자, 생성일자, 수정일자는 우리가 DB에 create나 update할 때마다 시간 데이터를 넣어주어야 하는데 이에 대한 코드를 따로 작성할 필요 없이 자동으로 사람이나 시간을 매핑하여 데이터베이스의 테이블에 넣어주는 기능이 바로 JPA Auditing이다.</p>
+
+<ul>
+  <li>사실 <code class="language-plaintext highlighter-rouge">spring-boot-starter-data-jpa</code>만 추가해도 Auditing에는 문제는 없다. 정확히 말하면 <code class="language-plaintext highlighter-rouge">@CreatedDateTime</code>, <code class="language-plaintext highlighter-rouge">@LastModifiedDateTime</code> 어노테이션만 추가하면 된다. 그렇지만 <code class="language-plaintext highlighter-rouge">@CreatedBy</code>, <code class="language-plaintext highlighter-rouge">LastModifiedBy</code>와 같이 생성자, 수정자를 저장하려면 <code class="language-plaintext highlighter-rouge">AuditorAware</code>를 스프링 빈으로 등록해야 된다. 이를 위해 JPA를 설정하는 데 활용할 클래스인 <code class="language-plaintext highlighter-rouge">JpaConfig</code>를 미리 만들어두자.</li>
+</ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.domain.common.config;
 
@@ -319,13 +347,97 @@ import vw.domain.DomainPackageLocation;
 @EntityScan(basePackageClasses = DomainPackageLocation.class) // // Entity 스캔을 위한 기본 패키지 위치를 설정
 @EnableJpaRepositories(
         basePackageClasses = DomainPackageLocation.class) // JPA 저장소를 활성화하기 위한 기본 패키지 위치를 설정
-public class JpaConfig { // JPA Auditing 활성화
+public class JpaConfig { // JPA 설정
+    // JPA Auditing 활성화
 }
 </code></pre></div></div>
+
+<ul>
+  <li>추가로 JPA 저장소를 활성화하기 위해 <code class="language-plaintext highlighter-rouge">DomainPackageLocation</code> 클래스를 엔티티를 스캔할 위치에 작성하였다.</li>
+</ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.domain;
 
 public class DomainPackageLocation {}
+</code></pre></div></div>
+
+<h2 id="18-featdomain-user-도메인-설정"><a href="https://github.com/pocj8ur4in/vw-backend/commit/bb68e72e418610d6edb4b13449c3cf90973a2cb1">#18</a>. feat(domain): User 도메인 설정</h2>
+
+<p>회원에 관련된 정보를 저장하고 이를 활용한 서비스를 구현하기 위한 회원 (User) 도메인을 구현하였다. 회원 도메인에서는 회원가입, 회원정보 조회/수정, 회원탈퇴, 로그인 등의 기능을 구현할 것이고, 이를 위해 먼저 회원 엔티티와 회원 레포지토리를 설계하였다.</p>
+
+<ul>
+  <li>엔티티 클래스는 각 엔티티에 대한 식별자 및 여러 개의 칼럼들을 기본으로 갖되, 하나의 객체로 묶을 수 있으면 임베디드 타입 (<code class="language-plaintext highlighter-rouge">@Embedded</code>, <code class="language-plaintext highlighter-rouge">@Embeddable</code>) 혹은 Enum 타입을 활용할 것이고, 회원 엔티티 클래스 <code class="language-plaintext highlighter-rouge">User</code>는 이에 기반해 작성되었다. 그리고 Builder 패턴을 통해 각 객체를 생성 가능하게 하여 필요한 데이터를 동적으로 설정할 수 있게 하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.domain.user.entity;
+
+import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@Getter
+@Entity
+@Table(name = "tbl_user")
+@Slf4j
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class User { // 회원 엔티티
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_index")
+    private int index; // 회원 식별자
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "user_userType")
+    private UserType userType = UserType.TYPE_NORMAL; // 회원 유형 정보
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "user_userState")
+    private UserState userState = UserState.STATE_NORMAL; // 회원 상태 정보
+
+    @Embedded private UserAuth userAuth; // 회원 인증 정보
+
+    @Embedded private UserProfile userProfile; // 회원 프로필 정보
+
+    @Embedded private UserToogle userToogle; // 회원 토글 정보
+
+    @Builder
+    public User(
+            UserAuth userAuth,
+            UserProfile userProfile,
+            UserToogle userToogle) { // Builder 패턴으로 User 객체를 생성 가능하게 함
+        this.userAuth = userAuth;
+        this.userProfile = userProfile;
+        this.userToogle = userToogle;
+    }
+}
+
+</code></pre></div></div>
+
+<ul>
+  <li>그리고 <code class="language-plaintext highlighter-rouge">User</code> 엔티티 객체들을 관리할 레포지토리 클래스로 <code class="language-plaintext highlighter-rouge">UserRepository</code>을 작성하였다. 인터페이스를 생성한 후 <code class="language-plaintext highlighter-rouge">JpaRepository&lt;Entity 클래스, PK 타입&gt;</code>을 상속시키면 된다. 또한 <code class="language-plaintext highlighter-rouge">@EnableJpaRepositories</code>으로 JPA Repository 빈을 활성화해 JPA CRUD를 활용할 수 있게끔 하고 JPA를 사용하기 위한 설정을 자동으로 처리할 수 있게 하였다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.domain.user.repository;
+
+import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import vw.domain.user.entity.User;
+
+@EnableJpaRepositories
+public interface UserRepository extends JpaRepository&lt;User, Long&gt; { // 회원 레포지토리
+	Optional&lt;User&gt; findUserByUserAuth_Id(String id); // 아이디로 회원을 조회
+
+	Boolean existsUserByUserAuth_Id(String id); // 아이디로 회원 존재 여부를 조회
+
+	Boolean existsUserByUserProfile_Nickname(String nickname); // 닉네임으로 회원 존재 여부를 조회
+
+	Boolean existsUserByUserProfile_Email(String email); // 이메일로 회원 존재 여부를 조회
+}
+
 </code></pre></div></div>
 
         
@@ -353,7 +465,7 @@ public class DomainPackageLocation {}
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-07-19">July 19, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-07-20">July 20, 2023</time></p>
 
       </footer>
       
@@ -376,7 +488,7 @@ public class DomainPackageLocation {}
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5Bvocawik%5D+6.+07%2F19+%EC%A7%84%ED%96%89+%EB%82%B4%EC%9A%A9%20http%3A%2F%2Flocalhost%3A4000%2Fvcw6%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5Bvocawik%5D+6.+07%2F19%2C+07%2F20+%EC%A7%84%ED%96%89+%EB%82%B4%EC%9A%A9%20http%3A%2F%2Flocalhost%3A4000%2Fvcw6%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fvcw6%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
@@ -390,8 +502,7 @@ public class DomainPackageLocation {}
 ">이전</a>
     
     
-      <a href="/vcw7/" class="pagination--pager" title="[vocawik] 7. 07/20 진행 내용
-">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -415,7 +526,7 @@ public class DomainPackageLocation {}
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/vcw19/" rel="permalink">[vocawik] 19. 10/14 진행 내용
+        <a href="/vcw5/" rel="permalink">[vocawik] 5. 07/18 진행 내용
 </a>
       
     </h2>
@@ -433,7 +544,7 @@ public class DomainPackageLocation {}
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          2 분 소요
         
       </span>
     
@@ -441,7 +552,7 @@ public class DomainPackageLocation {}
 
 
     <p class="archive__item-excerpt" itemprop="description">
-  vocawik 프로젝트의 #38. fix(domain): SongDomain, ArtistDomain 수정에 대한 내용입니다.
+  vocawik 프로젝트의 #14. init: 멀티모듈 infra 모듈 추가 ~ #15. init: domain 이벤트 publisher 및 aop 추가에 대한 내용입니다.
 
 
 </p>
@@ -458,7 +569,7 @@ public class DomainPackageLocation {}
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/vcw18/" rel="permalink">[vocawik] 18. 09/26 진행 내용
+        <a href="/vcw4/" rel="permalink">[vocawik] 4. 07/13, 07/17 진행 내용
 </a>
       
     </h2>
@@ -476,7 +587,7 @@ public class DomainPackageLocation {}
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          4 분 소요
         
       </span>
     
@@ -484,7 +595,7 @@ public class DomainPackageLocation {}
 
 
     <p class="archive__item-excerpt" itemprop="description">
-  vocawik 프로젝트의 #37. feat(domain): ArtistDomain, SongDomain, VocalistDomain 설정에 대한 내용입니다.
+  vocawik 프로젝트의 #11. init: Thymeleaf 적용 ~ #13. init: lombok.config 파일 추가에 대한 내용입니다.
 
 
 </p>
@@ -501,7 +612,7 @@ public class DomainPackageLocation {}
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/vcw17/" rel="permalink">[vocawik] 17. 08/31 진행 내용
+        <a href="/vcw3/" rel="permalink">[vocawik] 3. 07/12 진행 내용
 </a>
       
     </h2>
@@ -519,7 +630,7 @@ public class DomainPackageLocation {}
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          8 분 소요
         
       </span>
     
@@ -527,7 +638,7 @@ public class DomainPackageLocation {}
 
 
     <p class="archive__item-excerpt" itemprop="description">
-  vocawik 프로젝트의 #36. feat(domain): 일반 회원가입 이메일 인증 구현에 대한 내용입니다.
+  vocawik 프로젝트의 #9. init: Swagger3 적용 ~ #10. init: Github Actions를 통한 CI/CD 파이프라인 자동화에 대한 내용입니다.
 
 
 </p>
@@ -544,7 +655,7 @@ public class DomainPackageLocation {}
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/vcw16/" rel="permalink">[vocawik] 16. 08/15 진행 내용
+        <a href="/vcw2/" rel="permalink">[vocawik] 2. 07/11 진행 내용
 </a>
       
     </h2>
@@ -562,7 +673,7 @@ public class DomainPackageLocation {}
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          4 분 소요
         
       </span>
     
@@ -570,7 +681,7 @@ public class DomainPackageLocation {}
 
 
     <p class="archive__item-excerpt" itemprop="description">
-  vocawik 프로젝트의 #35. feat(domain): 회원가입 유효성 검사 (→ ajax)에 대한 내용입니다.
+  vocawik 프로젝트의 #4. init: spotless 적용 ~ #8. init: sonarqube 적용에 대한 내용입니다.
 
 
 </p>
