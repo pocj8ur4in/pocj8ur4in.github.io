@@ -30,7 +30,7 @@
 </url>
 <url>
 <loc>http://localhost:4000/docker1/</loc>
-<lastmod>2022-11-11T00:00:00+09:00</lastmod>
+<lastmod>2023-12-11T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/spring1/</loc>
@@ -91,6 +91,10 @@
 <url>
 <loc>http://localhost:4000/vcw7/</loc>
 <lastmod>2023-07-21T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/docker2/</loc>
+<lastmod>2023-12-05T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>

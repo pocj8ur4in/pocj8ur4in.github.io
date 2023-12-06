@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[DevOps] 1. 깃 (Git) - pocj8ur4in’s blog</title>
+<!-- begin _includes/seo.html --><title>[Git] 1. Git 개념 및 명령어 정리 - pocj8ur4in’s blog</title>
 <meta name="description" content="버전 관리 (Version Control) : 특정한 시간 기준으로 파일 변화를 저장하고 관리">
 
 
@@ -22,7 +22,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[DevOps] 1. 깃 (Git)">
+<meta property="og:title" content="[Git] 1. Git 개념 및 명령어 정리">
 <meta property="og:url" content="http://localhost:4000/git1/">
 
 
@@ -166,7 +166,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">[DevOps] 1. 깃 (Git)</li>
+        <li class="current">[Git] 1. Git 개념 및 명령어 정리</li>
       
     
   </ol>
@@ -180,7 +180,7 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[DevOps] 1. 깃 (Git)">
+    <meta itemprop="headline" content="[Git] 1. Git 개념 및 명령어 정리">
     <meta itemprop="description" content="버전 관리 (Version Control) : 특정한 시간 기준으로 파일 변화를 저장하고 관리">
     <meta itemprop="datePublished" content="2022-10-06T00:00:00+09:00">
     <meta itemprop="dateModified" content="2022-11-16T00:00:00+09:00">
@@ -189,7 +189,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/git1/" class="u-url" itemprop="url">[DevOps] 1. 깃 (Git)
+            <a href="http://localhost:4000/git1/" class="u-url" itemprop="url">[Git] 1. Git 개념 및 명령어 정리
 </a>
           </h1>
           
@@ -425,7 +425,7 @@ Initialized empty Git repository in ...
 <ul>
   <li><code class="language-plaintext highlighter-rouge">git status</code> :  깃의 현재 상태 확인
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">untracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있지 않습니다. (파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">false</code>)</li>
+      <li><code class="language-plaintext highlighter-rouge">untracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하지 않습니다. (파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">false</code>)</li>
       <li><code class="language-plaintext highlighter-rouge">tracked</code> 상태 : 현재 깃이 해당 파일의 수정 여부를 추적하고 있습니다. (파일이 스테이지에서 대기 : <code class="language-plaintext highlighter-rouge">true</code>)
         <ul>
           <li><code class="language-plaintext highlighter-rouge">unmodified</code> 상태 : 깃에 현재 버전이 저장된 이후 파일이 수정되지 않았습니다.
@@ -505,7 +505,7 @@ untracked files   // untracked 상태 : 아직 버전 관리하지 않은 파일
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#devops" class="page__taxonomy-item p-category" rel="tag">DevOps</a>
+      <a href="/tags/#git" class="page__taxonomy-item p-category" rel="tag">Git</a>
     
     </span>
   </p>
@@ -538,7 +538,7 @@ untracked files   // untracked 상태 : 아직 버전 관리하지 않은 파일
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BDevOps%5D+1.+%EA%B9%83+%28Git%29%20http%3A%2F%2Flocalhost%3A4000%2Fgit1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BGit%5D+1.+Git+%EA%B0%9C%EB%85%90+%EB%B0%8F+%EB%AA%85%EB%A0%B9%EC%96%B4+%EC%A0%95%EB%A6%AC%20http%3A%2F%2Flocalhost%3A4000%2Fgit1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgit1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
@@ -567,6 +567,47 @@ untracked files   // untracked 상태 : 아직 버전 관리하지 않은 파일
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/docker2/" rel="permalink">[Docker] 2. Docker란?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">도커 (Docker) : 컨테이너 기반 가상화 (Container-based Virtualization)
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -690,49 +731,6 @@ untracked files   // untracked 상태 : 아직 버전 관리하지 않은 파일
 
     <p class="archive__item-excerpt" itemprop="description">
   vocawik 프로젝트의 #14. init: 멀티모듈 infra 모듈 추가 ~ #15. init: domain 이벤트 publisher 및 aop 추가에 대한 내용입니다.
-
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/vcw4/" rel="permalink">[vocawik] 4. 07/13, 07/17 진행 내용
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  vocawik 프로젝트의 #11. init: Thymeleaf 적용 ~ #13. init: lombok.config 파일 추가에 대한 내용입니다.
 
 
 </p>

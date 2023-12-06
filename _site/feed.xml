@@ -1,4 +1,283 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-10-30T16:20:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[vocawik] 7. 07/21 진행 내용</title><link href="http://localhost:4000/vcw7/" rel="alternate" type="text/html" title="[vocawik] 7. 07/21 진행 내용" /><published>2023-07-21T00:00:00+09:00</published><updated>2023-07-21T00:00:00+09:00</updated><id>http://localhost:4000/vcw7</id><content type="html" xml:base="http://localhost:4000/vcw7/"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-07T00:36:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Docker] 2. Docker란?</title><link href="http://localhost:4000/docker2/" rel="alternate" type="text/html" title="[Docker] 2. Docker란?" /><published>2023-12-05T00:00:00+09:00</published><updated>2023-12-05T00:00:00+09:00</updated><id>http://localhost:4000/docker2</id><content type="html" xml:base="http://localhost:4000/docker2/"><![CDATA[<h2 id="도커-docker--컨테이너-기반-가상화-container-based-virtualization">도커 (<code class="language-plaintext highlighter-rouge">Docker</code>) : 컨테이너 기반 가상화 (<code class="language-plaintext highlighter-rouge">Container-based Virtualization</code>)</h2>
+
+<p><img src="https://pyrasis.com/assets/images/Docker-HOWTO/docker-containerized-appliction-blue-border_2.png.webp" width="50%" /></p>
+
+<h3 id="q-도커를-쓰는-이유--비교적-효율적인-가상화-방식--통일된-개발-환경--배포의-동시성">Q. 도커를 쓰는 이유? : 비교적 효율적인 가상화 방식 + 통일된 개발 환경 + 배포의 동시성</h3>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">Virtualization</code> : 응용 프로그램 실행 시 운영체제 수준 가상화 방식이 성능 손실이 더 적고 빠르게 동작한다.</li>
+  <li><code class="language-plaintext highlighter-rouge">Development</code> : 운영체제에 상관없이 같은 환경에서 개발할 수 있게 해준다.</li>
+  <li><code class="language-plaintext highlighter-rouge">Deployment</code> : 서비스 환경과 응용 프로그램을 같이 배포할 수 있게 한다.</li>
+</ol>
+
+<blockquote>
+  <ul>
+    <li>분산 어플리케이션을 클라우드 환경으로 이주한다고 가정하면,
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">IaaS</code> : 서비스로서의 인프라
+          <ul>
+            <li>어플리케이션을 구성하는 각 컴포넌트가 모두 가상 머신에서 독립적으로 동작</li>
+            <li>이주 과정은 쉽지만, 가상 머신의 성능을 모두 활용하지 못하며 운영비가 비쌈</li>
+          </ul>
+        </li>
+        <li><code class="language-plaintext highlighter-rouge">PaaS</code> : 서비스로서의 플랫폼
+          <ul>
+            <li>어플리케이션을 구성하는 각 컴포넌트가 클라우드 서비스 제공자의 매니지드 서비스에 종속</li>
+            <li>운영비가 저렴하고 관리가 쉬우나, 이주 과정이 복잡함</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>… 도커를 활용한다면? : 각 컴포넌트를 컨테이너로 이주하고, 쿠버네티스 등으로 전체 어플리케이션 관리 가능</p>
+</blockquote>
+
+<ul>
+  <li><a href="https://www.docker.com">공식 홈페이지</a>에서 <code class="language-plaintext highlighter-rouge">.dmg</code> 파일을 다운로드 후 설치</li>
+  <li>터미널 창에 다음 명령어를 입력해 도커가 정상적으로 설치되었는지 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker version // 현재 도커의 버전 확인
+
+Client:
+ Cloud integration: ~
+ Version:           ~
+ API version:       ~
+ Go version:        ~
+
+Server: ~
+ Engine:
+  Version:          ~
+  API version:      ~
+  Go version:       ~
+</code></pre></div></div>
+<blockquote>
+  <p>Q. 클라이언트와 서버의 버전 정보가 따로 구성되어 있는 이유?</p>
+  <ul>
+    <li>도커가 클라이언트와 서버의 역할을 각각 수행할 수 있음
+      <ul>
+        <li>리눅스 터미널에 도커 명령어를 입력하면 도커 클라이언트가 도커 서버로 명령을 전송하고 결과를 출력</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h2 id="도커-파일-dockerfile--서버-운영-기록을-코드화해-저장한-파일을-해당-시점의-도커-이미지로-빌드">도커 파일 (<code class="language-plaintext highlighter-rouge">Dockerfile</code>) : 서버 운영 기록을 코드화해 저장한 파일을 해당 시점의 도커 이미지로 빌드</h2>
+
+<blockquote>
+  <p>눈송이 서버 (<code class="language-plaintext highlighter-rouge">Snowflakes Server</code>) : 각 서버마다 운영 기록이 달라 서로 모양이 다른 서버들이 공존하는 상황</p>
+  <ul>
+    <li>서버 간의 운영체제, 컴파일러, 설치된 패키지 등의 차이로 발생하는 문제 개선을 위해 서버 운영 기록 저장</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">DSL</code> (<code class="language-plaintext highlighter-rouge">Domain-Specific Language</code>) : 도커 파일을 작성할 때 쓰는 언어 (도커 이미지의 생성 과정 표현)</li>
+</ul>
+
+<h3 id="q-도커-파일을-쓰는-이유--테스트-주도-개발의-순환에-부합한다">Q. 도커 파일을 쓰는 이유? : 테스트 주도 개발의 순환에 부합한다.</h3>
+<ul>
+  <li>테스트 주도 개발 (<code class="language-plaintext highlighter-rouge">Test Driven Development</code>) : 선 테스트 후 개발 사이클을 반복하는 개발 방법론</li>
+</ul>
+
+<div style="color: white; padding: 2% 1% 1% 1%; background-color: black;">
+<ol>
+  <li>테스트를 작성한다. → 도커 파일을 만든다.</li>
+  <li>테스트에 실패하고 코드를 수정한다. → 도커 이미지의 빌드에 실패하고 도커 파일을 수정한다.</li>
+  <li>테스트에 성공한다면, 코드를 리펙터링한다. → 도커 이미지의 빌드에 성공한다면, 도커 파일의 내용을 리펙터링한다.</li>
+  <li>처음으로 되돌아간다.</li>
+</ol>
+</div>
+
+<h2 id="도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보을-포함">도커 이미지 (<code class="language-plaintext highlighter-rouge">Docker Image</code>) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보을 포함</h2>
+<ul>
+  <li>상태값을 가지지 않음 (변하지 않는 값들을 저장) ↔ 컨테이너 : 이미지가 실행된 살태 (변하는 값들을 저장)</li>
+  <li>이미지 레이어 : 도커 이미지는 여러 <code class="language-plaintext highlighter-rouge">Read-Only</code> 레이어로 구성되고, 파일 추가 및 생성 시 새로운 레이어 생성
+    <ul>
+      <li>유니온 파일 시스템 (<code class="language-plaintext highlighter-rouge">Union File Systems</code>)읕 통해 여러 개의 레이어를 하나의 파일 시스템으로 활용</li>
+    </ul>
+  </li>
+  <li>컨테이너 레이어 : 컨테이너가 실행되면 이미지 레이어 위에 읽기/쓰기 (<code class="language-plaintext highlighter-rouge">Read-Write</code>) 레이어를 추가
+    <ul>
+      <li>컨테이너를 실행하면서 생성되거나 변경된 내용을 저장</li>
+    </ul>
+  </li>
+  <li>이미지 경로 : <code class="language-plaintext highlighter-rouge">URL</code> 방식으로 관리 -&gt; 뒤에 태그 (<code class="language-plaintext highlighter-rouge">/tag</code>)를 붙임</li>
+  <li><a href="https://hub.docker.com"> 도커 허브</a> (<code class="language-plaintext highlighter-rouge">Docker Hub</code>) : 도커 이미지를 서버에 무료로 공개하고 관리</li>
+</ul>
+
+<h3 id="q-도커-이미지를-쓰는-이유--도커-이미지와-도커-컨테이너들을-클래스나-인스턴스처럼-활용한다">Q. 도커 이미지를 쓰는 이유? : 도커 이미지와 도커 컨테이너들을 클래스나 인스턴스처럼 활용한다.</h3>
+<ul>
+  <li>도커는 해시 값 (= 컨테이너 ID)과 임의의 이름 (= 컨테이너 이름)를 통해 컨테이너를 구분하고 이들을 환경변수로 관리</li>
+</ul>
+
+<div style="color: white; padding: 3% 2% 2% 2%; background-color: black;">
+운영자가 지금까지 운영한 서버를 도커 이미지로 배포하고 도커 컨테이너에 설치한다면,
+<ul>
+  <li>도커 파일 : 지금까지 서버를 운영한 기록</li>
+  <li>도커 이미지 (도커 파일 + 실행 시점) : 지금부터 설치된 서버가 가질 초기값</li>
+  <li>도커 컨테이너 (도커 파일 + 환경 변수) : 지금부터 설치된 서버가 운영될 장소</li>
+</ul>
+</div>
+<ul>
+  <li>도커 안에서는 서버 역시 하나의 소프트웨어처럼 사용할 수 있고, 생성할 수 있는 컨테이너의 개수에도 제한이 없다.</li>
+</ul>
+
+<h2 id="도커-명령어-docker-command--docker-command-형식으로-구성">도커 명령어 (<code class="language-plaintext highlighter-rouge">Docker Command</code>) : <code class="language-plaintext highlighter-rouge">docker &lt;command&gt;</code> 형식으로 구성</h2>
+<ul>
+  <li>리눅스 터미널에 도커 명령어를 입력하면 도커 서버에서 이에 해당되는 작업 수행</li>
+  <li>항상 <code class="language-plaintext highlighter-rouge">root</code> 권한으로 실행되기에 <code class="language-plaintext highlighter-rouge">$ sudo</code>를 앞에 붙어야 함</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo usermod -aG docker $USER # 현재 사용자를 docker 그룹에 추가
+</code></pre></div></div>
+
+<div style="text-align: center;">
+    <table>
+        <thead>
+            <tr>
+                <td>docker 명령어</td>
+                <td>명령어 형식</td>
+                <td>명령어 설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>docker search</td>
+                <td>$ docker search [이미지]</td>
+                <td>도커 허브에서 이미지 검색</td>
+            </tr>
+            <tr>
+                <td>docker pull</td>
+                <td>$ docker pull [사용자명/] 이미지 [:태그]</td>
+                <td>도커 허브에서 이미지 다운로드<br />사용자명을 지정해 도커 허브에서 해당 사용자가 올린 이미지을 다운로드<br />태그로 버전을 지정해 다운로드 (latest : 최신 버전)</td>
+            </tr>
+            <tr>
+                <td>docker images</td>
+                <td>$ docker images</td>
+                <td>사용 가능한 모든 이미지 목록 확인</td>
+            </tr>
+            <tr>
+                <td>docker rmi</td>
+                <td>$ docker rmi 이미지 [:태그]</td>
+                <td>다운로드한 이미지 삭제<br />태그로 버전을 지정해 다운로드 (latest : 최신 버전)</td>
+            </tr>
+            <tr>
+                <td>docker run</td>
+                <td>$ docker run [옵션] [실행할 이미지]</td>
+                <td>이미지를 컨테이너로 생성한 뒤 컨테이너 실행<br />입력받은 이미지가 현재 없다면, 해당 이미지를 도커 허브에서 다운로드<br />실행할 파일을 지정해 직접 실행 가능 (여기서 빠져나오면 컨테이너가 정지)<br /><div style="text-align: center; font-size: 120%; padding: 2% 0% 0% 0%">
+    <table>
+        <thead>
+            <tr>
+                <td>docker run 옵션</td>
+                <td>옵션 설명</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>-d</td>
+                <td>백그라운드 모드 (detached mode)</td>
+            </tr>
+            <tr>
+                <td>-p [호스트 포트:컨테이너 포트]</td>
+                <td>호스트와 컨테이너의 포트를 연결 (port forwarding)<br />http://호스트 IP:호스트 포트로 컨테이너의 포트 접속</td>
+            </tr>
+            <tr>
+                <td>-v [호스트의 디렉터리]</td>
+                <td>호스트의 디렉터리를 컨테이너의 디렉터리에 연결 (mount)</td>
+            </tr>
+            <tr>
+                <td>-e [환경변수]</td>
+                <td>컨테이너 내에서 사용할 환경변수 설정 (environment variable)</td>
+            </tr>
+            <tr>
+                <td>--name [컨테이너 이름]</td>
+                <td>컨테이너 이름 설정 (container name)</td>
+            </tr>
+            <tr>
+                <td>-rm</td>
+                <td>프로세스 종료 시 컨테이너 자동으로 제거 (remove container)</td>
+            </tr>
+            <tr>
+                <td>-link [컨테이너 이름:주소]</td>
+                <td>컨테이너와 컨테이너 연결 (link container)<br />[주소:포트번호]로 컨테이너에 접속</td>
+            </tr>
+            <tr>
+                <td>-it</td>
+                <td>리눅스 터미널 입력을 위한 옵션 (interactive / Pseudo-tty)</td>
+            </tr>
+         </tbody>
+    </table>
+</div></td>
+            </tr>
+            <tr>
+              <td>docker ps</td>
+              <td>$ docker ps [옵션]</td>
+              <td>실행중인 모든 컨테이너 목록 확인<br />-a 옵션으로 정지된 컨테이너까지 모두 검색</td>
+            </tr>
+            <tr>
+              <td>docker start</td>
+              <td>$ docker start [컨테이너 이름 | 컨테이너 ID]</td>
+              <td>정지된 컨테이너 재시작</td>
+            </tr>
+            <tr>
+              <td>docker stop</td>
+              <td>$ docker exec [컨테이너 이름 | 컨테이너 ID]</td>
+              <td>실행 중인 컨테이너 정지</td>
+            </tr>
+            <tr>
+              <td>docker attach</td>
+              <td>$ docker attach [컨테이너 이름 | 컨테이너 ID]</td>
+              <td>실행 중인 컨테이너에 접속</td>
+            </tr>
+            <tr>
+              <td>docker exec</td>
+              <td>$ docker exec [컨테이너 이름 | 컨테이너 ID]<br />[명령] [매개 변수]</td>
+              <td>컨테이너 외부에서 컨테이너 내의 명령 실행</td>
+            </tr>
+            <tr>
+              <td>docker diff</td>
+              <td>$ docker diff [컨테이너 이름 | 컨테이너 ID]</td>
+              <td>컨테이너가 실행되면서 변경된 파일 목록 확인<br />A : 추가된 파일<br />C : 변경된 파일<br />D : 삭제된 파일</td>
+            </tr>
+            <tr>
+              <td>docker cp</td>
+              <td>$ docker cp [컨테이너 이름 | 컨테이너 ID]<br />[:컨테이너 경로] [호스트 경로]</td>
+              <td>컨테이너의 파일을 호스트의 디렉토리로 복사</td>
+            </tr>
+            <tr>
+              <td>docker attach</td>
+              <td>$ docker attach [컨테이너 이름 | 컨테이너 ID]</td>
+              <td>실행 중인 컨테이너에 접속</td>
+            </tr>
+            <tr>
+              <td>docker rm</td>
+              <td>$ docker exec [컨테이너 이름 | 컨테이너 ID]</td>
+              <td>생성된 컨테이너 삭제</td>
+            </tr>
+            <tr>
+              <td>docker commit</td>
+              <td>$ docker commit [옵션] [컨테이너 이름 | 컨테이너 ID]<br />[이미지 이름] [:태그]</td>
+              <td>컨테이너를 이미지 파일로 생성</td>
+            </tr>
+            <tr>
+              <td>docker build</td>
+              <td>$ docker build [옵션] [도커 파일 경로]<br />[--tag 이미지 이름 : 이미지 태그] </td>
+              <td>도커 파일에 설정된 내용대로 도커 이미지 생성<br />--tag 뒤에 이미지 이름와 이미지 태그를 설정할 수 있음</td>
+            </tr>
+            <tr>
+              <td>docker history</td>
+              <td>$ docker history [이미지 이름 | 이미지 ID] [:태그]</td>
+              <td>도커 파일에 설정된 내용대로 이미지 히스토리 생성</td>
+            </tr>
+            <tr>
+              <td>docker inspect</td>
+              <td>$ docker inspect<br />[이미지나 컨테이너 이름 | 이미지나 컨테이너 ID]</td>
+              <td>이미지나 컨테이너의 세부 정보 출력</td>
+            </tr>
+         </tbody>
+    </table>
+</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Docker" /><summary type="html"><![CDATA[도커 (Docker) : 컨테이너 기반 가상화 (Container-based Virtualization)]]></summary></entry><entry><title type="html">[vocawik] 7. 07/21 진행 내용</title><link href="http://localhost:4000/vcw7/" rel="alternate" type="text/html" title="[vocawik] 7. 07/21 진행 내용" /><published>2023-07-21T00:00:00+09:00</published><updated>2023-07-21T00:00:00+09:00</updated><id>http://localhost:4000/vcw7</id><content type="html" xml:base="http://localhost:4000/vcw7/"><![CDATA[<blockquote>
   <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #19. feat(domain): BaseDateTime 엔티티 추가 ~ #23. fix(domain): User 도메인 제약조건 추가에 대한 내용입니다.</p>
 </blockquote>
 
@@ -2119,70 +2398,4 @@ lastmod: 2022-09-26
   <ul>
     <li><a href="http://jekyllrb-ko.github.io/docs/structure/">Jekyll 디렉토리 구조 (번역)</a></li>
   </ul>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[솔직히 블로그 설정을 건드는 부분은 내가 아는 정보들을 그대로 나열할 수 밖에 없다고 생각한다… 그래도 내가 시행착오를 겪었던 경험을 떠올리면서 하나하나 풀어서 작성하려 하였으니, 미숙한 글이지만 남들에게 도움이 되었으면 정말 좋겠다… 그리고 Github Pages이나 Minimal Mistakes으로 처음 블로그를 운영하시는 분들의 시선에 맞춰 html, css에 대한 자세한 내용은 다른 포스트로 옮겼으니 참고해주셨으면 한다.]]></summary></entry><entry><title type="html">[Github Pages] 4. Github Pages 블로그 개설</title><link href="http://localhost:4000/blog4/" rel="alternate" type="text/html" title="[Github Pages] 4. Github Pages 블로그 개설" /><published>2023-04-03T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/blog4</id><content type="html" xml:base="http://localhost:4000/blog4/"><![CDATA[<blockquote>
-  <p>이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나… 그때쯤 작성한 글들 대부분이 너무 나열식으로 쓰였고, 출처에 대한 언급이 많이 부실해 (모르는 부분이 있어 찾으려 하면 출처가 없어서 나도 찾지 못한다…), 부족한 점들을 보완하기 위해 다시 작성되었다.<br />
-그리고 현재 작성자의 실행 환경의 OS가 MacOS임을 미리 밝혀둔다. 아마 근시일 내에는 기기를 바꿀 계획이 없으니, 동일한 OS를 사용하시는 분들은 그대로 진행해주시면 된다.</p>
-</blockquote>
-
-<h2 id="1-ruby-설치">1. Ruby 설치</h2>
-<p>macOS는 Ruby가 기본적으로 설치되어 있으니, 터미널을 실행하고 다음 명령어를 입력해 Ruby의 설치 여부를 확인한다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby -v
-// ruby X.X.X 출력 : 정상 설치
-// "zsh: command not found: ruby" 출력 : 설치 오류
-</code></pre></div></div>
-
-<h2 id="2-jekyll-설치">2. Jekyll 설치</h2>
-<p>터미널 창에 gem install 명령어를 입력해 Jekyll을 설치한다. 참고로 gem은 분산 패키지로, 라이브러리의 작성, 공개, 설치를 도와주는 시스템이다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll
-</code></pre></div></div>
-
-<p>그리고 터미널 창에 다음 명령어를 입력해 Jekyll가 정상적으로 설치되었는지 확인한다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll -v
-// jekyll X.X.X 출력 : 정상 설치
-// "zsh: command not found: jekyll" 출력 : 설치 오류
-</code></pre></div></div>
-
-<h2 id="3-jekyll-theme-선택">3. Jekyll theme 선택</h2>
-<p>이전 포스트에서 Jekyll은 레이아웃에 해당하는 templates과 컨텐츠에 해당하는 contents를 합쳐 HTML 문서로 미리 빌드해 저장하고, 이를 방문자에게 보여준다고 설명한 바 있다. 그런데 대부분의 블로거들은 레이아웃의 중요성은 알지만 이를 어떻게 구성해야할지 몰라 막막할 것이다. 그런 블로거들을 위해 존재하는 것이 Jekyll theme이다.<br /></p>
-
-<p>Jekyll theme은 다른 사람들이 미리 작업해놓은 templates으로, 많은 Jekyll theme들이 무료로 공개되어 있다. 무료 Jekyll 중에 사람들이 많이 사용하는 것이 <a href="https://mmistakes.github.io/minimal-mistakes/">minimal-mistakes</a>이다. 간결하고 깔끔한 디자인과 꾸준한 업데이트, 그리고 무엇보다 엄청난 양의 한글 래퍼런스 (…)로 인해 나 역시도 minimal-mistakes을 기반으로 블로그를 개설하였기에, 앞으로 진행할 블로그 개설 역시 minimal-mistakes를 기반으로 진행한다.<br /></p>
-
-<p>먼저 <a href="https://github.com/mmistakes/minimal-mistakes">minimal-mistakes Github 페이지</a>에서 <code class="language-plaintext highlighter-rouge">.zip</code> 파일을 다운로드한 후 압축을 해제한다. 그리고 아래 사진을 참고하여 필요한 파일 및 디렉토리만 남기고 나머지는 삭제한다. (아, 기존에 존재하지 않는 <code class="language-plaintext highlighter-rouge">_post</code>와 <code class="language-plaintext highlighter-rouge">_page</code> 디렉토리는 추후에 사용할 예정이니 미리 생성해두자.)</p>
-
-<p><img width="228" alt="blog1-1" src="https://user-images.githubusercontent.com/105341168/229804167-bbb75af4-6ec4-4683-9753-0f2cbf7d97bb.png" /></p>
-
-<h2 id="4-로컬에서-웹-호스팅">4. 로컬에서 웹 호스팅</h2>
-<p>터미널 창에 다음 명령어를 입력해 Gemfile을 설치하기 위한 bundler를 사용해보자. 그러면 <code class="language-plaintext highlighter-rouge">.jekyll-cache</code> 폴더와 <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> 파일이 생성된다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler
-</code></pre></div></div>
-
-<p>bundler 설치가 완료되면, 터미널 창에 다음 명령어를 입력해 Gemfile을 검사해 필요한 목록을 설치할 수 있다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
-</code></pre></div></div>
-
-<p>이제 터미널 창에 다음 명령어를 입력하여 블로그를 로컬에서 호스팅해보자.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve
-</code></pre></div></div>
-
-<p><a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a>으로 접속하면 minimal-mistakes이 적용된 블로그 화면을 확인할 수 있다.</p>
-
-<h2 id="5-github-pages에서-웹-호스팅">5. GitHub Pages에서 웹 호스팅</h2>
-
-<p>이제 Github에 <code class="language-plaintext highlighter-rouge">(Github ID).github.io</code>의 형식으로 원격 저장소를 생성하자. 다음은 내 블로그가 저장된 원격 저장소 이미지이다.</p>
-
-<p><img width="535" alt="blog1-2" src="https://user-images.githubusercontent.com/105341168/229810964-1fb40be8-4fc9-4949-89b2-1eb4b77fa0ff.png" /></p>
-
-<p>그리고 지금까지 정리한 내용들을 포함한 디렉터리를 github에 push하면, <code class="language-plaintext highlighter-rouge">https://(Github ID).github.io</code>를 주소로 하는 블로그가 생성된 것을 확인해볼 수 있다. 그리고 <code class="language-plaintext highlighter-rouge">https://github.com/(Github ID)/(Github ID).github.io/actions</code>에서 블로그가 빌드된 기록을 확인할 수 있다. 만약 원격 저장소에서 푸시된 내용에 대한 빌드 작업이 실패한다면, 그 내용의 배포가 진행되지 않은 것을 확인해볼 수 있다.</p>
-
-<blockquote>
-  <p>Reference</p>
-  <ul>
-    <li>SW developer 님이 작성하신, <a href="https://devinlife.com/howto/">GitHub Pages 블로그 따라하기</a></li>
-  </ul>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나… 그때쯤 작성한 글들 대부분이 너무 나열식으로 쓰였고, 출처에 대한 언급이 많이 부실해 (모르는 부분이 있어 찾으려 하면 출처가 없어서 나도 찾지 못한다…), 부족한 점들을 보완하기 위해 다시 작성되었다. 그리고 현재 작성자의 실행 환경의 OS가 MacOS임을 미리 밝혀둔다. 아마 근시일 내에는 기기를 바꿀 계획이 없으니, 동일한 OS를 사용하시는 분들은 그대로 진행해주시면 된다.]]></summary></entry></feed>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[솔직히 블로그 설정을 건드는 부분은 내가 아는 정보들을 그대로 나열할 수 밖에 없다고 생각한다… 그래도 내가 시행착오를 겪었던 경험을 떠올리면서 하나하나 풀어서 작성하려 하였으니, 미숙한 글이지만 남들에게 도움이 되었으면 정말 좋겠다… 그리고 Github Pages이나 Minimal Mistakes으로 처음 블로그를 운영하시는 분들의 시선에 맞춰 html, css에 대한 자세한 내용은 다른 포스트로 옮겼으니 참고해주셨으면 한다.]]></summary></entry></feed>

@@ -221,31 +221,29 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#css-cascading-style-sheet--웹-문서가-표현되는-방법을-기술하는-스타일시트-언어">CSS (Cascading Style Sheet) : 웹 문서가 표현되는 방법을 기술하는 스타일시트 언어</a><ul><li><a href="#css-스타일시트-css-style-sheet--스타일을-선언하고-태그를-선택하는-css-ruleset의-집합">CSS 스타일시트 (CSS Style Sheet) : 스타일을 선언하고 태그를 선택하는 CSS RuleSet의 집합</a></li><li><a href="#캐스케이딩-cascading--같은-css-선언이-여러-번-선언하였다면-나중에-선언된-것을-적용">캐스케이딩 (Cascading) : 같은 CSS 선언이 여러 번 선언하였다면, 나중에 선언된 것을 적용</a></li><li><a href="#css-명시도-specificity--작성된-순서가-아닌-css-선언에-적용되는-가중치에-따라-우선순위-적용">CSS 명시도 (Specificity) : 작성된 순서가 아닌, CSS 선언에 적용되는 가중치에 따라 우선순위 적용</a></li><li><a href="#important--기존의-우선순위를-무시하고-해당-css-선언을-우선해-적용">!important : 기존의 우선순위를 무시하고 해당 CSS 선언을 우선해 적용</a></li><li><a href="#css-선택자-css-selector--html-문서에-스타일을-입힐-요소를-선택하는-문자">CSS 선택자 (CSS Selector) : HTML 문서에 스타일을 입힐 요소를 선택하는 문자</a><ul><li><a href="#전체-선택자---모든-요소를-선택하는-선택자">전체 선택자 * : 모든 요소를 선택하는 선택자</a></li><li><a href="#태그-선택자-tag--해당-태그의-요소를-선택하는-선택자">태그 선택자 tag : 해당 태그의 요소를 선택하는 선택자</a></li><li><a href="#아이디-선택자-id--해당-아이디의-요소를-선택하는-선택자">아이디 선택자 #id : 해당 아이디의 요소를 선택하는 선택자</a></li><li><a href="#클래스-선택자-class--해당-클래스의-요소를-선택하는-선택자">클래스 선택자 .class : 해당 클래스의 요소를 선택하는 선택자</a></li><li><a href="#후손-선택자-selector1-selector2--해당-선택자의-모든-하위-요소-중-하나를-지정해-선택하는-선택자">후손 선택자 (selector1) (selector2) : 해당 선택자의 모든 하위 요소 중 하나를 지정해 선택하는 선택자</a></li><li><a href="#자손-선택자-selector1selector2--해당-선택자의-자식-요소-중-하나를-지정해-선택하는-선택자">자손 선택자 (selector1)&gt;(selector2) : 해당 선택자의 자식 요소 중 하나를 지정해 선택하는 선택자</a></li><li><a href="#형제-선택자-selector1selector2--해당-선택자의-형제-요소-중-하나를-지정해-선택하는-선택자">형제 선택자 (selector1)~(selector2) : 해당 선택자의 형제 요소 중 하나를 지정해 선택하는 선택자</a></li><li><a href="#인접-형제-선택자-selector1selector2--선택자의-형제-중-바로-다음에-오는-요소를-선택하는-선택자">인접 형제 선택자 (selector1)+(selector2) : 선택자의 형제 중 바로 다음에 오는 요소를 선택하는 선택자</a></li><li><a href="#속성-선택자-attr--태그에-해당-속성이-명시되어-있는-요소들을-모두-선택하는-선택자">속성 선택자 [attr] : 태그에 해당 속성이 명시되어 있는 요소들을 모두 선택하는 선택자</a></li><li><a href="#가상-클래스-선택자-pseudo-class-selector--가상-클래스를-선택하는-선택자">가상 클래스 선택자 (Pseudo-class Selector) : 가상 클래스를 선택하는 선택자</a></li><li><a href="#가상-요소-선택자-pseudo-element-selector--가상-요소를-선택하는-선택자">가상 요소 선택자 (Pseudo-element Selector) : 가상 요소를 선택하는 선택자</a></li></ul></li></ul></li><li><a href="#-박스-모델-box-model-관련-css-속성"># 박스 모델 (Box Model) 관련 CSS 속성</a><ul><li><a href="#width-height--박스의-가로-세로-길이를-지정하는-속성">width, height : 박스의 가로, 세로 길이를 지정하는 속성</a></li><li><a href="#margin--마진에-값을-부여하는-속성">margin : 마진에 값을 부여하는 속성</a></li><li><a href="#padding--패딩에-값을-부여하는-속성">padding : 패딩에 값을 부여하는 속성</a></li><li><a href="#border--테두리에-값을-부여하는-속성">border : 테두리에 값을 부여하는 속성</a></li><li><a href="#box-sizing--박스-크기의-기준을-지정하는-속성">box-sizing : 박스 크기의 기준을 지정하는 속성</a></li></ul></li><li><a href="#-배경-관련-css-속성"># 배경 관련 CSS 속성</a><ul><li><a href="#background-color--배경의-색상을-지정하는-속성">background-color : 배경의 색상을 지정하는 속성</a></li><li><a href="#background-image--배경-이미지를-지정하는-속성">background-image : 배경 이미지를 지정하는 속성</a></li><li><a href="#overflow--컨텐츠가-요소의-크기를-벗어날-때의-처리-방법을-지정하는-속성">overflow : 컨텐츠가 요소의 크기를 벗어날 때의 처리 방법을 지정하는 속성</a></li><li><a href="#z-index--요소들의-수직-위치를-지정하는-속성">z-index : 요소들의 수직 위치를 지정하는 속성</a></li></ul></li><li><a href="#-글자-관련-css-속성"># 글자 관련 CSS 속성</a><ul><li><a href="#color--글자의-색상을-지정하는-속성">color : 글자의 색상을 지정하는 속성</a></li><li><a href="#font-size--글자의-크기를-지정하는-속성">font-size : 글자의 크기를 지정하는 속성</a></li><li><a href="#font-family--글꼴을-지정하는-속성">font-family : 글꼴을 지정하는 속성</a></li><li><a href="#font-weight--글자의-굵기-정도를-지정하는-속성">font-weight : 글자의 굵기 정도를 지정하는 속성</a></li></ul></li><li><a href="#-텍스트-관련-css-속성"># 텍스트 관련 CSS 속성</a><ul><li><a href="#text-align--텍스트를-정렬하는-속성">text-align : 텍스트를 정렬하는 속성</a></li><li><a href="#text-decoration--텍스트을-꾸미는-선을-지정하는-속성">text-decoration : 텍스트을 꾸미는 선을 지정하는 속성</a></li><li><a href="#columns--여러-개의-문단을-만드는-속성">columns : 여러 개의 문단을 만드는 속성</a></li></ul></li><li><a href="#-애니메이션-관련-css-속성"># 애니메이션 관련 CSS 속성</a><ul><li><a href="#transform--요소의-형태를-변화시키는-속성">transform: : 요소의 형태를 변화시키는 속성</a></li><li><a href="#animation--요소에-애니메이션-효과를-넣는-속성">animation : 요소에 애니메이션 효과를 넣는 속성</a></li><li><a href="#transition--요소에-트랜지션-효과를-넣는-속성">transition: : 요소에 트랜지션 효과를 넣는 속성</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#css-cascading-style-sheet--웹-문서가-표현되는-방법을-기술하는-스타일시트-언어">CSS (Cascading Style Sheet) : 웹 문서가 표현되는 방법을 기술하는 스타일시트 언어</a><ul><li><a href="#css-스타일시트-css-style-sheet--스타일을-선언하고-태그를-선택하는-css-ruleset의-집합">CSS 스타일시트 (CSS Style Sheet) : 스타일을 선언하고 태그를 선택하는 CSS RuleSet의 집합</a></li><li><a href="#캐스케이딩-cascading--같은-css-선언이-여러-번-선언하였다면-나중에-선언된-것을-적용">캐스케이딩 (Cascading) : 같은 CSS 선언이 여러 번 선언하였다면, 나중에 선언된 것을 적용</a></li><li><a href="#css-명시도-specificity--작성된-순서가-아닌-css-선언에-적용되는-가중치에-따라-우선순위-적용">CSS 명시도 (Specificity) : 작성된 순서가 아닌, CSS 선언에 적용되는 가중치에 따라 우선순위 적용</a></li><li><a href="#important--기존의-우선순위를-무시하고-해당-css-선언을-우선해-적용">!important : 기존의 우선순위를 무시하고 해당 CSS 선언을 우선해 적용</a></li><li><a href="#css-선택자-css-selector--html-문서에-스타일을-입힐-요소를-선택하는-문자">CSS 선택자 (CSS Selector) : HTML 문서에 스타일을 입힐 요소를 선택하는 문자</a><ul><li><a href="#전체-선택자---모든-요소를-선택하는-선택자">전체 선택자 * : 모든 요소를 선택하는 선택자</a></li><li><a href="#태그-선택자-tag--해당-태그의-요소를-선택하는-선택자">태그 선택자 tag : 해당 태그의 요소를 선택하는 선택자</a></li><li><a href="#아이디-선택자-id--해당-아이디의-요소를-선택하는-선택자">아이디 선택자 #id : 해당 아이디의 요소를 선택하는 선택자</a></li><li><a href="#클래스-선택자-class--해당-클래스의-요소를-선택하는-선택자">클래스 선택자 .class : 해당 클래스의 요소를 선택하는 선택자</a></li><li><a href="#후손-선택자-selector1-selector2--해당-선택자의-모든-하위-요소-중-하나를-지정해-선택하는-선택자">후손 선택자 (selector1) (selector2) : 해당 선택자의 모든 하위 요소 중 하나를 지정해 선택하는 선택자</a></li><li><a href="#자손-선택자-selector1selector2--해당-선택자의-자식-요소-중-하나를-지정해-선택하는-선택자">자손 선택자 (selector1)&gt;(selector2) : 해당 선택자의 자식 요소 중 하나를 지정해 선택하는 선택자</a></li><li><a href="#형제-선택자-selector1selector2--해당-선택자의-형제-요소-중-하나를-지정해-선택하는-선택자">형제 선택자 (selector1)~(selector2) : 해당 선택자의 형제 요소 중 하나를 지정해 선택하는 선택자</a></li><li><a href="#인접-형제-선택자-selector1selector2--선택자의-형제-중-바로-다음에-오는-요소를-선택하는-선택자">인접 형제 선택자 (selector1)+(selector2) : 선택자의 형제 중 바로 다음에 오는 요소를 선택하는 선택자</a></li><li><a href="#속성-선택자-attr--태그에-해당-속성이-명시된-요소들을-모두-선택하는-선택자">속성 선택자 [attr] : 태그에 해당 속성이 명시된 요소들을 모두 선택하는 선택자</a></li><li><a href="#가상-클래스-선택자-pseudo-class-selector--가상-클래스를-선택하는-선택자">가상 클래스 선택자 (Pseudo-class Selector) : 가상 클래스를 선택하는 선택자</a></li><li><a href="#가상-요소-선택자-pseudo-element-selector--가상-요소를-선택하는-선택자">가상 요소 선택자 (Pseudo-element Selector) : 가상 요소를 선택하는 선택자</a></li></ul></li></ul></li><li><a href="#-박스-모델-box-model-관련-css-속성"># 박스 모델 (Box Model) 관련 CSS 속성</a><ul><li><a href="#width-height--박스의-가로-세로-길이를-지정하는-속성">width, height : 박스의 가로, 세로 길이를 지정하는 속성</a></li><li><a href="#margin--마진에-값을-부여하는-속성">margin : 마진에 값을 부여하는 속성</a></li><li><a href="#padding--패딩에-값을-부여하는-속성">padding : 패딩에 값을 부여하는 속성</a></li><li><a href="#border--테두리에-값을-부여하는-속성">border : 테두리에 값을 부여하는 속성</a></li><li><a href="#box-sizing--박스-크기의-기준을-지정하는-속성">box-sizing : 박스 크기의 기준을 지정하는 속성</a></li></ul></li><li><a href="#-배경-관련-css-속성"># 배경 관련 CSS 속성</a><ul><li><a href="#background-color--배경의-색상을-지정하는-속성">background-color : 배경의 색상을 지정하는 속성</a></li><li><a href="#background-image--배경-이미지를-지정하는-속성">background-image : 배경 이미지를 지정하는 속성</a></li><li><a href="#overflow--컨텐츠가-요소의-크기를-벗어날-때의-처리-방법을-지정하는-속성">overflow : 컨텐츠가 요소의 크기를 벗어날 때의 처리 방법을 지정하는 속성</a></li><li><a href="#z-index--요소들의-수직-위치를-지정하는-속성">z-index : 요소들의 수직 위치를 지정하는 속성</a></li></ul></li><li><a href="#-글자-관련-css-속성"># 글자 관련 CSS 속성</a><ul><li><a href="#color--글자의-색상을-지정하는-속성">color : 글자의 색상을 지정하는 속성</a></li><li><a href="#font-size--글자의-크기를-지정하는-속성">font-size : 글자의 크기를 지정하는 속성</a></li><li><a href="#font-family--글꼴을-지정하는-속성">font-family : 글꼴을 지정하는 속성</a></li><li><a href="#font-weight--글자의-굵기-정도를-지정하는-속성">font-weight : 글자의 굵기 정도를 지정하는 속성</a></li></ul></li><li><a href="#-텍스트-관련-css-속성"># 텍스트 관련 CSS 속성</a><ul><li><a href="#text-align--텍스트를-정렬하는-속성">text-align : 텍스트를 정렬하는 속성</a></li><li><a href="#text-decoration--텍스트을-꾸미는-선을-지정하는-속성">text-decoration : 텍스트을 꾸미는 선을 지정하는 속성</a></li><li><a href="#columns--여러-개의-문단을-만드는-속성">columns : 여러 개의 문단을 만드는 속성</a></li></ul></li><li><a href="#-애니메이션-관련-css-속성"># 애니메이션 관련 CSS 속성</a><ul><li><a href="#transform--요소의-형태를-변화시키는-속성">transform: : 요소의 형태를 변화시키는 속성</a></li><li><a href="#animation--요소에-애니메이션-효과를-넣는-속성">animation : 요소에 애니메이션 효과를 넣는 속성</a></li><li><a href="#transition--요소에-트랜지션-효과를-넣는-속성">transition: : 요소에 트랜지션 효과를 넣는 속성</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
         <h2 id="css-cascading-style-sheet--웹-문서가-표현되는-방법을-기술하는-스타일시트-언어"><code class="language-plaintext highlighter-rouge">CSS</code> (<code class="language-plaintext highlighter-rouge">Cascading Style Sheet</code>) : 웹 문서가 표현되는 방법을 기술하는 스타일시트 언어</h2>
 
-<p><img src="https://velog.velcdn.com/images%2Fteo%2Fpost%2F30a6da36-0203-467a-962f-38e170f31f0e%2Fimage.png" /></p>
-
 <blockquote>
-  <p><code class="language-plaintext highlighter-rouge">~1996</code> : <code class="language-plaintext highlighter-rouge">HTML</code> 문서에 사용자가 원하는 스타일을 적용하고자 함</p>
+  <ul>
+    <li>레이아웃 및 디자인 정보로 인해 <code class="language-plaintext highlighter-rouge">HTML</code> 문서의 구조화가 어려워진 문제를 해결하기 위해 <code class="language-plaintext highlighter-rouge">CSS</code> 탄생</li>
+  </ul>
+
+  <p><img src="https://velog.velcdn.com/images%2Fteo%2Fpost%2F30a6da36-0203-467a-962f-38e170f31f0e%2Fimage.png" /></p>
 </blockquote>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Inline Style</code> : <code class="language-plaintext highlighter-rouge">HTML</code> 태그의 <code class="language-plaintext highlighter-rouge">style</code> 속성으로 태그의 속성을 일일이 적용</li>
-</ul>
+<p>(1) <code class="language-plaintext highlighter-rouge">Inline Style</code> : <code class="language-plaintext highlighter-rouge">HTML</code> 태그의 <code class="language-plaintext highlighter-rouge">style</code> 속성으로 태그의 속성을 일일이 적용</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p style="color: blue"&gt;
     hello world
 &lt;/p&gt;
 </code></pre></div></div>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Inline Style Sheet</code> : <code class="language-plaintext highlighter-rouge">HTML</code> 문서 내 <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> 태그로 한 문서의 스타일 적용</li>
-</ul>
+<p>(2) <code class="language-plaintext highlighter-rouge">Inline Style Sheet</code> : <code class="language-plaintext highlighter-rouge">HTML</code> 문서 내 <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> 태그로 한 문서의 스타일 적용</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;head&gt;
     &lt;style&gt;
@@ -254,13 +252,7 @@
 &lt;/head&gt;
 </code></pre></div></div>
 
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">1996</code> : 레이아웃 및 디자인 정보로 인해 <code class="language-plaintext highlighter-rouge">HTML</code> 문서의 구조화가 어려워진 문제를 해결하기 위해 <code class="language-plaintext highlighter-rouge">CSS</code> 탄생</p>
-</blockquote>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Linking Style Sheet</code> : 내용으로부터 스타일 정보를 분리해 별도의 스타일시트 (<code class="language-plaintext highlighter-rouge">.css</code>) 파일을 만들고 <code class="language-plaintext highlighter-rouge">HTML</code> 문서와 연결</li>
-</ul>
+<p>(3) <code class="language-plaintext highlighter-rouge">Linking Style Sheet</code> : 내용에 스타일 정보를 분리해 별도의 스타일시트 (<code class="language-plaintext highlighter-rouge">.css</code>) 파일을 만들고 <code class="language-plaintext highlighter-rouge">HTML</code> 문서와 연결</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="style.css"&gt;
 </code></pre></div></div>
@@ -458,13 +450,13 @@ b span {color : red;} /* 명시도 : 0,0,0,2 */
 /* 첫번째 형제 요소인 "?"가 회색으로 출력 */
 </code></pre></div></div>
 
-<h4 id="속성-선택자-attr--태그에-해당-속성이-명시되어-있는-요소들을-모두-선택하는-선택자">속성 선택자 <code class="language-plaintext highlighter-rouge">[attr]</code> : 태그에 해당 속성이 명시되어 있는 요소들을 모두 선택하는 선택자</h4>
+<h4 id="속성-선택자-attr--태그에-해당-속성이-명시된-요소들을-모두-선택하는-선택자">속성 선택자 <code class="language-plaintext highlighter-rouge">[attr]</code> : 태그에 해당 속성이 명시된 요소들을 모두 선택하는 선택자</h4>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">[attr = "A"]</code> : 해당 속성이 명시되어 있는 요소들 중 값이 일치하는 것들만 선택</li>
-  <li><code class="language-plaintext highlighter-rouge">[attr ~= "B"]</code> : 해당 속성이 명시되어 있는 요소들 (띄어쓰기로 여러 값이 저장된 요소 포함) 중 값이 일치하는 것들만 선택</li>
-  <li><code class="language-plaintext highlighter-rouge">[attr ^= "C"]</code> : 해당 속성이 명시되어 있는 요소들 중 값을 접두사로 가지는 것들만 선택</li>
-  <li><code class="language-plaintext highlighter-rouge">[attr $= "D"]</code> : 해당 속성이 명시되어 있는 요소들 중 값을 접미사로 가지는 것들만 선택</li>
-  <li><code class="language-plaintext highlighter-rouge">[attr *= "E"]</code> : 해당 속성이 명시되어 있는 요소들 중 값을 포함하는 것들만 선택</li>
+  <li><code class="language-plaintext highlighter-rouge">[attr = "A"]</code> : 해당 속성이 명시된 요소들 중 값이 일치하는 것들만 선택</li>
+  <li><code class="language-plaintext highlighter-rouge">[attr ~= "B"]</code> : 해당 속성이 명시된 요소들 (띄어쓰기로 여러 값이 저장된 요소 포함) 중 값이 일치하는 것들만 선택</li>
+  <li><code class="language-plaintext highlighter-rouge">[attr ^= "C"]</code> : 해당 속성이 명시된 요소들 중 값을 접두사로 가지는 것들만 선택</li>
+  <li><code class="language-plaintext highlighter-rouge">[attr $= "D"]</code> : 해당 속성이 명시된 요소들 중 값을 접미사로 가지는 것들만 선택</li>
+  <li><code class="language-plaintext highlighter-rouge">[attr *= "E"]</code> : 해당 속성이 명시된 요소들 중 값을 포함하는 것들만 선택</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tag[attributes]{
@@ -2155,7 +2147,7 @@ transition-delay: /* 트랜지션이 시작하기 전에 대기하는 시간 지
 ">이전</a>
     
     
-      <a href="/git1/" class="pagination--pager" title="[DevOps] 1. 깃 (Git)
+      <a href="/git1/" class="pagination--pager" title="[Git] 1. Git 개념 및 명령어 정리
 ">다음</a>
     
   </nav>
@@ -2170,6 +2162,47 @@ transition-delay: /* 트랜지션이 시작하기 전에 대기하는 시간 지
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/docker2/" rel="permalink">[Docker] 2. Docker란?
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">도커 (Docker) : 컨테이너 기반 가상화 (Container-based Virtualization)
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -2293,49 +2326,6 @@ transition-delay: /* 트랜지션이 시작하기 전에 대기하는 시간 지
 
     <p class="archive__item-excerpt" itemprop="description">
   vocawik 프로젝트의 #14. init: 멀티모듈 infra 모듈 추가 ~ #15. init: domain 이벤트 publisher 및 aop 추가에 대한 내용입니다.
-
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/vcw4/" rel="permalink">[vocawik] 4. 07/13, 07/17 진행 내용
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  vocawik 프로젝트의 #11. init: Thymeleaf 적용 ~ #13. init: lombok.config 파일 추가에 대한 내용입니다.
 
 
 </p>
