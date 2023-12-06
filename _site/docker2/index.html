@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Docker] 2. Docker란? - pocj8ur4in’s blog</title>
+<!-- begin _includes/seo.html --><title>[Docker] 2. Docker - pocj8ur4in’s blog</title>
 <meta name="description" content="도커 (Docker) : 컨테이너 기반 가상화 (Container-based Virtualization)">
 
 
@@ -22,7 +22,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[Docker] 2. Docker란?">
+<meta property="og:title" content="[Docker] 2. Docker">
 <meta property="og:url" content="http://localhost:4000/docker2/">
 
 
@@ -166,7 +166,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">[Docker] 2. Docker란?</li>
+        <li class="current">[Docker] 2. Docker</li>
       
     
   </ol>
@@ -180,7 +180,7 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Docker] 2. Docker란?">
+    <meta itemprop="headline" content="[Docker] 2. Docker">
     <meta itemprop="description" content="도커 (Docker) : 컨테이너 기반 가상화 (Container-based Virtualization)">
     <meta itemprop="datePublished" content="2023-12-05T00:00:00+09:00">
     <meta itemprop="dateModified" content="2023-12-05T00:00:00+09:00">
@@ -189,7 +189,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/docker2/" class="u-url" itemprop="url">[Docker] 2. Docker란?
+            <a href="http://localhost:4000/docker2/" class="u-url" itemprop="url">[Docker] 2. Docker
 </a>
           </h1>
           
@@ -221,7 +221,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#도커-docker--컨테이너-기반-가상화-container-based-virtualization">도커 (Docker) : 컨테이너 기반 가상화 (Container-based Virtualization)</a><ul><li><a href="#q-도커를-쓰는-이유--비교적-효율적인-가상화-방식--통일된-개발-환경--배포의-동시성">Q. 도커를 쓰는 이유? : 비교적 효율적인 가상화 방식 + 통일된 개발 환경 + 배포의 동시성</a></li></ul></li><li><a href="#도커-파일-dockerfile--서버-운영-기록을-코드화해-저장한-파일을-해당-시점의-도커-이미지로-빌드">도커 파일 (Dockerfile) : 서버 운영 기록을 코드화해 저장한 파일을 해당 시점의 도커 이미지로 빌드</a><ul><li><a href="#q-도커-파일을-쓰는-이유--테스트-주도-개발의-순환에-부합한다">Q. 도커 파일을 쓰는 이유? : 테스트 주도 개발의 순환에 부합한다.</a></li></ul></li><li><a href="#도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보을-포함">도커 이미지 (Docker Image) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보을 포함</a><ul><li><a href="#q-도커-이미지를-쓰는-이유--도커-이미지와-도커-컨테이너들을-클래스나-인스턴스처럼-활용한다">Q. 도커 이미지를 쓰는 이유? : 도커 이미지와 도커 컨테이너들을 클래스나 인스턴스처럼 활용한다.</a></li></ul></li><li><a href="#도커-명령어-docker-command--docker-command-형식으로-구성">도커 명령어 (Docker Command) : docker &lt;command&gt; 형식으로 구성</a></li></ul>
+              <ul class="toc__menu"><li><a href="#도커-docker--컨테이너-기반-가상화-container-based-virtualization">도커 (Docker) : 컨테이너 기반 가상화 (Container-based Virtualization)</a><ul><li><a href="#q-도커를-쓰는-이유--비교적-효율적인-가상화-방식--통일된-개발-환경--배포의-동시성">Q. 도커를 쓰는 이유? : 비교적 효율적인 가상화 방식 + 통일된 개발 환경 + 배포의 동시성</a></li></ul></li><li><a href="#도커-파일-dockerfile--서버-운영-기록을-코드로-저장한-파일을-특정-시점의-도커-이미지로-빌드">도커 파일 (Dockerfile) : 서버 운영 기록을 코드로 저장한 파일을 특정 시점의 도커 이미지로 빌드</a><ul><li><a href="#q-도커-파일을-쓰는-이유--테스트-주도-개발의-순환에-부합한다">Q. 도커 파일을 쓰는 이유? : 테스트 주도 개발의 순환에 부합한다.</a></li></ul></li><li><a href="#도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보를-포함">도커 이미지 (Docker Image) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보를 포함</a><ul><li><a href="#q-도커-이미지를-쓰는-이유--도커-이미지와-도커-컨테이너들을-클래스나-인스턴스처럼-활용한다">Q. 도커 이미지를 쓰는 이유? : 도커 이미지와 도커 컨테이너들을 클래스나 인스턴스처럼 활용한다.</a></li></ul></li><li><a href="#도커-명령어-docker-command--docker-command-형식으로-구성">도커 명령어 (Docker Command) : docker &lt;command&gt; 형식으로 구성</a></li></ul>
 
             </nav>
           </aside>
@@ -290,7 +290,7 @@ Server: ~
   </ul>
 </blockquote>
 
-<h2 id="도커-파일-dockerfile--서버-운영-기록을-코드화해-저장한-파일을-해당-시점의-도커-이미지로-빌드">도커 파일 (<code class="language-plaintext highlighter-rouge">Dockerfile</code>) : 서버 운영 기록을 코드화해 저장한 파일을 해당 시점의 도커 이미지로 빌드</h2>
+<h2 id="도커-파일-dockerfile--서버-운영-기록을-코드로-저장한-파일을-특정-시점의-도커-이미지로-빌드">도커 파일 (<code class="language-plaintext highlighter-rouge">Dockerfile</code>) : 서버 운영 기록을 코드로 저장한 파일을 특정 시점의 도커 이미지로 빌드</h2>
 
 <blockquote>
   <p>눈송이 서버 (<code class="language-plaintext highlighter-rouge">Snowflakes Server</code>) : 각 서버마다 운영 기록이 달라 서로 모양이 다른 서버들이 공존하는 상황</p>
@@ -317,7 +317,7 @@ Server: ~
 </ol>
 </div>
 
-<h2 id="도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보을-포함">도커 이미지 (<code class="language-plaintext highlighter-rouge">Docker Image</code>) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보을 포함</h2>
+<h2 id="도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보를-포함">도커 이미지 (<code class="language-plaintext highlighter-rouge">Docker Image</code>) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보를 포함</h2>
 <ul>
   <li>상태값을 가지지 않음 (변하지 않는 값들을 저장) ↔ 컨테이너 : 이미지가 실행된 살태 (변하는 값들을 저장)</li>
   <li>이미지 레이어 : 도커 이미지는 여러 <code class="language-plaintext highlighter-rouge">Read-Only</code> 레이어로 구성되고, 파일 추가 및 생성 시 새로운 레이어 생성
@@ -555,7 +555,7 @@ Server: ~
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BDocker%5D+2.+Docker%EB%9E%80%3F%20http%3A%2F%2Flocalhost%3A4000%2Fdocker2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BDocker%5D+2.+Docker%20http%3A%2F%2Flocalhost%3A4000%2Fdocker2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdocker2%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>

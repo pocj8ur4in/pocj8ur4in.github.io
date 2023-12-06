@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-07T00:36:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Docker] 2. Docker란?</title><link href="http://localhost:4000/docker2/" rel="alternate" type="text/html" title="[Docker] 2. Docker란?" /><published>2023-12-05T00:00:00+09:00</published><updated>2023-12-05T00:00:00+09:00</updated><id>http://localhost:4000/docker2</id><content type="html" xml:base="http://localhost:4000/docker2/"><![CDATA[<h2 id="도커-docker--컨테이너-기반-가상화-container-based-virtualization">도커 (<code class="language-plaintext highlighter-rouge">Docker</code>) : 컨테이너 기반 가상화 (<code class="language-plaintext highlighter-rouge">Container-based Virtualization</code>)</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-07T02:51:20+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Docker] 2. Docker</title><link href="http://localhost:4000/docker2/" rel="alternate" type="text/html" title="[Docker] 2. Docker" /><published>2023-12-05T00:00:00+09:00</published><updated>2023-12-05T00:00:00+09:00</updated><id>http://localhost:4000/docker2</id><content type="html" xml:base="http://localhost:4000/docker2/"><![CDATA[<h2 id="도커-docker--컨테이너-기반-가상화-container-based-virtualization">도커 (<code class="language-plaintext highlighter-rouge">Docker</code>) : 컨테이너 기반 가상화 (<code class="language-plaintext highlighter-rouge">Container-based Virtualization</code>)</h2>
 
 <p><img src="https://pyrasis.com/assets/images/Docker-HOWTO/docker-containerized-appliction-blue-border_2.png.webp" width="50%" /></p>
 
@@ -62,7 +62,7 @@ Server: ~
   </ul>
 </blockquote>
 
-<h2 id="도커-파일-dockerfile--서버-운영-기록을-코드화해-저장한-파일을-해당-시점의-도커-이미지로-빌드">도커 파일 (<code class="language-plaintext highlighter-rouge">Dockerfile</code>) : 서버 운영 기록을 코드화해 저장한 파일을 해당 시점의 도커 이미지로 빌드</h2>
+<h2 id="도커-파일-dockerfile--서버-운영-기록을-코드로-저장한-파일을-특정-시점의-도커-이미지로-빌드">도커 파일 (<code class="language-plaintext highlighter-rouge">Dockerfile</code>) : 서버 운영 기록을 코드로 저장한 파일을 특정 시점의 도커 이미지로 빌드</h2>
 
 <blockquote>
   <p>눈송이 서버 (<code class="language-plaintext highlighter-rouge">Snowflakes Server</code>) : 각 서버마다 운영 기록이 달라 서로 모양이 다른 서버들이 공존하는 상황</p>
@@ -89,7 +89,7 @@ Server: ~
 </ol>
 </div>
 
-<h2 id="도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보을-포함">도커 이미지 (<code class="language-plaintext highlighter-rouge">Docker Image</code>) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보을 포함</h2>
+<h2 id="도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보를-포함">도커 이미지 (<code class="language-plaintext highlighter-rouge">Docker Image</code>) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보를 포함</h2>
 <ul>
   <li>상태값을 가지지 않음 (변하지 않는 값들을 저장) ↔ 컨테이너 : 이미지가 실행된 살태 (변하는 값들을 저장)</li>
   <li>이미지 레이어 : 도커 이미지는 여러 <code class="language-plaintext highlighter-rouge">Read-Only</code> 레이어로 구성되고, 파일 추가 및 생성 시 새로운 레이어 생성

@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Docker] 1. 가상화와 컨테이너 - pocj8ur4in’s blog</title>
+<!-- begin _includes/seo.html --><title>[Docker] 1. Virtualization - pocj8ur4in’s blog</title>
 <meta name="description" content="가상화 (Virtualization) : 컴퓨터 자원 (Computer Resource)의 추상화">
 
 
@@ -22,7 +22,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[Docker] 1. 가상화와 컨테이너">
+<meta property="og:title" content="[Docker] 1. Virtualization">
 <meta property="og:url" content="http://localhost:4000/docker1/">
 
 
@@ -166,7 +166,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">[Docker] 1. 가상화와 컨테이너</li>
+        <li class="current">[Docker] 1. Virtualization</li>
       
     
   </ol>
@@ -180,7 +180,7 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Docker] 1. 가상화와 컨테이너">
+    <meta itemprop="headline" content="[Docker] 1. Virtualization">
     <meta itemprop="description" content="가상화 (Virtualization) : 컴퓨터 자원 (Computer Resource)의 추상화">
     <meta itemprop="datePublished" content="2022-11-02T00:00:00+09:00">
     <meta itemprop="dateModified" content="2023-12-11T00:00:00+09:00">
@@ -189,7 +189,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/docker1/" class="u-url" itemprop="url">[Docker] 1. 가상화와 컨테이너
+            <a href="http://localhost:4000/docker1/" class="u-url" itemprop="url">[Docker] 1. Virtualization
 </a>
           </h1>
           
@@ -206,7 +206,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 분 소요
+          3 분 소요
         
       </span>
     
@@ -221,7 +221,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#가상화-virtualization--컴퓨터-자원-computer-resource의-추상화">가상화 (Virtualization) : 컴퓨터 자원 (Computer Resource)의 추상화</a><ul><li><a href="#리소스-가상화-resource-virtualization--컴퓨터-내-특정-자원만을-추상화">리소스 가상화 (Resource Virtualization) : 컴퓨터 내 특정 자원만을 추상화</a></li><li><a href="#플랫폼-가상화-platform-virtualization--여러-개의-프로세스을-구동할-수-있는-플랫폼을-추상화">플랫폼 가상화 (Platform Virtualization) : 여러 개의 프로세스을 구동할 수 있는 플랫폼을 추상화</a><ul><li><a href="#에뮬레이터-emulator--모든-하드웨어-자원의-동작을-소프트웨어로-대체">에뮬레이터 (Emulator) : 모든 하드웨어 자원의 동작을 소프트웨어로 대체</a></li><li><a href="#하이퍼바이저-hypervisor--다수의-가상-머신을-생성-실행-제어하는-논리적-플랫폼으로써의-프로세스">하이퍼바이저 (Hypervisor) : 다수의 가상 머신을 생성, 실행, 제어하는 논리적 플랫폼으로써의 프로세스</a><ul><li><a href="#type-1-호스팅-hosting--하이퍼바이저가-일반-프로그램과-같이-운영체제의-소프트웨어-계층에서-실행">Type 1. 호스팅 (Hosting) : 하이퍼바이저가 일반 프로그램과 같이 운영체제의 소프트웨어 계층에서 실행</a></li><li><a href="#type-2-네이티브-native--하이퍼바이저를-하드웨어에-직접-임베디드되어-실행">Type 2. 네이티브 (Native) : 하이퍼바이저를 하드웨어에 직접 임베디드되어 실행</a><ul><li><a href="#전가상화-full-virtualization--하이퍼바이저에서-명령을-번역">전가상화 (Full-Virtualization) : 하이퍼바이저에서 명령을 번역</a></li><li><a href="#반가상화-para-virtualization--게스트-가상-머신에서-명령을-번역">반가상화 (Para-Virtualization) : 게스트 가상 머신에서 명령을 번역</a></li></ul></li></ul></li></ul></li></ul></li><li><a href="#컨테이너-container--소프트웨어-패키지의-추상화">컨테이너 (Container) : 소프트웨어 패키지의 추상화</a><ul><li><a href="#리눅스-컨테이너-linux-container--리눅스에서-제공하는-운영체제-레벨의-가상화">리눅스 컨테이너 (Linux Container) : 리눅스에서 제공하는 운영체제 레벨의 가상화</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#가상화-virtualization--컴퓨터-자원-computer-resource의-추상화">가상화 (Virtualization) : 컴퓨터 자원 (Computer Resource)의 추상화</a><ul><li><a href="#리소스-가상화-resource-virtualization--컴퓨터-내-특정-자원만을-추상화">리소스 가상화 (Resource Virtualization) : 컴퓨터 내 특정 자원만을 추상화</a></li><li><a href="#플랫폼-가상화-platform-virtualization--여러-개의-프로세스을-구동할-수-있는-플랫폼을-추상화">플랫폼 가상화 (Platform Virtualization) : 여러 개의 프로세스을 구동할 수 있는 플랫폼을 추상화</a><ul><li><a href="#에뮬레이터-emulator--모든-하드웨어-자원의-동작을-소프트웨어로-대체">에뮬레이터 (Emulator) : 모든 하드웨어 자원의 동작을 소프트웨어로 대체</a></li><li><a href="#하이퍼바이저-hypervisor--다수의-가상-머신을-생성-실행-제어하는-논리적-플랫폼으로써의-프로세스">하이퍼바이저 (Hypervisor) : 다수의 가상 머신을 생성, 실행, 제어하는 논리적 플랫폼으로써의 프로세스</a><ul><li><a href="#type-1-호스팅-hosting--하이퍼바이저가-일반-프로그램과-같이-운영체제의-소프트웨어-계층에서-실행">Type 1. 호스팅 (Hosting) : 하이퍼바이저가 일반 프로그램과 같이 운영체제의 소프트웨어 계층에서 실행</a></li><li><a href="#type-2-네이티브-native--하이퍼바이저를-하드웨어에-직접-임베디드되어-실행">Type 2. 네이티브 (Native) : 하이퍼바이저를 하드웨어에 직접 임베디드되어 실행</a><ul><li><a href="#전가상화-full-virtualization--하이퍼바이저에서-명령을-번역">전가상화 (Full-Virtualization) : 하이퍼바이저에서 명령을 번역</a></li><li><a href="#반가상화-para-virtualization--게스트-가상-머신에서-명령을-번역">반가상화 (Para-Virtualization) : 게스트 가상 머신에서 명령을 번역</a></li></ul></li></ul></li></ul></li></ul></li><li><a href="#컨테이너-container--소프트웨어-패키지-software-package의-추상화">컨테이너 (Container) : 소프트웨어 패키지 (Software Package)의 추상화</a><ul><li><a href="#리눅스-컨테이너-linux-container--리눅스에서-제공하는-운영체제-레벨의-컨테이너-기술">리눅스 컨테이너 (Linux Container) : 리눅스에서 제공하는 운영체제 레벨의 컨테이너 기술</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -250,7 +250,7 @@
   <li>
     <h4 id="에뮬레이터-emulator--모든-하드웨어-자원의-동작을-소프트웨어로-대체">에뮬레이터 (<code class="language-plaintext highlighter-rouge">Emulator</code>) : 모든 하드웨어 자원의 동작을 소프트웨어로 대체</h4>
     <ul>
-      <li>애뮬레이터 안의 응용 프로그램은 물리 하드웨어가 아닌 인터프리터 프로그램을 통해 실행 (<code class="language-plaintext highlighter-rouge">Java Virtual Machine</code>)
+      <li>애뮬레이터 안의 응용 프로그램은 물리 하드웨어가 아닌 인터프리터 프로그램을 통해 실행 (<code class="language-plaintext highlighter-rouge">JVM</code>)
         <ul>
           <li>인터프리터 프로그램은 가상 머신에서 명령을 수행할 때마다 물리 CPU가 처리할 바이너리 코드 갱신</li>
           <li>물리 CPU는 에뮬레이터를 실행하기 위한 바이너리 코드를 해석해 이를 대신 실행</li>
@@ -299,18 +299,33 @@
   </li>
 </ul>
 
-<h2 id="컨테이너-container--소프트웨어-패키지의-추상화">컨테이너 (<code class="language-plaintext highlighter-rouge">Container</code>) : 소프트웨어 패키지의 추상화</h2>
+<h2 id="컨테이너-container--소프트웨어-패키지-software-package의-추상화">컨테이너 (<code class="language-plaintext highlighter-rouge">Container</code>) : 소프트웨어 패키지 (<code class="language-plaintext highlighter-rouge">Software Package</code>)의 추상화</h2>
 <ul>
   <li>컨테이너는 프로세스가 동작하는 격리된 사용자 공간 인스턴스
     <ul>
       <li>하나의 응용 프로그램과 그 응용 프로그램의 동작을 위한 라이브러리로 구성</li>
     </ul>
   </li>
+  <li>운영체제의 커널은 여러 개의 격리된 컨테이너를 갖추어 각각의 개별적인 서버처럼 동작시킴</li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li>컨테이너를 사용하는 이유?
+      <ul>
+        <li>가상머신보다 공간을 적게 차지하며, 재가동성 또한 가상머신보다 좋다.</li>
+        <li>어플리케이선과 동일한 환경 세트로 개발되기에, 테스트에서 프로덕션까지의 이식성 및 일관성에 용이하다.</li>
+        <li>동적으로 리소스를 사용할 수 있어, 별도의 리소스를 할당할 필요가 없다.</li>
+        <li>서버의 밀도를 늪일 수 있다. 즉, 서버 내의 리소스를 과다하게 사용하지 않는 선에서 최적화가 가능하다.</li>
+        <li>하나의 커널에서 동작하기에, 업데이트 및 패치 작업 등을 한번만 수행하면 모든 컨테이너에 적용된다.</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<ul>
   <li>
-    <p>운영체제의 커널은 여러 개의 격리된 컨테이너를 갖추어 각각의 개별적인 서버처럼 동작시킴</p>
-  </li>
-  <li>
-    <h3 id="리눅스-컨테이너-linux-container--리눅스에서-제공하는-운영체제-레벨의-가상화">리눅스 컨테이너 (<code class="language-plaintext highlighter-rouge">Linux Container</code>) : 리눅스에서 제공하는 운영체제 레벨의 가상화</h3>
+    <h3 id="리눅스-컨테이너-linux-container--리눅스에서-제공하는-운영체제-레벨의-컨테이너-기술">리눅스 컨테이너 (<code class="language-plaintext highlighter-rouge">Linux Container</code>) : 리눅스에서 제공하는 운영체제 레벨의 컨테이너 기술</h3>
     <ul>
       <li>커널 레벨의 격리된 (<code class="language-plaintext highlighter-rouge">isolated</code>) 공간만 제공할 뿐, 개발 및 서버 운영에 필요한 부가 기능 부족</li>
     </ul>
@@ -384,7 +399,7 @@
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BDocker%5D+1.+%EA%B0%80%EC%83%81%ED%99%94%EC%99%80+%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20http%3A%2F%2Flocalhost%3A4000%2Fdocker1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BDocker%5D+1.+Virtualization%20http%3A%2F%2Flocalhost%3A4000%2Fdocker1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdocker1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
@@ -423,7 +438,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/docker2/" rel="permalink">[Docker] 2. Docker란?
+        <a href="/docker2/" rel="permalink">[Docker] 2. Docker
 </a>
       
     </h2>
