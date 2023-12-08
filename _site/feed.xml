@@ -1,4 +1,190 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-07T02:51:20+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Docker] 2. Docker</title><link href="http://localhost:4000/docker2/" rel="alternate" type="text/html" title="[Docker] 2. Docker" /><published>2023-12-05T00:00:00+09:00</published><updated>2023-12-05T00:00:00+09:00</updated><id>http://localhost:4000/docker2</id><content type="html" xml:base="http://localhost:4000/docker2/"><![CDATA[<h2 id="도커-docker--컨테이너-기반-가상화-container-based-virtualization">도커 (<code class="language-plaintext highlighter-rouge">Docker</code>) : 컨테이너 기반 가상화 (<code class="language-plaintext highlighter-rouge">Container-based Virtualization</code>)</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-08T22:52:09+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Docker] 4. Docker File</title><link href="http://localhost:4000/docker4/" rel="alternate" type="text/html" title="[Docker] 4. Docker File" /><published>2023-12-08T00:00:00+09:00</published><updated>2023-12-08T00:00:00+09:00</updated><id>http://localhost:4000/docker4</id><content type="html" xml:base="http://localhost:4000/docker4/"><![CDATA[<h2 id="도커-파일-dockerfile--서버-운영-기록을-코드로-저장한-파일을-특정-시점의-도커-이미지로-빌드">도커 파일 (<code class="language-plaintext highlighter-rouge">Dockerfile</code>) : 서버 운영 기록을 코드로 저장한 파일을 특정 시점의 도커 이미지로 빌드</h2>
+
+<blockquote>
+  <ul>
+    <li>눈송이 서버 (<code class="language-plaintext highlighter-rouge">Snowflakes Server</code>) : 각 서버마다 운영 기록이 달라 서로 모양이 다른 서버들이 공존하는 상황</li>
+  </ul>
+
+  <p>… 서버 간의 운영체제, 컴파일러, 설치된 패키지 등의 차이로 발생하는 문제 개선을 위해 서버 운영 기록을 저장하자!</p>
+</blockquote>
+
+<h3 id="도커-파일을-생성하는-과정은-테스트-주도-개발의-순환에-부합하다고-볼-수-있다">도커 파일을 생성하는 과정은 테스트 주도 개발의 순환에 부합하다고 볼 수 있다.</h3>
+<ul>
+  <li>테스트 주도 개발 (<code class="language-plaintext highlighter-rouge">Test Driven Development</code>) : 선 테스트 후 개발 사이클을 반복하는 개발 방법론</li>
+</ul>
+
+<div style="color: white; padding: 2% 1% 1% 1%; background-color: black;">
+<ol>
+  <li>테스트를 작성한다. → 도커 파일을 만든다.</li>
+  <li>테스트에 실패하고 코드를 수정한다. → 도커 이미지의 빌드에 실패하고 도커 파일을 수정한다.</li>
+  <li>테스트에 성공한다면, 코드를 리펙터링한다. → 도커 이미지의 빌드에 성공한다면, 도커 파일의 내용을 리펙터링한다.</li>
+  <li>처음으로 되돌아간다.</li>
+</ol>
+</div>
+
+<h3 id="dsl-domain-specific-language--도커-파일을-작성할-때-쓰는-언어-도커-이미지의-생성-과정-표현"><code class="language-plaintext highlighter-rouge">DSL</code> (<code class="language-plaintext highlighter-rouge">Domain-Specific Language</code>) : 도커 파일을 작성할 때 쓰는 언어 (도커 이미지의 생성 과정 표현)</h3>
+<blockquote>
+  <p>생성 과정을 표현? : 도커 파일은 일련의 인스트럭션을 실행된 결과로 도커 이미지를 생성한다.</p>
+  <ul>
+    <li>도커 파일의 인스트럭션과 이미지 레이어는 <code class="language-plaintext highlighter-rouge">1:1</code>의 관계를 가진다.</li>
+  </ul>
+</blockquote>
+
+<iframe width="80%" height="700" style="border:none" src="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#what-is-a-dockerfile"></iframe>
+
+<ul>
+  <li>
+    <h4 id="from--다른-컨테이너-이미지를-빌드의-시작점으로-지정"><code class="language-plaintext highlighter-rouge">FROM</code> : 다른 컨테이너 이미지를 빌드의 시작점으로 지정</h4>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">AS</code>: 컨테이너에 이름을 붙일 수 있음</li>
+    </ul>
+  </li>
+  <li>
+    <h4 id="env--컨테이너-내에서-사용될-환경-변수를-지정"><code class="language-plaintext highlighter-rouge">ENV</code> : 컨테이너 내에서 사용될 환경 변수를 지정</h4>
+  </li>
+  <li>
+    <h4 id="workdir--컨테이너-이미지의-파일-시스템에-디렉터리를-만들고-해당-디렉터리를-작업-디렉터리로-지정"><code class="language-plaintext highlighter-rouge">WORKDIR</code> : 컨테이너 이미지의 파일 시스템에 디렉터리를 만들고, 해당 디렉터리를 작업 디렉터리로 지정</h4>
+  </li>
+  <li>
+    <h4 id="copy--로컬의-파일-시스템-내-파일-디렉터리를-컨테이너-이미지로-복사"><code class="language-plaintext highlighter-rouge">COPY</code> : 로컬의 파일 시스템 내 파일, 디렉터리를 컨테이너 이미지로 복사</h4>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">--from=</code> : 해당 파일이 호스트 컴퓨터가 아닌 다른 컨테이너의 파일임을 알려줌</li>
+    </ul>
+  </li>
+  <li>
+    <h4 id="cmd--도커가-이미지로부터-컨테이너를-실행했을-때-실행할-명령을-지정"><code class="language-plaintext highlighter-rouge">CMD</code> : 도커가 이미지로부터 컨테이너를 실행했을 때 실행할 명령을 지정</h4>
+  </li>
+  <li>
+    <h4 id="run--빌드-과정에서-컨테이너-안에서-명령을-실행한-다음에-그-결과를-이미지-레이어에-저장"><code class="language-plaintext highlighter-rouge">RUN</code> : 빌드 과정에서 컨테이너 안에서 명령을 실행한 다음에 그 결과를 이미지 레이어에 저장</h4>
+  </li>
+</ul>
+
+<h3 id="q-도커-파일을-쓰는-이유">Q. 도커 파일을 쓰는 이유?</h3>
+
+<h4 id="a1-동일한-환경에서-어플리케이션을-실행-가능하게-한다">A1. 동일한 환경에서 어플리케이션을 실행 가능하게 한다.</h4>
+<ul>
+  <li>모든 빌드 과정은 도커 컨테이너 내부에서 이루어지며, 각 컨테이너는 모든 도구를 정확한 버전으로 갖추고 있다.
+    <ul>
+      <li>신규 개발자의 적응 기간, 빌드 서버의 관리 부담, 개발자 간의 도구 버전의 차이로 인한 빌드 실패를 줄일 수 있다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="a2-멀티-스테이지-환경에서-각-단계는-자신만의-캐시를-가져-성능을-향상시킬-수-있다">A2. 멀티 스테이지 환경에서 각 단계는 자신만의 캐시를 가져 성능을 향상시킬 수 있다.</h4>
+<ul>
+  <li>도커는 빌드 중에 각 인스트럭션에 해당하는 레이어 캐시를 찾는다.
+    <ul>
+      <li>만약 해당되는 캐시를 찾지 못하면 남은 인스트럭션이 모두 실행되지만, 그 범위가 해당하는 단계 안으로 국한된다.</li>
+      <li>이어지는 다음 단계는 캐시를 재사용하면서 시작되므로, 캐시 재사용을 통해 빌드 단계에서 시간 절약이 가능하다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="a3-멀티-스테이지-스크립트를-통해-최종-산출물의-크기를-가능한-한-작게-유지할-수-있다">A3. 멀티 스테이지 스크립트를 통해 최종 산출물의 크기를 가능한 한 작게 유지할 수 있다.</h4>
+<ul>
+  <li>최종 산출물인 도커 이미지에 불필요한 도구를 제외하여 어플리케이션의 의존 모듈 자체를 줄일 수 있다.</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Docker" /><summary type="html"><![CDATA[도커 파일 (Dockerfile) : 서버 운영 기록을 코드로 저장한 파일을 특정 시점의 도커 이미지로 빌드]]></summary></entry><entry><title type="html">[Docker] 3. Docker Container</title><link href="http://localhost:4000/docker3/" rel="alternate" type="text/html" title="[Docker] 3. Docker Container" /><published>2023-12-07T00:00:00+09:00</published><updated>2023-12-08T00:00:00+09:00</updated><id>http://localhost:4000/docker3</id><content type="html" xml:base="http://localhost:4000/docker3/"><![CDATA[<h2 id="도커-컨테이너-docker-container--도커에서-제공하는-컨테이너-기술">도커 컨테이너 (<code class="language-plaintext highlighter-rouge">Docker Container</code>) : 도커에서 제공하는 컨테이너 기술</h2>
+
+<blockquote>
+  <p><a href="https://pocj8ur4in.github.io//docker1/#컨테이너-container--소프트웨어-패키지-software-package의-추상화">해당 부분</a>에서 이어지는 내용입니다. 이전 내용에서는 가상화의 한 종류인 컨테이너 기술에 대해 서술하였다면, 이번에는 도커를 중심으로 하여 컨테이너에 대해 다뤄보겠습니다.</p>
+</blockquote>
+
+<h3 id="도커-컨테이너는-도커가-관리하는-독립적인-가상-리소스를-가진다">도커 컨테이너는 도커가 관리하는 독립적인 가상 리소스를 가진다.</h3>
+<ul>
+  <li>컨테이너 안에는 어플리케이션과 그 어플리케이션의 실행 환경 (호스트명, <code class="language-plaintext highlighter-rouge">IP</code> 주소, 디스크 드라이브 등)이 들어있음
+    <ul>
+      <li>각 컨테이너는 독립적인 환경을 가지되, 실행되는 컴퓨터의 <code class="language-plaintext highlighter-rouge">CPU</code>, 메모리, 운영체제를 공유함
+        <ul>
+          <li>격리 (<code class="language-plaintext highlighter-rouge">isolation</code>)와 밀집 (<code class="language-plaintext highlighter-rouge">density</code>)의 조건을 동시에 충족</li>
+          <li>빌드 - 공유 - 실행의 <code class="language-plaintext highlighter-rouge">workflow</code>으로 소프트웨어 배포를 단순화하기에 적합</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/29e20ccf-68e2-417e-82aa-deffbab42585" /></p>
+
+<ol>
+  <li>컨테이너 내부 어플리케이션이 실행중이여야 컨테이너의 상태도 실행 중이 된다.
+    <ul>
+      <li>컨테이너가 <code class="language-plaintext highlighter-rouge">Existed</code>인 상태에서는 <code class="language-plaintext highlighter-rouge">CPU</code> 자원이나 메모리를 사용하지 않는다.</li>
+    </ul>
+  </li>
+  <li>컨테이너가 종료되어도, 컨테이너는 사라지지 않고 그대로 남아있다.
+    <ul>
+      <li>나중에 다시 컨테이너를 실행하거나, 내부 파일이나 로그를 확인해볼 수 있다.</li>
+      <li>컨테이너를 백그라운드에서 계속 동작하도록 하려면, <code class="language-plaintext highlighter-rouge">-d</code> (<code class="language-plaintext highlighter-rouge">--detach</code>)</li>
+    </ul>
+  </li>
+  <li>컨테이너는 기본적으로 외부 환경에 노출되지 않는다.
+    <ul>
+      <li>도커는 호스트 컴퓨터의 네트워크 계층에 끼어들어 네트워크 트래픽 중 필요한 것을 컨테이너에 전달</li>
+      <li>컨테이너의 포트를 호스트 컴퓨터에 공개하려면, <code class="language-plaintext highlighter-rouge">--publish</code>
+        <ul>
+          <li>도커가 호스트 컴퓨터를 주시하다가 해당 포트로 들어오는 트래픽을 컨테이너에 전달</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="도커-컨테이너-또한-별도의-환경-변수-environment-variable를-가질-수-있다">도커 컨테이너 또한 별도의 환경 변수 (<code class="language-plaintext highlighter-rouge">Environment variable</code>)를 가질 수 있다.</h3>
+<ul>
+  <li>호스트 운영체제의 것을 가져오는 것이 아닌, <code class="language-plaintext highlighter-rouge">IP</code> 주소나 호스트 이름처럼 도커로부터 부여받음</li>
+</ul>
+
+<h2 id="도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보를-포함">도커 이미지 (<code class="language-plaintext highlighter-rouge">Docker Image</code>) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보를 포함</h2>
+<ul>
+  <li>상태값을 가지지 않음 (변하지 않는 값들을 저장) ↔ 컨테이너 : 이미지가 실행된 살태 (변하는 값들을 저장)</li>
+  <li>이미지 레이어 : 도커 이미지는 여러 <code class="language-plaintext highlighter-rouge">Read-Only</code> 레이어로 구성되고, 파일 추가 및 생성 시 새로운 레이어 생성
+    <ul>
+      <li>이미지 레이어는 도커 엔진의 캐시에 물리적으로 저장된 파일로, 여러 이미지와 컨테이너에서 공유함</li>
+      <li>유니온 파일 시스템 (<code class="language-plaintext highlighter-rouge">Union File Systems</code>)읕 통해 여러 개의 레이어를 하나의 파일 시스템으로 활용</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">docker image ls</code>에서 도커 이미지의 <code class="language-plaintext highlighter-rouge">SIZE</code>는 논리적 용량이지 실제로 차지하는 디스크 용량이 아니다!</li>
+  </ul>
+
+  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/9ea0b979-d07d-4a66-900a-e3ecd0c3142b" /></p>
+
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">docker system df</code>를 통해 이미지 전체 용량의 총합을 볼 수 있다.</li>
+  </ul>
+
+  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/7c554710-303b-4e28-81df-e699a9fbbe89" /></p>
+</blockquote>
+
+<ul>
+  <li>컨테이너 레이어 : 컨테이너가 실행되면 이미지 레이어 위에 읽기-쓰기 (<code class="language-plaintext highlighter-rouge">Read-Write</code>) 레이어를 추가
+    <ul>
+      <li>컨테이너를 실행하면서 생성되거나 변경된 내용을 저장</li>
+    </ul>
+  </li>
+  <li>이미지 경로 : <code class="language-plaintext highlighter-rouge">URL</code> 방식으로 관리 -&gt; 뒤에 태그 (<code class="language-plaintext highlighter-rouge">/tag</code>)를 붙임</li>
+  <li><a href="https://hub.docker.com"> 도커 허브</a> (<code class="language-plaintext highlighter-rouge">Docker Hub</code>) : 도커 이미지를 서버에 무료로 공개하고 관리</li>
+</ul>
+
+<h3 id="q-도커-이미지를-쓰는-이유--도커-이미지와-도커-컨테이너들을-클래스나-인스턴스처럼-활용한다">Q. 도커 이미지를 쓰는 이유? : 도커 이미지와 도커 컨테이너들을 클래스나 인스턴스처럼 활용한다.</h3>
+<ul>
+  <li>도커는 해시 값 (= 컨테이너 ID)과 임의의 이름 (= 컨테이너 이름)를 통해 컨테이너를 구분하고 이들을 환경변수로 관리</li>
+</ul>
+
+<div style="color: white; padding: 3% 2% 2% 2%; background-color: black;">
+운영자가 지금까지 운영한 서버를 도커 이미지로 배포하고 도커 컨테이너에 설치한다면,
+<ul>
+  <li>도커 파일 : 지금까지 서버를 운영한 기록</li>
+  <li>도커 이미지 (도커 파일 + 실행 시점) : 지금부터 설치된 서버가 가질 초기값</li>
+  <li>도커 컨테이너 (도커 파일 + 환경 변수) : 지금부터 설치된 서버가 운영될 장소</li>
+</ul>
+</div>
+<ul>
+  <li>도커 안에서는 서버 역시 하나의 소프트웨어처럼 사용할 수 있고, 생성할 수 있는 컨테이너의 개수에도 제한이 없다.</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Docker" /><summary type="html"><![CDATA[도커 컨테이너 (Docker Container) : 도커에서 제공하는 컨테이너 기술]]></summary></entry><entry><title type="html">[Docker] 2. Docker</title><link href="http://localhost:4000/docker2/" rel="alternate" type="text/html" title="[Docker] 2. Docker" /><published>2023-12-05T00:00:00+09:00</published><updated>2023-12-05T00:00:00+09:00</updated><id>http://localhost:4000/docker2</id><content type="html" xml:base="http://localhost:4000/docker2/"><![CDATA[<h2 id="도커-docker--컨테이너-기반-가상화-container-based-virtualization">도커 (<code class="language-plaintext highlighter-rouge">Docker</code>) : 컨테이너 기반 가상화 (<code class="language-plaintext highlighter-rouge">Container-based Virtualization</code>)</h2>
 
 <p><img src="https://pyrasis.com/assets/images/Docker-HOWTO/docker-containerized-appliction-blue-border_2.png.webp" width="50%" /></p>
 
@@ -62,65 +248,41 @@ Server: ~
   </ul>
 </blockquote>
 
-<h2 id="도커-파일-dockerfile--서버-운영-기록을-코드로-저장한-파일을-특정-시점의-도커-이미지로-빌드">도커 파일 (<code class="language-plaintext highlighter-rouge">Dockerfile</code>) : 서버 운영 기록을 코드로 저장한 파일을 특정 시점의 도커 이미지로 빌드</h2>
-
-<blockquote>
-  <p>눈송이 서버 (<code class="language-plaintext highlighter-rouge">Snowflakes Server</code>) : 각 서버마다 운영 기록이 달라 서로 모양이 다른 서버들이 공존하는 상황</p>
-  <ul>
-    <li>서버 간의 운영체제, 컴파일러, 설치된 패키지 등의 차이로 발생하는 문제 개선을 위해 서버 운영 기록 저장</li>
-  </ul>
-</blockquote>
+<h2 id="도커-컴포넌트-docker-component--도커-엔진을-중심으로-여러-컴포넌트를-조합해-구성">도커 컴포넌트 (<code class="language-plaintext highlighter-rouge">Docker Component</code>) : 도커 엔진을 중심으로 여러 컴포넌트를 조합해 구성</h2>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">DSL</code> (<code class="language-plaintext highlighter-rouge">Domain-Specific Language</code>) : 도커 파일을 작성할 때 쓰는 언어 (도커 이미지의 생성 과정 표현)</li>
-</ul>
-
-<h3 id="q-도커-파일을-쓰는-이유--테스트-주도-개발의-순환에-부합한다">Q. 도커 파일을 쓰는 이유? : 테스트 주도 개발의 순환에 부합한다.</h3>
-<ul>
-  <li>테스트 주도 개발 (<code class="language-plaintext highlighter-rouge">Test Driven Development</code>) : 선 테스트 후 개발 사이클을 반복하는 개발 방법론</li>
-</ul>
-
-<div style="color: white; padding: 2% 1% 1% 1%; background-color: black;">
-<ol>
-  <li>테스트를 작성한다. → 도커 파일을 만든다.</li>
-  <li>테스트에 실패하고 코드를 수정한다. → 도커 이미지의 빌드에 실패하고 도커 파일을 수정한다.</li>
-  <li>테스트에 성공한다면, 코드를 리펙터링한다. → 도커 이미지의 빌드에 성공한다면, 도커 파일의 내용을 리펙터링한다.</li>
-  <li>처음으로 되돌아간다.</li>
-</ol>
-</div>
-
-<h2 id="도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보를-포함">도커 이미지 (<code class="language-plaintext highlighter-rouge">Docker Image</code>) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보를 포함</h2>
-<ul>
-  <li>상태값을 가지지 않음 (변하지 않는 값들을 저장) ↔ 컨테이너 : 이미지가 실행된 살태 (변하는 값들을 저장)</li>
-  <li>이미지 레이어 : 도커 이미지는 여러 <code class="language-plaintext highlighter-rouge">Read-Only</code> 레이어로 구성되고, 파일 추가 및 생성 시 새로운 레이어 생성
+  <li>
+    <h3 id="도커-엔진-docker-engine--도커-이미지를-생성하고-컨테이너를-관리">도커 엔진 (<code class="language-plaintext highlighter-rouge">Docker Engine</code>) : 도커 이미지를 생성하고 컨테이너를 관리</h3>
     <ul>
-      <li>유니온 파일 시스템 (<code class="language-plaintext highlighter-rouge">Union File Systems</code>)읕 통해 여러 개의 레이어를 하나의 파일 시스템으로 활용</li>
+      <li>로컬 이미지 캐시 담당 : 새로운 이미지가 필요할 때 이미지를 다운로드하거나, 기존 이미지를 사용</li>
+      <li><code class="language-plaintext highlighter-rouge">Docker API</code>을 통해 맡은 기능 수행 → 도커 명령행 인터페이스 (<code class="language-plaintext highlighter-rouge">Docker CLI</code>)에서 도커 <code class="language-plaintext highlighter-rouge">API</code> 호출</li>
     </ul>
   </li>
-  <li>컨테이너 레이어 : 컨테이너가 실행되면 이미지 레이어 위에 읽기/쓰기 (<code class="language-plaintext highlighter-rouge">Read-Write</code>) 레이어를 추가
+  <li>
+    <h3 id="도커-레지스트리-docker-registry--도커-이미지를-공개하고-공유">도커 레지스트리 (<code class="language-plaintext highlighter-rouge">Docker REgistry</code>) : 도커 이미지를 공개하고 공유</h3>
     <ul>
-      <li>컨테이너를 실행하면서 생성되거나 변경된 내용을 저장</li>
+      <li><code class="language-plaintext highlighter-rouge">Docker</code> 공식 레지스트리 서비스로 <code class="language-plaintext highlighter-rouge">Docker Hub</code>가 있음</li>
+      <li>클라우드 사업자 또한 <code class="language-plaintext highlighter-rouge">AWS ECR</code>, <code class="language-plaintext highlighter-rouge">GCP Artifact Registry</code> 등의 컨테이너 레지스트리 제공</li>
     </ul>
   </li>
-  <li>이미지 경로 : <code class="language-plaintext highlighter-rouge">URL</code> 방식으로 관리 -&gt; 뒤에 태그 (<code class="language-plaintext highlighter-rouge">/tag</code>)를 붙임</li>
-  <li><a href="https://hub.docker.com"> 도커 허브</a> (<code class="language-plaintext highlighter-rouge">Docker Hub</code>) : 도커 이미지를 서버에 무료로 공개하고 관리</li>
-</ul>
-
-<h3 id="q-도커-이미지를-쓰는-이유--도커-이미지와-도커-컨테이너들을-클래스나-인스턴스처럼-활용한다">Q. 도커 이미지를 쓰는 이유? : 도커 이미지와 도커 컨테이너들을 클래스나 인스턴스처럼 활용한다.</h3>
-<ul>
-  <li>도커는 해시 값 (= 컨테이너 ID)과 임의의 이름 (= 컨테이너 이름)를 통해 컨테이너를 구분하고 이들을 환경변수로 관리</li>
-</ul>
-
-<div style="color: white; padding: 3% 2% 2% 2%; background-color: black;">
-운영자가 지금까지 운영한 서버를 도커 이미지로 배포하고 도커 컨테이너에 설치한다면,
-<ul>
-  <li>도커 파일 : 지금까지 서버를 운영한 기록</li>
-  <li>도커 이미지 (도커 파일 + 실행 시점) : 지금부터 설치된 서버가 가질 초기값</li>
-  <li>도커 컨테이너 (도커 파일 + 환경 변수) : 지금부터 설치된 서버가 운영될 장소</li>
-</ul>
-</div>
-<ul>
-  <li>도커 안에서는 서버 역시 하나의 소프트웨어처럼 사용할 수 있고, 생성할 수 있는 컨테이너의 개수에도 제한이 없다.</li>
+  <li>
+    <h3 id="도커-컴포즈-docker-compose--여러-컨테이너를-하나의-서비스로-정의해-컨테이너의-묶음으로-관리">도커 컴포즈 (<code class="language-plaintext highlighter-rouge">Docker Compose</code>) : 여러 컨테이너를 하나의 서비스로 정의해 컨테이너의 묶음으로 관리</h3>
+    <ul>
+      <li>여러 개의 컨테이너 구성 정보를 코드로 정의한 파일을 읽어 컨테이너를 순차적으로 생성</li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="도커-머신-docker-machine--가상-호스트에-도커-엔진을-설치하여-호스트를-관리">도커 머신 (<code class="language-plaintext highlighter-rouge">Docker Machine</code>) : 가상 호스트에 도커 엔진을 설치하여 호스트를 관리</h3>
+    <ul>
+      <li>여러 운영체제나 클라우드 환경에서 도커를 동일하게 실행하기 위해 도커의 실행 환경을 자동으로 생성</li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="도커-스왐-docker-swarm--여러-도커-호스트를-클러스터화해-관리">도커 스왐 (<code class="language-plaintext highlighter-rouge">Docker Swarm</code>) : 여러 도커 호스트를 클러스터화해 관리</h3>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Manger</code>가 클러스트를 관리하거나 <code class="language-plaintext highlighter-rouge">API</code>를 제공하고, <code class="language-plaintext highlighter-rouge">Node</code>가 컨테이너를 실행</li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="도커-명령어-docker-command--docker-command-형식으로-구성">도커 명령어 (<code class="language-plaintext highlighter-rouge">Docker Command</code>) : <code class="language-plaintext highlighter-rouge">docker &lt;command&gt;</code> 형식으로 구성</h2>
@@ -2019,383 +2181,4 @@ subprojects {
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // 'prepareKotlinBuildScriptModel'라는 이름의 empty task 등록
     tasks.register('prepareKotlinBuildScriptModel'){}
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[vocawik 프로젝트의 #1. init: git 저장소 생성 ~ #3. init: 멀티모듈 프로젝트 세팅에 대한 내용입니다.]]></summary></entry><entry><title type="html">[Github Pages] 6. Github Pages 블로그 기능 추가</title><link href="http://localhost:4000/blog6/" rel="alternate" type="text/html" title="[Github Pages] 6. Github Pages 블로그 기능 추가" /><published>2023-04-10T00:00:00+09:00</published><updated>2023-10-06T00:00:00+09:00</updated><id>http://localhost:4000/blog6</id><content type="html" xml:base="http://localhost:4000/blog6/"><![CDATA[<blockquote>
-  <p>이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html이나 css를 다룰 줄 알면 금방 할 수 있는, 혹은 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를 해결하였는지, 에 대해 자세히 쓰고 싶었다. 그래서 이 게시물은 다른 게시물들과 달리, 내가 블로그에서 부족하다고 느낀 점들을 계속 조금씩이라도 보충해나갈 계획이다.</p>
-</blockquote>
-
-<h2 id="1-블로그-댓글-feat-disqus-giscus">1. 블로그 댓글 (feat. disqus, giscus)</h2>
-<p>앞서 서술한 게시물을 보면 Github Pages는 정적 웹 사이트 호스팅 서비스라는 말이 있다. 모든 웹 페이지를 미리 생성하고, 방문자로부터 요청이 들어오면 미리 만든 웹 페이지를 그대로 응답한다는 건데, 사용자와 동적으로 정보를 주고받아야 하는 댓글 등의 기능은 불가능하다는 것이다.<br /></p>
-
-<p>그래서 처음에는 댓글 플랫폼인 <a href="https://disqus.com">disqus</a>를 통해 이를 해결하고자 하였다. 방법은 간단한데, 사이트에 가입하고 무료 플랜을 구독한 다음에 <code class="language-plaintext highlighter-rouge">_config.yml</code>를 다음과 같이 수정해주기만 하면 된다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>comments:
-  provider               : "disqus" # 댓글 제공자 지정
-  disqus:
-    shortname            :          # disqus ID 지정
-</code></pre></div></div>
-
-<p>그런데 disqus에서 제공하는 기능인 ‘SNS로 댓글 달기’은 개발자 친화적인 기능은 아니였고, 또 나중에는 광고가 노출되기 시작했다. 그래서 대안으로 찾은 게 <a href="https://giscus.app/ko">giscus</a>인데, GitHub Discussions로 작동하고, 마크다운도 지원하면서 대댓글이나 반응과 같은 자잘한 기능들이 마음에 들었다.</p>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/d0db9e9a-29a3-4529-918e-f9ae0ddc9b65" width="100%" /></p>
-
-<p>적용하는 방법도 Github 앱을 저장소에 설치한 뒤에 html 파일에 아래의 스크립트를 넣어주기만 하면 되는데, 나 같은 경우에는 Minimal Mistakes 테마에서 <code class="language-plaintext highlighter-rouge">_includes/social_share.html</code> 파일에 해당 구문을 넣어 적용시켰다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;section class="page__share"&gt;
-  &lt;script src="https://giscus.app/client.js"
-    data-repo="pocj8ur4in/pocj8ur4in.github.io"
-    data-repo-id="R_kgDOICGarA"
-    data-category="Q&amp;A"
-    data-category-id="DIC_kwDOICGarM4CZ65L"
-    data-mapping="pathname"
-    data-strict="1"
-    data-reactions-enabled="0"
-    data-emit-metadata="1"
-    data-input-position="top"
-    data-theme="dark_dimmed"
-    data-lang="ko"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async&gt;
-  &lt;/script&gt;
-&lt;/section&gt;
-</code></pre></div></div>
-
-<h2 id="2-블로그-google-검색-노출-및-검색-설정">2. 블로그 Google 검색 노출 및 검색 설정</h2>
-<p>아무래도 블로그를 운영하다 보면 다른 사람들의 반응이 궁금할 때가 많은데, 아무것도 설정하지 않은 블로그는 검색되지 않는다는 사실을 깨닫고 해결책을 찾아보았다. <a href="https://search.google.com/search-console/about">Google Search Console</a>에서 내 도메인을 입력한 다음에 소유권 확인을 위해 다운받은 <code class="language-plaintext highlighter-rouge">.HTML</code>파일을 <code class="language-plaintext highlighter-rouge">root</code>에 위치시키만 하면 며칠 안으로 아래와 같이 적용된다.</p>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5876c2af-191d-47d7-ab9e-f3c2c55bde32" width="70%" /></p>
-
-<p>추가로 블로그 포스트들이 검색 엔진에 검색되는 것을 가능하도록 진행할 작업들이 있는데, 먼저 <code class="language-plaintext highlighter-rouge">_config.yml</code> 파일에서 아래 설정들을 <code class="language-plaintext highlighter-rouge">true</code>로 설정한다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>search                   : # 블로그 검색 여부 지정
-search_full_content      : # 블로그의 내용 검색 여부 지정
-</code></pre></div></div>
-
-<p>그리고 웹 크롤링을 위해 <a href="https://github.com/pocj8ur4in/pocj8ur4in.github.io/blob/main/sitemap.yml"><code class="language-plaintext highlighter-rouge">sitemap.yml</code></a>과 <code class="language-plaintext highlighter-rouge">robots.txt</code> 파일을 생성해 <code class="language-plaintext highlighter-rouge">root</code>에 위치시키면 된다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
-User-agent: *
-Allow: /
-
-# 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 차단
-User-agent: *
-Disallow: /
-
-# 구글 검색 로봇만 차단하고, 다른 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
-User-agent: Googlebot
-Disallow: /
-
-# 네이버 검색로봇만 차단하고, 다른 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
-User-agent: Yeti
-Disallow: /
-
-Sitemap: https://pocj8ur4in.github.io/sitemap.xml
-</code></pre></div></div>
-
-<p>만약에 블로그의 방문자 수 통계를 보고 싶다면, <a href="https://analytics.google.com/analytics/web/provision/#/provision">Google Analytics</a>를 가입한 후 애널리틱스 데이터 스트림을 설정하면 된다. 이때, 측정 ID를 복사한 후 <code class="language-plaintext highlighter-rouge">_config.yml</code> 파일을 다음과 같이 수정하면 된다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Analytics
-analytics:
-  provider               : "google-gtag"
-  google:
-    tracking_id          : "(측정 ID)"
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html이나 css를 다룰 줄 알면 금방 할 수 있는, 혹은 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를 해결하였는지, 에 대해 자세히 쓰고 싶었다. 그래서 이 게시물은 다른 게시물들과 달리, 내가 블로그에서 부족하다고 느낀 점들을 계속 조금씩이라도 보충해나갈 계획이다.]]></summary></entry><entry><title type="html">[Github Pages] 5. Github Pages 블로그 설정 &amp;amp; 포스트</title><link href="http://localhost:4000/blog5/" rel="alternate" type="text/html" title="[Github Pages] 5. Github Pages 블로그 설정 &amp;amp; 포스트" /><published>2023-04-05T00:00:00+09:00</published><updated>2023-04-08T00:00:00+09:00</updated><id>http://localhost:4000/blog5</id><content type="html" xml:base="http://localhost:4000/blog5/"><![CDATA[<blockquote>
-  <p>솔직히 블로그 설정을 건드는 부분은 내가 아는 정보들을 그대로 나열할 수 밖에 없다고 생각한다… 그래도 내가 시행착오를 겪었던 경험을 떠올리면서 하나하나 풀어서 작성하려 하였으니, 미숙한 글이지만 남들에게 도움이 되었으면 정말 좋겠다… 그리고 Github Pages이나 Minimal Mistakes으로 처음 블로그를 운영하시는 분들의 시선에 맞춰 html, css에 대한 자세한 내용은 다른 포스트로 옮겼으니 참고해주셨으면 한다.</p>
-</blockquote>
-
-<h2 id="1-블로그-기본-설정">1. 블로그 기본 설정</h2>
-<p><img width="228" alt="blog1-1" src="https://user-images.githubusercontent.com/105341168/229804167-bbb75af4-6ec4-4683-9753-0f2cbf7d97bb.png" /></p>
-
-<p>위의 디렉터리에서 <code class="language-plaintext highlighter-rouge">_config.yml</code>이라는 파일을 열어보면 다음과 같이 구성되어 있는데, 오른쪽의 주석을 참조해서 나만의 블로그를 커스텀마이징해보자. 이걸 어떻게 적용하는지 잘 모르겠다, 싶은 사람은 <a href="https://github.com/pocj8ur4in/pocj8ur4in.github.io/blob/main/_config.yml">내 블로그에 적용된 것</a>을 예시로 보면서 작업해보자.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minimal_mistakes_skin    :         # 블로그의 전체적인 스킨 지정 
-                                   # (Minimal Mistakes에서 기본적으로 제공)
-                                   # "default" "air", "aqua", "contrast", "dark"
-                                   # "dirt", "neon", "mint", "plum", "sunrise"
-
-# Site Settings
-locale                   : "ko-KR" # 블로그에 쓰일 로컬 언어 지정
-title                    :         # 메타 태그에 들어갈 블로그의 제목 지정
-subtitle                 :         # 블로그의 제목 하단에 위치할 부제목 지정
-name                     :         # 블로그 저자 이름 지정
-description              :         # SEO 향상을 위한 meta description 태그 지정
-url                      :         # 블로그 url 
-                                   # "https://(github ID).github.io"
-repository               :         # github repository url
-                                   # "https://github.com/(github ID)/(github ID).github.io"
-teaser                   :         # 관련 포스트나 검색 등에 들어갈 미리보기 이미지 지정
-                                   # ("assets/images/"로 연결)
-logo                     :         # 블로그의 제목 옆에 들어갈 로고 이미지 지정
-                                   # ("assets/images"로 연결)
-masthead_title           :         # 블로그 프로필 상단에 위치할 사이트 제목 지정
-breadcrumbs              : true    # 브래드크럼 사용 여부 지정
-words_per_minute         : 200     # 포스트를 읽는 데 걸리는 시간을 계산히기 위한 분당 읽는 글자의 지정
-</code></pre></div></div>
-
-<h2 id="2-블로그-레이아웃-설정">2. 블로그 레이아웃 설정</h2>
-<p>이제 조금은 삭막한(?) 블로그의 레이아웃을 뜯어고칠 차례이다. 우선은 이전처럼 <code class="language-plaintext highlighter-rouge">_config.yml</code> 파일을 아래와 같이 자신이 원하는 대로 수정하면 된다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 블로그 좌측 사이드바에 위치할 프로필 설정
-author:
-  name             :       # 저자 이름 지정
-  avatar           :       # 저자 이미지 지정
-  bio              :       # 저자 바이오그래피 지정
-  location         :       # 저자 위치 지정
-  email            :       # 저자 이메일 지정
-  links:                   # 저자 관련 사이트 링크 지정
-    - label:               # 사이트 분류 지정
-      icon:                # 사이트 아이콘 지정
-      url:                 # 사이트 url 지정
-
-## 블로그 하단에 위치할 꼬리말 설정
-footer:
-  links:                   # 블로그 관련 사이트 링크 지정
-    - label:               # 사이트 분류 지정
-      icon:                # 사이트 아이콘 지정
-      url:                 # 사이트 url 지정
-</code></pre></div></div>
-
-<h3 id="1-네비게이션-바">(1) 네비게이션 바</h3>
-
-<p>다음은 기본 테마를 보면서 혹은 자기가 기능을 적용하면서 불편한 점들을 확인하고, 직접 테마의 요소들을 뜯어고치는 건데… 이건 사람마다 달라서 뭐라고 말을 못하겠다. 그래서 나 같은 경우에 어떤 부분이 불편했고, 그래서 수정했는지 얘기해보고자 한다. 우선은 블로그 상단의 네비게이션 바에 내가 보기에 불필요한 카테고리들이 있었다. 그래서 카테고리, 태그만 남기기 위해  <code class="language-plaintext highlighter-rouge">_data/navigation.yml</code> 파일을 수정하였다.  <code class="language-plaintext highlighter-rouge">_pages</code> 디렉토리를 보면 여기에 적용할 수 있는 여러 요소들이 있는데, 직접 입맛에 맛게 적용해보면 된다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>main:
-  - title: (카테고리)        # 화면에 보여질 세부 항목의 이름 지정
-    url: /(카테고리)/        # _pages 내에 정해진 양식 파일이나 특정 링크로 연결
-</code></pre></div></div>
-
-<h3 id="2-블로그-너비-및-폰트-크기">(2) 블로그 너비 및 폰트 크기</h3>
-
-<p>그리고 블로그에 포스트를 쓸 때에 한쪽에는 VS Code를, 다른 쪽에는 로컬에서 호스팅한 블로그를 보기 위한 사파리 브라우저를 띄워 놓곤 했는데, 그때마다 기본으로 설정된 블로그 너비랑 폰트 크기가 글을 읽기에 굉장히 불편했다. 그래서 <code class="language-plaintext highlighter-rouge">_sass/minimal_mistakes/_variables.scss</code> 파일과 <code class="language-plaintext highlighter-rouge">_sass/minimal_mistakes/_reset.scss</code> 파일을 다음과 같이 수정해보았다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 블로그 너비 설정
-/*
-   Grid
-   ========================================================================== */
-
-$right-sidebar-width-narrow: 200px !default;    // default 200px
-$right-sidebar-width: 300px !default;           // default 300px
-$right-sidebar-width-wide: 400px !default;      // default 400px
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 블로그 폰트 크기 설정
-html {
-  /* apply a natural box layout model to all elements */
-  box-sizing: border-box;
-  background-color: $background-color;
-  font-size: 16px;                    // Default 16px;
-
-  @include breakpoint($medium) {
-    font-size: 16px;                  // Default 18px;
-  }
-
-  @include breakpoint($large) {
-    font-size: 16px;                  // Default 20px;
-  }
-
-  @include breakpoint($x-large) {
-    font-size: 16px;                  // Default 22px;
-  }
-
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-</code></pre></div></div>
-
-<h3 id="3-블로그-아이콘">(3) 블로그 아이콘</h3>
-
-<p>또 블로그 주소 창에 같이 뜰 아이콘이 아무것도 안 뜨니 뭔가 내 블로그 같다는 느낌이 안들었다. 그래서 이것 또한 <code class="language-plaintext highlighter-rouge">_includes/_head/custom.html</code> 파일에 내가 원하는 아이콘을 넣었다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- start custom head snippets --&gt;
-
-&lt;!-- insert favicons. use https://realfavicongenerator.net/ --&gt;
-&lt;link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.ico/apple-touch-icon.png"&gt;
-&lt;link rel="icon" type="image/png" sizes="32x32" href="/assets/logo.ico/favicon-32x32.png"&gt;
-&lt;link rel="icon" type="image/png" sizes="16x16" href="/assets/logo.ico/favicon-16x16.png"&gt;
-&lt;link rel="mask-icon" href="/assets/logo.ico/safari-pinned-tab.svg" color="#ffffff"&gt;
-&lt;meta name="msapplication-TileColor" content="#ffffff"&gt;
-&lt;meta name="theme-color" content="#ffffff"&gt;
-</code></pre></div></div>
-
-<p>내가 수정한 것은 이정도? 인데 자잘하게 더 파고들면 커스텀마이징할 레이아웃 요소가 정말 많다. html, css, yml 파일을 건드는 것이라 그리 어렵지도 않고, 한번 배워두면 생각보다 쓸 때도 많다. 아래는 Minimal Mistakes Themes의 디렉토리 구조에 주석을 단 것인데, 커스텀마이징이 필요할 때 이를 참고하기 좋은 것 같다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minimal-mistakes
-├── _data                                 # 테마를 커스터마이징하기 위한 파일을 저장하는 디렉터리 
-| |                                       # (yml, yaml, json, csv, tsv 파일을 자동으로 읽어들어 site.data로 사용)
-| ├── navigation.yml                      # 상단 메뉴바를 커스터마이징하기 위한 파일
-| └── ui-text.yml                         # 언어별로 어떤 텍스트로 표시되는지 나열하는 파일
-|
-├── _site                                 # 재사용되는 html 파일을 저장하는 디렉터리 (공통된 컴포넌트들 보관)
-| ├── search                              # 검색 엔진을 커스터마이징한 내용을 저장하는 디렉터리
-| ├── analytics-providers
-| └── custom.html                         # 분석 플랫폼 공급자를 커스터마이징한 내용을 저장하는 파일
-| ├── comments-providers
-| └── custom.html                         # 댓글 플랫폼 공급자를 커스터마이징한 내용을 저장하는 파일
-| ├── head
-| └── custom.html                         # head를 커스터마이징한 내용을 저장하는 파일
-| ├── footer
-| └── custom.html                         # footer를 커스마이징한 내용을 저장하는 파일
-| ├── nav_list                            # 메뉴 상단바의 리스트에 대한 helper 파일
-| ├── archive-single.html                 # 아카이브 문서에서 단일 문서를 표현하는 방법을 저장하는 파일
-| ├── author-profiles.html                # author profile link애 대한 내용을 저장하는 파일
-| ├── author-profile-custom-links.html    # author profile link를 커스마이징한 내용을 저장하는 파일
-| ├── breadcrumbs.html                    # breadcrumbs에 대한 내용을 저장하는 파일
-| ├── single-page
-| ├── page__taxonomy.html                 # 단일 문서에서 태그와 카테고리를 표현하는 방법을 저장하는 파일
-| ├── tag-list.html                       # 단일 문서에서 태그 리스트를 표현하는 방법을 저장하는 파일
-| └── category-list.html                  # 단일 문서에서 카테고리 리스트를 표현하는 방법을 저장하는 파일
-├── _posts                                # 블로그에 포스트한 md 파일을 저장하는 디렉터리
-├── _includes
-├── _layouts                              # 각 문서의 디자인과 직접적으로 연결된 전체적인 레이아웃 디렉토리
-├── _sass                                 # minimal-mistakes.scss에 임포트할 수 있는 scss 파일을 저장하는 스타일시트 디렉터리
-├── assets                                # css, js, 이미지 파일을 저장하는 디렉터리
-| ├── _css
-| ├── _images
-| └── _js 
-├── _config.yml                           # 블로그를 구성하기 위한 기본적인 설정값을 설정하는 yml 파일
-├── Gemfile                               # 사용할 gem 플러그인 목록
-├── index.html                            # 블로그 처음 홈 페이지
-└── package.json
-</code></pre></div></div>
-
-<h2 id="3-블로그-포스트-작성-및-머릿말-작성">3. 블로그 포스트 작성 및 머릿말 작성</h2>
-<p><code class="language-plaintext highlighter-rouge">_posts</code> 폴더에 <code class="language-plaintext highlighter-rouge">XXXX(YEAR)-XX(MONTH)-XX(DAY)-(NAME).md</code>을 생성해보자. 이때 YEAR, MONTH, DAY는 포스트가 작성된 연도, 월, 일이 되고 NAME은 포스트의 경로가 된다. 그리고 파일 상단에 위치할 머릿말을 작성하기 위해 아래와 같이 <code class="language-plaintext highlighter-rouge">---</code>에 둘러싸인 내용을 작성해보자.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-title: "[Blog] macOS에서 Minimal Mistakes로 깃허브 블로그 만들기"
-
-categories:
-    - Github.io
-
-tag:
-    [HTML, JavaScript, SCSS, Ruby]
-
-toc: true
-toc_sticky: true
-
-date: 2022-09-26
-lastmod: 2022-09-26
----
-</code></pre></div></div>
-
-<table>
-    <thead>
-        <tr>
-            <th>양식 이름</th>
-            <td>양식 설명</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>title</th>
-            <td>포스트 제목</td>
-        </tr>
-        <tr>
-            <th>categories</th>
-            <td>포스트 카테고리</td>
-        </tr>
-        <tr>
-            <th>tags</th>
-            <td>포스트 태그</td>
-        </tr>
-        <tr>
-            <th>toc</th>
-            <td>우측 상단의 목차</td>
-        </tr>
-        <tr>
-            <th>toc_label</th>
-            <td>목차 이름</td>
-        </tr>
-        <tr>
-            <th>toc_icon</th>
-            <td>목차 아이콘</td>
-        </tr>
-        <tr>
-            <th>toc_sticky</th>
-            <td>목차 고정 여부</td>
-        </tr>
-        <tr>
-            <th>date</th>
-            <td>포스트 작성일</td>
-        </tr>
-        <tr>
-            <th>lastmod</th>
-            <td>포스트 수정일</td>
-        </tr>
-        <tr>
-            <th>author_profile</th>
-            <td>프로필 창 표시 여부</td>
-        </tr>
-    </tbody>
-</table>
-
-<p>우리가 글을 작성하는 데에 사용할 <a href="https://www.markdownguide.org/getting-started/">Markdown</a>은 텍스트 기반의 마크업 (MarkUp) 언어로, 특수기호와 문자를 활용한 매우 간단한 구조의 문법을 사용해 보다 빠르게 컨텐츠를 작성할 수 있다! Github의 <code class="language-plaintext highlighter-rouge">README.md</code>가 대표적인 예시인데, Github Pages 역시 이를 활용해 문서를 작성하는 데에 사용한다. 마크다운 문법은 <a href="https://www.markdownguide.org">여기서</a> 상세히 설명하고 있으니 참고하자.</p>
-
-<h2 id="4-블로그-포스트-내에-문자-박스-양식-넣어보기">4. 블로그 포스트 내에 문자 박스 양식 넣어보기</h2>
-<p>추가로 <code class="language-plaintext highlighter-rouge">minimal-mistakes theme</code>의 css로 설정된 스타일 요소를 class로 불러와 적용할 수 있는데, 그중 하나인 상자 양식을 활용해보자. Markdown (<code class="language-plaintext highlighter-rouge">.md</code>) 파일이니까 html 태그들을 쓰면 그대로 화면에 표현할 수 있다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p class="notice--primary"&gt;
-  &lt;strong&gt;
-    이 항목은 현재 작성중입니다.
-  &lt;/strong&gt;&lt;br&gt;
-    &gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.
-&lt;/p&gt;
-
-&lt;p class="notice--info"&gt;
-  &lt;strong&gt;
-    이 항목은 macOS 기반으로 작성되었습니다.
-  &lt;/strong&gt;&lt;br&gt;
-    &gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.
-&lt;/p&gt;
-
-&lt;p class="notice--danger"&gt;
-  &lt;strong&gt;
-    이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.
-  &lt;/strong&gt;&lt;br&gt;
-    &gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.
-&lt;/p&gt;
-
-&lt;p class="notice--warning"&gt;
-  &lt;strong&gt;
-    이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.
-  &lt;/strong&gt;&lt;br&gt;
-    &gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.
-&lt;/p&gt;
-</code></pre></div></div>
-
-<div style="background-color: black; padding: 2% 2% 2% 2%">
-  <p class="notice--primary">
-    <strong>
-      이 항목은 현재 작성중입니다.
-    </strong><br />
-      &gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.
-  </p>
-
-  <p class="notice--info">
-    <strong>
-      이 항목은 macOS 기반으로 작성되었습니다.
-    </strong><br />
-      &gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.
-  </p>
-
-  <p class="notice--danger">
-    <strong>
-      이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.
-    </strong><br />
-      &gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.
-  </p>
-
-  <p class="notice--warning">
-    <strong>
-      이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.
-    </strong><br />
-      &gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.
-  </p>
-</div>
-
-<blockquote>
-  <p>Reference</p>
-  <ul>
-    <li><a href="http://jekyllrb-ko.github.io/docs/structure/">Jekyll 디렉토리 구조 (번역)</a></li>
-  </ul>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[솔직히 블로그 설정을 건드는 부분은 내가 아는 정보들을 그대로 나열할 수 밖에 없다고 생각한다… 그래도 내가 시행착오를 겪었던 경험을 떠올리면서 하나하나 풀어서 작성하려 하였으니, 미숙한 글이지만 남들에게 도움이 되었으면 정말 좋겠다… 그리고 Github Pages이나 Minimal Mistakes으로 처음 블로그를 운영하시는 분들의 시선에 맞춰 html, css에 대한 자세한 내용은 다른 포스트로 옮겼으니 참고해주셨으면 한다.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[vocawik 프로젝트의 #1. init: git 저장소 생성 ~ #3. init: 멀티모듈 프로젝트 세팅에 대한 내용입니다.]]></summary></entry></feed>
