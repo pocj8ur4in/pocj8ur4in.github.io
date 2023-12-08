@@ -1,0 +1,652 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[JPA] 1. JPA - pocj8ur4in’s blog</title>
+<meta name="description" content="개발자가 SQL을 직접 다룰 때의 문제">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[JPA] 1. JPA">
+<meta property="og:url" content="http://localhost:4000/jpa1/">
+
+
+  <meta property="og:description" content="개발자가 SQL을 직접 다룰 때의 문제">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-12-09T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2023-12-09T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/jpa1/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[JPA] 1. JPA</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[JPA] 1. JPA">
+    <meta itemprop="description" content="개발자가 SQL을 직접 다룰 때의 문제">
+    <meta itemprop="datePublished" content="2023-12-09T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2023-12-09T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/jpa1/" class="u-url" itemprop="url">[JPA] 1. JPA
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#개발자가-sql을-직접-다룰-때의-문제">개발자가 SQL을 직접 다룰 때의 문제</a><ul><li><a href="#db는-객체-구조와는-다른-데이터-중심의-구조를-가져-객체를-db에서-직접-저장하거나-조회할-수-없음">DB는 객체 구조와는 다른 데이터 중심의 구조를 가져 객체를 DB에서 직접 저장하거나 조회할 수 없음</a></li><li><a href="#dao를-이용해-sql를-은닉해도-결국엔-sql에-의존적인-개발이-될-수-밖에-없음">DAO를 이용해 SQL를 은닉해도 결국엔 SQL에 의존적인 개발이 될 수 밖에 없음</a></li></ul></li><li><a href="#객체와-관계형-데이터베이스의-패러다임-불일치">객체와 관계형 데이터베이스의 패러다임 불일치</a><ul><li><a href="#상속--객체는-상속이라는-기능을-가지지만-테이블은-상속이라는-기능이-없음">상속 : 객체는 상속이라는 기능을 가지지만, 테이블은 상속이라는 기능이 없음</a></li><li><a href="#연관관계--객체는-참조를-사용해-다른-객체와-연관관계를-가지고-참조에-접근해서-조회">연관관계 : 객체는 참조를 사용해 다른 객체와 연관관계를 가지고 참조에 접근해서 조회</a></li><li><a href="#객체-그래프-탐색--객체에서-회원이-소속된-팀을-조회할-때에는-참조를-사용해-연관된-팀을-탐색">객체 그래프 탐색 : 객체에서 회원이 소속된 팀을 조회할 때에는 참조를 사용해 연관된 팀을 탐색</a></li><li><a href="#비교--데이터베이스는-기본-키의-값으로-각-row를-구분하지만-객체는-동일성-비교-동등성-비교를-활용">비교 : 데이터베이스는 기본 키의 값으로 각 row를 구분하지만, 객체는 동일성 비교, 동등성 비교를 활용</a></li></ul></li><li><a href="#jpa-java-persistence-api--자바-진영의-orm-기술-표준">JPA (Java Persistence API) : 자바 진영의 ORM 기술 표준</a><ul><li><a href="#왜-jpa를-사용해야-하는가">왜 JPA를 사용해야 하는가?</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="개발자가-sql을-직접-다룰-때의-문제">개발자가 <code class="language-plaintext highlighter-rouge">SQL</code>을 직접 다룰 때의 문제</h2>
+
+<ol>
+  <li>
+    <h3 id="db는-객체-구조와는-다른-데이터-중심의-구조를-가져-객체를-db에서-직접-저장하거나-조회할-수-없음"><code class="language-plaintext highlighter-rouge">DB</code>는 객체 구조와는 다른 데이터 중심의 구조를 가져 객체를 DB에서 직접 저장하거나 조회할 수 없음</h3>
+    <ul>
+      <li>개발자가 객체지향 어플리케이션과 <code class="language-plaintext highlighter-rouge">DB</code> 중간에서 <code class="language-plaintext highlighter-rouge">SQL</code>과 <code class="language-plaintext highlighter-rouge">JDBC API</code>를 이용해 변환해야 함</li>
+      <li>객체를 DB에 CRUD하기 위해서 너무 많은 <code class="language-plaintext highlighter-rouge">SQL</code>과 <code class="language-plaintext highlighter-rouge">JDBC API</code>를 코드로 작성해야 함</li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="dao를-이용해-sql를-은닉해도-결국엔-sql에-의존적인-개발이-될-수-밖에-없음"><code class="language-plaintext highlighter-rouge">DAO</code>를 이용해 <code class="language-plaintext highlighter-rouge">SQL</code>를 은닉해도 결국엔 <code class="language-plaintext highlighter-rouge">SQL</code>에 의존적인 개발이 될 수 밖에 없음</h3>
+    <ul>
+      <li>개발자가 엔티티를 신뢰하고 사용할 수 없음… 이게 진정한 계층 분할?</li>
+    </ul>
+  </li>
+</ol>
+
+<blockquote>
+  <p>그럼, <code class="language-plaintext highlighter-rouge">JPA</code>는 어떻게 문제를 해결하였는가?</p>
+
+  <ul>
+    <li>객체를 <code class="language-plaintext highlighter-rouge">DB</code>에 저장하고 관리할 때 <code class="language-plaintext highlighter-rouge">JPA</code>가 제공하는 <code class="language-plaintext highlighter-rouge">API</code> 사용
+      <ul>
+        <li>저장 → <code class="language-plaintext highlighter-rouge">persist()</code> : 객체를 DB에 저장하면, <code class="language-plaintext highlighter-rouge">INSERT SQL</code>를 생성해서 <code class="language-plaintext highlighter-rouge">DB</code>에 전달</li>
+        <li>조회 → <code class="language-plaintext highlighter-rouge">find()</code> : 객체 하나를 DB에서 조회하면, <code class="language-plaintext highlighter-rouge">SELECT SQL</code>를 생성해서 <code class="language-plaintext highlighter-rouge">DB</code>에 전달</li>
+        <li>수정 → 객체를 조회해 값을 변경하면, 트랜잭션을 커밋할 때 <code class="language-plaintext highlighter-rouge">UPDATE SQL</code>를 생성해 <code class="language-plaintext highlighter-rouge">DB</code>에 전달</li>
+        <li>연관 객체 조회 → 연관된 객체를 사용하는 시점에 <code class="language-plaintext highlighter-rouge">SELECT SQL</code>를 실행</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h2 id="객체와-관계형-데이터베이스의-패러다임-불일치">객체와 관계형 데이터베이스의 패러다임 불일치</h2>
+<ul>
+  <li>객체지향 프로그래밍 : 추상화, 캡슙화, 정보은닉, 상속, 다형성 등 시스템의 복잡성을 제어할 수 있는 다양한 장치 제공</li>
+  <li>비즈니스 요구사항을 정의한 도메인 모델 또한 객체로 모델링 → 객체와 관계형 데이터베이스는 지향하는 바가 다르다!</li>
+</ul>
+
+<ol>
+  <li>
+    <h3 id="상속--객체는-상속이라는-기능을-가지지만-테이블은-상속이라는-기능이-없음">상속 : 객체는 상속이라는 기능을 가지지만, 테이블은 상속이라는 기능이 없음</h3>
+    <ul>
+      <li>데이터베이스 모델링의 슈퍼타입-서브타입 관계를 이용한다고 해도, 매번 2가지 <code class="language-plaintext highlighter-rouge">SQL</code>를 만들어야 함</li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="연관관계--객체는-참조를-사용해-다른-객체와-연관관계를-가지고-참조에-접근해서-조회">연관관계 : 객체는 참조를 사용해 다른 객체와 연관관계를 가지고 참조에 접근해서 조회</h3>
+    <ul>
+      <li>그러나 테이블은 외래 키를 사용해서 다른 테이블과 연관관계를 가지고 조인을 이용해서 연관된 테이블을 조회</li>
+      <li>그럼 객체를 테이블에 맞추어 모델링하면? : 외래 키와 참조의 예 → 객체지향의 장점을 잃어버릴 수 있다!</li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="객체-그래프-탐색--객체에서-회원이-소속된-팀을-조회할-때에는-참조를-사용해-연관된-팀을-탐색">객체 그래프 탐색 : 객체에서 회원이 소속된 팀을 조회할 때에는 참조를 사용해 연관된 팀을 탐색</h3>
+    <ul>
+      <li>그런데 참조를 통해 팀을 탐색할 수 있을지 없을지 알 수 없음 → 너무나 큰 제약사항
+        <ul>
+          <li>결국 <code class="language-plaintext highlighter-rouge">DAO</code>를 통해 <code class="language-plaintext highlighter-rouge">SQL</code>을 직접 확인하기 위해 상황에 따른 여러 메소드를 만들어야 함</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="비교--데이터베이스는-기본-키의-값으로-각-row를-구분하지만-객체는-동일성-비교-동등성-비교를-활용">비교 : 데이터베이스는 기본 키의 값으로 각 <code class="language-plaintext highlighter-rouge">row</code>를 구분하지만, 객체는 동일성 비교, 동등성 비교를 활용</h3>
+    <ul>
+      <li>동일성 비교 (<code class="language-plaintext highlighter-rouge">==</code>) : 객체 인스턴스의 주소 값을 비교, 동등성 비교 (<code class="language-plaintext highlighter-rouge">equals()</code>) : 객체 내부의 값을 비교
+        <ul>
+          <li>기본 키 값이 같은 객체를 2번 조회했을 때, 이 객체들이 다른 인스턴스면 동등하되 동일하지 않다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<blockquote>
+  <p>그럼, <code class="language-plaintext highlighter-rouge">JPA</code>는 어떻게 문제를 해결하였는가?</p>
+
+  <ul>
+    <li>상속 → 자바 컬렉션에 객체를 저장하듯이 <code class="language-plaintext highlighter-rouge">JPA</code>에 객채를 저장하면 이를 두 테이블에 나눠 저장</li>
+    <li>연관관계 → 개발자가 관계를 설정해 객체를 저장하면, 참조를 외래 키로 변환해 <code class="language-plaintext highlighter-rouge">INSERT SQL</code> 전달</li>
+    <li>객체 그래프 탐색 : 실제 객체를 사용하는 시점까지 <code class="language-plaintext highlighter-rouge">DB</code> 조회를 미루는 지연 로딩 이용</li>
+    <li>비교 : 같은 트랜잭션일 때 같은 객체가 조회되는 것을 보장</li>
+  </ul>
+</blockquote>
+
+<h2 id="jpa-java-persistence-api--자바-진영의-orm-기술-표준"><code class="language-plaintext highlighter-rouge">JPA</code> (<code class="language-plaintext highlighter-rouge">Java Persistence API</code>) : 자바 진영의 <code class="language-plaintext highlighter-rouge">ORM</code> 기술 표준</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ORM</code> (<code class="language-plaintext highlighter-rouge">Object-Relational Mapping</code>) : 객체와 관계형 <code class="language-plaintext highlighter-rouge">DB</code>를 매핑</li>
+</ul>
+
+<h3 id="왜-jpa를-사용해야-하는가">왜 <code class="language-plaintext highlighter-rouge">JPA</code>를 사용해야 하는가?</h3>
+<ol>
+  <li>생산성 : 반복되는 <code class="language-plaintext highlighter-rouge">CRUD</code>용 <code class="language-plaintext highlighter-rouge">SQL</code> 코드를 작성하는 대신, 자바 컬렉션에 객체를 저장하듯 <code class="language-plaintext highlighter-rouge">JPA</code>에 객체를 전달하면 됨</li>
+  <li>유지보수 : 매번 <code class="language-plaintext highlighter-rouge">SQL</code>과 <code class="language-plaintext highlighter-rouge">JDBC API</code> 코드를 변경할 필요 없음</li>
+  <li>패러다임의 불일치 해결 : <code class="language-plaintext highlighter-rouge">ORM</code> 프레임워크가 상속, 연관관계, 객체 그래프 탐색, 비교 등의 문제를 대신 해결</li>
+  <li>성능 : 어플리케이션과 <code class="language-plaintext highlighter-rouge">DB</code> 사이에서 동작하면서 다양한 성능 최적화 기회를 제공</li>
+  <li>데이터 접근 추상화 및 벤더 독립성 : <code class="language-plaintext highlighter-rouge">DB</code> 접근 계층을 제공해서 특정 <code class="language-plaintext highlighter-rouge">DB</code> 기술에 종속되지 않음</li>
+</ol>
+
+<blockquote>
+  <p>References</p>
+
+  <ul>
+    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=62681446">자바 ORM 표준 JPA 프로그래밍</a></li>
+  </ul>
+</blockquote>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#jpa" class="page__taxonomy-item p-category" rel="tag">JPA</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-12-09">December 9, 2023</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BJPA%5D+1.+JPA%20http%3A%2F%2Flocalhost%3A4000%2Fjpa1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fjpa1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/docker4/" class="pagination--pager" title="[Docker] 4. Docker File
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/docker4/" rel="permalink">[Docker] 4. Docker File
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">도커 파일 (Dockerfile) : 서버 운영 기록을 코드로 저장한 파일을 특정 시점의 도커 이미지로 빌드
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/docker3/" rel="permalink">[Docker] 3. Docker Container
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">도커 컨테이너 (Docker Container) : 도커에서 제공하는 컨테이너 기술
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/docker2/" rel="permalink">[Docker] 2. Docker
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">도커 (Docker) : 컨테이너 기반 가상화 (Container-based Virtualization)
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/vcw7/" rel="permalink">[vocawik] 7. 07/21 진행 내용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  vocawik 프로젝트의 #19. feat(domain): BaseDateTime 엔티티 추가 ~ #23. fix(domain): User 도메인 제약조건 추가에 대한 내용입니다.
+
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 pocj8ur4in. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
