@@ -206,7 +206,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 분 소요
+          2 분 소요
         
       </span>
     
@@ -221,7 +221,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#비즈니스-민첩성--자신의-특화된-서비스를-빠르게-제공하고-피드백을-반영해-서비스를-빠르게-개선">비즈니스 민첩성 : 자신의 특화된 서비스를 빠르게 제공하고, 피드백을 반영해 서비스를 빠르게 개선</a><ul><li><a href="#클라우드-인프라-cloud-infra의-등장--아마존의-aws-구글의-구글-클라우드-플랫폼">클라우드 인프라 (Cloud Infra)의 등장 : 아마존의 AWS, 구글의 구글 클라우드 플랫폼</a></li><li><a href="#어떤-서비스가-클라우드-인프라에-적합할까--클라우드-프랜들리-클라우드-네이티브">어떤 서비스가 클라우드 인프라에 적합할까 : 클라우드 프랜들리? 클라우드 네이티브?</a></li></ul></li><li><a href="#마이크로서비스-microservice--여러-서비스-인스턴스가-하나의-비즈니스-어플리케이션-구성">마이크로서비스 (MicroService) : 여러 서비스 인스턴스가 하나의 비즈니스 어플리케이션 구성</a><ul><li><a href="#마이크로서비스-아키텍처-msa--마이크로서비스를-접목한-아키텍처-구조">마이크로서비스 아키텍처 (MSA) : 마이크로서비스를 접목한 아키텍처 구조</a></li><li><a href="#마이크로서비스를-위한-조건은-무엇인가">마이크로서비스를 위한 조건은 무엇인가?</a><ul><li><a href="#업무-기능-중심-팀">업무 기능 중심 팀</a></li><li><a href="#자율적인-분권-거버넌스">자율적인 분권 거버넌스</a></li><li><a href="#제품-중심의-생명-주기">제품 중심의 생명 주기</a></li><li><a href="#cicd-파이프라인의-자동화">CI/CD 파이프라인의 자동화</a></li><li><a href="#분권-데이터-관리">분권 데이터 관리</a></li><li><a href="#내결함성을-고려한-설계">내결함성을 고려한 설계</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#비즈니스-민첩성--자신의-특화된-서비스를-빠르게-제공하고-피드백을-반영해-서비스를-빠르게-개선">비즈니스 민첩성 : 자신의 특화된 서비스를 빠르게 제공하고, 피드백을 반영해 서비스를 빠르게 개선</a><ul><li><a href="#클라우드-인프라-cloud-infra의-등장--아마존의-aws-구글의-구글-클라우드-플랫폼">클라우드 인프라 (Cloud Infra)의 등장 : 아마존의 AWS, 구글의 구글 클라우드 플랫폼</a></li><li><a href="#어떤-서비스가-클라우드-인프라에-적합할까--클라우드-프랜들리-클라우드-네이티브">어떤 서비스가 클라우드 인프라에 적합할까 : 클라우드 프랜들리? 클라우드 네이티브?</a></li></ul></li><li><a href="#마이크로서비스-microservice--여러-서비스-인스턴스가-하나의-비즈니스-어플리케이션-구성">마이크로서비스 (MicroService) : 여러 서비스 인스턴스가 하나의 비즈니스 어플리케이션 구성</a><ul><li><a href="#마이크로서비스를-위한-조건은-무엇인가">마이크로서비스를 위한 조건은 무엇인가?</a><ul><li><a href="#업무-기능-중심-팀">업무 기능 중심 팀</a></li><li><a href="#자율적인-분권-거버넌스">자율적인 분권 거버넌스</a></li><li><a href="#제품-중심의-생명-주기">제품 중심의 생명 주기</a></li><li><a href="#cicd-파이프라인의-자동화">CI/CD 파이프라인의 자동화</a></li><li><a href="#분권-데이터-관리">분권 데이터 관리</a></li><li><a href="#내결함성을-고려한-설계">내결함성을 고려한 설계</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -272,25 +272,6 @@
   </ul>
 </blockquote>
 
-<h3 id="마이크로서비스-아키텍처-msa--마이크로서비스를-접목한-아키텍처-구조">마이크로서비스 아키텍처 (<code class="language-plaintext highlighter-rouge">MSA</code>) : 마이크로서비스를 접목한 아키텍처 구조</h3>
-<ul>
-  <li>클라우드 인프라와 접목해 아마존, 넷플릭스에 의해 구체화 → 비즈니스 성공 사례</li>
-  <li>각 서비스는 개별 프로세스에서 실행되며, <code class="language-plaintext highlighter-rouge">HTTP API</code>를 통해 통신</li>
-  <li>각 서비스는 비즈니스 기능 단위로 구성되고, 자동화된 배포 방식을 이용해 독립적으로 배포</li>
-</ul>
-
-<blockquote>
-  <p>마이크로서비스 아키텍처 (<code class="language-plaintext highlighter-rouge">MSA</code>)와 서비스 지향 아키텍처 (<code class="language-plaintext highlighter-rouge">SOA</code>)의 비교</p>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">SOA</code> : 컴포넌트를 모아 비즈니스적으로 의미있고 완결적인 서비스 단위로 모듈화
-      <ul>
-        <li><code class="language-plaintext highlighter-rouge">SOA</code>와 <code class="language-plaintext highlighter-rouge">MSA</code>의 공통점 : 비즈니스 서비스의 집합으로 시스템을 개발</li>
-        <li><code class="language-plaintext highlighter-rouge">SOA</code>와 <code class="language-plaintext highlighter-rouge">MSA</code>의 차이점 : 이론적인 <code class="language-plaintext highlighter-rouge">SOA</code>와 달리, <code class="language-plaintext highlighter-rouge">MSA</code>는 클라우드 인프라와 접목해 구체화</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
 <h3 id="마이크로서비스를-위한-조건은-무엇인가">마이크로서비스를 위한 조건은 무엇인가?</h3>
 
 <ol>
@@ -329,7 +310,7 @@
       <li>소프트웨어를 완성해야 할 기능들의 집합이 아닌, 비즈니스를 제공하는 제품 (<code class="language-plaintext highlighter-rouge">Product</code>)로 봄
         <ul>
           <li>우선 빠르게 개발한 뒤에 반응을 보고 개선하는 방식으로 개발</li>
-          <li>프로젝트 형태의 워터풀 (<code class="language-plaintext highlighter-rouge">WaterFall</code>) 개발 방식이 아닌 제품 중심의 에자일 (<code class="language-plaintext highlighter-rouge">Agile</code>) 개발 방식 채용</li>
+          <li>프로젝트 형태의 워터풀 (<code class="language-plaintext highlighter-rouge">WaterFall</code>) 개발 방식이 아닌, 제품 중심의 에자일 (<code class="language-plaintext highlighter-rouge">Agile</code>) 개발 방식 채용</li>
           <li>2~3주 단위의 스프린트 (<code class="language-plaintext highlighter-rouge">Sprint</code>)를 통해 소프트웨어에 피드백을 즉각적으로 반영</li>
         </ul>
       </li>
@@ -447,7 +428,8 @@
 ">이전</a>
     
     
-      <a href="#" class="pagination--pager disabled">다음</a>
+      <a href="/microservice2/" class="pagination--pager" title="[MicroService] 2. MSA
+">다음</a>
     
   </nav>
 
@@ -461,6 +443,47 @@
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/microservice2/" rel="permalink">[MicroService] 2. MSA
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">마이크로서비스 아키텍처 (MSA) : 마이크로서비스를 접목한 아키텍처 구조
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -579,47 +602,6 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">도커 컨테이너 (Docker Container) : 도커에서 제공하는 컨테이너 기술
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/docker2/" rel="permalink">[Docker] 2. Docker
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">도커 (Docker) : 컨테이너 기반 가상화 (Container-based Virtualization)
 
 </p>
   </article>
