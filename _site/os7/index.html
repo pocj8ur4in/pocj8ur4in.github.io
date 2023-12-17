@@ -1,0 +1,943 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Operation System] 7. Paging - pocj8ur4in’s blog</title>
+<meta name="description" content="페이징 (Paging) : 프로그램과 메모리를 일정한 크기로 나눔">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[Operation System] 7. Paging">
+<meta property="og:url" content="http://localhost:4000/os7/">
+
+
+  <meta property="og:description" content="페이징 (Paging) : 프로그램과 메모리를 일정한 크기로 나눔">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-10-07T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2022-12-12T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/os7/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[Operation System] 7. Paging</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Operation System] 7. Paging">
+    <meta itemprop="description" content="페이징 (Paging) : 프로그램과 메모리를 일정한 크기로 나눔">
+    <meta itemprop="datePublished" content="2022-10-07T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-12-12T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/os7/" class="u-url" itemprop="url">[Operation System] 7. Paging
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#페이징-paging--프로그램과-메모리를-일정한-크기로-나눔">페이징 (Paging) : 프로그램과 메모리를 일정한 크기로 나눔</a><ul><li><a href="#페이지-폴트-page-fault--페이지가-메모리에-매핑되어-있지-않음을-파악하면-cpu에서-트랩-발생">페이지 폴트 (Page Fault) : 페이지가 메모리에 매핑되어 있지 않음을 파악하면 CPU에서 트랩 발생</a></li><li><a href="#페이징-테이블-page-table--가상-페이지-번호-vpn를-페이지-프레임-번호-pfn로-매핑">페이징 테이블 (Page Table) : 가상 페이지 번호 (VPN)를 페이지 프레임 번호 (PFN)로 매핑</a></li><li><a href="#tlbs-translation-lookaside-buffers--페이징의-속도를-높이고-큰-가상-주소-공간을-지원하는-기법">TLBs (Translation Lookaside Buffers) : 페이징의 속도를 높이고, 큰 가상 주소 공간을 지원하는 기법</a></li><li><a href="#다단계-페이지-테이블-multi-level-page-table">다단계 페이지 테이블 (Multi-level Page Table)</a></li><li><a href="#역-페이지-테이블-inverted-page-table">역 페이지 테이블 (Inverted Page Table)</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="페이징-paging--프로그램과-메모리를-일정한-크기로-나눔">페이징 (<code class="language-plaintext highlighter-rouge">Paging</code>) : 프로그램과 메모리를 일정한 크기로 나눔</h2>
+
+<ul>
+  <li>가상 주소 (<code class="language-plaintext highlighter-rouge">Virtual address</code>) : 프로그램이 가상 메모리에서 참조하는 주소
+    <ul>
+      <li>가상 메모리 (<code class="language-plaintext highlighter-rouge">Virtual Memory</code>)가 있다면, 각 프로그램은 자신의 고유한 가상 주소 공간을 가짐
+        <ul>
+          <li>가상 메모리 사용 <code class="language-plaintext highlighter-rouge">O</code> : 가상 주소가 그대로 메모리 버스에 실려 물리 주소가 됨</li>
+          <li>가상 메모리 사용 <code class="language-plaintext highlighter-rouge">X</code> : 가상 주소가 <code class="language-plaintext highlighter-rouge">MMU</code>에 의해 물리 주소로 매핑</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F77cc13d2-02da-4be4-9ff6-369f0dbc4b26%2F페이징2.PNG" width="66%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>가상 주소 공간과 물리 주소 공간은 고정된 크기 단위의 유닛들로 동일하게 나뉜다.
+    <ul>
+      <li>가상 페이지 (<code class="language-plaintext highlighter-rouge">Virtual Page</code>) : 가상 주소 공간을 나눈 조각. 각 페이지는 연속된 주소를 가짐</li>
+      <li>페이지 프레임 (<code class="language-plaintext highlighter-rouge">Page Frame</code>) : 물리 메모리를 나눈 조각.</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li>다음 그림에서는 가상 주소 공간을 <code class="language-plaintext highlighter-rouge">64KB</code>, 물리 메모리 공간을 <code class="language-plaintext highlighter-rouge">32KB</code>, 유닛 크기는 <code class="language-plaintext highlighter-rouge">4KB</code>로 가정하고 있다.</li>
+  </ul>
+
+  <p><img src="https://d2vlcm61l7u1fs.cloudfront.net/media%2F814%2F8145fa33-a835-4aec-b761-957da632ac81%2FphpBxgNnp.png" width="80%" style="margin-left: 2%" /></p>
+  <ul>
+    <li>논리 주소 (<code class="language-plaintext highlighter-rouge">logical address</code>) : 세그먼트 (<code class="language-plaintext highlighter-rouge">segment</code>) + 오프셋 (<code class="language-plaintext highlighter-rouge">offset</code>)
+      <ul>
+        <li>세그먼트 (<code class="language-plaintext highlighter-rouge">segment</code>) : <code class="language-plaintext highlighter-rouge">64KB</code>의 고정된 길이와 시작 위치으로만 구성</li>
+        <li>오프셋 (<code class="language-plaintext highlighter-rouge">offset</code>) : 세그먼트의 시작 지점에서 실제 주소까지 떨어진 거리</li>
+      </ul>
+    </li>
+    <li>가상 주소 (<code class="language-plaintext highlighter-rouge">virtual address</code>) : <code class="language-plaintext highlighter-rouge">single 32-bit unsigned integer</code>
+      <ul>
+        <li>가상 페이지는 <code class="language-plaintext highlighter-rouge">16</code>진수로 표현 (<code class="language-plaintext highlighter-rouge">16bit</code>) : <code class="language-plaintext highlighter-rouge">0x00000000</code> ~ <code class="language-plaintext highlighter-rouge">0xffffffff</code>의 범위 (<code class="language-plaintext highlighter-rouge">4096bit</code>=<code class="language-plaintext highlighter-rouge">4KB</code>)</li>
+      </ul>
+    </li>
+    <li>물리 주소 (<code class="language-plaintext highlighter-rouge">physical address</code>) : 물리 메모리에서 각각의 셀 (<code class="language-plaintext highlighter-rouge">cell</code>)의 주소
+      <ul>
+        <li>페이지 프레임은 가상 페이지가 매핑되는 물리 메모리의 일부분(<code class="language-plaintext highlighter-rouge">4096bit</code>=<code class="language-plaintext highlighter-rouge">4KB</code>)</li>
+      </ul>
+    </li>
+  </ul>
+
+  <blockquote>
+    <p>명령어 <code class="language-plaintext highlighter-rouge">MOV REG, 0</code>을 수행한다고 가정해보자.</p>
+    <ul>
+      <li>이 명령어에서 접근하는 가상 주소 0는 MMU로 전달된다.</li>
+      <li><code class="language-plaintext highlighter-rouge">MMU</code>는 해당 가상 주소가 가상 페이지 0에 속한 것임을 확인한다.</li>
+      <li><code class="language-plaintext highlighter-rouge">MMU</code>는 가상 페이지 0에 매핑된 물리 주소의 페이지 프레임이 2임을 계산한다.</li>
+      <li>가상 주소 0은 물리 주소 8192로 변환되고, 이 물리 주소가 메모리 버스에 실린다.</li>
+    </ul>
+  </blockquote>
+
+  <p>… 가상 페이지를 페이지 프레임에 매핑하는 것만으론, 가상 주소 공간이 물리 주소 공간보다 큰 문제를 해결하지 못한다.</p>
+</blockquote>
+
+<h3 id="페이지-폴트-page-fault--페이지가-메모리에-매핑되어-있지-않음을-파악하면-cpu에서-트랩-발생">페이지 폴트 (<code class="language-plaintext highlighter-rouge">Page Fault</code>) : 페이지가 메모리에 매핑되어 있지 않음을 파악하면 <code class="language-plaintext highlighter-rouge">CPU</code>에서 트랩 발생</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">present</code> 비트 : 어떤 페이지가 실제 메모리에 존재하는지 표현하는 비트 (가상 페이지에 <code class="language-plaintext highlighter-rouge">X</code>로 표현)
+    <ul>
+      <li>페이지가 메모리에 매핑되어 있지 않으면, <code class="language-plaintext highlighter-rouge">CPU</code>에서 트랩을 발생시켜 운영체제에 이를 알림</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Page Fault</code>가 발생하면, 운영체제는 적게 사용되고 있는 페이지 프레임을 하나 선택
+    <ol>
+      <li>선택한 페이지가 수정되었다면 (<code class="language-plaintext highlighter-rouge">dirty</code> 상태) 이를 디스크에 기록</li>
+      <li>선택한 페이지가 수정되지 않았다면 (<code class="language-plaintext highlighter-rouge">clean</code> 상태) 디스크에 존재하는 것과 동일하니 기록하지 않음</li>
+      <li>선택한 기존 페이지의 내용을 지우고, 참조하려는 페이지의 내용을 페이지 프레임에 적재</li>
+      <li>선택한 기존 페이지 프레임을 <code class="language-plaintext highlighter-rouge">X</code>로, 참조한 페이지 프레임을 숫자로 매핑시켜 가상 페이지 맵 수정</li>
+      <li>트랩이 발생한 명령어를 다시 실행</li>
+    </ol>
+  </li>
+</ul>
+
+<blockquote>
+  <p>명령어 <code class="language-plaintext highlighter-rouge">MOV REG, 24576</code>을 수행할 때 <code class="language-plaintext highlighter-rouge">Page Fault</code>가 발생해 OS에서 페이지 프레임 1을 교체한다고 가정해보자.</p>
+  <ul>
+    <li>가상 페이지 1이 더 이상 매핑되지 않음 (<code class="language-plaintext highlighter-rouge">X</code>)을 표시한다.</li>
+    <li>가상 페이지 7이 페이지 프레임 1에 매핑되었음을 표시한다.</li>
+  </ul>
+</blockquote>
+
+<h3 id="페이징-테이블-page-table--가상-페이지-번호-vpn를-페이지-프레임-번호-pfn로-매핑">페이징 테이블 (<code class="language-plaintext highlighter-rouge">Page Table</code>) : 가상 페이지 번호 (<code class="language-plaintext highlighter-rouge">VPN</code>)를 페이지 프레임 번호 (<code class="language-plaintext highlighter-rouge">PFN</code>)로 매핑</h3>
+
+<blockquote>
+  <p>위의 매핑 정보를 바탕으로 가상 주소 <code class="language-plaintext highlighter-rouge">8196</code>를 물리 주소 <code class="language-plaintext highlighter-rouge">24580</code>로 변환하는 과정을 가정해 살펴보자.</p>
+
+  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F1e02251d-f340-4f21-a40a-ece83ef34966%2F페이지테이블1.PNG" width="80%" style="margin-left: 2%" /></p>
+
+  <ul>
+    <li>16비트 크기를 갖는 가상 주소는 <code class="language-plaintext highlighter-rouge">VPN</code>와 오프셋으로 구분된다.
+      <ul>
+        <li>페이지 번호는 페이지 테이블의 인덱스로 사용된다.</li>
+      </ul>
+    </li>
+    <li>페이지 테이블에는 <code class="language-plaintext highlighter-rouge">VPN</code>에 대응되는 <code class="language-plaintext highlighter-rouge">PFN</code>이 기록되어 있다.
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">present</code>가 1이면, 페이지 테이블의 <code class="language-plaintext highlighter-rouge">PFN</code> 3과 가상 주소의 오프셋 12가 결합해 물리 주소가 된다.</li>
+      </ul>
+    </li>
+    <li>물리 주소를 주소 출력 레지스터를 통해 메모리 버스로 전달해 참조한다.</li>
+  </ul>
+
+  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F3e57db8f-32a6-4eb8-9aae-401f58178f5a%2F페이징주소변환.PNG" width="80%" style="margin-left: 2%" /></p>
+</blockquote>
+
+<ul>
+  <li>페이지 테이블엔 디스크에 존재하는 페이지의 디스크 주소에 대한 정보가 없음 (<code class="language-plaintext highlighter-rouge">Page Fault</code> : 운영체제 내부에서 처리)
+    <ul>
+      <li>메모리에 존재하는 페이지 주소에 대한 정보만 존재 : 하드웨어가 가상 주소를 물리 주소로 변경할 때 사용</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://examradar.com/wp-content/uploads/2019/03/page-table-entry.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>페이지 테이블의 각 페이지에 존재하는 정보
+    <ul>
+      <li>페이지 프레임 번호 (<code class="language-plaintext highlighter-rouge">PFN</code>) : 가상 주소를 물리 주소로 매핑
+        <ul>
+          <li>해당 페이지가 매핑된 물리 주소 결정</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Present</code> 비트 : <code class="language-plaintext highlighter-rouge">PFN</code>이 유효한지 아닌지 결정 (가상 주소가 사용될 때마다 확인)
+        <ul>
+          <li>0 (<code class="language-plaintext highlighter-rouge">X</code>)이면 해당 엔트리에 대응되는 페이지가 물리 메모리에 존재하지 않는 상태 (트랩 발생)</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Protection</code> 비트 : 어떤 접근이 허용되는지 표시
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">write</code>, <code class="language-plaintext highlighter-rouge">read</code>, <code class="language-plaintext highlighter-rouge">execute</code></li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Modify</code> 비트 : 페이지가 수정되었는지 아닌지 확인
+        <ul>
+          <li>페이지의 내용이 <code class="language-plaintext highlighter-rouge">write</code>되면, 하드웨어가 자동으로 비트를 1로 세팅
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">Modify</code> 비트가 1 (<code class="language-plaintext highlighter-rouge">dirty</code>)이면, 페이지 프레임이 교체될 때 디스크에 기록되어야 함</li>
+              <li><code class="language-plaintext highlighter-rouge">Modify</code> 비트가 0 (<code class="language-plaintext highlighter-rouge">clean</code>)이면, 페이지 프레임이 교체될 때 새로운 내용으로 덮어씌워도 됨</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Reference</code> 비트 : 해당 페이지가 <code class="language-plaintext highlighter-rouge">write</code> 또는 <code class="language-plaintext highlighter-rouge">read</code>로 접근되었을 때 설정
+        <ul>
+          <li>운영체제가 <code class="language-plaintext highlighter-rouge">Page Fault</code>의 처리를 위해 교체할 페이지 프레임을 선택할 때 사용</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">Cashing Disabled</code> 비트 : 해당 페이지가 캐싱될 수 있는지 여부
+        <ul>
+          <li>페이지가 메모리가 아닌 장치 레지스터에 매핑되어 있을 때 실행</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <blockquote>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">64bit</code> 주소를 사용하는 컴퓨터는 가상 주소 공간이 <code class="language-plaintext highlighter-rouge">2^64byte</code></li>
+      <li>가상 주소 공간의 한 페이지가 <code class="language-plaintext highlighter-rouge">4KB = 2^12byte</code>이면,
+        <ul>
+          <li>페이지 테이블의 엔트리 개수는 전체 공간을 한 페이지로 나눈 <code class="language-plaintext highlighter-rouge">2^52</code>개</li>
+          <li>엔트리 하나당 <code class="language-plaintext highlighter-rouge">4byte</code>의 크기를 가진다면, 페이지 테이블의 크기는 <code class="language-plaintext highlighter-rouge">2^52 * 4byte</code></li>
+        </ul>
+      </li>
+    </ul>
+  </blockquote>
+
+  <p>… 페이징은 다음 두 가지 문제를 해결해야 한다.</p>
+  <ul>
+    <li>가상 주소 공간이 커지면, 페이지 테이블의 크기 (= 페이지 테이블 엔트리의 개수) 또한 증가한다.
+      <ul>
+        <li>페이지 테이블을 유지하기 위해 필요한 메모리의 크기가 클 수 있음</li>
+      </ul>
+    </li>
+    <li>가상 주소에서 물리 주소로의 변환이 빠르게 이루어져야 한다.
+      <ul>
+        <li>메모리를 참조하는 오버헤드가 작아야 함</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h3 id="tlbs-translation-lookaside-buffers--페이징의-속도를-높이고-큰-가상-주소-공간을-지원하는-기법"><code class="language-plaintext highlighter-rouge">TLBs</code> (<code class="language-plaintext highlighter-rouge">Translation Lookaside Buffers</code>) : 페이징의 속도를 높이고, 큰 가상 주소 공간을 지원하는 기법</h3>
+
+<blockquote>
+  <p>대부분의 프로그램들은 적은 개수의 페이지를 집중적으로 참조하는 경향이 있다.</p>
+  <ul>
+    <li>페이지 테이블의 일부 엔트리만이 높은 빈도로 참조되고, 나머지 엔트리는 낮은 빈도로 참조된다.</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">TLB</code> : 페이지 테이블의 참조 없이 가상 주소를 물리 주소로 매핑할 수 있는 작은 크기의 메모리
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">MMU</code> 내부에 존재하며, 적은 개수의 엔트리를 가짐
+        <ul>
+          <li>각각의 <code class="language-plaintext highlighter-rouge">TLB</code> 엔트리는 한 페이지에 대한 정보를 포함</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F8b9807f3-f9d5-437a-8110-25ff5a9aad4a%2FTLB2.PNG" width="80%" style="margin-left: 2%" /></p>
+
+  <ol>
+    <li><code class="language-plaintext highlighter-rouge">MMU</code>는 주소 변환을 할 때 요청된 가상 페이지가 <code class="language-plaintext highlighter-rouge">TLB</code>에 있는지 검색</li>
+    <li>가상 페이지가 존재하고 보호코드를 위반하지 않으면, 대응되는 페이지 프레임을 사용하여 주소 변환을 실행</li>
+    <li><code class="language-plaintext highlighter-rouge">TLB</code>가 존재하지 않으면, <code class="language-plaintext highlighter-rouge">TLB miss</code> 발생. <code class="language-plaintext highlighter-rouge">MMU</code>는 페이지 테이블에서 해당 페이지 테이블 엔트리를 검색</li>
+    <li>그리고 <code class="language-plaintext highlighter-rouge">TLB</code> 엔트리 중 하나를 선택해 그 내용을 교체. 페이지 테이블에 없는 수정 비트는 페이지 테이블에 기록</li>
+    <li>찾은 페이지 테이블 엔트리를 <code class="language-plaintext highlighter-rouge">TLB</code> 엔트리에 기록 (이때 다시 참조한다면 <code class="language-plaintext highlighter-rouge">TLB hit</code>로 처리)</li>
+    <li>새로운 정보가 적재될 때는 페이지 테이블 엔트리에 있는 내용이 적재</li>
+  </ol>
+</blockquote>
+
+<ul>
+  <li>메모리 계층 구조에서 발생할 수 있는 <code class="language-plaintext highlighter-rouge">miss</code>의 경우의 수 : <code class="language-plaintext highlighter-rouge">2^3</code>가지 <code class="language-plaintext highlighter-rouge">-&gt;</code> 실제 발생 가능한 경우의 수 : <code class="language-plaintext highlighter-rouge">5</code>가지</li>
+</ul>
+<div style="text-align: center;">
+  <table>
+	  <thead>
+		  <tr>
+			  <td>Cache</td>
+        <td>TLB</td>
+        <td>Virtual Memory</td>
+        <td>발생 가능 여부</td>
+			  <td>설명</td>
+		  </tr>
+	  </thead>
+	  <tbody>
+		  <tr>
+			  <td>hit</td>
+        <td>hit</td>
+        <td>hit</td>
+        <td>가능 (최선)</td>
+			  <td>(1) TLB가 hit이므로, 페이지 테이블을 확인할 필요 없이 가상 주소를 물리 주소로 변환 (메인 메모리 접근 X)<br />(2) Cache가 hit이므로, 변환한 물리적 주소로 캐시에 접근하면 데이터를 가져올 수 있음</td>
+		  </tr>
+		  <tr>
+			  <td>miss</td>
+        <td>hit</td>
+        <td>hit</td>
+        <td>가능</td>
+			  <td>(1) TLB가 hit이므로, 페이지 테이블을 확인할 필요 없이 가상 주소를 물리 주소로 변환 (메인 메모리 접근 X)<br />(2) Cache가 miss이므로, 변환한 물리적 주소로 캐시에 접근하면 데이터를 가져올 수 없음<br />(3) Virtual Memory가 hit이므로, 캐시에 데이터를 불러오기 위해 메모리에 접근하면 데이터를 가져올 수 있음<br />(4) 메모리에서 캐시로 가져온 데이터를 CPU에 전달</td>
+		  </tr>
+      <tr>
+			  <td>hit</td>
+        <td>miss</td>
+        <td>hit</td>
+        <td>가능</td>
+			  <td>(1) TLB가 miss이므로, 페이지 테이블에 접근 (메인 메모리 접근 O)<br />(2) Virtual Memory가 hit이므로, 가상 주소를 물리 주소로 변환<br />(3) Cache가 hit이므로, 변환한 물리 주소로 캐시에 접근해 캐시에 있는 데이터를 CPU에 전달</td>
+		  </tr>
+      <tr>
+			  <td>miss</td>
+        <td>miss</td>
+        <td>hit</td>
+        <td>가능</td>
+			  <td>(1) TLB가 miss이므로, 페이지 테이블에 접근 (메인 메모리 접근 O)<br />(2) Virtual Memory가 hit이므로, 가상 주소를 물리 주소로 변환<br />(3) Cache가 miss이므로, 변환한 물리 주소로 캐시에 접근하면 캐시 내에 데이터가 없음<br />(4) 메인 메모리에서 해당 데이터를 캐시로 가져와 CPU에 전달</td>
+		  </tr>
+      <tr>
+			  <td>miss</td>
+        <td>miss</td>
+        <td>miss</td>
+        <td>가능 (최악)</td>
+			  <td>(1) TLB가 miss이므로, 페이지 테이블에 접근 (메인 메모리 접근 O)<br />(2) Virtual Memory가 miss이므로 (Page fault), 하드 디스크에서 데이터를 직접 가져와 페이지 테이블을 업데이트<br />(3) 이제 TLB가 miss &gt; hit이므로, 가상 주소를 물리 주소로 변환 가능.<br />(4) Cache가 miss이므로, 변환한 물리 주소로 캐시에 접근하면 캐시 내에 데이터가 없음<br />(5) 메인 메모리에서 해당 데이터를 캐시로 가져와 CPU에 전달</td>
+		  </tr>
+      <tr>
+			  <td>miss</td>
+        <td>hit</td>
+        <td>miss</td>
+        <td>불가능</td>
+			  <td>메모리 계층 구조 위반 : Page fault인데 TLB가 hit일 수 없음</td>
+		  </tr>
+      <tr>
+			  <td>hit</td>
+        <td>hit</td>
+        <td>miss</td>
+        <td>불가능</td>
+			  <td>메모리 계층 구조 위반 : Page fault인데 TLB가 hit일 수 없음</td>
+		  </tr>
+      <tr>
+			  <td>hit</td>
+        <td>miss</td>
+        <td>miss</td>
+        <td>불가능</td>
+			  <td>메모리 계층 구조 위반 : Page fault인데 Cache가 hit일 수 없음 (캐시에 데이터가 있을 수 없음)</td>
+		  </tr>
+	  </tbody>
+  </table>
+</div>
+
+<blockquote>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">TLB miss</code>인 경우 : 페이지 테이블에는 정보가 있지만, <code class="language-plaintext highlighter-rouge">TLB</code>에 그 정보가 들어있지 않을 때
+      <ul>
+        <li>해결책 : 페이지 테이블의 페이지 엔트리 내 데이터를 가져와 <code class="language-plaintext highlighter-rouge">TLB</code>에 넣음</li>
+      </ul>
+    </li>
+    <li><code class="language-plaintext highlighter-rouge">Page fault</code>인 경우 : <code class="language-plaintext highlighter-rouge">TLB</code>에도 정보가 없고, 페이지 테이블에도 그 정보가 없을 때
+      <ul>
+        <li>운영체제는 권한을 받아 하드 디스크의 데이터를 페이지 테이블에 가져오고, <code class="language-plaintext highlighter-rouge">TLB</code>에 가져온 데이터를 넣음</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h3 id="다단계-페이지-테이블-multi-level-page-table">다단계 페이지 테이블 (<code class="language-plaintext highlighter-rouge">Multi-level Page Table</code>)</h3>
+<ul>
+  <li>페이지 테이블을 페이지 프레임 크기로 나눔
+    <ul>
+      <li>해당 페이지 테이블의 페이지가 <code class="language-plaintext highlighter-rouge">invalid</code>하면 메모리에 할당하지 않음</li>
+      <li>기존의 단일한 페이지 테이블을 트리 구조로 연결</li>
+    </ul>
+  </li>
+  <li>페이지 디렉토리 (<code class="language-plaintext highlighter-rouge">Page Dictionary</code>) : 페이지 프레임의 유무를 확인하는 자료구조
+    <ul>
+      <li>적어도 하나의 <code class="language-plaintext highlighter-rouge">PFN</code>이 <code class="language-plaintext highlighter-rouge">valid</code>하다면, 페이지 디렉토리의 해당 엔트리는 존재함</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTAyMTlfOCAg/MDAxNTUwNTA2MjIzODAw.Wv_UIJMhp3-_COSDHBtsqEz0OCp91j4zEc3Vr4lmWHQg.qFb-bL0s7WgeO7btb1857Ifsk_KZqW063BUihRmZd-wg.PNG.babobigi/Page_Table_비교.png?type=w2" width="80%" style="margin-left: 2%" /></p>
+
+  <ul>
+    <li>기존의 페이지 테이블에서, 가운데에 위치한 페이지는 메모리에 할당되어 있음</li>
+    <li>다단계 페이지 테이블에서, 가운데에 위치한 페이지는 메모리에 할당되어 있지 않음</li>
+  </ul>
+
+  <p>다단계 페이지 테이블에서의 모든 페이지 테이블은 항상 메모리에 유지될 필요가 없다.</p>
+</blockquote>
+
+<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2Fcf85f3b3-985d-4872-9030-eb337ae7dbbe%2F2단계페테2.PNG" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>필요한 페이지 테이블만 메모리에 할당해 절약할 수 있음</li>
+  <li>페이지 디렉토리로 물리 메모리의 빈 공간에 페이지 테이블 엔트리를 생성 가능</li>
+  <li>기존의 <code class="language-plaintext highlighter-rouge">TLB Miss</code>가 2번 늘어나 주소 변환이 2번 필요하고, <code class="language-plaintext highlighter-rouge">TLB Miss</code>를 처리해 메모리를 최적화하는 로직이 복잡해짐</li>
+</ul>
+
+<h3 id="역-페이지-테이블-inverted-page-table">역 페이지 테이블 (<code class="language-plaintext highlighter-rouge">Inverted Page Table</code>)</h3>
+<ul>
+  <li>빠른 하드웨어 레지스터로 구성된 단일한 페이지 테이블 사용
+    <ul>
+      <li>페이지 테이블의 각 엔트리는 하나의 메모리 프레임에 대응</li>
+    </ul>
+  </li>
+  <li>크기가 고정된 페이지 테이블에 프로세스를 맵핑
+    <ul>
+      <li>프로세스 실행 시 운영체제는 메모리에 존재하는 프로세스의 페이지 테이블 전체를 하드웨어 레지스터 배열에 적재</li>
+    </ul>
+  </li>
+  <li>논리 주소는 <code class="language-plaintext highlighter-rouge">PID</code>, <code class="language-plaintext highlighter-rouge">PFN</code>, <code class="language-plaintext highlighter-rouge">offset</code>으로 구성</li>
+  <li>물리 주소는 <code class="language-plaintext highlighter-rouge">MFN</code>와 <code class="language-plaintext highlighter-rouge">offset</code>으로 구성</li>
+</ul>
+
+<p><img src="https://i0.wp.com/blog.skby.net/wp-content/uploads/2020/03/역페이지테이블-구성도.png" width="80%" style="margin-left: 2%" /></p>
+
+<ol>
+  <li>논리 주소의 <code class="language-plaintext highlighter-rouge">PID</code>와 <code class="language-plaintext highlighter-rouge">PFN</code> 정보를 바탕으로 페이지 테이블에서 동일한 엔트리 탐색</li>
+  <li>페이지 테이블에서 <code class="language-plaintext highlighter-rouge">PID</code>와 <code class="language-plaintext highlighter-rouge">PFN</code>가 일치하는 (<code class="language-plaintext highlighter-rouge">MFN</code>)번째 항목을 발견</li>
+  <li><code class="language-plaintext highlighter-rouge">MFN</code>과 <code class="language-plaintext highlighter-rouge">Offset</code> 정보를 바탕으로 확인된 메모리 주소에 접근</li>
+</ol>
+
+<blockquote>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">64bit</code>를 사용하는 컴퓨터에서 <code class="language-plaintext highlighter-rouge">256MB</code>의 물리 메모리가 <code class="language-plaintext highlighter-rouge">4KB</code> 페이지 프레임 <code class="language-plaintext highlighter-rouge">2^18</code>개로 구성되었다면,
+      <ul>
+        <li>페이지 테이블을 사용할 때의 페이지 테이블의 엔트리는,
+          <ul>
+            <li>가상 주소 공간 <code class="language-plaintext highlighter-rouge">2^64byte</code>을 한 페이지 프레임의 크기 <code class="language-plaintext highlighter-rouge">4KB = 2^12byte</code>로 나눈 <code class="language-plaintext highlighter-rouge">2^52</code>개</li>
+          </ul>
+        </li>
+        <li>역 페이지 테이블을 사용하는 페이지 테이블의 엔트리는 물리 메모리의 페이지 프레임의 개수와 같으므로,
+          <ul>
+            <li>물리 메모리 <code class="language-plaintext highlighter-rouge">256MB = 2^28byte</code>를 한 페이지 프레임의 크기 <code class="language-plaintext highlighter-rouge">4KB = 2^12byte</code>로 나눈 <code class="language-plaintext highlighter-rouge">2^16</code>개</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>프로세스 실행 중엔 페이지 테이블을 위한 추가적인 메모리 참조가 필요 없음 (프로세스 확장이 페이지 테이블과 무관)</li>
+  <li>페이지 테이블이 커질수록 구현을 위한 비용이 증가하고, 최악의 경우 페이지 테이블 전체를 적재해야 함 ex) 문맥 교환</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#operation-system" class="page__taxonomy-item p-category" rel="tag">Operation System</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-12-12">December 12, 2022</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BOperation+System%5D+7.+Paging%20http%3A%2F%2Flocalhost%3A4000%2Fos7%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fos7%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/os6/" class="pagination--pager" title="[Operation System] 6. Main Memory Management
+">이전</a>
+    
+    
+      <a href="/os8/" class="pagination--pager" title="[Operation System] 8. Page Replacement Algorithm
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/microservice2/" rel="permalink">[MicroService] 2. MSA
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">마이크로서비스 아키텍처 (MSA) : 마이크로서비스를 접목한 아키텍처 구조
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/microservice1/" rel="permalink">[MicroService] 1. MicroService
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">비즈니스 민첩성 : 자신의 특화된 서비스를 빠르게 제공하고, 피드백을 반영해 서비스를 빠르게 개선
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/jpa1/" rel="permalink">[JPA] 1. JPA
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">개발자가 SQL을 직접 다룰 때의 문제
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/docker4/" rel="permalink">[Docker] 4. Docker File
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">도커 파일 (Dockerfile) : 서버 운영 기록을 코드로 저장한 파일을 특정 시점의 도커 이미지로 빌드
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 pocj8ur4in. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

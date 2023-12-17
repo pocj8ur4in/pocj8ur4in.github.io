@@ -1,0 +1,613 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Operation System] 4. IPC - pocj8ur4in’s blog</title>
+<meta name="description" content="프로세스 간 통신 (Inter Process Communication) : 프로세스 간에 데이터를 주고받는 행위">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[Operation System] 4. IPC">
+<meta property="og:url" content="http://localhost:4000/os4/">
+
+
+  <meta property="og:description" content="프로세스 간 통신 (Inter Process Communication) : 프로세스 간에 데이터를 주고받는 행위">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-10-07T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2022-12-12T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/os4/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[Operation System] 4. IPC</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Operation System] 4. IPC">
+    <meta itemprop="description" content="프로세스 간 통신 (Inter Process Communication) : 프로세스 간에 데이터를 주고받는 행위">
+    <meta itemprop="datePublished" content="2022-10-07T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-12-12T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/os4/" class="u-url" itemprop="url">[Operation System] 4. IPC
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#프로세스-간-통신-inter-process-communication--프로세스-간에-데이터를-주고받는-행위">프로세스 간 통신 (Inter Process Communication) : 프로세스 간에 데이터를 주고받는 행위</a><ul><li><a href="#공유-메모리-shared-memory--협력-프로세스-간-하나의-공유-메모리-영역을-만들어-상호-통신">공유 메모리 (Shared Memory) : 협력 프로세스 간 하나의 공유 메모리 영역을 만들어 상호 통신</a></li><li><a href="#메시지-패싱-message-passing--협력-프로세스-간-각자의-메시지를-운영-체제에-전달해-통신">메시지 패싱 (Message Passing) : 협력 프로세스 간 각자의 메시지를 운영 체제에 전달해 통신</a></li><li><a href="#파이프-pipe--통신을-위한-버퍼를-생성해-프로세스가-데이터를-상호-통신">파이프 (PIPE) : 통신을 위한 버퍼를 생성해 프로세스가 데이터를 상호 통신</a><ul><li><a href="#익명-파이프-anonymous-pipe--통신할-프로세스를-명확히-아는-경우">익명 파이프 (Anonymous PIPE) : 통신할 프로세스를 명확히 아는 경우</a></li><li><a href="#네임드-파이프-named-pipe--전혀-모르는-상태의-프로세스-간의-통신에-사용">네임드 파이프 (Named PIPE) : 전혀 모르는 상태의 프로세스 간의 통신에 사용</a></li></ul></li><li><a href="#소켓-socket--동일한-운영체제에서-실행되는-프로세스-간-데이터를-교환하는-endpoint">소켓 (Socket) : 동일한 운영체제에서 실행되는 프로세스 간 데이터를 교환하는 Endpoint</a></li><li><a href="#메시지-큐-message-queue--메모리-공간을-활용한-pipe">메시지 큐 (Message Queue) : 메모리 공간을 활용한 PIPE</a></li><li><a href="#메모리-맵-memory-map--열린-파일을-메모리에-맵핑시켜서-공유">메모리 맵 (Memory Map) : 열린 파일을 메모리에 맵핑시켜서 공유</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="프로세스-간-통신-inter-process-communication--프로세스-간에-데이터를-주고받는-행위">프로세스 간 통신 (<code class="language-plaintext highlighter-rouge">Inter Process Communication</code>) : 프로세스 간에 데이터를 주고받는 행위</h2>
+
+<ul>
+  <li>독립 프로세스 (<code class="language-plaintext highlighter-rouge">Independent Process</code>) : (단일 처리 시스템에서) 다른 프로세스에 독립적인 동기적 프로세스</li>
+  <li>협력 프로세스 (<code class="language-plaintext highlighter-rouge">Cooperating Process</code>) : 실행중인 다른 프로세스와의 상호 작용을 통해 수행되는 비동기적 프로세스</li>
+</ul>
+
+<h3 id="공유-메모리-shared-memory--협력-프로세스-간-하나의-공유-메모리-영역을-만들어-상호-통신">공유 메모리 (<code class="language-plaintext highlighter-rouge">Shared Memory</code>) : 협력 프로세스 간 하나의 공유 메모리 영역을 만들어 상호 통신</h3>
+<blockquote>
+  <p>공유 메모리 세그먼트 : 공유 메모리 영역은 공유 메모리 세그먼트를 생성하는 프로세스의 주소 공간에 위치</p>
+</blockquote>
+
+<ul>
+  <li>커널 의존성이 낮아 속도가 빠르고, 유저 레벨에서의 <code class="language-plaintext highlighter-rouge">IPC</code>가 가능해 자유로운 통신이 가능</li>
+  <li>대량의 정보를 다수의 프로세스에게 배포 가능함</li>
+  <li>자원과 데이터를 공유하므로, 동기화 문제가 발생할 수 있음</li>
+</ul>
+
+<h3 id="메시지-패싱-message-passing--협력-프로세스-간-각자의-메시지를-운영-체제에-전달해-통신">메시지 패싱 (<code class="language-plaintext highlighter-rouge">Message Passing</code>) : 협력 프로세스 간 각자의 메시지를 운영 체제에 전달해 통신</h3>
+<ul>
+  <li>별도의 구축 없이 커널만을 이용하기에 비교적 구현이 쉬움</li>
+  <li>커널을 이용할 때마다, 시스템 호출에 따른 문맥 전환이 매번 발생 (문맥 복사 2번 수행, 문맥 전환 오버헤드 발생)</li>
+</ul>
+
+<h3 id="파이프-pipe--통신을-위한-버퍼를-생성해-프로세스가-데이터를-상호-통신">파이프 (<code class="language-plaintext highlighter-rouge">PIPE</code>) : 통신을 위한 버퍼를 생성해 프로세스가 데이터를 상호 통신</h3>
+<ul>
+  <li>
+    <h4 id="익명-파이프-anonymous-pipe--통신할-프로세스를-명확히-아는-경우">익명 파이프 (<code class="language-plaintext highlighter-rouge">Anonymous PIPE</code>) : 통신할 프로세스를 명확히 아는 경우</h4>
+    <ul>
+      <li>부모-자식 혹은 형제 간 통신에 사용 (외부 프로세스에서 사용할 수 없음)</li>
+      <li>하나의 프로세스는 데이터를 쓰기만, 다른 하나는 데이터를 읽기만 수행 → 반 이중 (<code class="language-plaintext highlighter-rouge">Half-Duplex</code>) 통신</li>
+      <li>송수신을 모두 하기 원한다면 파이프를 2개 구현해야 함</li>
+    </ul>
+  </li>
+  <li>
+    <h4 id="네임드-파이프-named-pipe--전혀-모르는-상태의-프로세스-간의-통신에-사용">네임드 파이프 (<code class="language-plaintext highlighter-rouge">Named PIPE</code>) : 전혀 모르는 상태의 프로세스 간의 통신에 사용</h4>
+    <ul>
+      <li>익명 파이프의 확장된 상태 : <code class="language-plaintext highlighter-rouge">FIFO</code>를 통해 이름이 있는 파일을 사용하여 프로세스 간 통신</li>
+      <li>송수신을 모두 하기 원한다면 파이프를 2개 구현해야 함</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="소켓-socket--동일한-운영체제에서-실행되는-프로세스-간-데이터를-교환하는-endpoint">소켓 (<code class="language-plaintext highlighter-rouge">Socket</code>) : 동일한 운영체제에서 실행되는 프로세스 간 데이터를 교환하는 <code class="language-plaintext highlighter-rouge">Endpoint</code></h3>
+<ul>
+  <li>클라이어트와 서버가 네트워크 소켓 통신을 통해 데이터를 공유 (원격에서 프로세스 간 데이터를 공유할 때 사용)
+    <ul>
+      <li>양쪽 <code class="language-plaintext highlighter-rouge">PC</code>에서 각각 임의의 포트를 정하고 해당 포트 간의 대화를 통해 데이터를 주고받음</li>
+      <li>각각의 <code class="language-plaintext highlighter-rouge">PC</code>의 포트를 담당하는 소켓은 데이터를 송수신하는 역할을 맡은 하나의 프로세스</li>
+    </ul>
+  </li>
+  <li>전이중 (<code class="language-plaintext highlighter-rouge">Full Duplex</code>) 통신이 가능 : 서버-클라이언트 환경을 구축하는 데에 용이</li>
+  <li>중대형 어플리케이션에서 주로 사용</li>
+</ul>
+
+<h3 id="메시지-큐-message-queue--메모리-공간을-활용한-pipe">메시지 큐 (<code class="language-plaintext highlighter-rouge">Message Queue</code>) : 메모리 공간을 활용한 <code class="language-plaintext highlighter-rouge">PIPE</code></h3>
+<ul>
+  <li>입출력 방식은 <code class="language-plaintext highlighter-rouge">Named PIPE</code>와 유사</li>
+  <li><code class="language-plaintext highlighter-rouge">PIPE</code>나 <code class="language-plaintext highlighter-rouge">FIFO</code>와 달리 다수의 프로세스 간 메시지를 전달할 수 있음</li>
+  <li>사용할 데이터에 번호를 붙이면서 여러 프로세스가 동시에 데이터를 다룰 수 있음 → 메시지 접근을 위한 키 (<code class="language-plaintext highlighter-rouge">Key</code>) 필요</li>
+</ul>
+
+<h3 id="메모리-맵-memory-map--열린-파일을-메모리에-맵핑시켜서-공유">메모리 맵 (<code class="language-plaintext highlighter-rouge">Memory Map</code>) : 열린 파일을 메모리에 맵핑시켜서 공유</h3>
+<ul>
+  <li>공유 메모리처럼 메모리를 공유함 (공유 매개체가 파일 + 메모리)</li>
+  <li>주로 파일로 대용량 데이터를 공유해야 할 때 사용, 파일 입출력이 느릴 때 사용하면 편리</li>
+  <li>대부분의 운영체제에서 프로세스를 실행할 때 실행 파일의 각 세그먼트를 메모리에 사상하기 위해 메모리 맵 파일 사용</li>
+  <li>메모리 맵 파일은 파일 크기를 변경할 수 없으며, 메모리 맵 파일을 사용하기 이전 혹은 이후에만 파일 크기를 변경 가능</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#operation-system" class="page__taxonomy-item p-category" rel="tag">Operation System</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-12-12">December 12, 2022</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BOperation+System%5D+4.+IPC%20http%3A%2F%2Flocalhost%3A4000%2Fos4%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fos4%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/os3/" class="pagination--pager" title="[Operation System] 3. CPU Scheduling
+">이전</a>
+    
+    
+      <a href="/os5/" class="pagination--pager" title="[Operation System] 5. Thread
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/microservice2/" rel="permalink">[MicroService] 2. MSA
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">마이크로서비스 아키텍처 (MSA) : 마이크로서비스를 접목한 아키텍처 구조
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/microservice1/" rel="permalink">[MicroService] 1. MicroService
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">비즈니스 민첩성 : 자신의 특화된 서비스를 빠르게 제공하고, 피드백을 반영해 서비스를 빠르게 개선
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/jpa1/" rel="permalink">[JPA] 1. JPA
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">개발자가 SQL을 직접 다룰 때의 문제
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/docker4/" rel="permalink">[Docker] 4. Docker File
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">도커 파일 (Dockerfile) : 서버 운영 기록을 코드로 저장한 파일을 특정 시점의 도커 이미지로 빌드
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 pocj8ur4in. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

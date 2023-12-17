@@ -1,0 +1,922 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Operation System] 6. Main Memory Management - pocj8ur4in’s blog</title>
+<meta name="description" content="메인 메모리 관리 (Main Memory Management)">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[Operation System] 6. Main Memory Management">
+<meta property="og:url" content="http://localhost:4000/os6/">
+
+
+  <meta property="og:description" content="메인 메모리 관리 (Main Memory Management)">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-10-07T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2022-12-12T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/os6/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[Operation System] 6. Main Memory Management</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Operation System] 6. Main Memory Management">
+    <meta itemprop="description" content="메인 메모리 관리 (Main Memory Management)">
+    <meta itemprop="datePublished" content="2022-10-07T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-12-12T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/os6/" class="u-url" itemprop="url">[Operation System] 6. Main Memory Management
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#메인-메모리-관리-main-memory-management">메인 메모리 관리 (Main Memory Management)</a><ul><li><a href="#메모리-계층-memory-hierarchy--각각의-특징이-있는-저장-장치를-혼용해-효율성-극대화">메모리 계층 (Memory hierarchy) : 각각의 특징이 있는 저장 장치를 혼용해 효율성 극대화</a></li><li><a href="#q-cpu가-한-번에-한-프로세스를-수행하면--mono-programming">Q. CPU가 한 번에 한 프로세스를 수행하면? : Mono-Programming</a></li><li><a href="#q-만약-메모리-추상화를-사용하지-않는다면--모든-프로그램이-물리-메모리를-직접-사용">Q. 만약 메모리 추상화를 사용하지 않는다면? : 모든 프로그램이 물리 메모리를 직접 사용</a><ul><li><a href="#p1-프로텍션-protection--한-프로세스가-운영체제나-다른-프로세스의-파티션을-침범하지-못하게-해야-함">P1. 프로텍션 (Protection) : 한 프로세스가 운영체제나 다른 프로세스의 파티션을 침범하지 못하게 해야 함</a></li><li><a href="#p2-리로케이트-relocation--변수-주소나-프로시저-주소에-대한-접근에-차이가-발생">P2. 리로케이트 (Relocation) : 변수 주소나 프로시저 주소에 대한 접근에 차이가 발생</a></li></ul></li><li><a href="#주소-바인딩-address-binding--프로세스의-논리적-주소를-물리적-메모리-주소로-연결">주소 바인딩 (Address Binding) : 프로세스의 논리적 주소를 물리적 메모리 주소로 연결</a><ul><li><a href="#mmu의-재배치-레지스터-relocation-register--프로세스의-논리-공간을-메모리의-물리-공간으로-연속해-매핑">MMU의 재배치 레지스터 (Relocation Register) : 프로세스의 논리 공간을 메모리의 물리 공간으로 연속해 매핑</a></li></ul></li><li><a href="#스와핑-swapping--메모리에-로드된-프로세스-중에-장기간-미사용된-것을-하드-디스크에-이미지-형태로-저장">스와핑 (Swapping) : 메모리에 로드된 프로세스 중에 장기간 미사용된 것을 하드 디스크에 이미지 형태로 저장</a><ul><li><a href="#동적-메모리-파티션-dynamic-memory-partitions--프로그램이-메모리에-로드될-때마다-파티션을-나누고-할당">동적 메모리 파티션 (Dynamic memory partitions) : 프로그램이 메모리에 로드될 때마다 파티션을 나누고 할당</a></li><li><a href="#contiguous-memory-allocation--메모리에-새로-생성된-프로세스들을-위한-메모리-공간-할당">Contiguous Memory Allocation : 메모리에 새로 생성된 프로세스들을 위한 메모리 공간 할당</a></li></ul></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="메인-메모리-관리-main-memory-management">메인 메모리 관리 (<code class="language-plaintext highlighter-rouge">Main Memory Management</code>)</h2>
+
+<ul>
+  <li>메모리 공간은 기본적으로 주소 (<code class="language-plaintext highlighter-rouge">address</code>)와 데이터 (<code class="language-plaintext highlighter-rouge">data</code>)로 구성되어 있음
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">CPU</code>는 주소를 가지고 메인 메모리에 요청을 하거나 해당 주소에 계산 결과를 저장</li>
+      <li>메인 메모리는 <code class="language-plaintext highlighter-rouge">CPU</code>가 요구하는 주소에 저장되어 있는 데이터를 <code class="language-plaintext highlighter-rouge">CPU</code>에게 전달</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821877-d74f5380-4ce6-11e9-8888-e63816796f65.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>프로그램의 빌드는 소스 파일, 목적 파일, 실행 파일 순서로 생성
+    <ul>
+      <li>소스 파일 (<code class="language-plaintext highlighter-rouge">Source file</code>) : 고수준 언어 또는 어셈블리어
+        <ul>
+          <li>컴파일 단계 : 소스 파일은 컴파일러 또는 어셈블러에 의해 컴파일 또는 어셈블하여 목적 파일 생성</li>
+        </ul>
+      </li>
+      <li>목적 파일 (<code class="language-plaintext highlighter-rouge">Object file</code>) : 컴파일된 결과 또는 어셈블된 결과
+        <ul>
+          <li>링크 단계 : 목적 파일은 링커 (<code class="language-plaintext highlighter-rouge">Linker</code>)에 의해 라이브러리를 찾아 정보를 추가해 실행 파일 생성</li>
+        </ul>
+      </li>
+      <li>실행 파일 (<code class="language-plaintext highlighter-rouge">Executable file</code>) : 링크된 결과
+        <ul>
+          <li>로드 단계 : 실행 파일은 로더 (<code class="language-plaintext highlighter-rouge">Loader</code>)에 의해 메인 메모리에 할당</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821878-d74f5380-4ce6-11e9-98e8-a43b086a4837.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>빌드된 프로그램은 <code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">data</code>, <code class="language-plaintext highlighter-rouge">stack</code> 영역으로 구분됨
+    <ul>
+      <li>단순히 생성된 프로그램은 <code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">data</code> 영역만 존재</li>
+      <li>로드 단계에서 프로그램이 실행을 위해 메모리에 적재되었을 때, 운영체제에 의해 <code class="language-plaintext highlighter-rouge">stack</code> 영역이 추가됨</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="메모리-계층-memory-hierarchy--각각의-특징이-있는-저장-장치를-혼용해-효율성-극대화">메모리 계층 (<code class="language-plaintext highlighter-rouge">Memory hierarchy</code>) : 각각의 특징이 있는 저장 장치를 혼용해 효율성 극대화</h3>
+<ul>
+  <li>메모리 매니저 (<code class="language-plaintext highlighter-rouge">Memory Manager</code>) : 메모리 하이라키를 관리하는 관리 시스템의 일부분</li>
+</ul>
+
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9986554C5C76482528" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>캐시 (<code class="language-plaintext highlighter-rouge">Cash</code>) : 빠르고, 비싸고, 휘발성</li>
+  <li>메인 메모리 (<code class="language-plaintext highlighter-rouge">Main Memory</code>) : 캐시보다 느리고, 캐시보다 싸고, 휘발성</li>
+  <li>디스크 스토리지 (<code class="language-plaintext highlighter-rouge">Disk Storage</code>) : 메인 메모리보다 느리고, 메인 메모리보다 싸고, 비휘발성</li>
+</ul>
+
+<blockquote>
+  <p>메모리 계층 구조를 통해 프로그래머가 사용하기 좋은 모델로 <b>추상화</b>하고, 운영체제를 통해 추상회된 객체를 관리한다.</p>
+</blockquote>
+
+<h3 id="q-cpu가-한-번에-한-프로세스를-수행하면--mono-programming">Q. <code class="language-plaintext highlighter-rouge">CPU</code>가 한 번에 한 프로세스를 수행하면? : <code class="language-plaintext highlighter-rouge">Mono-Programming</code></h3>
+
+<ul>
+  <li>메인 프레임 (<code class="language-plaintext highlighter-rouge">mainframe</code>) : <code class="language-plaintext highlighter-rouge">RAM</code> 위의 <code class="language-plaintext highlighter-rouge">OS</code>에 유저 프로그램이 주소로 연결되어 존재</li>
+  <li>임베디드 시스템 (<code class="language-plaintext highlighter-rouge">Embedded System</code>) : <code class="language-plaintext highlighter-rouge">OS</code>가 위치한 <code class="language-plaintext highlighter-rouge">ROM</code> 아래에 유저 프로그램이 주소로 연결되어 존재</li>
+  <li>퍼스널 컴퓨터 (<code class="language-plaintext highlighter-rouge">personal computer</code>) : 메인 프레임 + <code class="language-plaintext highlighter-rouge">ROM</code> 위 장치 관리자가 유저 프로그램 위에서 <code class="language-plaintext highlighter-rouge">OS</code>의 관리를 받음</li>
+</ul>
+
+<blockquote>
+  <p>하단 내용은, <code class="language-plaintext highlighter-rouge">CPU</code>가 여러 프로세스를 돌아가면서 수행하는 <code class="language-plaintext highlighter-rouge">Multi-Programming</code> 환경이라 가정한다.</p>
+</blockquote>
+
+<h3 id="q-만약-메모리-추상화를-사용하지-않는다면--모든-프로그램이-물리-메모리를-직접-사용">Q. 만약 메모리 추상화를 사용하지 않는다면? : 모든 프로그램이 물리 메모리를 직접 사용</h3>
+<ul>
+  <li>프로그래머에게 제공되는 메모리 영역 : 실제 물리 메모리 (0 ~ (실제 물리 메모리의 크기))
+    <ul>
+      <li>각 주소는 <code class="language-plaintext highlighter-rouge">n</code>비트로 구성된 셀 (<code class="language-plaintext highlighter-rouge">Cell</code>)로 정의</li>
+    </ul>
+  </li>
+  <li>하드웨어의 도움 없이 두 프로그램이 동시에 메모리에서 실행된다는 것은 불가능
+    <ul>
+      <li>메모리의 프로세스를 이미지 형태로 디스크에 저장하고, 프로그램을 메모리로 스와핑 (<code class="language-plaintext highlighter-rouge">Swapping</code>)할 순 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>! 메모리 추상화를 사용하지 않는다고 했으니, 메모리 계층 구조 또한 존재하지 않는거네?</p>
+  <ul>
+    <li><b>아니다.</b> 메모리를 추상화하는 방법 중 하나로, <b>메모리 추상화를 사용하지 않는 것</b>이다.
+      <ul>
+        <li>{ a, b, c, d, … } 를 추상화하는 방법 (1) := alphabetic</li>
+        <li>{ a, b, c, d, … } 를 추상화하는 방법 (2) := { a, b, c, d, … }</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>… 운영체제는 메모리 계층 구조를 이루는 캐시, 메인 메모리, 디스크 스토리지를 물리 주소를 통해 직접 접근한다.</p>
+  <ul>
+    <li>그런데, 물리 주소를 직접 접근하는 방법에는 <code class="language-plaintext highlighter-rouge">Protection &amp; Relocation</code> 이슈가 존재한다.</li>
+  </ul>
+</blockquote>
+
+<h4 id="p1-프로텍션-protection--한-프로세스가-운영체제나-다른-프로세스의-파티션을-침범하지-못하게-해야-함">P1. 프로텍션 (<code class="language-plaintext highlighter-rouge">Protection</code>) : 한 프로세스가 운영체제나 다른 프로세스의 파티션을 침범하지 못하게 해야 함</h4>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">IBM360</code>모델 : 프로텍션 코드 (<code class="language-plaintext highlighter-rouge">Protection code</code>)
+    <ul>
+      <li>프로세스의 <code class="language-plaintext highlighter-rouge">PSW</code>에는 <code class="language-plaintext highlighter-rouge">4bit</code> 키가 포함 / 메모리를 <code class="language-plaintext highlighter-rouge">2KB</code> 블럭 단위로 나누고, 각 블록에 <code class="language-plaintext highlighter-rouge">4bit</code> 프로텍션 코드 할당</li>
+      <li>수행되는 프로세스는 자신의 <code class="language-plaintext highlighter-rouge">PSW</code> 키와 액세스하는 블럭의 프로텍션 코드를 비교해, 일치하지 않으면 트랩 발생</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="p2-리로케이트-relocation--변수-주소나-프로시저-주소에-대한-접근에-차이가-발생">P2. 리로케이트 (<code class="language-plaintext highlighter-rouge">Relocation</code>) : 변수 주소나 프로시저 주소에 대한 접근에 차이가 발생</h4>
+<ul>
+  <li>컴파일된 <code class="language-plaintext highlighter-rouge">.exe</code> 파일을 파티션에 로드해 실행할 때, 바이너리 파일이 아닌, 파티션을 기준으로 접근해야 함
+    <ul>
+      <li>컴파일된 <code class="language-plaintext highlighter-rouge">.exe</code> 파일을 파티션 A와 B에 각각 로드해 실행할 때, 각 파티션을 기준으로 접근해야 함</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>컴파일된 <code class="language-plaintext highlighter-rouge">.exe</code> 파일의 첫번째 명령어가 100번지에 있는 프로시저 콜이라고 가정하면…</p>
+  <ul>
+    <li>해당 파일을 파티션에 로드해 실행했을 때 : <del>0 + 100번지로 접근</del> (파티션의 시작 주소) + 100번지로 접근</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">IBM360</code>모델 : 정적 재배치 (<code class="language-plaintext highlighter-rouge">Static Relocation</code>)
+    <ul>
+      <li>프로그램이 메모리에 로드될 때, 파티션을 기준으로 접근하도록 명령어 수정
+        <ul>
+          <li>링커가 프로그램의 어떤 부분이 리로케이트되어야 하는지 알아야 함</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="주소-바인딩-address-binding--프로세스의-논리적-주소를-물리적-메모리-주소로-연결">주소 바인딩 (<code class="language-plaintext highlighter-rouge">Address Binding</code>) : 프로세스의 논리적 주소를 물리적 메모리 주소로 연결</h3>
+<ul>
+  <li>주소 공간 (<code class="language-plaintext highlighter-rouge">address space</code>) : 프로세스가 메모리에 접근할 때 사용하는 주소들의 집합
+    <ul>
+      <li>각 프로세스들은 자신들만의 주소 공간을 가짐 -&gt; <code class="language-plaintext highlighter-rouge">logical address</code></li>
+    </ul>
+  </li>
+  <li>프로그램이 어떤 주소를 사용해도, 메인 메모리에 할당된 주소를 찾아가도록 해야 함
+    <ul>
+      <li>논리 주소 (<code class="language-plaintext highlighter-rouge">logical address</code>) : CPU에서 사용하는 주소. 메모리 내 프로세스의 독립적인 공간</li>
+      <li>물리 주소 (<code class="language-plaintext highlighter-rouge">physical address</code>) : 메인 메모리에서 사용하는 주소. 하드웨어에 의해 정해진 주소 공간</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>… 그러므로 프로그램이 할당된 실제 메모리 주소 공간의 위치는 프로그램을 실행하는 <code class="language-plaintext highlighter-rouge">CPU</code>에 전혀 영향을 미치지 않음</p>
+  <ul>
+    <li>그럼 어떻게 각각의 프로세스들에게 서로 다른 주소 공간을 제공할 수 있을까?</li>
+  </ul>
+</blockquote>
+
+<h4 id="mmu의-재배치-레지스터-relocation-register--프로세스의-논리-공간을-메모리의-물리-공간으로-연속해-매핑"><code class="language-plaintext highlighter-rouge">MMU</code>의 재배치 레지스터 (<code class="language-plaintext highlighter-rouge">Relocation Register</code>) : 프로세스의 논리 공간을 메모리의 물리 공간으로 연속해 매핑</h4>
+<ul>
+  <li>동적 재배치 (<code class="language-plaintext highlighter-rouge">Dynamic relocation</code>) : 프로세스의 논리 주소를 메모리의 물리 주소으로 변경
+    <ul>
+      <li>베이스 레지스터 (<code class="language-plaintext highlighter-rouge">Base Register</code>) : (파티션의 시작 주소)</li>
+      <li>리미트 레지스터 (<code class="language-plaintext highlighter-rouge">Limit Register</code>) : (파티션의 크기)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821880-d7e7ea00-4ce6-11e9-944e-3be89338213f.png" width="80%" style="margin-left: 2%" /></p>
+
+<ol>
+  <li>현재 프로그램이 파티션에 로드되었을 때, 프로그램이 로드된 파티션의 크기를 리미트 레지스터의 값에 저장</li>
+  <li><code class="language-plaintext highlighter-rouge">CPU</code>는 메인 메모리에서 주소가 사용 가능한지 여부를 생각하지 않고, 명시된 그대로 물리 주소를 사용하려고 함</li>
+  <li><code class="language-plaintext highlighter-rouge">CPU</code>가 명령어를 수행할 때마다, 프로세스가 참조하려는 주소에 베이스 레지스터의 값을 더해 수행 (<code class="language-plaintext highlighter-rouge">Relocation</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">CPU</code>가 명령어를 수행할 때마다, 프로세스가 참조하려는 주소가 리미트 레지스터의 값과 동일하거나 큰지 확인 (<code class="language-plaintext highlighter-rouge">Protection</code>)
+    <ul>
+      <li>O : 프로텍션 바이오레이션 (<code class="language-plaintext highlighter-rouge">Protection Violation</code>) 발생시켜 메모리 참조를 중단</li>
+      <li>X : 프로세스가 참조하려는 주소에 베이스 레지스터의 값을 더한 값을 메모리 버스에 보냄</li>
+    </ul>
+  </li>
+</ol>
+
+<blockquote>
+  <p>Q. 그럼 베이스 레지스터 &amp; 리미트 레지스터를 사용하면 이젠 더 이상 문제가 없는걸까?</p>
+  <ul>
+    <li>모든 메모리 참조마다 덧셈과 비교 연산이 요구되기에, 비교적 시간이 오래 걸림 : 특히 덧셈 연산이!
+      <ul>
+        <li>블로트웨어 (<code class="language-plaintext highlighter-rouge">Bloatware</code>) : 메모리의 크기를 증가하는 속도를 소프트웨어의 크기가 증가하는 속도가 역전</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2Fe9a93b26-58ff-4ab0-8b6b-2a8b3cb3cdfd%2F정적재배치2.PNG" width="80%" style="margin-left: 2%" /></p>
+
+  <ul>
+    <li>정적 메모리 파티션 (<code class="language-plaintext highlighter-rouge">Fixed memory partitions</code>) : 메모리를 파티션 여러 개로 미리 나누고 프로세스 할당
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">Multiple input Queues</code> : 도착한 작업을 크기에 맞는 가장 작은 파티션에 넣음</li>
+        <li><code class="language-plaintext highlighter-rouge">Single input Queue</code> : 도착한 작업을 수용할 큐를 하나만 배정, 먼저 도착한 작업을 먼저 실행시킴</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><img src="https://examradar.com/wp-content/uploads/2019/02/fixed-memory-partition.png" width="80%" style="margin-left: 2%" /></p>
+
+  <blockquote>
+    <p>정적 메모리 파티션은 메모리가 시스템이 구동할 모든 프로세스를 적재 가능한 용량을 가져야 성립하나,</p>
+    <ul>
+      <li>시스템이 구동할 모든 프로세스들이 필요한 메모리의 전체 크기는 실제 <code class="language-plaintext highlighter-rouge">RAM</code> 용량보다 크다.</li>
+      <li>프로그램이 시작하기 전에 이미 실행 중인 프로세스들이 적재되어 있다.</li>
+    </ul>
+  </blockquote>
+
+  <p>… <b>모든 프로세스들을 계속 적재하기엔, 물리 메모리 크기에 한계가 있다</b>는 문제에 대해, 2가지 해결책이 제시되었다.</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">Swapping</code> : 한 프로세스의 전체 이미지가 메모리로 적재되어 실행되다가 실행되지 않으면 디스크로 이동</li>
+    <li><code class="language-plaintext highlighter-rouge">Virtual Memory</code> : 한 프로세스의 전체 이미지가 아닌 일부만 메모리에 있어도 프로세스의 실행이 가능</li>
+  </ul>
+</blockquote>
+
+<h3 id="스와핑-swapping--메모리에-로드된-프로세스-중에-장기간-미사용된-것을-하드-디스크에-이미지-형태로-저장">스와핑 (<code class="language-plaintext highlighter-rouge">Swapping</code>) : 메모리에 로드된 프로세스 중에 장기간 미사용된 것을 하드 디스크에 이미지 형태로 저장</h3>
+<ul>
+  <li>프로세스 이미지 (<code class="language-plaintext highlighter-rouge">Process Image</code>) : 프로그램이 메모리에 로드되고 실행되어 데이터가 변경된 프로세스
+    <ul>
+      <li>하드 디스크에 존재하는 <code class="language-plaintext highlighter-rouge">.exe</code>, <code class="language-plaintext highlighter-rouge">.app</code>에 데이터가 변경되었기에 이를 하드 디스크의 <code class="language-plaintext highlighter-rouge">backing store</code>에 저장
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">swap-out</code> : 메인 메모리 -&gt; <code class="language-plaintext highlighter-rouge">Backing store</code></li>
+          <li><code class="language-plaintext highlighter-rouge">swap-in</code> : <code class="language-plaintext highlighter-rouge">Backing store</code> -&gt; 메인 메모리</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F79e932b4-c55f-4e27-aaaf-381605691e27%2F스와핑1.PNG" width="80%" style="margin-left: 2%" /></p>
+
+<blockquote>
+  <p>… <code class="language-plaintext highlighter-rouge">backing store</code>는 메인 메모리의 모든 프로세스가 <code class="language-plaintext highlighter-rouge">swap-out</code>될 때 데어터의 소실 없이 저장할 수 있어야 한다.</p>
+  <ul>
+    <li>그러므로, 하드 디스크에서 <code class="language-plaintext highlighter-rouge">backing store</code>이 할당받는 크기는 <b>최소 메인 메모리의 크기</b>라 예상할 수 있다.</li>
+  </ul>
+</blockquote>
+
+<p><img src="https://miro.medium.com/max/1200/1*QnOhzkY2mIXFKM-SoXh_8w.jpeg" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>(a) 각 프로그램의 데이터 세그먼트가 늘어날 공간을 미리 확보</li>
+  <li>(b) 각 프로그램의 세그먼트를 프로그램 텍스트 / 데이터 세그먼트 / 스택 세그먼트로 나눔
+    <ul>
+      <li>프로그램 텍스 위의 데이터 세그먼트와 스택 세그먼트가 서로를 향해 자라게끔 함
+        <ul>
+          <li>힙 (<code class="language-plaintext highlighter-rouge">Heap</code>) 영역 (<code class="language-plaintext highlighter-rouge">Room for growth</code>) : 사용자가 동적으로 할당할 영역
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">malloc</code>, <code class="language-plaintext highlighter-rouge">calloc</code> 등의 명령어로 관리</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="동적-메모리-파티션-dynamic-memory-partitions--프로그램이-메모리에-로드될-때마다-파티션을-나누고-할당">동적 메모리 파티션 (<code class="language-plaintext highlighter-rouge">Dynamic memory partitions</code>) : 프로그램이 메모리에 로드될 때마다 파티션을 나누고 할당</h4>
+<ul>
+  <li>운영체제가 동적으로 할당된 프로세스를 관리 : 힙 영역이 커지므로, 프로세스의 확장을 위한 공간이 할당되어야 함</li>
+</ul>
+
+<p><img src="https://examradar.com/wp-content/uploads/2019/03/Memory-Management-with-Bitmap.png" width="66%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li>(b) <code class="language-plaintext highlighter-rouge">Bit Maps</code> 사용 : 맵에 <code class="language-plaintext highlighter-rouge">X</code>비트를 관장할 <code class="language-plaintext highlighter-rouge">Y</code>개의 할당 단위 (<code class="language-plaintext highlighter-rouge">allocation unit</code>)
+    <ul>
+      <li>단위 유닛이 메모리에 할당되어 있으면 유닛의 값을 1, 할당되어 있지 않으면 0 (<code class="language-plaintext highlighter-rouge">flag bit</code>)</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li>할당 단위가 작아지면? : 유닛의 개수 <code class="language-plaintext highlighter-rouge">Y</code>가 커진다.
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">Y</code>를 표현할 <code class="language-plaintext highlighter-rouge">flag bit</code>가 많이 필요하므로, 맵의 크기가 커져 맵을 탐색할 때의 성능이 저하된다.</li>
+      </ul>
+    </li>
+    <li>할당 단위가 커지면? : 유닛의 개수 <code class="language-plaintext highlighter-rouge">Y</code>가 작아진다.
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">Y</code>를 표현할 <code class="language-plaintext highlighter-rouge">flag bit</code>가 적게 필요하므로, 비트맵의 공간이 작아진다.</li>
+        <li>마지막 프로세스에 빈 공간 역시 커져 더 많은 메모리 공간이 낭비될 가능성이 있다.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>… <code class="language-plaintext highlighter-rouge">Bit Maps</code>의 문제점 : 프로세스가 <code class="language-plaintext highlighter-rouge">k</code>개의 할당 단위를 요구할 때, 맵에서 <code class="language-plaintext highlighter-rouge">k</code>개의 0비트를 연속해서 찾아야 한다.</p>
+</blockquote>
+
+<ul>
+  <li>(c) <code class="language-plaintext highlighter-rouge">Linked Lists</code> 사용 : 메모리의 낮은 주소부터 링크드 리스트의 노드가 있음
+    <ul>
+      <li>각 엔트리는 <code class="language-plaintext highlighter-rouge">P</code> (프로세스) or <code class="language-plaintext highlighter-rouge">H</code> (홀)을 표현하는 <code class="language-plaintext highlighter-rouge">flag</code>, 시작 주소, 길이, 다음 엔트리를 가리키는 포인터로 구성</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li>프로세스 종료 시 <code class="language-plaintext highlighter-rouge">Linked Lists</code>를 업데이트하는 방법
+      <ul>
+        <li>종료되는 프로세스는 일반적으로 2개의 이웃을 가짐 → 이웃은 다른 프로세스가 차지한 공간이거나 빈 공간</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL0MnsZnPlU2O0BnlViAvrs8Ge5bJtE5VhIQ&amp;usqp=CAU" width="66%" style="margin-left: 2%" /></p>
+
+  <ul>
+    <li>(a) <code class="language-plaintext highlighter-rouge">X</code>에 해당되는 엔트리를 <code class="language-plaintext highlighter-rouge">X</code>에서 <code class="language-plaintext highlighter-rouge">H</code>로 바꿔 갱신</li>
+    <li>(b), (c) 2개의 엔트리를 통합해 하나로 표현</li>
+    <li>(d) 3개의 엔트리를 통합해 하나로 표현</li>
+  </ul>
+</blockquote>
+
+<h4 id="contiguous-memory-allocation--메모리에-새로-생성된-프로세스들을-위한-메모리-공간-할당"><code class="language-plaintext highlighter-rouge">Contiguous Memory Allocation</code> : 메모리에 새로 생성된 프로세스들을 위한 메모리 공간 할당</h4>
+<ul>
+  <li>메모리 단편화 (<code class="language-plaintext highlighter-rouge">Memory fragmentation</code>) : 메인 메모리에 흩어진 홀들이 불연속적으로 할당된 상태
+    <ul>
+      <li>프로세스 생성 &amp; 종료 반복 → <code class="language-plaintext highlighter-rouge">scattered holes</code></li>
+      <li>홀 (<code class="language-plaintext highlighter-rouge">Hole</code>) : 메인 메모리에서 프로세스가 할당되지 않은 영역</li>
+    </ul>
+  </li>
+  <li>외부 단편화 (<code class="language-plaintext highlighter-rouge">External fragmentation</code>) : 프로세스를 할당할 크기가 충분하나, 메모리 단편화로 할당이 불가능한 상태</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821882-d8808080-4ce6-11e9-8ff3-193fa79c04a3.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">First-fit</code> : 프로세스 크기보다 크거나 같은 홀을 탐색하는 순서 중에서 가장 먼저 찾은 홀에 프로세스 할당</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821883-d8808080-4ce6-11e9-8c2d-c84b878d21ea.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Best-fit</code> : 할당할 프로세스 크기와 홀의 크기 차이가 가장 작은 홀에 프로세스 할당</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821885-d8808080-4ce6-11e9-9473-db032d7eeb3a.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Worst-fit</code> : 할당할 프로세스 크기와 홀의 크기 차이가 가장 큰 홀에 프로세스 할당
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Best-fit</code>을 사용하였다가 다른 프로세스가 쓰지 못할 정도의 홀이 생겼을 때를 위한 대안</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821887-d9191700-4ce6-11e9-9b00-fa92272b8b7d.png" width="80%" style="margin-left: 2%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Compaction</code> : 메모리 여러 곳에 흩어져있는 홀들을 강제로 하나로 병합
+    <ul>
+      <li>홀을 옮기는 오버헤드가 매우 크고, 어느 홀을 옮겨야 빠르게 합칠 수 있는지에 대한 최적 알고리즘이 존재하지 않음</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>일반적으로 할당 속도는 <code class="language-plaintext highlighter-rouge">First-fit</code>가 가장 빠르며, 메모리 이용률은 <code class="language-plaintext highlighter-rouge">First-fit</code>와 <code class="language-plaintext highlighter-rouge">Best-fit</code>이 비슷하다.</p>
+  <ul>
+    <li>하지만 <code class="language-plaintext highlighter-rouge">Best-fit</code>을 사용하더라도, 외부 단편화로 인해 여전히 전체 메모리의 1/3 정도를 낭비한다.</li>
+  </ul>
+</blockquote>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#operation-system" class="page__taxonomy-item p-category" rel="tag">Operation System</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-12-12">December 12, 2022</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BOperation+System%5D+6.+Main+Memory+Management%20http%3A%2F%2Flocalhost%3A4000%2Fos6%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fos6%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/os5/" class="pagination--pager" title="[Operation System] 5. Thread
+">이전</a>
+    
+    
+      <a href="/os7/" class="pagination--pager" title="[Operation System] 7. Paging
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/microservice2/" rel="permalink">[MicroService] 2. MSA
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">마이크로서비스 아키텍처 (MSA) : 마이크로서비스를 접목한 아키텍처 구조
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/microservice1/" rel="permalink">[MicroService] 1. MicroService
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">비즈니스 민첩성 : 자신의 특화된 서비스를 빠르게 제공하고, 피드백을 반영해 서비스를 빠르게 개선
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/jpa1/" rel="permalink">[JPA] 1. JPA
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">개발자가 SQL을 직접 다룰 때의 문제
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/docker4/" rel="permalink">[Docker] 4. Docker File
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">도커 파일 (Dockerfile) : 서버 운영 기록을 코드로 저장한 파일을 특정 시점의 도커 이미지로 빌드
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 pocj8ur4in. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

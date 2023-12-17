@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-15T12:43:08+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[MicroService] 2. MSA</title><link href="http://localhost:4000/microservice2/" rel="alternate" type="text/html" title="[MicroService] 2. MSA" /><published>2023-12-14T00:00:00+09:00</published><updated>2023-12-14T00:00:00+09:00</updated><id>http://localhost:4000/microservice2</id><content type="html" xml:base="http://localhost:4000/microservice2/"><![CDATA[<h2 id="마이크로서비스-아키텍처-msa--마이크로서비스를-접목한-아키텍처-구조">마이크로서비스 아키텍처 (<code class="language-plaintext highlighter-rouge">MSA</code>) : 마이크로서비스를 접목한 아키텍처 구조</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-17T19:01:27+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[MicroService] 2. MSA</title><link href="http://localhost:4000/microservice2/" rel="alternate" type="text/html" title="[MicroService] 2. MSA" /><published>2023-12-14T00:00:00+09:00</published><updated>2023-12-14T00:00:00+09:00</updated><id>http://localhost:4000/microservice2</id><content type="html" xml:base="http://localhost:4000/microservice2/"><![CDATA[<h2 id="마이크로서비스-아키텍처-msa--마이크로서비스를-접목한-아키텍처-구조">마이크로서비스 아키텍처 (<code class="language-plaintext highlighter-rouge">MSA</code>) : 마이크로서비스를 접목한 아키텍처 구조</h2>
 
 <ul>
   <li>클라우드 인프라와 접목해 아마존, 넷플릭스에 의해 구체화 → 비즈니스 성공 사례</li>
@@ -111,7 +111,7 @@
 <ul>
   <li>가상 인프라 환경 : 하이퍼바이저 (<code class="language-plaintext highlighter-rouge">Hypervisor</code>)의 사용 여부 및 게스트 OS 유무에 따라 나뉨
     <ul>
-      <li>가상 머신 (<code class="language-plaintext highlighter-rouge">VM</code>) : 하이퍼바이저를 통해 하나의 시스템에서 여러 운영체제를 사용
+      <li>가상 머신 (<code class="language-plaintext highlighter-rouge">Virtual Machine</code>) : 하이퍼바이저를 통해 하나의 시스템에서 여러 운영체제를 사용
         <ul>
           <li>운영체제 패치 및 관련 라이브러리 설치로 인한 오버헤드가 지속적으로 발생</li>
         </ul>
@@ -900,836 +900,516 @@ Server: ~
             </tr>
          </tbody>
     </table>
-</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Docker" /><summary type="html"><![CDATA[도커 (Docker) : 컨테이너 기반 가상화 (Container-based Virtualization)]]></summary></entry><entry><title type="html">[vocawik] 7. 07/21 진행 내용</title><link href="http://localhost:4000/vcw7/" rel="alternate" type="text/html" title="[vocawik] 7. 07/21 진행 내용" /><published>2023-07-21T00:00:00+09:00</published><updated>2023-07-21T00:00:00+09:00</updated><id>http://localhost:4000/vcw7</id><content type="html" xml:base="http://localhost:4000/vcw7/"><![CDATA[<blockquote>
-  <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #19. feat(domain): BaseDateTime 엔티티 추가 ~ #23. fix(domain): User 도메인 제약조건 추가에 대한 내용입니다.</p>
+</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Docker" /><summary type="html"><![CDATA[도커 (Docker) : 컨테이너 기반 가상화 (Container-based Virtualization)]]></summary></entry><entry><title type="html">[Github Pages] 6. Github Pages 블로그 기능 추가</title><link href="http://localhost:4000/blog6/" rel="alternate" type="text/html" title="[Github Pages] 6. Github Pages 블로그 기능 추가" /><published>2023-04-10T00:00:00+09:00</published><updated>2023-10-06T00:00:00+09:00</updated><id>http://localhost:4000/blog6</id><content type="html" xml:base="http://localhost:4000/blog6/"><![CDATA[<blockquote>
+  <p>이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html이나 css를 다룰 줄 알면 금방 할 수 있는, 혹은 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를 해결하였는지, 에 대해 자세히 쓰고 싶었다. 그래서 이 게시물은 다른 게시물들과 달리, 내가 블로그에서 부족하다고 느낀 점들을 계속 조금씩이라도 보충해나갈 계획이다.</p>
 </blockquote>
 
-<h2 id="19-featdomain-basedatetime-엔티티-추가"><a href="https://github.com/pocj8ur4in/vw-backend/commit/bb68e72e418610d6edb4b13449c3cf90973a2cb1">#19</a>. feat(domain): BaseDateTime 엔티티 추가</h2>
+<h2 id="1-블로그-댓글-feat-disqus-giscus">1. 블로그 댓글 (feat. disqus, giscus)</h2>
+<p>앞서 서술한 게시물을 보면 Github Pages는 정적 웹 사이트 호스팅 서비스라는 말이 있다. 모든 웹 페이지를 미리 생성하고, 방문자로부터 요청이 들어오면 미리 만든 웹 페이지를 그대로 응답한다는 건데, 사용자와 동적으로 정보를 주고받아야 하는 댓글 등의 기능은 불가능하다는 것이다.<br /></p>
 
-<ul>
-  <li>JPA Auditing을 User 엔티티에 적용하고자 생성 시간 (<code class="language-plaintext highlighter-rouge">CreatedDate</code>)과 수정 시간 (<code class="language-plaintext highlighter-rouge">LastModifiedDate</code>)을 칼럼으로 갖는 <code class="language-plaintext highlighter-rouge">BaseDateTime</code> 엔티티를 생성하였다. 이 때 MappedSuperclass를 통해 JPA Entity 클래스들이 BaseTimeEntity를 상속할 때 내부 필드도 컬럼으로 인식하도록 설정하였다.</li>
-</ul>
+<p>그래서 처음에는 댓글 플랫폼인 <a href="https://disqus.com">disqus</a>를 통해 이를 해결하고자 하였다. 방법은 간단한데, 사이트에 가입하고 무료 플랜을 구독한 다음에 <code class="language-plaintext highlighter-rouge">_config.yml</code>를 다음과 같이 수정해주기만 하면 된다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.domain.common.model;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.MappedSuperclass;
-import java.time.LocalDateTime;
-import lombok.Getter;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
-@Getter
-@MappedSuperclass // JPA Entity 클래스들이 BaseTimeEntity를 상속할 때 내부 필드도 컬럼으로 인식하도록 설정
-@EntityListeners(AuditingEntityListener.class)
-public abstract class BaseDateTime { // 생성 및 수정 시간 엔티티
-    @Column(name = "baseDateTime_created", updatable = false)
-    @CreatedDate
-    private LocalDateTime created; // 생성 시간
-
-    @Column(name = "baseDateTime_lastModified")
-    @LastModifiedDate
-    private LocalDateTime lastModified; // 수정 시간
-}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>comments:
+  provider               : "disqus" # 댓글 제공자 지정
+  disqus:
+    shortname            :          # disqus ID 지정
 </code></pre></div></div>
 
-<h2 id="20-featinfra-feign-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/54a5c95f7c8e58db5439558db99bb672f6d8c85d">#20</a>. feat(infra): feign 적용</h2>
+<p>그런데 disqus에서 제공하는 기능인 ‘SNS로 댓글 달기’은 개발자 친화적인 기능은 아니였고, 또 나중에는 광고가 노출되기 시작했다. 그래서 대안으로 찾은 게 <a href="https://giscus.app/ko">giscus</a>인데, GitHub Discussions로 작동하고, 마크다운도 지원하면서 대댓글이나 반응과 같은 자잘한 기능들이 마음에 들었다.</p>
 
-<p>페인 (Feign) 클라이언트는 REST 호출을 도와주는 Http 클라이언트 바인더 (Client Binder)이다. JPA가 인터페이스만으로 DB에 접근하는 방식을 축소시키는 것처럼, Feign을 적용하면 번거로운 RestTemplate과 같은 호출 방식을 인터페이스 하나만으로 축소시킬 수 있다.</p>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/d0db9e9a-29a3-4529-918e-f9ae0ddc9b65" width="100%" /></p>
 
-<ul>
-  <li>페인 클라이언트는 REST 호출 방식에 영향을 주므로 <code class="language-plaintext highlighter-rouge">Api</code>, <code class="language-plaintext highlighter-rouge">Domain</code> 모듈 모두에 영향을 준다고 생각하였다. 그래서 <code class="language-plaintext highlighter-rouge">Infra</code> 모듈에 의존성을 추가해 양 측 모두에서 사용할 수 있게끔 하였다.</li>
-</ul>
+<p>적용하는 방법도 Github 앱을 저장소에 설치한 뒤에 html 파일에 아래의 스크립트를 넣어주기만 하면 되는데, 나 같은 경우에는 Minimal Mistakes 테마에서 <code class="language-plaintext highlighter-rouge">_includes/social_share.html</code> 파일에 해당 구문을 넣어 적용시켰다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dependencies {
-    // 'org.springframework.cloud:spring-cloud-starter-openfeign' : 클라이언트 사이드 HTTP 요청을 쉽게 작성할 수 있도록 도와줌
-    api 'org.springframework.cloud:spring-cloud-starter-openfeign'
-
-    // 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8' : Optional, LocalDate 등의 JDK 8 추가 데이터 유형들을 지원
-    api 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8'
-
-    // 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310' : Java 8에 추가된 날짜 및 시간 API를 JSON 형식으로 직렬화 및 역직렬화하는 JSR-310 지원
-    api 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
-
-    // 'io.github.openfeign:feign-jackson' : OpenFeign을 사용할 때 JSON 데이터를 직렬화하고 역직렬화에 활용되는 Jackson 지원
-    api 'io.github.openfeign:feign-jackson:12.2'
-
-    implementation project(':vw-core')
-}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;section class="page__share"&gt;
+  &lt;script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&amp;A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async&gt;
+  &lt;/script&gt;
+&lt;/section&gt;
 </code></pre></div></div>
 
-<ul>
-  <li>그리고 Feign 클라이언트가 응답을 디코딩할 때 사용할 디코더를 정의하기 위해 Feign 클라이언트에 대한 설정 클래스 <code class="language-plaintext highlighter-rouge">FeignConfig</code>를 작성하였다.</li>
-</ul>
+<h2 id="2-블로그-google-검색-노출-및-검색-설정">2. 블로그 Google 검색 노출 및 검색 설정</h2>
+<p>아무래도 블로그를 운영하다 보면 다른 사람들의 반응이 궁금할 때가 많은데, 아무것도 설정하지 않은 블로그는 검색되지 않는다는 사실을 깨닫고 해결책을 찾아보았다. <a href="https://search.google.com/search-console/about">Google Search Console</a>에서 내 도메인을 입력한 다음에 소유권 확인을 위해 다운받은 <code class="language-plaintext highlighter-rouge">.HTML</code>파일을 <code class="language-plaintext highlighter-rouge">root</code>에 위치시키만 하면 며칠 안으로 아래와 같이 적용된다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.infra.config.feign;
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5876c2af-191d-47d7-ab9e-f3c2c55bde32" width="70%" /></p>
 
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import feign.Logger;
-import feign.Retryer;
-import feign.codec.Decoder;
-import feign.jackson.JacksonDecoder;
-import java.util.concurrent.TimeUnit;
-import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import vw.infra.outer.api.BaseFeignClientPackage;
+<p>추가로 블로그 포스트들이 검색 엔진에 검색되는 것을 가능하도록 진행할 작업들이 있는데, 먼저 <code class="language-plaintext highlighter-rouge">_config.yml</code> 파일에서 아래 설정들을 <code class="language-plaintext highlighter-rouge">true</code>로 설정한다.</p>
 
-@Configuration
-@EnableFeignClients(
-        basePackageClasses = BaseFeignClientPackage.class) // 해당 클래스가 위치한 패키지 밑에서 Feign 클라이언트를 탐색
-public class FeignConfig { //  Feign 클라이언트가 응답을 디코딩할 때 사용할 디코더 정의
-    @Bean
-    public Decoder feignDecoder() {
-        return new JacksonDecoder(
-                customObjectMapper()); // JSON 응답을 객체로 디코딩하기 위한 JacksonDecoder를 사용하도록 설정
-    }
-
-    public ObjectMapper customObjectMapper() { // ObjectMapper 객체를 커스터마이징 (객체 직렬화/역직렬화 설정을 변경)
-        ObjectMapper objectMapper = new ObjectMapper();
-
-        objectMapper.registerModule(
-                new JavaTimeModule()); // 시간 관련 클래스들을 JSON으로 변환하고, JSON 데이터를 해당 클래스들로 역직렬화 가능하게 함
-
-        // JSON 직렬화 시에, Java Date나 Calendar 객체를 타임스탬프 형태로 출력하지 않음 -&gt; 일반적인 문자열 형태로 날짜를 표시
-        objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
-
-        // JSON 역직렬화 시에, 알 수 없는 필드가 포함되어 있을 경우에도 역직렬화 작업을 진행시킴 -&gt; 해당 필드를 무시하고 나머지 필드들을 역직렬화
-        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-
-        // JSON 역직렬화 시에, 날짜와 시간을 JSON 데이터에 포함된 그대로의 타임존으로 유지
-        objectMapper.configure(DeserializationFeature.ADJUST_DATES_TO_CONTEXT_TIME_ZONE, false);
-
-        // JSON 역직렬화 시에, 알 수 없는 enum 값을 null로 처리함
-        objectMapper.configure(DeserializationFeature.READ_UNKNOWN_ENUM_VALUES_AS_NULL, true);
-
-        return objectMapper; // 커스텀마이징한 ObjectMapper 객체를 반환
-    }
-
-    @Bean
-    Retryer.Default retryer() { // 재시도 (Retry) 설정
-        return new Retryer.Default(
-                100L,
-                TimeUnit.SECONDS.toMillis(3L),
-                5); // 0.1초의 간격으로 시작해 최대 3초의 간격으로 점점 증가하며, 최대5번 재시도
-    }
-
-    @Bean
-    Logger.Level feignLoggerLevel() { // Feign의 로그 레벨을 설정
-        return Logger.Level.FULL; // FULL 레벨로 설정해 모든 요청과 응답에 대한 자세한 로그를 출력
-    }
-}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>search                   : # 블로그 검색 여부 지정
+search_full_content      : # 블로그의 내용 검색 여부 지정
 </code></pre></div></div>
 
-<ul>
-  <li>이때 <code class="language-plaintext highlighter-rouge">FeignConfig</code> 클래스의 <code class="language-plaintext highlighter-rouge">feignLoggerLevel()</code>에서 eign의 로그 레벨을 설정하고 있는데, Feign은 DEBUG 레벨로만 로그를 남길 수 있다. 그러므로 반드시 로그 레벨이 아래처럼 DEBUG로 설정이 되어 있어야 한다.</li>
-</ul>
+<p>그리고 웹 크롤링을 위해 <a href="https://github.com/pocj8ur4in/pocj8ur4in.github.io/blob/main/sitemap.yml"><code class="language-plaintext highlighter-rouge">sitemap.yml</code></a>과 <code class="language-plaintext highlighter-rouge">robots.txt</code> 파일을 생성해 <code class="language-plaintext highlighter-rouge">root</code>에 위치시키면 된다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>logging:
-  level:
-    com.mangkyu.openfeign.app.openfeign: DEBUG # feign에 대한 로깅 수준을 DEBUG로 설정 (가장 상세한 로그를 출력)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
+User-agent: *
+Allow: /
+
+# 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 차단
+User-agent: *
+Disallow: /
+
+# 구글 검색 로봇만 차단하고, 다른 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
+User-agent: Googlebot
+Disallow: /
+
+# 네이버 검색로봇만 차단하고, 다른 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
+User-agent: Yeti
+Disallow: /
+
+Sitemap: https://pocj8ur4in.github.io/sitemap.xml
 </code></pre></div></div>
 
-<h2 id="21-featinfra-redis-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/5fa4efde8f32f1327dd89bdb9cd85b6be71d26d9">#21</a>. feat(infra): redis 적용</h2>
+<p>만약에 블로그의 방문자 수 통계를 보고 싶다면, <a href="https://analytics.google.com/analytics/web/provision/#/provision">Google Analytics</a>를 가입한 후 애널리틱스 데이터 스트림을 설정하면 된다. 이때, 측정 ID를 복사한 후 <code class="language-plaintext highlighter-rouge">_config.yml</code> 파일을 다음과 같이 수정하면 된다.</p>
 
-<p>레디스 (<code class="language-plaintext highlighter-rouge">redis</code>)는  “키-값” 구조의 비정형 데이터를 저장하고 관리하는 비관계형 데이터베이스 관리 시스템이다. 레디스는 인메모리 데이터베이스이면서 다양한 자료구조를 갖고 있어 다른 DBMS에 비해 더 빠르고 간단한 방법으로 데이터를 정렬할 수 있다. 이는 우리가 구현하고자 하는 회원가입의 인증 이메일 전송에서 필요한 정보들 (이메일, 인증 키)를 저장하기에 적합하다.</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">redis</code>는 아마 서비스를 담당하는 <code class="language-plaintext highlighter-rouge">Domain</code> 모듈에서만 활용될 것으로 추측되지만, 우리 어플리케이션 외부에 존재하는 DBMS이다. 그러므로 외부 서비스를 담당할 <code class="language-plaintext highlighter-rouge">Infra</code> 모듈에 의존성을 추가하고 <code class="language-plaintext highlighter-rouge">Redis</code> 설정 클래스 또한 여기에 위치시키되, 이를 통해 구현될 레포지토리는 <code class="language-plaintext highlighter-rouge">Domain</code> 모듈에 위치시킬 생각이다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    dependencies {
-        // 'org.springframework.boot:spring-boot-starter-data-redis' : Redis에 필요한 모든 의존성들을 관리
-        api 'org.springframework.boot:spring-boot-starter-data-redis'
-    }
-</code></pre></div></div>
-
-<ul>
-  <li>레디스에 대한 설정 클래스인 <code class="language-plaintext highlighter-rouge">RedisConfig</code>를 작성하였다. 여기에서는 Redis 연결 설정을 위한 Bean인 <code class="language-plaintext highlighter-rouge">redisConnectionFactory</code>와 Redis 데이터를 처리하는 데 사용될 RedisTemplate에 대한 Bean인 <code class="language-plaintext highlighter-rouge">redisTemplate</code>을 추가하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.infra.config.redis;
-
-import java.time.Duration;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
-import org.springframework.data.redis.connection.lettuce.LettuceClientConfiguration;
-import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
-
-@Configuration
-@EnableRedisRepositories( // redis와 관련된 Spring Data Repositories 활성화
-        basePackages = "vw")
-public class RedisConfig {
-    @Value("${spring.data.redis.host}")
-    private String redisHost; // redis 호스트 주소
-
-    @Value("${spring.data.redis.port}")
-    private int redisPort; // redis 포트 번호
-
-    @Value("${spring.data.redis.password}")
-    private String redisPassword; // redis 비밀번호
-
-    @Bean // Redis 연결 설정을 위한 Bean 생성
-    public RedisConnectionFactory
-            redisConnectionFactory() { // RedisConnectionFactory : redis와의 연결을 관리하는 인터페이스
-        RedisStandaloneConfiguration redisStandaloneConfiguration =
-                new RedisStandaloneConfiguration(redisHost, redisPort);
-
-        if (redisPassword != null &amp;&amp; !redisPassword.isBlank()) // redis에 비밀번호가 설정되어 있지 않으면 비밀번호를 설정
-        redisStandaloneConfiguration.setPassword(redisPassword);
-
-        // LettuceClientConfiguration을 생성하여 Redis 연결 설정 구성
-        LettuceClientConfiguration lettuceClientConfiguration =
-                LettuceClientConfiguration.builder() // LettuceClientConfiguration의 builder 패턴 생성
-                        .commandTimeout(Duration.ofSeconds(1)) // redis 명령의 최대 실행 시간을 1초로 설정
-                        .shutdownTimeout(Duration.ZERO) // Redis 클라이언트의 종료 시간을 0초로 설정 (무한 대기)
-                        .build();
-
-        // LettuceConnectionFactory를 생성하여 Redis 연결 수립
-        return new LettuceConnectionFactory(
-                redisStandaloneConfiguration, lettuceClientConfiguration); // 내장 혹은 외부의 redis 연결
-    }
-
-    @Bean // RedisTemplate을 Bean으로 생성
-    public RedisTemplate&lt;?, ?&gt; redisTemplate() { // RedisTemplate : Redis 데이터를 처리하는 데 사용
-        RedisTemplate&lt;byte[], byte[]&gt; redisTemplate = new RedisTemplate&lt;&gt;();
-        redisTemplate.setConnectionFactory(redisConnectionFactory());
-
-        // 일반적인 key:value일 경우에 직렬화
-        redisTemplate.setKeySerializer(new StringRedisSerializer());
-        redisTemplate.setValueSerializer(new StringRedisSerializer());
-
-        // Hash를 사용할 경우에 직렬화
-        redisTemplate.setHashKeySerializer(new StringRedisSerializer());
-        redisTemplate.setHashValueSerializer(new StringRedisSerializer());
-
-        return redisTemplate; // RedisConnection에서 넘겨준 byte 값 객체 직렬화
-    }
-}
-</code></pre></div></div>
-
-<ul>
-  <li>앞서 내가 필요로 하는 기능인 회원가입 인증 이메일 전송에 필요한 데이터들은 휘발성이 강하면서도 빠른 접근을 요한다. 그러므로 레디스를 캐시로 사용할 수 있도록 <code class="language-plaintext highlighter-rouge">redisCacheManager</code> 클래스를 통해 캐시 기능을 활성화하고 이에 대한 설정을 작성하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.infra.config.redis;
-
-import java.time.Duration;
-import org.springframework.cache.CacheManager;
-import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.data.redis.cache.RedisCacheConfiguration;
-import org.springframework.data.redis.cache.RedisCacheManager;
-import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
-import org.springframework.data.redis.serializer.RedisSerializationContext;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
-
-@EnableCaching // 캐시 기능 활성화
-@Configuration
-public class RedisCacheConfig {
-    @Bean
-    @Primary
-    public CacheManager redisCacheManager(RedisConnectionFactory cf) { // 기본 CacheManager를 설정
-        // redis 캐시의 기본 설정을 구성
-        RedisCacheConfiguration redisCacheConfiguration =
-                RedisCacheConfiguration.defaultCacheConfig()
-                        .serializeKeysWith( // redis에서 키를 String으로 직렬화하도록 설정
-                                RedisSerializationContext.SerializationPair.fromSerializer(
-                                        new StringRedisSerializer()))
-                        .serializeValuesWith( // redis에서 값을 JSON 형태로 직렬화하도록 설정
-                                RedisSerializationContext.SerializationPair.fromSerializer(
-                                        new GenericJackson2JsonRedisSerializer()))
-                        .entryTtl( // Cache의 기본 TTL (Time-To-Live)을 1시간으로 설정
-                                Duration.ofHours(1L));
-
-        // RedisConnectionFactory를 사용하여 RedisCacheManager를 생성
-        return RedisCacheManager.RedisCacheManagerBuilder.fromConnectionFactory(cf)
-                .cacheDefaults(
-                        redisCacheConfiguration) // redis 캐시의 기본 설정을 지정한 RedisCacheConfiguration으로
-                // 설정
-                .build();
-    }
-
-    // OIDC (OpenID Connect) : 인증 및 권한 부여를 위한 프로토콜
-    @Bean
-    public CacheManager oidcCacheManager(RedisConnectionFactory cf) { // OIDC CacheManager를 설정
-        // OIDC Cache의 redis 캐시 설정을 구성
-        RedisCacheConfiguration redisCacheConfiguration =
-                RedisCacheConfiguration.defaultCacheConfig()
-                        .serializeKeysWith( // redis에서 키를 String으로 직렬화하도록 설정
-                                RedisSerializationContext.SerializationPair.fromSerializer(
-                                        new StringRedisSerializer()))
-                        .serializeValuesWith( // redis에서 값을 JSON 형태로 직렬화하도록 설정
-                                RedisSerializationContext.SerializationPair.fromSerializer(
-                                        new GenericJackson2JsonRedisSerializer()))
-                        .entryTtl( // OIDC Cache의 기본 TTL을 7일로 설정
-                                Duration.ofDays(7L));
-
-        // RedisConnectionFactory를 사용하여 RedisCacheManager를 생성
-        return RedisCacheManager.RedisCacheManagerBuilder.fromConnectionFactory(cf)
-                .cacheDefaults(
-                        redisCacheConfiguration) // OIDC Cache 설정을 지정한 RedisCacheConfiguration으로 설정
-                .build();
-    }
-}
-</code></pre></div></div>
-
-<ul>
-  <li>그리고 레디스가 캐시 타입으로 지정될 수 있도록, 그리고 레디스에 대한 설정을 Github Secret을 통해 넣을 수 있게끔 yml 파일을 수정하자.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>spring:
-  cache:
-    type:
-      redis # 캐시 타입을 redis로 지정
-    redis:
-      cache-null-values: true # 캐시에 null 값도 저장
-  data:
-    redis:
-      host: ${REDIS_HOST:localhost} # Redis 호스트 주소 설정 (환경 변수가 설정되지 않은 경우 기본값 localhost)
-      port: ${REDIS_PORT:6379} # Redis 포트 번호 설정 (환경 변수가 설정되지 않은 경우 기본값 6379)
-      password: ${REDIS_PASSWORD:} # Redis에 접속할 때 사용할 비밀번호 설정 (환경 변수가 설정되지 않은 경우 기본값 빈 문자열)
-</code></pre></div></div>
-
-<p>당연히 레디스를 설정하는 것만으로 끝나면 안된다! Redis 자체는 우리 어플리케이션 외부에 존재하므로, 실제로 개발을 진행중인 로컬 환경과 원격에 올라가 있는 AWS 환경에 Redis를 설치하고 이를 실행시켜 Redis를 우리 서비스에서 사용할 수 있게 하자.</p>
-
-<h2 id="22-fix-illegalargumentexception-at-propertyplaceholderhelper-해결"><a href="https://github.com/pocj8ur4in/vw-backend/commit/5abda3e95557a613fe29f69688b864bc8df14964">#22</a>. fix: IllegalArgumentException at PropertyPlaceholderHelper 해결</h2>
-
-<p><code class="language-plaintext highlighter-rouge">IllegalArgumentException at PropertyPlaceholderHelper</code>는 사실 로컬에서 발생하는 오류는 아니다. Github Actions를 통해 돌리다 보면 어느 시점에서 어플리케이션이 죽었는데, 이때 발생한 오류다. gradle의 빌드 시에 application의 properties를 참조하지 못하는 부분이 있는 것 같았는데 알고 보니 하위 서비스를 scanBasePackages에 넣으면 안되는 것이었다… (같은 이름의 파일을 중복해서 읽어서 문제가 생기는 것? 으로 보인다.)</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@SpringBootApplication( // '@SpringBootApplication' : 스프링 부트 애플리케이션의 주요 구성 요소들을 자동으로 설정
-        scanBasePackages = { // 'scanBasePackages={}' : Spring이 Component Scan을 수행할 패키지들을 지정
-            "vw.api"
-            // , "vw.domain", "vw.infra" // 제외한 부분
-        })
-</code></pre></div></div>
-
-<p>그리고 멀티모듈 프로젝트에서 자주 발생하는 bootJar 파일 생성 비활성화 &amp; Jar 파일 생성 문제를 이때 같이 해결하였다. 매번 멀티모듈 프로젝트를 진행할 때마다 발생하는 부분인데, <code class="language-plaintext highlighter-rouge">Core</code>나 <code class="language-plaintext highlighter-rouge">Infra</code> 모듈처럼 어플리케이션이 없는 모듈은 순수 Jar 파일을 생성해야 하는 것 같다…?</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    // 멀티모듈 프로젝트에서 bootJar 파일 생성 비활성화 &amp; Jar 파일 생성
-    bootJar.enabled = false
-    jar.enabled = tru
-</code></pre></div></div>
-
-<h2 id="23-fixdomain-user-도메인-제약조건-추가"><a href="https://github.com/pocj8ur4in/vw-backend/commit/4f3cf5b6505cdb037c0a5e4edb69c77bf55affa0">#23</a>. fix(domain): User 도메인 제약조건 추가</h2>
-
-<p>원래 제약 조건은 DB 단에서 직접 설정해주곤 했었는데, JPA에서 엔티티를 자동으로 생성해주는 것을 보고 직접 코드로 넣어두는 것이 더 효율적으로 보여 이를 추가하였다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- nullable // 빈 값 금지
-- unique // 중복된 값 금지
-- length // 길이 제한
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[vocawik 프로젝트의 #19. feat(domain): BaseDateTime 엔티티 추가 ~ #23. fix(domain): User 도메인 제약조건 추가에 대한 내용입니다.]]></summary></entry><entry><title type="html">[vocawik] 6. 07/19, 07/20 진행 내용</title><link href="http://localhost:4000/vcw6/" rel="alternate" type="text/html" title="[vocawik] 6. 07/19, 07/20 진행 내용" /><published>2023-07-19T00:00:00+09:00</published><updated>2023-07-20T00:00:00+09:00</updated><id>http://localhost:4000/vcw6</id><content type="html" xml:base="http://localhost:4000/vcw6/"><![CDATA[<blockquote>
-  <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #16. init: Exception 및 ErrorCode 추가 ~ #18. feat(domain): User 도메인 설정에 대한 내용입니다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Analytics
+analytics:
+  provider               : "google-gtag"
+  google:
+    tracking_id          : "(측정 ID)"
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html이나 css를 다룰 줄 알면 금방 할 수 있는, 혹은 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를 해결하였는지, 에 대해 자세히 쓰고 싶었다. 그래서 이 게시물은 다른 게시물들과 달리, 내가 블로그에서 부족하다고 느낀 점들을 계속 조금씩이라도 보충해나갈 계획이다.]]></summary></entry><entry><title type="html">[Github Pages] 5. Github Pages 블로그 설정 &amp;amp; 포스트</title><link href="http://localhost:4000/blog5/" rel="alternate" type="text/html" title="[Github Pages] 5. Github Pages 블로그 설정 &amp;amp; 포스트" /><published>2023-04-05T00:00:00+09:00</published><updated>2023-04-08T00:00:00+09:00</updated><id>http://localhost:4000/blog5</id><content type="html" xml:base="http://localhost:4000/blog5/"><![CDATA[<blockquote>
+  <p>솔직히 블로그 설정을 건드는 부분은 내가 아는 정보들을 그대로 나열할 수 밖에 없다고 생각한다… 그래도 내가 시행착오를 겪었던 경험을 떠올리면서 하나하나 풀어서 작성하려 하였으니, 미숙한 글이지만 남들에게 도움이 되었으면 정말 좋겠다… 그리고 Github Pages이나 Minimal Mistakes으로 처음 블로그를 운영하시는 분들의 시선에 맞춰 html, css에 대한 자세한 내용은 다른 포스트로 옮겼으니 참고해주셨으면 한다.</p>
 </blockquote>
 
-<h2 id="16-init-exception-및-errorcode-추가"><a href="https://github.com/pocj8ur4in/vw-backend/commit/d877198b2b27cc6e48c30c2ac77a524d0d8a56ed">#16</a>. init: Exception 및 ErrorCode 추가</h2>
-<p>만약 사용자가 잘못된 방식이나 접근을 하였을 때, 서버에서는 이에 대한 예외 처리를 할 것이다. 하지만 표준으로 명시된 예외 처리 메시지를 띄우는 것은 사용자 친화적인 방식이 아닐 뿐더러, 우리 서비스의 취약점을 노출시킬 수 있다. 예를 들어 사용자가 회원가입을 할 때 서버 내에 중복된 아이디를 제출하였다고 가정하자. 그렇다면 JDBC API는 SQLException을 발생시킬 것인데, 이를 그대로 사용자에게 전달한다면 예외 발생만 알 수 있을 뿐, 왜 발생했는지 알 수 없는 상황이 발생한다. 그러므로 예외 (Exception) 및 이에 대한 에러 코드 (ErrorCode)를 커스텀마이징할 필요성이 있다.</p>
+<h2 id="1-블로그-기본-설정">1. 블로그 기본 설정</h2>
+<p><img width="228" alt="blog1-1" src="https://user-images.githubusercontent.com/105341168/229804167-bbb75af4-6ec4-4683-9753-0f2cbf7d97bb.png" /></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public void register() throws SQLException {
-    ...
+<p>위의 디렉터리에서 <code class="language-plaintext highlighter-rouge">_config.yml</code>이라는 파일을 열어보면 다음과 같이 구성되어 있는데, 오른쪽의 주석을 참조해서 나만의 블로그를 커스텀마이징해보자. 이걸 어떻게 적용하는지 잘 모르겠다, 싶은 사람은 <a href="https://github.com/pocj8ur4in/pocj8ur4in.github.io/blob/main/_config.yml">내 블로그에 적용된 것</a>을 예시로 보면서 작업해보자.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minimal_mistakes_skin    :         # 블로그의 전체적인 스킨 지정 
+                                   # (Minimal Mistakes에서 기본적으로 제공)
+                                   # "default" "air", "aqua", "contrast", "dark"
+                                   # "dirt", "neon", "mint", "plum", "sunrise"
+
+# Site Settings
+locale                   : "ko-KR" # 블로그에 쓰일 로컬 언어 지정
+title                    :         # 메타 태그에 들어갈 블로그의 제목 지정
+subtitle                 :         # 블로그의 제목 하단에 위치할 부제목 지정
+name                     :         # 블로그 저자 이름 지정
+description              :         # SEO 향상을 위한 meta description 태그 지정
+url                      :         # 블로그 url 
+                                   # "https://(github ID).github.io"
+repository               :         # github repository url
+                                   # "https://github.com/(github ID)/(github ID).github.io"
+teaser                   :         # 관련 포스트나 검색 등에 들어갈 미리보기 이미지 지정
+                                   # ("assets/images/"로 연결)
+logo                     :         # 블로그의 제목 옆에 들어갈 로고 이미지 지정
+                                   # ("assets/images"로 연결)
+masthead_title           :         # 블로그 프로필 상단에 위치할 사이트 제목 지정
+breadcrumbs              : true    # 브래드크럼 사용 여부 지정
+words_per_minute         : 200     # 포스트를 읽는 데 걸리는 시간을 계산히기 위한 분당 읽는 글자의 지정
+</code></pre></div></div>
+
+<h2 id="2-블로그-레이아웃-설정">2. 블로그 레이아웃 설정</h2>
+<p>이제 조금은 삭막한(?) 블로그의 레이아웃을 뜯어고칠 차례이다. 우선은 이전처럼 <code class="language-plaintext highlighter-rouge">_config.yml</code> 파일을 아래와 같이 자신이 원하는 대로 수정하면 된다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 블로그 좌측 사이드바에 위치할 프로필 설정
+author:
+  name             :       # 저자 이름 지정
+  avatar           :       # 저자 이미지 지정
+  bio              :       # 저자 바이오그래피 지정
+  location         :       # 저자 위치 지정
+  email            :       # 저자 이메일 지정
+  links:                   # 저자 관련 사이트 링크 지정
+    - label:               # 사이트 분류 지정
+      icon:                # 사이트 아이콘 지정
+      url:                 # 사이트 url 지정
+
+## 블로그 하단에 위치할 꼬리말 설정
+footer:
+  links:                   # 블로그 관련 사이트 링크 지정
+    - label:               # 사이트 분류 지정
+      icon:                # 사이트 아이콘 지정
+      url:                 # 사이트 url 지정
+</code></pre></div></div>
+
+<h3 id="1-네비게이션-바">(1) 네비게이션 바</h3>
+
+<p>다음은 기본 테마를 보면서 혹은 자기가 기능을 적용하면서 불편한 점들을 확인하고, 직접 테마의 요소들을 뜯어고치는 건데… 이건 사람마다 달라서 뭐라고 말을 못하겠다. 그래서 나 같은 경우에 어떤 부분이 불편했고, 그래서 수정했는지 얘기해보고자 한다. 우선은 블로그 상단의 네비게이션 바에 내가 보기에 불필요한 카테고리들이 있었다. 그래서 카테고리, 태그만 남기기 위해  <code class="language-plaintext highlighter-rouge">_data/navigation.yml</code> 파일을 수정하였다.  <code class="language-plaintext highlighter-rouge">_pages</code> 디렉토리를 보면 여기에 적용할 수 있는 여러 요소들이 있는데, 직접 입맛에 맛게 적용해보면 된다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>main:
+  - title: (카테고리)        # 화면에 보여질 세부 항목의 이름 지정
+    url: /(카테고리)/        # _pages 내에 정해진 양식 파일이나 특정 링크로 연결
+</code></pre></div></div>
+
+<h3 id="2-블로그-너비-및-폰트-크기">(2) 블로그 너비 및 폰트 크기</h3>
+
+<p>그리고 블로그에 포스트를 쓸 때에 한쪽에는 VS Code를, 다른 쪽에는 로컬에서 호스팅한 블로그를 보기 위한 사파리 브라우저를 띄워 놓곤 했는데, 그때마다 기본으로 설정된 블로그 너비랑 폰트 크기가 글을 읽기에 굉장히 불편했다. 그래서 <code class="language-plaintext highlighter-rouge">_sass/minimal_mistakes/_variables.scss</code> 파일과 <code class="language-plaintext highlighter-rouge">_sass/minimal_mistakes/_reset.scss</code> 파일을 다음과 같이 수정해보았다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 블로그 너비 설정
+/*
+   Grid
+   ========================================================================== */
+
+$right-sidebar-width-narrow: 200px !default;    // default 200px
+$right-sidebar-width: 300px !default;           // default 300px
+$right-sidebar-width-wide: 400px !default;      // default 400px
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 블로그 폰트 크기 설정
+html {
+  /* apply a natural box layout model to all elements */
+  box-sizing: border-box;
+  background-color: $background-color;
+  font-size: 16px;                    // Default 16px;
+
+  @include breakpoint($medium) {
+    font-size: 16px;                  // Default 18px;
+  }
+
+  @include breakpoint($large) {
+    font-size: 16px;                  // Default 20px;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 16px;                  // Default 22px;
+  }
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 </code></pre></div></div>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">BaseCodeException</code>는 런타임 오류를 처리하는 RuntimeException를 상속해 어떤 클래스가 실행 중일 때 발생할 수 있는 Exception를 처리할 클래스이다. 만약 어떤 예외가 발생한다면 이에 대한 원인 (baseErrorCode의 ErrorReason)을 반환한다 (getErrorReason).</li>
-</ul>
+<h3 id="3-블로그-아이콘">(3) 블로그 아이콘</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.core.exception;
+<p>또 블로그 주소 창에 같이 뜰 아이콘이 아무것도 안 뜨니 뭔가 내 블로그 같다는 느낌이 안들었다. 그래서 이것 또한 <code class="language-plaintext highlighter-rouge">_includes/_head/custom.html</code> 파일에 내가 원하는 아이콘을 넣었다.</p>
 
-import vw.core.dto.BaseErrorReason;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- start custom head snippets --&gt;
 
-public class BaseCodeException extends RuntimeException { // 실행 시 발생하는 예외를 나타냄 (RuntimeException 상속)
-    private BaseErrorCode baseErrorCode; // 예외 발생 시에 해당 예외의 원인을 BaseErrorCode 객체에 저장
-
-    public BaseErrorReason getErrorReason() { // 해당 예외의 원인을 반환
-        return this.baseErrorCode.getErrorReason();
-    }
-}
+&lt;!-- insert favicons. use https://realfavicongenerator.net/ --&gt;
+&lt;link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.ico/apple-touch-icon.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="32x32" href="/assets/logo.ico/favicon-32x32.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="16x16" href="/assets/logo.ico/favicon-16x16.png"&gt;
+&lt;link rel="mask-icon" href="/assets/logo.ico/safari-pinned-tab.svg" color="#ffffff"&gt;
+&lt;meta name="msapplication-TileColor" content="#ffffff"&gt;
+&lt;meta name="theme-color" content="#ffffff"&gt;
 </code></pre></div></div>
 
-<ul>
-  <li>이를 위해 오류의 원인을 나타내는 DTO 클래스 <code class="language-plaintext highlighter-rouge">BaseErrorReason</code>를 작성하였다. 앞으로는 <code class="language-plaintext highlighter-rouge">public enum GlobalErrorCode implements BaseErrorReason { ... }</code>와 같이 <code class="language-plaintext highlighter-rouge">BaseErrorReason</code>를 주입받아 오류의 원인을 커스텀마이징할 것이다.</li>
-</ul>
+<p>내가 수정한 것은 이정도? 인데 자잘하게 더 파고들면 커스텀마이징할 레이아웃 요소가 정말 많다. html, css, yml 파일을 건드는 것이라 그리 어렵지도 않고, 한번 배워두면 생각보다 쓸 때도 많다. 아래는 Minimal Mistakes Themes의 디렉토리 구조에 주석을 단 것인데, 커스텀마이징이 필요할 때 이를 참고하기 좋은 것 같다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.core.dto;
-
-import lombok.Builder;
-import lombok.Getter;
-
-@Getter
-@Builder
-public class BaseErrorReason { // 오류의 원인을 나타내는 DTO
-    private final Integer status; // HTTP 상태 코드
-    private final String code; // HTTP 상태 코드 (문자열)
-    private final String reason; // 오류의 원인
-}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minimal-mistakes
+├── _data                                 # 테마를 커스터마이징하기 위한 파일을 저장하는 디렉터리 
+| |                                       # (yml, yaml, json, csv, tsv 파일을 자동으로 읽어들어 site.data로 사용)
+| ├── navigation.yml                      # 상단 메뉴바를 커스터마이징하기 위한 파일
+| └── ui-text.yml                         # 언어별로 어떤 텍스트로 표시되는지 나열하는 파일
+|
+├── _site                                 # 재사용되는 html 파일을 저장하는 디렉터리 (공통된 컴포넌트들 보관)
+| ├── search                              # 검색 엔진을 커스터마이징한 내용을 저장하는 디렉터리
+| ├── analytics-providers
+| └── custom.html                         # 분석 플랫폼 공급자를 커스터마이징한 내용을 저장하는 파일
+| ├── comments-providers
+| └── custom.html                         # 댓글 플랫폼 공급자를 커스터마이징한 내용을 저장하는 파일
+| ├── head
+| └── custom.html                         # head를 커스터마이징한 내용을 저장하는 파일
+| ├── footer
+| └── custom.html                         # footer를 커스마이징한 내용을 저장하는 파일
+| ├── nav_list                            # 메뉴 상단바의 리스트에 대한 helper 파일
+| ├── archive-single.html                 # 아카이브 문서에서 단일 문서를 표현하는 방법을 저장하는 파일
+| ├── author-profiles.html                # author profile link애 대한 내용을 저장하는 파일
+| ├── author-profile-custom-links.html    # author profile link를 커스마이징한 내용을 저장하는 파일
+| ├── breadcrumbs.html                    # breadcrumbs에 대한 내용을 저장하는 파일
+| ├── single-page
+| ├── page__taxonomy.html                 # 단일 문서에서 태그와 카테고리를 표현하는 방법을 저장하는 파일
+| ├── tag-list.html                       # 단일 문서에서 태그 리스트를 표현하는 방법을 저장하는 파일
+| └── category-list.html                  # 단일 문서에서 카테고리 리스트를 표현하는 방법을 저장하는 파일
+├── _posts                                # 블로그에 포스트한 md 파일을 저장하는 디렉터리
+├── _includes
+├── _layouts                              # 각 문서의 디자인과 직접적으로 연결된 전체적인 레이아웃 디렉토리
+├── _sass                                 # minimal-mistakes.scss에 임포트할 수 있는 scss 파일을 저장하는 스타일시트 디렉터리
+├── assets                                # css, js, 이미지 파일을 저장하는 디렉터리
+| ├── _css
+| ├── _images
+| └── _js 
+├── _config.yml                           # 블로그를 구성하기 위한 기본적인 설정값을 설정하는 yml 파일
+├── Gemfile                               # 사용할 gem 플러그인 목록
+├── index.html                            # 블로그 처음 홈 페이지
+└── package.json
 </code></pre></div></div>
 
-<ul>
-  <li>에러의 원인을 반환할 인터페이스인 <code class="language-plaintext highlighter-rouge">BaseErrorCode</code>를 작성하였다. 추가로 예외에 대한 설명을 문자열 형태로도 반환할 수 있게끔 <code class="language-plaintext highlighter-rouge">getExplainError()</code>를 작성하였는데, 이는 다음에 설명할 부분인 <code class="language-plaintext highlighter-rouge">ExplainError</code>라는 커스텀 어노테이션을 생성하는 것과 이어져 그때 한번에 설명하겠다.</li>
-</ul>
+<h2 id="3-블로그-포스트-작성-및-머릿말-작성">3. 블로그 포스트 작성 및 머릿말 작성</h2>
+<p><code class="language-plaintext highlighter-rouge">_posts</code> 폴더에 <code class="language-plaintext highlighter-rouge">XXXX(YEAR)-XX(MONTH)-XX(DAY)-(NAME).md</code>을 생성해보자. 이때 YEAR, MONTH, DAY는 포스트가 작성된 연도, 월, 일이 되고 NAME은 포스트의 경로가 된다. 그리고 파일 상단에 위치할 머릿말을 작성하기 위해 아래와 같이 <code class="language-plaintext highlighter-rouge">---</code>에 둘러싸인 내용을 작성해보자.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.core.exception;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+title: "[Blog] macOS에서 Minimal Mistakes로 깃허브 블로그 만들기"
 
-import vw.core.dto.BaseErrorReason;
+categories:
+    - Github.io
 
-public interface BaseErrorCode {
-    public BaseErrorReason getErrorReason(); // 에러의 원인을 반환
+tag:
+    [HTML, JavaScript, SCSS, Ruby]
 
-    String getExplainError() throws NoSuchFieldException; // 예외에 대한 설명을 문자열로 반환
-    // NoSuchFieldException : Reflection을 사용하여 Field를 접근하려고 할 때, 해당 필드가 존재하지 않는 경우에 발생
-}
+toc: true
+toc_sticky: true
+
+date: 2022-09-26
+lastmod: 2022-09-26
+---
 </code></pre></div></div>
 
-<ul>
-  <li>오류에 대한 응답을 나타내는 DTO 클래스 <code class="language-plaintext highlighter-rouge">BaseErrorResponse</code>를 작성하였다. 근데 사실 이를 활용해서 프론트에 응답을 하는 게 맞는데, 이에 대한 생각이 못해버려 <code class="language-plaintext highlighter-rouge">BaseErrorReason</code>으로만 처리하는 방식으로 다 구현해놓았다. 지금 다시 생각해보면 <code class="language-plaintext highlighter-rouge">BaseErrorReason</code> 객체와 오류가 발생한 시간 및 경로를 포함하는 <code class="language-plaintext highlighter-rouge">BaseErrorResponse</code>를 활용하는 게 맞고, 이를 처리할 핸들러 클래스르 나중에 변경해두어야 겠다…</li>
-</ul>
+<table>
+    <thead>
+        <tr>
+            <th>양식 이름</th>
+            <td>양식 설명</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>title</th>
+            <td>포스트 제목</td>
+        </tr>
+        <tr>
+            <th>categories</th>
+            <td>포스트 카테고리</td>
+        </tr>
+        <tr>
+            <th>tags</th>
+            <td>포스트 태그</td>
+        </tr>
+        <tr>
+            <th>toc</th>
+            <td>우측 상단의 목차</td>
+        </tr>
+        <tr>
+            <th>toc_label</th>
+            <td>목차 이름</td>
+        </tr>
+        <tr>
+            <th>toc_icon</th>
+            <td>목차 아이콘</td>
+        </tr>
+        <tr>
+            <th>toc_sticky</th>
+            <td>목차 고정 여부</td>
+        </tr>
+        <tr>
+            <th>date</th>
+            <td>포스트 작성일</td>
+        </tr>
+        <tr>
+            <th>lastmod</th>
+            <td>포스트 수정일</td>
+        </tr>
+        <tr>
+            <th>author_profile</th>
+            <td>프로필 창 표시 여부</td>
+        </tr>
+    </tbody>
+</table>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.core.dto;
+<p>우리가 글을 작성하는 데에 사용할 <a href="https://www.markdownguide.org/getting-started/">Markdown</a>은 텍스트 기반의 마크업 (MarkUp) 언어로, 특수기호와 문자를 활용한 매우 간단한 구조의 문법을 사용해 보다 빠르게 컨텐츠를 작성할 수 있다! Github의 <code class="language-plaintext highlighter-rouge">README.md</code>가 대표적인 예시인데, Github Pages 역시 이를 활용해 문서를 작성하는 데에 사용한다. 마크다운 문법은 <a href="https://www.markdownguide.org">여기서</a> 상세히 설명하고 있으니 참고하자.</p>
 
-import java.time.LocalDateTime;
-import lombok.Getter;
+<h2 id="4-블로그-포스트-내에-문자-박스-양식-넣어보기">4. 블로그 포스트 내에 문자 박스 양식 넣어보기</h2>
+<p>추가로 <code class="language-plaintext highlighter-rouge">minimal-mistakes theme</code>의 css로 설정된 스타일 요소를 class로 불러와 적용할 수 있는데, 그중 하나인 상자 양식을 활용해보자. Markdown (<code class="language-plaintext highlighter-rouge">.md</code>) 파일이니까 html 태그들을 쓰면 그대로 화면에 표현할 수 있다.</p>
 
-@Getter
-public class BaseErrorResponse { // 오류에 대한 응답을 나타내는 DTO
-    private final boolean success = false;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p class="notice--primary"&gt;
+  &lt;strong&gt;
+    이 항목은 현재 작성중입니다.
+  &lt;/strong&gt;&lt;br&gt;
+    &gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.
+&lt;/p&gt;
 
-    private final Integer status; // HTTP 상태 코드
-    private final String code; // HTTP 상태 코드 (문자열)
-    private final String reason; // 오류의 원인
-    private final LocalDateTime timeStamp; // 오류가 발생한 시간
-    private final String path; // 오류가 발생한 경로
+&lt;p class="notice--info"&gt;
+  &lt;strong&gt;
+    이 항목은 macOS 기반으로 작성되었습니다.
+  &lt;/strong&gt;&lt;br&gt;
+    &gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.
+&lt;/p&gt;
 
-    public BaseErrorResponse(BaseErrorReason baseErrorReason, String path) {
-        this.status = baseErrorReason.getStatus();
-        this.code = baseErrorReason.getCode();
-        this.reason = baseErrorReason.getReason();
-        this.timeStamp = LocalDateTime.now();
-        this.path = path;
-    }
+&lt;p class="notice--danger"&gt;
+  &lt;strong&gt;
+    이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.
+  &lt;/strong&gt;&lt;br&gt;
+    &gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.
+&lt;/p&gt;
 
-    public BaseErrorResponse(int status, String code, String reason, String path) {
-        this.status = status;
-        this.code = code;
-        this.reason = reason;
-        this.timeStamp = LocalDateTime.now();
-        this.path = path;
-    }
-}
+&lt;p class="notice--warning"&gt;
+  &lt;strong&gt;
+    이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.
+  &lt;/strong&gt;&lt;br&gt;
+    &gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.
+&lt;/p&gt;
 </code></pre></div></div>
 
-<h2 id="17-init-jpa-auditing-추가"><a href="https://github.com/pocj8ur4in/vw-backend/commit/b21e88c86f0b54352a94d629125f544464b54537">#17</a>. init: JPA Auditing 추가</h2>
+<div style="background-color: black; padding: 2% 2% 2% 2%">
+  <p class="notice--primary">
+    <strong>
+      이 항목은 현재 작성중입니다.
+    </strong><br />
+      &gt; 아직 미완성된 코드나 문장 구조가 정확하지 않은 내용이 있을 수 있으니 유의하시기 바랍니다.
+  </p>
 
-<p>JPA를 사용하여 도메인을 관계형 데이터베이스 테이블에 매핑하다 보면, 도메인들이 공통으로 가지는 필드 및 칼럼들 (ex. 생성자, 수정자, 생성일자, 수정일자, 식별자 등)이 존재한다. 특히 생성자, 수정자, 생성일자, 수정일자는 우리가 DB에 create나 update할 때마다 시간 데이터를 넣어주어야 하는데 이에 대한 코드를 따로 작성할 필요 없이 자동으로 사람이나 시간을 매핑하여 데이터베이스의 테이블에 넣어주는 기능이 바로 JPA Auditing이다.</p>
+  <p class="notice--info">
+    <strong>
+      이 항목은 macOS 기반으로 작성되었습니다.
+    </strong><br />
+      &gt; 프로그램, 단축키 설정 등이 다른 OS 환경과는 호환이 안되는 경우가 많으니 유의하시기 바랍니다.
+  </p>
 
-<ul>
-  <li>사실 <code class="language-plaintext highlighter-rouge">spring-boot-starter-data-jpa</code>만 추가해도 Auditing에는 문제는 없다. 정확히 말하면 <code class="language-plaintext highlighter-rouge">@CreatedDateTime</code>, <code class="language-plaintext highlighter-rouge">@LastModifiedDateTime</code> 어노테이션만 추가하면 된다. 그렇지만 <code class="language-plaintext highlighter-rouge">@CreatedBy</code>, <code class="language-plaintext highlighter-rouge">LastModifiedBy</code>와 같이 생성자, 수정자를 저장하려면 <code class="language-plaintext highlighter-rouge">AuditorAware</code>를 스프링 빈으로 등록해야 된다. 이를 위해 JPA를 설정하는 데 활용할 클래스인 <code class="language-plaintext highlighter-rouge">JpaConfig</code>를 미리 만들어두자.</li>
-</ul>
+  <p class="notice--danger">
+    <strong>
+      이 항목은 최신의 내용을 담고 있지 않을 수 있습니다.
+    </strong><br />
+      &gt; 맨 아래의 항목 업데이트 날짜와 OS나 프로그램의 버전 정보를 꼭 확인해주시기 바랍니다.
+  </p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.domain.common.config;
+  <p class="notice--warning">
+    <strong>
+      이 항목은 검증되지 않은, 편향된, 혹은 잘못된 내용을 포함할 수 있습니다.
+    </strong><br />
+      &gt; 작성자 역시 공부하는 학생이기에 해당 부분을 댓글이나 이메일을 통해 지적해주신다면 정말 감사할 것 같습니다.
+  </p>
+</div>
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import vw.domain.DomainPackageLocation;
-
-@Configuration
-@EnableJpaAuditing
-@EntityScan(basePackageClasses = DomainPackageLocation.class) // // Entity 스캔을 위한 기본 패키지 위치를 설정
-@EnableJpaRepositories(
-        basePackageClasses = DomainPackageLocation.class) // JPA 저장소를 활성화하기 위한 기본 패키지 위치를 설정
-public class JpaConfig { // JPA 설정
-    // JPA Auditing 활성화
-}
-</code></pre></div></div>
-
-<ul>
-  <li>추가로 JPA 저장소를 활성화하기 위해 <code class="language-plaintext highlighter-rouge">DomainPackageLocation</code> 클래스를 엔티티를 스캔할 위치에 작성하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.domain;
-
-public class DomainPackageLocation {}
-</code></pre></div></div>
-
-<h2 id="18-featdomain-user-도메인-설정"><a href="https://github.com/pocj8ur4in/vw-backend/commit/bb68e72e418610d6edb4b13449c3cf90973a2cb1">#18</a>. feat(domain): User 도메인 설정</h2>
-
-<p>회원에 관련된 정보를 저장하고 이를 활용한 서비스를 구현하기 위한 회원 (User) 도메인을 구현하였다. 회원 도메인에서는 회원가입, 회원정보 조회/수정, 회원탈퇴, 로그인 등의 기능을 구현할 것이고, 이를 위해 먼저 회원 엔티티와 회원 레포지토리를 설계하였다.</p>
-
-<ul>
-  <li>엔티티 클래스는 각 엔티티에 대한 식별자 및 여러 개의 칼럼들을 기본으로 갖되, 하나의 객체로 묶을 수 있으면 임베디드 타입 (<code class="language-plaintext highlighter-rouge">@Embedded</code>, <code class="language-plaintext highlighter-rouge">@Embeddable</code>) 혹은 Enum 타입을 활용할 것이고, 회원 엔티티 클래스 <code class="language-plaintext highlighter-rouge">User</code>는 이에 기반해 작성되었다. 그리고 Builder 패턴을 통해 각 객체를 생성 가능하게 하여 필요한 데이터를 동적으로 설정할 수 있게 하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.domain.user.entity;
-
-import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-
-@Getter
-@Entity
-@Table(name = "tbl_user")
-@Slf4j
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class User { // 회원 엔티티
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_index")
-    private int index; // 회원 식별자
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "user_userType")
-    private UserType userType = UserType.TYPE_NORMAL; // 회원 유형 정보
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "user_userState")
-    private UserState userState = UserState.STATE_NORMAL; // 회원 상태 정보
-
-    @Embedded private UserAuth userAuth; // 회원 인증 정보
-
-    @Embedded private UserProfile userProfile; // 회원 프로필 정보
-
-    @Embedded private UserToogle userToogle; // 회원 토글 정보
-
-    @Builder
-    public User(
-            UserAuth userAuth,
-            UserProfile userProfile,
-            UserToogle userToogle) { // Builder 패턴으로 User 객체를 생성 가능하게 함
-        this.userAuth = userAuth;
-        this.userProfile = userProfile;
-        this.userToogle = userToogle;
-    }
-}
-
-</code></pre></div></div>
-
-<ul>
-  <li>그리고 <code class="language-plaintext highlighter-rouge">User</code> 엔티티 객체들을 관리할 레포지토리 클래스로 <code class="language-plaintext highlighter-rouge">UserRepository</code>을 작성하였다. 인터페이스를 생성한 후 <code class="language-plaintext highlighter-rouge">JpaRepository&lt;Entity 클래스, PK 타입&gt;</code>을 상속시키면 된다. 또한 <code class="language-plaintext highlighter-rouge">@EnableJpaRepositories</code>으로 JPA Repository 빈을 활성화해 JPA CRUD를 활용할 수 있게끔 하고 JPA를 사용하기 위한 설정을 자동으로 처리할 수 있게 하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.domain.user.repository;
-
-import java.util.Optional;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import vw.domain.user.entity.User;
-
-@EnableJpaRepositories
-public interface UserRepository extends JpaRepository&lt;User, Long&gt; { // 회원 레포지토리
-	Optional&lt;User&gt; findUserByUserAuth_Id(String id); // 아이디로 회원을 조회
-
-	Boolean existsUserByUserAuth_Id(String id); // 아이디로 회원 존재 여부를 조회
-
-	Boolean existsUserByUserProfile_Nickname(String nickname); // 닉네임으로 회원 존재 여부를 조회
-
-	Boolean existsUserByUserProfile_Email(String email); // 이메일로 회원 존재 여부를 조회
-}
-
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[vocawik 프로젝트의 #16. init: Exception 및 ErrorCode 추가 ~ #18. feat(domain): User 도메인 설정에 대한 내용입니다.]]></summary></entry><entry><title type="html">[vocawik] 5. 07/18 진행 내용</title><link href="http://localhost:4000/vcw5/" rel="alternate" type="text/html" title="[vocawik] 5. 07/18 진행 내용" /><published>2023-07-18T00:00:00+09:00</published><updated>2023-07-18T00:00:00+09:00</updated><id>http://localhost:4000/vcw5</id><content type="html" xml:base="http://localhost:4000/vcw5/"><![CDATA[<blockquote>
-  <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #14. init: 멀티모듈 infra 모듈 추가 ~ #15. init: domain 이벤트 publisher 및 aop 추가에 대한 내용입니다.</p>
+<blockquote>
+  <p>Reference</p>
+  <ul>
+    <li><a href="http://jekyllrb-ko.github.io/docs/structure/">Jekyll 디렉토리 구조 (번역)</a></li>
+  </ul>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[솔직히 블로그 설정을 건드는 부분은 내가 아는 정보들을 그대로 나열할 수 밖에 없다고 생각한다… 그래도 내가 시행착오를 겪었던 경험을 떠올리면서 하나하나 풀어서 작성하려 하였으니, 미숙한 글이지만 남들에게 도움이 되었으면 정말 좋겠다… 그리고 Github Pages이나 Minimal Mistakes으로 처음 블로그를 운영하시는 분들의 시선에 맞춰 html, css에 대한 자세한 내용은 다른 포스트로 옮겼으니 참고해주셨으면 한다.]]></summary></entry><entry><title type="html">[Github Pages] 4. Github Pages 블로그 개설</title><link href="http://localhost:4000/blog4/" rel="alternate" type="text/html" title="[Github Pages] 4. Github Pages 블로그 개설" /><published>2023-04-03T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/blog4</id><content type="html" xml:base="http://localhost:4000/blog4/"><![CDATA[<blockquote>
+  <p>이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나… 그때쯤 작성한 글들 대부분이 너무 나열식으로 쓰였고, 출처에 대한 언급이 많이 부실해 (모르는 부분이 있어 찾으려 하면 출처가 없어서 나도 찾지 못한다…), 부족한 점들을 보완하기 위해 다시 작성되었다.<br />
+그리고 현재 작성자의 실행 환경의 OS가 MacOS임을 미리 밝혀둔다. 아마 근시일 내에는 기기를 바꿀 계획이 없으니, 동일한 OS를 사용하시는 분들은 그대로 진행해주시면 된다.</p>
 </blockquote>
 
-<h2 id="14-init-멀티모듈-infra-모듈-추가"><a href="https://github.com/pocj8ur4in/vw-backend/commit/65a75da78ca574165f3ff1341b08bbe14f1b1e41">#14</a>. init: 멀티모듈 infra 모듈 추가</h2>
+<h2 id="1-ruby-설치">1. Ruby 설치</h2>
+<p>macOS는 Ruby가 기본적으로 설치되어 있으니, 터미널을 실행하고 다음 명령어를 입력해 Ruby의 설치 여부를 확인한다.</p>
 
-<p>현재 <code class="language-plaintext highlighter-rouge">api</code>, <code class="language-plaintext highlighter-rouge">core</code>, <code class="language-plaintext highlighter-rouge">domain</code>의 멀티모듈 구조에 <code class="language-plaintext highlighter-rouge">infra</code> 영역에 해당하는 모듈을 추가하기로 하였다. <code class="language-plaintext highlighter-rouge">core</code> 모듈에서 실제 구현 기술에 해당하는 부분을 분리시켜 <code class="language-plaintext highlighter-rouge">core</code> 모듈에 최대한 논리적인 개념만 남겨 <code class="language-plaintext highlighter-rouge">core</code> 모듈로의 과도한 의존성을 줄이고, <code class="language-plaintext highlighter-rouge">domain</code>, <code class="language-plaintext highlighter-rouge">api</code> 모듈에 중복될 수 있는 구현 기술들을 <code class="language-plaintext highlighter-rouge">infra</code> 모듈에서 제공하는 기술로 도메인 혹은 프레젠테이션 영역에 필요한 기능을 개발하도록 하였다.</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">setting.gradle</code>로 <code class="language-plaintext highlighter-rouge">infra</code> 모듈을 빌드하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rootProject.name = 'vw-backend'
-
-// - include : 하위 프로젝트의 디렉토리 이름을 지정해 해당 디렉토리 안에 있는 빌드 스크립트를 실행
-include 'vw-api'
-include 'vw-core'
-include 'vw-domain'
-include 'vw-infra' // 추가된 부분
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby -v
+// ruby X.X.X 출력 : 정상 설치
+// "zsh: command not found: ruby" 출력 : 설치 오류
 </code></pre></div></div>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">build.gradle</code>에 <code class="language-plaintext highlighter-rouge">infra</code>의 의존성을 추가하였다.</li>
-</ul>
+<h2 id="2-jekyll-설치">2. Jekyll 설치</h2>
+<p>터미널 창에 gem install 명령어를 입력해 Jekyll을 설치한다. 참고로 gem은 분산 패키지로, 라이브러리의 작성, 공개, 설치를 도와주는 시스템이다.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dependencies {
-    ...
-    implementation project(':vw-domain')
-    implementation project(':vw-core')
-    implementation project(':vw-infra') // 추가된 부분
-}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll
 </code></pre></div></div>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">domain</code>, <code class="language-plaintext highlighter-rouge">api</code> 모듈에서 해당 기술을 사용할 수 있도록 각 모듈에 의존성을 추가하고, <code class="language-plaintext highlighter-rouge">core</code> 모듈에 존재하는 논리적인 개념을 사용할 수 있도록 해당 모듈에 <code class="language-plaintext highlighter-rouge">core</code> 모듈의 의존성을 추가하였다.</li>
-</ul>
+<p>그리고 터미널 창에 다음 명령어를 입력해 Jekyll가 정상적으로 설치되었는지 확인한다.</p>
 
-<h2 id="15-init-domain-이벤트-publisher-및-aop-추가"><a href="https://github.com/pocj8ur4in/vw-backend/commit/ca773e108bdecacdbab20b7377c6fba8abbd3253">#15</a>. init: domain 이벤트 publisher 및 aop 추가</h2>
-
-<ul>
-  <li>도메인 이벤트는 바운디드 컨텐스트 간에 정보를 주고받는 수단으로 활용되면서, Aggregate 간의 일괄성을 유지하는 데에 사용되는 방법이다. 이를 적용할 수 있도록 먼저 스프링 비동기 처리를 활성화하자.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.domain.common.config;
-
-import org.springframework.context.annotation.Configuration;
-import org.springframework.scheduling.annotation.AsyncConfigurer;
-import org.springframework.scheduling.annotation.EnableAsync;
-
-@EnableAsync // 스프링 비동기 처리 활성화
-@Configuration // 해당 클래스를 스프링의 설정 클래스로 지정
-public class EnableAsyncConfig implements AsyncConfigurer {
-    // 'AsyncConfigurer' : 비동기 처리에 필요한 구성 요소를 제공
-}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll -v
+// jekyll X.X.X 출력 : 정상 설치
+// "zsh: command not found: jekyll" 출력 : 설치 오류
 </code></pre></div></div>
 
+<h2 id="3-jekyll-theme-선택">3. Jekyll theme 선택</h2>
+<p>이전 포스트에서 Jekyll은 레이아웃에 해당하는 templates과 컨텐츠에 해당하는 contents를 합쳐 HTML 문서로 미리 빌드해 저장하고, 이를 방문자에게 보여준다고 설명한 바 있다. 그런데 대부분의 블로거들은 레이아웃의 중요성은 알지만 이를 어떻게 구성해야할지 몰라 막막할 것이다. 그런 블로거들을 위해 존재하는 것이 Jekyll theme이다.<br /></p>
+
+<p>Jekyll theme은 다른 사람들이 미리 작업해놓은 templates으로, 많은 Jekyll theme들이 무료로 공개되어 있다. 무료 Jekyll 중에 사람들이 많이 사용하는 것이 <a href="https://mmistakes.github.io/minimal-mistakes/">minimal-mistakes</a>이다. 간결하고 깔끔한 디자인과 꾸준한 업데이트, 그리고 무엇보다 엄청난 양의 한글 래퍼런스 (…)로 인해 나 역시도 minimal-mistakes을 기반으로 블로그를 개설하였기에, 앞으로 진행할 블로그 개설 역시 minimal-mistakes를 기반으로 진행한다.<br /></p>
+
+<p>먼저 <a href="https://github.com/mmistakes/minimal-mistakes">minimal-mistakes Github 페이지</a>에서 <code class="language-plaintext highlighter-rouge">.zip</code> 파일을 다운로드한 후 압축을 해제한다. 그리고 아래 사진을 참고하여 필요한 파일 및 디렉토리만 남기고 나머지는 삭제한다. (아, 기존에 존재하지 않는 <code class="language-plaintext highlighter-rouge">_post</code>와 <code class="language-plaintext highlighter-rouge">_page</code> 디렉토리는 추후에 사용할 예정이니 미리 생성해두자.)</p>
+
+<p><img width="228" alt="blog1-1" src="https://user-images.githubusercontent.com/105341168/229804167-bbb75af4-6ec4-4683-9753-0f2cbf7d97bb.png" /></p>
+
+<h2 id="4-로컬에서-웹-호스팅">4. 로컬에서 웹 호스팅</h2>
+<p>터미널 창에 다음 명령어를 입력해 Gemfile을 설치하기 위한 bundler를 사용해보자. 그러면 <code class="language-plaintext highlighter-rouge">.jekyll-cache</code> 폴더와 <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> 파일이 생성된다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install bundler
+</code></pre></div></div>
+
+<p>bundler 설치가 완료되면, 터미널 창에 다음 명령어를 입력해 Gemfile을 검사해 필요한 목록을 설치할 수 있다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
+</code></pre></div></div>
+
+<p>이제 터미널 창에 다음 명령어를 입력하여 블로그를 로컬에서 호스팅해보자.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve
+</code></pre></div></div>
+
+<p><a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a>으로 접속하면 minimal-mistakes이 적용된 블로그 화면을 확인할 수 있다.</p>
+
+<h2 id="5-github-pages에서-웹-호스팅">5. GitHub Pages에서 웹 호스팅</h2>
+
+<p>이제 Github에 <code class="language-plaintext highlighter-rouge">(Github ID).github.io</code>의 형식으로 원격 저장소를 생성하자. 다음은 내 블로그가 저장된 원격 저장소 이미지이다.</p>
+
+<p><img width="535" alt="blog1-2" src="https://user-images.githubusercontent.com/105341168/229810964-1fb40be8-4fc9-4949-89b2-1eb4b77fa0ff.png" /></p>
+
+<p>그리고 지금까지 정리한 내용들을 포함한 디렉터리를 github에 push하면, <code class="language-plaintext highlighter-rouge">https://(Github ID).github.io</code>를 주소로 하는 블로그가 생성된 것을 확인해볼 수 있다. 그리고 <code class="language-plaintext highlighter-rouge">https://github.com/(Github ID)/(Github ID).github.io/actions</code>에서 블로그가 빌드된 기록을 확인할 수 있다. 만약 원격 저장소에서 푸시된 내용에 대한 빌드 작업이 실패한다면, 그 내용의 배포가 진행되지 않은 것을 확인해볼 수 있다.</p>
+
+<blockquote>
+  <p>Reference</p>
+  <ul>
+    <li>SW developer 님이 작성하신, <a href="https://devinlife.com/howto/">GitHub Pages 블로그 따라하기</a></li>
+  </ul>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[이 내용은 작년 9월 말부터 작성한 Minimal Mistakes으로 Github Blog 만들기’의 내용 일부분을 재구성한 것이다. 해당 포스트도 완성도 있는 글이고, 처음 블로그를 설정하시는 분들 또한 도움을 얻을 것이라 생각되나… 그때쯤 작성한 글들 대부분이 너무 나열식으로 쓰였고, 출처에 대한 언급이 많이 부실해 (모르는 부분이 있어 찾으려 하면 출처가 없어서 나도 찾지 못한다…), 부족한 점들을 보완하기 위해 다시 작성되었다. 그리고 현재 작성자의 실행 환경의 OS가 MacOS임을 미리 밝혀둔다. 아마 근시일 내에는 기기를 바꿀 계획이 없으니, 동일한 OS를 사용하시는 분들은 그대로 진행해주시면 된다.]]></summary></entry><entry><title type="html">[Github Pages] 3. Github Pages 블로그 소개</title><link href="http://localhost:4000/blog3/" rel="alternate" type="text/html" title="[Github Pages] 3. Github Pages 블로그 소개" /><published>2023-04-02T00:00:00+09:00</published><updated>2023-04-02T00:00:00+09:00</updated><id>http://localhost:4000/blog3</id><content type="html" xml:base="http://localhost:4000/blog3/"><![CDATA[<blockquote>
+  <p>사실 이전 포스트에서 Github Pages에 대한 내용이 있어 좀 중복되는 느낌이 들 수도 있다. 하지만, 이 포스트에서는 Github Pages의 원리를 짚어보고자 작성한 것이니 혹시 모르는 사람들은 한번 읽어보자.</p>
+</blockquote>
+
+<h2 id="github-pages-블로그란">Github Pages 블로그란?</h2>
+
+<p><img src="https://user-images.githubusercontent.com/105341168/229191108-c3f52e0c-4b2b-46af-9e07-5c59bd89183d.jpeg" alt="image" /></p>
+
+<h3 id="정적-웹사이트-생성기-ssg-static-site-generator">정적 웹사이트 생성기 (SSG; Static Site Generator)</h3>
+
+<p>많은 사람들이 Github Pages로 블로그를 사용하고 있어 이를 블로그 서비스로 인식하기 쉽지만, 사실 Github Pages의 실체는! 바로 <b>Github에서 제공하는 정적 웹 사이트 호스팅 서비스</b>이다. 그리고 정적 웹 사이트 호스팅 서비스를 가능하게 하는 것이 바로 SSG란 것이다.<br /></p>
+
+<p>SSG로 생성된 사이트는 모든 웹 페이지를 미리 생성하고, 방문자로부터 요청이 들어오면 미리 만든 웹 페이지를 그대로 응답해준다. 그러므로 서버와 클라이언트 모두 렌더링을 위한 작업이 거의 없기 때문에, SSG로 생성된 웹 사이트는 속도가 매우 빠른 장점을 가진다. 그리고 SSG로 생성된 사이트는 미리 만들어놓은 수많은 웹 페이지로 이루어져 있는 구조라 검색엔진 최적화 (SEO; Search Engine Optimization)가 뛰어나 검색엔진이 사이트를 크롤링하는 데에 적합하다.<br /></p>
+
+<p>그러나 빌드할 때마다 모든 웹 페이지를 생성하는 작업을 매번 하다보니, 컨텐츠를 자주 업데이트하는 웹 사이트나 규모가 커 빌드 시간이 오래 걸리는 웹 사이트에서는 큰 비효율성이 발생해 SSG보다는 다른 렌더링 기술을 사용한다. 그래서 SSG는 개인 블로그와 같이 컨텐츠의 변경이 자주 일어나지 않은, 소규모 웹 사이트를 제작할 때 많이 쓰이는 기술이다. (SSG 외에도 SPA, SSR과 같은 렌더링 기술이 있는데, 달레 님께서 <a href="https://www.daleseo.com/spa-ssg-ssr/">SPA와 SSG, 그리고 SSR</a>이라는 글에서 잘 정리해주셨으니 참고하길 바란다.)<br /></p>
+
+<p>지금 현재 내가 사용하고 있는 Github Pages 테마인 <a href="https://mmistakes.github.io/minimal-mistakes/">Minimal Mistakes</a>는 Jekyll을 정적 웹사이트 생성기로 사용해 웹 사이트를 정적으로 생성한다. Jekyll 외에도 Hexo, Hugo와 같은 여러 정적 웹사이트 생성기들이 존재하는데, 이들을 간단하게 비교해보자.</p>
+
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">ApplicationEventPublisher</code>를 활용해 도메인 이벤트를 발행 및 처리할 수 있는 <code class="language-plaintext highlighter-rouge">BaseEventPublisher</code> 클래스를 생성하였다.
+  <li><a href="https://jekyllrb-ko.github.io">Jekyll</a>
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">raise</code> : 도메인 이벤트를 발행</li>
-      <li><code class="language-plaintext highlighter-rouge">set</code> : 도메인 이벤트를 설정</li>
-      <li><code class="language-plaintext highlighter-rouge">reset</code> : 도메인 이벤트를 제거</li>
+      <li>Ruby 기반</li>
+      <li>가장 많이 쓰이고, 한글 래퍼런스 많음</li>
+      <li>Github Pages에서 공식으로 지원 : push한 글들이 별도의 빌드 과정 없이 알아서 Publish</li>
+      <li>글이 많아질수록 전체 빌드 속도가 느려짐
+<br /><br /></li>
+    </ul>
+  </li>
+  <li><a href="https://hexo.io/ko/index.html">Hexo</a>
+    <ul>
+      <li>Node.js (javascript) 기반</li>
+      <li>(javascript를 써서 그런지) 한글 래퍼런스 많음</li>
+      <li><a href="https://www.holaxprogramming.com/2017/04/16/github-page-and-hexo/">Hexo로 블로그를 만들 때 참고할 만한 글</a>
+<br /><br /></li>
+    </ul>
+  </li>
+  <li><a href="https://gohugo.io">Hugo</a>
+    <ul>
+      <li>Golang 기반</li>
+      <li>런타임에 다른 의존성이 필요하지 않아, 빌드 과정을 포함해도 빌드 속도가 빠른 편</li>
+      <li>한글 래퍼런스는 상대적으로 적음</li>
+      <li><a href="https://github.com/Integerous/Integerous.github.io">Hugo로 블로그를 만들 때 참고할 만한 글</a>
+<br /><br /></li>
     </ul>
   </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.domain.common.event;
+<h3 id="지킬-jekyll">지킬 (Jekyll)</h3>
 
-import org.springframework.context.ApplicationEventPublisher;
+<p><img src="https://user-images.githubusercontent.com/105341168/229413193-0534897e-6fdc-4c1a-888e-8e2e011045c5.jpg" alt="jekyll-logo" /></p>
 
-public class BaseEventPublisher { // ApplicationEventPublisher를 활용하여 도메인 이벤트를 발행 및 처리
-    private static ThreadLocal&lt;ApplicationEventPublisher&gt; publisherLocal = new ThreadLocal&lt;&gt;();
+<p>사실 SSG 중에 Jekyll이 좋은 거 같아 골랐다기보단, Minimal Mistakes 테마가 내 마음에 들어서 설치했는데 구글링해보니 다들 Jekyll을 쓰더라…의 흐름으로 쓰게 된 거고, Jekyll 말고도 다른 SSG가 있는 것을 알게 된 이후에도 어차피 다 같은 SSG인데 Jekyll 말고 굳이 다른 거를 배워서 쓸 필요성을 못 느껴서 (물론 Jekyll이 문제가 많다고 느끼면 다른 SSG를 사용할지에 대해 고민해봐야 할 것이다.) Jekyll을 계속 사용하고 있긴 하다. 일단 Jekyll이 어떤 방식으로 동작하는지 정리해보겠다. (사실 SSG와 동일한 원리인데, 이를 구체화한 것으로 생각하면 된다.)<br /></p>
 
-    public static void raise(DomainEvent event) { // 도메인 이벤트를 발행
-        // 이벤트가 null인 경우에는 종료
-        if (event == null) return;
+<p>Jekyll은 동적 웹 사이트 (Dynamic Web Site)과 동일하게, 레이아웃에 해당하는 templates과 컨텐츠에 해당하는 contents를 분리해 저장한다. (이때 Jekyll에서 templates을 작성할 때 사용하는 언어가 Liquid이고, contents를 작성할 때 사용하는 언어가 markdown이다.) 하지만 동적 사이트와 달리, Jekyll은 templates와 contents을 합친 HTML 문서를 미리 빌드해 저장하고, 방문자가 요청을 보내면 정적 컨텐츠에 해당하는 HTML 문서를 전송한다.<br /></p>
 
-        // 현재 스레드의 ApplicationEventPublisher를 사용하여 이벤트를 발행
-        if (publisherLocal.get() != null) {
-            publisherLocal.get().publishEvent(event);
-        }
-    }
+<p>그래서 Jekyll은 웹 사이트를 운영하기 위한 HTML 관련 지식을 몰라도, .md 파일로 문서를 작성하면 HTML 파일로 이를 변환해주는 작업을 해주며 변환된 결과물을 토대로 웹 사이트를 구축해서 서비스해준다.</p>
 
-    public static void set(
-            ApplicationEventPublisher publisher) { // 현재 스레드의 ApplicationEventPublisher를 설정
-        publisherLocal.set(publisher);
-    }
+<h3 id="깃허브-페이지-github-pages">깃허브 페이지 (Github Pages)</h3>
 
-    public static void reset() { // 현재 스레드의 ApplicationEventPublisher를 제거
-        publisherLocal.remove();
-    }
-}
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">ApplicationEventPublisherAware</code>으로 트랜잭션과 관련된 메서드 실행 시 도메인 이벤트 처리하는 <code class="language-plaintext highlighter-rouge">BaseEventPublisherAspect</code> 클래스를 생성하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.domain.common.event;
-
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
-import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.context.ApplicationEventPublisherAware;
-import org.springframework.stereotype.Component;
-
-@Aspect //  해당 클래스가 AOP의 Aspect 역할을 수행함을 표시
-@Component // 해당 클래스를 스프링의 컴포넌트로 등록
-@ConditionalOnExpression(
-        "${ableDomainEvent:true}") // 지정된 표현식 ${ableDomainEvent:true}이 true인 경우에만 해당 Aspect가 활성화
-public class BaseEventPublisherAspect
-        implements ApplicationEventPublisherAware { // AOP를 사용해 트랜잭션과 관련된 메서드 실행 시 도메인 이벤트 처리
-
-    private ApplicationEventPublisher publisher;
-    private ThreadLocal&lt;Boolean&gt; threadLocal = new ThreadLocal&lt;&gt;();
-
-    @Around(
-            "@annotation(org.springframework.transaction.annotation.Transactional)")
-                    // @Transactional이 적용된 메서드를 감싸는 Aspect를 정의
-    public Object handleEvent(ProceedingJoinPoint joinPoint)
-            throws Throwable { // @Transactional이 적용된 메서드를 감싸는 방식으로 도메인 이벤트를 처리하는 Aspect 클래스
-
-        Boolean appliedValue = threadLocal.get();
-        boolean nested;
-
-        if (appliedValue != null &amp;&amp; appliedValue) { // 중첩된 트랙잭션이 있는지 확인
-            nested = true;
-        } else {
-            nested = false;
-            threadLocal.set(Boolean.TRUE);
-        }
-
-        // 중첩된 트랜잭션에 속하지 않으면, 이벤트 발행을 위한 ApplicationEventPublisher를 설정
-        if (!nested) BaseEventPublisher.set(publisher);
-
-        try {
-            // 원본 메서드 실행
-            return joinPoint.proceed();
-        } finally {
-            // 중첩된 트랜잭션에 속하지 않은 경우, 설정을 초기화
-            if (!nested) {
-                BaseEventPublisher.reset();
-                threadLocal.remove();
-            }
-        }
-    }
-
-    @Override
-    public void setApplicationEventPublisher(ApplicationEventPublisher eventPublisher) {
-        // Spring으로부터 ApplicationEventPublisher를 주입받아 멤버 변수에 할당
-        this.publisher = eventPublisher;
-    }
-}
-</code></pre></div></div>
-<ul>
-  <li>추상 클래스인 <code class="language-plaintext highlighter-rouge">DomainEvent</code>를 통해 이벤트가 발행되었을 때 이벤트가 발생한 시간을 기록할 수 있도록 하였다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.domain.common.event;
-
-import java.time.LocalDateTime;
-import lombok.Getter;
-
-@Getter
-public abstract class DomainEvent {
-    private final LocalDateTime timestamp; // 이벤트 발생 시간
-
-    public DomainEvent() {
-        this.timestamp = LocalDateTime.now();
-    }
-}
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[vocawik 프로젝트의 #14. init: 멀티모듈 infra 모듈 추가 ~ #15. init: domain 이벤트 publisher 및 aop 추가에 대한 내용입니다.]]></summary></entry><entry><title type="html">[vocawik] 4. 07/13, 07/17 진행 내용</title><link href="http://localhost:4000/vcw4/" rel="alternate" type="text/html" title="[vocawik] 4. 07/13, 07/17 진행 내용" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-17T00:00:00+09:00</updated><id>http://localhost:4000/vcw4</id><content type="html" xml:base="http://localhost:4000/vcw4/"><![CDATA[<blockquote>
-  <p><a href="https://github.com/pocj8ur4in/vw-backend">vocawik</a> 프로젝트의 #11. init: Thymeleaf 적용 ~ #13. init: lombok.config 파일 추가에 대한 내용입니다.</p>
-</blockquote>
-
-<h2 id="11-init-thymeleaf-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/c283ce8e7734c2810b459ba053f6a144f3e4143b">#11</a>. init: Thymeleaf 적용</h2>
-
-<p>서버에서 클라이언트에게 응답할 브라우저 화면을 만들어줄 차례이다. MVC 구조에서 뷰 (View) 에 해당되는 역할인데, 대다수의 웹 사이트들이 JSP나 Thymeleaf를 사용하는 것으로 알고 있어 이에 대해 정리하고자 한다.</p>
-
-<p>JSP (JavaServer Pages)는 HTML 코드에 Java 코드를 넣어 동적인 웹 페이지를 생성하는 Java 기반 서버 사이드 템플릿 엔진 (Server Side Template Engine)이다. 확장자는 .jsp를 사용한다. 파일을 보면 HTML 문서 내에 <code class="language-plaintext highlighter-rouge">&lt;% ... %&gt;</code>에 둘러싸인 부분이 있는데 이를 서블릿 클래스로 변환하고 컴파일해 실행한다. 이때 JSP 파일을 서블릿 클래스로 변환하고 실행시켜 주는 역할을 하는 것이 바로 Tomcat과 같은 서블릿 컨테이너 (Servlet Container)이다. 말로 적으면 난해하니 아래 순서대로 하나씩 보자.</p>
-
-<ol>
-  <li>웹 클라이언트 : 웹 서버에 웹 페이지 요청</li>
-  <li>웹 서버 : 요청받은 웹 페이지에 해당되는 JSP 실행</li>
-  <li>JSP : JSP를 서블릿 코드 (.java)로 변환</li>
-  <li>웹 서버 : 서블릿 코드를 컴파일해 실행 가능한 bytecode (.class)로 변환</li>
-  <li>웹 서버 : 실행 결과로 생성된 HTML 문서를 웹 클라이언트에 응답</li>
-  <li>웹 클라이언트 : 브라우저에서 HTML 문서를 웹 페이지 형태로 출력</li>
-</ol>
-
-<p><a href="https://www.thymeleaf.org">Thymeleaf</a>은 html, xml, js, css 등을 처리할 수 있는 Java 템플릿 엔진이다. Thymeleaf의 주요 목적은 유지관리가 수월한 템플릿을 작성하는 것인데, html 태그에 속성 (th:~)을 직접 추가하면 Thymeleaf가 html 파일을 파싱하여 웹 페이지에 동적으로 값을 추가하거나 처리할 수 있다. 이런 템플릿은 Natural Template을 통해 제공되는데, 이는 서버 사이드 렌더링에 필요한 데이터가 없어도 프로토타입을 볼 수 있도록 해주는 것을 의미한다. 그래서 JSP와 달리 서버의 도움 없이도 뷰를 볼 수도 있다. 또한 thymeleaf는 .war로만 export가 가능한 JSP와 달리 .jar로 export가 가능해 이 역시 서버의 도움 없이 브라우저에 화면을 띄워볼 수 있다.</p>
-
-<ul>
-  <li>Thymeleaf은 Gradle를 통해 의존성을 추가하면 따로 설정할 부분 없이 바로 적용해볼 수 있다. (아무래도 Thymeleaf는 처음 사용해본 거라 Thymeleaf의 기본 문법이나 내부 동작 과정까지는 쓰지 못했는데 추후에 이 부분은 별개의 포스트로 추가해야겠다…)</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dependencies {
-    // 'org.springframework.boot:spring-boot-starter-thymeleaf' : Java 기반 서버 사이드 렌더링 템플릿 엔진
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:3.1.1'
-    ...
-}
-</code></pre></div></div>
-
-<h2 id="12-init-spring-security-적용"><a href="https://github.com/pocj8ur4in/vw-backend/commit/d8addffa614a6344f102af84ff3f036169d15060">#12</a>. init: Spring Security 적용</h2>
-
-<p>Spring Security는 인증과 권한에 대한 기능을 제공하는 Java Spring의 하위 프레임워크이다. 개발을 하면서 보안 분야는 시간이 많이 소요되는 활동 중 하나인데, Spring Security를 통해 미리 구현된 내부 로직으로 인증 및 권한에 필요한 기능과 옵션들을 제공받아 사용할 수 있다.</p>
+<p>상술하였듯 <a href="https://pages.github.com">Github Pages</a>는 Github에서 제공하는 정적 사이트 호스팅 서비스로, 무료 계정에 한해 하나의 Github Pages를 무료로 제공한다. Github Pages는 연동된 Github 저장소에서 HTML, CSS, JavaScript와 같은 정적 컨텐츠를 가져와 그대로 배포하는 방식으로 작동한다. 만약 Github 저장소가 Jekyll 디렉토리의 형태로 존재한다면, Github Pages는 해당 저장소가 Jekyll로 작성된 것임을 알고 이를 Jekyll로 빌드해 배포한다.<br /></p>
 
 <blockquote>
+  <p>Reference</p>
   <ul>
-    <li>인증 (Authentication) : 해당 사용자가 본인이 맞는지를 확인하는 절차</li>
-    <li>인가 (Authorization) : 인증된 사용자가 요청된 자원에 접근 가능한지 결정하는 절차</li>
+    <li>SW developer 님이 작성하신, <a href="https://devinlife.com/howto/">GitHub Pages 블로그 따라하기</a></li>
+    <li>Wheel 님이 작성하신, <a href="https://heekangpark.github.io/categories#jekyll">지킬 (Jekyll)</a></li>
   </ul>
-</blockquote>
-
-<ul>
-  <li>여기서는 프로젝트에 적용 및 간단한 설정만 하고 추후 필요한 기능이 생갈 때 필요한 로직을 가져오겠다. 사용할 모듈에 의존성을 추가해주자.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dependencies {
-    // 'org.springframework.boot:spring-boot-starter-security'
-    // : 사용자 인증 및 권한 부여를 처리하여 보안 설정의 커스텀마이징을 가능하게 함
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-}
-</code></pre></div></div>
-
-<ul>
-  <li>그리고 <code class="language-plaintext highlighter-rouge">SecurityConfig</code> 클래스를 생성해 기본적인 설정을 해주자.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package vw.api.config;
-
-import lombok.AllArgsConstructor;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.web.SecurityFilterChain;
-
-@Configuration
-@AllArgsConstructor
-@EnableWebSecurity
-public class SecurityConfig {
-    @Bean
-    public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity
-                // HTTP 기본 인증을 비활성화
-                .httpBasic()
-                .disable()
-                // CORS (Cross-Origin Resource Sharing) 설정을 비활성화
-                .cors()
-                .disable()
-                // CSRF (Cross-Site Request Forgery) 공격 방어를 비활성화
-                .csrf()
-                .disable()
-                // 세션 관리를 상태 없음 (STATELESS)로 설정
-                .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-
-        // 구성된 HttpSecurity 객체 반환
-        return httpSecurity.build();
-    }
-}
-
-</code></pre></div></div>
-
-<h2 id="13-init-lombokconfig-파일-추가"><a href="https://github.com/pocj8ur4in/vw-backend/commit/9cb184acf937a1b779806475a4d7a65549411cd3">#13</a>. init: lombok.config 파일 추가</h2>
-
-<p>jacoco에서 Lombok의 <code class="language-plaintext highlighter-rouge">@Data</code> 주석이 달린 도메인 클래스의 코드 커버리지가 0%로 나온다. 이는 lombok에서 생성한 코드에 <code class="language-plaintext highlighter-rouge">@lombok.Generated</code>를 붙이면 되는데 이를 <code class="language-plaintext highlighter-rouge">lombok.config</code> 파일로 할 것이다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Lombok이 자동으로 생성한 코드에 @Generated 어노테이션을 자동으로 추기
-lombok.addLombokGeneratedAnnotation = true
-</code></pre></div></div>
-
-<hr />
-
-<p>추가로 이렇게 직접 하나씩 작업해보다가 몇 가지 의문이 든 부분이 있는데, 이를 여기에 적어둘까 한다.</p>
-
-<p>먼저 현재까지 내가 작업한 배포 과정이 정말 사이트를 운영하는 데에 정말 적합한지? 에 대한 고찰이다. 일단 내 처음 계획은, master 브랜치에 작업한 내용을 병합하기 위한 PR이 종료될 때 -&gt; github action에서 도커 허브로 이미지를 올리고 -&gt; AWS 인스턴스 내의 도커에서 올라간 이미지에 대한 컨테이너를 실행하는 것이다. 원래는 난 내 로직이 괜찮다고 생각했는데, 내가 간과한 부분이 하나 있었다.</p>
-
-<p>AWS 인스턴스 내에서 도커를 설치하고 이미지에 대한 컨테이너를 실행하는 것은 괜찮은데, 새로운 이미지에 대한 컨테이너를 실행해야 할 때가 문제이다. 이전 이미지에 대한 컨테이너를 종료하고 이를 삭제한 다음에 새로운 이미지에 대한 컨테이너를 실행하는 과정에서 약간의 소요 시간이 생기지 않을까?</p>
-
-<p>약간의 딜레이가 뭐가 문제인건데?, 라고 생각할 수도 있겠지만, 구글이나 아마존 같이 세계를 대상으로 실시간으로 동작하는 사이트들이 이러면 어마어마한 손실이 날 것이다. 그래서 이들은 무중단 배포 (Zero-downtime Deployment) 전략을 통해 서비스를 중단되지 않는 상태로 유지하려 한다. (개념에 대한 자세한 내용과 세부 전략은 <a href="https://hudi.blog/zero-downtime-deployment/">이 포스트</a>를 참고해주길 바란다.) 여기서 등장하는 게 로드밸런서 (LoadBalancer)인데,  nginx나 HAProxy와 같은 제품들이 존재하고, AWS 역시 이를 지원하니 실제 운영 서버를 만들 때 이를 적용해볼 생각이다.</p>
-
-<p>그리고 또 든 생각은, 내가 앞으로 만들 프로젝트가 모놀리식이 아닌 마이크로 서비스에 가깝게 구현되려면 어떻게 해야 하는가? 에 대한 고찰이다. 뜬금없지만 문득 그런 생각이 든 이유는, “마이크로서비스는 작은 서비스들을 많이 만들자는 거 아냐? 그러면 서비스 단위로 모듈을 나눠야 하는 게 맞는 거 아닌가?” 라는 의문이 들었기 때문이다.</p>
-
-<p>응용 계층은 어쩔 수 없다고 하더라도, 그 아래는 서비스 단위로 <code class="language-plaintext highlighter-rouge">UserService</code>, <code class="language-plaintext highlighter-rouge">WikiService</code> 이런 식으로 존재해도 되는 거 아닌가? 라고 생각을 했는데, 이러면 공통으로 사용 가능한, Common 코드가 불필요하게 반복될 수 있을 것 같았다. 예를 들어 사용자가 원하는 이미지를 클라우드에 업로드하는 기능이 있다고 가정하면, 사용자 프로필로도 사용될 수 있을 것이고, 게시물에도 사용될 수 있을 것이고… 암튼 많이 사용될 건데 이를 일일이 넣는 것은 전혀 객체지향적이지 않다. 그러므로 이미지를 클라우드에 업로드하는 기능과 같이 중복될 수 있는 코드들은 초기 설계 및 구현할 때나 리팩토링할 때 무조건 분리해서 재사용하는 식으로 해야 할 필요성을 느끼게 되었다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[vocawik 프로젝트의 #11. init: Thymeleaf 적용 ~ #13. init: lombok.config 파일 추가에 대한 내용입니다.]]></summary></entry></feed>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[사실 이전 포스트에서 Github Pages에 대한 내용이 있어 좀 중복되는 느낌이 들 수도 있다. 하지만, 이 포스트에서는 Github Pages의 원리를 짚어보고자 작성한 것이니 혹시 모르는 사람들은 한번 읽어보자.]]></summary></entry></feed>

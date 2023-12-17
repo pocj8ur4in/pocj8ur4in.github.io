@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Algorithm] 1. 알고리즘 (Algorithm)과 복잡도 (Complexity) - pocj8ur4in’s blog</title>
-<meta name="description" content="알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법">
+<!-- begin _includes/seo.html --><title>[Operation System] 5. Thread - pocj8ur4in’s blog</title>
+<meta name="description" content="쓰레드 (Thread) : 프로세스 내부의 흐름">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -22,32 +22,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[Algorithm] 1. 알고리즘 (Algorithm)과 복잡도 (Complexity)">
-<meta property="og:url" content="http://localhost:4000/algorithm1/">
+<meta property="og:title" content="[Operation System] 5. Thread">
+<meta property="og:url" content="http://localhost:4000/os5/">
 
 
-  <meta property="og:description" content="알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법">
-
-
-
+  <meta property="og:description" content="쓰레드 (Thread) : 프로세스 내부의 흐름">
 
 
 
 
-  <meta property="article:published_time" content="2022-09-24T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2022-09-24T00:00:00+09:00">
+  <meta property="article:published_time" content="2022-10-07T00:00:00+09:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2022-12-12T00:00:00+09:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/algorithm1/">
+
+<link rel="canonical" href="http://localhost:4000/os5/">
 
 
 
@@ -166,7 +166,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">[Algorithm] 1. 알고리즘 (Algorithm)과 복잡도 (Complexity)</li>
+        <li class="current">[Operation System] 5. Thread</li>
       
     
   </ol>
@@ -180,16 +180,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Algorithm] 1. 알고리즘 (Algorithm)과 복잡도 (Complexity)">
-    <meta itemprop="description" content="알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법">
-    <meta itemprop="datePublished" content="2022-09-24T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2022-09-24T00:00:00+09:00">
+    <meta itemprop="headline" content="[Operation System] 5. Thread">
+    <meta itemprop="description" content="쓰레드 (Thread) : 프로세스 내부의 흐름">
+    <meta itemprop="datePublished" content="2022-10-07T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-12-12T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/algorithm1/" class="u-url" itemprop="url">[Algorithm] 1. 알고리즘 (Algorithm)과 복잡도 (Complexity)
+            <a href="http://localhost:4000/os5/" class="u-url" itemprop="url">[Operation System] 5. Thread
 </a>
           </h1>
           
@@ -221,101 +221,74 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#알고리즘-algorithm--어떠한-문제를-해결하기-위한-절차나-방법">알고리즘 (Algorithm) : 어떠한 문제를 해결하기 위한 절차나 방법</a></li><li><a href="#알고리즘의-복잡도-complexity--알고리즘의-성능을-나타내는-척도">알고리즘의 복잡도 (Complexity) : 알고리즘의 성능을 나타내는 척도</a><ul><li><a href="#공간-복잡도-space-complexity--문제를-해결할-때-걸리는-공간과-입력의-함수-관계">공간 복잡도 (Space Complexity) : 문제를 해결할 때 걸리는 공간과 입력의 함수 관계</a></li><li><a href="#시간-복잡도-time-complexity--문제를-해결할-때-걸리는-시간과-입력의-함수-관계">시간 복잡도 (Time Complexity) : 문제를 해결할 때 걸리는 시간과 입력의 함수 관계</a><ul><li><a href="#빅-오-표기법-big-o--최악의-경우만을-고려해-시간-복잡도를-계산">빅 오 표기법 (Big-O) : 최악의 경우만을 고려해 시간 복잡도를 계산</a><ul><li><a href="#공통-시간-복잡도-표-common-time-complexity-table">공통 시간 복잡도 표 (Common Time Complexity Table)</a></li></ul></li><li><a href="#수행-시간-측정-code-by-python">수행 시간 측정 Code by Python</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#쓰레드-thread--프로세스-내부의-흐름">쓰레드 (Thread) : 프로세스 내부의 흐름</a><ul><li><a href="#다중-쓰레드-multi-threads---하나의-프로세스에-쓰레드가-2개-이상-존재">다중 쓰레드 (Multi-Threads) :  하나의 프로세스에 쓰레드가 2개 이상 존재</a></li><li><a href="#다중-쓰레드-모델-multi-threads-models---2개-이상의-쓰레드로-구성된-모델">다중 쓰레드 모델 (Multi-Threads Models) :  2개 이상의 쓰레드로 구성된 모델</a><ul><li><a href="#many-to-one-모델--한-커널-쓰레드가-여러-유저-쓰레드-처리">Many-to-One 모델 : 한 커널 쓰레드가 여러 유저 쓰레드 처리</a></li><li><a href="#one-to-one-모델--유저-쓰레드-한-개당-커널-쓰레드를-대응시켜-처리">One-to-One 모델 : 유저 쓰레드 한 개당 커널 쓰레드를 대응시켜 처리</a></li><li><a href="#many-to-many-모델--여러-유저-쓰레드가-여러-커널-쓰레드-처리">Many-to-Many 모델 : 여러 유저 쓰레드가 여러 커널 쓰레드 처리</a></li><li><a href="#two-level-모델--중요한-작업은-one-to-one으로-나머지는-many-to-one으로-처리">Two-Level 모델 : 중요한 작업은 One-to-One으로, 나머지는 Many-to-One으로 처리</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="알고리즘-algorithm--어떠한-문제를-해결하기-위한-절차나-방법">알고리즘 (<code class="language-plaintext highlighter-rouge">Algorithm</code>) : 어떠한 문제를 해결하기 위한 절차나 방법</h2>
+        <h2 id="쓰레드-thread--프로세스-내부의-흐름">쓰레드 (<code class="language-plaintext highlighter-rouge">Thread</code>) : 프로세스 내부의 흐름</h2>
 
 <ul>
-  <li>입력 (<code class="language-plaintext highlighter-rouge">input</code>) : 외부에서 제공된 자료가 존재하거나 존재하지 않아야 함</li>
-  <li>출력 (<code class="language-plaintext highlighter-rouge">output</code>) : 최소 1개 이상의 결과를 가져야 함</li>
+  <li>CPU를 구성하는 기본 단위로, 일반적으로 하나의 프로세스는 하나의 쓰레드가 존재</li>
+  <li>하나의 쓰레드는 고유한 <code class="language-plaintext highlighter-rouge">Thread ID</code>, <code class="language-plaintext highlighter-rouge">Program Counter</code>, <code class="language-plaintext highlighter-rouge">Register Set</code> 및 <code class="language-plaintext highlighter-rouge">Stack</code>을 가짐</li>
 </ul>
 
-<h2 id="알고리즘의-복잡도-complexity--알고리즘의-성능을-나타내는-척도">알고리즘의 복잡도 (<code class="language-plaintext highlighter-rouge">Complexity</code>) : 알고리즘의 성능을 나타내는 척도</h2>
-
-<h3 id="공간-복잡도-space-complexity--문제를-해결할-때-걸리는-공간과-입력의-함수-관계">공간 복잡도 (<code class="language-plaintext highlighter-rouge">Space Complexity</code>) : 문제를 해결할 때 걸리는 공간과 입력의 함수 관계</h3>
+<h3 id="다중-쓰레드-multi-threads---하나의-프로세스에-쓰레드가-2개-이상-존재">다중 쓰레드 (<code class="language-plaintext highlighter-rouge">Multi-Threads</code>) :  하나의 프로세스에 쓰레드가 2개 이상 존재</h3>
 <ul>
-  <li>특정한 크기의 입력에 대해 알고리즘이 얼마나 많은 메모리를 차지하는가?</li>
-  <li>알고리즘을 위해 필요한 메모리의 양</li>
-</ul>
-
-<h3 id="시간-복잡도-time-complexity--문제를-해결할-때-걸리는-시간과-입력의-함수-관계">시간 복잡도 (<code class="language-plaintext highlighter-rouge">Time Complexity</code>) : 문제를 해결할 때 걸리는 시간과 입력의 함수 관계</h3>
-<ul>
-  <li>특정한 크기의 입력에 대해 알고리즘이 얼마나 오래 걸리는가?</li>
-  <li>알고리즘을 위해 필요한 연산의 횟수</li>
-  <li>만약 프로그램을 비효율적으로 작성해 시간 제한 (<code class="language-plaintext highlighter-rouge">Time Limit</code>)를 넘기면, 시간 초과 (<code class="language-plaintext highlighter-rouge">Time Limit Exceeded</code>)</li>
-</ul>
-
-<h4 id="빅-오-표기법-big-o--최악의-경우만을-고려해-시간-복잡도를-계산">빅 오 표기법 (<code class="language-plaintext highlighter-rouge">Big-O</code>) : 최악의 경우만을 고려해 시간 복잡도를 계산</h4>
-<ul>
-  <li>가장 빠르게 증가할, 즉 가장 높은 차수의 항만을 고려하고 계수와 나머지 차수의 항들은 계산에서 제외</li>
-  <li>만약 크기 <code class="language-plaintext highlighter-rouge">N</code>의 모든 입력에 대한 알고리즘에 필요한 시간이 최대 <code class="language-plaintext highlighter-rouge">N</code>의 식을 가지면, 점근적 시간 복잡도는 <code class="language-plaintext highlighter-rouge">O(N)</code></li>
-</ul>
-
-<h5 id="공통-시간-복잡도-표-common-time-complexity-table">공통 시간 복잡도 표 (<code class="language-plaintext highlighter-rouge">Common Time Complexity Table</code>)</h5>
-<table style="margin-left: 2%; margin-top: 2%;">
-	<thead>
-		<tr>
-			<th>빅 오 표기법</th>
-			<th>설명</th>
-		</tr>
-	</thead>
-   	<tbody>
-        <tr>
-            <th>O(1)</th>
-            <td>상수 시간</td>
-        </tr>
-        <tr>
-            <th>O(logN)</th>
-            <td>로그 시간</td>
-        </tr>
-        <tr>
-            <th>O(N)</th>
-            <td>선형 시간</td>
-        </tr>
-        <tr>
-            <th>O(N * logN)</th>
-            <td>로그 선형 시간</td>
-        </tr>
-        <tr>
-            <th>O(N^2)</th>
-            <td>2차 시간</td>
-        </tr>
-        <tr>
-            <th>O(N^3)</th>
-            <td>3차 시간</td>
-        </tr>
-        <tr>
-            <th>O(N^4)</th>
-            <td>4차 시간</td>
-        </tr>
-    </tbody>
-</table>
-
-<blockquote>
-  <p>만약 시간 제한이 1초인 문제를 해결할 때, 시간 복잡도 …인 알고리즘을 설계해야 한다.</p>
-  <ul>
-    <li>N의 범위가 500인 경우 : <code class="language-plaintext highlighter-rouge">O(N^3)</code></li>
-    <li>N의 범위가 2,000인 경우 : <code class="language-plaintext highlighter-rouge">O(N^2)</code></li>
-    <li>N의 범위가 100,000인 경우 : <code class="language-plaintext highlighter-rouge">O(N * logN)</code></li>
-    <li>N의 범위가 10,000,000인 경우 : <code class="language-plaintext highlighter-rouge">O(N^3)</code></li>
-  </ul>
-</blockquote>
-
-<ul>
-  <li>
-    <h4 id="수행-시간-측정-code-by-python">수행 시간 측정 Code by Python</h4>
+  <li><code class="language-plaintext highlighter-rouge">Concurrent</code> : 한 프로세스에서 여러 쓰레드가 빠른 시간 간격으로 스위칭되어 동시에 실행되는 것처럼 보임
+    <ul>
+      <li>여러 쓰레드들이 하나의 프로세스 안에 속하면서 <code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">data</code> 메모리 공간과 프로세스 자원 <code class="language-plaintext highlighter-rouge">file</code>과 <code class="language-plaintext highlighter-rouge">I/O</code> 공유</li>
+      <li>메시지 패싱 X (운영 체제를 거치지 않고도 통신 가능), 공유 메모리 X (공유 메모리를 만들지 않아도 됨)
+        <ul>
+          <li>멀티 프로세스에 비해 문맥 전환 시간이 짧고, 메모리와 자원의 할당이 더 효율적</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>운영체제가 다중 쓰레드를 지원 : 현대 운영체제에서의 문맥 전환은 프로세스가 아닌 쓰레드 단위로 이루어짐
+    <ul>
+      <li>하나의 프로세스 안에서 여러 쓰레드가 수행되다가 다른 프로세스로 넘어가 그 프로세스의 쓰레드를 수행함
+        <ul>
+          <li>웹 브라우저 : 화면을 출력하는 쓰레드와 데이터를 읽어오는 쓰레드가 따로 수행</li>
+        </ul>
+      </li>
+    </ul>
   </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import time
-start_time = time.time() # 측정 시작
-...
-end_time = time.time() # 측정 종료
-print(end_time - start_time) # 수행 시간 출력
-</code></pre></div></div>
+<blockquote>
+  <p>프로세스와 쓰레드의 비교 : 다중 프로세스와 다중 쓰레드는 둘다 여러 흐름이 동시에 진행된다는 공통점을 가지나,</p>
+
+  <ul>
+    <li>다중 프로세스에서 각 프로세스는 독립적으로 실행되며 각각 별개의 메모리를 차지한다.</li>
+    <li>다중 쓰레드는 프로세스 내 메모리를 공유해 사용할 수 있다. 고로, 프로세스보다 스레드 간의 전환 속도가 빠르다.</li>
+    <li>다중 쓰레드는 <code class="language-plaintext highlighter-rouge">CPU</code>가 여러 개일 경우에 각 <code class="language-plaintext highlighter-rouge">CPU</code>가 스레드 하나씩을 담당하는 방법으로 속도를 높일 수 있다.</li>
+    <li>다중 쓰레드는 각각의 쓰레드 중 어떤 것이 먼저 실행될지 그 순서를 알 수 없어 ‘경쟁 조건’의 문제가 발생한다.</li>
+  </ul>
+</blockquote>
+
+<h3 id="다중-쓰레드-모델-multi-threads-models---2개-이상의-쓰레드로-구성된-모델">다중 쓰레드 모델 (<code class="language-plaintext highlighter-rouge">Multi-Threads Models</code>) :  2개 이상의 쓰레드로 구성된 모델</h3>
+<ul>
+  <li>유저 쓰레드 (<code class="language-plaintext highlighter-rouge">User Thread</code>) : 유저 레벨의 쓰레드 라이브러리를 통해 관리되는 쓰레드</li>
+  <li>커널 쓰레드 (<code class="language-plaintext highlighter-rouge">Kernel Thread</code>) :  운영체제가 제공하고 직접 관리하는 쓰레드</li>
+</ul>
+
+<h4 id="many-to-one-모델--한-커널-쓰레드가-여러-유저-쓰레드-처리"><code class="language-plaintext highlighter-rouge">Many-to-One</code> 모델 : 한 커널 쓰레드가 여러 유저 쓰레드 처리</h4>
+<ul>
+  <li>병목 현상 : 시스템 호출이 발생하면, 모든 유저 쓰레드가 대기해야 함</li>
+</ul>
+
+<h4 id="one-to-one-모델--유저-쓰레드-한-개당-커널-쓰레드를-대응시켜-처리"><code class="language-plaintext highlighter-rouge">One-to-One</code> 모델 : 유저 쓰레드 한 개당 커널 쓰레드를 대응시켜 처리</h4>
+<ul>
+  <li>커널 쓰레드가 과도하게 생성되어 비효율적임</li>
+</ul>
+
+<h4 id="many-to-many-모델--여러-유저-쓰레드가-여러-커널-쓰레드-처리"><code class="language-plaintext highlighter-rouge">Many-to-Many</code> 모델 : 여러 유저 쓰레드가 여러 커널 쓰레드 처리</h4>
+<ul>
+  <li>커널 쓰레드의 수는 유저 쓰레드의 수보다 작거나 같게 해야 함</li>
+</ul>
+
+<h4 id="two-level-모델--중요한-작업은-one-to-one으로-나머지는-many-to-one으로-처리"><code class="language-plaintext highlighter-rouge">Two-Level</code> 모델 : 중요한 작업은 <code class="language-plaintext highlighter-rouge">One-to-One</code>으로, 나머지는 <code class="language-plaintext highlighter-rouge">Many-to-One</code>으로 처리</h4>
 
         
       </section>
@@ -332,7 +305,7 @@ print(end_time - start_time) # 수행 시간 출력
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a>
+      <a href="/tags/#operation-system" class="page__taxonomy-item p-category" rel="tag">Operation System</a>
     
     </span>
   </p>
@@ -342,7 +315,7 @@ print(end_time - start_time) # 수행 시간 출력
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-09-24">September 24, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-12-12">December 12, 2022</time></p>
 
       </footer>
       
@@ -365,9 +338,9 @@ print(end_time - start_time) # 수행 시간 출력
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BAlgorithm%5D+1.+%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98+%28Algorithm%29%EA%B3%BC+%EB%B3%B5%EC%9E%A1%EB%8F%84+%28Complexity%29%20http%3A%2F%2Flocalhost%3A4000%2Falgorithm1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BOperation+System%5D+5.+Thread%20http%3A%2F%2Flocalhost%3A4000%2Fos5%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fos5%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
 </section>
 
@@ -375,11 +348,11 @@ print(end_time - start_time) # 수행 시간 출력
       
   <nav class="pagination">
     
-      <a href="/python1/" class="pagination--pager" title="[Language] 1. 파이썬 (Python)
+      <a href="/os4/" class="pagination--pager" title="[Operation System] 4. IPC
 ">이전</a>
     
     
-      <a href="/homebrew1/" class="pagination--pager" title="[MacOS] 1. 홈브류 (Homebrew)
+      <a href="/os6/" class="pagination--pager" title="[Operation System] 6. Main Memory Management
 ">다음</a>
     
   </nav>

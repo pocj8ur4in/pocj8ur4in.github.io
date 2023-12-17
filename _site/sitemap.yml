@@ -100,118 +100,6 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/vcw7/</loc>
-        
-        <lastmod>2023-07-21T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/vcw6/</loc>
-        
-        <lastmod>2023-07-19T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/vcw5/</loc>
-        
-        <lastmod>2023-07-18T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/vcw4/</loc>
-        
-        <lastmod>2023-07-13T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/vcw3/</loc>
-        
-        <lastmod>2023-07-12T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/vcw2/</loc>
-        
-        <lastmod>2023-07-11T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/vcw1/</loc>
-        
-        <lastmod>2023-07-10T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
         <loc>http://localhost:4000/blog6/</loc>
         
         <lastmod>2023-04-10T00:00:00+09:00</lastmod>
@@ -308,38 +196,6 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/java1/</loc>
-        
-        <lastmod>2023-01-03T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/spring1/</loc>
-        
-        <lastmod>2022-11-11T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
         <loc>http://localhost:4000/docker1/</loc>
         
         <lastmod>2022-11-02T00:00:00+09:00</lastmod>
@@ -356,7 +212,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/os1/</loc>
+        <loc>http://localhost:4000/os8/</loc>
         
         <lastmod>2022-10-07T00:00:00+09:00</lastmod>
         
@@ -372,25 +228,9 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/git1/</loc>
+        <loc>http://localhost:4000/os7/</loc>
         
-        <lastmod>2022-10-06T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/css1/</loc>
-        
-        <lastmod>2022-09-26T00:00:00+09:00</lastmod>
+        <lastmod>2022-10-07T00:00:00+09:00</lastmod>
         
 
         
@@ -404,25 +244,9 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/homebrew1/</loc>
+        <loc>http://localhost:4000/os6/</loc>
         
-        <lastmod>2022-09-26T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/algorithm1/</loc>
-        
-        <lastmod>2022-09-24T00:00:00+09:00</lastmod>
+        <lastmod>2022-10-07T00:00:00+09:00</lastmod>
         
 
         
@@ -436,9 +260,9 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/python1/</loc>
+        <loc>http://localhost:4000/os5/</loc>
         
-        <lastmod>2022-09-23T00:00:00+09:00</lastmod>
+        <lastmod>2022-10-07T00:00:00+09:00</lastmod>
         
 
         
@@ -452,9 +276,57 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/html1/</loc>
+        <loc>http://localhost:4000/os4/</loc>
         
-        <lastmod>2022-09-20T00:00:00+09:00</lastmod>
+        <lastmod>2022-10-07T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/os3/</loc>
+        
+        <lastmod>2022-10-07T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/os2/</loc>
+        
+        <lastmod>2022-10-07T00:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/os1/</loc>
+        
+        <lastmod>2022-10-07T00:00:00+09:00</lastmod>
         
 
         
