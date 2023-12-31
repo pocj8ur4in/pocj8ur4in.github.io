@@ -43,7 +43,6 @@ last_modified_at: 2023-12-14
   - 리액티브 시스템이 리액티브하기 위해서 반드시 갖춰야 할 특성 중 하나
   - 클라우드 인프라 자체가 유연성과 확장성을 갖추므로, 어플리케이션 아키텍처 또한 아키텍처 유연성이 필요
 
-
 <iframe width="90%" height="350" style="border:none" src="https://landscape.cncf.io/?category=automation-configuration&grouping=category&fullscreen=yes"></iframe>
 
 - 과거 : 아키텍처 구성 요소들이 특정 벤더의 제품에 전적으로 의존
