@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/algorithm1/</loc>
+<lastmod>2022-09-24T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/os1/</loc>
 <lastmod>2022-12-12T00:00:00+09:00</lastmod>
 </url>
@@ -83,6 +87,10 @@
 <url>
 <loc>http://localhost:4000/microservice2/</loc>
 <lastmod>2023-12-14T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/vocawik1/</loc>
+<lastmod>2023-12-29T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/til0/</loc>
