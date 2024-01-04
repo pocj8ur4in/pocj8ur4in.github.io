@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-03T22:29:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TIL] 2024년 01월 TIL</title><link href="http://localhost:4000/til1/" rel="alternate" type="text/html" title="[TIL] 2024년 01월 TIL" /><published>2023-12-31T00:00:00+09:00</published><updated>2024-01-03T00:00:00+09:00</updated><id>http://localhost:4000/til1</id><content type="html" xml:base="http://localhost:4000/til1/"><![CDATA[<h2 id="2024년에는-til를-작성하자">2024년에는 <code class="language-plaintext highlighter-rouge">TIL</code>를 작성하자!</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-04T22:36:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TIL] 2024년 01월 TIL</title><link href="http://localhost:4000/til1/" rel="alternate" type="text/html" title="[TIL] 2024년 01월 TIL" /><published>2023-12-31T00:00:00+09:00</published><updated>2024-01-03T00:00:00+09:00</updated><id>http://localhost:4000/til1</id><content type="html" xml:base="http://localhost:4000/til1/"><![CDATA[<h2 id="2024년에는-til를-작성하자">2024년에는 <code class="language-plaintext highlighter-rouge">TIL</code>를 작성하자!</h2>
 
 <p>2023년은 내게 있어 다사다난한 해였다. 교수님 밑에서 친구들과 함께 프로젝트도 해보고, 기업에 취업하고자 여러 군데에 서류도 넣어 면접까지 진행하였다. 그리고 내가 부족하다고 느낀 부분을 메꾸기 위해 여러 도서들을 사서 정리하기도 하였으며, 주니어 개발자를 위한 여러 행사들 또한 참여하였다. 그런데 지금 올해를 회고하는 내게 있어서 아쉬운 점은 <b>내가 경험한 것들, 내가 공부한 것들, 내가 작업한 것들을 성실히 기록하지 않았다는 점</b>이다. 그래서 이제 하루 앞으로 다가온 2024년에는, 내가 매일매일 성장한 기록을 글의 형태로 남기고자 한다.<br /></p>
 
@@ -29,7 +29,7 @@
       <li>자신의 기술과 역량을 보여줄 수 있는 개발자 포트폴리오 만들기</li>
     </ol>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 기획서 작성에 참고하기 위해 <a href="https://www.aladin.co.kr/m/mproduct.aspx?ItemId=315185582">사례로 배우는 언어 전환 프로젝트 관리</a> 1장을 읽고 필요한 내용을 정리하였다.</li>
+  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 기획서 작성에 참고하기 위해 <a href="https://www.aladin.co.kr/m/mproduct.aspx?ItemId=315185582">사례로 배우는 언어 전환 프로젝트 관리</a> 1장의 내용을 정리하였다.</li>
   <li><code class="language-plaintext highlighter-rouge">Goodnotes</code> 앱으로 필기하기 위해 알라딘으로 구매한 전자책들을 스캔하는 <code class="language-plaintext highlighter-rouge">Automator</code> 워크플로우 파일을 작성하였다.</li>
 </ul>
 
@@ -113,7 +113,7 @@ if __name__ == "__main__":
 </code></pre></div></div>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 기획서 작성에 참고하기 위해 <a href="https://www.aladin.co.kr/m/mproduct.aspx?ItemId=315185582">사례로 배우는 언어 전환 프로젝트 관리</a> 2장을 읽고 필요한 내용을 정리하였다.</li>
+  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 기획서 작성에 참고하기 위해 <a href="https://www.aladin.co.kr/m/mproduct.aspx?ItemId=315185582">사례로 배우는 언어 전환 프로젝트 관리</a> 2장의 내용을 정리하였다.</li>
 </ul>
 
 <h2 id="2024년-01월-03일-수">2024년 01월 03일 (수)</h2>
@@ -131,12 +131,18 @@ if __name__ == "__main__":
 <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/9422a984-6808-4fa6-987f-31b724c0afa9" /></p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 기획서 작성에 참고하기 위해 <a href="https://www.aladin.co.kr/m/mproduct.aspx?ItemId=315185582">사례로 배우는 언어 전환 프로젝트 관리</a> 3장을 읽고 필요한 내용을 정리하였다.
+  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 기획서 작성에 참고하기 위해 <a href="https://www.aladin.co.kr/m/mproduct.aspx?ItemId=315185582">사례로 배우는 언어 전환 프로젝트 관리</a> 3장의 내용을 정리하였다.
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">vocawik</code> 프로젝트는 한동안 디지털하나路와 투트랙으로 진행하고자 한다. <code class="language-plaintext highlighter-rouge">vocawik</code>은 내게 있어 숙원 같은 존재이고, 나와 협업할 인프라 매니저 한 분을 이미 설득하여 같이 작업하기로 약속한 상황이다. 무엇보다도 내가 이 프로젝트를 완성한다면 향후 나의 백엔드 개발자로서의 진로에 있어서 엄청난 도움이 될 것이라는 확신이 들었다.</li>
-      <li>앞으로 제약될 나의 시간을 감안힌다면, 보다 빠른 기획서의 작성이 필요하다. 오는 1월 13일에 인프라 매니저와의 만남을 약속하였고 1월 15일에 디지털하나路 과정이 시작될 예정이니, 1월 11일에 기획서 초안을 완성하도록 한다.</li>
+      <li>디지털하나路 일정을 감안힌다면, 보다 빠른 기획서의 작성이 필요하다. 오는 1월 13일에 인프라 매니저와의 만남을 약속하였고 1월 15일에 디지털하나路 과정이 시작될 예정이니, 1월 11일에 기획서 초안을 완성하도록 한다.</li>
     </ul>
   </li>
+</ul>
+
+<h2 id="2024년-01월-04일-목">2024년 01월 04일 (목)</h2>
+
+<ul>
+  <li><del>내일배움카드 발급이 이렇게 오래 걸릴 줄은 몰랐다. 디지털하나路 일정이 촉박하다보니, 카드를 직접 수령하려고 은행만 세 군데 다녀왔다. 그건 그렇고 그동안 작성한 내용을 읽어보니 점점 일기장이 되는 것 같다? 그래도 일단은 괜찮겠지..?</del></li>
+  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 기획서 작성에 참고하기 위해 <a href="https://www.aladin.co.kr/m/mproduct.aspx?ItemId=315185582">사례로 배우는 언어 전환 프로젝트 관리</a> 4장의 내용을 정리하였다.</li>
 </ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[2024년에는 TIL를 작성하자!]]></summary></entry><entry><title type="html">[vocawik] vocawik 프로젝트 소개</title><link href="http://localhost:4000/vocawik1/" rel="alternate" type="text/html" title="[vocawik] vocawik 프로젝트 소개" /><published>2023-12-27T00:00:00+09:00</published><updated>2023-12-29T00:00:00+09:00</updated><id>http://localhost:4000/vocawik1</id><content type="html" xml:base="http://localhost:4000/vocawik1/"><![CDATA[<h2 id="0-들어가며">0. 들어가며</h2>
 
 <p>음성 합성 (<code class="language-plaintext highlighter-rouge">Speech Synthesis</code>)은 인간의 육성 혹은 그와 비슷한 주파수를 합성하여 인공적인 음성을 자동으로 만들 수 있는 기술을 말한다. 인간의 말소리 혹은 이와 유사한 소리를 일정한 단위로 분할해 각 조각에 부호를 붙이는 방식으로 데이터화해 음성 라이브러리 (<code class="language-plaintext highlighter-rouge">Vocal Library</code>)에 저장하면, 음성 합성 엔진 (<code class="language-plaintext highlighter-rouge">Speech Synthesis Engine</code>)이 사용자의 지시에 따라 음성 라이브러리에 필요한 음성 단위를 불러오고 이를 기반으로 하여 인공적인 음성을 합성한다. 음성 합성 기술 문자를 대신 읽어주는 스크린 리더 (<code class="language-plaintext highlighter-rouge">Screen Reader</code>)로서, 1984년 애플 매킨토시 (<code class="language-plaintext highlighter-rouge">Apple Macintosh</code>)에 매킨토크 (<code class="language-plaintext highlighter-rouge">MacInTalk</code>) 기능으로 탑재된 이후 오랜 기간에 걸쳐 다양한 분야에서 활용되고 있다.<br /></p>
