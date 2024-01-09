@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[MacOS] 홈브류 (Homebrew) - pocj8ur4in’s blog</title>
-<meta name="description" content="Homebrew : 패키지 관리 어플리케이션 (Package Management Application)">
+<!-- begin _includes/seo.html --><title>[MacOS] tmux - pocj8ur4in’s blog</title>
+<meta name="description" content="tmux : 터미널 멀티플렉서 (Terminal Multiplexer)">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -22,32 +22,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[MacOS] 홈브류 (Homebrew)">
-<meta property="og:url" content="http://localhost:4000/homebrew1/">
+<meta property="og:title" content="[MacOS] tmux">
+<meta property="og:url" content="http://localhost:4000/tmux1/">
 
 
-  <meta property="og:description" content="Homebrew : 패키지 관리 어플리케이션 (Package Management Application)">
-
-
-
+  <meta property="og:description" content="tmux : 터미널 멀티플렉서 (Terminal Multiplexer)">
 
 
 
 
-  <meta property="article:published_time" content="2022-09-26T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2022-09-26T00:00:00+09:00">
+  <meta property="article:published_time" content="2024-01-09T00:00:00+09:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2024-01-09T00:00:00+09:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/homebrew1/">
+
+<link rel="canonical" href="http://localhost:4000/tmux1/">
 
 
 
@@ -166,7 +166,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">[MacOS] 홈브류 (Homebrew)</li>
+        <li class="current">[MacOS] tmux</li>
       
     
   </ol>
@@ -180,16 +180,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[MacOS] 홈브류 (Homebrew)">
-    <meta itemprop="description" content="Homebrew : 패키지 관리 어플리케이션 (Package Management Application)">
-    <meta itemprop="datePublished" content="2022-09-26T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2022-09-26T00:00:00+09:00">
+    <meta itemprop="headline" content="[MacOS] tmux">
+    <meta itemprop="description" content="tmux : 터미널 멀티플렉서 (Terminal Multiplexer)">
+    <meta itemprop="datePublished" content="2024-01-09T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-09T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/homebrew1/" class="u-url" itemprop="url">[MacOS] 홈브류 (Homebrew)
+            <a href="http://localhost:4000/tmux1/" class="u-url" itemprop="url">[MacOS] tmux
 </a>
           </h1>
           
@@ -221,173 +221,155 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#homebrew--패키지-관리-어플리케이션-package-management-application">Homebrew : 패키지 관리 어플리케이션 (Package Management Application)</a><ul><li><a href="#homebrew-설치">Homebrew 설치</a></li><li><a href="#cask-package-설치">cask Package 설치</a></li><li><a href="#mas-package-설치">mas Package 설치</a></li><li><a href="#homebrew-명령어">Homebrew 명령어</a></li><li><a href="#cask-명령어">cask 명령어</a></li><li><a href="#mas-명령어">mas 명령어</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#tmux--터미널-멀티플렉서-terminal-multiplexer">tmux : 터미널 멀티플렉서 (Terminal Multiplexer)</a><ul><li><a href="#tmux-구조--tmux-서버와-tmux-클라이언트로-구성">tmux 구조 : tmux 서버와 tmux 클라이언트로 구성</a><ul><li><a href="#세션-session--하나-이상의-윈도우가-있는-독립된-작업-공간">세션 (Session) : 하나 이상의 윈도우가 있는 독립된 작업 공간</a></li><li><a href="#윈도우-window--동일한-세션에서-시각적으로-분리된-부분">윈도우 (Window) : 동일한 세션에서 시각적으로 분리된 부분</a></li><li><a href="#패널-panel--동일한-윈도우에서-분리된-부분">패널 (Panel) : 동일한 윈도우에서 분리된 부분</a></li></ul></li><li><a href="#tmux-명령어">tmux 명령어</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="homebrew--패키지-관리-어플리케이션-package-management-application"><a href="https://brew.sh"><code class="language-plaintext highlighter-rouge">Homebrew</code></a> : 패키지 관리 어플리케이션 (<code class="language-plaintext highlighter-rouge">Package Management Application</code>)</h2>
+        <h2 id="tmux--터미널-멀티플렉서-terminal-multiplexer"><code class="language-plaintext highlighter-rouge">tmux</code> : 터미널 멀티플렉서 (<code class="language-plaintext highlighter-rouge">Terminal Multiplexer</code>)</h2>
 
 <ul>
-  <li>일반적으로 커맨드라인 도구나 시스템 패키지 설치에 사용</li>
-  <li><code class="language-plaintext highlighter-rouge">cask Package</code> : <code class="language-plaintext highlighter-rouge">GUI</code> 어플리케이션 설치도 가능하게 해주는 <code class="language-plaintext highlighter-rouge">Homebrew</code> 확장 패키지</li>
-  <li><code class="language-plaintext highlighter-rouge">mas Package</code> : <code class="language-plaintext highlighter-rouge">App Store</code> 어플리케이션 설치도 가능하게 해주는 <code class="language-plaintext highlighter-rouge">Homebrew</code> 확장 패키지</li>
+  <li>단일 단말기 창 혹은 원격 터미널에서 여러 터미널 세션에 액세스할 수 있도록 가상 콘솔을 다중화
+    <ul>
+      <li>하나의 터미널에서 화면을 분할하여 사용할 수 있음</li>
+      <li>영구적인 세션을 제공하기에 작업 중에 원격 서버와의 연결이 끊겨도 작업 내용이 사라지지 않음</li>
+    </ul>
+  </li>
 </ul>
 
-<h3 id="homebrew-설치"><code class="language-plaintext highlighter-rouge">Homebrew</code> 설치</h3>
-<ul>
-  <li>터미널 실행 후 다음 명령어를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-</code></pre></div></div>
+<h3 id="tmux-구조--tmux-서버와-tmux-클라이언트로-구성"><code class="language-plaintext highlighter-rouge">tmux</code> 구조 : <code class="language-plaintext highlighter-rouge">tmux</code> 서버와 <code class="language-plaintext highlighter-rouge">tmux</code> 클라이언트로 구성</h3>
 
 <ul>
-  <li>터미널 창에 다음 명령어를 입력해 <code class="language-plaintext highlighter-rouge">Homebrew</code>가 정상적으로 설치되었는지 확인</li>
+  <li><code class="language-plaintext highlighter-rouge">tmux</code>를 실행하면 하나의 윈도우를 가진 새로운 세션이 생성되어 화면에 출력
+    <ul>
+      <li>화면 아래의 상태 표시줄에 현재 세션에 대한 정보가 표시, <code class="language-plaintext highlighter-rouge">interactive commands</code>를 입력할 때 사용</li>
+    </ul>
+  </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew --version
-// "Homebrew X.X.X" 출력 : 정상 설치
-// "zsh: command not found: brew" 출력 : 설치 오류
-</code></pre></div></div>
-
-<h3 id="cask-package-설치"><code class="language-plaintext highlighter-rouge">cask Package</code> 설치</h3>
-<ul>
-  <li>터미널 창에 다음 명령어를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install cask
-</code></pre></div></div>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/447ea4a0-758d-4a8e-9f12-8a4cff8df627" /></p>
 
 <ul>
-  <li>터미널 창에 다음 명령어를 입력해 <code class="language-plaintext highlighter-rouge">cask Package</code>가 정상적으로 설치되었는지 확인</li>
+  <li>
+    <h4 id="세션-session--하나-이상의-윈도우가-있는-독립된-작업-공간">세션 (<code class="language-plaintext highlighter-rouge">Session</code>) : 하나 이상의 윈도우가 있는 독립된 작업 공간</h4>
+    <ul>
+      <li>세션은 <code class="language-plaintext highlighter-rouge">tmux</code> 서버에서 실행되는 프로세스로, <code class="language-plaintext highlighter-rouge">tmux</code>가 관리하는 가상 터미널</li>
+      <li>세션은 1개 이상의 <code class="language-plaintext highlighter-rouge">tmux</code> 클라이언트로 접속할 수 있음</li>
+    </ul>
+  </li>
+  <li>
+    <h4 id="윈도우-window--동일한-세션에서-시각적으로-분리된-부분">윈도우 (<code class="language-plaintext highlighter-rouge">Window</code>) : 동일한 세션에서 시각적으로 분리된 부분</h4>
+    <ul>
+      <li>세션은 무조건 1개 이상의 윈도우를 가짐</li>
+      <li>윈도우는 인덱스로 구분되며, 0번부터 시작</li>
+    </ul>
+  </li>
+  <li>
+    <h4 id="패널-panel--동일한-윈도우에서-분리된-부분">패널 (<code class="language-plaintext highlighter-rouge">Panel</code>) : 동일한 윈도우에서 분리된 부분</h4>
+    <ul>
+      <li>패널은 윈도우 내에 1개 이상 존재하면서, 입력을 받는 부분</li>
+    </ul>
+  </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew list
-</code></pre></div></div>
-
-<h3 id="mas-package-설치"><code class="language-plaintext highlighter-rouge">mas Package</code> 설치</h3>
-<ul>
-  <li>터미널 창에 다음 명령어를 입력</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install mas
-</code></pre></div></div>
-
-<ul>
-  <li>터미널 창에 다음 명령어를 입력해 <code class="language-plaintext highlighter-rouge">mas Package</code>가 정상적으로 설치되었는지 확인</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew list
-</code></pre></div></div>
-
-<h3 id="homebrew-명령어"><code class="language-plaintext highlighter-rouge">Homebrew</code> 명령어</h3>
+<h3 id="tmux-명령어"><code class="language-plaintext highlighter-rouge">tmux</code> 명령어</h3>
 
 <table>
     <thead>
         <tr>
-            <th>Homebrew 명령어 이름</th>
-            <th>Homebrew 명령어 설명</th>
+            <th>tmux 명령어 이름</th>
+            <th>tmux 명령어 설명</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th>brew --version</th>
-            <td>Homebrew의 버전 정보 확인</td>
+            <td colspan="2" style="text-align: center;">세션 관련</td>
         </tr>
         <tr>
-            <th>brew doctor</th>
-            <td>Homebrew 설치 환경을 검사</td>
+            <td>tmux</td>
+            <td>새로운 세션 시작</td>
         </tr>
         <tr>
-            <th>brew update</th>
-            <td>Homebrew를 최신 버전으로 업데이트</td>
+            <td>tmux new -s {이름}</td>
+            <td>특정 이름을 가진 새로운 세션 시작</td>
         </tr>
         <tr>
-            <th>brew list</th>
-            <td>설치된 패키지를 확인</td>
+            <td>tmux ls</td>
+            <td>현재 열린 세션 목록 나열</td>
         </tr>
         <tr>
-            <th>brew upgrade</th>
-            <td>설치된 모든 패키지를 업데이트</td>
+            <td>tmux -a</td>
+            <td>마지막 세션으로 접속</td>
         </tr>
         <tr>
-            <th>brew search (패키지명)</th>
-            <td>해당 패키지가 설치되어 있는지 검색</td>
+            <td>tmux -a -t {이름}</td>
+            <td>특정 이름을 가진 세션으로 접속</td>
         </tr>
         <tr>
-            <th>brew install (패키지명)</th>
-            <td>해당 패키지를 최신 버전으로 설치</td>
+            <td>(tmux에서) exit</td>
+            <td>현재 세션 종료</td>
         </tr>
         <tr>
-            <th>brew info (패키지명)</th>
-            <td>해당 패키지의 정보 확인</td>
+            <td colspan="2" style="text-align: center;">윈도우 관련</td>
         </tr>
         <tr>
-            <th>brew upgrade (패키지명)</th>
-            <td>해당 패키지를 업데이트</td>
+            <td>ctrl+b → c</td>
+            <td>새로운 윈도우 생성</td>
         </tr>
         <tr>
-            <th>brew uninstall (패키지명)</th>
-            <td>해당 패키지를 삭제</td>
+            <td>ctrl+d</td>
+            <td>현재 윈도우 닫기</td>
         </tr>
         <tr>
-            <th>brew outdated</th>
-            <td>최신 버전이 존재하는 패키지 확인</td>
+            <td>ctrl+b → p</td>
+            <td>이전 윈도우로 이동</td>
         </tr>
         <tr>
-            <th>brew cleanup (패키지명)</th>
-            <td>해당 패키지의 구버전에 해당하는 파일 삭제</td>
-        </tr>
-    </tbody>
-</table>
-
-<h3 id="cask-명령어"><code class="language-plaintext highlighter-rouge">cask</code> 명령어</h3>
-<ul>
-  <li>기존 <code class="language-plaintext highlighter-rouge">brew</code> 명령어 뒤에 <code class="language-plaintext highlighter-rouge">--cask</code>를 추가</li>
-</ul>
-
-<h3 id="mas-명령어"><code class="language-plaintext highlighter-rouge">mas</code> 명령어</h3>
-
-<table>
-    <thead>
-        <tr>
-            <th>mas 명령어 이름</th>
-            <th>mas 명령어 설명</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>mas version</th>
-            <td>mas의 버전 정보 확인</td>
+            <td>ctrl+b → n</td>
+            <td>다음 윈도우로 이동</td>
         </tr>
         <tr>
-            <th>mas list</th>
-            <td>mas로 설치된 패키지 확인</td>
+            <td>ctrl+b → l</td>
+            <td>마지막 윈도우로 이동</td>
         </tr>
         <tr>
-            <th>mas upgrade</th>
-            <td>mas로 설치된 모든 패키지를 최신 버전으로 업데이트</td>
+            <td>ctrl+b → ,</td>
+            <td>현재 윈도우 이름 바꾸기</td>
         </tr>
         <tr>
-            <th>mas search (검색어)</th>
-            <td>앱스토어에서 해당 검색어와 일치하는 패키지 검색</td>
+            <td>ctrl+b → w</td>
+            <td>현재 열린 윈도우 목록 나열</td>
+        </tr>
+         <tr>
+            <td>ctrl+b → [</td>
+            <td>copy 모드로 전환 (스크롤 가능)</td>
         </tr>
         <tr>
-            <th>mas install (패키지 ID)</th>
-            <td>해당되는 ID를 가진 패키지를 최신 버전으로 설치</td>
+            <td colspan="2" style="text-align: center;">패널 관련</td>
         </tr>
         <tr>
-            <th>mas upgrade (패키지 ID)</th>
-            <td>해당되는 ID를 가진 패키지를 최신 버전으로 업데이트</td>
+            <td>ctrl+b → "</td>
+            <td>현재 패널을 가로로 나누기</td>
         </tr>
         <tr>
-            <th>mas uninstall (패키지명)</th>
-            <td>mas로 설치된 해당 패키지를 삭제</td>
+            <td>ctrl+b → %</td>
+            <td>현재 페널을 세로로 나누기</td>
         </tr>
         <tr>
-            <th>mas outdated</th>
-            <td>mas로 설치된 패키지 중 최신 버전이 존재하는 패키지 확인</td>
+            <td>ctrl+b → {방향키}</td>
+            <td>현재 패널에서 방향키 방향의 패널으로 이동</td>
+        </tr>
+        <tr>
+            <td>ctrl+b → z</td>
+            <td>현재 패널 확대/축소 전환</td>
+        </tr>
+        <tr>
+            <td>ctrl+b → ␣</td>
+            <td>현재 패널에서 다른 패널으로 순환</td>
+        </tr>
+        <tr>
+            <td>ctrl+b → x</td>
+            <td>현재 패널 삭제</td>
         </tr>
     </tbody>
 </table>
@@ -417,7 +399,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-09-26">September 26, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-09">January 9, 2024</time></p>
 
       </footer>
       
@@ -440,9 +422,9 @@
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BMacOS%5D+%ED%99%88%EB%B8%8C%EB%A5%98+%28Homebrew%29%20http%3A%2F%2Flocalhost%3A4000%2Fhomebrew1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BMacOS%5D+tmux%20http%3A%2F%2Flocalhost%3A4000%2Ftmux1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fhomebrew1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftmux1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
 </section>
 
@@ -450,12 +432,11 @@
       
   <nav class="pagination">
     
-      <a href="/algorithm2/" class="pagination--pager" title="[Algorithm] 2. 구현 알고리즘
+      <a href="/til1/" class="pagination--pager" title="[TIL] 2024년 01월 TIL
 ">이전</a>
     
     
-      <a href="/css1/" class="pagination--pager" title="[CSS] CSS &amp; CSS 속성
-">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -469,47 +450,6 @@
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/tmux1/" rel="permalink">[MacOS] tmux
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">tmux : 터미널 멀티플렉서 (Terminal Multiplexer)
-
-</p>
-  </article>
-</div>
-
         
           
 
@@ -579,7 +519,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 분 소요
+          2 분 소요
         
       </span>
     
@@ -620,7 +560,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          5 분 소요
+          4 분 소요
         
       </span>
     
@@ -628,6 +568,47 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">마이크로서비스 아키텍처 (MSA) : 마이크로서비스를 접목한 아키텍처 구조
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/microservice1/" rel="permalink">[MicroService] 1. MicroService
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">비즈니스 민첩성 : 자신의 특화된 서비스를 빠르게 제공하고, 피드백을 반영해 서비스를 빠르게 개선
 
 </p>
   </article>
