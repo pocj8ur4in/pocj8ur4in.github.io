@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-10T14:18:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[MacOS] tmux</title><link href="http://localhost:4000/tmux1/" rel="alternate" type="text/html" title="[MacOS] tmux" /><published>2024-01-09T00:00:00+09:00</published><updated>2024-01-09T00:00:00+09:00</updated><id>http://localhost:4000/tmux1</id><content type="html" xml:base="http://localhost:4000/tmux1/"><![CDATA[<h2 id="tmux--터미널-멀티플렉서-terminal-multiplexer"><code class="language-plaintext highlighter-rouge">tmux</code> : 터미널 멀티플렉서 (<code class="language-plaintext highlighter-rouge">Terminal Multiplexer</code>)</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-11T15:57:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[MacOS] tmux</title><link href="http://localhost:4000/tmux1/" rel="alternate" type="text/html" title="[MacOS] tmux" /><published>2024-01-09T00:00:00+09:00</published><updated>2024-01-09T00:00:00+09:00</updated><id>http://localhost:4000/tmux1</id><content type="html" xml:base="http://localhost:4000/tmux1/"><![CDATA[<h2 id="tmux--터미널-멀티플렉서-terminal-multiplexer"><code class="language-plaintext highlighter-rouge">tmux</code> : 터미널 멀티플렉서 (<code class="language-plaintext highlighter-rouge">Terminal Multiplexer</code>)</h2>
 
 <ul>
   <li>단일 단말기 창 혹은 원격 터미널에서 여러 터미널 세션에 액세스할 수 있도록 가상 콘솔을 다중화
@@ -317,6 +317,31 @@ if __name__ == "__main__":
 
 <ul>
   <li>이전에 작성하였던 <a href="https://pocj8ur4in.github.io/html1/"><code class="language-plaintext highlighter-rouge">HTML</code>와 관련된 게시글</a>과 <a href="https://pocj8ur4in.github.io/css1/"><code class="language-plaintext highlighter-rouge">CSS</code>와 관련된 게시글</a>을 수정하여 포스팅하였다.</li>
+</ul>
+
+<h2 id="2024년-01월-08일-월">2024년 01월 08일 (월)</h2>
+
+<ul>
+  <li>이전에 작성하였던 <a href="https://pocj8ur4in.github.io/algorithm2/">구현 알고리즘과 관련된 게시글</a>을 수정하여 포스팅하였다. 사실 예제 느낌으로 문제들도 풀었던 것 같은데, 아무리 찾아봐도 안보여서 백준에서 구현 문제를 몇 개 풀고 이에 대한 해설까지 더해서 다시 올려야 할 것 같다.</li>
+  <li></li>
+</ul>
+
+<h2 id="2024년-01월-09일-화">2024년 01월 09일 (화)</h2>
+
+<ul>
+  <li>리눅스를 공부하는 과정에 <code class="language-plaintext highlighter-rouge">tmux</code>에 대해 알게 되어 맥북 로컬 환경에 설치하여 직접 실습해보고, <a href="https://pocj8ur4in.github.io/tmux1/"><code class="language-plaintext highlighter-rouge">tmux</code>에 관련된 게시글</a>을 작성해 포스팅하였다. 간단한 구조나 직접 사용하면서 필요하다고 생각된 명령어들 위주로 게시글을 작성하긴 하였는데, 아무래도 직접 사용해보면서 이 툴에 익숙해지는 것이 무엇보다 중요해보인다.</li>
+</ul>
+
+<h2 id="2024년-01월-10일-수">2024년 01월 10일 (수)</h2>
+
+<ul>
+  <li>이전에 작성하였던 <a href="https://pocj8ur4in.github.io/python1/"><code class="language-plaintext highlighter-rouge">python</code>과 관련된 게시글</a>을 수정하여 포스팅하였다. 조만간 이 게시글의 내용을 참고하여 <code class="language-plaintext highlighter-rouge">SpringBoot</code>가 기반으로 하는 <code class="language-plaintext highlighter-rouge">Java</code>에 대해서도 심층 깊게 작성할 계획이다.</li>
+  <li>도메인 주도 개발로 시작하는 마이크로서비스 개발 2장을 공부하면서 마이크로서비스 <code class="language-plaintext highlighter-rouge">MSA</code>에 대한 게시글을 작성하고 있다. 아무래도 2장 내용이 길다 보니 완성하는 데에 시간이 조금 더 길릴 것 같다.</li>
+</ul>
+
+<h2 id="2024년-01월-11일-목">2024년 01월 11일 (목)</h2>
+<ul>
+  <li>도메인 주도 개발로 시작하는 마이크로서비스 개발 2장을 공부하면서 마이크로서비스 <code class="language-plaintext highlighter-rouge">MSA</code>에 대한 게시글을 작성하였다.</li>
 </ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[2024년에는 TIL를 작성하자!]]></summary></entry><entry><title type="html">[vocawik] 1. vocawik 프로젝트 소개</title><link href="http://localhost:4000/vocawik1/" rel="alternate" type="text/html" title="[vocawik] 1. vocawik 프로젝트 소개" /><published>2023-12-27T00:00:00+09:00</published><updated>2023-12-29T00:00:00+09:00</updated><id>http://localhost:4000/vocawik1</id><content type="html" xml:base="http://localhost:4000/vocawik1/"><![CDATA[<h2 id="1-들어가며">1. 들어가며</h2>
 
 <p>음성 합성 (<code class="language-plaintext highlighter-rouge">Speech Synthesis</code>)은 인간의 육성 혹은 그와 비슷한 주파수를 합성하여 인공적인 음성을 자동으로 만들 수 있는 기술을 말한다. 인간의 말소리 혹은 이와 유사한 소리를 일정한 단위로 분할해 각 조각에 부호를 붙이는 방식으로 데이터화해 음성 라이브러리 (<code class="language-plaintext highlighter-rouge">Vocal Library</code>)에 저장하면, 음성 합성 엔진 (<code class="language-plaintext highlighter-rouge">Speech Synthesis Engine</code>)이 사용자의 지시에 따라 음성 라이브러리에 필요한 음성 단위를 불러오고 이를 기반으로 하여 인공적인 음성을 합성한다. 음성 합성 기술 문자를 대신 읽어주는 스크린 리더 (<code class="language-plaintext highlighter-rouge">Screen Reader</code>)로서, 1984년 애플 매킨토시 (<code class="language-plaintext highlighter-rouge">Apple Macintosh</code>)에 매킨토크 (<code class="language-plaintext highlighter-rouge">MacInTalk</code>) 기능으로 탑재된 이후 오랜 기간에 걸쳐 다양한 분야에서 활용되고 있다.<br /></p>
@@ -684,6 +709,27 @@ if __name__ == "__main__":
   <li>진입점을 하나로 두는 <code class="language-plaintext highlighter-rouge">API</code> 게이트웨이와 달리, 프런트엔드의 유형에 따라 각각의 진입점을 둠</li>
   <li>프런트엔드를 위한 백엔드라는 의미에서 <code class="language-plaintext highlighter-rouge">Backend for Frontend</code></li>
   <li>각 프런트엔드에 대한 처리만 수행하는 <code class="language-plaintext highlighter-rouge">BFF</code> 이후에 통합 <code class="language-plaintext highlighter-rouge">API</code> 게이트웨이를 두어, 공통 처리를 통제할 수도 있음</li>
+</ul>
+
+<h4 id="마이크로서비스-어플리케이션-구성-정보의-관리--외부-구성-저장소-패턴">마이크로서비스 어플리케이션 구성 정보의 관리 → 외부 구성 저장소 패턴</h4>
+
+<blockquote>
+  <ul>
+    <li>클라우드 인프라를 사용할 때, 어플리케이션이 마이크로서비스가 사용하는 자원의 설정 정보를 포함하면?
+      <ul>
+        <li>자원의 설정 정보이 변경될 때 어플리케이션이 반드시 재배포해야 하므로 서비스가 중단되어야 함</li>
+        <li>여러 마이크로서비스가 동일한 구성 정보를 사용한다면 이를 일일이 변경하기가 어려움</li>
+        <li>여러 마이크로서비스를 변경하는 시점에 일부 마이크로서비스의 구성 정보가 불일치할 수도 있음</li>
+      </ul>
+
+      <p>→ 마이크로서비스가 사용하는 자원의 설정 정보를 쉽고 일관되게 변경 가능하도록 관리해야 한다!</p>
+    </li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>외부 저장소 : <code class="language-plaintext highlighter-rouge">DB</code> 연결 정보, 파일 스토리지 정보와 같이 각 마이크로서비스의 외부 환경 설정 정보를 공동으로 관리</li>
+  <li><code class="language-plaintext highlighter-rouge">Config</code> 원칙 : <code class="language-plaintext highlighter-rouge">Staging</code>, <code class="language-plaintext highlighter-rouge">Dev</code>, <code class="language-plaintext highlighter-rouge">Test</code>처럼 어플리케이션 배포 환경은 매번 달라지니, 코드와 설정 정보는 분리돼야 함</li>
 </ul>
 
 <blockquote>
