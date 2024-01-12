@@ -1,0 +1,633 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Engineer Information Processing] 1. 소프트웨어 공학과 개발 방법론 - pocj8ur4in’s blog</title>
+<meta name="description" content="소프트웨어 (Software) : 프로그램과 프로그램 수행에 필요한 절차, 규칙, 관련 문서 등을 총칭">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[Engineer Information Processing] 1. 소프트웨어 공학과 개발 방법론">
+<meta property="og:url" content="http://localhost:4000/engineer_information_processing1/">
+
+
+  <meta property="og:description" content="소프트웨어 (Software) : 프로그램과 프로그램 수행에 필요한 절차, 규칙, 관련 문서 등을 총칭">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-01-12T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2024-01-12T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/engineer_information_processing1/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[Engineer Information Processing] 1. 소프트웨어 공학과 개발 방법론</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Engineer Information Processing] 1. 소프트웨어 공학과 개발 방법론">
+    <meta itemprop="description" content="소프트웨어 (Software) : 프로그램과 프로그램 수행에 필요한 절차, 규칙, 관련 문서 등을 총칭">
+    <meta itemprop="datePublished" content="2024-01-12T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-12T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/engineer_information_processing1/" class="u-url" itemprop="url">[Engineer Information Processing] 1. 소프트웨어 공학과 개발 방법론
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#소프트웨어-software--프로그램과-프로그램-수행에-필요한-절차-규칙-관련-문서-등을-총칭">소프트웨어 (Software) : 프로그램과 프로그램 수행에 필요한 절차, 규칙, 관련 문서 등을 총칭</a><ul><li><a href="#소프트웨어의-특징">소프트웨어의 특징</a></li><li><a href="#소프트웨어의-분류">소프트웨어의 분류</a></li><li><a href="#시스템-system--컴퓨터로-처리할-자료를-입력해-저장-처리-가공해-출력하도록-설계-및-구현된-정보-체계">시스템 (System) : 컴퓨터로 처리할 자료를 입력해 저장, 처리, 가공해 출력하도록 설계 및 구현된 정보 체계</a></li><li><a href="#소프트웨어의-위기-software-crisis--소프트웨어-개발-속도가-하드웨어-개발-속도을-따라가지-못함">소프트웨어의 위기 (Software Crisis) : 소프트웨어 개발 속도가 하드웨어 개발 속도을 따라가지 못함</a></li></ul></li><li><a href="#소프트웨어-공학-software-engineering--경제적으로-신뢰도-높은-소프트웨어를-만드는-체계">소프트웨어 공학 (Software Engineering) : 경제적으로 신뢰도 높은 소프트웨어를 만드는 체계</a><ul><li><a href="#소프트웨어의-등장-배경">소프트웨어의 등장 배경</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="소프트웨어-software--프로그램과-프로그램-수행에-필요한-절차-규칙-관련-문서-등을-총칭">소프트웨어 (<code class="language-plaintext highlighter-rouge">Software</code>) : 프로그램과 프로그램 수행에 필요한 절차, 규칙, 관련 문서 등을 총칭</h2>
+
+<ul>
+  <li>프로그램 (<code class="language-plaintext highlighter-rouge">Program</code>) : 컴퓨터를 통해 일련의 작업을 처리하기 위한 명령어와 관련된 데이터의 집합</li>
+  <li>자료구조 (<code class="language-plaintext highlighter-rouge">Date Structure</code>) : 컴퓨터 기억 장치 내에 자료의 표현, 처리, 저장 방법 등을 총칭
+    <ul>
+      <li>데이터 간의 논리적 관계나 데이터를 처리하는 알고리즘을 의미</li>
+    </ul>
+  </li>
+  <li>문서 (<code class="language-plaintext highlighter-rouge">Document</code>) : 소프트웨어를 개발하면서 작성하는 문서들을 총칭
+    <ul>
+      <li>사용자 설명서, 소프트웨어 요구 분석서, 평가서, 명세서, 프로젝트 계획서, 감사 계획서 등을 의미</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="소프트웨어의-특징">소프트웨어의 특징</h3>
+
+<ul>
+  <li>상품성 : 소프트에어를 개발하면 상품이 되어 판매할 수 있다.</li>
+  <li>복잡성 : 개발하는 과정이 복잡하고 관리가 어렵다.</li>
+  <li>변경 가능성 : 프로그램을 일부 수정하여 업그레이드 및 오류 수정 등을 할 수 있다.</li>
+  <li>복제성 : 복제가 쉬워 쉅게 복사 및 유통이 가능하다.</li>
+  <li>순응성 : 기술의 발전, 사용자 요구, 사회적 흐름의 변화에 맞춰 적절히 변형된다.</li>
+  <li>비가시성 : 소프트웨어 구조는 외관으로 나타나 있지 않고 코드로 내재되어 있다.</li>
+</ul>
+
+<h3 id="소프트웨어의-분류">소프트웨어의 분류</h3>
+
+<ul>
+  <li>시스템 소프트웨어 (<code class="language-plaintext highlighter-rouge">System Software</code>) : 하드웨어를 관리하고 컴퓨터 자원을 활용하는 소프트웨어
+    <ul>
+      <li>운영체제, 컴파일러, 로더, 디버거 등</li>
+    </ul>
+  </li>
+  <li>응용 소프트웨어 (<code class="language-plaintext highlighter-rouge">Application Software</code>) : 사용자가 원하는 목적에 맞게 만들어진 소프트웨어
+    <ul>
+      <li>엑셀, 파워포인트, 워드프로세서, 포토샵 등</li>
+    </ul>
+  </li>
+  <li>미들웨어 소프트웨어 (<code class="language-plaintext highlighter-rouge">Middleware</code>) : 시스템 소프트웨어와 응용 소프트웨어를 연결해주는 중간 단계의 소프트웨어
+    <ul>
+      <li>데이터베이스 관리 시스템, 웹 서버, 어플리케이션 서버, 트랜잭션 처리 모니터 등</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="시스템-system--컴퓨터로-처리할-자료를-입력해-저장-처리-가공해-출력하도록-설계-및-구현된-정보-체계">시스템 (<code class="language-plaintext highlighter-rouge">System</code>) : 컴퓨터로 처리할 자료를 입력해 저장, 처리, 가공해 출력하도록 설계 및 구현된 정보 체계</h3>
+
+<ul>
+  <li>하나의 목적을 위해 시스템의 여러 요소들이 유기적으로 결합된 것
+    <ul>
+      <li>입력 (<code class="language-plaintext highlighter-rouge">Input</code>) : 처리 방법, 제어 조건, 처리할 데이터를 시스템이 투입하는 요소</li>
+      <li>출력 (<code class="language-plaintext highlighter-rouge">Output</code>) : 처리된 결과를 시스템에서 출력하는 요소</li>
+      <li>처리 (<code class="language-plaintext highlighter-rouge">Process</code>) : 입력된 자료를 처리 조건에 따라 변환 및 가공하는 요소</li>
+      <li>제어 (<code class="language-plaintext highlighter-rouge">Control</code>) : 시스템의 기본 요소들이 각 과정을 올바르게 행하는지 감독하는 요소</li>
+      <li>피드백 (<code class="language-plaintext highlighter-rouge">Feedback</code>) : 처리된 결과를 측정 및 파악하여 목표에 도달되었는지 검사하고, 만약 불충분한 경우에 목표 달성을 위해 다시 입력하는 요소</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="소프트웨어의-위기-software-crisis--소프트웨어-개발-속도가-하드웨어-개발-속도을-따라가지-못함">소프트웨어의 위기 (<code class="language-plaintext highlighter-rouge">Software Crisis</code>) : 소프트웨어 개발 속도가 하드웨어 개발 속도을 따라가지 못함</h3>
+
+<ul>
+  <li>하드웨어 비용을 초과하는 개발 비용의 증가</li>
+  <li>개발 기간의 지연</li>
+  <li>개발 인력의 부족 및 인건비 상승 → 개발 인력을 최대한 많이 투입하는 것은 해결책이 아님</li>
+  <li>성능 및 신뢰성 부족</li>
+  <li>유지보수의 어려움에 따른 엄청난 비용</li>
+</ul>
+
+<h2 id="소프트웨어-공학-software-engineering--경제적으로-신뢰도-높은-소프트웨어를-만드는-체계">소프트웨어 공학 (<code class="language-plaintext highlighter-rouge">Software Engineering</code>) : 경제적으로 신뢰도 높은 소프트웨어를 만드는 체계</h2>
+
+<ul>
+  <li>전기전자공학자협회 (<code class="language-plaintext highlighter-rouge">IEEE</code>) → 소프트웨어의 개발, 운용, 유지보수 및 파기에 대한 체계적인 접근 방법으로 정의</li>
+</ul>
+
+<h3 id="소프트웨어의-등장-배경">소프트웨어의 등장 배경</h3>
+
+<ul>
+  <li>소프트웨어 개발에 필요한 시간과 비용 예측력이 부족</li>
+  <li>개발된 소프트웨어의 품질 수준이 부족</li>
+  <li>하드웨어에 대한 소프트웨어의 상대적인 비용이 증대</li>
+  <li>유지보수 역할의 증대</li>
+  <li>하드웨어 및 소프트웨어 기술의 급속한 발전</li>
+  <li>크고 복잡한 소프트웨어에 대한 수요의 증가</li>
+  <li>특정 개인에 의존하는 시스템의 개발</li>
+</ul>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#engineer-information-processing" class="page__taxonomy-item p-category" rel="tag">Engineer Information Processing</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-12">January 12, 2024</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BEngineer+Information+Processing%5D+1.+%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4+%EA%B3%B5%ED%95%99%EA%B3%BC+%EA%B0%9C%EB%B0%9C+%EB%B0%A9%EB%B2%95%EB%A1%A0%20http%3A%2F%2Flocalhost%3A4000%2Fengineer_information_processing1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fengineer_information_processing1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/clean_code1/" class="pagination--pager" title="[Clean Code] 1. 깨끗한 코드
+">이전</a>
+    
+    
+      <a href="/system_design_interview1/" class="pagination--pager" title="[System Design Interview] 1. 사용자 수에 따른 규모 확장성
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/system_design_interview1/" rel="permalink">[System Design Interview] 1. 사용자 수에 따른 규모 확장성
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">시스템 디자인 면접 (System Design Interview) : 시스템 아키텍처를 설계하는 면접
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/clean_code1/" rel="permalink">[Clean Code] 1. 깨끗한 코드
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">코드 (Code) : 프로그래밍의 결과로서 요구사항을 상세히 표현하는 수단
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/tmux1/" rel="permalink">[MacOS] tmux
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">tmux : 터미널 멀티플렉서 (Terminal Multiplexer)
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/til1/" rel="permalink">[TIL] 2024년 01월 TIL
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">2024년에는 TIL를 작성하자!
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 pocj8ur4in. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

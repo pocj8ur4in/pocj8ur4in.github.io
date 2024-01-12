@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-12T19:06:26+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[System Design Interview] 1. 사용자 수에 따른 규모 확장성</title><link href="http://localhost:4000/system_design_interview1/" rel="alternate" type="text/html" title="[System Design Interview] 1. 사용자 수에 따른 규모 확장성" /><published>2024-01-12T00:00:00+09:00</published><updated>2024-01-12T00:00:00+09:00</updated><id>http://localhost:4000/system_design_interview1</id><content type="html" xml:base="http://localhost:4000/system_design_interview1/"><![CDATA[<h2 id="시스템-디자인-면접-system-design-interview--시스템-아키텍처를-설계하는-면접">시스템 디자인 면접 (<code class="language-plaintext highlighter-rouge">System Design Interview</code>) : 시스템 아키텍처를 설계하는 면접</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-13T00:47:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[System Design Interview] 1. 사용자 수에 따른 규모 확장성</title><link href="http://localhost:4000/system_design_interview1/" rel="alternate" type="text/html" title="[System Design Interview] 1. 사용자 수에 따른 규모 확장성" /><published>2024-01-12T00:00:00+09:00</published><updated>2024-01-12T00:00:00+09:00</updated><id>http://localhost:4000/system_design_interview1</id><content type="html" xml:base="http://localhost:4000/system_design_interview1/"><![CDATA[<h2 id="시스템-디자인-면접-system-design-interview--시스템-아키텍처를-설계하는-면접">시스템 디자인 면접 (<code class="language-plaintext highlighter-rouge">System Design Interview</code>) : 시스템 아키텍처를 설계하는 면접</h2>
 
 <ul>
   <li>질문 범위도 매우 크고 모호하며, 답변 절차 또한 정형화되어 있지 않음
@@ -253,7 +253,94 @@
   <ul>
     <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=278536695">가상 면접으로 배우는 대규모 시스템 설계</a></li>
   </ul>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="System Design Interview" /><summary type="html"><![CDATA[시스템 디자인 면접 (System Design Interview) : 시스템 아키텍처를 설계하는 면접]]></summary></entry><entry><title type="html">[Clean Code] 1. 깨끗한 코드</title><link href="http://localhost:4000/clean_code1/" rel="alternate" type="text/html" title="[Clean Code] 1. 깨끗한 코드" /><published>2024-01-11T00:00:00+09:00</published><updated>2024-01-11T00:00:00+09:00</updated><id>http://localhost:4000/clean_code1</id><content type="html" xml:base="http://localhost:4000/clean_code1/"><![CDATA[<h2 id="코드-code--프로그래밍의-결과로서-요구사항을-상세히-표현하는-수단">코드 (<code class="language-plaintext highlighter-rouge">Code</code>) : 프로그래밍의 결과로서 요구사항을 상세히 표현하는 수단</h2>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="System Design Interview" /><summary type="html"><![CDATA[시스템 디자인 면접 (System Design Interview) : 시스템 아키텍처를 설계하는 면접]]></summary></entry><entry><title type="html">[Engineer Information Processing] 1. 소프트웨어 공학과 개발 방법론</title><link href="http://localhost:4000/engineer_information_processing1/" rel="alternate" type="text/html" title="[Engineer Information Processing] 1. 소프트웨어 공학과 개발 방법론" /><published>2024-01-12T00:00:00+09:00</published><updated>2024-01-12T00:00:00+09:00</updated><id>http://localhost:4000/engineer_information_processing1</id><content type="html" xml:base="http://localhost:4000/engineer_information_processing1/"><![CDATA[<h2 id="소프트웨어-software--프로그램과-프로그램-수행에-필요한-절차-규칙-관련-문서-등을-총칭">소프트웨어 (<code class="language-plaintext highlighter-rouge">Software</code>) : 프로그램과 프로그램 수행에 필요한 절차, 규칙, 관련 문서 등을 총칭</h2>
+
+<ul>
+  <li>프로그램 (<code class="language-plaintext highlighter-rouge">Program</code>) : 컴퓨터를 통해 일련의 작업을 처리하기 위한 명령어와 관련된 데이터의 집합</li>
+  <li>자료구조 (<code class="language-plaintext highlighter-rouge">Date Structure</code>) : 컴퓨터 기억 장치 내에 자료의 표현, 처리, 저장 방법 등을 총칭
+    <ul>
+      <li>데이터 간의 논리적 관계나 데이터를 처리하는 알고리즘을 의미</li>
+    </ul>
+  </li>
+  <li>문서 (<code class="language-plaintext highlighter-rouge">Document</code>) : 소프트웨어를 개발하면서 작성하는 문서들을 총칭
+    <ul>
+      <li>사용자 설명서, 소프트웨어 요구 분석서, 평가서, 명세서, 프로젝트 계획서, 감사 계획서 등을 의미</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="소프트웨어의-특징">소프트웨어의 특징</h3>
+
+<ul>
+  <li>상품성 : 소프트에어를 개발하면 상품이 되어 판매할 수 있다.</li>
+  <li>복잡성 : 개발하는 과정이 복잡하고 관리가 어렵다.</li>
+  <li>변경 가능성 : 프로그램을 일부 수정하여 업그레이드 및 오류 수정 등을 할 수 있다.</li>
+  <li>복제성 : 복제가 쉬워 쉅게 복사 및 유통이 가능하다.</li>
+  <li>순응성 : 기술의 발전, 사용자 요구, 사회적 흐름의 변화에 맞춰 적절히 변형된다.</li>
+  <li>비가시성 : 소프트웨어 구조는 외관으로 나타나 있지 않고 코드로 내재되어 있다.</li>
+</ul>
+
+<h3 id="소프트웨어의-분류">소프트웨어의 분류</h3>
+
+<ul>
+  <li>시스템 소프트웨어 (<code class="language-plaintext highlighter-rouge">System Software</code>) : 하드웨어를 관리하고 컴퓨터 자원을 활용하는 소프트웨어
+    <ul>
+      <li>운영체제, 컴파일러, 로더, 디버거 등</li>
+    </ul>
+  </li>
+  <li>응용 소프트웨어 (<code class="language-plaintext highlighter-rouge">Application Software</code>) : 사용자가 원하는 목적에 맞게 만들어진 소프트웨어
+    <ul>
+      <li>엑셀, 파워포인트, 워드프로세서, 포토샵 등</li>
+    </ul>
+  </li>
+  <li>미들웨어 소프트웨어 (<code class="language-plaintext highlighter-rouge">Middleware</code>) : 시스템 소프트웨어와 응용 소프트웨어를 연결해주는 중간 단계의 소프트웨어
+    <ul>
+      <li>데이터베이스 관리 시스템, 웹 서버, 어플리케이션 서버, 트랜잭션 처리 모니터 등</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="시스템-system--컴퓨터로-처리할-자료를-입력해-저장-처리-가공해-출력하도록-설계-및-구현된-정보-체계">시스템 (<code class="language-plaintext highlighter-rouge">System</code>) : 컴퓨터로 처리할 자료를 입력해 저장, 처리, 가공해 출력하도록 설계 및 구현된 정보 체계</h3>
+
+<ul>
+  <li>하나의 목적을 위해 시스템의 여러 요소들이 유기적으로 결합된 것
+    <ul>
+      <li>입력 (<code class="language-plaintext highlighter-rouge">Input</code>) : 처리 방법, 제어 조건, 처리할 데이터를 시스템이 투입하는 요소</li>
+      <li>출력 (<code class="language-plaintext highlighter-rouge">Output</code>) : 처리된 결과를 시스템에서 출력하는 요소</li>
+      <li>처리 (<code class="language-plaintext highlighter-rouge">Process</code>) : 입력된 자료를 처리 조건에 따라 변환 및 가공하는 요소</li>
+      <li>제어 (<code class="language-plaintext highlighter-rouge">Control</code>) : 시스템의 기본 요소들이 각 과정을 올바르게 행하는지 감독하는 요소</li>
+      <li>피드백 (<code class="language-plaintext highlighter-rouge">Feedback</code>) : 처리된 결과를 측정 및 파악하여 목표에 도달되었는지 검사하고, 만약 불충분한 경우에 목표 달성을 위해 다시 입력하는 요소</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="소프트웨어의-위기-software-crisis--소프트웨어-개발-속도가-하드웨어-개발-속도을-따라가지-못함">소프트웨어의 위기 (<code class="language-plaintext highlighter-rouge">Software Crisis</code>) : 소프트웨어 개발 속도가 하드웨어 개발 속도을 따라가지 못함</h3>
+
+<ul>
+  <li>하드웨어 비용을 초과하는 개발 비용의 증가</li>
+  <li>개발 기간의 지연</li>
+  <li>개발 인력의 부족 및 인건비 상승 → 개발 인력을 최대한 많이 투입하는 것은 해결책이 아님</li>
+  <li>성능 및 신뢰성 부족</li>
+  <li>유지보수의 어려움에 따른 엄청난 비용</li>
+</ul>
+
+<h2 id="소프트웨어-공학-software-engineering--경제적으로-신뢰도-높은-소프트웨어를-만드는-체계">소프트웨어 공학 (<code class="language-plaintext highlighter-rouge">Software Engineering</code>) : 경제적으로 신뢰도 높은 소프트웨어를 만드는 체계</h2>
+
+<ul>
+  <li>전기전자공학자협회 (<code class="language-plaintext highlighter-rouge">IEEE</code>) → 소프트웨어의 개발, 운용, 유지보수 및 파기에 대한 체계적인 접근 방법으로 정의</li>
+</ul>
+
+<h3 id="소프트웨어의-등장-배경">소프트웨어의 등장 배경</h3>
+
+<ul>
+  <li>소프트웨어 개발에 필요한 시간과 비용 예측력이 부족</li>
+  <li>개발된 소프트웨어의 품질 수준이 부족</li>
+  <li>하드웨어에 대한 소프트웨어의 상대적인 비용이 증대</li>
+  <li>유지보수 역할의 증대</li>
+  <li>하드웨어 및 소프트웨어 기술의 급속한 발전</li>
+  <li>크고 복잡한 소프트웨어에 대한 수요의 증가</li>
+  <li>특정 개인에 의존하는 시스템의 개발</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Engineer Information Processing" /><summary type="html"><![CDATA[소프트웨어 (Software) : 프로그램과 프로그램 수행에 필요한 절차, 규칙, 관련 문서 등을 총칭]]></summary></entry><entry><title type="html">[Clean Code] 1. 깨끗한 코드</title><link href="http://localhost:4000/clean_code1/" rel="alternate" type="text/html" title="[Clean Code] 1. 깨끗한 코드" /><published>2024-01-11T00:00:00+09:00</published><updated>2024-01-11T00:00:00+09:00</updated><id>http://localhost:4000/clean_code1</id><content type="html" xml:base="http://localhost:4000/clean_code1/"><![CDATA[<h2 id="코드-code--프로그래밍의-결과로서-요구사항을-상세히-표현하는-수단">코드 (<code class="language-plaintext highlighter-rouge">Code</code>) : 프로그래밍의 결과로서 요구사항을 상세히 표현하는 수단</h2>
 
 <ul>
   <li>프로그래밍 (<code class="language-plaintext highlighter-rouge">Programming</code>) : 요구사항을 상세히 명시하는 작업
@@ -315,7 +402,15 @@
 <h3 id="보이스카우트-규칙--캠프장은-처음-왔을-때보다-더-깨끗하게-해놓고-떠나라">보이스카우트 규칙 : “캠프장은 처음 왔을 때보다 더 깨끗하게 해놓고 떠나라.”</h3>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">Check-out</code>할 때보다 좀 더 깨끗한 코드를 <code class="language-plaintext highlighter-rouge">Check-in</code>한다면, 코드는 절대 나빠지지 않는다.</li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Clean Code" /><summary type="html"><![CDATA[코드 (Code) : 프로그래밍의 결과로서 요구사항을 상세히 표현하는 수단]]></summary></entry><entry><title type="html">[MacOS] tmux</title><link href="http://localhost:4000/tmux1/" rel="alternate" type="text/html" title="[MacOS] tmux" /><published>2024-01-09T00:00:00+09:00</published><updated>2024-01-09T00:00:00+09:00</updated><id>http://localhost:4000/tmux1</id><content type="html" xml:base="http://localhost:4000/tmux1/"><![CDATA[<h2 id="tmux--터미널-멀티플렉서-terminal-multiplexer"><code class="language-plaintext highlighter-rouge">tmux</code> : 터미널 멀티플렉서 (<code class="language-plaintext highlighter-rouge">Terminal Multiplexer</code>)</h2>
+</ul>
+
+<blockquote>
+  <p>Reference</p>
+
+  <ul>
+    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=248640013">클린 코드 Clean Code</a></li>
+  </ul>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Clean Code" /><summary type="html"><![CDATA[코드 (Code) : 프로그래밍의 결과로서 요구사항을 상세히 표현하는 수단]]></summary></entry><entry><title type="html">[MacOS] tmux</title><link href="http://localhost:4000/tmux1/" rel="alternate" type="text/html" title="[MacOS] tmux" /><published>2024-01-09T00:00:00+09:00</published><updated>2024-01-09T00:00:00+09:00</updated><id>http://localhost:4000/tmux1</id><content type="html" xml:base="http://localhost:4000/tmux1/"><![CDATA[<h2 id="tmux--터미널-멀티플렉서-terminal-multiplexer"><code class="language-plaintext highlighter-rouge">tmux</code> : 터미널 멀티플렉서 (<code class="language-plaintext highlighter-rouge">Terminal Multiplexer</code>)</h2>
 
 <ul>
   <li>단일 단말기 창 혹은 원격 터미널에서 여러 터미널 세션에 액세스할 수 있도록 가상 콘솔을 다중화
@@ -1736,138 +1831,4 @@ if __name__ == "__main__":
 <h4 id="a3-멀티-스테이지-스크립트를-통해-최종-산출물의-크기를-가능한-한-작게-유지할-수-있다">A3. 멀티 스테이지 스크립트를 통해 최종 산출물의 크기를 가능한 한 작게 유지할 수 있다.</h4>
 <ul>
   <li>최종 산출물인 도커 이미지에 불필요한 도구를 제외하여 어플리케이션의 의존 모듈 자체를 줄일 수 있다.</li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Docker" /><summary type="html"><![CDATA[도커 파일 (Dockerfile) : 서버 운영 기록을 코드로 저장한 파일을 특정 시점의 도커 이미지로 빌드]]></summary></entry><entry><title type="html">[Docker] 3. Docker Container</title><link href="http://localhost:4000/docker3/" rel="alternate" type="text/html" title="[Docker] 3. Docker Container" /><published>2023-12-07T00:00:00+09:00</published><updated>2023-12-08T00:00:00+09:00</updated><id>http://localhost:4000/docker3</id><content type="html" xml:base="http://localhost:4000/docker3/"><![CDATA[<h2 id="도커-컨테이너-docker-container--도커에서-제공하는-컨테이너-기술">도커 컨테이너 (<code class="language-plaintext highlighter-rouge">Docker Container</code>) : 도커에서 제공하는 컨테이너 기술</h2>
-
-<blockquote>
-  <p><a href="https://pocj8ur4in.github.io//docker1/#컨테이너-container--소프트웨어-패키지-software-package의-추상화">해당 부분</a>에서 이어지는 내용입니다. 이전 내용에서는 가상화의 한 종류인 컨테이너 기술에 대해 서술하였다면, 이번에는 도커를 중심으로 하여 컨테이너에 대해 다뤄보겠습니다.</p>
-</blockquote>
-
-<h3 id="도커-컨테이너는-도커가-관리하는-독립적인-가상-리소스를-가진다">도커 컨테이너는 도커가 관리하는 독립적인 가상 리소스를 가진다.</h3>
-<ul>
-  <li>컨테이너 안에는 어플리케이션과 그 어플리케이션의 실행 환경 (호스트명, <code class="language-plaintext highlighter-rouge">IP</code> 주소, 디스크 드라이브 등)이 들어있음
-    <ul>
-      <li>각 컨테이너는 독립적인 환경을 가지되, 실행되는 컴퓨터의 <code class="language-plaintext highlighter-rouge">CPU</code>, 메모리, 운영체제를 공유함
-        <ul>
-          <li>격리 (<code class="language-plaintext highlighter-rouge">isolation</code>)와 밀집 (<code class="language-plaintext highlighter-rouge">density</code>)의 조건을 동시에 충족</li>
-          <li>빌드 - 공유 - 실행의 <code class="language-plaintext highlighter-rouge">workflow</code>으로 소프트웨어 배포를 단순화하기에 적합</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/29e20ccf-68e2-417e-82aa-deffbab42585" /></p>
-
-<ol>
-  <li>컨테이너 내부 어플리케이션이 실행중이여야 컨테이너의 상태도 실행 중이 된다.
-    <ul>
-      <li>컨테이너가 <code class="language-plaintext highlighter-rouge">Existed</code>인 상태에서는 <code class="language-plaintext highlighter-rouge">CPU</code> 자원이나 메모리를 사용하지 않는다.</li>
-    </ul>
-  </li>
-  <li>컨테이너가 종료되어도, 컨테이너는 사라지지 않고 그대로 남아있다.
-    <ul>
-      <li>나중에 다시 컨테이너를 실행하거나, 내부 파일이나 로그를 확인해볼 수 있다.</li>
-      <li>컨테이너를 백그라운드에서 계속 동작하도록 하려면, <code class="language-plaintext highlighter-rouge">-d</code> (<code class="language-plaintext highlighter-rouge">--detach</code>)</li>
-    </ul>
-  </li>
-  <li>컨테이너는 기본적으로 외부 환경에 노출되지 않는다.
-    <ul>
-      <li>도커는 호스트 컴퓨터의 네트워크 계층에 끼어들어 네트워크 트래픽 중 필요한 것을 컨테이너에 전달</li>
-      <li>컨테이너의 포트를 호스트 컴퓨터에 공개하려면, <code class="language-plaintext highlighter-rouge">--publish</code>
-        <ul>
-          <li>도커가 호스트 컴퓨터를 주시하다가 해당 포트로 들어오는 트래픽을 컨테이너에 전달</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ol>
-
-<h3 id="도커-컨테이너-또한-별도의-환경-변수-environment-variable를-가질-수-있다">도커 컨테이너 또한 별도의 환경 변수 (<code class="language-plaintext highlighter-rouge">Environment variable</code>)를 가질 수 있다.</h3>
-<ul>
-  <li>호스트 운영체제의 것을 가져오는 것이 아닌, <code class="language-plaintext highlighter-rouge">IP</code> 주소나 호스트 이름처럼 도커로부터 부여받음</li>
-</ul>
-
-<h2 id="도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보를-포함">도커 이미지 (<code class="language-plaintext highlighter-rouge">Docker Image</code>) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보를 포함</h2>
-<ul>
-  <li>상태값을 가지지 않음 (변하지 않는 값들을 저장) ↔ 컨테이너 : 이미지가 실행된 살태 (변하는 값들을 저장)</li>
-  <li>이미지 레이어 : 도커 이미지는 여러 <code class="language-plaintext highlighter-rouge">Read-Only</code> 레이어로 구성되고, 파일 추가 및 생성 시 새로운 레이어 생성
-    <ul>
-      <li>이미지 레이어는 도커 엔진의 캐시에 물리적으로 저장된 파일로, 여러 이미지와 컨테이너에서 공유함</li>
-      <li>유니온 파일 시스템 (<code class="language-plaintext highlighter-rouge">Union File Systems</code>)읕 통해 여러 개의 레이어를 하나의 파일 시스템으로 활용</li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">docker image ls</code>에서 도커 이미지의 <code class="language-plaintext highlighter-rouge">SIZE</code>는 논리적 용량이지 실제로 차지하는 디스크 용량이 아니다!</li>
-  </ul>
-
-  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/9ea0b979-d07d-4a66-900a-e3ecd0c3142b" /></p>
-
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">docker system df</code>를 통해 이미지 전체 용량의 총합을 볼 수 있다.</li>
-  </ul>
-
-  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/7c554710-303b-4e28-81df-e699a9fbbe89" /></p>
-</blockquote>
-
-<ul>
-  <li>컨테이너 레이어 : 컨테이너가 실행되면 이미지 레이어 위에 읽기-쓰기 (<code class="language-plaintext highlighter-rouge">Read-Write</code>) 레이어를 추가
-    <ul>
-      <li>컨테이너를 실행하면서 생성되거나 변경된 내용을 저장</li>
-    </ul>
-  </li>
-  <li>이미지 경로 : <code class="language-plaintext highlighter-rouge">URL</code> 방식으로 관리 -&gt; 뒤에 태그 (<code class="language-plaintext highlighter-rouge">/tag</code>)를 붙임</li>
-</ul>
-
-<h3 id="q-도커-이미지를-쓰는-이유--도커-이미지와-도커-컨테이너들을-클래스나-인스턴스처럼-활용한다">Q. 도커 이미지를 쓰는 이유? : 도커 이미지와 도커 컨테이너들을 클래스나 인스턴스처럼 활용한다.</h3>
-<ul>
-  <li>도커는 해시 값 (= 컨테이너 ID)과 임의의 이름 (= 컨테이너 이름)를 통해 컨테이너를 구분하고 이들을 환경변수로 관리</li>
-</ul>
-
-<div style="color: white; padding: 3% 2% 2% 2%; background-color: black;">
-운영자가 지금까지 운영한 서버를 도커 이미지로 배포하고 도커 컨테이너에 설치한다면,
-<ul>
-  <li>도커 파일 : 지금까지 서버를 운영한 기록</li>
-  <li>도커 이미지 (도커 파일 + 실행 시점) : 지금부터 설치된 서버가 가질 초기값</li>
-  <li>도커 컨테이너 (도커 파일 + 환경 변수) : 지금부터 설치된 서버가 운영될 장소</li>
-</ul>
-</div>
-<ul>
-  <li>도커 안에서는 서버 역시 하나의 소프트웨어처럼 사용할 수 있고, 생성할 수 있는 컨테이너의 개수에도 제한이 없다.</li>
-</ul>
-
-<h3 id="도커-허브-docker-hub--도커-이미지를-서버에-공유하는-도커-레지스트리-서비스"><a href="https://hub.docker.com">도커 허브 (<code class="language-plaintext highlighter-rouge">Docker Hub</code>)</a> : 도커 이미지를 서버에 공유하는 도커 레지스트리 서비스</h3>
-
-<ul>
-  <li>도커 허브 계정을 생성한 후, 터미널을 통해 도커 허브에 접속</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker login --username pocj8ur4in
-Password:
-Login Succeeded
-</code></pre></div></div>
-
-<ul>
-  <li>도커 이미지의 다운로드를 위한 이미지 참조 (<code class="language-plaintext highlighter-rouge">Image Reference</code>)는 네 개의 요소로 구성
-    <ol>
-      <li>이미지가 저장된 레지스트리 도메인 (기본값은 도커 허브)</li>
-      <li>이미지 작성자 계정 <code class="language-plaintext highlighter-rouge">ID</code></li>
-      <li>이미지 레포지토리 <code class="language-plaintext highlighter-rouge">ID</code></li>
-      <li>이미지 태그 (기본값은 <code class="language-plaintext highlighter-rouge">latest</code>)</li>
-    </ol>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker.io/diamol/golang:latest
-</code></pre></div></div>
-
-<ul>
-  <li>이미지에 새로운 이미지 참조를 부여하여, 한 이미지에 여러 개의 참조를 갖게 할 수도 있음</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker image tag new-tag pocj8ur4in/vw-api:latest
-</code></pre></div></div>
-
-<h3 id="사설-도커-레지스트리-private-docker-registry--로컬에-전용-레지스트리를-설치-및-운영"><a href="https://waspro.tistory.com/532">사설 도커 레지스트리 (<code class="language-plaintext highlighter-rouge">Private Docker Registry</code>) : 로컬에 전용 레지스트리를 설치 및 운영</a></h3>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Docker" /><summary type="html"><![CDATA[도커 컨테이너 (Docker Container) : 도커에서 제공하는 컨테이너 기술]]></summary></entry></feed>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Docker" /><summary type="html"><![CDATA[도커 파일 (Dockerfile) : 서버 운영 기록을 코드로 저장한 파일을 특정 시점의 도커 이미지로 빌드]]></summary></entry></feed>
