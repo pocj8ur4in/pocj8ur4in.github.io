@@ -121,6 +121,14 @@
 <lastmod>2024-01-09T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/clean_code1/</loc>
+<lastmod>2024-01-11T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/system_design_interview1/</loc>
+<lastmod>2024-01-12T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
@@ -134,6 +142,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/page3/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page4/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/googlece206819820f99f5.html</loc>

@@ -1,4 +1,321 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-11T15:57:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[MacOS] tmux</title><link href="http://localhost:4000/tmux1/" rel="alternate" type="text/html" title="[MacOS] tmux" /><published>2024-01-09T00:00:00+09:00</published><updated>2024-01-09T00:00:00+09:00</updated><id>http://localhost:4000/tmux1</id><content type="html" xml:base="http://localhost:4000/tmux1/"><![CDATA[<h2 id="tmux--터미널-멀티플렉서-terminal-multiplexer"><code class="language-plaintext highlighter-rouge">tmux</code> : 터미널 멀티플렉서 (<code class="language-plaintext highlighter-rouge">Terminal Multiplexer</code>)</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-12T19:06:26+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[System Design Interview] 1. 사용자 수에 따른 규모 확장성</title><link href="http://localhost:4000/system_design_interview1/" rel="alternate" type="text/html" title="[System Design Interview] 1. 사용자 수에 따른 규모 확장성" /><published>2024-01-12T00:00:00+09:00</published><updated>2024-01-12T00:00:00+09:00</updated><id>http://localhost:4000/system_design_interview1</id><content type="html" xml:base="http://localhost:4000/system_design_interview1/"><![CDATA[<h2 id="시스템-디자인-면접-system-design-interview--시스템-아키텍처를-설계하는-면접">시스템 디자인 면접 (<code class="language-plaintext highlighter-rouge">System Design Interview</code>) : 시스템 아키텍처를 설계하는 면접</h2>
+
+<ul>
+  <li>질문 범위도 매우 크고 모호하며, 답변 절차 또한 정형화되어 있지 않음
+    <ul>
+      <li>시스템에 따른 변이 (<code class="language-plaintext highlighter-rouge">variation</code>)이 많음
+        <ul>
+          <li>의사소통 및 문제 해결 능력이 소프트웨어 엔지니어의 필요 능력과 비슷함</li>
+          <li>지원자들은 그 모호한 문제를 어떻게 분석하고 단계적으로 해결하는지를 확인
+            <ul>
+              <li>문제 해결 아이디어를 어떻게 설명하고 토론하는지?</li>
+              <li>문제 해결 아이디어를 어떻게 평가하고 개선하는지?</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="사용자-수에-따른-규모-확장성--사용자가-얼마나-되는지에-따라-변화하는-시스템-설계">사용자 수에 따른 규모 확장성 : 사용자가 얼마나 되는지에 따라 변화하는 시스템 설계</h2>
+
+<h3 id="단일-서버--모든-컴포넌트가-단-한-대의-서버에서-실행되는-시스템을-설계">단일 서버 : 모든 컴포넌트가 단 한 대의 서버에서 실행되는 시스템을 설계</h3>
+
+<ul>
+  <li>웹, 어플리케이션, 데이터베이스, 캐시 모두가 하나의 서버에서 실행</li>
+</ul>
+
+<blockquote>
+  <p>단일 서버에서 사용자의 요청이 처리되는 과정</p>
+
+  <ol>
+    <li>사용자는 도메인 네임을 이용해 웹 사이트에 접속한다.
+      <ol>
+        <li>도메인 네임을 <code class="language-plaintext highlighter-rouge">DNS</code> (<code class="language-plaintext highlighter-rouge">Domain Name Service</code>)에 질의한다.</li>
+        <li><code class="language-plaintext highlighter-rouge">DNS</code> 조회 결과로 <code class="language-plaintext highlighter-rouge">IP</code> 주소 (웹 서버의 주소)가 반환된다.</li>
+      </ol>
+    </li>
+    <li>해당 <code class="language-plaintext highlighter-rouge">IP</code> 주소로 <code class="language-plaintext highlighter-rouge">HTTP</code> 요청이 전달된다.</li>
+    <li>요청을 받은 웹 서버는 <code class="language-plaintext highlighter-rouge">HTML</code> 페이지나 <code class="language-plaintext highlighter-rouge">JSON</code> 형태의 응답을 반환한다.</li>
+  </ol>
+</blockquote>
+
+<ul>
+  <li>그렇다면 실제 요청은 어디에서 오는가?
+    <ol>
+      <li>웹 어플리케이션인 경우?
+        <ol>
+          <li>비즈니스 로직의 구현과 데이터 저장의 처리를 위한 서버 구현</li>
+          <li>사용자에게 표현하기 위한 클라이언트 구현</li>
+        </ol>
+      </li>
+      <li>모바일 앱인 경우?
+        <ol>
+          <li>모바일 앱과 웹 서버 간의 통신에는 <code class="language-plaintext highlighter-rouge">HTTP</code> 프로토콜을 이용</li>
+          <li><code class="language-plaintext highlighter-rouge">HTTP</code> 프로토콜을 통해 반환될 응답 데이터의 포맷으로 <code class="language-plaintext highlighter-rouge">JSON</code>을 사용</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="데이터베이스-서버--트래픽을-처리할-서버-웹-계층에-db-서버-데이터-계층을-증설">데이터베이스 서버 : 트래픽을 처리할 서버 (웹 계층)에 DB 서버 (데이터 계층)을 증설</h3>
+
+<ul>
+  <li>어떤 데이터베이스를 사용할 것인가?
+    <ol>
+      <li>관계형 데이터베이스를 선택할 경우?
+        <ul>
+          <li>관계형 데이터베이스 관리 시스템 (<code class="language-plaintext highlighter-rouge">RDBMS</code>) : <code class="language-plaintext highlighter-rouge">MySQL</code>, …</li>
+          <li>자료를 테이블, 열, 칼럼으로 표현</li>
+          <li>여러 테이블에 있는 데이터를 그 관계에 따라 조인 (<code class="language-plaintext highlighter-rouge">join</code>)</li>
+        </ul>
+      </li>
+      <li>비관계형 데이터베이스 (<code class="language-plaintext highlighter-rouge">NoSQL</code>)를 선택할 경우?
+        <ul>
+          <li>저장소 : 키-값 (<code class="language-plaintext highlighter-rouge">key-value</code>), 그래프 (<code class="language-plaintext highlighter-rouge">graph</code>), 칼럼 (<code class="language-plaintext highlighter-rouge">column</code>), 문서 (<code class="language-plaintext highlighter-rouge">document</code>)</li>
+        </ul>
+      </li>
+      <li>비관계형 데이터베이스가 최선인 경우는 언제?
+        <ul>
+          <li>아주 낮은 지연 시간 (<code class="language-plaintext highlighter-rouge">latency</code>)이 요구됨</li>
+          <li>다루는 데이터가 비정형 (<code class="language-plaintext highlighter-rouge">unstructured</code>) 데이터임</li>
+          <li><code class="language-plaintext highlighter-rouge">JSON</code> 등 데이터를 직렬화 (<code class="language-plaintext highlighter-rouge">serialize</code>)하거나 역직렬화할 수 있기만 하면 됨</li>
+          <li>아주 많은 양의 데이터를 저장해야 함</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<h3 id="수직적-규모-확장-vs-수평적-규모-확장">수직적 규모 확장 vs 수평적 규모 확장?</h3>
+
+<ul>
+  <li>수직적 확장 (<code class="language-plaintext highlighter-rouge">scale-up</code>) : 서버에 고사양 자원을 추가
+    <ul>
+      <li>서버로 유입되는 트래픽의 양이 적을 때 최선</li>
+      <li>단순하지만, 한계가 명확함 : 하나의 서버에 <code class="language-plaintext highlighter-rouge">CPU</code>나 메모리를 무한대로 증설할 수 없음</li>
+      <li>장애에 대한 자동 복구 (<code class="language-plaintext highlighter-rouge">failover</code>)이나 다중화 (<code class="language-plaintext highlighter-rouge">re-dundancy</code>) 방안을 제시하지 않음
+        <ul>
+          <li>서버에 장애가 발생하면, 어플리케이션이 그대로 중단된다.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>수평적 확장 (<code class="language-plaintext highlighter-rouge">scale-out</code>) : 더 많은 서버를 추가하여 성능을 개선
+    <ul>
+      <li>로드밸런서 (<code class="language-plaintext highlighter-rouge">Load balancer</code>) : 부하 분산 집합 내의 웹 서버들에게 트래픽 부하를 분산
+        <ul>
+          <li>로드밸런서의 공개 <code class="language-plaintext highlighter-rouge">IP</code>로 접속 : 웹 서버가 클라이언트의 접속을 직접 처리하지 않음</li>
+          <li>같은 네트워크 내의 서버 간 통신에는 사설 <code class="language-plaintext highlighter-rouge">IP</code> 주소 사용</li>
+          <li>장애를 자동으로 복구하지 못하는 문제 (<code class="language-plaintext highlighter-rouge">no failover</code>) 해소
+            <ul>
+              <li>서버 <code class="language-plaintext highlighter-rouge">a</code>가 오프라인으로 상태가 변경되어도 모든 트래픽이 서버 b로 전송</li>
+            </ul>
+          </li>
+          <li>웹 계층의 가용성 (<code class="language-plaintext highlighter-rouge">availability</code>) 향상
+            <ul>
+              <li>로드밸런서를 통해 트래픽을 자동적으로 분산 가능</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>데이터베이스 다중화 : 원본은 <code class="language-plaintext highlighter-rouge">master</code> 서버에, 사본은 <code class="language-plaintext highlighter-rouge">slave</code> 서버에 저장
+        <ul>
+          <li>쓰기 연산 (<code class="language-plaintext highlighter-rouge">write</code>)과 <code class="language-plaintext highlighter-rouge">DB</code>를 변경하는 명령어의 입력은 <code class="language-plaintext highlighter-rouge">master</code> 서버에서만 가능</li>
+          <li><code class="language-plaintext highlighter-rouge">slave</code> 서버는 <code class="language-plaintext highlighter-rouge">master</code> 서버에서 사본을 전달받아, 읽기 연산 (<code class="language-plaintext highlighter-rouge">read</code>)만을 지원
+            <ul>
+              <li>성능 향상 : 다중화 모델을 통해 병렬로 처리될 수 있는 질의 (<code class="language-plaintext highlighter-rouge">query</code>)의 수 증가</li>
+              <li>안정성 (<code class="language-plaintext highlighter-rouge">reliability</code>) : 다중화된 <code class="language-plaintext highlighter-rouge">DB</code>를 여러 곳에 분산 가능</li>
+              <li>가용성 (<code class="language-plaintext highlighter-rouge">availability</code>) : 어떤 <code class="language-plaintext highlighter-rouge">DB</code> 서버에 장애가 발생해도 서비스 지속 가능</li>
+            </ul>
+          </li>
+          <li><code class="language-plaintext highlighter-rouge">DB</code> 서버 하나가 오프라인 상태가 된다면?
+            <ul>
+              <li>1대뿐인 <code class="language-plaintext highlighter-rouge">slave</code> 서버가 오프라인 상태인 경우?
+                <ul>
+                  <li>읽기 연산이 한시적으로 모두 <code class="language-plaintext highlighter-rouge">master</code> 서버로 전달</li>
+                </ul>
+              </li>
+              <li>여러 대의 <code class="language-plaintext highlighter-rouge">slave</code> 서버 중 하나가 오프라인 상태인 경우?
+                <ul>
+                  <li>읽기 연산이 나머지 <code class="language-plaintext highlighter-rouge">slave</code> 서버로 분산</li>
+                </ul>
+              </li>
+              <li>1대뿐인 <code class="language-plaintext highlighter-rouge">slave</code> 서버를 가진 <code class="language-plaintext highlighter-rouge">master</code> 서버가 오프라인 상태인 경우?
+                <ul>
+                  <li>해당 <code class="language-plaintext highlighter-rouge">slave</code> 서버가 <code class="language-plaintext highlighter-rouge">master</code> 서버가 돠어 모든 <code class="language-plaintext highlighter-rouge">DB</code> 연산 수행</li>
+                  <li>프로덕션 (<code class="language-plaintext highlighter-rouge">production</code>) 환경 : <code class="language-plaintext highlighter-rouge">slave</code> 서버의 데이터가 최신이 아닐 수도 있음
+                    <ul>
+                      <li>복구 스크립트 (<code class="language-plaintext highlighter-rouge">recovery script</code>)를 통한 추가</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>로드밸런서와 데이터베이스 다중화를 고려한 설계
+    <ul>
+      <li>사용자는 DNS로부터 로드밸런서의 공개 <code class="language-plaintext highlighter-rouge">IP</code> 주소를 받는다.</li>
+      <li>사용자는 해당 <code class="language-plaintext highlighter-rouge">IP</code> 주소를 사용해 로드밸런서에 접속한다.</li>
+      <li><code class="language-plaintext highlighter-rouge">HTTP</code> 요청은 서버 1이나 서버 2로 전달된다.</li>
+      <li>웹 서버는 사용자의 데이터를 <code class="language-plaintext highlighter-rouge">slave</code> 데이터베이스에서 읽는다.</li>
+      <li>웹 서버는 데이터 변경 연산을 <code class="language-plaintext highlighter-rouge">master</code> 데이터베이스로 전달한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="캐시-cache--응답-시간-latency-개선을-위해-데이터를-잠시-보관">캐시 (<code class="language-plaintext highlighter-rouge">Cache</code>) : 응답 시간 (<code class="language-plaintext highlighter-rouge">latency</code>) 개선을 위해 데이터를 잠시 보관</h4>
+
+<ul>
+  <li>캐시 계층 : 값비싼 연산 결과 또는 자주 참조되는 데이터를 메모리 안에 보관
+    <ul>
+      <li>주도형 캐시 전략 (<code class="language-plaintext highlighter-rouge">read-through caching strategy</code>)
+        <ol>
+          <li>만약 데이터가 캐시에 있다면, 캐시에서 데이터를 읽음
+            <ul>
+              <li>데이터가 캐시에 없다면, <code class="language-plaintext highlighter-rouge">DB</code>에서 해당 데이터를 읽어 캐시에 씀</li>
+            </ul>
+          </li>
+          <li>캐시에서 웹 서버로 데이터를 반환함</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>캐시를 사용할 때 고려해야 할 점?
+    <ul>
+      <li>캐시는 어떤 상황에 바람직한가? : 갱신이 드물지만, 참조가 빈번한 데이터</li>
+      <li>어떤 데이터를 캐시에 저장? : 영속적이지 않은 데이터</li>
+      <li>캐시 내의 데이터는 어떻게 만료 (<code class="language-plaintext highlighter-rouge">expire</code>)할까? : 캐시에서 정책에 따라 삭제</li>
+      <li>일관성 (<code class="language-plaintext highlighter-rouge">consistency</code>)는 어떻게 유지할까? : 원본 갱신 연산과 캐시 갱신 연산이 단일 트랜잭션으로 처리되어야</li>
+      <li>장애에는 어떻게 대처할까? : 단일 장애 지점의 발생을 피해 캐시 서버를 분산</li>
+      <li>캐시 메모리의 크기는? : 캐시 메모리를 과할당 (<code class="language-plaintext highlighter-rouge">over-provision</code>)</li>
+      <li>데이터 방출 (<code class="language-plaintext highlighter-rouge">eviction</code>) 정책은? : <code class="language-plaintext highlighter-rouge">LRU</code>, <code class="language-plaintext highlighter-rouge">LFU</code> 등을 경우에 맞게 적용</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="컨텐츠-전송-네트워크-cdn--정적-컨텐츠의-전송에-쓰이는-분산-서버-네트워크">컨텐츠 전송 네트워크 (<code class="language-plaintext highlighter-rouge">CDN</code>) : 정적 컨텐츠의 전송에 쓰이는 분산 서버 네트워크</h4>
+<ul>
+  <li>정적 컨텐츠 (이미지, 비디오, <code class="language-plaintext highlighter-rouge">CSS</code>, <code class="language-plaintext highlighter-rouge">JavaScript</code> 파일 등)을 캐시</li>
+  <li>사용자가 웹 사이트에 방문하면, 가장 가까운 <code class="language-plaintext highlighter-rouge">CDN</code> 서버가 정적 컨텐츠를 전달</li>
+</ul>
+
+<blockquote>
+  <ol>
+    <li>사용자가 이미지 <code class="language-plaintext highlighter-rouge">URL</code>를 통해 <code class="language-plaintext highlighter-rouge">image.png</code>에 접근한다.
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">URL</code>의 도메인은 <code class="language-plaintext highlighter-rouge">CDN</code> 서비스 사업자가 제공</li>
+      </ul>
+    </li>
+    <li><code class="language-plaintext highlighter-rouge">CDN</code> 서버의 캐시에 해당 이미지가 없으면 원본 서버에서 파일을 요청
+      <ul>
+        <li>원본 서버가 파일을 반환할 때, 응답 <code class="language-plaintext highlighter-rouge">HTTP</code> 헤더는 <code class="language-plaintext highlighter-rouge">TTL</code> 값을 포함</li>
+      </ul>
+    </li>
+    <li><code class="language-plaintext highlighter-rouge">CDN</code> 서버는 파일을 캐시하고 사용자에 반환 (<code class="language-plaintext highlighter-rouge">TTL</code> 값만큼 캐시)
+      <ul>
+        <li>사용자가 만료가 안된 이미지의 요청을 <code class="language-plaintext highlighter-rouge">CDN</code> 서버에 전송하면, 캐시로 처리</li>
+      </ul>
+    </li>
+  </ol>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CDN</code> 사용 시 고려할 사항?
+    <ul>
+      <li>비용 : 자주 사용되지 않는 컨텐츠를 캐싱하는 것은 비효율적</li>
+      <li>만료 기한 : <code class="language-plaintext highlighter-rouge">time-sensitive</code>한 컨텐츠의 만료 기한은 신중히 설정해야 함</li>
+      <li><code class="language-plaintext highlighter-rouge">CDN</code> 장애 대처 방안 : <code class="language-plaintext highlighter-rouge">CDN</code>이 오프라인 상태일 때의 동작에 대한 고려</li>
+      <li>컨텐츠 무효화 (<code class="language-plaintext highlighter-rouge">Invalidation</code>) 방법 : <code class="language-plaintext highlighter-rouge">CDN</code> 서비스 사업자가 제공하는 <code class="language-plaintext highlighter-rouge">API</code>를 이용한 컨텐츠 무효화
+        <ul>
+          <li>컨텐츠의 다른 버전을 서비스하도록 오브젝트 버저닝 (<code class="language-plaintext highlighter-rouge">object versioning</code>) 이용</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">CDN</code>과 캐시를 추가한 설계
+    <ul>
+      <li>정적 컨텐츠는 웹 서버가 아닌 <code class="language-plaintext highlighter-rouge">CDN</code>을 통해 서비스됨</li>
+      <li>캐시를 통해 데이터베이스의 부하가 줄어들 수 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Reference</p>
+
+  <ul>
+    <li><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=278536695">가상 면접으로 배우는 대규모 시스템 설계</a></li>
+  </ul>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="System Design Interview" /><summary type="html"><![CDATA[시스템 디자인 면접 (System Design Interview) : 시스템 아키텍처를 설계하는 면접]]></summary></entry><entry><title type="html">[Clean Code] 1. 깨끗한 코드</title><link href="http://localhost:4000/clean_code1/" rel="alternate" type="text/html" title="[Clean Code] 1. 깨끗한 코드" /><published>2024-01-11T00:00:00+09:00</published><updated>2024-01-11T00:00:00+09:00</updated><id>http://localhost:4000/clean_code1</id><content type="html" xml:base="http://localhost:4000/clean_code1/"><![CDATA[<h2 id="코드-code--프로그래밍의-결과로서-요구사항을-상세히-표현하는-수단">코드 (<code class="language-plaintext highlighter-rouge">Code</code>) : 프로그래밍의 결과로서 요구사항을 상세히 표현하는 수단</h2>
+
+<ul>
+  <li>프로그래밍 (<code class="language-plaintext highlighter-rouge">Programming</code>) : 요구사항을 상세히 명시하는 작업
+    <ul>
+      <li>나쁜 코드는 프로젝트의 개발 속도를 떨어뜨리며, 팀 생산성을 떨어뜨림</li>
+      <li>나쁜 코드는 나쁜 코드를 ‘유혹’한다 : 나쁜 코드를 고치면서 오히려 더 나쁜 코드를 만들어냄</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="그렇다면-깨끗한-코드란-무엇인가">그렇다면, 깨끗한 코드란 무엇인가?</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">by</code> 비야네 스트롭스트룹
+    <ul>
+      <li>보는 사람에게 즐거움을 선사하는 ‘우아한’ 코드</li>
+      <li>시간과 자원을 낭비하지 않는 ‘효율적인’ 코드</li>
+      <li>세세한 사항까지 철저히 오류 처리를 하는 코드</li>
+      <li>‘깨끗한 코드란 한 가지를 잘한다.’ : 나쁜 코드는 많은 일을 하려 애쓰다가 의도와 목적이 흐려진다.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">by</code> 그래디 부치
+    <ul>
+      <li>‘잘 쓴 문장처럼 읽혀야 한다.’ → 가독성 높은 코드</li>
+      <li>‘명쾌한 추상화와 단순한 제어문’ → 추측이 아니라 사실에 기반한 코드</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">by</code> 데이브 토마스
+    <ul>
+      <li>다른 사람이 고치기 쉬운 코드</li>
+      <li>테스트 케이스가 존재하는 코드</li>
+      <li>작을수록 좋은, ‘최소한의’ 코드</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">by</code> 마이클 페더스
+    <ul>
+      <li>작성자가 모든 사항을 고려하여, 주의 깊게 작성한 코드</li>
+      <li>시간을 들여 깔끔하고 단정하게 정리된 코드</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">by</code> 론 제프리스
+    <ul>
+      <li>중복을 피하고, 한 기능만을 수행하면서, 표현력이 높으며, 초반부터 간단한 추상화를 고려한 코드</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">by</code> 워드 커닝햄
+    <ul>
+      <li>읽으면서 ‘짐작했던 기능을 그대로 수행’하는 코드</li>
+      <li>언어를 단순하게 보이도록 만드는 책임이 우리에게 달려 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="우리가-저자다--저자에게는-독자와-잘-소통할-책임이-있다">우리가 저자다 : 저자에게는 독자와 잘 소통할 책임이 있다.</h3>
+<ul>
+  <li>코드를 짤 때에는 자신이 저자라는 사실을, 그리고 저자의 노력을 보고 판단할 독자가 잊지 말자!</li>
+  <li>저자 역시 독자다 : 새 코드를 짜면서 끊임없이 기존 코드를 읽기에, 읽기 쉽게 만들면 짜기 또한 쉽다.</li>
+</ul>
+
+<h3 id="보이스카우트-규칙--캠프장은-처음-왔을-때보다-더-깨끗하게-해놓고-떠나라">보이스카우트 규칙 : “캠프장은 처음 왔을 때보다 더 깨끗하게 해놓고 떠나라.”</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Check-out</code>할 때보다 좀 더 깨끗한 코드를 <code class="language-plaintext highlighter-rouge">Check-in</code>한다면, 코드는 절대 나빠지지 않는다.</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Clean Code" /><summary type="html"><![CDATA[코드 (Code) : 프로그래밍의 결과로서 요구사항을 상세히 표현하는 수단]]></summary></entry><entry><title type="html">[MacOS] tmux</title><link href="http://localhost:4000/tmux1/" rel="alternate" type="text/html" title="[MacOS] tmux" /><published>2024-01-09T00:00:00+09:00</published><updated>2024-01-09T00:00:00+09:00</updated><id>http://localhost:4000/tmux1</id><content type="html" xml:base="http://localhost:4000/tmux1/"><![CDATA[<h2 id="tmux--터미널-멀티플렉서-terminal-multiplexer"><code class="language-plaintext highlighter-rouge">tmux</code> : 터미널 멀티플렉서 (<code class="language-plaintext highlighter-rouge">Terminal Multiplexer</code>)</h2>
 
 <ul>
   <li>단일 단말기 창 혹은 원격 터미널에서 여러 터미널 세션에 액세스할 수 있도록 가상 콘솔을 다중화
@@ -323,7 +640,6 @@ if __name__ == "__main__":
 
 <ul>
   <li>이전에 작성하였던 <a href="https://pocj8ur4in.github.io/algorithm2/">구현 알고리즘과 관련된 게시글</a>을 수정하여 포스팅하였다. 사실 예제 느낌으로 문제들도 풀었던 것 같은데, 아무리 찾아봐도 안보여서 백준에서 구현 문제를 몇 개 풀고 이에 대한 해설까지 더해서 다시 올려야 할 것 같다.</li>
-  <li></li>
 </ul>
 
 <h2 id="2024년-01월-09일-화">2024년 01월 09일 (화)</h2>
@@ -336,12 +652,41 @@ if __name__ == "__main__":
 
 <ul>
   <li>이전에 작성하였던 <a href="https://pocj8ur4in.github.io/python1/"><code class="language-plaintext highlighter-rouge">python</code>과 관련된 게시글</a>을 수정하여 포스팅하였다. 조만간 이 게시글의 내용을 참고하여 <code class="language-plaintext highlighter-rouge">SpringBoot</code>가 기반으로 하는 <code class="language-plaintext highlighter-rouge">Java</code>에 대해서도 심층 깊게 작성할 계획이다.</li>
-  <li>도메인 주도 개발로 시작하는 마이크로서비스 개발 2장을 공부하면서 마이크로서비스 <code class="language-plaintext highlighter-rouge">MSA</code>에 대한 게시글을 작성하고 있다. 아무래도 2장 내용이 길다 보니 완성하는 데에 시간이 조금 더 길릴 것 같다.</li>
+  <li>도메인 주도 개발로 시작하는 마이크로서비스 개발 2장을 공부하면서 마이크로서비스 <code class="language-plaintext highlighter-rouge">MSA</code>에 대한 게시글을 작성중이다.
+    <ul>
+      <li>2장의 내용이 길기도 하고, 인프라 영역에 대해 내가 모르는 부분이 많아 완성하는 데에 시간이 더 길릴 것 같다.</li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="2024년-01월-11일-목">2024년 01월 11일 (목)</h2>
+
 <ul>
-  <li>도메인 주도 개발로 시작하는 마이크로서비스 개발 2장을 공부하면서 마이크로서비스 <code class="language-plaintext highlighter-rouge">MSA</code>에 대한 게시글을 작성하였다.</li>
+  <li>도메인 주도 개발로 시작하는 마이크로서비스 개발 2장을 공부하면서 마이크로서비스 <code class="language-plaintext highlighter-rouge">MSA</code>에 대한 게시글을 작성중이다.
+    <ul>
+      <li>마이크로서비스의 흐름을 주도하고 있는 넷플릭스와 쿠버네티스가 대단하다는 생각이 많이 드는 시간이었다.</li>
+    </ul>
+  </li>
+  <li><a href="http://pocj8ur4in.github.io/clean_code1">클린 코드 1장을 읽으면서 정리한 내용을 바탕으로 한 게시글</a>을 작성하였다.
+    <ul>
+      <li>깨끗한 코드가 무엇인가에 대한 여러 의견들을 보면서 그동안 작성해본 코드에 대해 반추하면서 과연 과연 내가 저자로서의 책임을 갖고 코드를 작성하였는지에 대해 생각해볼 수 있었다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="2024년-01월-12일-금">2024년 01월 12일 (금)</h2>
+
+<ul>
+  <li>
+    <p>을지로입구역에 위치한 하나은행 사옥에서 디지털하나路 2기 입학식 행사에 참여하였다. 행사는 교육 커리큘럼이나 출결 관리와 같은 전달 사항들을 안내하는 오리엔테이션 위주로 진행되었고, 디지털하나路에 같이 참여하게 될 직원 분들과 수강생들 또한 처음 만나뵙게 되었다. 이제 다음주부터 본격적인 일정이 시작되는 만큼, 열심히 참여하여 내가 원하는 바를 이뤘으면 한다.</p>
+  </li>
+  <li>도메인 주도 개발로 시작하는 마이크로서비스 개발 2장을 공부하면서 마이크로서비스 <code class="language-plaintext highlighter-rouge">MSA</code>에 대한 게시글을 작성중이다.
+    <ul>
+      <li>이제 인프라 영역에 해당되는 부분을 마치고, 내가 다루는 어플리케이션 영역에 대한 내용을 다루고 있다.</li>
+      <li>이전에 운영 관리 패턴에 대해 공부하면서 인프라 영역이 다루는 범위가 넓어지면서 어플리케이션 영역이 하는 업무가 줄어든건가? 라는 생각이 들었는데, 그렇지 않다는 것을 깨닫게 되었다.</li>
+    </ul>
+  </li>
+  <li>가상 면접으로 배우는 대규모 시스템 설계 1장을 공부하면서 시스템 설계에 대한 게시글을 작성하고 있다.</li>
 </ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[2024년에는 TIL를 작성하자!]]></summary></entry><entry><title type="html">[vocawik] 1. vocawik 프로젝트 소개</title><link href="http://localhost:4000/vocawik1/" rel="alternate" type="text/html" title="[vocawik] 1. vocawik 프로젝트 소개" /><published>2023-12-27T00:00:00+09:00</published><updated>2023-12-29T00:00:00+09:00</updated><id>http://localhost:4000/vocawik1</id><content type="html" xml:base="http://localhost:4000/vocawik1/"><![CDATA[<h2 id="1-들어가며">1. 들어가며</h2>
 
 <p>음성 합성 (<code class="language-plaintext highlighter-rouge">Speech Synthesis</code>)은 인간의 육성 혹은 그와 비슷한 주파수를 합성하여 인공적인 음성을 자동으로 만들 수 있는 기술을 말한다. 인간의 말소리 혹은 이와 유사한 소리를 일정한 단위로 분할해 각 조각에 부호를 붙이는 방식으로 데이터화해 음성 라이브러리 (<code class="language-plaintext highlighter-rouge">Vocal Library</code>)에 저장하면, 음성 합성 엔진 (<code class="language-plaintext highlighter-rouge">Speech Synthesis Engine</code>)이 사용자의 지시에 따라 음성 라이브러리에 필요한 음성 단위를 불러오고 이를 기반으로 하여 인공적인 음성을 합성한다. 음성 합성 기술 문자를 대신 읽어주는 스크린 리더 (<code class="language-plaintext highlighter-rouge">Screen Reader</code>)로서, 1984년 애플 매킨토시 (<code class="language-plaintext highlighter-rouge">Apple Macintosh</code>)에 매킨토크 (<code class="language-plaintext highlighter-rouge">MacInTalk</code>) 기능으로 탑재된 이후 오랜 기간에 걸쳐 다양한 분야에서 활용되고 있다.<br /></p>
@@ -638,7 +983,7 @@ if __name__ == "__main__":
 <h4 id="다양한-서비스의-등록-및-탐색--서비스-레지스트리-서비스-디스커버리-패턴">다양한 서비스의 등록 및 탐색 → 서비스 레지스트리, 서비스 디스커버리 패턴</h4>
 
 <ul>
-  <li>예시 : 넷플릭스 <code class="language-plaintext highlighter-rouge">OSS</code>의 유레카 (<code class="language-plaintext highlighter-rouge">Eureka</code>), 스프링 유레카 (<code class="language-plaintext highlighter-rouge">Spring Eureka</code>), 쿠버네티스 <code class="language-plaintext highlighter-rouge">DNS</code> 및 서비스</li>
+  <li>예시 : 넷플릭스 <code class="language-plaintext highlighter-rouge">OSS</code> 유레카 (<code class="language-plaintext highlighter-rouge">Eureka</code>), 스프링 유레카 (<code class="language-plaintext highlighter-rouge">Spring Eureka</code>), 쿠버네티스 <code class="language-plaintext highlighter-rouge">DNS</code> 및 서비스</li>
 </ul>
 
 <blockquote>
@@ -670,7 +1015,7 @@ if __name__ == "__main__":
 <h4 id="서비스-단일-진입--api-게이트웨이-패턴">서비스 단일 진입 → <code class="language-plaintext highlighter-rouge">API</code> 게이트웨이 패턴</h4>
 
 <ul>
-  <li>예시 : 스프링 클라우드 <code class="language-plaintext highlighter-rouge">Spring API Gateway</code>, 쿠버네티스의 인그레스 리소스 (<code class="language-plaintext highlighter-rouge">Ingress Resources</code>) 및 서비스</li>
+  <li>예시 : 스프링 클라우드 <code class="language-plaintext highlighter-rouge">Spring API Gateway</code>, 쿠버네티스 인그레스 리소스 (<code class="language-plaintext highlighter-rouge">Ingress Resources</code>) 및 서비스</li>
 </ul>
 
 <blockquote>
@@ -713,6 +1058,10 @@ if __name__ == "__main__":
 
 <h4 id="마이크로서비스-어플리케이션-구성-정보의-관리--외부-구성-저장소-패턴">마이크로서비스 어플리케이션 구성 정보의 관리 → 외부 구성 저장소 패턴</h4>
 
+<ul>
+  <li>예시 : 스프링 클라우드 <code class="language-plaintext highlighter-rouge">Spring Cloud Config</code>, 쿠버네티스 컨피그맵 (<code class="language-plaintext highlighter-rouge">ConfigMap</code>)</li>
+</ul>
+
 <blockquote>
   <ul>
     <li>클라우드 인프라를 사용할 때, 어플리케이션이 마이크로서비스가 사용하는 자원의 설정 정보를 포함하면?
@@ -729,7 +1078,327 @@ if __name__ == "__main__":
 
 <ul>
   <li>외부 저장소 : <code class="language-plaintext highlighter-rouge">DB</code> 연결 정보, 파일 스토리지 정보와 같이 각 마이크로서비스의 외부 환경 설정 정보를 공동으로 관리</li>
-  <li><code class="language-plaintext highlighter-rouge">Config</code> 원칙 : <code class="language-plaintext highlighter-rouge">Staging</code>, <code class="language-plaintext highlighter-rouge">Dev</code>, <code class="language-plaintext highlighter-rouge">Test</code>처럼 어플리케이션 배포 환경은 매번 달라지니, 코드와 설정 정보는 분리돼야 함</li>
+  <li><code class="language-plaintext highlighter-rouge">Config</code> 원칙 : <code class="language-plaintext highlighter-rouge">Staging</code>, <code class="language-plaintext highlighter-rouge">Dev</code>, <code class="language-plaintext highlighter-rouge">Test</code>처럼 어플리케이션 배포 환경은 매번 달라지니, 코드와 설정 정보는 분리돼야
+    <ul>
+      <li>클라우드에서 운영되는 어플리케이션은 특정한 배포 환경에 종속된 정보를 코드에 두면 안됨
+        <ul>
+          <li>배포 시 변경될 호스트명, 백엔드 서비스의 연결을 위한 리소스 정보, 서버의 <code class="language-plaintext highlighter-rouge">IP</code> 주소나 포트 정보 등</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="사용자의-신원을-증명하고-접근-권한을-부여--인증-및-인가-패턴">사용자의 신원을 증명하고, 접근 권한을 부여 → 인증 및 인가 패턴</h4>
+
+<blockquote>
+  <ul>
+    <li>
+      <p>여러 마이크로서비스에 대한 인증 및 인가에 대한 접근 제어는 어떻게 구현해야 할까?</p>
+
+      <p>→ 각 서비스가 모두 인증 및 인가를 중복으로 구현하는 것은… 당연히 비효율적!</p>
+    </li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>중앙 집중식 세션 관리
+    <ul>
+      <li>마이크로서비스는 사용량에 따라 수시로 수평 확장되어 로드밸런싱이 되기 때문에 세션 데이터가 손상될 수 있음</li>
+      <li>각자의 서비스에 세션을 저장하지 않고 공유 저장소에 세션을 저장해 모든 서비스가 같은 사용자 데이터를 얻게 함</li>
+      <li>레디스 (<code class="language-plaintext highlighter-rouge">Redis</code>) 등을 세션 저장소로 사용</li>
+    </ul>
+  </li>
+  <li>클라이언트 토큰
+    <ul>
+      <li>중앙 서버에 저장되는 세션과 달리, 토큰은 사용자의 브라우저에 저장</li>
+      <li>사용자의 신원 정보를 가진 토큰은 서버로 요청을 보낼 때 전송되기 때문에 서버에서 인가 처리를 할 수 있음</li>
+      <li><code class="language-plaintext highlighter-rouge">JWT</code> : 토큰 형식을 정의하고 암호화되는 공개 표준 (<code class="language-plaintext highlighter-rouge">RFC 7519</code>)</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>클라이언트 토큰을 통한 사용자 인증의 흐름</p>
+
+  <ol>
+    <li>브라우저가 사버에 사용자 이름과 패스워드로 인증을 요청한다.</li>
+    <li>서버는 인증 후에 사용자 정보의 인증 및 인가 정보를 포함하여 토큰을 생성하고 브라우저에 전송한다.</li>
+    <li>브라우저는 서버 자원을 요청할 때 토큰을 함께 보내고, 서버는 토큰 정보를 확인한 후 자원 접근을 허가한다.</li>
+  </ol>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">API</code> 게이트웨이를 사용한 클라이언트 토큰
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">API</code> 게이트웨이가 외부 요청의 입구로 추가되어 인증 프로세스를 진행</li>
+      <li>인증 및 인가를 위한 별도의 전담 서비스가 <code class="language-plaintext highlighter-rouge">API</code> 게이트웨이와 연동하여 다른 서비스의 인증 및 인가 처리를 위임
+→ 인증 서비스 (<code class="language-plaintext highlighter-rouge">Auth Service</code>)</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">API</code> 게이트웨이와 인증 서비스를 활용한 클라이언트 토큰을 통한 사용자 인증의 흐름</p>
+
+  <ol>
+    <li>클라이언트가 리소스 서비스에 접근을 요청하면, <code class="language-plaintext highlighter-rouge">API</code> 게이트웨이는 인증 서비스에 전달한다.</li>
+    <li>인증 서비스는 해당 요청이 인증된 사용자가 보낸 것인지 확인하고 (→ 인증),</li>
+    <li>인증 서비스는 해당 요청이 해당 리소스에 대한 접근 권한이 있는지 확인하고 (→ 인가),</li>
+    <li>모두 확인하고 나면 리소스에 접근 가능한 증명서인 액세스 토큰 (<code class="language-plaintext highlighter-rouge">Access Token</code>)을 발급한다.</li>
+    <li>클라이언트는 다시 액세스 토큰을 활용해 접근을 요청한다.</li>
+    <li>각 리소스 서비스는 이러한 요청이 액세스 토큰을 포함하고 있는지 판단하여 리소스에 대한 접근을 허용한다.</li>
+  </ol>
+</blockquote>
+
+<h4 id="장애-및-실패-처리--서킷-브레이커-패턴">장애 및 실패 처리 → 서킷 브레이커 패턴</h4>
+
+<blockquote>
+  <ul>
+    <li>여러 서비스로 구성된 시스템에서 한 서비스에 장애가 생기면, 다른 서비스가 영향을 받을텐데…?
+      <ul>
+        <li>전체 시스템은 정상적인데, 특정 기능을 누르면 한참 대기하는 경우 → 장애가 다른 서비스로 전이되었다!</li>
+      </ul>
+
+      <p>→ 장애가 발생한 서비스를 격리해서 유연하게 처리하자!</p>
+    </li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>서킷 브레이켜 (<code class="language-plaintext highlighter-rouge">Circuit Breaker</code>) : 시스템 과부하나 특정 서비스에 문제가 생겼을 때, 자연스럽게 다른 정상적인 서비스로 요청 흐름을 변경하는 것 → 장애가 다른 서비스로 전이되지 않게 하자!
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">A → B → A</code>의 서비스 흐름에서 <code class="language-plaintext highlighter-rouge">B</code> 서비스가 장애가 생겼을 때, <code class="language-plaintext highlighter-rouge">A</code>가 동기 요청을 보내면? : 계속 기다린다…
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">B</code> 서비스 호출에 대한 연속 실패 횟수가 임계값을 초과하면, 이후 서비스 호출 시도를 모두 실패로 처리</li>
+          <li>풀백 (<code class="language-plaintext highlighter-rouge">Fallback</code>) 메소드를 지정해 정상 응답을 대신할 대체 응답을 사용자에게 제공</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="마이크로서비스의-장애-감지--모니터링-및-추적-패턴">마이크로서비스의 장애 감지 → 모니터링 및 추적 패턴</h4>
+
+<ul>
+  <li>예시 : 스프링 클라우드 히스트릭스 (<code class="language-plaintext highlighter-rouge">Hystrix</code>) + 집킨 (<code class="language-plaintext highlighter-rouge">Zipkin</code>)</li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li>
+      <p>그래서 서킷 브레이커는 언제, 어떻게 작동하는데…?</p>
+
+      <p>→ 각 마이크로서비스의 장애를 실시간으로 감지할 수 있고, 서비스 간의 호출을 파악하자!</p>
+    </li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>히스트릭스 대시보드 : 각 요청의 트래픽이 원형으로 표현 → 서비스 성능에 문제가 생기면, 서킷 브레이커 발동 (<b style="color: red;">⦁</b>)</li>
+  <li>집킨 대시보드 : 각 서비스 트랜잭션의 호출을 추적하거나, 지연 구간별 장애 포인트를 확인할 수 있음
+    <ul>
+      <li>서비스 <code class="language-plaintext highlighter-rouge">API</code>를 선택하면, 각 <code class="language-plaintext highlighter-rouge">API</code>가 다른 <code class="language-plaintext highlighter-rouge">API</code>를 어떻게 호출하는지 확인 가능
+        <ul>
+          <li>전체적인 <code class="language-plaintext highlighter-rouge">API</code> 간의 호출 빈도를 확인할 수 있는 정적 다이어그램 또한 제공</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="마이크로서비스의-로그-관리--중앙화된-로그-집계-패턴">마이크로서비스의 로그 관리 → 중앙화된 로그 집계 패턴</h4>
+
+<blockquote>
+  <ul>
+    <li>마이크로서비스가 사용량에 따라 탄력적으로 변화하면, 그 인스턴스가 삭제되면 로컬 로그는 초기화..?
+      <ul>
+        <li>로그 (<code class="language-plaintext highlighter-rouge">Logs</code>) 원칙 : 로그는 이벤트 스트림 (<code class="language-plaintext highlighter-rouge">Event Streams</code>)로 처리되어야 함
+          <ul>
+            <li>로그는 시작과 끝이 고정된 것이 아니라, 서비스가 실행되는 동안 계속 흐르는 흐름</li>
+            <li>서비스는 스트림의 전달 및 저장에 절대 관여하면 안됨!
+              <ul>
+                <li>로그를 전달하거나 저장하는 매커니즘 자체가 특정한 기술 및 인프라에 의존하게 됨</li>
+                <li>마이크로서비스가 로그 관련 매커니즘을 직접 구현하면 유연성이 떨어짐</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>→ 서비스에서 발생한 이벤트 스트림 형태의 로그를 수집하고 분석할 방법을 찾자!</p>
+    </li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ELK</code> 스택 : 엘라스틱서치 &amp; 로그스태시 &amp; 키바나를 기반으로 하는 데이터 분석 환경을 구성
+    <ul>
+      <li>엘라스틱서치 (<code class="language-plaintext highlighter-rouge">ElasticSearch</code>) : 분산형 검색 및 분석 엔진
+        <ul>
+          <li>정형, 비정형, 위치 정보, 메트릭 등 원하는 방법으로 검색을 수행 및 결합 가능</li>
+        </ul>
+      </li>
+      <li>로그스태시 (<code class="language-plaintext highlighter-rouge">Logstash</code>) : 서버 측의 로그 집합기
+        <ul>
+          <li>여러 소스에서 동시에 데이터를 수집 및 변한하여 특정 보관소로 데이터를 전송하는 데이터 처리 파이프라인</li>
+        </ul>
+      </li>
+      <li>키바나 (<code class="language-plaintext highlighter-rouge">Kibana</code>) : 시각적으로 로그 내역을 보여주는 대시보드
+        <ul>
+          <li>위치 데이터, 시계열 분석, 그래프 관계 등을 히스토그램, 막대 그래프, 파이차트 등의 형태로 표현</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>→ 각 서비스의 인스턴스 로그를 집계해서 중앙에서 집중 관리할 수 있고, 특정 로그를 검색 및 분석할 수 있음</p>
+  </li>
+</ul>
+
+<blockquote>
+  <ol>
+    <li>마이크로서비스 내의 로그를 중앙 서버의 레디스로 전송한다.</li>
+    <li>중앙 서버의 레디스에서 중앙 로그 저장소에 해당 로그들을 전송한다.</li>
+    <li>중앙 로그 저장소에 엘라스틱서치 엔진이 로그를 인덱싱한다.</li>
+    <li>해당 로그 정보를 키바나 대시보드를 통해 표현한다.</li>
+  </ol>
+
+  <ul>
+    <li>중간 지점에 레디스가 존재하는 이유? : 마이크로서비스의 로그스태시에서 보낸 로그 스트림이 중앙 로그 저장소에 몰리면 성능상의 문제가 생길 수 있으므로 임시 저장소 역할의 레디스를 추가</li>
+  </ul>
+</blockquote>
+
+<h4 id="msa-운영-관리-패턴의-변화-1--쿠버네티스-kubernetes"><code class="language-plaintext highlighter-rouge">MSA</code> 운영 관리 패턴의 변화 1 : 쿠버네티스 (<code class="language-plaintext highlighter-rouge">Kubernetes</code>)</h4>
+
+<ul>
+  <li>기존 : 문제마다 상이한 기술들로 접근하여 해결
+    <ul>
+      <li>넷플릭스 <code class="language-plaintext highlighter-rouge">OSS</code>나 스프링 클라우드를 이용해 각각의 서비스를 별도로 둠</li>
+      <li>유연성처럼 수평 확장이 필요한 요소들은 <code class="language-plaintext highlighter-rouge">AWS IaaS</code> 서비스를 통해 해결</li>
+    </ul>
+  </li>
+  <li>현재 : 쿠버네티스 하나로 모든 문제들을 해결
+    <ul>
+      <li>인프라 차원의 <code class="language-plaintext highlighter-rouge">AWS IaaS</code> → 컨테이너 레플리카 기술로 탐색 및 호출을 통합한 소프트웨어 차원의 쿠버네티스</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="msa-운영-관리-패턴의-변화-2--서비스-메시-service-mash"><code class="language-plaintext highlighter-rouge">MSA</code> 운영 관리 패턴의 변화 2 : 서비스 메시 (<code class="language-plaintext highlighter-rouge">Service Mash</code>)</h4>
+
+<ul>
+  <li>기존 : <code class="language-plaintext highlighter-rouge">API</code> 게이트웨이, 서비스 레지스트리, <code class="language-plaintext highlighter-rouge">Config</code> 서비스와 같이 운영 관리를 위한 여러 기반 서비스를 별도로 둠
+    <ul>
+      <li>업무 처리 마이크로서비스에 스프링 클라우드 서비스를 사용하기 위한 라이브러리를 비즈니스 로직과 함께 탑재</li>
+      <li>스프링 클라우드는 <code class="language-plaintext highlighter-rouge">Java</code> 기반이므로, 다른 언어로 폴리글랏하게 구현할 수 없음</li>
+    </ul>
+  </li>
+  <li>현재 : 이스티오과 같은 서비스 메시 패턴을 적용
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">MSA</code> 문제 영역 해걸을 위한 기능을 비즈니스 로직과 분리해 네트워크 인프라 계층에서 수행</li>
+      <li>인프라 레이어로서 서비스 간의 통신을 처리하여 문제 해결 패턴을 포괄해 처리</li>
+    </ul>
+  </li>
+  <li>이스티오 (<code class="language-plaintext highlighter-rouge">Istio</code>) : 서비스 메시 패턴의 대표적인 구현체
+    <ul>
+      <li>사이드카 (<code class="language-plaintext highlighter-rouge">Sidecar</code>) 패턴 : 어플리케이션이 배포되는 컨테이너에 완전히 격리되어 별도의 컨테이너로 배포
+        <ul>
+          <li>마이크로서비스마다 함께 배포되는 사이드카 프락시에 운영 관리를 위한 기능이 별도로 존재</li>
+          <li>운영 관리 기능과 별개로 존재하는 마이크로서비스는 순수한 비즈니스 로직으로 제공될 수 있음</li>
+          <li>컨트롤 플레인 (<code class="language-plaintext highlighter-rouge">Control Plain</code>)으로 중앙에서 통제되며, 사이드카끼리 통신하여 관련 운영 관리 기능 제공</li>
+        </ul>
+
+        <p>→ 쿠버네티스의 파드 (<code class="language-plaintext highlighter-rouge">Pod</code>)에 서비스 컨테이너와 사이드카 구현체인 엔보이 (<code class="language-plaintext highlighter-rouge">Envoy</code>) 컨테이너가 함께 배포</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>넷플릭스 <code class="language-plaintext highlighter-rouge">OSS</code> &amp; 스프링 클라우드와 이스티오의 차이점</p>
+
+  <ul>
+    <li>이스티오는 사이드카로 격리되어 <code class="language-plaintext highlighter-rouge">YAML</code>과 같은 설정 파일르 정의되어 어플리케이션 코드 변경이 거의 없음</li>
+    <li><code class="language-plaintext highlighter-rouge">Java</code>만이 아닌, 폴리글랏 어플리케이션도 지원 가능</li>
+    <li>쿠버네티스와 완벽하게 통합된 환경을 지원</li>
+  </ul>
+</blockquote>
+
+<h3 id="마이크로서비스-어플리케이션-구현을-위한-마이크로서비스-구성-및-설계--어플리케이션-패턴">마이크로서비스 어플리케이션 구현을 위한 마이크로서비스 구성 및 설계 → 어플리케이션 패턴</h3>
+
+<ul>
+  <li>어플리케이션 영역에서도 유연성, 확장성, 독립성을 염두에 두어 설계되어야 함 → 백엔드, 프론트엔드 영역 모두!</li>
+</ul>
+
+<h4 id="마이크로-프론트엔드--ui-컴포넌트-패턴">마이크로 프론트엔드 → <code class="language-plaintext highlighter-rouge">UI</code> 컴포넌트 패턴</h4>
+
+<blockquote>
+  <ul>
+    <li>마이크로서비스의 장점인 서비스의 독립적인 변경 및 배포를, 기존 모노리스 프론트엔드로는 힘들텐데…?
+      <ul>
+        <li>모노리스 프론트엔드 : 백엔드의 여러 <code class="language-plaintext highlighter-rouge">API</code>를 호출하고 조합하여 화면을 구성해 표현</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>→ 프론트엔드도 마이크로서비스처럼 기능별로 분리하고 각 프런트엔드를 조합하여 동작하게 하자!</p>
+</blockquote>
+
+<ul>
+  <li>프레임 (<code class="language-plaintext highlighter-rouge">Frame</code>) 형태의 부모 창에 각 마이크로 프론트엔드를 조합해 동작
+    <ul>
+      <li>실제 각 기능의 표현은 마이크로 프런트엔드 조각이 구현 → 여러 백엔드 마이크로서비스 <code class="language-plaintext highlighter-rouge">API</code> 호출</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="프론트엔드--백엔드-백엔드--백엔드-간의-통신--마이크로서비스-통신-패턴">프론트엔드 ↔ 백엔드, 백엔드 ↔ 백엔드 간의 통신 → 마이크로서비스 통신 패턴</h4>
+
+<ul>
+  <li>동기 호출 방식 : 클라이언트에서 서버 측에 존재하는 마이크로서비스 <code class="language-plaintext highlighter-rouge">REST API</code>를 호출할 때 사용
+    <ul>
+      <li>사용자가  <code class="language-plaintext highlighter-rouge">A</code> 서비스에 <code class="language-plaintext highlighter-rouge">B</code> 서비스가 필요한 <code class="language-plaintext highlighter-rouge">HTTP GET</code> 방식의 요청을 보내면,
+        <ol>
+          <li><code class="language-plaintext highlighter-rouge">A</code> 서비스가 <code class="language-plaintext highlighter-rouge">B</code> 서비스에 <code class="language-plaintext highlighter-rouge">HTTP GET</code> 방식의 동기 호출을 수행하고,</li>
+          <li><code class="language-plaintext highlighter-rouge">B</code> 서비스가 응답을 발생한다. (성공 시 <code class="language-plaintext highlighter-rouge">200 OK</code>)</li>
+        </ol>
+      </li>
+      <li>다양한 클라이언트 채널 연계나 라우팅, 로드밸런싱을 원활하기 위해 <code class="language-plaintext highlighter-rouge">API</code> 게이트웨이를 둘 수 있음</li>
+      <li>요청을 보내면 바로 응답이 오는 직관적인 방식이므로, 가장 많이 쓰이고 구현하기 쉬움</li>
+      <li>호출을 받은 마이크로서비스에 장애가 생긴다면, 요청을 보낸 서비스는 응답할 때까지 대기하면서 재호출
+        <ul>
+          <li>여러 서비스 간의 연계를 통해 업무를 처리하는 마이크로서비스에서는 장애가 연쇄적으로 발생할 수 있음</li>
+          <li>서비스가 다른 서비스를 호출해서 얻은 정보로 기능을 제공한다는 것은, 서비스 간의 의존도가 높다는 의미</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>메시지 기반 비동기 (<code class="language-plaintext highlighter-rouge">asynchronous</code>) 통신 방식 : 메시지를 보내면, 응답을 기다리지 않고 다음 업무 처리
+    <ul>
+      <li>메시지 브로커 (<code class="language-plaintext highlighter-rouge">Message Broker</code>) : 동기식처럼 완결성을 보장할 수 없으니, 이를 보장하는 메커니즘을 활용
+        <ul>
+          <li>아파치 카프카 (<code class="language-plaintext highlighter-rouge">Apache Kafka</code>), 레빗엠큐 (<code class="language-plaintext highlighter-rouge">RabbitMQ</code>) 등</li>
+          <li>메시지를 보내는 생산자 (<code class="language-plaintext highlighter-rouge">Producer</code>)와 메시지를 받아 처리하는 소비자 (<code class="language-plaintext highlighter-rouge">Consumer</code>)
+            <ul>
+              <li>생산자와 소비자가 서로 직접 접속하지 않고 메시지 브로커를 통해 연결</li>
+              <li>메시지 브로커에 메시지를 전달하고 자신의 일을 처리하면, 메시지 브로커가 전송을 보장</li>
+            </ul>
+          </li>
+          <li>메시지 브로커으로 중계되므로, 서로 통신하는 서비스들이 물리적으로 동일한 시스템에 위치하지 않아도 됨</li>
+          <li>서로 프로세스를 공유할 필요도 없으며, 동일한 시간대에 동시에 동작하지 않아도 됨</li>
+        </ul>
+      </li>
+      <li>비동기 방식의 이벤트 기반 아키텍처 (<code class="language-plaintext highlighter-rouge">Event-driven Architecture</code>) : 비동기 통신 방식으로 느슨한 연계 지향
+        <ol>
+          <li>분산 시스템 간에 발신자가 이벤트를 생성 및 발행 (<code class="language-plaintext highlighter-rouge">Publish</code>)하여,</li>
+          <li>해당 이벤트를 필요로 하는 수신자에게 전송하면,</li>
+          <li>이벤트를 구독 (<code class="language-plaintext highlighter-rouge">Subscribe</code>)하고 있던 수신자가 이벤트를 받아 처리한다.</li>
+        </ol>
+
+        <p>→ 순서에 따라 특정 행동이 발생하는 기존의 방식이 아닌, ‘상태의 변화’를 의미하는 이벤트에 대한 반응으로 동작</p>
+      </li>
+    </ul>
+  </li>
 </ul>
 
 <blockquote>
@@ -1201,339 +1870,4 @@ Login Succeeded
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker image tag new-tag pocj8ur4in/vw-api:latest
 </code></pre></div></div>
 
-<h3 id="사설-도커-레지스트리-private-docker-registry--로컬에-전용-레지스트리를-설치-및-운영"><a href="https://waspro.tistory.com/532">사설 도커 레지스트리 (<code class="language-plaintext highlighter-rouge">Private Docker Registry</code>) : 로컬에 전용 레지스트리를 설치 및 운영</a></h3>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Docker" /><summary type="html"><![CDATA[도커 컨테이너 (Docker Container) : 도커에서 제공하는 컨테이너 기술]]></summary></entry><entry><title type="html">[Docker] 2. Docker</title><link href="http://localhost:4000/docker2/" rel="alternate" type="text/html" title="[Docker] 2. Docker" /><published>2023-12-05T00:00:00+09:00</published><updated>2023-12-05T00:00:00+09:00</updated><id>http://localhost:4000/docker2</id><content type="html" xml:base="http://localhost:4000/docker2/"><![CDATA[<h2 id="도커-docker--컨테이너-기반-가상화-container-based-virtualization">도커 (<code class="language-plaintext highlighter-rouge">Docker</code>) : 컨테이너 기반 가상화 (<code class="language-plaintext highlighter-rouge">Container-based Virtualization</code>)</h2>
-
-<p><img src="https://pyrasis.com/assets/images/Docker-HOWTO/docker-containerized-appliction-blue-border_2.png.webp" width="50%" /></p>
-
-<h3 id="q-도커를-쓰는-이유--비교적-효율적인-가상화-방식--통일된-개발-환경--배포의-동시성">Q. 도커를 쓰는 이유? : 비교적 효율적인 가상화 방식 + 통일된 개발 환경 + 배포의 동시성</h3>
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">Virtualization</code> : 응용 프로그램 실행 시 운영체제 수준 가상화 방식이 성능 손실이 더 적고 빠르게 동작한다.</li>
-  <li><code class="language-plaintext highlighter-rouge">Development</code> : 운영체제에 상관없이 같은 환경에서 개발할 수 있게 해준다.</li>
-  <li><code class="language-plaintext highlighter-rouge">Deployment</code> : 서비스 환경과 응용 프로그램을 같이 배포할 수 있게 한다.</li>
-</ol>
-
-<blockquote>
-  <ul>
-    <li>분산 어플리케이션을 클라우드 환경으로 이주한다고 가정하면,
-      <ul>
-        <li><code class="language-plaintext highlighter-rouge">IaaS</code> : 서비스로서의 인프라
-          <ul>
-            <li>어플리케이션을 구성하는 각 컴포넌트가 모두 가상 머신에서 독립적으로 동작</li>
-            <li>이주 과정은 쉽지만, 가상 머신의 성능을 모두 활용하지 못하며 운영비가 비쌈</li>
-          </ul>
-        </li>
-        <li><code class="language-plaintext highlighter-rouge">PaaS</code> : 서비스로서의 플랫폼
-          <ul>
-            <li>어플리케이션을 구성하는 각 컴포넌트가 클라우드 서비스 제공자의 매니지드 서비스에 종속</li>
-            <li>운영비가 저렴하고 관리가 쉬우나, 이주 과정이 복잡함</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  <p>… 도커를 활용한다면? : 각 컴포넌트를 컨테이너로 이주하고, 쿠버네티스 등으로 전체 어플리케이션 관리 가능</p>
-</blockquote>
-
-<ul>
-  <li><a href="https://www.docker.com">공식 홈페이지</a>에서 <code class="language-plaintext highlighter-rouge">.dmg</code> 파일을 다운로드 후 설치</li>
-  <li>터미널 창에 다음 명령어를 입력해 도커가 정상적으로 설치되었는지 확인</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker version // 현재 도커의 버전 확인
-
-Client:
- Cloud integration: ~
- Version:           ~
- API version:       ~
- Go version:        ~
-
-Server: ~
- Engine:
-  Version:          ~
-  API version:      ~
-  Go version:       ~
-</code></pre></div></div>
-<blockquote>
-  <p>Q. 클라이언트와 서버의 버전 정보가 따로 구성되어 있는 이유?</p>
-  <ul>
-    <li>도커가 클라이언트와 서버의 역할을 각각 수행할 수 있음
-      <ul>
-        <li>리눅스 터미널에 도커 명령어를 입력하면 도커 클라이언트가 도커 서버로 명령을 전송하고 결과를 출력</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<h2 id="도커-컴포넌트-docker-component--도커-엔진을-중심으로-여러-컴포넌트를-조합해-구성">도커 컴포넌트 (<code class="language-plaintext highlighter-rouge">Docker Component</code>) : 도커 엔진을 중심으로 여러 컴포넌트를 조합해 구성</h2>
-
-<ul>
-  <li>
-    <h3 id="도커-엔진-docker-engine--도커-이미지를-생성하고-컨테이너를-관리">도커 엔진 (<code class="language-plaintext highlighter-rouge">Docker Engine</code>) : 도커 이미지를 생성하고 컨테이너를 관리</h3>
-    <ul>
-      <li>로컬 이미지 캐시 담당 : 새로운 이미지가 필요할 때 이미지를 다운로드하거나, 기존 이미지를 사용</li>
-      <li><code class="language-plaintext highlighter-rouge">Docker API</code>을 통해 맡은 기능 수행 → 도커 명령행 인터페이스 (<code class="language-plaintext highlighter-rouge">Docker CLI</code>)에서 도커 <code class="language-plaintext highlighter-rouge">API</code> 호출</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="도커-레지스트리-docker-registry--도커-이미지를-공개하고-공유">도커 레지스트리 (<code class="language-plaintext highlighter-rouge">Docker REgistry</code>) : 도커 이미지를 공개하고 공유</h3>
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Docker</code> 공식 레지스트리 서비스로 <code class="language-plaintext highlighter-rouge">Docker Hub</code>가 있음</li>
-      <li>클라우드 사업자 또한 <code class="language-plaintext highlighter-rouge">AWS ECR</code>, <code class="language-plaintext highlighter-rouge">GCP Artifact Registry</code> 등의 컨테이너 레지스트리 제공</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="도커-컴포즈-docker-compose--여러-컨테이너를-하나의-서비스로-정의해-컨테이너의-묶음으로-관리">도커 컴포즈 (<code class="language-plaintext highlighter-rouge">Docker Compose</code>) : 여러 컨테이너를 하나의 서비스로 정의해 컨테이너의 묶음으로 관리</h3>
-    <ul>
-      <li>여러 개의 컨테이너 구성 정보를 코드로 정의한 파일을 읽어 컨테이너를 순차적으로 생성</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="도커-머신-docker-machine--가상-호스트에-도커-엔진을-설치하여-호스트를-관리">도커 머신 (<code class="language-plaintext highlighter-rouge">Docker Machine</code>) : 가상 호스트에 도커 엔진을 설치하여 호스트를 관리</h3>
-    <ul>
-      <li>여러 운영체제나 클라우드 환경에서 도커를 동일하게 실행하기 위해 도커의 실행 환경을 자동으로 생성</li>
-    </ul>
-  </li>
-  <li>
-    <h3 id="도커-스왐-docker-swarm--여러-도커-호스트를-클러스터화해-관리">도커 스왐 (<code class="language-plaintext highlighter-rouge">Docker Swarm</code>) : 여러 도커 호스트를 클러스터화해 관리</h3>
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Manger</code>가 클러스트를 관리하거나 <code class="language-plaintext highlighter-rouge">API</code>를 제공하고, <code class="language-plaintext highlighter-rouge">Node</code>가 컨테이너를 실행</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="도커-명령어-docker-command--docker-command-형식으로-구성">도커 명령어 (<code class="language-plaintext highlighter-rouge">Docker Command</code>) : <code class="language-plaintext highlighter-rouge">docker &lt;command&gt;</code> 형식으로 구성</h2>
-<ul>
-  <li>리눅스 터미널에 도커 명령어를 입력하면 도커 서버에서 이에 해당되는 작업 수행</li>
-  <li>항상 <code class="language-plaintext highlighter-rouge">root</code> 권한으로 실행되기에 <code class="language-plaintext highlighter-rouge">$ sudo</code>를 앞에 붙어야 함</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo usermod -aG docker $USER # 현재 사용자를 docker 그룹에 추가
-</code></pre></div></div>
-
-<div style="text-align: center;">
-    <table>
-        <thead>
-            <tr>
-                <td>docker 명령어</td>
-                <td>명령어 형식</td>
-                <td>명령어 설명</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>docker search</td>
-                <td>$ docker search [이미지]</td>
-                <td>도커 허브에서 이미지 검색</td>
-            </tr>
-            <tr>
-                <td>docker pull</td>
-                <td>$ docker pull [사용자명/] 이미지 [:태그]</td>
-                <td>도커 허브에서 이미지 다운로드<br />사용자명을 지정해 도커 허브에서 해당 사용자가 올린 이미지을 다운로드<br />태그로 버전을 지정해 다운로드 (latest : 최신 버전)</td>
-            </tr>
-            <tr>
-                <td>docker images</td>
-                <td>$ docker images</td>
-                <td>사용 가능한 모든 이미지 목록 확인</td>
-            </tr>
-            <tr>
-                <td>docker rmi</td>
-                <td>$ docker rmi 이미지 [:태그]</td>
-                <td>다운로드한 이미지 삭제<br />태그로 버전을 지정해 다운로드 (latest : 최신 버전)</td>
-            </tr>
-            <tr>
-                <td>docker run</td>
-                <td>$ docker run [옵션] [실행할 이미지]</td>
-                <td>이미지를 컨테이너로 생성한 뒤 컨테이너 실행<br />입력받은 이미지가 현재 없다면, 해당 이미지를 도커 허브에서 다운로드<br />실행할 파일을 지정해 직접 실행 가능 (여기서 빠져나오면 컨테이너가 정지)<br /><div style="text-align: center; font-size: 120%; padding: 2% 0% 0% 0%">
-    <table>
-        <thead>
-            <tr>
-                <td>docker run 옵션</td>
-                <td>옵션 설명</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>-d</td>
-                <td>백그라운드 모드 (detached mode)</td>
-            </tr>
-            <tr>
-                <td>-p [호스트 포트:컨테이너 포트]</td>
-                <td>호스트와 컨테이너의 포트를 연결 (port forwarding)<br />http://호스트 IP:호스트 포트로 컨테이너의 포트 접속</td>
-            </tr>
-            <tr>
-                <td>-v [호스트의 디렉터리]</td>
-                <td>호스트의 디렉터리를 컨테이너의 디렉터리에 연결 (mount)</td>
-            </tr>
-            <tr>
-                <td>-e [환경변수]</td>
-                <td>컨테이너 내에서 사용할 환경변수 설정 (environment variable)</td>
-            </tr>
-            <tr>
-                <td>--name [컨테이너 이름]</td>
-                <td>컨테이너 이름 설정 (container name)</td>
-            </tr>
-            <tr>
-                <td>-rm</td>
-                <td>프로세스 종료 시 컨테이너 자동으로 제거 (remove container)</td>
-            </tr>
-            <tr>
-                <td>-link [컨테이너 이름:주소]</td>
-                <td>컨테이너와 컨테이너 연결 (link container)<br />[주소:포트번호]로 컨테이너에 접속</td>
-            </tr>
-            <tr>
-                <td>-it</td>
-                <td>리눅스 터미널 입력을 위한 옵션 (interactive / Pseudo-tty)</td>
-            </tr>
-         </tbody>
-    </table>
-</div></td>
-            </tr>
-            <tr>
-              <td>docker ps</td>
-              <td>$ docker ps [옵션]</td>
-              <td>실행중인 모든 컨테이너 목록 확인<br />-a 옵션으로 정지된 컨테이너까지 모두 검색</td>
-            </tr>
-            <tr>
-              <td>docker start</td>
-              <td>$ docker start [컨테이너 이름 | 컨테이너 ID]</td>
-              <td>정지된 컨테이너 재시작</td>
-            </tr>
-            <tr>
-              <td>docker stop</td>
-              <td>$ docker exec [컨테이너 이름 | 컨테이너 ID]</td>
-              <td>실행 중인 컨테이너 정지</td>
-            </tr>
-            <tr>
-              <td>docker attach</td>
-              <td>$ docker attach [컨테이너 이름 | 컨테이너 ID]</td>
-              <td>실행 중인 컨테이너에 접속</td>
-            </tr>
-            <tr>
-              <td>docker exec</td>
-              <td>$ docker exec [컨테이너 이름 | 컨테이너 ID]<br />[명령] [매개 변수]</td>
-              <td>컨테이너 외부에서 컨테이너 내의 명령 실행</td>
-            </tr>
-            <tr>
-              <td>docker diff</td>
-              <td>$ docker diff [컨테이너 이름 | 컨테이너 ID]</td>
-              <td>컨테이너가 실행되면서 변경된 파일 목록 확인<br />A : 추가된 파일<br />C : 변경된 파일<br />D : 삭제된 파일</td>
-            </tr>
-            <tr>
-              <td>docker cp</td>
-              <td>$ docker cp [컨테이너 이름 | 컨테이너 ID]<br />[:컨테이너 경로] [호스트 경로]</td>
-              <td>컨테이너의 파일을 호스트의 디렉토리로 복사</td>
-            </tr>
-            <tr>
-              <td>docker attach</td>
-              <td>$ docker attach [컨테이너 이름 | 컨테이너 ID]</td>
-              <td>실행 중인 컨테이너에 접속</td>
-            </tr>
-            <tr>
-              <td>docker rm</td>
-              <td>$ docker exec [컨테이너 이름 | 컨테이너 ID]</td>
-              <td>생성된 컨테이너 삭제</td>
-            </tr>
-            <tr>
-              <td>docker commit</td>
-              <td>$ docker commit [옵션] [컨테이너 이름 | 컨테이너 ID]<br />[이미지 이름] [:태그]</td>
-              <td>컨테이너를 이미지 파일로 생성</td>
-            </tr>
-            <tr>
-              <td>docker build</td>
-              <td>$ docker build [옵션] [도커 파일 경로]<br />[--tag 이미지 이름 : 이미지 태그] </td>
-              <td>도커 파일에 설정된 내용대로 도커 이미지 생성<br />--tag 뒤에 이미지 이름와 이미지 태그를 설정할 수 있음</td>
-            </tr>
-            <tr>
-              <td>docker history</td>
-              <td>$ docker history [이미지 이름 | 이미지 ID] [:태그]</td>
-              <td>도커 파일에 설정된 내용대로 이미지 히스토리 생성</td>
-            </tr>
-            <tr>
-              <td>docker inspect</td>
-              <td>$ docker inspect<br />[이미지나 컨테이너 이름 | 이미지나 컨테이너 ID]</td>
-              <td>이미지나 컨테이너의 세부 정보 출력</td>
-            </tr>
-         </tbody>
-    </table>
-</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Docker" /><summary type="html"><![CDATA[도커 (Docker) : 컨테이너 기반 가상화 (Container-based Virtualization)]]></summary></entry><entry><title type="html">[Github Pages] 6. Github Pages 블로그 기능 추가</title><link href="http://localhost:4000/blog6/" rel="alternate" type="text/html" title="[Github Pages] 6. Github Pages 블로그 기능 추가" /><published>2023-04-10T00:00:00+09:00</published><updated>2023-10-06T00:00:00+09:00</updated><id>http://localhost:4000/blog6</id><content type="html" xml:base="http://localhost:4000/blog6/"><![CDATA[<blockquote>
-  <p>이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html이나 css를 다룰 줄 알면 금방 할 수 있는, 혹은 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를 해결하였는지, 에 대해 자세히 쓰고 싶었다. 그래서 이 게시물은 다른 게시물들과 달리, 내가 블로그에서 부족하다고 느낀 점들을 계속 조금씩이라도 보충해나갈 계획이다.</p>
-</blockquote>
-
-<h2 id="1-블로그-댓글-feat-disqus-giscus">1. 블로그 댓글 (feat. disqus, giscus)</h2>
-<p>앞서 서술한 게시물을 보면 Github Pages는 정적 웹 사이트 호스팅 서비스라는 말이 있다. 모든 웹 페이지를 미리 생성하고, 방문자로부터 요청이 들어오면 미리 만든 웹 페이지를 그대로 응답한다는 건데, 사용자와 동적으로 정보를 주고받아야 하는 댓글 등의 기능은 불가능하다는 것이다.<br /></p>
-
-<p>그래서 처음에는 댓글 플랫폼인 <a href="https://disqus.com">disqus</a>를 통해 이를 해결하고자 하였다. 방법은 간단한데, 사이트에 가입하고 무료 플랜을 구독한 다음에 <code class="language-plaintext highlighter-rouge">_config.yml</code>를 다음과 같이 수정해주기만 하면 된다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>comments:
-  provider               : "disqus" # 댓글 제공자 지정
-  disqus:
-    shortname            :          # disqus ID 지정
-</code></pre></div></div>
-
-<p>그런데 disqus에서 제공하는 기능인 ‘SNS로 댓글 달기’은 개발자 친화적인 기능은 아니였고, 또 나중에는 광고가 노출되기 시작했다. 그래서 대안으로 찾은 게 <a href="https://giscus.app/ko">giscus</a>인데, GitHub Discussions로 작동하고, 마크다운도 지원하면서 대댓글이나 반응과 같은 자잘한 기능들이 마음에 들었다.</p>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/d0db9e9a-29a3-4529-918e-f9ae0ddc9b65" width="100%" /></p>
-
-<p>적용하는 방법도 Github 앱을 저장소에 설치한 뒤에 html 파일에 아래의 스크립트를 넣어주기만 하면 되는데, 나 같은 경우에는 Minimal Mistakes 테마에서 <code class="language-plaintext highlighter-rouge">_includes/social_share.html</code> 파일에 해당 구문을 넣어 적용시켰다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;section class="page__share"&gt;
-  &lt;script src="https://giscus.app/client.js"
-    data-repo="pocj8ur4in/pocj8ur4in.github.io"
-    data-repo-id="R_kgDOICGarA"
-    data-category="Q&amp;A"
-    data-category-id="DIC_kwDOICGarM4CZ65L"
-    data-mapping="pathname"
-    data-strict="1"
-    data-reactions-enabled="0"
-    data-emit-metadata="1"
-    data-input-position="top"
-    data-theme="dark_dimmed"
-    data-lang="ko"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async&gt;
-  &lt;/script&gt;
-&lt;/section&gt;
-</code></pre></div></div>
-
-<h2 id="2-블로그-google-검색-노출-및-검색-설정">2. 블로그 Google 검색 노출 및 검색 설정</h2>
-<p>아무래도 블로그를 운영하다 보면 다른 사람들의 반응이 궁금할 때가 많은데, 아무것도 설정하지 않은 블로그는 검색되지 않는다는 사실을 깨닫고 해결책을 찾아보았다. <a href="https://search.google.com/search-console/about">Google Search Console</a>에서 내 도메인을 입력한 다음에 소유권 확인을 위해 다운받은 <code class="language-plaintext highlighter-rouge">.HTML</code>파일을 <code class="language-plaintext highlighter-rouge">root</code>에 위치시키만 하면 며칠 안으로 아래와 같이 적용된다.</p>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5876c2af-191d-47d7-ab9e-f3c2c55bde32" width="70%" /></p>
-
-<p>추가로 블로그 포스트들이 검색 엔진에 검색되는 것을 가능하도록 진행할 작업들이 있는데, 먼저 <code class="language-plaintext highlighter-rouge">_config.yml</code> 파일에서 아래 설정들을 <code class="language-plaintext highlighter-rouge">true</code>로 설정한다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>search                   : # 블로그 검색 여부 지정
-search_full_content      : # 블로그의 내용 검색 여부 지정
-</code></pre></div></div>
-
-<p>그리고 웹 크롤링을 위해 <a href="https://github.com/pocj8ur4in/pocj8ur4in.github.io/blob/main/sitemap.yml"><code class="language-plaintext highlighter-rouge">sitemap.yml</code></a>과 <code class="language-plaintext highlighter-rouge">robots.txt</code> 파일을 생성해 <code class="language-plaintext highlighter-rouge">root</code>에 위치시키면 된다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
-User-agent: *
-Allow: /
-
-# 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 차단
-User-agent: *
-Disallow: /
-
-# 구글 검색 로봇만 차단하고, 다른 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
-User-agent: Googlebot
-Disallow: /
-
-# 네이버 검색로봇만 차단하고, 다른 모든 웹 사이트 컨텐츠에 대한 모든 웹 크롤러의 접근 허용
-User-agent: Yeti
-Disallow: /
-
-Sitemap: https://pocj8ur4in.github.io/sitemap.xml
-</code></pre></div></div>
-
-<p>만약에 블로그의 방문자 수 통계를 보고 싶다면, <a href="https://analytics.google.com/analytics/web/provision/#/provision">Google Analytics</a>를 가입한 후 애널리틱스 데이터 스트림을 설정하면 된다. 이때, 측정 ID를 복사한 후 <code class="language-plaintext highlighter-rouge">_config.yml</code> 파일을 다음과 같이 수정하면 된다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Analytics
-analytics:
-  provider               : "google-gtag"
-  google:
-    tracking_id          : "(측정 ID)"
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Github Pages" /><summary type="html"><![CDATA[이 게시물은 Github Pages 블로그, 혹은 Minimal Mistakes 테마에 없는 기능들을 추가해나간 기록들이다. html이나 css를 다룰 줄 알면 금방 할 수 있는, 혹은 다 구글링하면 나오는 내용들이긴 하지만 내가 어떻게 문제를 인식하여 어떤 과정을 거쳐 이를 해결하였는지, 에 대해 자세히 쓰고 싶었다. 그래서 이 게시물은 다른 게시물들과 달리, 내가 블로그에서 부족하다고 느낀 점들을 계속 조금씩이라도 보충해나갈 계획이다.]]></summary></entry></feed>
+<h3 id="사설-도커-레지스트리-private-docker-registry--로컬에-전용-레지스트리를-설치-및-운영"><a href="https://waspro.tistory.com/532">사설 도커 레지스트리 (<code class="language-plaintext highlighter-rouge">Private Docker Registry</code>) : 로컬에 전용 레지스트리를 설치 및 운영</a></h3>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Docker" /><summary type="html"><![CDATA[도커 컨테이너 (Docker Container) : 도커에서 제공하는 컨테이너 기술]]></summary></entry></feed>

@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[MacOS] tmux - pocj8ur4in’s blog</title>
-<meta name="description" content="tmux : 터미널 멀티플렉서 (Terminal Multiplexer)">
+<!-- begin _includes/seo.html --><title>[Clean Code] 1. 깨끗한 코드 - pocj8ur4in’s blog</title>
+<meta name="description" content="코드 (Code) : 프로그래밍의 결과로서 요구사항을 상세히 표현하는 수단">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -22,32 +22,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[MacOS] tmux">
-<meta property="og:url" content="http://localhost:4000/tmux1/">
+<meta property="og:title" content="[Clean Code] 1. 깨끗한 코드">
+<meta property="og:url" content="http://localhost:4000/clean_code1/">
 
 
-  <meta property="og:description" content="tmux : 터미널 멀티플렉서 (Terminal Multiplexer)">
-
-
-
+  <meta property="og:description" content="코드 (Code) : 프로그래밍의 결과로서 요구사항을 상세히 표현하는 수단">
 
 
 
 
-  <meta property="article:published_time" content="2024-01-09T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2024-01-09T00:00:00+09:00">
+  <meta property="article:published_time" content="2024-01-11T00:00:00+09:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2024-01-11T00:00:00+09:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/tmux1/">
+
+<link rel="canonical" href="http://localhost:4000/clean_code1/">
 
 
 
@@ -166,7 +166,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">[MacOS] tmux</li>
+        <li class="current">[Clean Code] 1. 깨끗한 코드</li>
       
     
   </ol>
@@ -180,16 +180,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[MacOS] tmux">
-    <meta itemprop="description" content="tmux : 터미널 멀티플렉서 (Terminal Multiplexer)">
-    <meta itemprop="datePublished" content="2024-01-09T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2024-01-09T00:00:00+09:00">
+    <meta itemprop="headline" content="[Clean Code] 1. 깨끗한 코드">
+    <meta itemprop="description" content="코드 (Code) : 프로그래밍의 결과로서 요구사항을 상세히 표현하는 수단">
+    <meta itemprop="datePublished" content="2024-01-11T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-11T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/tmux1/" class="u-url" itemprop="url">[MacOS] tmux
+            <a href="http://localhost:4000/clean_code1/" class="u-url" itemprop="url">[Clean Code] 1. 깨끗한 코드
 </a>
           </h1>
           
@@ -221,158 +221,74 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#tmux--터미널-멀티플렉서-terminal-multiplexer">tmux : 터미널 멀티플렉서 (Terminal Multiplexer)</a><ul><li><a href="#tmux-구조--tmux-서버와-tmux-클라이언트로-구성">tmux 구조 : tmux 서버와 tmux 클라이언트로 구성</a><ul><li><a href="#세션-session--하나-이상의-윈도우가-있는-독립된-작업-공간">세션 (Session) : 하나 이상의 윈도우가 있는 독립된 작업 공간</a></li><li><a href="#윈도우-window--동일한-세션에서-시각적으로-분리된-부분">윈도우 (Window) : 동일한 세션에서 시각적으로 분리된 부분</a></li><li><a href="#패널-panel--동일한-윈도우에서-분리된-부분">패널 (Panel) : 동일한 윈도우에서 분리된 부분</a></li></ul></li><li><a href="#tmux-명령어">tmux 명령어</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#코드-code--프로그래밍의-결과로서-요구사항을-상세히-표현하는-수단">코드 (Code) : 프로그래밍의 결과로서 요구사항을 상세히 표현하는 수단</a><ul><li><a href="#그렇다면-깨끗한-코드란-무엇인가">그렇다면, 깨끗한 코드란 무엇인가?</a></li><li><a href="#우리가-저자다--저자에게는-독자와-잘-소통할-책임이-있다">우리가 저자다 : 저자에게는 독자와 잘 소통할 책임이 있다.</a></li><li><a href="#보이스카우트-규칙--캠프장은-처음-왔을-때보다-더-깨끗하게-해놓고-떠나라">보이스카우트 규칙 : “캠프장은 처음 왔을 때보다 더 깨끗하게 해놓고 떠나라.”</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="tmux--터미널-멀티플렉서-terminal-multiplexer"><code class="language-plaintext highlighter-rouge">tmux</code> : 터미널 멀티플렉서 (<code class="language-plaintext highlighter-rouge">Terminal Multiplexer</code>)</h2>
+        <h2 id="코드-code--프로그래밍의-결과로서-요구사항을-상세히-표현하는-수단">코드 (<code class="language-plaintext highlighter-rouge">Code</code>) : 프로그래밍의 결과로서 요구사항을 상세히 표현하는 수단</h2>
 
 <ul>
-  <li>단일 단말기 창 혹은 원격 터미널에서 여러 터미널 세션에 액세스할 수 있도록 가상 콘솔을 다중화
+  <li>프로그래밍 (<code class="language-plaintext highlighter-rouge">Programming</code>) : 요구사항을 상세히 명시하는 작업
     <ul>
-      <li>하나의 터미널에서 화면을 분할하여 사용할 수 있음</li>
-      <li>영구적인 세션을 제공하기에 작업 중에 원격 서버와의 연결이 끊겨도 작업 내용이 사라지지 않음</li>
+      <li>나쁜 코드는 프로젝트의 개발 속도를 떨어뜨리며, 팀 생산성을 떨어뜨림</li>
+      <li>나쁜 코드는 나쁜 코드를 ‘유혹’한다 : 나쁜 코드를 고치면서 오히려 더 나쁜 코드를 만들어냄</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="tmux-구조--tmux-서버와-tmux-클라이언트로-구성"><code class="language-plaintext highlighter-rouge">tmux</code> 구조 : <code class="language-plaintext highlighter-rouge">tmux</code> 서버와 <code class="language-plaintext highlighter-rouge">tmux</code> 클라이언트로 구성</h3>
-
+<h3 id="그렇다면-깨끗한-코드란-무엇인가">그렇다면, 깨끗한 코드란 무엇인가?</h3>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">tmux</code>를 실행하면 하나의 윈도우를 가진 새로운 세션이 생성되어 화면에 출력
+  <li><code class="language-plaintext highlighter-rouge">by</code> 비야네 스트롭스트룹
     <ul>
-      <li>화면 아래의 상태 표시줄에 현재 세션에 대한 정보가 표시, <code class="language-plaintext highlighter-rouge">interactive commands</code>를 입력할 때 사용</li>
+      <li>보는 사람에게 즐거움을 선사하는 ‘우아한’ 코드</li>
+      <li>시간과 자원을 낭비하지 않는 ‘효율적인’ 코드</li>
+      <li>세세한 사항까지 철저히 오류 처리를 하는 코드</li>
+      <li>‘깨끗한 코드란 한 가지를 잘한다.’ : 나쁜 코드는 많은 일을 하려 애쓰다가 의도와 목적이 흐려진다.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">by</code> 그래디 부치
+    <ul>
+      <li>‘잘 쓴 문장처럼 읽혀야 한다.’ → 가독성 높은 코드</li>
+      <li>‘명쾌한 추상화와 단순한 제어문’ → 추측이 아니라 사실에 기반한 코드</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">by</code> 데이브 토마스
+    <ul>
+      <li>다른 사람이 고치기 쉬운 코드</li>
+      <li>테스트 케이스가 존재하는 코드</li>
+      <li>작을수록 좋은, ‘최소한의’ 코드</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">by</code> 마이클 페더스
+    <ul>
+      <li>작성자가 모든 사항을 고려하여, 주의 깊게 작성한 코드</li>
+      <li>시간을 들여 깔끔하고 단정하게 정리된 코드</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">by</code> 론 제프리스
+    <ul>
+      <li>중복을 피하고, 한 기능만을 수행하면서, 표현력이 높으며, 초반부터 간단한 추상화를 고려한 코드</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">by</code> 워드 커닝햄
+    <ul>
+      <li>읽으면서 ‘짐작했던 기능을 그대로 수행’하는 코드</li>
+      <li>언어를 단순하게 보이도록 만드는 책임이 우리에게 달려 있음</li>
     </ul>
   </li>
 </ul>
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/447ea4a0-758d-4a8e-9f12-8a4cff8df627" /></p>
-
+<h3 id="우리가-저자다--저자에게는-독자와-잘-소통할-책임이-있다">우리가 저자다 : 저자에게는 독자와 잘 소통할 책임이 있다.</h3>
 <ul>
-  <li>
-    <h4 id="세션-session--하나-이상의-윈도우가-있는-독립된-작업-공간">세션 (<code class="language-plaintext highlighter-rouge">Session</code>) : 하나 이상의 윈도우가 있는 독립된 작업 공간</h4>
-    <ul>
-      <li>세션은 <code class="language-plaintext highlighter-rouge">tmux</code> 서버에서 실행되는 프로세스로, <code class="language-plaintext highlighter-rouge">tmux</code>가 관리하는 가상 터미널</li>
-      <li>세션은 1개 이상의 <code class="language-plaintext highlighter-rouge">tmux</code> 클라이언트로 접속할 수 있음</li>
-    </ul>
-  </li>
-  <li>
-    <h4 id="윈도우-window--동일한-세션에서-시각적으로-분리된-부분">윈도우 (<code class="language-plaintext highlighter-rouge">Window</code>) : 동일한 세션에서 시각적으로 분리된 부분</h4>
-    <ul>
-      <li>세션은 무조건 1개 이상의 윈도우를 가짐</li>
-      <li>윈도우는 인덱스로 구분되며, 0번부터 시작</li>
-    </ul>
-  </li>
-  <li>
-    <h4 id="패널-panel--동일한-윈도우에서-분리된-부분">패널 (<code class="language-plaintext highlighter-rouge">Panel</code>) : 동일한 윈도우에서 분리된 부분</h4>
-    <ul>
-      <li>패널은 윈도우 내에 1개 이상 존재하면서, 입력을 받는 부분</li>
-    </ul>
-  </li>
+  <li>코드를 짤 때에는 자신이 저자라는 사실을, 그리고 저자의 노력을 보고 판단할 독자가 잊지 말자!</li>
+  <li>저자 역시 독자다 : 새 코드를 짜면서 끊임없이 기존 코드를 읽기에, 읽기 쉽게 만들면 짜기 또한 쉽다.</li>
 </ul>
 
-<h3 id="tmux-명령어"><code class="language-plaintext highlighter-rouge">tmux</code> 명령어</h3>
-
-<table>
-    <thead>
-        <tr>
-            <th>tmux 명령어 이름</th>
-            <th>tmux 명령어 설명</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td colspan="2" style="text-align: center;">세션 관련</td>
-        </tr>
-        <tr>
-            <td>tmux</td>
-            <td>새로운 세션 시작</td>
-        </tr>
-        <tr>
-            <td>tmux new -s {이름}</td>
-            <td>특정 이름을 가진 새로운 세션 시작</td>
-        </tr>
-        <tr>
-            <td>tmux ls</td>
-            <td>현재 열린 세션 목록 나열</td>
-        </tr>
-        <tr>
-            <td>tmux -a</td>
-            <td>마지막 세션으로 접속</td>
-        </tr>
-        <tr>
-            <td>tmux -a -t {이름}</td>
-            <td>특정 이름을 가진 세션으로 접속</td>
-        </tr>
-        <tr>
-            <td>(tmux에서) exit</td>
-            <td>현재 세션 종료</td>
-        </tr>
-        <tr>
-            <td colspan="2" style="text-align: center;">윈도우 관련</td>
-        </tr>
-        <tr>
-            <td>ctrl+b → c</td>
-            <td>새로운 윈도우 생성</td>
-        </tr>
-        <tr>
-            <td>ctrl+d</td>
-            <td>현재 윈도우 닫기</td>
-        </tr>
-        <tr>
-            <td>ctrl+b → p</td>
-            <td>이전 윈도우로 이동</td>
-        </tr>
-        <tr>
-            <td>ctrl+b → n</td>
-            <td>다음 윈도우로 이동</td>
-        </tr>
-        <tr>
-            <td>ctrl+b → l</td>
-            <td>마지막 윈도우로 이동</td>
-        </tr>
-        <tr>
-            <td>ctrl+b → ,</td>
-            <td>현재 윈도우 이름 바꾸기</td>
-        </tr>
-        <tr>
-            <td>ctrl+b → w</td>
-            <td>현재 열린 윈도우 목록 나열</td>
-        </tr>
-         <tr>
-            <td>ctrl+b → [</td>
-            <td>copy 모드로 전환 (스크롤 가능)</td>
-        </tr>
-        <tr>
-            <td colspan="2" style="text-align: center;">패널 관련</td>
-        </tr>
-        <tr>
-            <td>ctrl+b → "</td>
-            <td>현재 패널을 가로로 나누기</td>
-        </tr>
-        <tr>
-            <td>ctrl+b → %</td>
-            <td>현재 페널을 세로로 나누기</td>
-        </tr>
-        <tr>
-            <td>ctrl+b → {방향키}</td>
-            <td>현재 패널에서 방향키 방향의 패널으로 이동</td>
-        </tr>
-        <tr>
-            <td>ctrl+b → z</td>
-            <td>현재 패널 확대/축소 전환</td>
-        </tr>
-        <tr>
-            <td>ctrl+b → ␣</td>
-            <td>현재 패널에서 다른 패널으로 순환</td>
-        </tr>
-        <tr>
-            <td>ctrl+b → x</td>
-            <td>현재 패널 삭제</td>
-        </tr>
-    </tbody>
-</table>
+<h3 id="보이스카우트-규칙--캠프장은-처음-왔을-때보다-더-깨끗하게-해놓고-떠나라">보이스카우트 규칙 : “캠프장은 처음 왔을 때보다 더 깨끗하게 해놓고 떠나라.”</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Check-out</code>할 때보다 좀 더 깨끗한 코드를 <code class="language-plaintext highlighter-rouge">Check-in</code>한다면, 코드는 절대 나빠지지 않는다.</li>
+</ul>
 
         
       </section>
@@ -389,7 +305,7 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#macos" class="page__taxonomy-item p-category" rel="tag">MacOS</a>
+      <a href="/tags/#clean-code" class="page__taxonomy-item p-category" rel="tag">Clean Code</a>
     
     </span>
   </p>
@@ -399,7 +315,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-09">January 9, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-11">January 11, 2024</time></p>
 
       </footer>
       
@@ -422,9 +338,9 @@
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BMacOS%5D+tmux%20http%3A%2F%2Flocalhost%3A4000%2Ftmux1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BClean+Code%5D+1.+%EA%B9%A8%EB%81%97%ED%95%9C+%EC%BD%94%EB%93%9C%20http%3A%2F%2Flocalhost%3A4000%2Fclean_code1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftmux1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fclean_code1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
 </section>
 
@@ -432,11 +348,11 @@
       
   <nav class="pagination">
     
-      <a href="/til1/" class="pagination--pager" title="[TIL] 2024년 01월 TIL
+      <a href="/tmux1/" class="pagination--pager" title="[MacOS] tmux
 ">이전</a>
     
     
-      <a href="/clean_code1/" class="pagination--pager" title="[Clean Code] 1. 깨끗한 코드
+      <a href="/system_design_interview1/" class="pagination--pager" title="[System Design Interview] 1. 사용자 수에 따른 규모 확장성
 ">다음</a>
     
   </nav>
@@ -502,7 +418,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/clean_code1/" rel="permalink">[Clean Code] 1. 깨끗한 코드
+        <a href="/tmux1/" rel="permalink">[MacOS] tmux
 </a>
       
     </h2>
@@ -527,7 +443,7 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">코드 (Code) : 프로그래밍의 결과로서 요구사항을 상세히 표현하는 수단
+    <p class="archive__item-excerpt" itemprop="description">tmux : 터미널 멀티플렉서 (Terminal Multiplexer)
 
 </p>
   </article>
