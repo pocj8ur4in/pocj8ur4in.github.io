@@ -38,7 +38,7 @@
 
 
 
-  <meta property="article:modified_time" content="2022-09-24T00:00:00+09:00">
+  <meta property="article:modified_time" content="2024-01-13T00:00:00+09:00">
 
 
 
@@ -183,7 +183,7 @@
     <meta itemprop="headline" content="[Algorithm] 2. 구현 알고리즘">
     <meta itemprop="description" content="구현 알고리즘 (Implementation Algorithm) : 알고리즘을 소스 코드로 바꾸는 과정">
     <meta itemprop="datePublished" content="2022-09-24T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2022-09-24T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-13T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
@@ -206,7 +206,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          7 분 소요
         
       </span>
     
@@ -221,7 +221,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#구현-알고리즘-implementation-algorithm--알고리즘을-소스-코드로-바꾸는-과정">구현 알고리즘 (Implementation Algorithm) : 알고리즘을 소스 코드로 바꾸는 과정</a><ul><li><a href="#python으로-구현할-때-고려할-제약-사항--변수-표현-범위">Python으로 구현할 때 고려할 제약 사항 : 변수 표현 범위</a></li><li><a href="#python에서의-리스트의-크기">Python에서의 리스트의 크기</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#구현-알고리즘-implementation-algorithm--알고리즘을-소스-코드로-바꾸는-과정">구현 알고리즘 (Implementation Algorithm) : 알고리즘을 소스 코드로 바꾸는 과정</a><ul><li><a href="#boj-4673번-셀프-넘버-s5">BOJ 4673번. 셀프 넘버 (S5)</a></li><li><a href="#boj-2563번-색종이-s5">BOJ 2563번. 색종이 (S5)</a></li><li><a href="#boj-16926번-배열-돌리기-1-s1">BOJ 16926번. 배열 돌리기 1 (S1)</a></li><li><a href="#boj-16926번-배열-돌리기-1-s1-1">BOJ 16926번. 배열 돌리기 1 (S1)</a></li><li><a href="#boj-1002번-터렛-s3">BOJ 1002번. 터렛 (S3)</a></li><li><a href="#boj-25206번-너의-평점은-s5">BOJ 25206번. 너의 평점은 (S5)</a></li><li><a href="#boj-1193번-분수-찾기-s5">BOJ 1193번. 분수 찾기 (S5)</a></li><li><a href="#boj-1004번-어린-왕자-s3">BOJ 1004번. 어린 왕자 (S3)</a></li><li><a href="#boj-1316번-그룹-단어-체커-s5">BOJ 1316번. 그룹 단어 체커 (S5)</a></li><li><a href="#boj-2941번-크로아티아-알파벳-s5">BOJ 2941번. 크로아티아 알파벳 (S5)</a></li><li><a href="#boj-24313번-알고리즘-수업---점근적-표기-1-s5">BOJ 24313번. 알고리즘 수업 - 점근적 표기 1 (S5)</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -234,40 +234,413 @@
   <li>대체로 사소한 조건 설정이 많은 문제일수록 구현이 까다로움</li>
 </ul>
 
-<h3 id="python으로-구현할-때-고려할-제약-사항--변수-표현-범위"><code class="language-plaintext highlighter-rouge">Python</code>으로 구현할 때 고려할 제약 사항 : 변수 표현 범위</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Python</code>은 프로그래머가 직접 정수형 변수 자료형을 지정할 필요가 없고 아주 큰 수의 연산 역시 기본으로 지원</li>
-  <li>실수형 변수는 유효 숫자에 따라 연산하기에 원하는 결과가 나오지 않을 수 있음</li>
-</ul>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">Python</code>으로 구현할 때 고려할 제약 사항 : 변수 표현 범위
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Python</code>은 프로그래머가 직접 정수형 변수 자료형을 지정할 필요가 없고 아주 큰 수의 연산 역시 기본으로 지원</li>
+      <li>실수형 변수는 유효 숫자에 따라 연산하기에 원하는 결과가 나오지 않을 수 있음</li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Python</code>의 리스트 크기 : <code class="language-plaintext highlighter-rouge">Python</code>에서 여러 개의 변수를 사용할 때 리스트를 이용하면서, 제한된 메모리를 초과할 수 있음</p>
 
-<h3 id="python에서의-리스트의-크기"><code class="language-plaintext highlighter-rouge">Python</code>에서의 리스트의 크기</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Python</code>에서 여러 개의 변수를 사용할 때 리스트를 이용하는데, 이때 제한된 메모리를 초과할 수 있음</li>
-</ul>
+    <table>
+     <thead>
+         <tr>
+             <th>list의 길이</th>
+             <th>메모리 사용량</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr>
+             <td>1,000</td>
+             <td>약 4KB</td>
+         </tr>
+         <tr>
+             <td>1,000,000</td>
+             <td>약 4MB</td>
+         </tr>
+         <tr>
+             <td>1,000,000,000</td>
+             <td>약 40MB</td>
+         </tr>
+     </tbody>
+ </table>
+  </li>
+</ol>
 
-<table>
-	<thead>
-		<tr>
-			<th>list의 길이</th>
-			<th>메모리 사용량</th>
-		</tr>
-	</thead>
-   	<tbody>
-        <tr>
-            <th>1,000</th>
-            <td>약 4KB</td>
-        </tr>
-        <tr>
-            <th>1,000,000</th>
-            <td>약 4MB</td>
-        </tr>
-        <tr>
-            <th>1,000,000,000</th>
-            <td>약 40MB</td>
-        </tr>
-    </tbody>
-</table>
+<h3 id="boj-4673번-셀프-넘버-s5"><a href="https://www.acmicpc.net/problem/4673"><code class="language-plaintext highlighter-rouge">BOJ</code> 4673번. 셀프 넘버 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h3>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+li = [0 for i in range(10001)]
+
+for i in range(1, 10000):
+    n = i
+    while 0 &lt; n &lt;= 10000:
+        li[n] += 1
+        if n &lt; 10:
+            n += n
+        elif 10 &lt;= n &lt; 100:
+            n += n % 10 + n // 10
+        elif 100 &lt;= n &lt; 1000:
+            n += n // 100 + n % 100 // 10 + n % 100 % 10
+        elif 1000 &lt;= n &lt; 10000:
+            n += n // 1000 + n % 1000 // 100 + n % 1000 % 100 // 10 + n % 1000 % 100 % 10
+        else:
+            n += n // 10000 + n % 10000 // 1000 + n % 10000 % 1000 // 100 + n % 10000 % 1000 % 100 % 10
+
+for i in range(1, 10000):
+    if li[i] == 1:
+        print(i)
+</code></pre></div></div>
+
+<h3 id="boj-2563번-색종이-s5"><a href="https://www.acmicpc.net/problem/2563"><code class="language-plaintext highlighter-rouge">BOJ</code> 2563번. 색종이 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+M = [[0 for c in range(100)] for r in range(100)]
+
+N = int(read())
+
+for i in range(N):
+    X, Y = map(int, read().split())
+    for j in range(X - 1, X + 9):
+        for k in range(Y - 1, Y + 9):
+            M[j][k] = 1
+
+S = 0
+
+for j in range(100):
+    for k in range(100):
+        S += M[j][k]
+
+print(S)
+</code></pre></div></div>
+
+<h3 id="boj-16926번-배열-돌리기-1-s1"><a href="https://www.acmicpc.net/problem/2563"><code class="language-plaintext highlighter-rouge">BOJ</code> 16926번. 배열 돌리기 1 (<code class="language-plaintext highlighter-rouge">S1</code>)</a></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+M = [[0 for c in range(100)] for r in range(100)]
+
+N = int(read())
+
+for i in range(N):
+    X, Y = map(int, read().split())
+    for j in range(X - 1, X + 9):
+        for k in range(Y - 1, Y + 9):
+            M[j][k] = 1
+
+S = 0
+
+for j in range(100):
+    for k in range(100):
+        S += M[j][k]
+
+print(S)
+</code></pre></div></div>
+
+<h3 id="boj-16926번-배열-돌리기-1-s1-1"><a href="https://www.acmicpc.net/problem/16926"><code class="language-plaintext highlighter-rouge">BOJ</code> 16926번. 배열 돌리기 1 (<code class="language-plaintext highlighter-rouge">S1</code>)</a></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+N, M, R = map(int, read().split())
+
+B = [list(map(int, read().split())) for i in range(N)]
+
+C = 0  # 회전의 개수
+if (N / 2) &gt;= (M / 2):
+    C = M // 2
+else:
+    C = N // 2
+
+for i in range(R):  # 입력받은 회전만큼
+    for j in range(C):  # 동그라미 개수만큼
+        n = N - j * 2  # 동그라미의 열의 개수
+        m = M - j * 2  # 동그라미의 줄의 개수
+
+        for l in range(m - 1):
+            t = B[j][j + l]
+            B[j][j + l] = B[j][j + l + 1]
+            B[j][j + l + 1] = t
+
+        for l in range(n - 1):
+            t = B[j + l][M - 1 - j]
+            B[j + l][M - 1 - j] = B[j + l + 1][M - 1 - j]
+            B[j + l + 1][M - 1 - j] = t
+
+        for l in range(m - 1):
+            t = B[N - 1 - j][M - 1 - j - l]
+            B[N - 1 - j][M - 1 - j - l] = B[N - 1 - j][M - 2 - j - l]
+            B[N - 1 - j][M - 2 - j - l] = t
+
+        for l in range(n - 2):
+            t = B[N - 1 - j - l][j]
+            B[N - 1 - j - l][j] = B[N - 2 - j - l][j]
+            B[N - 2 - j - l][j] = t
+</code></pre></div></div>
+
+<h3 id="boj-1002번-터렛-s3"><a href="https://www.acmicpc.net/problem/1002"><code class="language-plaintext highlighter-rouge">BOJ</code> 1002번. 터렛 (<code class="language-plaintext highlighter-rouge">S3</code>)</a></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+import math
+read = sys.stdin.readline
+
+T = int(read())
+
+for i in range(T):
+    N = read().split()
+    N = [int(n) for n in N]
+
+    Z = math.sqrt((N[0] - N[3]) ** 2 + (N[1] - N[4]) ** 2)
+
+    if Z == 0 and N[2] == 0 and N[5] == 0:
+        print(1)
+    elif N[2] + N[5] &gt; Z &gt; abs(N[2] - N[5]):  # 접점 2개
+        print(2)
+    elif (N[2] + N[5] == Z or abs(N[2] - N[5]) == Z) and Z != 0:  # 접점 1개
+        print(1)
+    elif N[2] + N[5] &lt; Z or abs(N[2] - N[5]) &gt; Z:  # 접점 0개
+        print(0)
+    elif Z == 0 and N[2] == N[5]:
+        print(-1)
+</code></pre></div></div>
+
+<h3 id="boj-25206번-너의-평점은-s5"><a href="https://www.acmicpc.net/problem/25206"><code class="language-plaintext highlighter-rouge">BOJ</code> 25206번. 너의 평점은 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+EntireSubject = 0.0
+EntireSubjectNum = 0.0
+
+for i in range(20):
+    Subject = read().split()
+    Subject[1] = float(Subject[1])
+
+    if Subject[2] == "A+":
+        EntireSubject += Subject[1] * 4.5
+    elif Subject[2] == "A0":
+        EntireSubject += Subject[1] * 4.0
+    elif Subject[2] == "B+":
+        EntireSubject += Subject[1] * 3.5
+    elif Subject[2] == "B0":
+        EntireSubject += Subject[1] * 3.0
+    elif Subject[2] == "C+":
+        EntireSubject += Subject[1] * 2.5
+    elif Subject[2] == "C0":
+        EntireSubject += Subject[1] * 2.0
+    elif Subject[2] == "D+":
+        EntireSubject += Subject[1] * 1.5
+    elif Subject[2] == "D0":
+        EntireSubject += Subject[1] * 1.0
+    elif Subject[2] == "F":
+        EntireSubject += Subject[1] * 0.0
+
+    if Subject[2] != "P":
+        EntireSubjectNum += Subject[1]
+
+print(EntireSubject / EntireSubjectNum)
+</code></pre></div></div>
+
+<h3 id="boj-1193번-분수-찾기-s5"><a href="https://www.acmicpc.net/problem/1193"><code class="language-plaintext highlighter-rouge">BOJ</code> 1193번. 분수 찾기 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+X = int(read())
+
+x = 1
+y = 1
+z = 1
+
+for i in range(X - 1):
+    if x == 1 and y % 2 == 1:
+        y += 1
+        z = 0
+    elif y == 1 and x % 2 == 0:
+        x += 1
+        z = 1
+    elif z == 0:
+        x += 1
+        y -= 1
+    elif z == 1:
+        x -= 1
+        y += 1
+
+# 출력
+print(str(x) + "/" + str(y))
+</code></pre></div></div>
+
+<h3 id="boj-1004번-어린-왕자-s3"><a href="https://www.acmicpc.net/problem/1004"><code class="language-plaintext highlighter-rouge">BOJ</code> 1004번. 어린 왕자 (<code class="language-plaintext highlighter-rouge">S3</code>)</a></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+import math
+
+read = sys.stdin.readline
+
+T = int(read())
+
+for t in range(T):
+    x1, y1, x2, y2 = map(int, read().rstrip().split())
+
+    N = int(read())
+    L1 = []
+
+    for n in range(N):
+        L2 = list(map(int, read().rstrip().split()))
+        L1.append(L2)
+
+    ans = 0
+
+    for n in range(N):
+        cnt = 0
+
+        for m in range(2):
+            if m == 0:
+                D = math.sqrt((x1 - L1[n][0]) ** 2 + (y1 - L1[n][1]) ** 2)
+                if D &lt; L1[n][2]:
+                    cnt += 1
+            else:
+                D = math.sqrt((x2 - L1[n][0]) ** 2 + (y2 - L1[n][1]) ** 2)
+                if D &lt; L1[n][2]:
+                    cnt += 1
+
+        if cnt == 1:
+            ans += 1
+
+    print(ans)
+</code></pre></div></div>
+
+<h3 id="boj-1316번-그룹-단어-체커-s5"><a href="https://www.acmicpc.net/problem/1316"><code class="language-plaintext highlighter-rouge">BOJ</code> 1316번. 그룹 단어 체커 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+N = int(read())
+ans = N
+
+for n in range(N):
+    S = read().rstrip()
+    L = []
+
+    for s in S:
+        if L.__contains__(s) == 0:
+            L.append(s)
+        elif L[-1] == s:
+            continue
+        else:
+            ans -= 1
+            break
+
+print(ans)
+</code></pre></div></div>
+
+<h3 id="boj-2941번-크로아티아-알파벳-s5"><a href="https://www.acmicpc.net/problem/2941"><code class="language-plaintext highlighter-rouge">BOJ</code> 2941번. 크로아티아 알파벳 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+C = list(read().rstrip())
+ans = 0
+c = 0
+
+while c &lt; len(C):
+    if C[c] == "c" and c + 1 != len(C):
+        if C[c + 1] == "=" or C[c + 1] == "-":
+            ans += 1
+            c += 1
+        else:
+            ans += 1
+    elif C[c] == "d" and c + 1 != len(C):
+        if C[c + 1] == "z" and c + 2 != len(C):
+            if C[c + 2] == "=":
+                ans += 1
+                c += 2
+            else:
+                ans += 1
+        elif C[c + 1] == "-":
+            ans += 1
+            c += 1
+        else:
+            ans += 1
+    elif (C[c] == "l" or C[c] == "n") and c + 1 != len(C):
+        if C[c + 1] == "j":
+            ans += 1
+            c += 1
+        else:
+            ans += 1
+    elif (C[c] == "s" or C[c] == "z") and c + 1 != len(C):
+        if C[c + 1] == "=":
+            ans += 1
+            c += 1
+        else:
+            ans += 1
+    else:
+        ans += 1
+    c += 1
+
+print(ans)
+</code></pre></div></div>
+
+<h3 id="boj-24313번-알고리즘-수업---점근적-표기-1-s5"><a href=""><code class="language-plaintext highlighter-rouge">BOJ</code> 24313번. 알고리즘 수업 - 점근적 표기 1 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+A, B = map(int, read().rstrip().split())
+C = int(read())
+N = int(read())
+
+if A &gt; 0 and C &gt; 0:
+    if A &gt; C:
+        print("0")
+    elif A == C:
+        if B &gt; 0:
+            print("0")
+        else:
+            print("1")
+    else:
+        if A * N + B &lt;= C * N:
+            print("1")
+        else:
+            print("0")
+elif A &gt; 0 &gt;= C:
+    print("0")
+elif A == 0:
+    if B &lt;= C * N:
+        print("1")
+    else:
+        print("0")
+elif A &lt; 0 &lt; C:
+    if A * N + B &lt;= C * N:
+        print("1")
+    else:
+        print("0")
+elif A &lt; 0 and C == 0:
+    if A * N + B &lt;= C * N:
+        print("1")
+    else:
+        print("0")
+elif A &lt; 0 and C &lt; 0:
+    if A &gt; C:
+        print("0")
+    elif A == C:
+        if B &gt; 0:
+            print("0")
+        else:
+            print("1")
+    else:
+        if A * N + B &lt;= C * N:
+            print("1")
+        else:
+            print("0")
+</code></pre></div></div>
 
         
       </section>
@@ -294,7 +667,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-09-24">September 24, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-13">January 13, 2024</time></p>
 
       </footer>
       
