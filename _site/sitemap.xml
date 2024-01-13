@@ -106,7 +106,7 @@
 </url>
 <url>
 <loc>http://localhost:4000/microservice2/</loc>
-<lastmod>2023-12-14T00:00:00+09:00</lastmod>
+<lastmod>2024-01-13T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/vocawik1/</loc>
@@ -133,6 +133,10 @@
 <lastmod>2024-01-12T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/git1/</loc>
+<lastmod>2024-01-13T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
@@ -152,6 +156,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/googlece206819820f99f5.html</loc>
-<lastmod>2022-09-29T15:52:41+09:00</lastmod>
+<lastmod>2024-01-13T02:09:08+09:00</lastmod>
 </url>
 </urlset>

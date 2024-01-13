@@ -38,7 +38,7 @@
 
 
 
-  <meta property="article:modified_time" content="2023-12-14T00:00:00+09:00">
+  <meta property="article:modified_time" content="2024-01-13T00:00:00+09:00">
 
 
 
@@ -183,7 +183,7 @@
     <meta itemprop="headline" content="[MicroService] 2. MSA">
     <meta itemprop="description" content="마이크로서비스 아키텍처 (MSA) : 마이크로서비스를 접목한 아키텍처 구조">
     <meta itemprop="datePublished" content="2023-12-14T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2023-12-14T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-13T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
@@ -206,7 +206,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          15 분 소요
+          20 분 소요
         
       </span>
     
@@ -221,7 +221,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#마이크로서비스-아키텍처-msa--마이크로서비스를-접목한-아키텍처-구조">마이크로서비스 아키텍처 (MSA) : 마이크로서비스를 접목한 아키텍처 구조</a><ul><li><a href="#리액티브-선언-the-reactive-manifesto--어플리케이션이-요청에-즉각-응답하고-가동되길-기대">리액티브 선언 (The Reactive Manifesto) : 어플리케이션이 요청에 즉각 응답하고 가동되길 기대</a></li><li><a href="#강결합에서-약결합의-아키텍처로의-변화">강결합에서 약결합의 아키텍처로의 변화</a></li></ul></li><li><a href="#msa-패턴--msa의-문제-영역에-대해-여러-사람들에-의해-검증되어-정리된-스타일-혹은-패턴">MSA 패턴 : MSA의 문제 영역에 대해 여러 사람들에 의해 검증되어 정리된 스타일 혹은 패턴</a><ul><li><a href="#인프라-구성-요소를-서비스-유형별로-나누어-해당되는-제품-중-하나를-의사결정--클라우드-인프라">인프라 구성 요소를 서비스 유형별로 나누어 해당되는 제품 중 하나를 의사결정 → 클라우드 인프라</a></li><li><a href="#시스템의-기반이-되는-인프라-레이어의-구축--베어메탈-장비-혹은-가상-인프라-환경을-통한-구축">시스템의 기반이 되는 인프라 레이어의 구축 → 베어메탈 장비 혹은 가상 인프라 환경을 통한 구축</a></li><li><a href="#마이크로서비스의-운영과-관리를-지원할-클라우드-플랫폼-미들웨어의-구축--플랫폼-패턴">마이크로서비스의 운영과 관리를 지원할 클라우드 플랫폼 (미들웨어)의 구축 → 플랫폼 패턴</a></li><li><a href="#마이크로서비스가-실제-구동되는-환경에서-동작될-수-있도록-운영-관리-요소--운영-관리-패턴">마이크로서비스가 실제 구동되는 환경에서 동작될 수 있도록 운영 관리 요소 → 운영 관리 패턴</a><ul><li><a href="#다양한-서비스의-등록-및-탐색--서비스-레지스트리-서비스-디스커버리-패턴">다양한 서비스의 등록 및 탐색 → 서비스 레지스트리, 서비스 디스커버리 패턴</a></li><li><a href="#서비스-단일-진입--api-게이트웨이-패턴">서비스 단일 진입 → API 게이트웨이 패턴</a></li><li><a href="#다양한-클라이언트에-대한-특화된-처리--bff-패턴">다양한 클라이언트에 대한 특화된 처리 → BFF 패턴</a></li><li><a href="#마이크로서비스-어플리케이션-구성-정보의-관리--외부-구성-저장소-패턴">마이크로서비스 어플리케이션 구성 정보의 관리 → 외부 구성 저장소 패턴</a></li><li><a href="#사용자의-신원을-증명하고-접근-권한을-부여--인증-및-인가-패턴">사용자의 신원을 증명하고, 접근 권한을 부여 → 인증 및 인가 패턴</a></li><li><a href="#장애-및-실패-처리--서킷-브레이커-패턴">장애 및 실패 처리 → 서킷 브레이커 패턴</a></li><li><a href="#마이크로서비스의-장애-감지--모니터링-및-추적-패턴">마이크로서비스의 장애 감지 → 모니터링 및 추적 패턴</a></li><li><a href="#마이크로서비스의-로그-관리--중앙화된-로그-집계-패턴">마이크로서비스의 로그 관리 → 중앙화된 로그 집계 패턴</a></li><li><a href="#msa-운영-관리-패턴의-변화-1--쿠버네티스-kubernetes">MSA 운영 관리 패턴의 변화 1 : 쿠버네티스 (Kubernetes)</a></li><li><a href="#msa-운영-관리-패턴의-변화-2--서비스-메시-service-mash">MSA 운영 관리 패턴의 변화 2 : 서비스 메시 (Service Mash)</a></li></ul></li><li><a href="#마이크로서비스-어플리케이션-구현을-위한-마이크로서비스-구성-및-설계--어플리케이션-패턴">마이크로서비스 어플리케이션 구현을 위한 마이크로서비스 구성 및 설계 → 어플리케이션 패턴</a><ul><li><a href="#마이크로-프론트엔드--ui-컴포넌트-패턴">마이크로 프론트엔드 → UI 컴포넌트 패턴</a></li><li><a href="#프론트엔드--백엔드-백엔드--백엔드-간의-통신--마이크로서비스-통신-패턴">프론트엔드 ↔ 백엔드, 백엔드 ↔ 백엔드 간의 통신 → 마이크로서비스 통신 패턴</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#마이크로서비스-아키텍처-msa--마이크로서비스를-접목한-아키텍처-구조">마이크로서비스 아키텍처 (MSA) : 마이크로서비스를 접목한 아키텍처 구조</a><ul><li><a href="#리액티브-선언-the-reactive-manifesto--어플리케이션이-요청에-즉각-응답하고-가동되길-기대">리액티브 선언 (The Reactive Manifesto) : 어플리케이션이 요청에 즉각 응답하고 가동되길 기대</a></li><li><a href="#강결합에서-약결합의-아키텍처로의-변화">강결합에서 약결합의 아키텍처로의 변화</a></li></ul></li><li><a href="#msa-패턴--msa의-문제-영역에-대해-여러-사람들에-의해-검증되어-정리된-스타일-혹은-패턴">MSA 패턴 : MSA의 문제 영역에 대해 여러 사람들에 의해 검증되어 정리된 스타일 혹은 패턴</a><ul><li><a href="#인프라-구성-요소를-서비스-유형별로-나누어-해당되는-제품-중-하나를-의사결정--클라우드-인프라">인프라 구성 요소를 서비스 유형별로 나누어 해당되는 제품 중 하나를 의사결정 → 클라우드 인프라</a></li><li><a href="#시스템의-기반이-되는-인프라-레이어의-구축--베어메탈-장비-혹은-가상-인프라-환경을-통한-구축">시스템의 기반이 되는 인프라 레이어의 구축 → 베어메탈 장비 혹은 가상 인프라 환경을 통한 구축</a></li><li><a href="#마이크로서비스의-운영과-관리를-지원할-클라우드-플랫폼-미들웨어의-구축--플랫폼-패턴">마이크로서비스의 운영과 관리를 지원할 클라우드 플랫폼 (미들웨어)의 구축 → 플랫폼 패턴</a></li><li><a href="#마이크로서비스가-실제-구동되는-환경에서-동작될-수-있도록-운영-관리-요소--운영-관리-패턴">마이크로서비스가 실제 구동되는 환경에서 동작될 수 있도록 운영 관리 요소 → 운영 관리 패턴</a><ul><li><a href="#다양한-서비스의-등록-및-탐색--서비스-레지스트리-서비스-디스커버리-패턴">다양한 서비스의 등록 및 탐색 → 서비스 레지스트리, 서비스 디스커버리 패턴</a></li><li><a href="#서비스-단일-진입--api-게이트웨이-패턴">서비스 단일 진입 → API 게이트웨이 패턴</a></li><li><a href="#다양한-클라이언트에-대한-특화된-처리--bff-패턴">다양한 클라이언트에 대한 특화된 처리 → BFF 패턴</a></li><li><a href="#마이크로서비스-어플리케이션-구성-정보의-관리--외부-구성-저장소-패턴">마이크로서비스 어플리케이션 구성 정보의 관리 → 외부 구성 저장소 패턴</a></li><li><a href="#사용자의-신원을-증명하고-접근-권한을-부여--인증-및-인가-패턴">사용자의 신원을 증명하고, 접근 권한을 부여 → 인증 및 인가 패턴</a></li><li><a href="#장애-및-실패-처리--서킷-브레이커-패턴">장애 및 실패 처리 → 서킷 브레이커 패턴</a></li><li><a href="#마이크로서비스의-장애-감지--모니터링-및-추적-패턴">마이크로서비스의 장애 감지 → 모니터링 및 추적 패턴</a></li><li><a href="#마이크로서비스의-로그-관리--중앙화된-로그-집계-패턴">마이크로서비스의 로그 관리 → 중앙화된 로그 집계 패턴</a></li><li><a href="#msa-운영-관리-패턴의-변화-1--쿠버네티스-kubernetes">MSA 운영 관리 패턴의 변화 1 : 쿠버네티스 (Kubernetes)</a></li><li><a href="#msa-운영-관리-패턴의-변화-2--서비스-메시-service-mash">MSA 운영 관리 패턴의 변화 2 : 서비스 메시 (Service Mash)</a></li></ul></li><li><a href="#마이크로서비스-어플리케이션-구현을-위한-마이크로서비스-구성-및-설계--어플리케이션-패턴">마이크로서비스 어플리케이션 구현을 위한 마이크로서비스 구성 및 설계 → 어플리케이션 패턴</a><ul><li><a href="#마이크로-프론트엔드--ui-컴포넌트-패턴">마이크로 프론트엔드 → UI 컴포넌트 패턴</a></li><li><a href="#프론트엔드--백엔드-백엔드--백엔드-간의-통신--마이크로서비스-통신-패턴">프론트엔드 ↔ 백엔드, 백엔드 ↔ 백엔드 간의 통신 → 마이크로서비스 통신 패턴</a></li><li><a href="#마이크로서비스를-독립적으로-수정-및-배포--저장소-분리-패턴">마이크로서비스를 독립적으로 수정 및 배포 → 저장소 분리 패턴</a></li><li><a href="#여러-분산된-서비스를-하나의-일관된-트랜잭션으로--분산-트랜잭션-처리-패턴">여러 분산된 서비스를 하나의 일관된 트랜잭션으로 → 분산 트랜잭션 처리 패턴</a></li><li><a href="#읽기와-쓰기의-분리--cqrs-패턴">읽기와 쓰기의 분리 → CQRS 패턴</a></li><li><a href="#저장소가-격리된-여러-마이크로서비스의-기능들을-연계한-서비스-제공--api-조합과-cors">저장소가 격리된 여러 마이크로서비스의 기능들을 연계한 서비스 제공 → API 조합과 CORS</a></li><li><a href="#쓰기-연산의-최적화--이벤트-소싱-패턴">쓰기 연산의 최적화 → 이벤트 소싱 패턴</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -874,6 +874,230 @@
   </li>
 </ul>
 
+<h4 id="마이크로서비스를-독립적으로-수정-및-배포--저장소-분리-패턴">마이크로서비스를 독립적으로 수정 및 배포 → 저장소 분리 패턴</h4>
+
+<blockquote>
+  <ul>
+    <li>기존 모노리스 시스템의 저장소인 통합 저장소의 문제점?
+      <ul>
+        <li>어플리케이션 모듈은 분리하되 저장 처리는 모듈별로 격리하지 않고 다른 모듈에서의 호출을 허용</li>
+        <li>모든 비즈니스 로직이 데이터베이스의 <code class="language-plaintext highlighter-rouge">SQL</code> 처리에 몰려있는 경우가 대부분</li>
+        <li>데이터 중심 어플리케이션은 특정 관계형 데이터베이스 벤더에 구속되고 복잡해져 유지보수가 어려움</li>
+        <li>성능 문제가 발생하였을 때, <code class="language-plaintext highlighter-rouge">SQL</code> 구문 튜닝이나 <code class="language-plaintext highlighter-rouge">Scale-up</code>에 의존할 수 밖에 없음</li>
+        <li>여러 마이크로서비스로 분리해도 요쳥이 증가하면 데이터베이스만 바쁜 상태가 됨
+          <ul>
+            <li>자동으로 확장되는 마이크로서비스의 <code class="language-plaintext highlighter-rouge">Scale-out</code>이 무의미함</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>→ 여러 개의 마이크로서비스에 적합하게 데이터베이스 벤더를 운영하는 방법을 찾자!</p>
+    </li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>각 마이크로서비스는 각자의 비즈니스를 처리하기 위한 데이터를 직접 소유해야 한다!</li>
+  <li>자신이 가진 데이터는 다른 서비스에 직접 노출하지 않고 각자 공개한 <code class="language-plaintext highlighter-rouge">API</code>를 통해서 접근 가능 → 정보 은닉</li>
+  <li>저장소가 격리되어 있기 때문에 각 저장소를 자율적으로 선택할 수 있음 → 폴리글랏 저장소</li>
+  <li>해당 제약을 통해 데이터를 통한 변경의 파급 효과를 줄여 서비스를 독립적으로 만듬</li>
+</ul>
+
+<h4 id="여러-분산된-서비스를-하나의-일관된-트랜잭션으로--분산-트랜잭션-처리-패턴">여러 분산된 서비스를 하나의 일관된 트랜잭션으로 → 분산 트랜잭션 처리 패턴</h4>
+
+<blockquote>
+  <ul>
+    <li>저장소 분리 패턴의 문제점?
+      <ul>
+        <li>여러 분산된 서비스에 걸친 비즈니스 처리를 하면, 비즈니스 정합성과 데이터 일관성은 어떻게 보장하지?</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>2단계 커밋 : 분산 데이터베이스 환경에서 원자성 (<code class="language-plaintext highlighter-rouge">atomicity</code>)을 보장하기 위해,
+    <ul>
+      <li>분산 트랜잭션에 포함된 모든 노드가 커밋 (<code class="language-plaintext highlighter-rouge">commit</code>) 혹은 롤백 (<code class="language-plaintext highlighter-rouge">rollback</code>)되는 메커니즘</li>
+      <li>각 서비스에 <code class="language-plaintext highlighter-rouge">lock-in</code>이 걸려 발생하는 성능 문제로 비효율적인 방법</li>
+      <li>각 서비스가 다른 인스턴스로 로딩되므로 이를 통제하기 어려움</li>
+      <li>서비스의 저장소가 각각 다를 경우에 문제가 발생 (<code class="language-plaintext highlighter-rouge">NoSQL</code> 저장소 : 2단계 커밋 미지원)</li>
+      <li>네트워크 장애 등으로 특정 서비스의 트랜잭션을 처리하지 않는 경우 트랜잭션이 묶인 서비스에 즉시 영향</li>
+    </ul>
+  </li>
+  <li>사가 (<code class="language-plaintext highlighter-rouge">Saga</code>) 패턴 : 각 서비스의 로컬 트랜잭션을 순차적으로 처리하는 패턴
+    <ul>
+      <li>여러 분산된 서비스 내에서 각각의 로컬 트랜잭션과 보상 트랜잭션을 통해 비즈니스 및 데이터의 정합성을 맞춤
+        <ol>
+          <li>각 로컬 트랜잭션을 통해 자신의 데이터베이스를 갱신한다.</li>
+          <li>사가 내에 있는 다음 로컬 트랜잭션을 트리거하는 이벤트를 발행하여 데이터의 일관성을 맞춘다.</li>
+          <li>서비스에서 트랜잭션 처리에 실패하면, 앞선 다른 서비스에 처리된 트랜잭션을 롤백할 보상 트랜잭션을 준다.</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>데이터 일관성에 대한 생각의 전환 → 결과적 일관성
+    <ul>
+      <li>이전엔 비즈니스 처리를 위한 규칙을 만족시킬, 데이터 일관성을 반드시 실시간으로 맞춰야 한다고 생각했다.</li>
+      <li>그러나 모든 비즈니스 처리가 반드시 실시간성을 요구하는 것이 아니다. 어떤 비즈니스들은 어느 일정 시점이 되었을 때 일관성을 만족해도 된다. → 결과적 일관성 (<code class="language-plaintext highlighter-rouge">Eventual Consistency</code>)</li>
+      <li>이벤트 기반 비동기 통신 및 사가 패턴을 적용한 아키텍처, 메시지 브로커을 활용하여, 결과적 일관성을 반영해 비즈니스 및 시스템의 가용성을 극대화할 수 있다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="읽기와-쓰기의-분리--cqrs-패턴">읽기와 쓰기의 분리 → <code class="language-plaintext highlighter-rouge">CQRS</code> 패턴</h4>
+
+<blockquote>
+  <ul>
+    <li>마이크로서비스의 서비스별 데이터 저장소에서 전통적인 <code class="language-plaintext highlighter-rouge">DB</code> 트랜잭션을 사용하면?
+      <ul>
+        <li>데이터 읽기 및 수정 작업으로 인한 리소스 교착 상태가 발생할 수 있다.</li>
+      </ul>
+
+      <p>→ 동일한 저장소에 데이터를 넣은 뒤에 <code class="language-plaintext highlighter-rouge">CRUD</code>를 처리하는, 기존의 패러다임을 전환하는 것은 어떨까!</p>
+    </li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>명령 조회 책임 분리 (<code class="language-plaintext highlighter-rouge">Command Query Responsibility Segregation</code>)
+    <ul>
+      <li>사용자의 비즈니스 요청은 시스템의 상태를 변경하는 연산과 시스템의 상태를 조회하는 연산으로 나눠짐</li>
+      <li>일반적인 비즈니스 모델에서는 입력, 수정, 삭제보다 조회가 더 많이 사용됨
+        <ul>
+          <li>서비스 내에 모든 기능을 넣으면 조회 요청 빈도가 증가함에 따라 다른 명령 기능 또한 확장되니 비효율적</li>
+        </ul>
+      </li>
+      <li>하나의 저장소에 쓰기 모델과 읽기 모델을 분리하거나, 쓰기 저장소와 조회 저장소를 따로 두자!
+        <ul>
+          <li>쓰기 시스템의 부하를 줄이면서, 조회 대기 시간을 줄일 수 있음</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">CQRS</code> 패턴을 적용한 예시</p>
+
+  <ol>
+    <li>명령 측면의 마이크로서비스
+      <ul>
+        <li>입력, 수정, 삭제 처리를 수행</li>
+        <li>쓰기에 최적화된 관계형 데이터베이스를 저장소로 활용</li>
+        <li>업무 규칙을 표한하기 좋은 언어 (<code class="language-plaintext highlighter-rouge">Java</code>)를 프로그래밍 언어로 사용</li>
+      </ul>
+    </li>
+    <li>조회 측면의 마이크로서비스
+      <ul>
+        <li>조회 서비스는 사용량이 많으므로, 스케일 아웃을 통해 인스턴스를 증가시킴</li>
+        <li>조회 성능이 높은 <code class="language-plaintext highlighter-rouge">NoSQL</code> 데이터베이스를 저장소로 활용</li>
+        <li>조회를 간단하게 구현할 수 있는 언어 (<code class="language-plaintext highlighter-rouge">Node.js</code>)를 프로그래밍 언어로 사용</li>
+      </ul>
+    </li>
+    <li>이벤트 주도 아키텍처
+      <ul>
+        <li>명령 서비스를 사용함에 따라 조회 서비스와의 데이터 일관성이 깨지므로 이를 유지하는 목적</li>
+      </ul>
+      <ol>
+        <li>명령 서비스가 저장소에 데이터를 쓸 때, 저장 내역이 담긴 이벤트를 발생시켜 메시지 브로커에 전달</li>
+        <li>메시지 브로커의 이벤트를 구독하는 조회 서비스는 이벤트 데이터를 가져와 데이터를 최신으로 동기화
+          <ul>
+            <li>시간 간격이 있으나 어느 시점에 일치하는 결과적 일관성이 이루어짐</li>
+          </ul>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</blockquote>
+
+<h4 id="저장소가-격리된-여러-마이크로서비스의-기능들을-연계한-서비스-제공--api-조합과-cors">저장소가 격리된 여러 마이크로서비스의 기능들을 연계한 서비스 제공 → <code class="language-plaintext highlighter-rouge">API</code> 조합과 <code class="language-plaintext highlighter-rouge">CORS</code></h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">API</code> 조합 (<code class="language-plaintext highlighter-rouge">API Composition</code>) : 기능을 제공하는 마이크로서비스를 조합할 상위 마이크로서비스로 조합된 기능 제공
+    <ul>
+      <li>하위 서비스는 각자 독립적인 <code class="language-plaintext highlighter-rouge">API</code>를 제공하면서 연계 <code class="language-plaintext highlighter-rouge">API</code>를 위해 상위 서비스에 정보 제공</li>
+    </ul>
+
+    <p>→ 상위 서비스가 하위 서비스에 의존되는 결과를 가져옴 : 하위 서비스의 실패가 상위 서비스에 영향을 준다.</p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">CQRS</code> 패턴을 활용한 기능 연계 : 상위 마이크로서비스에 통합 이벤트 핸들러와 통합 저장소를 두자
+    <ol>
+      <li>독자 저장소를 갖는 하위 서비스에서 자신의 서비스 내 정보가 변경될 때 변경 내역을 각 변경 이벤트로 발행</li>
+      <li>상위 서비스는 구독한 이벤트를 가져와서 자신의 서비스 저장소에 기록해 데이터 일관성을 맞춤</li>
+    </ol>
+  </li>
+</ul>
+
+<h4 id="쓰기-연산의-최적화--이벤트-소싱-패턴">쓰기 연산의 최적화 → 이벤트 소싱 패턴</h4>
+
+<blockquote>
+  <ul>
+    <li>사가 패턴과 <code class="language-plaintext highlighter-rouge">CQRS</code> 패턴에서 비즈니스 불일치를 피하려면,
+      <ul>
+        <li>저장소에 저장하는 것과 메시지를 보내는 것은 언제나 완전하게 진행되어야 하지만,
+          <ul>
+            <li>객체의 상태를 관계형 데이터베이스에 저장하기 위해 <code class="language-plaintext highlighter-rouge">SQL</code> 질의어로 변환하는 것은 번거로움</li>
+            <li>메시지 발행과 저장 처리의 두 가지 기능을 수행하는 것 또한 빠르지 않음</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>→ 메시지 발행과 저장 처리를 언제나 완전하게 처리하면서 성능도 최적화시킬 방법을 찾자!</p>
+    </li>
+    <li>비즈니스를 처리할 때 데이터의 처리는 항상 처리 상태의 결괏값을 계산하고 데이터의 최종 상태를 확정해 저장
+      <ol>
+        <li>일반적인 관계형 데이터베이스와 <code class="language-plaintext highlighter-rouge">Java</code>를 사용할 때,</li>
+        <li>품목에 대한 데이터 모델이 정의되어 있다면,</li>
+        <li>품목의 상태가 변경될 때 매번 트랜잭션 결과를 반영해서,</li>
+        <li>품목 데이터 모델의 결과를 계산해야 한다.</li>
+      </ol>
+
+      <p>→ 객체의 상태 변경에 따라 데이터 모델로 처리하여 최종값을 반영하는 과정은 복잡하고 속도가 느림</p>
+    </li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>객체의 상태를 데이터 모델에 맞춰 계산하지 않고, 상태 트랜잭션 자체를 이벤트 저장소에 그대로 저장
+    <ul>
+      <li>메시지 브로커와 데이터 저장소를 분리하지 않고 하나로 사용할 수 있음 → 쓰기 속도가 매우 빠름</li>
+      <li>상태의 출발점부터 모든 기록된 상태 변경 트랜잭션을 순차적으로 계산</li>
+      <li>매일 자정 상태를 계산하고 스냅샵으로 저장한 후에, 현재 상태 정보가 필요할 때 스냅샵 이후의 트랜잭션만 처리</li>
+      <li>명령 측면, 조희 측면의 서비스가 이벤트 저장소의 모든 <code class="language-plaintext highlighter-rouge">CRUD</code> 처리하는 대신, 입력 및 조회만 처리하면 됨
+        <ul>
+          <li>저장소에서 변경 및 삭제가 발생하지 않으므로, 명령 측면의 서비스를 여러 개로 확장해도 동시 업데이트 및 교착 상태가 발생하지 않음</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>이벤트 저장소의 데이터 형태 예시</p>
+
+  <ul>
+    <li>이벤트 아이디</li>
+    <li>이벤트 타입 : 어떠한 상태인지?</li>
+    <li>엔티티 타입 : 어떠한 객체의 이벤트인지?</li>
+    <li>엔티티 데이터 : 변경 내용을 <code class="language-plaintext highlighter-rouge">JSON</code> 형태로 저장 → 상태 객체가 그대로 들어감</li>
+  </ul>
+
+  <p>→ 이벤트 소싱은 모든 트랜잭션의 상태를 즉시 계산하지 않고, 별도의 이벤트 스트림으로 이벤트 스트림 저장소에 저장</p>
+</blockquote>
+
+<ul>
+  <li>이벤트 스트림 저장소 : 오로지 추가만 가능하게끔 하여, 계속 이벤트들이 쌓이게끔 함
+    <ul>
+      <li>실제 내가 필요한 데이터를 구체화하는 시점에 그때까지 축적된 트랜잭션을 바탕으로 상태를 계산해 구성</li>
+      <li>이벤트 데이터베이스의 역할뿐만이 아니라 메시지 브로커 처럼 작동</li>
+      <li>데이터 저장 처리 메커니즘이나 메시지 큐와 같은 이벤트를 전달하기 위한 메커니즘을 통합</li>
+      <li>저장된 상태를 통해 정확한 검사 로깅을 제공하고, 객체의 예전 상태를 재구성하는 것이 가능</li>
+      <li>외부 어플리케이션에 이벤트를 전달하는 것 또한 저장한 이벤트를 그대로 전송하면 됨</li>
+    </ul>
+  </li>
+</ul>
+
 <blockquote>
   <p>Reference</p>
 
@@ -907,7 +1131,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-12-14">December 14, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-13">January 13, 2024</time></p>
 
       </footer>
       
@@ -959,6 +1183,47 @@
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/git1/" rel="permalink">[Git] Git 개념 및 명령어 정리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">버전 관리 (Version Control) : 특정한 시간 기준으로 파일 변화를 저장하고 관리
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -1028,7 +1293,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 분 소요
+          3 분 소요
         
       </span>
     
@@ -1077,47 +1342,6 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">코드 (Code) : 프로그래밍의 결과로서 요구사항을 상세히 표현하는 수단
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/tmux1/" rel="permalink">[MacOS] tmux
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">tmux : 터미널 멀티플렉서 (Terminal Multiplexer)
 
 </p>
   </article>
