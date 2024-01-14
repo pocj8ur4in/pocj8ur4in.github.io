@@ -7,8 +7,8 @@ tags:
 toc: true
 toc_sticky: true
 
-date: 2024-01-13
-last_modified_at: 2024-01-13
+date: 2024-01-14
+last_modified_at: 2024-01-14
 ---
 
 ## 비즈니스 로직 (```Business Logic```) : 시스템이 목표로 하는 비즈니스 영역의 규칙, 흐름, 개념
