@@ -38,7 +38,7 @@
 
 
 
-  <meta property="article:modified_time" content="2024-01-12T00:00:00+09:00">
+  <meta property="article:modified_time" content="2024-01-15T00:00:00+09:00">
 
 
 
@@ -183,7 +183,7 @@
     <meta itemprop="headline" content="[System Design Interview] 1. 사용자 수에 따른 규모 확장성">
     <meta itemprop="description" content="시스템 디자인 면접 (System Design Interview) : 시스템 아키텍처를 설계하는 면접">
     <meta itemprop="datePublished" content="2024-01-12T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2024-01-12T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-15T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
@@ -221,7 +221,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#시스템-디자인-면접-system-design-interview--시스템-아키텍처를-설계하는-면접">시스템 디자인 면접 (System Design Interview) : 시스템 아키텍처를 설계하는 면접</a></li><li><a href="#사용자-수에-따른-규모-확장성--사용자가-얼마나-되는지에-따라-변화하는-시스템-설계">사용자 수에 따른 규모 확장성 : 사용자가 얼마나 되는지에 따라 변화하는 시스템 설계</a><ul><li><a href="#단일-서버--모든-컴포넌트가-단-한-대의-서버에서-실행되는-시스템을-설계">단일 서버 : 모든 컴포넌트가 단 한 대의 서버에서 실행되는 시스템을 설계</a></li><li><a href="#데이터베이스-서버--트래픽을-처리할-서버-웹-계층에-db-서버-데이터-계층을-증설">데이터베이스 서버 : 트래픽을 처리할 서버 (웹 계층)에 DB 서버 (데이터 계층)을 증설</a></li><li><a href="#수직적-규모-확장-vs-수평적-규모-확장">수직적 규모 확장 vs 수평적 규모 확장?</a><ul><li><a href="#캐시-cache--응답-시간-latency-개선을-위해-데이터를-잠시-보관">캐시 (Cache) : 응답 시간 (latency) 개선을 위해 데이터를 잠시 보관</a></li><li><a href="#컨텐츠-전송-네트워크-cdn--정적-컨텐츠의-전송에-쓰이는-분산-서버-네트워크">컨텐츠 전송 네트워크 (CDN) : 정적 컨텐츠의 전송에 쓰이는 분산 서버 네트워크</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#시스템-디자인-면접-system-design-interview--시스템-아키텍처를-설계하는-면접">시스템 디자인 면접 (System Design Interview) : 시스템 아키텍처를 설계하는 면접</a></li><li><a href="#사용자-수에-따른-규모-확장성--사용자가-얼마나-되는지에-따라-변화하는-시스템-설계">사용자 수에 따른 규모 확장성 : 사용자가 얼마나 되는지에 따라 변화하는 시스템 설계</a><ul><li><a href="#단일-서버--모든-컴포넌트가-단-한-대의-서버에서-실행되는-시스템을-설계">단일 서버 : 모든 컴포넌트가 단 한 대의 서버에서 실행되는 시스템을 설계</a></li><li><a href="#데이터베이스-서버--트래픽을-처리할-서버-웹-계층에-db-서버-데이터-계층을-증설">데이터베이스 서버 : 트래픽을 처리할 서버 (웹 계층)에 DB 서버 (데이터 계층)을 증설</a></li><li><a href="#수직적-규모-확장-vs-수평적-규모-확장">수직적 규모 확장 vs 수평적 규모 확장?</a><ul><li><a href="#캐시-cache--응답-시간-latency-개선을-위해-데이터를-잠시-보관">캐시 (Cache) : 응답 시간 (latency) 개선을 위해 데이터를 잠시 보관</a></li><li><a href="#컨텐츠-전송-네트워크-cdn--정적-컨텐츠의-전송에-쓰이는-분산-서버-네트워크">컨텐츠 전송 네트워크 (CDN) : 정적 컨텐츠의 전송에 쓰이는 분산 서버 네트워크</a></li></ul></li><li><a href="#무상태-stateless-웹-계층--웹-계층을-수평적으로-확장하는-방법">무상태 (stateless) 웹 계층 : 웹 계층을 수평적으로 확장하는 방법</a><ul><li><a href="#상태-정보-의존적인-아키텍쳐--클라이언트-정보에-대한-상태를-유지하며-요청들-사이에-공유">상태 정보 의존적인 아키텍쳐 : 클라이언트 정보에 대한 상태를 유지하며 요청들 사이에 공유</a></li><li><a href="#무상태-아키텍처--사용자로부터의-http-요청은-어떤-웹-서버로도-전달-가능함">무상태 아키텍처 : 사용자로부터의 HTTP 요청은 어떤 웹 서버로도 전달 가능함</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -429,6 +429,7 @@
 </ul>
 
 <h4 id="컨텐츠-전송-네트워크-cdn--정적-컨텐츠의-전송에-쓰이는-분산-서버-네트워크">컨텐츠 전송 네트워크 (<code class="language-plaintext highlighter-rouge">CDN</code>) : 정적 컨텐츠의 전송에 쓰이는 분산 서버 네트워크</h4>
+
 <ul>
   <li>정적 컨텐츠 (이미지, 비디오, <code class="language-plaintext highlighter-rouge">CSS</code>, <code class="language-plaintext highlighter-rouge">JavaScript</code> 파일 등)을 캐시</li>
   <li>사용자가 웹 사이트에 방문하면, 가장 가까운 <code class="language-plaintext highlighter-rouge">CDN</code> 서버가 정적 컨텐츠를 전달</li>
@@ -475,6 +476,40 @@
   </li>
 </ul>
 
+<h3 id="무상태-stateless-웹-계층--웹-계층을-수평적으로-확장하는-방법">무상태 (<code class="language-plaintext highlighter-rouge">stateless</code>) 웹 계층 : 웹 계층을 수평적으로 확장하는 방법</h3>
+
+<ul>
+  <li>사용자 세션 데이터와 같은 상태 정보를 웹 계층에서 제거해야 함</li>
+  <li>상태 정보를 관계형 <code class="language-plaintext highlighter-rouge">DB</code>나 <code class="language-plaintext highlighter-rouge">NoSQL</code>과 같은 지속성 저장소에 보관하고 필요할 때 가져옴</li>
+</ul>
+
+<h4 id="상태-정보-의존적인-아키텍쳐--클라이언트-정보에-대한-상태를-유지하며-요청들-사이에-공유">상태 정보 의존적인 아키텍쳐 : 클라이언트 정보에 대한 상태를 유지하며 요청들 사이에 공유</h4>
+
+<ul>
+  <li>사용자 A의 상태 정보가 서버 1에 저장되면,
+    <ul>
+      <li>해당 사용자 인증에 대한 HTTP 요청은 해당 서버로만 가야 한다.</li>
+      <li>다른 서버로 가면 사용자 인증은 무조건 실패한다.</li>
+    </ul>
+  </li>
+  <li>같은 클라이언트로부터의 요청은 항상 같은 서버로만 전송된다.
+    <ul>
+      <li>고정 세션 (sticky session) 기능을 지원하는 로드밸런서에 부담을 준다.</li>
+      <li>로드밸런서 뒷단에 서버를 추가 및 제거가 어렵고, 서버의 장애 처리 또한 복잡해진다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="무상태-아키텍처--사용자로부터의-http-요청은-어떤-웹-서버로도-전달-가능함">무상태 아키텍처 : 사용자로부터의 <code class="language-plaintext highlighter-rouge">HTTP</code> 요청은 어떤 웹 서버로도 전달 가능함</h4>
+
+<ul>
+  <li>웹 서버는 상태 정보가 필요할 때에 공유 저장소 (<code class="language-plaintext highlighter-rouge">Shared Storage</code>) 에서 데이터를 가져옴
+    <ul>
+      <li>상태 정보는 웹 서버로부터 물리적으로 분리</li>
+    </ul>
+  </li>
+</ul>
+
 <blockquote>
   <p>Reference</p>
 
@@ -508,7 +543,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-12">January 12, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-15">January 15, 2024</time></p>
 
       </footer>
       
@@ -570,6 +605,47 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
+        <a href="/microservice4/" rel="permalink">[MicroService] 4. Agile Development Process
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">에자일 개발 프로세스 (Agile Development Process) : 피드백을 통한 지속적인 개선 추구
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
         <a href="/microservice3/" rel="permalink">[MicroService] 3. Microservice Architecture
 </a>
       
@@ -588,7 +664,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 분 소요
+          10 분 소요
         
       </span>
     
@@ -678,47 +754,6 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">자바 (Java) : 객체지향 프로그래밍 언어 (Object-Oriented Programming Language)
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/algorithm3/" rel="permalink">[Algorithm] 3. 그리디
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">그리디 (Greedy) : 매 순간 가장 좋은 것을 선택 (현재의 선택이 나중에 미칠 영향은 고려 X)
 
 </p>
   </article>
