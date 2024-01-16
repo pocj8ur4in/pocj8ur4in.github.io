@@ -1,5 +1,5 @@
 # 기본 이미지: Ruby와 Node.js를 설치한 이미지 사용
-FROM ruby:3.1.2p20
+FROM ruby:3.1.2
 
 # 필요한 시스템 도구 및 라이브러리 설치
 RUN apt-get update && apt-get install -y \
