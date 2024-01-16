@@ -3,7 +3,7 @@ name: push Docker Hub # Github Actions의 workflow 이름 정의
 on:
   push:
     branches:
-      - master # 이벤트 트리거 설정 : master에 푸시할 때 동작
+      - main # 이벤트 트리거 설정 : main에 푸시할 때 동작
 
 jobs:
   push:
