@@ -206,7 +206,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          3 분 소요
         
       </span>
     
@@ -221,7 +221,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#에자일-개발-프로세스-agile-development-process--피드백을-통한-지속적인-개선-추구">에자일 개발 프로세스 (Agile Development Process) : 피드백을 통한 지속적인 개선 추구</a><ul><li><a href="#스크럼">스크럼</a></li><li><a href="#xp">XP</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#에자일-개발-프로세스-agile-development-process--피드백을-통한-지속적인-개선-추구">에자일 개발 프로세스 (Agile Development Process) : 피드백을 통한 지속적인 개선 추구</a><ul><li><a href="#기민한-설계-및-개발을-위한-절차--스크럼-기반-마이크로서비스-개발-프로세스">기민한 설계 및 개발을 위한 절차 → 스크럼 기반 마이크로서비스 개발 프로세스</a><ul><li><a href="#구현-스프린트를-진행하기-위한-준비-및-계획--아키텍처-정의-및-마이크로서비스-도출">구현 스프린트를 진행하기 위한 준비 및 계획 → 아키텍처 정의 및 마이크로서비스 도출</a></li><li><a href="#백엔드와-프런트엔드-개발-공정의-접목--api-명세--도메인-모델링">백엔드와 프런트엔드 개발 공정의 접목 → API 명세 &amp; 도메인 모델링</a></li><li><a href="#ui-레이아웃-정의-및-백엔드-api-호출--프론트엔드-영역-설계-및-개발">UI 레이아웃 정의 및 백엔드 API 호출 → 프론트엔드 영역 설계 및 개발</a></li><li><a href="#어플리케이션을-지속적으로-빌드하고-자동으로-배포--빌드-및-배포-환경-자동화">어플리케이션을 지속적으로 빌드하고 자동으로 배포 → 빌드 및 배포 환경 자동화</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -233,13 +233,105 @@
     <ul>
       <li><code class="language-plaintext highlighter-rouge">CI/CD</code>, <code class="language-plaintext highlighter-rouge">DevOps</code> 등의 에자일 방법론 중심의 프랙티스</li>
       <li>효율적인 의사소통 구조와 협업 체계를 가진 다기능 팀으로 만듣 수 있는 결과물 → ‘마이크로서비스’</li>
+      <li><code class="language-plaintext highlighter-rouge">XP</code>의 ‘지속적 통합’ 프랙티스 : 품질이 보장된 소프트웨어를 반복적으로 개발할 수 있게 함</li>
+      <li>스크럼 프로세스 : ‘스크럼 팀’이라는 조직과 ‘스프린트’라는 짧은 반복 주기를 통해 피드백과 개선 작업을 촉진함</li>
     </ul>
   </li>
 </ul>
 
-<h3 id="스크럼">스크럼</h3>
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">XP</code>나 스크럼을 살펴보면 개발 문화 및 관리 프로세스를 자세히 다루나, 설계 및 개발 공정에 대해 자세히 언급하지 않음</p>
 
-<h3 id="xp"><code class="language-plaintext highlighter-rouge">XP</code></h3>
+  <ul>
+    <li>에자일 자체가 성숙한 개발 문화에서 좋은 프랙티스을 가속화하고 기존 공정에서 낭비를 제거하는 방식으로 진행
+      <ul>
+        <li>개발 문화가 미성숙한 팀을 위해 기민한 반복 주기게 적합하며 핵심 활동에 집중할 수 있는 방법이 필요</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>→ <code class="language-plaintext highlighter-rouge">DDD</code>를 중심으로 에자일 프로세스와 연계하여 마이크로서비스를 설계 및 개발하는 공정이 필요하다!</p>
+</blockquote>
+
+<h3 id="기민한-설계-및-개발을-위한-절차--스크럼-기반-마이크로서비스-개발-프로세스">기민한 설계 및 개발을 위한 절차 → 스크럼 기반 마이크로서비스 개발 프로세스</h3>
+
+<ul>
+  <li>스크럼 (<code class="language-plaintext highlighter-rouge">Scrum</code>) : 프로젝트 개발 및 관리를 위한 에자일 개발 방법론 중 하나
+    <ol>
+      <li>제품 백로그 (<code class="language-plaintext highlighter-rouge">Product Backlog</code>) : 개발할 제품에 대한 요구 사항 목록</li>
+      <li>스프린트 계획 회의 (<code class="language-plaintext highlighter-rouge">Sprint Planning Meeting</code>) : 스프린트 목표 및 스프린트 백로그를 계획하는 회의</li>
+      <li>스프린트 백로그 (<code class="language-plaintext highlighter-rouge">Sprint Backlog</code>) : 각 스프린트 목표에 도달하기 위해 필요한 작업 목록</li>
+      <li>스프린트 (<code class="language-plaintext highlighter-rouge">Sprint</code>) : 반복적인 개발 주기 (계획 회의부터 제품 리뷰가 진행되는 날짜까지의 기간 : 1~4주)</li>
+      <li>일일 스크럼 회의 (<code class="language-plaintext highlighter-rouge">Daily Scrum Meeting</code>) : 어제 한 일, 오늘 할 일, 장애 등을 공유하는 회의</li>
+      <li>시연 (<code class="language-plaintext highlighter-rouge">Testing</code>) : 초기에 정의한 백로그가 모두 구현되고 그 요건을 만족하는지 확인</li>
+      <li>회고 (<code class="language-plaintext highlighter-rouge">Review</code>) : 팀원들이 자기 스스로를 돌아보면서 개선점을 논의하여 다음 스프린트에 적용</li>
+    </ol>
+  </li>
+</ul>
+
+<h4 id="구현-스프린트를-진행하기-위한-준비-및-계획--아키텍처-정의-및-마이크로서비스-도출">구현 스프린트를 진행하기 위한 준비 및 계획 → 아키텍처 정의 및 마이크로서비스 도출</h4>
+
+<ul>
+  <li>아키텍처 정의 : 마이크로서비스 내부/외부 아키텍처를 정의하는 공정 → 아키텍처 구성도
+    <ul>
+      <li>기존 워터풀 개발 방식과 달리, 기술 세부사항은 늦게 결정할 수 있어야 한다. (<code class="language-plaintext highlighter-rouge">Robert C. Martin</code>)</li>
+      <li>그러나 최소한의 개발 및 테스팅 환경을 준비하는 게 바람직 : 스프린트에 실제 동작하는 어플리케이션 시연 가능
+        <ul>
+          <li>도커나 쿠버네티스, 스프링부트 등을 미리 결정한다면, 빠르게 개발 환경을 구축해 개발 과정에 진입 가능</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>마이크로서비스 도출 : 스크럼 팀이 개발할 전체 마이크로서비스를 파악하는 작업 → 컨텍스트 맵
+    <ul>
+      <li>모든 마이크로서비스를 하나의 스크럼 팀이 개발할 수 없음</li>
+      <li><code class="language-plaintext highlighter-rouge">DDD</code>의 전략적 설계로 마이크로서비스를 도출하고, 그것들 간의 대략적인 매핑 관계를 정의해, 우선순위 산정</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="백엔드와-프런트엔드-개발-공정의-접목--api-명세--도메인-모델링">백엔드와 프런트엔드 개발 공정의 접목 → <code class="language-plaintext highlighter-rouge">API</code> 명세 &amp; 도메인 모델링</h4>
+
+<blockquote>
+  <p>백엔드와 프런트엔드 영역 간 계악으로 해당 작업이 선행되고, 각각의 공정이 영역을 나누어서 진행</p>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">API</code> 명세 (<code class="language-plaintext highlighter-rouge">API Details</code>) : 각 백엔드 마이크로서비스가 프론트엔드에 제공할 서비스 명제들을 정리</li>
+  <li>도메인 모델링 (<code class="language-plaintext highlighter-rouge">Domain Modeling</code>) : 화이트보드, 포스트잇 등으로 도메인 설계 모델을 작성
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">OOAD</code> 방식과 다른 점? : <code class="language-plaintext highlighter-rouge">UML</code> 등으로 정형화된 설계 모델을 작성해 소스 코드로 변환하지 않음
+        <ul>
+          <li>단순한 도구들로 작성해 이를 공유하고 피드백을 받아 곧바로 소스 코드로 도메인을 개발</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">MDD</code>와 다른 점? : 추상적인 모델을 완벽히 만들고, 특정 기술이나 프레임워크를 통해 구체화하지 않음
+        <ul>
+          <li>코드 자체가 모델의 기본 표현 형식을 그대로 반영하므로, 모델과 코드가 단절되지 않음</li>
+        </ul>
+      </li>
+      <li>핵심 도메인 모델을 이해시키기 위해 역공학 도구를 통해 <code class="language-plaintext highlighter-rouge">UML</code> 모델을 표현할 수 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="ui-레이아웃-정의-및-백엔드-api-호출--프론트엔드-영역-설계-및-개발"><code class="language-plaintext highlighter-rouge">UI</code> 레이아웃 정의 및 백엔드 <code class="language-plaintext highlighter-rouge">API</code> 호출 → 프론트엔드 영역 설계 및 개발</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">UI</code> 흐름 정의 : 비즈니스 흐름에 따른 <code class="language-plaintext highlighter-rouge">UI</code> 흐름 정의 → <code class="language-plaintext highlighter-rouge">UI</code> 스토리보드</li>
+  <li><code class="language-plaintext highlighter-rouge">UI</code> 레이아수 정의 : 사용자 접점인 사용자 인터페이스 정의 → 발사믹 오븐, 카카오 오븐 등으로 산출</li>
+  <li><code class="language-plaintext highlighter-rouge">UI</code> 이벤트 및 액션 정의 : <code class="language-plaintext highlighter-rouge">UI</code> 레이아웃 내에서 특정 행위를 했을 때 발생하는 이벤트 및 액션 정의</li>
+  <li><code class="language-plaintext highlighter-rouge">UI</code> 개발 : <code class="language-plaintext highlighter-rouge">UI</code> 레아아웃 및 이벤트에 맞게 프론트엔드 어플리케이션 개발 → <code class="language-plaintext highlighter-rouge">UI</code> 프레임워크 등으로 산출</li>
+</ul>
+
+<h4 id="어플리케이션을-지속적으로-빌드하고-자동으로-배포--빌드-및-배포-환경-자동화">어플리케이션을 지속적으로 빌드하고 자동으로 배포 → 빌드 및 배포 환경 자동화</h4>
+
+<ul>
+  <li>소스 코드 리포지토리 구성 : 프론트엔드, 백엔드 코드를 위한 소스 코드 저장소 구성 (<code class="language-plaintext highlighter-rouge">Git</code>)</li>
+  <li>통합 빌드 잡 (<code class="language-plaintext highlighter-rouge">Build Job</code>) 구성 : 리포지토리에 존재하는 소스 코드를 통합해 컴파일 및 테스트 (<code class="language-plaintext highlighter-rouge">Jenkins</code>)</li>
+  <li>컨테이너 생성 파일 생성 : 컨테이너 배포 환경에서 운영 체제, <code class="language-plaintext highlighter-rouge">WAS</code>, 어플리케이션을 묶어 이미지 생성 (<code class="language-plaintext highlighter-rouge">Dockerfile</code>)</li>
+  <li>배포 스크립트 : 자동으로 배포되는 스크립트 작성 (<code class="language-plaintext highlighter-rouge">Jenkins</code>, <code class="language-plaintext highlighter-rouge">Github Actions</code>)</li>
+</ul>
 
 <blockquote>
   <p>Reference</p>
@@ -394,14 +486,14 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          8 분 소요
+          9 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">변수 (variable) : 데이터를 저장하는 공간
+    <p class="archive__item-excerpt" itemprop="description">변수 (variable) : 하나의 값을 저장할 수 있는 메모리 번지에 붙어진 이름
 
 </p>
   </article>
@@ -417,7 +509,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/java1/" rel="permalink">[Java] 1. 자바 (Java)
+        <a href="/java1/" rel="permalink">[Java] 1. Java
 </a>
       
     </h2>
@@ -435,7 +527,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 분 소요
+          3 분 소요
         
       </span>
     

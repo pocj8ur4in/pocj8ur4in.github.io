@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[Java] 2. 변수 (variable) - pocj8ur4in’s blog</title>
-<meta name="description" content="변수 (variable) : 데이터를 저장하는 공간">
+<meta name="description" content="변수 (variable) : 하나의 값을 저장할 수 있는 메모리 번지에 붙어진 이름">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://localhost:4000/java2/">
 
 
-  <meta property="og:description" content="변수 (variable) : 데이터를 저장하는 공간">
+  <meta property="og:description" content="변수 (variable) : 하나의 값을 저장할 수 있는 메모리 번지에 붙어진 이름">
 
 
 
@@ -181,7 +181,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[Java] 2. 변수 (variable)">
-    <meta itemprop="description" content="변수 (variable) : 데이터를 저장하는 공간">
+    <meta itemprop="description" content="변수 (variable) : 하나의 값을 저장할 수 있는 메모리 번지에 붙어진 이름">
     <meta itemprop="datePublished" content="2024-01-14T00:00:00+09:00">
     <meta itemprop="dateModified" content="2024-01-14T00:00:00+09:00">
 
@@ -206,7 +206,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          8 분 소요
+          9 분 소요
         
       </span>
     
@@ -221,51 +221,60 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#변수-variable--데이터를-저장하는-공간">변수 (variable) : 데이터를 저장하는 공간</a><ul><li><a href="#변수의-스코프-scope--변수가-유효한-범위">변수의 스코프 (Scope) : 변수가 유효한 범위</a></li><li><a href="#변수의-라이프타임-lifetime--변수가-메모리-영역에-저장되어-있는-시간">변수의 라이프타임 (LifeTime) : 변수가 메모리 영역에 저장되어 있는 시간</a></li><li><a href="#변수의-형변환-type-conversion--현재의-타입을-다른-타입올-바꾸는-것">변수의 형변환 (Type Conversion) : 현재의 타입을 다른 타입올 바꾸는 것</a></li></ul></li><li><a href="#배열-array--인덱스-index와-그-인덱스에-대응하는-데이터들로-이루어진-선형-자료구조">배열 (Array) : 인덱스 (Index)와 그 인덱스에 대응하는 데이터들로 이루어진 선형 자료구조</a></li><li><a href="#객체-object--프로그램에서-사용되는-데이터-혹은-식별자에-의해-참조되는-공간">객체 (Object) : 프로그램에서 사용되는 데이터 혹은 식별자에 의해 참조되는 공간</a></li><li><a href="#클래스-class--객체를-생성하기-위해-변수와-메소드를-정의하는-틀">클래스 (Class) : 객체를 생성하기 위해 변수와 메소드를 정의하는 틀</a><ul><li><a href="#main--해당-클래스를-자바-어플리케이션에서-실행하는-메소드">main() : 해당 클래스를 자바 어플리케이션에서 실행하는 메소드</a></li><li><a href="#final--오직-한-번만-할당할-수-있어-항상-같은-값을-가지는-entity를-정의할-때-사용하는-키워드">final : 오직 한 번만 할당할 수 있어 항상 같은 값을 가지는 entity를 정의할 때 사용하는 키워드</a></li></ul></li><li><a href="#어노테이션-annotation--컴파일--실행-과정에서-코드를-어떻게-처리할지-알리는-메타데이터">어노테이션 (Annotation) : 컴파일 &amp; 실행 과정에서 코드를 어떻게 처리할지 알리는 메타데이터</a></li><li><a href="#자바-모듈-java-module--클래스-jar-패키지-수준의-코드-그룹화-제공">자바 모듈 (Java Module) : 클래스, JAR, 패키지 수준의 코드 그룹화 제공</a></li><li><a href="#jdk의-scanner-클래스--자바의-키-입력-key-input">JDK의 Scanner 클래스 : 자바의 키 입력 (Key input)</a></li><li><a href="#예외-처리-exception-handling--발생한-예외에-대해-작성한-프로그램-내에서-대응하는-것">예외 처리 (Exception handling) : 발생한 예외에 대해 작성한 프로그램 내에서 대응하는 것</a></li></ul>
+              <ul class="toc__menu"><li><a href="#변수-variable--하나의-값을-저장할-수-있는-메모리-번지에-붙어진-이름">변수 (variable) : 하나의 값을 저장할 수 있는 메모리 번지에 붙어진 이름</a><ul><li><a href="#원시-자료형-primitive-type--선언-시-메모리-주소-위치-jvm-stack에-실제-값이-저장">원시 자료형 (Primitive type) : 선언 시 메모리 주소 위치 (JVM stack)에 실제 값이 저장</a><ul><li><a href="#논리-리터럴-boolean--참과-거짓을-의미">논리 리터럴 (Boolean) : 참과 거짓을 의미</a></li><li><a href="#정수-리터럴-integers--정수를">정수 리터럴 (Integers) : 정수를</a></li></ul></li><li><a href="#참조-자료형-reference-type--선언-시-메모리-주소-위치에-실제-값이-가리키는-다른-주소를-저장">참조 자료형 (Reference type) : 선언 시 메모리 주소 위치에 실제 값이 가리키는 다른 주소를 저장</a></li><li><a href="#var--데이터-타입을-명시하지-않아도-지역-변수의-타입을-자동으로-추론하는-키워드">var : 데이터 타입을 명시하지 않아도 지역 변수의 타입을 자동으로 추론하는 키워드</a></li></ul></li><li><a href="#변수의-스코프-scope--변수가-유효한-범위">변수의 스코프 (Scope) : 변수가 유효한 범위</a></li><li><a href="#변수의-라이프타임-lifetime--변수가-메모리-영역에-저장되어-있는-시간">변수의 라이프타임 (LifeTime) : 변수가 메모리 영역에 저장되어 있는 시간</a></li><li><a href="#변수의-형변환-type-conversion--현재의-타입을-다른-타입올-바꾸는-것">변수의 형변환 (Type Conversion) : 현재의 타입을 다른 타입올 바꾸는 것</a></li><li><a href="#배열-array--인덱스-index와-그-인덱스에-대응하는-데이터들로-이루어진-선형-자료구조">배열 (Array) : 인덱스 (Index)와 그 인덱스에 대응하는 데이터들로 이루어진 선형 자료구조</a></li><li><a href="#객체-object--프로그램에서-사용되는-데이터-혹은-식별자에-의해-참조되는-공간">객체 (Object) : 프로그램에서 사용되는 데이터 혹은 식별자에 의해 참조되는 공간</a></li><li><a href="#클래스-class--객체를-생성하기-위해-변수와-메소드를-정의하는-틀">클래스 (Class) : 객체를 생성하기 위해 변수와 메소드를 정의하는 틀</a><ul><li><a href="#main--해당-클래스를-자바-어플리케이션에서-실행하는-메소드">main() : 해당 클래스를 자바 어플리케이션에서 실행하는 메소드</a></li><li><a href="#final--오직-한-번만-할당할-수-있어-항상-같은-값을-가지는-entity를-정의할-때-사용하는-키워드">final : 오직 한 번만 할당할 수 있어 항상 같은 값을 가지는 entity를 정의할 때 사용하는 키워드</a></li></ul></li><li><a href="#어노테이션-annotation--컴파일--실행-과정에서-코드를-어떻게-처리할지-알리는-메타데이터">어노테이션 (Annotation) : 컴파일 &amp; 실행 과정에서 코드를 어떻게 처리할지 알리는 메타데이터</a></li><li><a href="#자바-모듈-java-module--클래스-jar-패키지-수준의-코드-그룹화-제공">자바 모듈 (Java Module) : 클래스, JAR, 패키지 수준의 코드 그룹화 제공</a></li><li><a href="#jdk의-scanner-클래스--자바의-키-입력-key-input">JDK의 Scanner 클래스 : 자바의 키 입력 (Key input)</a></li><li><a href="#예외-처리-exception-handling--발생한-예외에-대해-작성한-프로그램-내에서-대응하는-것">예외 처리 (Exception handling) : 발생한 예외에 대해 작성한 프로그램 내에서 대응하는 것</a></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="변수-variable--데이터를-저장하는-공간">변수 (<code class="language-plaintext highlighter-rouge">variable</code>) : 데이터를 저장하는 공간</h2>
+        <h2 id="변수-variable--하나의-값을-저장할-수-있는-메모리-번지에-붙어진-이름">변수 (<code class="language-plaintext highlighter-rouge">variable</code>) : 하나의 값을 저장할 수 있는 메모리 번지에 붙어진 이름</h2>
 
 <ul>
-  <li>원시 자료형 (<code class="language-plaintext highlighter-rouge">Primitive type</code>) : 선언 시 메모리 주소 위치 (<code class="language-plaintext highlighter-rouge">JVM stack</code>)에 실제 값이 저장
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">boolean</code> : <code class="language-plaintext highlighter-rouge">true</code> / <code class="language-plaintext highlighter-rouge">false</code> (초기값 : <code class="language-plaintext highlighter-rouge">false</code>)</li>
-      <li>문자 (<code class="language-plaintext highlighter-rouge">char</code>) : <code class="language-plaintext highlighter-rouge">''</code>를 이용해 표시 (초기값 : <code class="language-plaintext highlighter-rouge">'\0'</code>=<code class="language-plaintext highlighter-rouge">0</code>)</li>
-      <li>바이트 (<code class="language-plaintext highlighter-rouge">byte</code>) : 데이터를 나타내는 바이트 값 (초기값 : <code class="language-plaintext highlighter-rouge">0</code>)</li>
-      <li>정수 (<code class="language-plaintext highlighter-rouge">short</code>, <code class="language-plaintext highlighter-rouge">int</code>, <code class="language-plaintext highlighter-rouge">long</code>) : <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">4</code>, <code class="language-plaintext highlighter-rouge">8</code>바이트 크기 내의 정수 (초기값 : <code class="language-plaintext highlighter-rouge">0</code>)</li>
-      <li>실수 (<code class="language-plaintext highlighter-rouge">float</code>, <code class="language-plaintext highlighter-rouge">double</code>) : <code class="language-plaintext highlighter-rouge">4</code>, <code class="language-plaintext highlighter-rouge">8</code>바이트 크기 내의 실수 (초기값 : <code class="language-plaintext highlighter-rouge">0.0</code>)</li>
-    </ul>
-  </li>
-  <li>래퍼런스 자료형 (<code class="language-plaintext highlighter-rouge">Reference type</code>) : 선언 시 메모리 주소 위치에 실제 값이 가리키는 다른 주소를 저장
-    <ul>
-      <li>실제 값은 <code class="language-plaintext highlighter-rouge">Heap</code>에 저장</li>
-      <li>배열, 클래스, 인터페이스에 대한 래퍼런스</li>
-    </ul>
-  </li>
+  <li>변수의 선언 : 어떤 차입의 데이터를 저장할지, 그리고 변수의 이름이 무엇인지 결정</li>
+  <li>변수의 이름 : 첫번째 글자는 소문자로 시작하되, 캐멀 스타일 (<code class="language-plaintext highlighter-rouge">Camel Style</code>)로 작성하는 것이 관례</li>
+  <li>값의 대입 (<code class="language-plaintext highlighter-rouge">=</code>) : 선언된 변수에 값을 저장 → 변수의 초기화</li>
+  <li></li>
+</ul>
+
+<h3 id="원시-자료형-primitive-type--선언-시-메모리-주소-위치-jvm-stack에-실제-값이-저장">원시 자료형 (<code class="language-plaintext highlighter-rouge">Primitive type</code>) : 선언 시 메모리 주소 위치 (<code class="language-plaintext highlighter-rouge">JVM stack</code>)에 실제 값이 저장</h3>
+
+<h4 id="논리-리터럴-boolean--참과-거짓을-의미">논리 리터럴 (<code class="language-plaintext highlighter-rouge">Boolean</code>) : 참과 거짓을 의미</h4>
+
+<ul>
+  <li>논리 타입 (<code class="language-plaintext highlighter-rouge">boolean</code>) : <code class="language-plaintext highlighter-rouge">true</code> / <code class="language-plaintext highlighter-rouge">false</code></li>
+</ul>
+
+<h4 id="정수-리터럴-integers--정수를">정수 리터럴 (<code class="language-plaintext highlighter-rouge">Integers</code>) : 정수를</h4>
+
+<ul>
+  <li>문자 (<code class="language-plaintext highlighter-rouge">char</code>) : <code class="language-plaintext highlighter-rouge">''</code>를 이용해 표시 (초기값 : <code class="language-plaintext highlighter-rouge">'\0'</code>=<code class="language-plaintext highlighter-rouge">0</code>)</li>
+  <li>바이트 (<code class="language-plaintext highlighter-rouge">byte</code>) : 데이터를 나타내는 바이트 값 (초기값 : <code class="language-plaintext highlighter-rouge">0</code>)</li>
+  <li>정수 (<code class="language-plaintext highlighter-rouge">short</code>, <code class="language-plaintext highlighter-rouge">int</code>, <code class="language-plaintext highlighter-rouge">long</code>) : <code class="language-plaintext highlighter-rouge">2</code>, <code class="language-plaintext highlighter-rouge">4</code>, <code class="language-plaintext highlighter-rouge">8</code>바이트 크기 내의 정수 (초기값 : <code class="language-plaintext highlighter-rouge">0</code>)</li>
+  <li>실수 (<code class="language-plaintext highlighter-rouge">float</code>, <code class="language-plaintext highlighter-rouge">double</code>) : <code class="language-plaintext highlighter-rouge">4</code>, <code class="language-plaintext highlighter-rouge">8</code>바이트 크기 내의 실수 (초기값 : <code class="language-plaintext highlighter-rouge">0.0</code>)</li>
+</ul>
+
+<h3 id="참조-자료형-reference-type--선언-시-메모리-주소-위치에-실제-값이-가리키는-다른-주소를-저장">참조 자료형 (<code class="language-plaintext highlighter-rouge">Reference type</code>) : 선언 시 메모리 주소 위치에 실제 값이 가리키는 다른 주소를 저장</h3>
+<ul>
+  <li>원시 자료형을 기초로 하여 만들어짐 → <code class="language-plaintext highlighter-rouge">Non-Primitive type</code></li>
+  <li>실제 값은 <code class="language-plaintext highlighter-rouge">Heap</code>에 저장</li>
 </ul>
 
 <blockquote>
   <p>자바는 주소값의 추상화를 금지함, <code class="language-plaintext highlighter-rouge">Call by value</code>만 가능 (<code class="language-plaintext highlighter-rouge">C/C++</code> : 주소값 저장 (<code class="language-plaintext highlighter-rouge">*</code>) 및 추출 (<code class="language-plaintext highlighter-rouge">&amp;</code>) 가능)</p>
 </blockquote>
 
+<h3 id="var--데이터-타입을-명시하지-않아도-지역-변수의-타입을-자동으로-추론하는-키워드"><code class="language-plaintext highlighter-rouge">var</code> : 데이터 타입을 명시하지 않아도 지역 변수의 타입을 자동으로 추론하는 키워드</h3>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">var</code> : 데이터 타입을 명시하지 않아도 지역 변수의 타입을 자동으로 추론하는 키워드
-    <ul>
-      <li>지역 변수만 사용 가능 (<code class="language-plaintext highlighter-rouge">static</code> 적용 불가)</li>
-      <li>선언과 함께 명시적인 초기화를 반드시 해야 함</li>
-      <li><code class="language-plaintext highlighter-rouge">NULL</code>로 초기화할 수 없음</li>
-      <li>람다 표현식과 같이 사용할 수 없음</li>
-    </ul>
-  </li>
+  <li>지역 변수만 사용 가능 (<code class="language-plaintext highlighter-rouge">static</code> 적용 불가)</li>
+  <li>선언과 함께 명시적인 초기화를 반드시 해야 함</li>
+  <li><code class="language-plaintext highlighter-rouge">NULL</code>로 초기화할 수 없음</li>
+  <li>람다 표현식과 같이 사용할 수 없음</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var s = 'String';
 var n = 100;
 </code></pre></div></div>
 
-<h3 id="변수의-스코프-scope--변수가-유효한-범위">변수의 스코프 (<code class="language-plaintext highlighter-rouge">Scope</code>) : 변수가 유효한 범위</h3>
+<h2 id="변수의-스코프-scope--변수가-유효한-범위">변수의 스코프 (<code class="language-plaintext highlighter-rouge">Scope</code>) : 변수가 유효한 범위</h2>
 
 <ul>
   <li>접근 지정자 (<code class="language-plaintext highlighter-rouge">access modifier</code>) : 접근 가능한 수준 지정
@@ -278,7 +287,7 @@ var n = 100;
   </li>
 </ul>
 
-<h3 id="변수의-라이프타임-lifetime--변수가-메모리-영역에-저장되어-있는-시간">변수의 라이프타임 (<code class="language-plaintext highlighter-rouge">LifeTime</code>) : 변수가 메모리 영역에 저장되어 있는 시간</h3>
+<h2 id="변수의-라이프타임-lifetime--변수가-메모리-영역에-저장되어-있는-시간">변수의 라이프타임 (<code class="language-plaintext highlighter-rouge">LifeTime</code>) : 변수가 메모리 영역에 저장되어 있는 시간</h2>
 
 <ul>
   <li>인스턴스 변수 (<code class="language-plaintext highlighter-rouge">static block</code>과 <code class="language-plaintext highlighter-rouge">static method</code>를 제외한 클래스 전체) : 객체가 생성되어 메모리에 존재하는 동안</li>
@@ -286,7 +295,7 @@ var n = 100;
   <li>로컬 변수 (변수가 선언된 블록의 내부) : 변수 선언 이후부터 블록을 벗어날 때까지</li>
 </ul>
 
-<h3 id="변수의-형변환-type-conversion--현재의-타입을-다른-타입올-바꾸는-것">변수의 형변환 (<code class="language-plaintext highlighter-rouge">Type Conversion</code>) : 현재의 타입을 다른 타입올 바꾸는 것</h3>
+<h2 id="변수의-형변환-type-conversion--현재의-타입을-다른-타입올-바꾸는-것">변수의 형변환 (<code class="language-plaintext highlighter-rouge">Type Conversion</code>) : 현재의 타입을 다른 타입올 바꾸는 것</h2>
 
 <blockquote>
   <p><code class="language-plaintext highlighter-rouge">boolean</code>을 제외한 나머지 기본 자료형 간의 타입 변환이 가능</p>
@@ -823,7 +832,7 @@ public void funcB() throws Exception { // throws로 예외 처리를 Exception�
       
   <nav class="pagination">
     
-      <a href="/java1/" class="pagination--pager" title="[Java] 1. 자바 (Java)
+      <a href="/java1/" class="pagination--pager" title="[Java] 1. Java
 ">이전</a>
     
     
@@ -870,7 +879,7 @@ public void funcB() throws Exception { // throws로 예외 처리를 Exception�
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          3 분 소요
         
       </span>
     
@@ -934,7 +943,7 @@ public void funcB() throws Exception { // throws로 예외 처리를 Exception�
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/java1/" rel="permalink">[Java] 1. 자바 (Java)
+        <a href="/java1/" rel="permalink">[Java] 1. Java
 </a>
       
     </h2>
@@ -952,7 +961,7 @@ public void funcB() throws Exception { // throws로 예외 처리를 Exception�
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 분 소요
+          3 분 소요
         
       </span>
     
