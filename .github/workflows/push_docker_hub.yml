@@ -16,7 +16,7 @@ jobs:
 
       # Docker 빌드 툴인 Docker Buildx 설정
       - name: Set up Docker Buildx
-        uses: docker/buildx-action@v2
+        uses: docker/setup-buildx-action@v2
 
       # Docker Hub에 로그인
       - name: Login to Docker Hub
