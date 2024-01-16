@@ -1,5 +1,5 @@
 ---
-title: "[MicroService] 3. Microservice Architecture"
+title: "[MicroService] 3. MicroService Architecture"
 
 tags:
     - MicroService

@@ -8,7 +8,7 @@ toc: true
 toc_sticky: true
 
 date: 2024-01-15
-last_modified_at: 2024-01-15
+last_modified_at: 2024-01-16
 ---
 
 ## 에자일 개발 프로세스 (```Agile Development Process```) : 피드백을 통한 지속적인 개선 추구
