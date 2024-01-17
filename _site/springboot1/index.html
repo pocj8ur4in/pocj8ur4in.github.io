@@ -1,0 +1,882 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[SpringBoot] 1. SpringBoot - pocj8ur4in’s blog</title>
+<meta name="description" content="객체지향 프로그래밍 (OOP) :  프로그램을 일련의 독립된 객체들로 이해하는 프로그래밍 방법론">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[SpringBoot] 1. SpringBoot">
+<meta property="og:url" content="http://localhost:4000/springboot1/">
+
+
+  <meta property="og:description" content="객체지향 프로그래밍 (OOP) :  프로그램을 일련의 독립된 객체들로 이해하는 프로그래밍 방법론">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-01-16T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2024-01-16T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/springboot1/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[SpringBoot] 1. SpringBoot</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[SpringBoot] 1. SpringBoot">
+    <meta itemprop="description" content="객체지향 프로그래밍 (OOP) :  프로그램을 일련의 독립된 객체들로 이해하는 프로그래밍 방법론">
+    <meta itemprop="datePublished" content="2024-01-16T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-16T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/springboot1/" class="u-url" itemprop="url">[SpringBoot] 1. SpringBoot
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#객체지향-프로그래밍-oop---프로그램을-일련의-독립된-객체들로-이해하는-프로그래밍-방법론">객체지향 프로그래밍 (OOP) :  프로그램을 일련의 독립된 객체들로 이해하는 프로그래밍 방법론</a><ul><li><a href="#객체지향-5원칙-solid--객체자향을-올바르게-설계할-수-있도록-도와주는-원칙">객체지향 5원칙 (SOLID) : 객체자향을 올바르게 설계할 수 있도록 도와주는 원칙</a></li><li><a href="#자바-빈-java-bean--자바-객체를-재사용-가능하도록-컴포넌트화한-클래스">자바 빈 (Java Bean) : 자바 객체를 재사용 가능하도록 컴포넌트화한 클래스</a></li><li><a href="#ejb-j2ee--비즈니스-로직과-시스템-서비스-로직을-분산하고-로직-간의-규약을-규정">EJB, J2EE : 비즈니스 로직과 시스템 서비스 로직을 분산하고, 로직 간의 규약을 규정</a></li><li><a href="#스프링-spring--자바-java-기반의-웹-프레임워크-web-framework">스프링 (Spring) : 자바 (JAVA) 기반의 웹 프레임워크 (Web Framework)</a></li></ul></li><li><a href="#스프링부트-springboot--스프링-프레임워크-기술을-편리하게-사용할-수-있도록-지원">스프링부트 (SpringBoot) : 스프링 프레임워크 기술을 편리하게 사용할 수 있도록 지원</a><ul><li><a href="#스프링부트-컴포넌트-springboot-components--어플리케이션-개발의-특정-영역에-특화된-요소">스프링부트 컴포넌트 (SpringBoot Components) : 어플리케이션 개발의 특정 영역에 특화된 요소</a></li><li><a href="#스프링부트-프로젝트-구조--스프링-이니셜라이저-spring-initializr로-자동-생성">스프링부트 프로젝트 구조 : 스프링 이니셜라이저 (Spring Initializr)로 자동 생성</a><ul><li><a href="#스프링부트-메인-클래스--패키지-내에서-어플리케이션-실행을-담당하는-클래스">스프링부트 메인 클래스 : 패키지 내에서 어플리케이션 실행을 담당하는 클래스</a></li></ul></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="객체지향-프로그래밍-oop---프로그램을-일련의-독립된-객체들로-이해하는-프로그래밍-방법론">객체지향 프로그래밍 (<code class="language-plaintext highlighter-rouge">OOP</code>) :  프로그램을 일련의 독립된 객체들로 이해하는 프로그래밍 방법론</h2>
+
+<ul>
+  <li>캡슐화 (<code class="language-plaintext highlighter-rouge">Encapsulation</code>) : 변수와 함수를 하나의 단위로 묶는 것</li>
+  <li>정보 은닉 (<code class="language-plaintext highlighter-rouge">Information Hiding</code>) : 프로그램의 구현을 외부로 드러나지 않게 내부로 감추는 것</li>
+  <li>상속 (<code class="language-plaintext highlighter-rouge">Inheritance</code>) : 자식 클래스가 부모 클래스의 특성과 기능을 그대로 물려받는 것</li>
+  <li>다형성 (<code class="language-plaintext highlighter-rouge">Polymorphism</code>) : 하나의 변수, 또는 함수가 상황에 따라 다른 의미로 해석되는 것</li>
+</ul>
+
+<h3 id="객체지향-5원칙-solid--객체자향을-올바르게-설계할-수-있도록-도와주는-원칙">객체지향 5원칙 (<code class="language-plaintext highlighter-rouge">SOLID</code>) : 객체자향을 올바르게 설계할 수 있도록 도와주는 원칙</h3>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">SRP</code> (<code class="language-plaintext highlighter-rouge">Single Responsibility Principle</code>) : 객체는 오직 하나의 책임을 가져야 한다.
+    <ul>
+      <li>클래스를 설계할 때 어플리케이션의 경계를 정하고, 추상화로 어플리케이션 내의 속성과 메소드를 설계해야 한다.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">OCP</code> (<code class="language-plaintext highlighter-rouge">Open Closed Principle</code>) : 객체는 확장에 대해 개방적이고 수정에 대해 폐쇄적이어야 한다.
+    <ul>
+      <li>클래스, 모듈, 함수와 연동할 때는 상위 클래스나 인터페이스를 중간에 두어 직접적인 연동을 피해야 한다.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">LSP</code> (<code class="language-plaintext highlighter-rouge">Liskov Substitution Principle</code>) : 자식 클래스는 항상 자신의 부모 클래스를 대체할 수 있다.
+    <ul>
+      <li>자식 클래스의 인스턴스는 부모 클래스의 인스턴스 역할을 대신할 때에도 논리적으로 문제가 없어야 한다.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">ISP</code> (<code class="language-plaintext highlighter-rouge">Interface Segregation Principle</code>) : 클라이언트에서 사용하지 않는 메서드는 사용해선 안 된다.
+    <ul>
+      <li>각 상황에 맞는 메소드만 클래스에게 제공하도록 인터페이스를 작게 나누어 설계해야 한다.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">DIP</code> (<code class="language-plaintext highlighter-rouge">Dependency Inversion Principle</code>) : 자신보다 변하기 쉬운 것에 의존해선 안된다.
+    <ul>
+      <li>추상성이 높고 고수준의 클래스는 구체적이고 저수준의 클래스에 의존하지 않도록 설계해야 한다.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="자바-빈-java-bean--자바-객체를-재사용-가능하도록-컴포넌트화한-클래스">자바 빈 (<code class="language-plaintext highlighter-rouge">Java Bean</code>) : 자바 객체를 재사용 가능하도록 컴포넌트화한 클래스</h3>
+
+<ul>
+  <li>클래스는 반드시 패키지화되어야 한다.</li>
+  <li>멤버변수는 프로퍼티 (<code class="language-plaintext highlighter-rouge">Property</code>) 라고 부른다.</li>
+  <li>프로퍼티의 접근 제어자는 <code class="language-plaintext highlighter-rouge">private</code>이다.</li>
+  <li>데이터를 저장하는 필드와 그 데이터를 조작하기 위한 외부에서의 접근은 <code class="language-plaintext highlighter-rouge">getter</code>와 <code class="language-plaintext highlighter-rouge">setter</code> 메소드로 한다.</li>
+  <li>프로퍼티가 <code class="language-plaintext highlighter-rouge">boolean</code>이면, <code class="language-plaintext highlighter-rouge">get</code>가 아닌 <code class="language-plaintext highlighter-rouge">is</code>를 사용해도 된다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class MemberInfo {
+  private int id;
+  private String Name;
+  private String pw;
+  
+  public int getId() { return id; }
+  public void setId(int id) { this.id = id; }
+  public String getName() { return Name; }
+  public void setName(String name) { this.Name = name; }
+  public String getPw() { return pw; }
+  public void setPw(String pw) { this.pw = pw; }
+}
+</code></pre></div></div>
+
+<blockquote>
+  <p>… 서버 사이드에서 어플리케이선을 개발할 때 자바 빈만으로 해결하지 못하는 문제가 발생한다.</p>
+
+  <ul>
+    <li>기존 어플리케이션에 필요한 비즈니스 로직만이 아닌, <code class="language-plaintext highlighter-rouge">DB</code>와 트랜젝션 처리를 위한 프로그램이 추가로 필요하다.</li>
+    <li>각각의 어플리케이션 서버에는 독자적인 <code class="language-plaintext highlighter-rouge">API</code>이 제공되기에 어플리케이션의 컴포넌트화가 어렵다.</li>
+  </ul>
+</blockquote>
+
+<h3 id="ejb-j2ee--비즈니스-로직과-시스템-서비스-로직을-분산하고-로직-간의-규약을-규정"><code class="language-plaintext highlighter-rouge">EJB</code>, <code class="language-plaintext highlighter-rouge">J2EE</code> : 비즈니스 로직과 시스템 서비스 로직을 분산하고, 로직 간의 규약을 규정</h3>
+
+<ul>
+  <li>비즈니스 로직을 탑재한 부품을 <code class="language-plaintext highlighter-rouge">Enterprise Bean</code>이라 부른다.</li>
+  <li><code class="language-plaintext highlighter-rouge">DB</code>와 트랙젝션 처리 등의 시스템 서비스를 이용하는 부품을 컨테이너 (<code class="language-plaintext highlighter-rouge">Container</code>)라 부른다.</li>
+  <li>비즈니스 객체들을 관리하는 <code class="language-plaintext highlighter-rouge">EJB</code> 컨테이너에서 필요할 때마다 객체를 꺼내는 방식으로 객체들 간의 의존성을 해결한다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Stateless
+public class Service {
+
+  @PersistenceContext
+  private Manager Manager;
+
+  public void addCustomer(Customer customer) {
+    Manager.persist(customer);
+  }
+}
+</code></pre></div></div>
+
+<blockquote>
+  <p>… <code class="language-plaintext highlighter-rouge">EJB</code>는 비즈니스 로직이 특정 <code class="language-plaintext highlighter-rouge">EJB</code> 컨테이너에 종속되는 문제가 발생한다. (→ 기술 침투)</p>
+
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">EJB</code> 컨테이너를 사용하기 위한 코드 (상속 &amp; 구현)들이 많고, <code class="language-plaintext highlighter-rouge">EJB</code> 컨테이너가 없으면 불필요한 코드가 된다.</li>
+    <li>회사마다 <code class="language-plaintext highlighter-rouge">EJB</code> 컨테이너를 구현한 내용이 달라 다른 회사의 <code class="language-plaintext highlighter-rouge">EJB</code> 컨테이너로의 변경이 어렵다.</li>
+  </ul>
+
+  <p>→ 회사마다 다르고 복잡한 자바 엔터프라이즈 어플리케이션의 개발을 하나로 단순화하자!</p>
+</blockquote>
+
+<h3 id="스프링-spring--자바-java-기반의-웹-프레임워크-web-framework">스프링 (<code class="language-plaintext highlighter-rouge">Spring</code>) : 자바 (<code class="language-plaintext highlighter-rouge">JAVA</code>) 기반의 웹 프레임워크 (<code class="language-plaintext highlighter-rouge">Web Framework</code>)</h3>
+
+<ul>
+  <li>순수 자바 객체 (<code class="language-plaintext highlighter-rouge">Plain Old Java Object</code>) 방식 : <code class="language-plaintext highlighter-rouge">POLO</code>
+    <ul>
+      <li>인터페이스를 직접 구현하거나 상속받지 않아 기존 라이브러리 지원에 용이하고, 코드가 간결하며 객체가 가벼움</li>
+    </ul>
+  </li>
+  <li>관점지향 프로그래밍 (<code class="language-plaintext highlighter-rouge">Aspect Oriented Programming</code>) : <code class="language-plaintext highlighter-rouge">AOP</code>
+    <ul>
+      <li>로깅, 트랜잭션, 보안 등 여러 모듈에서 공통적으로 사용하는 기능을 분리하여 관리할 수 있음</li>
+    </ul>
+  </li>
+  <li>의존성 주입 (<code class="language-plaintext highlighter-rouge">Dependency Injection</code>) : <code class="language-plaintext highlighter-rouge">DI</code>
+    <ul>
+      <li>프로그래밍 구성 요소 간 의존 관계를 코드 밖에서 설정을 통해 정의해, 재사용률을 높이고 모듈 간 결합도를 낮춤</li>
+    </ul>
+  </li>
+  <li>제어의 역전 (<code class="language-plaintext highlighter-rouge">Inversion of Control</code>) : <code class="language-plaintext highlighter-rouge">IoC</code>
+    <ul>
+      <li>객체의 생성부터 소멸까지의 제어권이 프레임워크에게 있어, 외부 라이브러리 코드가 개발자의 코드를 호출</li>
+    </ul>
+  </li>
+  <li>모델-뷰-컨트롤러 (<code class="language-plaintext highlighter-rouge">Model-View-Controller</code>) : <code class="language-plaintext highlighter-rouge">MVC</code> 패턴
+    <ul>
+      <li>사용자 인터페이스, 데이터 및 논리 제어의 구현에 사용되는 소프트웨어 디자인 패턴</li>
+    </ul>
+  </li>
+  <li>모듈화 디자인 (<code class="language-plaintext highlighter-rouge">Modulation</code>) : 한 프레임워크을 여러 기능적 구성요소 (<code class="language-plaintext highlighter-rouge">Module</code>)로 조합해 완성
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Core</code> : 제어의 역전 (<code class="language-plaintext highlighter-rouge">IOC</code>)과 의존성 주입 (<code class="language-plaintext highlighter-rouge">DI</code>) 기능 제공</li>
+      <li><code class="language-plaintext highlighter-rouge">DAO</code> : 자바 데이터베이스 커넥터 (<code class="language-plaintext highlighter-rouge">JDBC</code>) 추상 계층 제공 (<code class="language-plaintext highlighter-rouge">VO</code> 클래스로 접근)</li>
+      <li><code class="language-plaintext highlighter-rouge">ORM</code> : <code class="language-plaintext highlighter-rouge">ORM</code>이나 데이터베이스 <code class="language-plaintext highlighter-rouge">API</code>와의 통합 기능 제공</li>
+      <li><code class="language-plaintext highlighter-rouge">Web</code> : 웹 어플리케이션 구현과 관련된 기능 제공</li>
+      <li><code class="language-plaintext highlighter-rouge">JEE</code> : 엔터프라이즈 <code class="language-plaintext highlighter-rouge">J2EE</code> 스펙과 관한 기능 제공</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>… 스프링 프레임워크가 나왔지만 여전히 개발자가 신경써야 할 일이 많다.</p>
+
+  <ul>
+    <li>서블릿 (<code class="language-plaintext highlighter-rouge">Servlet</code>)에 대한 이해와 서블릿의 배포를 위해 필요한 <code class="language-plaintext highlighter-rouge">web.xml</code>에 대한 이해</li>
+    <li>어플리케이션 컴포넌트를 패키징한 <code class="language-plaintext highlighter-rouge">WAR</code>, <code class="language-plaintext highlighter-rouge">EAR</code> 디렉터리 구조에 대한 지식</li>
+    <li>도메인, 포트, 스레드, 데이터 소스 등 어플리케이션을 배포할 때에 필요한 서버 지식</li>
+    <li>복잡한 클래스 로딩 전략, 어플리케이션 모니터링, 유지 관리, 로깅 처리</li>
+  </ul>
+
+  <p>→ 어플리케이션에 비즈니스 로직을 작성하고, 실행 가능한 파일로 만들어 커맨드라인으로 바로 실행하자!</p>
+</blockquote>
+
+<h2 id="스프링부트-springboot--스프링-프레임워크-기술을-편리하게-사용할-수-있도록-지원">스프링부트 (<code class="language-plaintext highlighter-rouge">SpringBoot</code>) : 스프링 프레임워크 기술을 편리하게 사용할 수 있도록 지원</h2>
+
+<ul>
+  <li>빠른 구동 (<code class="language-plaintext highlighter-rouge">Quick Run</code>) : 어플리케이션에 필요한 의존 관계만 명시하면, 어플리케이션을 빠르게 실행할 수 있음
+    <ul>
+      <li>스프링 <code class="language-plaintext highlighter-rouge">MVC</code> 의존 관계의 추가</li>
+      <li>메이븐 혹은 그레이들 프로젝의트 설정</li>
+      <li>스프링 <code class="language-plaintext highlighter-rouge">MVC</code>의 <code class="language-plaintext highlighter-rouge">DispatcherServlet</code>의 설정</li>
+      <li>어플리케이션 컴포넌트를 <code class="language-plaintext highlighter-rouge">WAR</code> 파일로 패키징</li>
+      <li><code class="language-plaintext highlighter-rouge">WAR</code> 파일을 아파치 톰캣 (<code class="language-plaintext highlighter-rouge">Apache Tomcat</code>) 같은 서블릿 컨테이너에 배포</li>
+    </ul>
+  </li>
+  <li>자동 구성 (<code class="language-plaintext highlighter-rouge">Auto Configuration</code>) : 어플리케이션에 필요한 최소한의 컴포넌트를 대신해서 설정
+    <ul>
+      <li>클래스패스에 있는 <code class="language-plaintext highlighter-rouge">JAR</code> 파일이나 여러 설정 파일에 지정된 프로퍼티 정보를 바탕으로 구성</li>
+      <li><code class="language-plaintext highlighter-rouge">XML</code> 파일을 자체적으로 빌드하여 스프링 프로젝트 내 객체 의존성 관리를 자동화</li>
+      <li>스프링 외부에 존재하는 라이브러리 또한 가져와 자동으로 구성</li>
+    </ul>
+  </li>
+  <li>미리 정의된 방식 (<code class="language-plaintext highlighter-rouge">Opinionated</code>) : 어플리케이션 실행에 필요한 컴포넌트들을 <code class="language-plaintext highlighter-rouge">starter</code> 의존 관계를 기준으로 구성
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">spring-boot-starter-web</code>만 추가하면, 웹 어플리케이션 개발에 필요한 의존 관계를 클래스패스에 모두 넣어줌</li>
+    </ul>
+  </li>
+  <li>독립 실행형 (<code class="language-plaintext highlighter-rouge">Standalone</code>) : 어플리케이션에 웹 서버를 내장하여 독립적으로 실행 가능
+    <ul>
+      <li>실행 가능한 <code class="language-plaintext highlighter-rouge">JAR</code> 파일로 패키징 → <code class="language-plaintext highlighter-rouge">java -jar</code> 명령어로 실행 가능</li>
+      <li>어플리케이션이 쉽게 컨테이너화될 수 있어 클라우드 네이티브 (<code class="language-plaintext highlighter-rouge">Cloud Native</code>)에도 적합</li>
+    </ul>
+  </li>
+  <li>실제 서비스 환경에 사용 가능 (<code class="language-plaintext highlighter-rouge">Production-Ready</code>)
+    <ul>
+      <li>헬스 체크 (<code class="language-plaintext highlighter-rouge">Health Check</code>)나 스레드 덤프 (<code class="language-plaintext highlighter-rouge">Thread</code>) 분석을 통한 어플리케이션 모니터링 기능 제공</li>
+      <li>매트릭 (<code class="language-plaintext highlighter-rouge">Metric</code>), 상태 확인, 외부 구성과 같은 프로덕션 준비 기능 제공</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="스프링부트-컴포넌트-springboot-components--어플리케이션-개발의-특정-영역에-특화된-요소">스프링부트 컴포넌트 (<code class="language-plaintext highlighter-rouge">SpringBoot Components</code>) : 어플리케이션 개발의 특정 영역에 특화된 요소</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">spring-boot</code> : 스프링부트의 기본 컴포넌트로서, 다른 컴포넌트를 사용할 수 있도록 지원
+    <ul>
+      <li>톰캣 (<code class="language-plaintext highlighter-rouge">Tomcat</code>)과 같은 내장 웝 서버 기능</li>
+      <li>데이터베이스 연결 정보와 같은 어플리케이션 설정 정보를 외부화하는 기능</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">spring-boot-autoconfigure</code> : 어플리케이션에 필요한 의존 관계의 자동 구성을 담당
+    <ul>
+      <li>클래스패스와 설정 파일의 포로퍼티에 저장된 의존 관계를 바탕으로 스프링 빈 (<code class="language-plaintext highlighter-rouge">Spring Boot</code>)을 추론해 생성</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">spring-boot-starters</code> : 개발의 편의를 위해 제공하는 미리 패키징된 의존 관셰 기술서의 모음</li>
+  <li><code class="language-plaintext highlighter-rouge">spring-boot-CLI</code> : 그루브 코드를 컴파일하고 실행할 수 있는, 관리자 친화적 명령행 도구
+    <ul>
+      <li>어플리케이션에 수정 사항이 발생할 때마다 파일 내용의 변경 감지</li>
+      <li>의존 관계 관리나 빌드 관련 문제에 대한 걱정 없이 프로트타입 어플리케이션을 빠르게 만들 수 있게 해줌</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">spring-boot-actuator</code> : 어플리케이션을 모니터링하고 검사 가능한 엑추에이터 엔드포인트 제공
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">JMX</code>나 <code class="language-plaintext highlighter-rouge">HTTP</code> 엔드포인트로 관리할 수 있음</li>
+      <li>어플리케이션의 여러 측면의 상태를 감지할 수 있도록 미리 정의된 형태의 다양한 엑추에이터 엔드포인드들을 제공</li>
+      <li>커스텀 엑추에이터 엔드포인트를 추가하거나, 엑추에이터 엔드포인트의 활성화 여부를 설정할 수 있음</li>
+      <li>인가되지 않은 접근으로부터 엔드포인트를 보호할 수도 있음</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">spring-boot-actuator-autoconfigure</code> : 클래스패스에 있는 클래스를 기반으로 엑추에이터 엔드포인트를 자동 구성
+    <ul>
+      <li>의존 관계가 클래스패스에 있으면, 이에 해당되는 것을 엑추에이터 엔드포인트로 추가</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">spring-boot-test</code> : 테스트 케이스의 작성에 필요한 에너테이션 (<code class="language-plaintext highlighter-rouge">annotation</code>) 및 메소드 포함</li>
+  <li><code class="language-plaintext highlighter-rouge">spring-boot-test-autoconfigure</code> : 어플리케이션의 테스트 케이스에 필요한 의존 관계를 자동 구성</li>
+  <li><code class="language-plaintext highlighter-rouge">spring-boot-loader</code> : 어플리케이션을 <code class="language-plaintext highlighter-rouge">JAR</code> 파일로 패키징하기 위해 필요한 모든 의존 관계와 내장 웹 서버를 포함
+    <ul>
+      <li>독립적으로 사용되지 않고 메이븐이나 그레이들 플러그인과 함께 사용</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">spring-boot-devtools</code> : 어플리케이션 개발을 돕는 여러 개발자 도구들</li>
+</ul>
+
+<h3 id="스프링부트-프로젝트-구조--스프링-이니셜라이저-spring-initializr로-자동-생성">스프링부트 프로젝트 구조 : 스프링 이니셜라이저 (<code class="language-plaintext highlighter-rouge">Spring Initializr</code>)로 자동 생성</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pom.xml / build.gradle</code> : 스프링 이니셜라이저에서 스프링부트 프로젝트를 생성할 때 지정한 의존 관계가 들어 있음
+    <ul>
+      <li>메이븐 (<code class="language-plaintext highlighter-rouge">Maven</code>) 혹은 그레이들 (<code class="language-plaintext highlighter-rouge">Gradle</code>)과 같은 빌드 도구를 통해 빌드 가능</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;parent&gt;  &lt;!-- spring-boot-starter-parent : 스타터 의존 관계나 플러그인에 대한 기본 설정 제공 및 관리 --&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;3.2.1&lt;/version&gt;
+        &lt;relativePath/&gt; &lt;!-- 메이븐 리포지토리에서 parent를 가져옴 --&gt;
+    &lt;/parent&gt;
+    &lt;groupId&gt;pocj8ur4in&lt;/groupId&gt;  &lt;!-- 프로젝트 아티펙트 정보 --&gt;
+    &lt;artifactId&gt;test&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;name&gt;pocj8ur4inTest&lt;/name&gt;
+    &lt;description&gt;pocj8ur4inTest&lt;/description&gt;
+    &lt;properties&gt;
+        &lt;java.version&gt;21&lt;/java.version&gt;
+    &lt;/properties&gt;
+    &lt;dependencies&gt;  &lt;!-- dependencies : 스타터 의존 관계들을 선언 --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;  &lt;!-- JUnit, Mockito 등으올 스프링부트 어플리케이션 테스트를 지원 --&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+    &lt;build&gt;
+        &lt;plugins&gt;  &lt;!-- plugins : 플러그인들을 선언 --&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+&lt;/project&gt;
+</code></pre></div></div>
+
+<blockquote>
+  <p>빌드 플러그인을 통한 스프링부트 어플리케이션의 실행 흐름</p>
+
+  <ol>
+    <li><code class="language-plaintext highlighter-rouge">resource-plugin</code>의 호출 : <code class="language-plaintext highlighter-rouge">src/main/java</code>의 소스 파일들을 빌드 결과가 저장될 디렉터리에 복사</li>
+    <li><code class="language-plaintext highlighter-rouge">compiler-plugin</code>의 호출 : 어플리케이션을 시작하기 전에 소스 코드를 컴파일</li>
+  </ol>
+
+  <p>→ 빌드 플러그인은 저수준의 세부 작업을 모두 추상화하여 개발자가 쉽게 사용할 수 있게끔 해줌</p>
+</blockquote>
+
+<ul>
+  <li>래퍼 (<code class="language-plaintext highlighter-rouge">wrapper</code>) 파일 : 빌드 도구를 로컬에 설치하지 않고 프로젝트를 빌드할 수 있게 해줌</li>
+  <li>패키지 (<code class="language-plaintext highlighter-rouge">Packages</code>) 구조 : 자바 클래스를 포함하는 소스 패키지와 테스트 클래스를 포함하는 테스트 패키지로 분리</li>
+  <li><code class="language-plaintext highlighter-rouge">application.properties</code> 파일이 존재하는 리소스 (<code class="language-plaintext highlighter-rouge">resource</code>) 폴더 : 프로젝트를 진행하면서 사용할 파일들</li>
+</ul>
+
+<h4 id="스프링부트-메인-클래스--패키지-내에서-어플리케이션-실행을-담당하는-클래스">스프링부트 메인 클래스 : 패키지 내에서 어플리케이션 실행을 담당하는 클래스</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>package pocj8ur4in.vocawik;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class VocawikApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(VocawikApplication.class, args);
+    }
+}
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">main()</code> 메소드 : 웹 어플리케이션을 실행하는 메소드</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">@SpringBootApplication</code> 에너테이션</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">SpringApplication()</code> 클래스</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p>Reference</p>
+
+  <ul>
+    <li><a href="https://www.aladin.co.kr/m/mproduct.aspx?ItemId=330484424">실전 스프링부트</a></li>
+  </ul>
+</blockquote>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#springboot" class="page__taxonomy-item p-category" rel="tag">SpringBoot</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-16">January 16, 2024</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BSpringBoot%5D+1.+SpringBoot%20http%3A%2F%2Flocalhost%3A4000%2Fspringboot1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fspringboot1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/microservice5/" class="pagination--pager" title="[MicroService] 5. MicroService Design
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/microservice5/" rel="permalink">[MicroService] 5. MicroService Design
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">마이크로서비스 설계 : 응집성 높게 (High Cohesion), 의존도 낮게 (Low Coupling)
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/microservice4/" rel="permalink">[MicroService] 4. Agile Development Process
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">에자일 개발 프로세스 (Agile Development Process) : 피드백을 통한 지속적인 개선 추구
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/microservice3/" rel="permalink">[MicroService] 3. MicroService Architecture
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">비즈니스 로직 (Business Logic) : 시스템이 목표로 하는 비즈니스 영역의 규칙, 흐름, 개념
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/java2/" rel="permalink">[Java] 2. 변수 (variable)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">변수 (variable) : 하나의 값을 저장할 수 있는 메모리 번지에 붙어진 이름
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 pocj8ur4in. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
