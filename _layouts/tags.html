@@ -30,9 +30,11 @@ layout: archive
   {% for tag in site.tags %}
     {% if tag[1].size == i %}
       <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">
-        <h2 class="archive__subtitle">{{ tag[0] }}</h2>
+        <a href="#{{ tag[0] | slugify }}">
+          <h2 class="archive__subtitle">{{ tag[0] }} (<span class="taxonomy__count">{{ i }})</h2>
+        </a>
         <div class="entries-{{ entries_layout }}">
-          {% for post in tag.last %}
+          {% for post in tag.last reversed %}
             {% include archive-single.html type=entries_layout %}
           {% endfor %}
         </div>

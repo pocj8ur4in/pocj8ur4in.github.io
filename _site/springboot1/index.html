@@ -206,7 +206,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          6 분 소요
+          7 분 소요
         
       </span>
     
@@ -547,22 +547,40 @@ public class VocawikApplication {
 </code></pre></div></div>
 
 <ol>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">main()</code> 메소드 : 웹 어플리케이션을 실행하는 메소드</p>
+  <li><code class="language-plaintext highlighter-rouge">main()</code> 메소드 : 웹 어플리케이션을 실행하는 메소드
+    <ul>
+      <li>어플리케이션 컴포넌트를 빌드 및 패키징한 <code class="language-plaintext highlighter-rouge">WAR / EAR</code> 파일을 만들어 웹 서버에 배포할 필요가 없음</li>
+      <li>전통적인 자바 어플리케이션을 실행하는 것처럼 웹 어플리케이션을 실행할 수 있음</li>
+    </ul>
+    <ul>
+      <li>별도의 서블릿 컨테이너를 실행하지 않고, 스프링부트 어플리케이션이 내장된 서블릿 컨테이너 안에서 실행됨
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">spring-boot-starter-web</code>이 <code class="language-plaintext highlighter-rouge">spring-boot-starter-tomcat</code> 모듈에 대한 의존 관계를 포함</li>
+        </ul>
+      </li>
+    </ul>
   </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">@SpringBootApplication</code> 에너테이션</p>
+  <li><code class="language-plaintext highlighter-rouge">@SpringBootApplication</code> 어노테이션 : 루트 패키지부터 스프링 어노테이션이 붙은 컴포넌트를 탐색해 관리
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">@EnableAutoConfiguration</code> : 어플리케이션 클래스패스의 <code class="language-plaintext highlighter-rouge">JAR</code> 파일을 바탕으로 어플리케이션을 자동 구성</li>
+      <li><code class="language-plaintext highlighter-rouge">@ComponentScan</code> : 어플리케이션에 존재하는 스프링 컴포넌트를 탐색
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">@Component</code>, <code class="language-plaintext highlighter-rouge">@Bean</code> 등이 붙은 자바 빈을 스프링에서 관리하기 위해 루트에서부터 탐색</li>
+          <li><code class="language-plaintext highlighter-rouge">@ComponentScan(basePackage = {})</code>로 탐색 범위를 직접 지정할 수 있음
+     - <code class="language-plaintext highlighter-rouge">@SpringBootConfiguration</code> : 스프링부트 어플리케이션 설정을 담당</li>
+        </ul>
+      </li>
+      <li><code class="language-plaintext highlighter-rouge">@Configuration</code>를 내부적으로 포함하여, 컴포넌트 탐색을 통해 어플리케이션 설정 과정에 참여</li>
+    </ul>
   </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">SpringApplication()</code> 클래스</p>
-  </li>
+  <li><code class="language-plaintext highlighter-rouge">SpringApplication()</code> 클래스 : <code class="language-plaintext highlighter-rouge">run()</code> 정적 메소드를 통해 스프링부트 어플리케이션을 편리하게 실행</li>
 </ol>
 
 <blockquote>
   <p>Reference</p>
 
   <ul>
-    <li><a href="https://www.aladin.co.kr/m/mproduct.aspx?ItemId=330484424">실전 스프링부트</a></li>
+    <li><a href="https://www.aladin.co.kr/m/mproduct.aspx?ItemId=330484424">실전 스프링부트</a>ㄴㅇ</li>
   </ul>
 </blockquote>
 
@@ -628,7 +646,8 @@ public class VocawikApplication {
 ">이전</a>
     
     
-      <a href="#" class="pagination--pager disabled">다음</a>
+      <a href="/bash1/" class="pagination--pager" title="[Linux] bash 문법
+">다음</a>
     
   </nav>
 
@@ -642,6 +661,46 @@ public class VocawikApplication {
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/bash1/" rel="permalink">[Linux] bash 문법
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
         
           
 
@@ -760,47 +819,6 @@ public class VocawikApplication {
 
 
     <p class="archive__item-excerpt" itemprop="description">비즈니스 로직 (Business Logic) : 시스템이 목표로 하는 비즈니스 영역의 규칙, 흐름, 개념
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/java2/" rel="permalink">[Java] 2. 변수 (variable)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          9 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">변수 (variable) : 하나의 값을 저장할 수 있는 메모리 번지에 붙어진 이름
 
 </p>
   </article>
