@@ -221,7 +221,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#tmux--터미널-멀티플렉서-terminal-multiplexer">tmux : 터미널 멀티플렉서 (Terminal Multiplexer)</a><ul><li><a href="#tmux-구조--tmux-서버와-tmux-클라이언트로-구성">tmux 구조 : tmux 서버와 tmux 클라이언트로 구성</a><ul><li><a href="#세션-session--하나-이상의-윈도우가-있는-독립된-작업-공간">세션 (Session) : 하나 이상의 윈도우가 있는 독립된 작업 공간</a></li><li><a href="#윈도우-window--동일한-세션에서-시각적으로-분리된-부분">윈도우 (Window) : 동일한 세션에서 시각적으로 분리된 부분</a></li><li><a href="#패널-panel--동일한-윈도우에서-분리된-부분">패널 (Panel) : 동일한 윈도우에서 분리된 부분</a></li></ul></li><li><a href="#tmux-명령어">tmux 명령어</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#tmux--터미널-멀티플렉서-terminal-multiplexer">tmux : 터미널 멀티플렉서 (Terminal Multiplexer)</a><ul><li><a href="#tmux-구조--tmux-서버와-tmux-클라이언트로-구성">tmux 구조 : tmux 서버와 tmux 클라이언트로 구성</a><ul><li><a href="#세션-session--하나-이상의-윈도우가-있는-독립된-작업-공간">세션 (Session) : 하나 이상의 윈도우가 있는 독립된 작업 공간</a></li><li><a href="#윈도우-window--동일한-세션에서-시각적으로-분리된-부분">윈도우 (Window) : 동일한 세션에서 시각적으로 분리된 부분</a></li><li><a href="#패널-panel--동일한-윈도우에서-분리된-부분">패널 (Panel) : 동일한 윈도우에서 분리된 부분</a></li><li><a href="#상태-바-status-bar--세션-윈도우-패널에-대한-정보를-볼-수-있는-초록색-바">상태 바 (Status bar) : 세션, 윈도우, 패널에 대한 정보를 볼 수 있는 초록색 바</a></li></ul></li><li><a href="#tmux-명령어--세션-윈도우-패널의-범위에-영향을-미치는-명령어들이-존재">tmux 명령어 : 세션, 윈도우, 패널의 범위에 영향을 미치는 명령어들이 존재</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -270,9 +270,12 @@
       <li>패널은 윈도우 내에 1개 이상 존재하면서, 입력을 받는 부분</li>
     </ul>
   </li>
+  <li>
+    <h4 id="상태-바-status-bar--세션-윈도우-패널에-대한-정보를-볼-수-있는-초록색-바">상태 바 (<code class="language-plaintext highlighter-rouge">Status bar</code>) : 세션, 윈도우, 패널에 대한 정보를 볼 수 있는 초록색 바</h4>
+  </li>
 </ul>
 
-<h3 id="tmux-명령어"><code class="language-plaintext highlighter-rouge">tmux</code> 명령어</h3>
+<h3 id="tmux-명령어--세션-윈도우-패널의-범위에-영향을-미치는-명령어들이-존재"><code class="language-plaintext highlighter-rouge">tmux</code> 명령어 : 세션, 윈도우, 패널의 범위에 영향을 미치는 명령어들이 존재</h3>
 
 <table>
     <thead>
@@ -298,16 +301,32 @@
             <td>현재 열린 세션 목록 나열</td>
         </tr>
         <tr>
-            <td>tmux -a</td>
+            <td>tmux rename-session -t {기존 이름} {새로운 이름}</td>
+            <td>기존 이름을 가진 세션을 새로운 이름으로 변경</td>
+        </tr>
+        <tr>
+            <td>tmux attach</td>
             <td>마지막 세션으로 접속</td>
         </tr>
         <tr>
-            <td>tmux -a -t {이름}</td>
+            <td>tmux attach -t {이름}</td>
             <td>특정 이름을 가진 세션으로 접속</td>
         </tr>
         <tr>
+            <td>ctrl+b → d</td>
+            <td>현재 세션 나가기</td>
+        </tr>
+        <tr>
+            <td>tmux kill-session -t {이름}</td>
+            <td>특정 이름을 가진 세션을 종료</td>
+        </tr>
+        <tr>
             <td>(tmux에서) exit</td>
-            <td>현재 세션 종료</td>
+            <td>(세션 내부에서) 현재 세션 종료</td>
+        </tr>
+        <tr>
+            <td>(tmux에서) ctrl+b → :</td>
+            <td>(세션 내부에서) tmux 명령 모드 진입</td>
         </tr>
         <tr>
             <td colspan="2" style="text-align: center;">윈도우 관련</td>
@@ -318,7 +337,11 @@
         </tr>
         <tr>
             <td>ctrl+d</td>
-            <td>현재 윈도우 닫기</td>
+            <td>현재 윈도우 종료 (만약 윈도우가 1개면, 현재 세션 종료)</td>
+        </tr>
+        <tr>
+            <td>ctrl+b → &amp;</td>
+            <td>모든 윈도우 종료</td>
         </tr>
         <tr>
             <td>ctrl+b → p</td>
@@ -331,6 +354,10 @@
         <tr>
             <td>ctrl+b → l</td>
             <td>마지막 윈도우로 이동</td>
+        </tr>
+        <tr>
+            <td>ctrl+b → {0 ~ 9}</td>
+            <td>특정 번호를 가진 윈도우로 이동</td>
         </tr>
         <tr>
             <td>ctrl+b → ,</td>
@@ -461,7 +488,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/digital_hanaro_study1/" rel="permalink">JavaScript와 TypeScript의 실행 방식 (2024.01.19)
+        <a href="/digital_hanaro_study1/" rel="permalink">프로그래밍 언어로서의 JavaScript와 TypeScript (2024.01.19)
 </a>
       
     </h2>
@@ -560,7 +587,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          7 분 소요
+          10 분 소요
         
       </span>
     

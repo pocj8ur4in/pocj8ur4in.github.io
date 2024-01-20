@@ -116,8 +116,7 @@ public class Service {
 ## 스프링부트 (```SpringBoot```) : 스프링 프레임워크 기술을 편리하게 사용할 수 있도록 지원
 
 - 빠른 구동 (```Quick Run```) : 어플리케이션에 필요한 의존 관계만 명시하면, 어플리케이션을 빠르게 실행할 수 있음
-  - 스프링 ```MVC``` 의존 관계의 추가
-  - 메이븐 혹은 그레이들 프로젝의트 설정
+  - 스프링 ```MVC``` 의존 관계를 추가하고 메이븐 혹은 그레이들 프로젝트 설정
   - 스프링 ```MVC```의 ```DispatcherServlet```의 설정
   - 어플리케이션 컴포넌트를 ```WAR``` 파일로 패키징
   - ```WAR``` 파일을 아파치 톰캣 (```Apache Tomcat```) 같은 서블릿 컨테이너에 배포
@@ -216,7 +215,7 @@ public class Service {
 - 패키지 (```Packages```) 구조 : 자바 클래스를 포함하는 소스 패키지와 테스트 클래스를 포함하는 테스트 패키지로 분리
 - ```application.properties``` 파일이 존재하는 리소스 (```resource```) 폴더 : 프로젝트를 진행하면서 사용할 파일들
 
-#### 스프링부트 메인 클래스 : 패키지 내에서 어플리케이션 실행을 담당하는 클래스
+#### 스프링부트 메인 클래스 (```Main Class```) : 패키지 내에서 어플리케이션 실행을 담당
 
 ```
 package pocj8ur4in.vocawik;
@@ -233,11 +232,84 @@ public class VocawikApplication {
 ```
 
 1. ```main()``` 메소드 : 웹 어플리케이션을 실행하는 메소드
+  - 어플리케이션 컴포넌트를 빌드 및 패키징한 ```WAR / EAR``` 파일을 만들어 웹 서버에 배포할 필요가 없음
+  - 전통적인 자바 어플리케이션을 실행하는 것처럼 웹 어플리케이션을 실행할 수 있음
+    - 별도의 서블릿 컨테이너를 실행하지 않고, 스프링부트 어플리케이션이 내장된 서블릿 컨테이너 안에서 실행됨
+      - ```spring-boot-starter-web```이 ```spring-boot-starter-tomcat``` 모듈에 대한 의존 관계를 포함
 
-2. ```@SpringBootApplication``` 에너테이션
+2. ```@SpringBootApplication``` 어노테이션 : 루트 패키지부터 스프링 어노테이션이 붙은 컴포넌트를 탐색해 관리
+   - ```@EnableAutoConfiguration``` : 어플리케이션 클래스패스의 ```JAR``` 파일을 바탕으로 어플리케이션을 자동 구성
+   - ```@ComponentScan``` : 어플리케이션에 존재하는 스프링 컴포넌트를 탐색
+     - ```@Component```, ```@Bean``` 등이 붙은 자바 빈을 스프링에서 관리하기 위해 루트에서부터 탐색
+     - ```@ComponentScan(basePackage = {})```로 탐색 범위를 직접 지정할 수 있음
+  - ```@SpringBootConfiguration``` : 스프링부트 어플리케이션 설정을 담당
+    - ```@Configuration```를 내부적으로 포함하여, 컴포넌트 탐색을 통해 어플리케이션 설정 과정에 참여
 
-3. ```SpringApplication()``` 클래스
+3. ```SpringApplication()``` 클래스 : ```run()``` 정적 메소드를 통해 스프링부트 어플리케이션을 편리하게 실행
 
+> ```run()``` 메소드가 실행될 때 수행하는 적업의 흐름
+> 
+> 1. 클래스패스에 있는 라이브러리를 기준으로 ```SpringApplication``` 클래스의 인스턴스 생성
+> 2. ```CommandLinePropertySource```를 등록해서 명령행 인자를 스프링 프로퍼티로 읽음
+> 3. 1단계에서 생성한 ```ApplicationContext```를 통해 싱글톤 빈 로딩
+> 4. 어플리케이션에 설정된 ```ApplicationRunner```와 ```CommandRunner``` 실행
+
+- ```SpringApplication``` 클래스는 클래스패스에 있는 ```JAR```의 의존 관계를 바탕으로 ```ApplicationContext``` 인스턴스 생성
+  - ```ApplicationContext```는 빈을 생성할 때 필요한 의존 관계 주입을 실행할 스프링 ```IoC``` 컨테이너의 역할을 담당
+  - 클래스패스에 있는 클래스로 어플리케이션 타입이 서블릿 (```Servlet```) 혹은 리액티브 (```Reactive```)인지 유추
+
+> 스프링부트가 ```ApplicationContext```를 로딩할 때의 전략
+>
+> 1. 서블릿 기반 : ```AnnotationConfigServletWebSErverApplicationContext``` 클래스 인스턴스 생성
+> 2. 리액티브 기반 : ```AnnotationConfigReactiveWebServletApplicationContext``` 클래스 인스턴스 생성
+> 3. 둘다 아닐 경우 : ```AnnotationConfigApplicationContext``` 클래스 인스턴스 생성
+
+- 필요한 경우에 ```SpringApplication``` 클래스의 인스턴스를 직접 생성해 어플리케이션 시동 모드를 변경 가능
+- 스프링 프로파일 지정, 어플리케이션 리소스 리소스 로더 지정과 같은 기능을 ```Setter``` 메소드로 제공
+
+#### ```application.properties``` 또는 ```application.yml``` : 어플리케이션의 설정 정보 관리
+
+- ```src/main/resources/``` 디렉토리에 자동으로 생성 (기본값은 ```.properties```)
+- 서버 접속 정보, 데이터베이스 접속 정보와 같은 어플리케이션 설정 정보를 소스 코드에서 분리해서 외부화
+- 멀티 모듈을 구성하거나 배포 환경가 다중화된 경우에, 파일을 여러 개로 나누어 설정을 다르게 관리할 수 있음
+
+### ```JAR``` 파일 : 스프링부트 프로젝트로부터 생성된 실행 가능한 파일
+
+- 설정한 패키징 방식에 따라 프로젝트의 ```target``` 디렉터리에 ```.JAR``` 파일 생성
+  - 메이븐은 ```spring-boot-maven-plugin``` 플러그인의 ```repackage``` 골 (```goal```)이 메이븐 ```package``` 라이프사이클과 연동되어, 컴파일된 클래스 파일 (```.class```)를 리패키징
+  - 그레이들은 스프링부트 프로젝트를 빌드할 때 ```org.springframework.boot``` 플러그인이 생성한 ```bootJar``` 테스크가 그레이들 ```build``` 라이프사이클에 편입되어 패키징
+- ```java -jar``` 명령의 인자로 지정하면 어플리케이션을 실행할 수 있음
+- ```ctrl+c``` 등을 통해 자바 프로세스를 종료하면, 스프링부트 어플리케이션 또한 종료
+
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/ef10695d-0893-4d9a-aadc-cc63f96841fb" width="80%">
+
+- ```META-INF``` : 실행할 ```JAR``` 파일의 핵심 정보를 담고 있는 ```MANIFEST.MF``` 파일
+  - ```Start-Class``` 패러미터 : 어플리케이션을 시작할 클래스를 지정
+  - ```Main-Class``` 패러미터 :  ```Start-Class```를 사용해서 어플리케이션을 시작하는 ```Launcher``` 클래스를 지정
+- 스프링부트 로더 컴포넌트 : ```JAR/WAR``` 파일을 로딩하는 ```JarLauncher/WarLauncher``` 클래스
+  - ```loader.*``` 프로퍼티에 값을 지정하면, ```PropertiesLauncher``` 클래스로 클래스 로딩 과정 커스텀마이징 가능
+- ```BOOT-INF/classes``` : 컴파일된 모든 어플리케이션 클래스가 위치한 디렉터리
+- ```BOOT-INF/lib```  : 의존 관계로 지정한 라이브러리가 들어있는 디렉터리
+- ```classpath.idx``` : 클래스로더가 로딩해야 하는 순서대로 정렬된 의존 관계 목록이 들어있음
+- ```layer.idx``` : 도커 이미지를 생성할 때 논리적 계층으로 ```JAR```를 분할할 때 사용
+
+> 안전 종료 (```Graceful shutdown```) : 처리 중인 요청이 완료될 때까지 기다릴 타임아웃 설정  
+> 
+> - 어플리케이션을 종료할 때, 처리 중인 요청의 처리가 보장되지 않음
+> - 종료 명령어 실행되면 더 이상의 요청을 받지 않되, 이미 처리 중인 요청은 완료를 보장해야 함
+> - 스프링부트 ```2.3.0```부터 도입되어, 그 이전 버전에서는 동작하지 않음
+>
+> ```
+> server.shutdown=graceful # 기본값: immediate
+> spring.lifecycle.timeout-per-shutdown-phase=1m # 기본값: 30s
+> ```
+
+### 스프링부트 스타업 이벤트 : 스프링 어플리케이션 시작 및 초기화 과정에서 사용 가능한 빌트인 이벤트
+
+- ```ApplicationStartingEvent``` : 어플리케이션이 시작되어 리스너 (```Listener```가 등록될 때 발행
+  - 스프링부트의 ```LoggingSystem```이 해당 이벤트를 통해 어플리케이션 초기화 단계 이전에 필요한 작업 수행
+- ```ApplicationEnvironmentPreparedEvent``` : 어플리케이션이 시작되고 ```Environment```가 준비될 때 발행
+  - ```MessageConverter```, ```ConversionService```, ```Jackson```의 초기화 등 서비스 사전 초기화 (```PreInitialize```) 작업 수행
 
 > Reference
 >
