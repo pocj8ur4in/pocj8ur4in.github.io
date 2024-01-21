@@ -5,7 +5,7 @@ locale                   : "ko-KR"
 title                    : "pocj8ur4in's blog"
 title_separator          : "-"
 subtitle                 : "since 2022.09.01."
-name                     : "pocj8ur4in"
+name                     : "pocj8ur4in's blog"
 description              : ""
 url                      : "https://pocj8ur4in.github.io"
 repository               : "pocj8ur4in/pocj8ur4in.github.io"
@@ -66,21 +66,14 @@ analytics:
     tracking_id          : "G-HQHR8R0J8T"
     anonymize_ip         : # true, false (default)
 
-
 # Site Author
 author:
   name             : "pocj8ur4in"
-  avatar           : 
-  bio              : "아는 게 없어..."
-  location         : "Seoul, Republic of Korea"
+  avatar           : "https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c175e6a8-9aa2-44bb-8359-abbb68d5fe1b"
+  bio              : ""
+  location         : "Seoul, Korea"
   email            : "pocj8ur4in@gmail.com"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://pocj8ur4in.github.io"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/pocj8ur4in"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/pocj8ur4in"
@@ -91,9 +84,9 @@ footer:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/pocj8ur4in"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/pocj8ur4in"
+    - label: "Pinterest"
+      icon: "fab fa-fw fa-pinterest-square"
+      url: "https://www.pinterest.co.kr/pocj8ur4in/"
 
 # Reading Files
 include:
@@ -186,7 +179,6 @@ tag_archive:
   type: liquid
   path: /tags/
 
-
 compress_html:
   clippings: all
   ignore:
@@ -195,22 +187,22 @@ compress_html:
 
 # Defaults Post들에 적용될 기본 설정들
 defaults:
-  # _posts
+  # _posts 폴더
   - scope:
       path: "_posts"
       type: posts
     values:
       layout: single
       read_time: true
-      author_profile: false
+      author_profile: true
       comments: true
       share: true
       related: true
       
-  # _pages
+  # _pages 폴더
   - scope:
       path: "_pages"
       type: pages
     values:
       layout: single
-      author_profile: false
+      author_profile: true
