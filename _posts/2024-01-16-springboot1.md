@@ -304,12 +304,71 @@ public class VocawikApplication {
 > spring.lifecycle.timeout-per-shutdown-phase=1m # 기본값: 30s
 > ```
 
-### 스프링부트 스타업 이벤트 : 스프링 어플리케이션 시작 및 초기화 과정에서 사용 가능한 빌트인 이벤트
+### 스프링부트 스타트업 이벤트 : 스프링 어플리케이션 시작 및 초기화 과정에서 사용 가능한 빌트인 이벤트
 
 - ```ApplicationStartingEvent``` : 어플리케이션이 시작되어 리스너 (```Listener```가 등록될 때 발행
   - 스프링부트의 ```LoggingSystem```이 해당 이벤트를 통해 어플리케이션 초기화 단계 이전에 필요한 작업 수행
 - ```ApplicationEnvironmentPreparedEvent``` : 어플리케이션이 시작되고 ```Environment```가 준비될 때 발행
   - ```MessageConverter```, ```ConversionService```, ```Jackson```의 초기화 등 서비스 사전 초기화 (```PreInitialize```) 작업 수행
+- ```ApplicationContextInitializedEvent``` : ```ApplicationContext```가 준비되고 ```ApplicationContextInitializer```가 실행되면 발행
+  - 빈이 스프링 컨테이너에 로디오디어 초기화되기 전에 이루어질 작업이 필요할 때 이 이벤트를 사용
+- ```ApplicationPreparedEvent``` : ```ApplicationContext```가 준비되고 빈이 로딩되었으나 ```ApplicationContext```가 초기화되기 전에 발행
+  - 이 이벤트가 발행된 이후에 ```Environment```를 사용할 수 있음
+- ```ContextRefreshedEvent``` : ```ApplicationContext```가 초기화된 이후에 발행
+  - 스프링부트가 아닌 스프링이 발행한 이벤트로, ```SpringApplicationEvent```를 상속하지 않음
+  - 스프링부트의 ```ConditionEvaluationLoggingListener```가 이 이벤트가 발행되면 자동 구성 보고서를 출력
+- ```WebServerInitializedEvent``` : 웹 서버가 준비되면 발행
+  - 스프링부트가 아닌 스프링이 발행한 이벤트로, ```SpringApplicationEvent```를 상속하지 않음
+  - 어플리케이션 타입에 따른 하위 이벤트가 존재 (```ServletServerInitializedEvent```, ```ReactiveServerInitializedEvent```)
+- ```ApplicationStartedEvent``` : ```ApplicationContext```가 초기화되고 ```ApplicationRunner```, ```CommandLineRunner```가 호출되기 전에 발행
+- ```ApplicationReadyEvent``` : 어플리케이션 요청 처리가 준비되었을 때 ```SpringApplication```에 의해 발행
+  - 모든 어플리케이션 초기화가 완료된 이후에 발행 : 이후에 어플리케이션 내부 상태를 변경하는 것은 권장되지 않음
+- ```ApplicationFailedEvent``` : 어플리케이션 시작 과정에서 예외가 발생하면 발행
+  - 예외 발생 시 스크립트를 실행하거나, 스타트업 실패를 알릴 때 사용
+
+### 스프링부트 어플리케이션 이벤트 감지 : 스프링부트 스타트업 이벤트가 제공하는 정보들을 활용하기 위해 이벤트를 구독
+
+- ```@EventListener``` 어노테이션 : 스프링 프레임워크에서 제공하는 이벤트를 구독하는 어노테이션
+  - 어플리케이션 스타트업 극초기에 발행되는 이벤트는 감지하지 못함
+
+```
+# @EventListener를 사용해서 ApplicationReadyEvent를 구독
+@EventListener(ApplicationReadyEvent.class)
+public void funcForApplicationReadyEvent(ApplicationReadyEvent applicationReadyEvent) {
+  System.out.println("ApplicationReadyEvent generated at "
+  + new Date(funcForApplicationReadyEvent.getTimestamp()));
+}
+```
+
+- ```SpringApplication``` 클래스 : 어플리케이션 스타트업을 커스텀마이징할 수 있는 ```setter``` 메소드를 통해 리스너 등록
+  - ```ApplicationListener``` 인터페이스의 ```onApplicationEvent``` 메소드를 구현해 ```SpringApplication```에 추가
+  - ```SpringApplication```에 리스너를 등록하거나 수정하는 것은 클래스 코드의 변경을 유발
+
+```
+# 커스텀 ApplicationListener 구현체 작성
+public class ApplicationStartEventListener
+ implements ApplicationListener<ApplicationStartingEvent> {
+  @Override
+  public void onApplicationEvent(ApplicationStartingEvent applicationStartingEvent) {
+    System.out.println("Application Starting Event logged at "
+    + new Date(applicationStartingEvent.getTimestamp()));
+  }
+}
+```
+
+```
+# SpringApplication에 어플리케이션 이벤트 리스너 추가
+@SpringBootApplication
+public class SpringBootEventApplication {
+  public static void main(String[] args) {
+    SpringApplication springApplication
+     = new SpringApplication(SpringBootEventApplication.class);
+  }
+}
+```
+
+- ```spring.factories``` 파일 : 어플리케이션 기능 설정 및 커스터마이징을 가능하도록 스프링부트가 제공
+  - <del>스프링부트 이전부터 스프링 프레임워크에서 제공 (```spring-beans.jar```에서 확인 가능)</del> → 스프링부트 ```2.7.0```부터 ```deprecated```
 
 > Reference
 >

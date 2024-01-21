@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-20T18:09:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">프로그래밍 언어로서의 JavaScript와 TypeScript (2024.01.19)</title><link href="http://localhost:4000/digital_hanaro_study1/" rel="alternate" type="text/html" title="프로그래밍 언어로서의 JavaScript와 TypeScript (2024.01.19)" /><published>2024-01-19T00:00:00+09:00</published><updated>2024-01-19T00:00:00+09:00</updated><id>http://localhost:4000/digital_hanaro_study1</id><content type="html" xml:base="http://localhost:4000/digital_hanaro_study1/"><![CDATA[<h2 id="공부하고자-한-이유">공부하고자 한 이유</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-21T21:47:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">프로그래밍 언어로서의 JavaScript와 TypeScript (2024.01.19)</title><link href="http://localhost:4000/digital_hanaro_study1/" rel="alternate" type="text/html" title="프로그래밍 언어로서의 JavaScript와 TypeScript (2024.01.19)" /><published>2024-01-19T00:00:00+09:00</published><updated>2024-01-19T00:00:00+09:00</updated><id>http://localhost:4000/digital_hanaro_study1</id><content type="html" xml:base="http://localhost:4000/digital_hanaro_study1/"><![CDATA[<h2 id="공부하고자-한-이유">공부하고자 한 이유</h2>
 
 <p><code class="language-plaintext highlighter-rouge">JavaScript</code>와 <code class="language-plaintext highlighter-rouge">TypeScript</code>는 그동안 내가 주로 사용해온 <code class="language-plaintext highlighter-rouge">C</code>, <code class="language-plaintext highlighter-rouge">C++</code>, <code class="language-plaintext highlighter-rouge">Java</code>와 같은 컴파일 언어와는 많은 차이점이 있는 스크립트 언어이다. 오늘은 본격적으로 자바스크립트를 배우기 앞서 자바스크립트와 타입스크립트가 프로그래밍 언어로서 어떤 특성을 가지는지 알아보고자 한다.</p>
 
@@ -560,7 +560,7 @@ spring.lifecycle.timeout-per-shutdown-phase=1m # 기본값: 30s
 </code></pre></div>  </div>
 </blockquote>
 
-<h3 id="스프링부트-스타업-이벤트--스프링-어플리케이션-시작-및-초기화-과정에서-사용-가능한-빌트인-이벤트">스프링부트 스타업 이벤트 : 스프링 어플리케이션 시작 및 초기화 과정에서 사용 가능한 빌트인 이벤트</h3>
+<h3 id="스프링부트-스타트업-이벤트--스프링-어플리케이션-시작-및-초기화-과정에서-사용-가능한-빌트인-이벤트">스프링부트 스타트업 이벤트 : 스프링 어플리케이션 시작 및 초기화 과정에서 사용 가능한 빌트인 이벤트</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">ApplicationStartingEvent</code> : 어플리케이션이 시작되어 리스너 (<code class="language-plaintext highlighter-rouge">Listener</code>가 등록될 때 발행
@@ -571,6 +571,95 @@ spring.lifecycle.timeout-per-shutdown-phase=1m # 기본값: 30s
   <li><code class="language-plaintext highlighter-rouge">ApplicationEnvironmentPreparedEvent</code> : 어플리케이션이 시작되고 <code class="language-plaintext highlighter-rouge">Environment</code>가 준비될 때 발행
     <ul>
       <li><code class="language-plaintext highlighter-rouge">MessageConverter</code>, <code class="language-plaintext highlighter-rouge">ConversionService</code>, <code class="language-plaintext highlighter-rouge">Jackson</code>의 초기화 등 서비스 사전 초기화 (<code class="language-plaintext highlighter-rouge">PreInitialize</code>) 작업 수행</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">ApplicationContextInitializedEvent</code> : <code class="language-plaintext highlighter-rouge">ApplicationContext</code>가 준비되고 <code class="language-plaintext highlighter-rouge">ApplicationContextInitializer</code>가 실행되면 발행
+    <ul>
+      <li>빈이 스프링 컨테이너에 로디오디어 초기화되기 전에 이루어질 작업이 필요할 때 이 이벤트를 사용</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">ApplicationPreparedEvent</code> : <code class="language-plaintext highlighter-rouge">ApplicationContext</code>가 준비되고 빈이 로딩되었으나 <code class="language-plaintext highlighter-rouge">ApplicationContext</code>가 초기화되기 전에 발행
+    <ul>
+      <li>이 이벤트가 발행된 이후에 <code class="language-plaintext highlighter-rouge">Environment</code>를 사용할 수 있음</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">ContextRefreshedEvent</code> : <code class="language-plaintext highlighter-rouge">ApplicationContext</code>가 초기화된 이후에 발행
+    <ul>
+      <li>스프링부트가 아닌 스프링이 발행한 이벤트로, <code class="language-plaintext highlighter-rouge">SpringApplicationEvent</code>를 상속하지 않음</li>
+      <li>스프링부트의 <code class="language-plaintext highlighter-rouge">ConditionEvaluationLoggingListener</code>가 이 이벤트가 발행되면 자동 구성 보고서를 출력</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">WebServerInitializedEvent</code> : 웹 서버가 준비되면 발행
+    <ul>
+      <li>스프링부트가 아닌 스프링이 발행한 이벤트로, <code class="language-plaintext highlighter-rouge">SpringApplicationEvent</code>를 상속하지 않음</li>
+      <li>어플리케이션 타입에 따른 하위 이벤트가 존재 (<code class="language-plaintext highlighter-rouge">ServletServerInitializedEvent</code>, <code class="language-plaintext highlighter-rouge">ReactiveServerInitializedEvent</code>)</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">ApplicationStartedEvent</code> : <code class="language-plaintext highlighter-rouge">ApplicationContext</code>가 초기화되고 <code class="language-plaintext highlighter-rouge">ApplicationRunner</code>, <code class="language-plaintext highlighter-rouge">CommandLineRunner</code>가 호출되기 전에 발행</li>
+  <li><code class="language-plaintext highlighter-rouge">ApplicationReadyEvent</code> : 어플리케이션 요청 처리가 준비되었을 때 <code class="language-plaintext highlighter-rouge">SpringApplication</code>에 의해 발행
+    <ul>
+      <li>모든 어플리케이션 초기화가 완료된 이후에 발행 : 이후에 어플리케이션 내부 상태를 변경하는 것은 권장되지 않음</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">ApplicationFailedEvent</code> : 어플리케이션 시작 과정에서 예외가 발생하면 발행
+    <ul>
+      <li>예외 발생 시 스크립트를 실행하거나, 스타트업 실패를 알릴 때 사용</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="스프링부트-어플리케이션-이벤트-감지--스프링부트-스타트업-이벤트가-제공하는-정보들을-활용하기-위해-이벤트를-구독">스프링부트 어플리케이션 이벤트 감지 : 스프링부트 스타트업 이벤트가 제공하는 정보들을 활용하기 위해 이벤트를 구독</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@EventListener</code> 어노테이션 : 스프링 프레임워크에서 제공하는 이벤트를 구독하는 어노테이션
+    <ul>
+      <li>어플리케이션 스타트업 극초기에 발행되는 이벤트는 감지하지 못함</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># @EventListener를 사용해서 ApplicationReadyEvent를 구독
+@EventListener(ApplicationReadyEvent.class)
+public void funcForApplicationReadyEvent(ApplicationReadyEvent applicationReadyEvent) {
+  System.out.println("ApplicationReadyEvent generated at "
+  + new Date(funcForApplicationReadyEvent.getTimestamp()));
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">SpringApplication</code> 클래스 : 어플리케이션 스타트업을 커스텀마이징할 수 있는 <code class="language-plaintext highlighter-rouge">setter</code> 메소드를 통해 리스너 등록
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">ApplicationListener</code> 인터페이스의 <code class="language-plaintext highlighter-rouge">onApplicationEvent</code> 메소드를 구현해 <code class="language-plaintext highlighter-rouge">SpringApplication</code>에 추가</li>
+      <li><code class="language-plaintext highlighter-rouge">SpringApplication</code>에 리스너를 등록하거나 수정하는 것은 클래스 코드의 변경을 유발</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 커스텀 ApplicationListener 구현체 작성
+public class ApplicationStartEventListener
+ implements ApplicationListener&lt;ApplicationStartingEvent&gt; {
+  @Override
+  public void onApplicationEvent(ApplicationStartingEvent applicationStartingEvent) {
+    System.out.println("Application Starting Event logged at "
+    + new Date(applicationStartingEvent.getTimestamp()));
+  }
+}
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># SpringApplication에 어플리케이션 이벤트 리스너 추가
+@SpringBootApplication
+public class SpringBootEventApplication {
+  public static void main(String[] args) {
+    SpringApplication springApplication
+     = new SpringApplication(SpringBootEventApplication.class);
+  }
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">spring.factories</code> 파일 : 어플리케이션 기능 설정 및 커스터마이징을 가능하도록 스프링부트가 제공
+    <ul>
+      <li><del>스프링부트 이전부터 스프링 프레임워크에서 제공 (<code class="language-plaintext highlighter-rouge">spring-beans.jar</code>에서 확인 가능)</del> → 스프링부트 <code class="language-plaintext highlighter-rouge">2.7.0</code>부터 <code class="language-plaintext highlighter-rouge">deprecated</code></li>
     </ul>
   </li>
 </ul>
