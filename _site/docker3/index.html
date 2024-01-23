@@ -333,7 +333,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#도커-컨테이너-docker-container--도커에서-제공하는-컨테이너-기술">도커 컨테이너 (Docker Container) : 도커에서 제공하는 컨테이너 기술</a><ul><li><a href="#도커-컨테이너는-도커가-관리하는-독립적인-가상-리소스를-가진다">도커 컨테이너는 도커가 관리하는 독립적인 가상 리소스를 가진다.</a></li><li><a href="#도커-컨테이너-또한-별도의-환경-변수-environment-variable를-가질-수-있다">도커 컨테이너 또한 별도의 환경 변수 (Environment variable)를 가질 수 있다.</a></li></ul></li><li><a href="#도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보를-포함">도커 이미지 (Docker Image) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보를 포함</a><ul><li><a href="#q-도커-이미지를-쓰는-이유--도커-이미지와-도커-컨테이너들을-클래스나-인스턴스처럼-활용한다">Q. 도커 이미지를 쓰는 이유? : 도커 이미지와 도커 컨테이너들을 클래스나 인스턴스처럼 활용한다.</a></li><li><a href="#도커-허브-docker-hub--도커-이미지를-서버에-공유하는-도커-레지스트리-서비스">도커 허브 (Docker Hub) : 도커 이미지를 서버에 공유하는 도커 레지스트리 서비스</a></li><li><a href="#사설-도커-레지스트리-private-docker-registry--로컬에-전용-레지스트리를-설치-및-운영">사설 도커 레지스트리 (Private Docker Registry) : 로컬에 전용 레지스트리를 설치 및 운영</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#도커-컨테이너-docker-container--도커에서-제공하는-컨테이너-기술">도커 컨테이너 (Docker Container) : 도커에서 제공하는 컨테이너 기술</a><ul><li><a href="#도커-컨테이너는-도커가-관리하는-독립적인-가상-리소스를-가진다">도커 컨테이너는 도커가 관리하는 독립적인 가상 리소스를 가진다.</a></li><li><a href="#도커-컨테이너-또한-별도의-환경-변수-environment-variable를-가질-수-있다">도커 컨테이너 또한 별도의 환경 변수 (Environment variable)를 가질 수 있다.</a></li></ul></li><li><a href="#도커-이미지-docker-image--컨테이너의-실행에-필요한-모든-파일과-설정값-정보를-포함">도커 이미지 (Docker Image) : 컨테이너의 실행에 필요한 모든 파일과 설정값 정보를 포함</a><ul><li><a href="#q-도커-이미지를-쓰는-이유--도커-이미지와-도커-컨테이너들을-클래스나-인스턴스처럼-활용한다">Q. 도커 이미지를 쓰는 이유? : 도커 이미지와 도커 컨테이너들을 클래스나 인스턴스처럼 활용한다.</a></li></ul></li><li><a href="#도커-레지스트리-docker-registry--도커-이미지를-저장하고-관리하는-중앙-저장소">도커 레지스트리 (Docker Registry) : 도커 이미지를 저장하고 관리하는 중앙 저장소</a><ul><li><a href="#도커-허브-docker-hub--도커-엔진에-기본으로-설정된-도커-레지스트리">도커 허브 (Docker Hub) : 도커 엔진에 기본으로 설정된 도커 레지스트리</a></li><li><a href="#사설-도커-레지스트리-private-docker-registry--로컬-혹은-원격-환경에-레지스트리를-구축">사설 도커 레지스트리 (Private Docker Registry) : 로컬 혹은 원격 환경에 레지스트리를 구축</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -440,14 +440,24 @@
   <li>도커 안에서는 서버 역시 하나의 소프트웨어처럼 사용할 수 있고, 생성할 수 있는 컨테이너의 개수에도 제한이 없다.</li>
 </ul>
 
-<h3 id="도커-허브-docker-hub--도커-이미지를-서버에-공유하는-도커-레지스트리-서비스"><a href="https://hub.docker.com">도커 허브 (<code class="language-plaintext highlighter-rouge">Docker Hub</code>)</a> : 도커 이미지를 서버에 공유하는 도커 레지스트리 서비스</h3>
+<h2 id="도커-레지스트리-docker-registry--도커-이미지를-저장하고-관리하는-중앙-저장소">도커 레지스트리 (<code class="language-plaintext highlighter-rouge">Docker Registry</code>) : 도커 이미지를 저장하고 관리하는 중앙 저장소</h2>
+
+<ul>
+  <li>도커 플랫폼은 소프트웨어 배포 기능을 자체적으로 내장하고 있음
+    <ul>
+      <li>로컬에 이미지가 없더라도 도커가 서버에서 자동으로 이미지를 내려받음</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="도커-허브-docker-hub--도커-엔진에-기본으로-설정된-도커-레지스트리"><a href="https://hub.docker.com">도커 허브 (<code class="language-plaintext highlighter-rouge">Docker Hub</code>)</a> : 도커 엔진에 기본으로 설정된 도커 레지스트리</h3>
 
 <ul>
   <li>도커 허브 계정을 생성한 후, 터미널을 통해 도커 허브에 접속</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker login --username pocj8ur4in
-Password:
+Password: *****
 Login Succeeded
 </code></pre></div></div>
 
@@ -472,7 +482,17 @@ Login Succeeded
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker image tag new-tag pocj8ur4in/vw-api:latest
 </code></pre></div></div>
 
-<h3 id="사설-도커-레지스트리-private-docker-registry--로컬에-전용-레지스트리를-설치-및-운영"><a href="https://waspro.tistory.com/532">사설 도커 레지스트리 (<code class="language-plaintext highlighter-rouge">Private Docker Registry</code>) : 로컬에 전용 레지스트리를 설치 및 운영</a></h3>
+<h3 id="사설-도커-레지스트리-private-docker-registry--로컬-혹은-원격-환경에-레지스트리를-구축"><a href="https://waspro.tistory.com/532">사설 도커 레지스트리 (<code class="language-plaintext highlighter-rouge">Private Docker Registry</code>) : 로컬 혹은 원격 환경에 레지스트리를 구축</a></h3>
+
+<ul>
+  <li>도커 코어 레지스트리 서버는 <code class="language-plaintext highlighter-rouge">docker/distribution</code>에서 개발이 진행되고 있음
+    <ul>
+      <li>도커 허브와 동일한 레이어 캐시 시스템을 통해 이미지를 내려받고 푸시하는 기능 제공</li>
+      <li>웹 기반 <code class="language-plaintext highlighter-rouge">UI</code> 관련 기능은 빠져 있음</li>
+    </ul>
+  </li>
+</ul>
+
 
         
       </section>
@@ -551,6 +571,46 @@ Login Succeeded
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/docker5/" rel="permalink">[Docker] 5. Docker Registry
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
         
           
 
@@ -674,46 +734,6 @@ Login Succeeded
   디지털하나路 스터디 1일차 내용을 정리한 글입니다.
 
 
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/bash1/" rel="permalink">[Linux] bash 문법
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
 </p>
   </article>
 </div>
