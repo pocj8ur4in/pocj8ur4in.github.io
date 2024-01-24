@@ -1,0 +1,1024 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[JS] 자바스크립트 (JavaScript) - pocj8ur4in’s blog</title>
+<meta name="description" content="자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[JS] 자바스크립트 (JavaScript)">
+<meta property="og:url" content="http://localhost:4000/js1/">
+
+
+  <meta property="og:description" content="자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-01-24T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2024-01-24T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/js1/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in's blog",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[JS] 자바스크립트 (JavaScript)</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c175e6a8-9aa2-44bb-8359-abbb68d5fe1b" alt="pocj8ur4in" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">pocj8ur4in</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:pocj8ur4in@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="pocj8ur4in@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[JS] 자바스크립트 (JavaScript)">
+    <meta itemprop="description" content="자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어">
+    <meta itemprop="datePublished" content="2024-01-24T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-24T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/js1/" class="u-url" itemprop="url">[JS] 자바스크립트 (JavaScript)
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#자바스크립트-javascript--동적-클라이언트-사이드-스크립트-언어">자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어</a><ul><li><a href="#nodejs--브라우저-밖에서-자바스크립트-코드를-실행하게-해주는-런타임-환경">Node.js : 브라우저 밖에서 자바스크립트 코드를 실행하게 해주는 런타임 환경</a></li></ul></li><li><a href="#변수-variable--하나의-값을-저장할-수-있는-메모리-공간">변수 (variable) : 하나의 값을 저장할 수 있는 메모리 공간</a><ul><li><a href="#변수-호이스팅-variable-hoisting--변수-선언문을-코드-맨-위에-올려진-것처럼-동작시킴">변수 호이스팅 (variable hoisting) : 변수 선언문을 코드 맨 위에 올려진 것처럼 동작시킴</a></li><li><a href="#값-value--표현식이-평가되어-생성된-결과">값 (value) : 표현식이 평가되어 생성된 결과</a><ul><li><a href="#데이터-타입-date-type--값의-종류">데이터 타입 (Date Type) : 값의 종류</a></li></ul></li><li><a href="#동적-타이핑-dynamic-typing--변수를-선언할-때-데이터-타입을-사전에-선언하지-않음">동적 타이핑 (Dynamic Typing) : 변수를 선언할 때 데이터 타입을 사전에 선언하지 않음</a></li><li><a href="#암묵적-타입-변환--자바스크립트-엔진에서-에러를-발생시키지-않도록-타입을-바꿔-표현식을-평가하는-것">암묵적 타입 변환 : 자바스크립트 엔진에서 에러를 발생시키지 않도록 타입을 바꿔 표현식을 평가하는 것</a></li><li><a href="#명시적-타입-변환--의도적으로-값의-타입을-변환하는-것--타입-캐스팅-type-casting">명시적 타입 변환 : 의도적으로 값의 타입을 변환하는 것 → 타입 캐스팅 (type casting)</a></li><li><a href="#단축-평가-short-circuit-evaluation--표현식을-평가하는-중에-결과가-확정되면-평가-과정을-생략">단축 평가 (short-circuit evaluation) : 표현식을 평가하는 중에 결과가 확정되면, 평가 과정을 생략</a></li></ul></li><li><a href="#객체-object--소프트웨어에서-속성과-기능을-가지는-프로그램의-단위">객체 (Object) : 소프트웨어에서 속성과 기능을 가지는 프로그램의 단위</a><ul><li><a href="#객체-리터럴에-의한-객체-생성---내에-0개-이상의-프로퍼티를-정의">객체 리터럴에 의한 객체 생성 : {} 내에 0개 이상의 프로퍼티를 정의</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="자바스크립트-javascript--동적-클라이언트-사이드-스크립트-언어">자바스크립트 (<code class="language-plaintext highlighter-rouge">JavaScript</code>) : 동적 클라이언트 사이드 스크립트 언어</h2>
+
+<ul>
+  <li>웹 페이지의 보조적인 기능을 수행하기 위해 브라우저에서 동작하는 경량 프로그래밍 언어로 개발
+    <ul>
+      <li>초창기에는 웹 서버로부터 전달받은 <code class="language-plaintext highlighter-rouge">HTML/CSS</code>를 단순히 렌더링하는 수준에 머무름</li>
+      <li>1999년, 비동기로 데이터를 교환하는 <code class="language-plaintext highlighter-rouge">Ajax</code> 기능이 도입돼, 필요한 데이터만 받아 렌더링하는 것이 가능해짐</li>
+      <li>2006년, <code class="language-plaintext highlighter-rouge">DOM</code>을 쉽게 제어할 수 있는 <code class="language-plaintext highlighter-rouge">JQuery</code>가 등장</li>
+      <li>2008년, 구글의 크롬 <code class="language-plaintext highlighter-rouge">V8</code> 자바스크립트 엔진으로 웹 서버에서 수행되던 로직이 브라우저로 이동</li>
+      <li>2009년, <code class="language-plaintext highlighter-rouge">Node.js</code>로 브라우저 이외의 환경에서도 자바스크립트 엔진을 동작시킬 수 있게 됨
+        <ul>
+          <li>프런트엔드와 백엔드 모두에서 활용될 수 있는 동형성 (<code class="language-plaintext highlighter-rouge">isomorphic</code>)이 보장</li>
+          <li>비동기 <code class="language-plaintext highlighter-rouge">I/O</code>를 지원하고 단일 스레드 이벤트 루프를 기반하여, 실시간 데이터 처리가 빈번한 <code class="language-plaintext highlighter-rouge">SPA</code>에 적합
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">SPA</code> (<code class="language-plaintext highlighter-rouge">Single Page Application</code>) : <code class="language-plaintext highlighter-rouge">React</code>, <code class="language-plaintext highlighter-rouge">Vue.js</code> 등</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>모든 브라우저에 내장된 브라우저 표준 프로그래밍 언어로 자리잡음
+    <ul>
+      <li>개발자가 별도의 컴파일 작업을 수행하지 않는 인터프리터 언어 (<code class="language-plaintext highlighter-rouge">Interpreter Language</code>)</li>
+      <li>모던 자바스크립트 엔진은 인터프리터와 컴파일러의 장점을 결합해, 비교적 속도가 느린 인터프리터의 단점 해결</li>
+      <li>명령형 (<code class="language-plaintext highlighter-rouge">imperative</code>), 함수형 (<code class="language-plaintext highlighter-rouge">functional</code>), 프로토타입 기반 (<code class="language-plaintext highlighter-rouge">prototype-based</code>), 객체지향 프로그래밍을 지원하는 멀티 패러다임 프로그래밍 언어</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="nodejs--브라우저-밖에서-자바스크립트-코드를-실행하게-해주는-런타임-환경"><code class="language-plaintext highlighter-rouge">Node.js</code> : 브라우저 밖에서 자바스크립트 코드를 실행하게 해주는 런타임 환경</h3>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">HTML/CSS/JS</code>를 실행하여 웹 페이지를 브라우저 화면에 렌더링하는 브라우저와 달리, <code class="language-plaintext highlighter-rouge">Node.js</code> 는 브라우저 외부에서 자바스크립트를 실행할 수 있는 환경을 제공</p>
+
+  <ul>
+    <li>브라우저와 동일하게 자바스크립트의 코어인 <code class="language-plaintext highlighter-rouge">ECMScript</code>를 제공</li>
+    <li>파싱된 <code class="language-plaintext highlighter-rouge">HTML</code> 요소를 선택 및 조작하는 <code class="language-plaintext highlighter-rouge">DOM API</code>이나 클라이언트 사이드 <code class="language-plaintext highlighter-rouge">Web API</code>를 제공되지 않음</li>
+    <li>파일을 생성 및 수정할 수 있는 파일 시스템 및 <code class="language-plaintext highlighter-rouge">Node.js</code> 고유 <code class="language-plaintext highlighter-rouge">API</code> 제공</li>
+  </ul>
+
+  <p>브라우저가 제공하는 개발자 도구 (<code class="language-plaintext highlighter-rouge">DevTools</code>) 기능</p>
+
+  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c788a167-03a3-49c3-86b1-9340a67c688c" /></p>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">npm</code> : <code class="language-plaintext highlighter-rouge">Node.js</code>의 패키지를 관리할 수 있는 도구
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Node.js</code>에서 사용할 모듈을 패키지화해 모아둔 저장소 및 패키지 설치 및 관리를 위한 <code class="language-plaintext highlighter-rouge">CLI</code> 제공</li>
+      <li><code class="language-plaintext highlighter-rouge">npx</code> (<code class="language-plaintext highlighter-rouge">node package execute</code>)을 통해 패키지를 설치 및 실행</li>
+      <li>국내에서는 패키지 중복 문제를 링크 방식으로 해결한 <code class="language-plaintext highlighter-rouge">yarn</code>을 많이 사용하는 추세</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="변수-variable--하나의-값을-저장할-수-있는-메모리-공간">변수 (<code class="language-plaintext highlighter-rouge">variable</code>) : 하나의 값을 저장할 수 있는 메모리 공간</h2>
+
+<blockquote>
+  <p>변수 = 선언 + 식별자 + 타입 + 값 + 소코프</p>
+</blockquote>
+
+<ul>
+  <li>메모리 주소를 통해 값에 직접 접근하는 것은 위험 → 자바스크립트는 개발자의 직접적인 메모리 제어를 허용하지 않음</li>
+  <li>변수 이름을 어떤 값을 구별해 식별 가능한 고유한 이름이란 의미에서, 식별자 (<code class="language-plaintext highlighter-rouge">Identifier</code>)라고도 함
+    <ul>
+      <li>식별자는 값이 아닌 메모리 주소를 기억하고 있어, 식별자로 메모리 공간에 저장된 값에 접근</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var userId = 1;
+var userName = 'John';
+
+var user = { id: 1, name: 'John' };
+
+var users = {
+    { id: 1, name: 'John' }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>변수 선언 (<code class="language-plaintext highlighter-rouge">variable declaration</code>)을 통해 변수를 생성
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">var</code>, <code class="language-plaintext highlighter-rouge">let</code>, <code class="language-plaintext highlighter-rouge">const</code> 키워드로 변수를 선언</li>
+      <li>변수에 값을 할당하지 않았으면, 자바스크립트 엔진에 의해 <code class="language-plaintext highlighter-rouge">undefined</code> 값이 할당되어 초기화</li>
+      <li>선언하지 않은 식별자에 접근하면 참조 에러 (<code class="language-plaintext highlighter-rouge">ReferenceError</code>)가 발생</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="변수-호이스팅-variable-hoisting--변수-선언문을-코드-맨-위에-올려진-것처럼-동작시킴">변수 호이스팅 (<code class="language-plaintext highlighter-rouge">variable hoisting</code>) : 변수 선언문을 코드 맨 위에 올려진 것처럼 동작시킴</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log(a);
+var a = 10;
+
+&gt; undefined
+</code></pre></div></div>
+
+<ul>
+  <li>선언문의 실행 시점 : 선언문은 런타임 (<code class="language-plaintext highlighter-rouge">Runtime</code>)이 아닌 그 이전 단계에 먼저 실행
+    <ul>
+      <li>소스 코드를 한 줄씩 순차적으로 실행하기 앞서, 먼저 소스 코드의 평가 과정에서 선언문을 먼저 실행</li>
+      <li>즉, 식별자를 선언하는 선언문과 값을 할당하는 할당문의 실행 시점은 서로 다름</li>
+    </ul>
+  </li>
+  <li>변수, 함수, 클래스와 같이 키워드를 사용해서 선언하는 모든 식별자는 호이스팅됨</li>
+</ul>
+
+<h3 id="값-value--표현식이-평가되어-생성된-결과">값 (<code class="language-plaintext highlighter-rouge">value</code>) : 표현식이 평가되어 생성된 결과</h3>
+
+<ul>
+  <li>평가 (<code class="language-plaintext highlighter-rouge">evaluation</code>) : 표현식을 해석해서 값을 생성하거나 참조하는 것</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>10 + 20; // 30
+</code></pre></div></div>
+
+<ul>
+  <li>리터럴 (<code class="language-plaintext highlighter-rouge">literal</code>) : 사람이 이해할 수 있는 문자 혹인 기호를 통해 값을 생성하는 표기법</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/21a03922-1820-4bdd-82e9-844443ccedf3" width="80%" /></p>
+
+<ul>
+  <li>표현식 (<code class="language-plaintext highlighter-rouge">expression</code>) : 값으로 평가될 수 있는 구문
+    <ul>
+      <li>구문 (<code class="language-plaintext highlighter-rouge">statement</code>) : 프로그램을 이루는 기본 단위이자 최소 실행 단위 (선언문, 할당문, 조건문, 반복문 등)
+        <ul>
+          <li>토큰 (<code class="language-plaintext highlighter-rouge">token</code>) : 문법적으로 더 이상 나눌 수 없는 코드의 기본 요소</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="데이터-타입-date-type--값의-종류">데이터 타입 (<code class="language-plaintext highlighter-rouge">Date Type</code>) : 값의 종류</h4>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/f0c2d012-dc6b-418d-919f-b9dfa828448a" width="80%" /></p>
+
+<ul>
+  <li>숫자 타입 : 정수 및 실수를 모두 포함하는 타입으로 존재 (<b>모든 수를 실수로 처리</b>)</li>
+  <li>문자열 타입 : ‘’, “”, ``로 문자열을 감싼 텍스트 데이터
+    <ul>
+      <li>템플릿 (<code class="language-plaintext highlighter-rouge">template</code>) 리터럴 : <code class="language-plaintext highlighter-rouge">로 감싼 문자열 (</code><code class="language-plaintext highlighter-rouge">ES6</code>``부터 도입)
+        <ul>
+          <li>멀티라인 문자열 : 백슬레시 (<code class="language-plaintext highlighter-rouge">\n</code>) 없이 개행 가능</li>
+          <li>표현식 삽입 : <code class="language-plaintext highlighter-rouge">+</code>으로 <code class="language-plaintext highlighter-rouge">${}</code>로 감싼 표현식을 문자열로 변환해 삽입할 수 있음</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>불리언 타입 : 참 (<code class="language-plaintext highlighter-rouge">true</code>)과 거짓 (<code class="language-plaintext highlighter-rouge">false</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">undefined</code> 타입 : 변수 선언에 의해 확보된 메모리 공간은 쓰레기 값이 아닌 <code class="language-plaintext highlighter-rouge">undefined</code>로 초기화</li>
+  <li><code class="language-plaintext highlighter-rouge">null</code> 타입 : 변수에 값이 없다는 것을 의도적으로 명시 (<code class="language-plaintext highlighter-rouge">intentional absence</code>)하기 위해 사용</li>
+  <li>심벌 (<code class="language-plaintext highlighter-rouge">symbol</code>) 타입 : 변경 불가능한 원시 타입 (다른 값과 중복되지 않는 유일무이한 값)
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Symbol</code> 함수를 호출해 생성되며, 값은 외부에 노출되지 않음 (<code class="language-plaintext highlighter-rouge">var key = Symbol('key');</code>)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="동적-타이핑-dynamic-typing--변수를-선언할-때-데이터-타입을-사전에-선언하지-않음">동적 타이핑 (<code class="language-plaintext highlighter-rouge">Dynamic Typing</code>) : 변수를 선언할 때 데이터 타입을 사전에 선언하지 않음</h3>
+
+<ul>
+  <li>자바스크립트의 변수는 선언이 아닌 할당에 의해 타입이 결정되는 타입 추론 (<code class="language-plaintext highlighter-rouge">Type Inference</code>)이 이루어짐</li>
+  <li>재할당에 의해 변수의 타입은 언제든지 동적으로 변화할 수 있음 (<code class="language-plaintext highlighter-rouge">loosely data</code>)</li>
+</ul>
+
+<blockquote>
+  <p>정적 타입 (<code class="language-plaintext highlighter-rouge">Static Typing</code>) : 변수를 선언할 때 데이터 타입을 사전에 선언</p>
+
+  <ul>
+    <li>변수에 선언한 타입에 해당하는 값만 할당할 수 있음</li>
+    <li>컴파일 시점에 타입 체크 (<code class="language-plaintext highlighter-rouge">Type Check</code>)를 수행하고, 통과하지 못하면 에러를 발생시킴</li>
+    <li>타입의 일관성을 강제해 안정ㅇ적인 코드의 구현을 통해 런타임에 발생하는 에러를 줄임</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>자바스크립트는 <code class="language-plaintext highlighter-rouge">var</code>, <code class="language-plaintext highlighter-rouge">let</code>, <code class="language-plaintext highlighter-rouge">const</code> 키워드를 통해 변수만 선언
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">typeof()</code> 연산자를 통해 피연산자의 데이터 타입을 문자열로 반환할 수 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>동적 타이핑 및 동적 타입 언어의 단점?</p>
+
+  <ul>
+    <li>동적 타입 언어의 변수 값은 언제든지 변할 수 있음
+      <ul>
+        <li>복잡한 프로그램에서는 변수 값을 추적하기 어려울 수 있음</li>
+      </ul>
+    </li>
+    <li>동적 타입 언어의 변수는 값의 변경에 의해 타입 또한 언제든지 변경될 수 있음
+      <ul>
+        <li>값을 확인하기 전에는 타입을 확신할 수 없음</li>
+        <li>자바스크립트 엔진에 의해 타입이 자동으로 변환될 수도 있음</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>→ 동적 타입 언어는 유연성 (<code class="language-plaintext highlighter-rouge">Flexibility</code>)은 높지만 신뢰성 (<code class="language-plaintext highlighter-rouge">Reliability</code>)는 떨어진다.</p>
+
+  <blockquote>
+    <p>변수를 사용할 때 지켜면 좋은 규칙</p>
+
+    <ul>
+      <li>변수는 꼭 필요한 경우에 한해 제한적으로 사용한다.</li>
+      <li>변수의 유효 범위인 스코프는 최대한 좁게 만들어 변수의 부작용을 억제한다.</li>
+      <li>전역 변수는 최대한 자제한다.</li>
+      <li>변수보다는 상수를 사용해 값의 변경을 억제한다.</li>
+      <li>변수 이름은 목적 및 의미를 파악할 수 있도록 네이밍하고, 특히 스코프가 넓을수록 명확하게 명명한다.</li>
+    </ul>
+  </blockquote>
+</blockquote>
+
+<h3 id="암묵적-타입-변환--자바스크립트-엔진에서-에러를-발생시키지-않도록-타입을-바꿔-표현식을-평가하는-것">암묵적 타입 변환 : 자바스크립트 엔진에서 에러를 발생시키지 않도록 타입을 바꿔 표현식을 평가하는 것</h3>
+
+<ul>
+  <li>문자열 타입 변환 : <code class="language-plaintext highlighter-rouge">+</code>의 피연산자 중 하나가 문자열이면, 문자열 연결 연산자로 동작하므로 다른 것을 문자열로 변환</li>
+  <li>숫자 타입 변환 : 산술 및 비교 연산자의 피연산자 중에 숫자 타입이 아닌 피연산자를 숫자 타입으로 변환</li>
+  <li>불리언 타입 변환 : 논리적 참/거짓을 평가하는 경우에 불리언 타입이 아닌 피연산자를 불리언 타입으로 변환</li>
+</ul>
+
+<h3 id="명시적-타입-변환--의도적으로-값의-타입을-변환하는-것--타입-캐스팅-type-casting">명시적 타입 변환 : 의도적으로 값의 타입을 변환하는 것 → 타입 캐스팅 (<code class="language-plaintext highlighter-rouge">type casting</code>)</h3>
+
+<ul>
+  <li>문자열 타입으로 변환 : <code class="language-plaintext highlighter-rouge">String()</code>, <code class="language-plaintext highlighter-rouge">toString()</code>, 문자열 연결 연산자 <code class="language-plaintext highlighter-rouge">+</code></li>
+  <li>숫자 타입으로 변환 : <code class="language-plaintext highlighter-rouge">Number()</code>, <code class="language-plaintext highlighter-rouge">parseInt()/parseFloat()</code>, <code class="language-plaintext highlighter-rouge">+</code>, <code class="language-plaintext highlighter-rouge">*</code></li>
+  <li>불리언 타입으로 변환 : <code class="language-plaintext highlighter-rouge">Boolean()</code>, 부정 논리 연산자 <code class="language-plaintext highlighter-rouge">!</code>를 2번</li>
+</ul>
+
+<blockquote>
+  <p>기존 원시 값을 사용해 다른 타입의 새로운 원시 값을 생성하는 것!</p>
+
+  <ul>
+    <li>원시 값은 변경 불가능한 값 (<code class="language-plaintext highlighter-rouge">immutable value</code>) → 기존 원시 값을 직접 변경 ✘</li>
+    <li>자바스크립트 엔진에서 표현식을 평가하기 위해 피연산자의 값을 암묵적 타입 변환으로 새로운 타입의 값을 만듬</li>
+  </ul>
+</blockquote>
+
+<h3 id="단축-평가-short-circuit-evaluation--표현식을-평가하는-중에-결과가-확정되면-평가-과정을-생략">단축 평가 (<code class="language-plaintext highlighter-rouge">short-circuit evaluation</code>) : 표현식을 평가하는 중에 결과가 확정되면, 평가 과정을 생략</h3>
+
+<ul>
+  <li>논리 평가 : 논리 연산자를 이용한 단축 평가 (좌항에서 우항으로 평가)
+    <ul>
+      <li>논리곱 연산자 <code class="language-plaintext highlighter-rouge">&amp;&amp;</code>는 두 피연산자가 모두 <code class="language-plaintext highlighter-rouge">true</code>일 때, <code class="language-plaintext highlighter-rouge">true</code> 반환
+        <ul>
+          <li>논리 연산의 결과를 결정하는 두번째 피연산자를 그대로 반환</li>
+        </ul>
+      </li>
+      <li>논리합 연산자 <code class="language-plaintext highlighter-rouge">||</code>는 두 피연산자 중 하나만  <code class="language-plaintext highlighter-rouge">true</code>이여도, <code class="language-plaintext highlighter-rouge">true</code> 반환
+        <ul>
+          <li>논리 연산의 결과를 결정하는 첫번째 피연사자를 그대로 반환</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'Cat' &amp;&amp; 'Dog' // true &amp;&amp; 'Dog' → 'Dog'
+'Cat' || 'Dog' // 'Cat'... → 'Cat'
+</code></pre></div></div>
+
+<blockquote>
+  <p>논리 평가를 사용하는 경우?</p>
+
+  <ul>
+    <li>객체를 가리키기 기대하는 변수가 <code class="language-plaintext highlighter-rouge">null</code> 혹은 <code class="language-plaintext highlighter-rouge">undefined</code>가 아닌지 확인하고 프로퍼티를 참조할 때</li>
+  </ul>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var elem = null;
+// var value = elem.value; // TypeError
+var value = elem &amp;&amp; elem.value; // null
+</code></pre></div>  </div>
+
+  <ul>
+    <li>함수 매개변수에 <code class="language-plaintext highlighter-rouge">undefined</code>가 할당되지 않도록 기본값을 설정할 때</li>
+  </ul>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function getStringLength() {
+str = str || '';
+return str.length;
+}
+getStringLength(); // 0
+getStringLength('hello'); // 5
+</code></pre></div>  </div>
+</blockquote>
+
+<ul>
+  <li>옵셔널 체이닝 (<code class="language-plaintext highlighter-rouge">Optional Chaining</code>) 연산자 <code class="language-plaintext highlighter-rouge">?</code> : 좌항의 피연산자가 <code class="language-plaintext highlighter-rouge">null</code> 혹은 <code class="language-plaintext highlighter-rouge">undefined</code>이면 <code class="language-plaintext highlighter-rouge">undefined</code>를 반환하고, 그렇지 않으면 우항의 프로퍼티 참조를 그대로 진행함</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var elem = null;
+var str = '';
+
+var value1 = elem?.value; console.log(value1); // undefined
+var value2 = elem &amp;&amp; elem.value; console.log(value2); // null
+var value3 = str &amp;&amp; str.length; console.log(value3); // ''
+var value4 = str?.length; console.log(value4); // 0
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">null</code> 병합 연산자 <code class="language-plaintext highlighter-rouge">??</code> : 좌항의 피연산자가 <code class="language-plaintext highlighter-rouge">null</code> 혹은 <code class="language-plaintext highlighter-rouge">undefined</code>이면 우항의 피연산자를 반환하고, 그렇지 않으면 좌항의 피연산자를 반환 → 변수에 기본값을 설정할 때 사용
+    <ul>
+      <li>논리 연산자 <code class="language-plaintext highlighter-rouge">||</code>를 사용한 단축 평가와 달리, 피연산자가  <code class="language-plaintext highlighter-rouge">false</code>로 평가받는 <code class="language-plaintext highlighter-rouge">Falsy</code> 값 (<code class="language-plaintext highlighter-rouge">false</code>, <code class="language-plaintext highlighter-rouge">undefined</code>, <code class="language-plaintext highlighter-rouge">null</code>, <code class="language-plaintext highlighter-rouge">0</code>, <code class="language-plaintext highlighter-rouge">-0</code>, <code class="language-plaintext highlighter-rouge">NaN</code>, <code class="language-plaintext highlighter-rouge">''</code>)이라도 <code class="language-plaintext highlighter-rouge">null</code> 혹은 <code class="language-plaintext highlighter-rouge">undefined</code>이 아니면, 좌항의 피연산자를 반환함</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var foo = null ?? 'default'; // 'default'
+</code></pre></div></div>
+
+<h2 id="객체-object--소프트웨어에서-속성과-기능을-가지는-프로그램의-단위">객체 (<code class="language-plaintext highlighter-rouge">Object</code>) : 소프트웨어에서 속성과 기능을 가지는 프로그램의 단위</h2>
+
+<blockquote>
+  <ul>
+    <li>원시 타입 (<code class="language-plaintext highlighter-rouge">Primitive</code>) : 값이 스택 영역에 들어감 (<code class="language-plaintext highlighter-rouge">Call-By-Value</code>)</li>
+    <li>객체 타입 (<code class="language-plaintext highlighter-rouge">Object</code>) : 값이 힙 영역에 들어감 (<code class="language-plaintext highlighter-rouge">Call-By-Reference</code>)</li>
+  </ul>
+
+  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/2afeda63-c90d-4989-bf9c-88af481e4acc" /></p>
+</blockquote>
+
+<ul>
+  <li>원시 값을 제외한 나머지 값, 함수, 배열, 정규 표현식 등음 모두 객체</li>
+  <li>원시 값은 변경 불가능한 값이지만, 객체 값은 변경 가능한 값</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var person = {
+  name: 'John', // "name: 'John'"은 프로퍼티, 
+  age: 21       // "name"은 프로퍼티 키, "'John'"은 프로퍼티 값
+};
+</code></pre></div></div>
+
+<ul>
+  <li>객체는 0개 이상의 프로퍼티의 집합 → 프로퍼티는 키 (<code class="language-plaintext highlighter-rouge">key</code>)와 값 (<code class="language-plaintext highlighter-rouge">value</code>)으로 구성
+    <ul>
+      <li>자바스크립트에서 사용할 수 있는 모든 값은 프로퍼티 값이 될 수 있다.</li>
+    </ul>
+  </li>
+  <li>객체는 프로퍼티와 메소드를 모두 포함하고 있어, 상태와 동작을 하나의 단위로 구조화할 수 있다.
+    <ul>
+      <li>프로퍼티 (<code class="language-plaintext highlighter-rouge">property</code>) : 객체의 상태를 나타내는 값 (<code class="language-plaintext highlighter-rouge">data</code>)</li>
+      <li>메소드 (<code class="language-plaintext highlighter-rouge">method</code>) : 프로퍼티를 참조하고 조작할 수 있는 동작 (<code class="language-plaintext highlighter-rouge">behavior</code>)</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">C++</code>이나 <code class="language-plaintext highlighter-rouge">Java</code> → 클래스 (<code class="language-plaintext highlighter-rouge">Class</code>) 기반 객체지향 언어 : 클래스를 사전에 정의하고, 필요한 시점에 <code class="language-plaintext highlighter-rouge">new</code> 연산자와 함께 생성자 (<code class="language-plaintext highlighter-rouge">constructor</code>)를 호출하여 인스턴스를 생성하는 방식으로 객체를 생성</li>
+    <li>자바스크립트 → 프로토타입 (<code class="language-plaintext highlighter-rouge">Prototype</code>) 기반 객체지향 언어 : 다양한 객체 생성 방법을 지원</li>
+  </ul>
+</blockquote>
+
+<h3 id="객체-리터럴에-의한-객체-생성---내에-0개-이상의-프로퍼티를-정의">객체 리터럴에 의한 객체 생성 : <code class="language-plaintext highlighter-rouge">{}</code> 내에 0개 이상의 프로퍼티를 정의</h3>
+
+<ul>
+  <li>변수에 할당되는 시점에 자바스크립트 엔진은 객체 리터럴을 해석해 객체를 생성</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var person = {
+  name: 'John',
+  ...
+}
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#js" class="page__taxonomy-item p-category" rel="tag">JS</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-24">January 24, 2024</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BJS%5D+%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8+%28JavaScript%29%20http%3A%2F%2Flocalhost%3A4000%2Fjs1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fjs1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/docker5/" class="pagination--pager" title="[Docker] 5. Docker Registry
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/docker5/" rel="permalink">[Docker] 5. Docker Registry
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/springboot2/" rel="permalink">[SpringBoot] 2. SpringBoot Common Task
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/digital_hanaro_study2/" rel="permalink">TailwindCSS란? (2024.01.22)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  디지털하나路 스터디 2일차 내용을 정리한 글입니다.
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/digital_hanaro_study1/" rel="permalink">프로그래밍 언어로서의 JavaScript와 TypeScript (2024.01.19)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  디지털하나路 스터디 1일차 내용을 정리한 글입니다.
+
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.pinterest.co.kr/pocj8ur4in/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-pinterest-square" aria-hidden="true"></i> Pinterest</a></li>
+        
+      
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 pocj8ur4in's blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

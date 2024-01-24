@@ -1,60 +1,373 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-23T16:04:57+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Docker] 5. Docker Registry</title><link href="http://localhost:4000/docker5/" rel="alternate" type="text/html" title="[Docker] 5. Docker Registry" /><published>2024-01-23T00:00:00+09:00</published><updated>2024-01-23T00:00:00+09:00</updated><id>http://localhost:4000/docker5</id><content type="html" xml:base="http://localhost:4000/docker5/"><![CDATA[]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Docker" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">TailwindCSS란? (2024.01.22)</title><link href="http://localhost:4000/digital_hanaro_study2/" rel="alternate" type="text/html" title="TailwindCSS란? (2024.01.22)" /><published>2024-01-22T00:00:00+09:00</published><updated>2024-01-22T00:00:00+09:00</updated><id>http://localhost:4000/digital_hanaro_study2</id><content type="html" xml:base="http://localhost:4000/digital_hanaro_study2/"><![CDATA[<blockquote>
-  <p><a href="https://github.com/pocj8ur4in/finance-dev-study">디지털하나路 스터디</a> 2일차 내용을 정리한 글입니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-24T17:45:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[JS] 자바스크립트 (JavaScript)</title><link href="http://localhost:4000/js1/" rel="alternate" type="text/html" title="[JS] 자바스크립트 (JavaScript)" /><published>2024-01-24T00:00:00+09:00</published><updated>2024-01-24T00:00:00+09:00</updated><id>http://localhost:4000/js1</id><content type="html" xml:base="http://localhost:4000/js1/"><![CDATA[<h2 id="자바스크립트-javascript--동적-클라이언트-사이드-스크립트-언어">자바스크립트 (<code class="language-plaintext highlighter-rouge">JavaScript</code>) : 동적 클라이언트 사이드 스크립트 언어</h2>
+
+<ul>
+  <li>웹 페이지의 보조적인 기능을 수행하기 위해 브라우저에서 동작하는 경량 프로그래밍 언어로 개발
+    <ul>
+      <li>초창기에는 웹 서버로부터 전달받은 <code class="language-plaintext highlighter-rouge">HTML/CSS</code>를 단순히 렌더링하는 수준에 머무름</li>
+      <li>1999년, 비동기로 데이터를 교환하는 <code class="language-plaintext highlighter-rouge">Ajax</code> 기능이 도입돼, 필요한 데이터만 받아 렌더링하는 것이 가능해짐</li>
+      <li>2006년, <code class="language-plaintext highlighter-rouge">DOM</code>을 쉽게 제어할 수 있는 <code class="language-plaintext highlighter-rouge">JQuery</code>가 등장</li>
+      <li>2008년, 구글의 크롬 <code class="language-plaintext highlighter-rouge">V8</code> 자바스크립트 엔진으로 웹 서버에서 수행되던 로직이 브라우저로 이동</li>
+      <li>2009년, <code class="language-plaintext highlighter-rouge">Node.js</code>로 브라우저 이외의 환경에서도 자바스크립트 엔진을 동작시킬 수 있게 됨
+        <ul>
+          <li>프런트엔드와 백엔드 모두에서 활용될 수 있는 동형성 (<code class="language-plaintext highlighter-rouge">isomorphic</code>)이 보장</li>
+          <li>비동기 <code class="language-plaintext highlighter-rouge">I/O</code>를 지원하고 단일 스레드 이벤트 루프를 기반하여, 실시간 데이터 처리가 빈번한 <code class="language-plaintext highlighter-rouge">SPA</code>에 적합
+            <ul>
+              <li><code class="language-plaintext highlighter-rouge">SPA</code> (<code class="language-plaintext highlighter-rouge">Single Page Application</code>) : <code class="language-plaintext highlighter-rouge">React</code>, <code class="language-plaintext highlighter-rouge">Vue.js</code> 등</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>모든 브라우저에 내장된 브라우저 표준 프로그래밍 언어로 자리잡음
+    <ul>
+      <li>개발자가 별도의 컴파일 작업을 수행하지 않는 인터프리터 언어 (<code class="language-plaintext highlighter-rouge">Interpreter Language</code>)</li>
+      <li>모던 자바스크립트 엔진은 인터프리터와 컴파일러의 장점을 결합해, 비교적 속도가 느린 인터프리터의 단점 해결</li>
+      <li>명령형 (<code class="language-plaintext highlighter-rouge">imperative</code>), 함수형 (<code class="language-plaintext highlighter-rouge">functional</code>), 프로토타입 기반 (<code class="language-plaintext highlighter-rouge">prototype-based</code>), 객체지향 프로그래밍을 지원하는 멀티 패러다임 프로그래밍 언어</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="nodejs--브라우저-밖에서-자바스크립트-코드를-실행하게-해주는-런타임-환경"><code class="language-plaintext highlighter-rouge">Node.js</code> : 브라우저 밖에서 자바스크립트 코드를 실행하게 해주는 런타임 환경</h3>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">HTML/CSS/JS</code>를 실행하여 웹 페이지를 브라우저 화면에 렌더링하는 브라우저와 달리, <code class="language-plaintext highlighter-rouge">Node.js</code> 는 브라우저 외부에서 자바스크립트를 실행할 수 있는 환경을 제공</p>
+
+  <ul>
+    <li>브라우저와 동일하게 자바스크립트의 코어인 <code class="language-plaintext highlighter-rouge">ECMScript</code>를 제공</li>
+    <li>파싱된 <code class="language-plaintext highlighter-rouge">HTML</code> 요소를 선택 및 조작하는 <code class="language-plaintext highlighter-rouge">DOM API</code>이나 클라이언트 사이드 <code class="language-plaintext highlighter-rouge">Web API</code>를 제공되지 않음</li>
+    <li>파일을 생성 및 수정할 수 있는 파일 시스템 및 <code class="language-plaintext highlighter-rouge">Node.js</code> 고유 <code class="language-plaintext highlighter-rouge">API</code> 제공</li>
+  </ul>
+
+  <p>브라우저가 제공하는 개발자 도구 (<code class="language-plaintext highlighter-rouge">DevTools</code>) 기능</p>
+
+  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c788a167-03a3-49c3-86b1-9340a67c688c" /></p>
 </blockquote>
 
-<h2 id="공부하고자-한-이유">공부하고자 한 이유</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">npm</code> : <code class="language-plaintext highlighter-rouge">Node.js</code>의 패키지를 관리할 수 있는 도구
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Node.js</code>에서 사용할 모듈을 패키지화해 모아둔 저장소 및 패키지 설치 및 관리를 위한 <code class="language-plaintext highlighter-rouge">CLI</code> 제공</li>
+      <li><code class="language-plaintext highlighter-rouge">npx</code> (<code class="language-plaintext highlighter-rouge">node package execute</code>)을 통해 패키지를 설치 및 실행</li>
+      <li>국내에서는 패키지 중복 문제를 링크 방식으로 해결한 <code class="language-plaintext highlighter-rouge">yarn</code>을 많이 사용하는 추세</li>
+    </ul>
+  </li>
+</ul>
 
-<p>토이 프로젝트를 만들 때 부트스트랩 (<code class="language-plaintext highlighter-rouge">Bootstrap</code>)을 많이 활용하여 화면을 구성하곤 하였는데, 오늘 강사님께서 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>라는 새로운 프론트엔드 프레임워크 기술에 대해 말씀해주시면서, 현재는 부트스트랩보다 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>를 사용한 사이트가 훨씬 다수임을 알려주셨다. 그래서 향후 토이 프로젝트에 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>를 적용할 수 있도록 부트스트랩과 차이점을 비교해보면서 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>에 대해 공부해보고자 한다.</p>
+<h2 id="변수-variable--하나의-값을-저장할-수-있는-메모리-공간">변수 (<code class="language-plaintext highlighter-rouge">variable</code>) : 하나의 값을 저장할 수 있는 메모리 공간</h2>
 
-<h2 id="공부한-내용">공부한 내용</h2>
+<blockquote>
+  <p>변수 = 선언 + 식별자 + 타입 + 값 + 소코프</p>
+</blockquote>
 
-<p>부트스트랩 (<code class="language-plaintext highlighter-rouge">BootStrap</code>)은 2011년에 트위터에서 시작된 오픈 소스 프론트엔드 프레임워크이다. 글자, 인용문, 목록, 표 등 자잘한 요소부터 메뉴, 바, 버튼 등까지 웹 페이지에서 자주 쓰이는 요소들을 모두 내장하고 있어, 부트스트랩의 <code class="language-plaintext highlighter-rouge">CSS</code>와 <code class="language-plaintext highlighter-rouge">JS</code>를 사이트에 반영만 하면 일정한 디자인을 빠른 시간 내에 제작할 수 있다. 그리고 데스크탑만이 아니라 모바일 화면 또한 비율에 맞게 반응형으로 지원하여 크로스 브라우저 (<code class="language-plaintext highlighter-rouge">Cross-Browser</code>) 환경에도 적합하다. 또한 해상도 크기에 맞게 자동으로 정렬되고 크기 조절이 가능한 그리드 시스템 (<code class="language-plaintext highlighter-rouge">Grid System</code>)이 내장되어 있어 화면에 특정한 요소를 배치하는 것에 대한 커스텀마이징 또한 매우 간단한 편이다. <a href="https://getbootstrap.com">부트스트랩 공식 웹 사이트</a>에서 여러 예시 화면들을 볼 수도 있다.</p>
+<ul>
+  <li>메모리 주소를 통해 값에 직접 접근하는 것은 위험 → 자바스크립트는 개발자의 직접적인 메모리 제어를 허용하지 않음</li>
+  <li>변수 이름을 어떤 값을 구별해 식별 가능한 고유한 이름이란 의미에서, 식별자 (<code class="language-plaintext highlighter-rouge">Identifier</code>)라고도 함
+    <ul>
+      <li>식별자는 값이 아닌 메모리 주소를 기억하고 있어, 식별자로 메모리 공간에 저장된 값에 접근</li>
+    </ul>
+  </li>
+</ul>
 
-<p>나 같은 경우에는 전문적인 프론트엔드 개발자가 아니라서, 부트스트랩을 처음 접했을 때에는 블로그를 운영하는 과정에서 배운 <code class="language-plaintext highlighter-rouge">HTML/CSS/JS</code>에 대한 지식들만 있는 상태였다. 그러나 예시 화면들의 각 요소들을 직접 뜯어보고 수정하는 과정에서 사용해본 내부 클래스들로만으로도 내가 필요로 한 화면들을 금방금방 구성해낼 수 있었다. 아래의 화면은 내가 기획하였던 사이트의 노래 검색 화면으로, 화면 구상에서 실제 구현까지 2~3일 정도 걸린 것으로 기억한다. <code class="language-plaintext highlighter-rouge">Header</code>와 <code class="language-plaintext highlighter-rouge">Footer</code> 부분은 템플릿 엔진을 통해 이전에 만든 요소를 그대로 사용하였고, 상세 검색 화면은 그리드 시스템과 내장된 글자 및 버튼 속성을 적절히 적용하여 구현하였다. 그리고 버튼을 눌렀을 때 나올 수 있는 동작들, 예를 들어 마우스 포커싱 기능들도 <code class="language-plaintext highlighter-rouge">CSS</code>로 구현되어 있어 따로 만들 필요가 없었다. 그리고 작년에 <code class="language-plaintext highlighter-rouge">7</code> 버전이 출시될 만큼 꾸준한 개발 및 지원이 이루어지고 있고, 또 부트스트랩을 사용하는 웹 사이트 및 래퍼런스들도 여전히 많이 존재한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var userId = 1;
+var userName = 'John';
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/625ec1e6-55ec-48a3-9ae8-5b415405f4b1" /></p>
+var user = { id: 1, name: 'John' };
 
-<p>그럼 부트스트랩 대신에 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>가 대세가 된 이유는 무엇일까? 내가 처음 떠올린 이유는 부트스트랩만으로는 생각보다 직접 커스텀마이징을 하는 데에 한계가 있다는 것이다. 물론 오픈 소스이므로 래퍼런스가 정말 많고, 원하는 페이지를 만드는 것도 얼마든지 가능한 것 또한 사실이다. 그런데 사실 이건 <code class="language-plaintext highlighter-rouge">HTML/CSS/JS</code>을 다룰 수 있으면 얼마든지 가능한 부분이고, 이젠 피그마 등을 활용해 원하는 화면을 빠르게 배치해 만드는 것도 가능하다. 오히려 부트스트랩 기반으로 한, 비슷한 디자인의 사이트들이 많아져서 타 사이트와의 차별성을 두기 어려운 부분 또한 맞는 말이라고 생각한다. 부트스트랩의 취지는 <code class="language-plaintext highlighter-rouge">HTML/CSS/JS</code>들을 미리 만들어 개발자가 사용할 수 있는 것인데, 내가 구현하지 않는 부분까지 빌트인 (<code class="language-plaintext highlighter-rouge">built-in</code>)되어 있다보니, 부트스트랩 자제 문법을 공부하는 데에도 시간이 꽤 걸린다.</p>
-
-<p>그러면 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>에 대해 알아보자. <code class="language-plaintext highlighter-rouge">TailwindCSS</code>는 2017년에 <code class="language-plaintext highlighter-rouge">Tailwind Labs</code>에서 개발한 <code class="language-plaintext highlighter-rouge">CSS</code> 프레임워크이다. <code class="language-plaintext highlighter-rouge">TailwindCSS</code>는 <code class="language-plaintext highlighter-rouge">CSS</code>를 작성하지 않고 클래스 이름을 제공하여 <code class="language-plaintext highlighter-rouge">HTML</code>에 필요한 <code class="language-plaintext highlighter-rouge">CSS</code> 유틸리티만 입혀도 스타일이 완성되는 ‘유틸리티 우선 <code class="language-plaintext highlighter-rouge">CSS</code>‘를 지향한다. <a href="https://tailwindcss.com"><code class="language-plaintext highlighter-rouge">TailwindCSS</code> 공식 사이트</a>를 보면, 클래스 이름만 적어도 <code class="language-plaintext highlighter-rouge">CSS</code>가 적용되는 여러 예시들을 볼 수 있다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div&gt;
-    &lt;style&gt;
-    .rainbow-block {
-      display: inline-block;
-      width: 100%;
-      height: 150px;
-      background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-    }
-  &lt;/style&gt;
-  &lt;div class="rainbow-block"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</code></pre></div></div>
-
-<div>
-    <style>
-    .rainbow-block {
-      display: inline-block;
-      width: 100%;
-      height: 150px;
-      background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-    }
-  </style>
-  <div class="rainbow-block"></div>
-</div>
-
-<p>무지개색 블록을 만들고자 할 때, 순수 <code class="language-plaintext highlighter-rouge">CSS</code>는 위의 스타일 코드를 적어야 한다. 반면 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>는 아래의 예시처럼 미리 정의된 유틸리티 클래스들을 활용하여 클래스 이름만으로 스타일을 적용할 수 있다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-.rainbow-block {
-  @apply inline-block w-32 h-32 bg-gradient-to-r from-violet to-red;
+var users = {
+    { id: 1, name: 'John' }
 }
 </code></pre></div></div>
 
-<p>사실 이게 왜 장점이지? 할 수도 있다. 어쨌든 <code class="language-plaintext highlighter-rouge">HTML/CSS</code> 또한 기능 자체를 제공하기는 한다! 하지만 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>가 제공하는 유틸리티 클래스는 부트스트랩의 장점인 일관성 있는 디자인을 가지면서, 기본 스타일 값을 직접 커스텀마이징할 수 있는 <code class="language-plaintext highlighter-rouge">key-value</code>를 제공한다. 그리고 로우 레벨의 스타일 또한 제공하므로, 미리보기, 자동완성, 신택스 하이라이팅 및 린팅을 지원하는 <code class="language-plaintext highlighter-rouge">IntelliSense</code> 플러그인을 활용하여 필요한 디자인을 세밀하게 구현할 수 있다. 무엇보다 프론트엔드 개발자가 가장 장점으로 꼽는 부분은 <b>클래스 이름을 고민하지 않아도 된다는 점</b>인데, 이건 함수의 이름을 잘 짓기 위해 프로젝트 시작 전에 매번 고민하는 시간을 갖는 나에게도 와닿는 문제라 공감이 가는 부분이 많다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Digital Hanaro Study" /><summary type="html"><![CDATA[디지털하나路 스터디 2일차 내용을 정리한 글입니다.]]></summary></entry><entry><title type="html">[SpringBoot] 2. SpringBoot Common Task</title><link href="http://localhost:4000/springboot2/" rel="alternate" type="text/html" title="[SpringBoot] 2. SpringBoot Common Task" /><published>2024-01-22T00:00:00+09:00</published><updated>2024-01-22T00:00:00+09:00</updated><id>http://localhost:4000/springboot2</id><content type="html" xml:base="http://localhost:4000/springboot2/"><![CDATA[<h2 id="어플리케이션-설정-관리--여러-환경에-따른-설정-정보의-다중화">어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화</h2>
+<ul>
+  <li>변수 선언 (<code class="language-plaintext highlighter-rouge">variable declaration</code>)을 통해 변수를 생성
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">var</code>, <code class="language-plaintext highlighter-rouge">let</code>, <code class="language-plaintext highlighter-rouge">const</code> 키워드로 변수를 선언</li>
+      <li>변수에 값을 할당하지 않았으면, 자바스크립트 엔진에 의해 <code class="language-plaintext highlighter-rouge">undefined</code> 값이 할당되어 초기화</li>
+      <li>선언하지 않은 식별자에 접근하면 참조 에러 (<code class="language-plaintext highlighter-rouge">ReferenceError</code>)가 발생</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="변수-호이스팅-variable-hoisting--변수-선언문을-코드-맨-위에-올려진-것처럼-동작시킴">변수 호이스팅 (<code class="language-plaintext highlighter-rouge">variable hoisting</code>) : 변수 선언문을 코드 맨 위에 올려진 것처럼 동작시킴</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log(a);
+var a = 10;
+
+&gt; undefined
+</code></pre></div></div>
+
+<ul>
+  <li>선언문의 실행 시점 : 선언문은 런타임 (<code class="language-plaintext highlighter-rouge">Runtime</code>)이 아닌 그 이전 단계에 먼저 실행
+    <ul>
+      <li>소스 코드를 한 줄씩 순차적으로 실행하기 앞서, 먼저 소스 코드의 평가 과정에서 선언문을 먼저 실행</li>
+      <li>즉, 식별자를 선언하는 선언문과 값을 할당하는 할당문의 실행 시점은 서로 다름</li>
+    </ul>
+  </li>
+  <li>변수, 함수, 클래스와 같이 키워드를 사용해서 선언하는 모든 식별자는 호이스팅됨</li>
+</ul>
+
+<h3 id="값-value--표현식이-평가되어-생성된-결과">값 (<code class="language-plaintext highlighter-rouge">value</code>) : 표현식이 평가되어 생성된 결과</h3>
+
+<ul>
+  <li>평가 (<code class="language-plaintext highlighter-rouge">evaluation</code>) : 표현식을 해석해서 값을 생성하거나 참조하는 것</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>10 + 20; // 30
+</code></pre></div></div>
+
+<ul>
+  <li>리터럴 (<code class="language-plaintext highlighter-rouge">literal</code>) : 사람이 이해할 수 있는 문자 혹인 기호를 통해 값을 생성하는 표기법</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/21a03922-1820-4bdd-82e9-844443ccedf3" width="80%" /></p>
+
+<ul>
+  <li>표현식 (<code class="language-plaintext highlighter-rouge">expression</code>) : 값으로 평가될 수 있는 구문
+    <ul>
+      <li>구문 (<code class="language-plaintext highlighter-rouge">statement</code>) : 프로그램을 이루는 기본 단위이자 최소 실행 단위 (선언문, 할당문, 조건문, 반복문 등)
+        <ul>
+          <li>토큰 (<code class="language-plaintext highlighter-rouge">token</code>) : 문법적으로 더 이상 나눌 수 없는 코드의 기본 요소</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="데이터-타입-date-type--값의-종류">데이터 타입 (<code class="language-plaintext highlighter-rouge">Date Type</code>) : 값의 종류</h4>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/f0c2d012-dc6b-418d-919f-b9dfa828448a" width="80%" /></p>
+
+<ul>
+  <li>숫자 타입 : 정수 및 실수를 모두 포함하는 타입으로 존재 (<b>모든 수를 실수로 처리</b>)</li>
+  <li>문자열 타입 : ‘’, “”, ``로 문자열을 감싼 텍스트 데이터
+    <ul>
+      <li>템플릿 (<code class="language-plaintext highlighter-rouge">template</code>) 리터럴 : <code class="language-plaintext highlighter-rouge">로 감싼 문자열 (</code><code class="language-plaintext highlighter-rouge">ES6</code>``부터 도입)
+        <ul>
+          <li>멀티라인 문자열 : 백슬레시 (<code class="language-plaintext highlighter-rouge">\n</code>) 없이 개행 가능</li>
+          <li>표현식 삽입 : <code class="language-plaintext highlighter-rouge">+</code>으로 <code class="language-plaintext highlighter-rouge">${}</code>로 감싼 표현식을 문자열로 변환해 삽입할 수 있음</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>불리언 타입 : 참 (<code class="language-plaintext highlighter-rouge">true</code>)과 거짓 (<code class="language-plaintext highlighter-rouge">false</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">undefined</code> 타입 : 변수 선언에 의해 확보된 메모리 공간은 쓰레기 값이 아닌 <code class="language-plaintext highlighter-rouge">undefined</code>로 초기화</li>
+  <li><code class="language-plaintext highlighter-rouge">null</code> 타입 : 변수에 값이 없다는 것을 의도적으로 명시 (<code class="language-plaintext highlighter-rouge">intentional absence</code>)하기 위해 사용</li>
+  <li>심벌 (<code class="language-plaintext highlighter-rouge">symbol</code>) 타입 : 변경 불가능한 원시 타입 (다른 값과 중복되지 않는 유일무이한 값)
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Symbol</code> 함수를 호출해 생성되며, 값은 외부에 노출되지 않음 (<code class="language-plaintext highlighter-rouge">var key = Symbol('key');</code>)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="동적-타이핑-dynamic-typing--변수를-선언할-때-데이터-타입을-사전에-선언하지-않음">동적 타이핑 (<code class="language-plaintext highlighter-rouge">Dynamic Typing</code>) : 변수를 선언할 때 데이터 타입을 사전에 선언하지 않음</h3>
+
+<ul>
+  <li>자바스크립트의 변수는 선언이 아닌 할당에 의해 타입이 결정되는 타입 추론 (<code class="language-plaintext highlighter-rouge">Type Inference</code>)이 이루어짐</li>
+  <li>재할당에 의해 변수의 타입은 언제든지 동적으로 변화할 수 있음 (<code class="language-plaintext highlighter-rouge">loosely data</code>)</li>
+</ul>
+
+<blockquote>
+  <p>정적 타입 (<code class="language-plaintext highlighter-rouge">Static Typing</code>) : 변수를 선언할 때 데이터 타입을 사전에 선언</p>
+
+  <ul>
+    <li>변수에 선언한 타입에 해당하는 값만 할당할 수 있음</li>
+    <li>컴파일 시점에 타입 체크 (<code class="language-plaintext highlighter-rouge">Type Check</code>)를 수행하고, 통과하지 못하면 에러를 발생시킴</li>
+    <li>타입의 일관성을 강제해 안정ㅇ적인 코드의 구현을 통해 런타임에 발생하는 에러를 줄임</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>자바스크립트는 <code class="language-plaintext highlighter-rouge">var</code>, <code class="language-plaintext highlighter-rouge">let</code>, <code class="language-plaintext highlighter-rouge">const</code> 키워드를 통해 변수만 선언
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">typeof()</code> 연산자를 통해 피연산자의 데이터 타입을 문자열로 반환할 수 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>동적 타이핑 및 동적 타입 언어의 단점?</p>
+
+  <ul>
+    <li>동적 타입 언어의 변수 값은 언제든지 변할 수 있음
+      <ul>
+        <li>복잡한 프로그램에서는 변수 값을 추적하기 어려울 수 있음</li>
+      </ul>
+    </li>
+    <li>동적 타입 언어의 변수는 값의 변경에 의해 타입 또한 언제든지 변경될 수 있음
+      <ul>
+        <li>값을 확인하기 전에는 타입을 확신할 수 없음</li>
+        <li>자바스크립트 엔진에 의해 타입이 자동으로 변환될 수도 있음</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p>→ 동적 타입 언어는 유연성 (<code class="language-plaintext highlighter-rouge">Flexibility</code>)은 높지만 신뢰성 (<code class="language-plaintext highlighter-rouge">Reliability</code>)는 떨어진다.</p>
+
+  <blockquote>
+    <p>변수를 사용할 때 지켜면 좋은 규칙</p>
+
+    <ul>
+      <li>변수는 꼭 필요한 경우에 한해 제한적으로 사용한다.</li>
+      <li>변수의 유효 범위인 스코프는 최대한 좁게 만들어 변수의 부작용을 억제한다.</li>
+      <li>전역 변수는 최대한 자제한다.</li>
+      <li>변수보다는 상수를 사용해 값의 변경을 억제한다.</li>
+      <li>변수 이름은 목적 및 의미를 파악할 수 있도록 네이밍하고, 특히 스코프가 넓을수록 명확하게 명명한다.</li>
+    </ul>
+  </blockquote>
+</blockquote>
+
+<h3 id="암묵적-타입-변환--자바스크립트-엔진에서-에러를-발생시키지-않도록-타입을-바꿔-표현식을-평가하는-것">암묵적 타입 변환 : 자바스크립트 엔진에서 에러를 발생시키지 않도록 타입을 바꿔 표현식을 평가하는 것</h3>
+
+<ul>
+  <li>문자열 타입 변환 : <code class="language-plaintext highlighter-rouge">+</code>의 피연산자 중 하나가 문자열이면, 문자열 연결 연산자로 동작하므로 다른 것을 문자열로 변환</li>
+  <li>숫자 타입 변환 : 산술 및 비교 연산자의 피연산자 중에 숫자 타입이 아닌 피연산자를 숫자 타입으로 변환</li>
+  <li>불리언 타입 변환 : 논리적 참/거짓을 평가하는 경우에 불리언 타입이 아닌 피연산자를 불리언 타입으로 변환</li>
+</ul>
+
+<h3 id="명시적-타입-변환--의도적으로-값의-타입을-변환하는-것--타입-캐스팅-type-casting">명시적 타입 변환 : 의도적으로 값의 타입을 변환하는 것 → 타입 캐스팅 (<code class="language-plaintext highlighter-rouge">type casting</code>)</h3>
+
+<ul>
+  <li>문자열 타입으로 변환 : <code class="language-plaintext highlighter-rouge">String()</code>, <code class="language-plaintext highlighter-rouge">toString()</code>, 문자열 연결 연산자 <code class="language-plaintext highlighter-rouge">+</code></li>
+  <li>숫자 타입으로 변환 : <code class="language-plaintext highlighter-rouge">Number()</code>, <code class="language-plaintext highlighter-rouge">parseInt()/parseFloat()</code>, <code class="language-plaintext highlighter-rouge">+</code>, <code class="language-plaintext highlighter-rouge">*</code></li>
+  <li>불리언 타입으로 변환 : <code class="language-plaintext highlighter-rouge">Boolean()</code>, 부정 논리 연산자 <code class="language-plaintext highlighter-rouge">!</code>를 2번</li>
+</ul>
+
+<blockquote>
+  <p>기존 원시 값을 사용해 다른 타입의 새로운 원시 값을 생성하는 것!</p>
+
+  <ul>
+    <li>원시 값은 변경 불가능한 값 (<code class="language-plaintext highlighter-rouge">immutable value</code>) → 기존 원시 값을 직접 변경 ✘</li>
+    <li>자바스크립트 엔진에서 표현식을 평가하기 위해 피연산자의 값을 암묵적 타입 변환으로 새로운 타입의 값을 만듬</li>
+  </ul>
+</blockquote>
+
+<h3 id="단축-평가-short-circuit-evaluation--표현식을-평가하는-중에-결과가-확정되면-평가-과정을-생략">단축 평가 (<code class="language-plaintext highlighter-rouge">short-circuit evaluation</code>) : 표현식을 평가하는 중에 결과가 확정되면, 평가 과정을 생략</h3>
+
+<ul>
+  <li>논리 평가 : 논리 연산자를 이용한 단축 평가 (좌항에서 우항으로 평가)
+    <ul>
+      <li>논리곱 연산자 <code class="language-plaintext highlighter-rouge">&amp;&amp;</code>는 두 피연산자가 모두 <code class="language-plaintext highlighter-rouge">true</code>일 때, <code class="language-plaintext highlighter-rouge">true</code> 반환
+        <ul>
+          <li>논리 연산의 결과를 결정하는 두번째 피연산자를 그대로 반환</li>
+        </ul>
+      </li>
+      <li>논리합 연산자 <code class="language-plaintext highlighter-rouge">||</code>는 두 피연산자 중 하나만  <code class="language-plaintext highlighter-rouge">true</code>이여도, <code class="language-plaintext highlighter-rouge">true</code> 반환
+        <ul>
+          <li>논리 연산의 결과를 결정하는 첫번째 피연사자를 그대로 반환</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'Cat' &amp;&amp; 'Dog' // true &amp;&amp; 'Dog' → 'Dog'
+'Cat' || 'Dog' // 'Cat'... → 'Cat'
+</code></pre></div></div>
+
+<blockquote>
+  <p>논리 평가를 사용하는 경우?</p>
+
+  <ul>
+    <li>객체를 가리키기 기대하는 변수가 <code class="language-plaintext highlighter-rouge">null</code> 혹은 <code class="language-plaintext highlighter-rouge">undefined</code>가 아닌지 확인하고 프로퍼티를 참조할 때</li>
+  </ul>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var elem = null;
+// var value = elem.value; // TypeError
+var value = elem &amp;&amp; elem.value; // null
+</code></pre></div>  </div>
+
+  <ul>
+    <li>함수 매개변수에 <code class="language-plaintext highlighter-rouge">undefined</code>가 할당되지 않도록 기본값을 설정할 때</li>
+  </ul>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function getStringLength() {
+str = str || '';
+return str.length;
+}
+getStringLength(); // 0
+getStringLength('hello'); // 5
+</code></pre></div>  </div>
+</blockquote>
+
+<ul>
+  <li>옵셔널 체이닝 (<code class="language-plaintext highlighter-rouge">Optional Chaining</code>) 연산자 <code class="language-plaintext highlighter-rouge">?</code> : 좌항의 피연산자가 <code class="language-plaintext highlighter-rouge">null</code> 혹은 <code class="language-plaintext highlighter-rouge">undefined</code>이면 <code class="language-plaintext highlighter-rouge">undefined</code>를 반환하고, 그렇지 않으면 우항의 프로퍼티 참조를 그대로 진행함</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var elem = null;
+var str = '';
+
+var value1 = elem?.value; console.log(value1); // undefined
+var value2 = elem &amp;&amp; elem.value; console.log(value2); // null
+var value3 = str &amp;&amp; str.length; console.log(value3); // ''
+var value4 = str?.length; console.log(value4); // 0
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">null</code> 병합 연산자 <code class="language-plaintext highlighter-rouge">??</code> : 좌항의 피연산자가 <code class="language-plaintext highlighter-rouge">null</code> 혹은 <code class="language-plaintext highlighter-rouge">undefined</code>이면 우항의 피연산자를 반환하고, 그렇지 않으면 좌항의 피연산자를 반환 → 변수에 기본값을 설정할 때 사용
+    <ul>
+      <li>논리 연산자 <code class="language-plaintext highlighter-rouge">||</code>를 사용한 단축 평가와 달리, 피연산자가  <code class="language-plaintext highlighter-rouge">false</code>로 평가받는 <code class="language-plaintext highlighter-rouge">Falsy</code> 값 (<code class="language-plaintext highlighter-rouge">false</code>, <code class="language-plaintext highlighter-rouge">undefined</code>, <code class="language-plaintext highlighter-rouge">null</code>, <code class="language-plaintext highlighter-rouge">0</code>, <code class="language-plaintext highlighter-rouge">-0</code>, <code class="language-plaintext highlighter-rouge">NaN</code>, <code class="language-plaintext highlighter-rouge">''</code>)이라도 <code class="language-plaintext highlighter-rouge">null</code> 혹은 <code class="language-plaintext highlighter-rouge">undefined</code>이 아니면, 좌항의 피연산자를 반환함</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var foo = null ?? 'default'; // 'default'
+</code></pre></div></div>
+
+<h2 id="객체-object--소프트웨어에서-속성과-기능을-가지는-프로그램의-단위">객체 (<code class="language-plaintext highlighter-rouge">Object</code>) : 소프트웨어에서 속성과 기능을 가지는 프로그램의 단위</h2>
+
+<blockquote>
+  <ul>
+    <li>원시 타입 (<code class="language-plaintext highlighter-rouge">Primitive</code>) : 값이 스택 영역에 들어감 (<code class="language-plaintext highlighter-rouge">Call-By-Value</code>)</li>
+    <li>객체 타입 (<code class="language-plaintext highlighter-rouge">Object</code>) : 값이 힙 영역에 들어감 (<code class="language-plaintext highlighter-rouge">Call-By-Reference</code>)</li>
+  </ul>
+
+  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/2afeda63-c90d-4989-bf9c-88af481e4acc" /></p>
+</blockquote>
+
+<ul>
+  <li>원시 값을 제외한 나머지 값, 함수, 배열, 정규 표현식 등음 모두 객체</li>
+  <li>원시 값은 변경 불가능한 값이지만, 객체 값은 변경 가능한 값</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var person = {
+  name: 'John', // "name: 'John'"은 프로퍼티, 
+  age: 21       // "name"은 프로퍼티 키, "'John'"은 프로퍼티 값
+};
+</code></pre></div></div>
+
+<ul>
+  <li>객체는 0개 이상의 프로퍼티의 집합 → 프로퍼티는 키 (<code class="language-plaintext highlighter-rouge">key</code>)와 값 (<code class="language-plaintext highlighter-rouge">value</code>)으로 구성
+    <ul>
+      <li>자바스크립트에서 사용할 수 있는 모든 값은 프로퍼티 값이 될 수 있다.</li>
+    </ul>
+  </li>
+  <li>객체는 프로퍼티와 메소드를 모두 포함하고 있어, 상태와 동작을 하나의 단위로 구조화할 수 있다.
+    <ul>
+      <li>프로퍼티 (<code class="language-plaintext highlighter-rouge">property</code>) : 객체의 상태를 나타내는 값 (<code class="language-plaintext highlighter-rouge">data</code>)</li>
+      <li>메소드 (<code class="language-plaintext highlighter-rouge">method</code>) : 프로퍼티를 참조하고 조작할 수 있는 동작 (<code class="language-plaintext highlighter-rouge">behavior</code>)</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">C++</code>이나 <code class="language-plaintext highlighter-rouge">Java</code> → 클래스 (<code class="language-plaintext highlighter-rouge">Class</code>) 기반 객체지향 언어 : 클래스를 사전에 정의하고, 필요한 시점에 <code class="language-plaintext highlighter-rouge">new</code> 연산자와 함께 생성자 (<code class="language-plaintext highlighter-rouge">constructor</code>)를 호출하여 인스턴스를 생성하는 방식으로 객체를 생성</li>
+    <li>자바스크립트 → 프로토타입 (<code class="language-plaintext highlighter-rouge">Prototype</code>) 기반 객체지향 언어 : 다양한 객체 생성 방법을 지원</li>
+  </ul>
+</blockquote>
+
+<h3 id="객체-리터럴에-의한-객체-생성---내에-0개-이상의-프로퍼티를-정의">객체 리터럴에 의한 객체 생성 : <code class="language-plaintext highlighter-rouge">{}</code> 내에 0개 이상의 프로퍼티를 정의</h3>
+
+<ul>
+  <li>변수에 할당되는 시점에 자바스크립트 엔진은 객체 리터럴을 해석해 객체를 생성</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var person = {
+  name: 'John',
+  ...
+}
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어]]></summary></entry><entry><title type="html">[Docker] 5. Docker Registry</title><link href="http://localhost:4000/docker5/" rel="alternate" type="text/html" title="[Docker] 5. Docker Registry" /><published>2024-01-23T00:00:00+09:00</published><updated>2024-01-23T00:00:00+09:00</updated><id>http://localhost:4000/docker5</id><content type="html" xml:base="http://localhost:4000/docker5/"><![CDATA[]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Docker" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">[SpringBoot] 2. SpringBoot Common Task</title><link href="http://localhost:4000/springboot2/" rel="alternate" type="text/html" title="[SpringBoot] 2. SpringBoot Common Task" /><published>2024-01-22T00:00:00+09:00</published><updated>2024-01-22T00:00:00+09:00</updated><id>http://localhost:4000/springboot2</id><content type="html" xml:base="http://localhost:4000/springboot2/"><![CDATA[<h2 id="어플리케이션-설정-관리--여러-환경에-따른-설정-정보의-다중화">어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화</h2>
 
 <ul>
   <li>개발 환경의 다중화 → 개발 (<code class="language-plaintext highlighter-rouge">dev</code>), 테스트 (<code class="language-plaintext highlighter-rouge">test</code>), 스테이징 (<code class="language-plaintext highlighter-rouge">staging</code>), 배포 (<code class="language-plaintext highlighter-rouge">prod</code>)
@@ -297,7 +610,63 @@ public class ProductionConfiguration {
   </li>
 </ul>
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/3ae42b22-9e2e-47cb-a8fb-3d2f25357007" width="80%" /></p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="SpringBoot" /><summary type="html"><![CDATA[어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화]]></summary></entry><entry><title type="html">프로그래밍 언어로서의 JavaScript와 TypeScript (2024.01.19)</title><link href="http://localhost:4000/digital_hanaro_study1/" rel="alternate" type="text/html" title="프로그래밍 언어로서의 JavaScript와 TypeScript (2024.01.19)" /><published>2024-01-19T00:00:00+09:00</published><updated>2024-01-19T00:00:00+09:00</updated><id>http://localhost:4000/digital_hanaro_study1</id><content type="html" xml:base="http://localhost:4000/digital_hanaro_study1/"><![CDATA[<blockquote>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/3ae42b22-9e2e-47cb-a8fb-3d2f25357007" width="80%" /></p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="SpringBoot" /><summary type="html"><![CDATA[어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화]]></summary></entry><entry><title type="html">TailwindCSS란? (2024.01.22)</title><link href="http://localhost:4000/digital_hanaro_study2/" rel="alternate" type="text/html" title="TailwindCSS란? (2024.01.22)" /><published>2024-01-22T00:00:00+09:00</published><updated>2024-01-22T00:00:00+09:00</updated><id>http://localhost:4000/digital_hanaro_study2</id><content type="html" xml:base="http://localhost:4000/digital_hanaro_study2/"><![CDATA[<blockquote>
+  <p><a href="https://github.com/pocj8ur4in/finance-dev-study">디지털하나路 스터디</a> 2일차 내용을 정리한 글입니다.</p>
+</blockquote>
+
+<h2 id="공부하고자-한-이유">공부하고자 한 이유</h2>
+
+<p>토이 프로젝트를 만들 때 부트스트랩 (<code class="language-plaintext highlighter-rouge">Bootstrap</code>)을 많이 활용하여 화면을 구성하곤 하였는데, 오늘 강사님께서 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>라는 새로운 프론트엔드 프레임워크 기술에 대해 말씀해주시면서, 현재는 부트스트랩보다 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>를 사용한 사이트가 훨씬 다수임을 알려주셨다. 그래서 향후 토이 프로젝트에 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>를 적용할 수 있도록 부트스트랩과 차이점을 비교해보면서 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>에 대해 공부해보고자 한다.</p>
+
+<h2 id="공부한-내용">공부한 내용</h2>
+
+<p>부트스트랩 (<code class="language-plaintext highlighter-rouge">BootStrap</code>)은 2011년에 트위터에서 시작된 오픈 소스 프론트엔드 프레임워크이다. 글자, 인용문, 목록, 표 등 자잘한 요소부터 메뉴, 바, 버튼 등까지 웹 페이지에서 자주 쓰이는 요소들을 모두 내장하고 있어, 부트스트랩의 <code class="language-plaintext highlighter-rouge">CSS</code>와 <code class="language-plaintext highlighter-rouge">JS</code>를 사이트에 반영만 하면 일정한 디자인을 빠른 시간 내에 제작할 수 있다. 그리고 데스크탑만이 아니라 모바일 화면 또한 비율에 맞게 반응형으로 지원하여 크로스 브라우저 (<code class="language-plaintext highlighter-rouge">Cross-Browser</code>) 환경에도 적합하다. 또한 해상도 크기에 맞게 자동으로 정렬되고 크기 조절이 가능한 그리드 시스템 (<code class="language-plaintext highlighter-rouge">Grid System</code>)이 내장되어 있어 화면에 특정한 요소를 배치하는 것에 대한 커스텀마이징 또한 매우 간단한 편이다. <a href="https://getbootstrap.com">부트스트랩 공식 웹 사이트</a>에서 여러 예시 화면들을 볼 수도 있다.</p>
+
+<p>나 같은 경우에는 전문적인 프론트엔드 개발자가 아니라서, 부트스트랩을 처음 접했을 때에는 블로그를 운영하는 과정에서 배운 <code class="language-plaintext highlighter-rouge">HTML/CSS/JS</code>에 대한 지식들만 있는 상태였다. 그러나 예시 화면들의 각 요소들을 직접 뜯어보고 수정하는 과정에서 사용해본 내부 클래스들로만으로도 내가 필요로 한 화면들을 금방금방 구성해낼 수 있었다. 아래의 화면은 내가 기획하였던 사이트의 노래 검색 화면으로, 화면 구상에서 실제 구현까지 2~3일 정도 걸린 것으로 기억한다. <code class="language-plaintext highlighter-rouge">Header</code>와 <code class="language-plaintext highlighter-rouge">Footer</code> 부분은 템플릿 엔진을 통해 이전에 만든 요소를 그대로 사용하였고, 상세 검색 화면은 그리드 시스템과 내장된 글자 및 버튼 속성을 적절히 적용하여 구현하였다. 그리고 버튼을 눌렀을 때 나올 수 있는 동작들, 예를 들어 마우스 포커싱 기능들도 <code class="language-plaintext highlighter-rouge">CSS</code>로 구현되어 있어 따로 만들 필요가 없었다. 그리고 작년에 <code class="language-plaintext highlighter-rouge">7</code> 버전이 출시될 만큼 꾸준한 개발 및 지원이 이루어지고 있고, 또 부트스트랩을 사용하는 웹 사이트 및 래퍼런스들도 여전히 많이 존재한다.</p>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/625ec1e6-55ec-48a3-9ae8-5b415405f4b1" /></p>
+
+<p>그럼 부트스트랩 대신에 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>가 대세가 된 이유는 무엇일까? 내가 처음 떠올린 이유는 부트스트랩만으로는 생각보다 직접 커스텀마이징을 하는 데에 한계가 있다는 것이다. 물론 오픈 소스이므로 래퍼런스가 정말 많고, 원하는 페이지를 만드는 것도 얼마든지 가능한 것 또한 사실이다. 그런데 사실 이건 <code class="language-plaintext highlighter-rouge">HTML/CSS/JS</code>을 다룰 수 있으면 얼마든지 가능한 부분이고, 이젠 피그마 등을 활용해 원하는 화면을 빠르게 배치해 만드는 것도 가능하다. 오히려 부트스트랩 기반으로 한, 비슷한 디자인의 사이트들이 많아져서 타 사이트와의 차별성을 두기 어려운 부분 또한 맞는 말이라고 생각한다. 부트스트랩의 취지는 <code class="language-plaintext highlighter-rouge">HTML/CSS/JS</code>들을 미리 만들어 개발자가 사용할 수 있는 것인데, 내가 구현하지 않는 부분까지 빌트인 (<code class="language-plaintext highlighter-rouge">built-in</code>)되어 있다보니, 부트스트랩 자제 문법을 공부하는 데에도 시간이 꽤 걸린다.</p>
+
+<p>그러면 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>에 대해 알아보자. <code class="language-plaintext highlighter-rouge">TailwindCSS</code>는 2017년에 <code class="language-plaintext highlighter-rouge">Tailwind Labs</code>에서 개발한 <code class="language-plaintext highlighter-rouge">CSS</code> 프레임워크이다. <code class="language-plaintext highlighter-rouge">TailwindCSS</code>는 <code class="language-plaintext highlighter-rouge">CSS</code>를 작성하지 않고 클래스 이름을 제공하여 <code class="language-plaintext highlighter-rouge">HTML</code>에 필요한 <code class="language-plaintext highlighter-rouge">CSS</code> 유틸리티만 입혀도 스타일이 완성되는 ‘유틸리티 우선 <code class="language-plaintext highlighter-rouge">CSS</code>‘를 지향한다. <a href="https://tailwindcss.com"><code class="language-plaintext highlighter-rouge">TailwindCSS</code> 공식 사이트</a>를 보면, 클래스 이름만 적어도 <code class="language-plaintext highlighter-rouge">CSS</code>가 적용되는 여러 예시들을 볼 수 있다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div&gt;
+    &lt;style&gt;
+    .rainbow-block {
+      display: inline-block;
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    }
+  &lt;/style&gt;
+  &lt;div class="rainbow-block"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<div>
+    <style>
+    .rainbow-block {
+      display: inline-block;
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    }
+  </style>
+  <div class="rainbow-block"></div>
+</div>
+
+<p>무지개색 블록을 만들고자 할 때, 순수 <code class="language-plaintext highlighter-rouge">CSS</code>는 위의 스타일 코드를 적어야 한다. 반면 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>는 아래의 예시처럼 미리 정의된 유틸리티 클래스들을 활용하여 클래스 이름만으로 스타일을 적용할 수 있다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.rainbow-block {
+  @apply inline-block w-32 h-32 bg-gradient-to-r from-violet to-red;
+}
+</code></pre></div></div>
+
+<p>사실 이게 왜 장점이지? 할 수도 있다. 어쨌든 <code class="language-plaintext highlighter-rouge">HTML/CSS</code> 또한 기능 자체를 제공하기는 한다! 하지만 <code class="language-plaintext highlighter-rouge">TailwindCSS</code>가 제공하는 유틸리티 클래스는 부트스트랩의 장점인 일관성 있는 디자인을 가지면서, 기본 스타일 값을 직접 커스텀마이징할 수 있는 <code class="language-plaintext highlighter-rouge">key-value</code>를 제공한다. 그리고 로우 레벨의 스타일 또한 제공하므로, 미리보기, 자동완성, 신택스 하이라이팅 및 린팅을 지원하는 <code class="language-plaintext highlighter-rouge">IntelliSense</code> 플러그인을 활용하여 필요한 디자인을 세밀하게 구현할 수 있다. 무엇보다 프론트엔드 개발자가 가장 장점으로 꼽는 부분은 <b>클래스 이름을 고민하지 않아도 된다는 점</b>인데, 이건 함수의 이름을 잘 짓기 위해 프로젝트 시작 전에 매번 고민하는 시간을 갖는 나에게도 와닿는 문제라 공감이 가는 부분이 많다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Digital Hanaro Study" /><summary type="html"><![CDATA[디지털하나路 스터디 2일차 내용을 정리한 글입니다.]]></summary></entry><entry><title type="html">프로그래밍 언어로서의 JavaScript와 TypeScript (2024.01.19)</title><link href="http://localhost:4000/digital_hanaro_study1/" rel="alternate" type="text/html" title="프로그래밍 언어로서의 JavaScript와 TypeScript (2024.01.19)" /><published>2024-01-19T00:00:00+09:00</published><updated>2024-01-19T00:00:00+09:00</updated><id>http://localhost:4000/digital_hanaro_study1</id><content type="html" xml:base="http://localhost:4000/digital_hanaro_study1/"><![CDATA[<blockquote>
   <p><a href="https://github.com/pocj8ur4in/finance-dev-study">디지털하나路 스터디</a> 1일차 내용을 정리한 글입니다.</p>
 </blockquote>
 
@@ -424,7 +793,7 @@ if (person.isSpeakingHuman()) {
 
 <p>그리고 인터프리터 방식의 장점 중 하나는 프로그래밍 언어의 설계가 쉽다는 점이다. 컴파일 언어가 설계되려면 기계어에 대한 이해가 필요하지만, 스크립트 언어는 컴파일 언어나 심지어 스크립트 언어를 통해 구현될 수 있다. 타입스크립트가 바로 대표적인 예시로, 최근에는 앞서 정의한 타입스크립트 문법을 활용해 다시 문법을 만드는 것 또한 이루어지고 있다.</p>
 
-<p>그렇다면 자바스크립트가 브라우저에서 어떻게 동작하는 걸까? 클라이언트 측에서 동작하는 자바스크립트는 브라우저가 웹 페이지를 로딩할 때 <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> 태그를 통해 위의 컴파일 과정이 이루어진 다음에 단일 스레드로 동작하며, 이벤트 기반 비동기 모델을 활용한다. 이런 비동기 작업을 위해 브라우저는 추가로 이벤트 큐와 이벤트 루프를 활용하고 자바스크르립트 또한 콜백 함수와 <code class="language-plaintext highlighter-rouge">Ajax</code> 처리를 지원한다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Digital Hanaro Study" /><summary type="html"><![CDATA[디지털하나路 스터디 1일차 내용을 정리한 글입니다.]]></summary></entry><entry><title type="html">[Linux] bash 문법</title><link href="http://localhost:4000/bash1/" rel="alternate" type="text/html" title="[Linux] bash 문법" /><published>2024-01-18T00:00:00+09:00</published><updated>2024-01-18T00:00:00+09:00</updated><id>http://localhost:4000/bash1</id><content type="html" xml:base="http://localhost:4000/bash1/"><![CDATA[]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Linux" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">[MicroService] 5. MicroService Design</title><link href="http://localhost:4000/microservice5/" rel="alternate" type="text/html" title="[MicroService] 5. MicroService Design" /><published>2024-01-16T00:00:00+09:00</published><updated>2024-01-16T00:00:00+09:00</updated><id>http://localhost:4000/microservice5</id><content type="html" xml:base="http://localhost:4000/microservice5/"><![CDATA[<h2 id="마이크로서비스-설계--응집성-높게-high-cohesion-의존도-낮게-low-coupling">마이크로서비스 설계 : 응집성 높게 (<code class="language-plaintext highlighter-rouge">High Cohesion</code>), 의존도 낮게 (<code class="language-plaintext highlighter-rouge">Low Coupling</code>)</h2>
+<p>그렇다면 자바스크립트가 브라우저에서 어떻게 동작하는 걸까? 클라이언트 측에서 동작하는 자바스크립트는 브라우저가 웹 페이지를 로딩할 때 <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> 태그를 통해 위의 컴파일 과정이 이루어진 다음에 단일 스레드로 동작하며, 이벤트 기반 비동기 모델을 활용한다. 이런 비동기 작업을 위해 브라우저는 추가로 이벤트 큐와 이벤트 루프를 활용하고 자바스크르립트 또한 콜백 함수와 <code class="language-plaintext highlighter-rouge">Ajax</code> 처리를 지원한다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Digital Hanaro Study" /><summary type="html"><![CDATA[디지털하나路 스터디 1일차 내용을 정리한 글입니다.]]></summary></entry><entry><title type="html">[MicroService] 5. MicroService Design</title><link href="http://localhost:4000/microservice5/" rel="alternate" type="text/html" title="[MicroService] 5. MicroService Design" /><published>2024-01-16T00:00:00+09:00</published><updated>2024-01-16T00:00:00+09:00</updated><id>http://localhost:4000/microservice5</id><content type="html" xml:base="http://localhost:4000/microservice5/"><![CDATA[<h2 id="마이크로서비스-설계--응집성-높게-high-cohesion-의존도-낮게-low-coupling">마이크로서비스 설계 : 응집성 높게 (<code class="language-plaintext highlighter-rouge">High Cohesion</code>), 의존도 낮게 (<code class="language-plaintext highlighter-rouge">Low Coupling</code>)</h2>
 
 <ul>
   <li>마이크로서비스의 내부 구조를 구성하는 각 요소들은 역할별로 모듈화 (<code class="language-plaintext highlighter-rouge">Modulation</code>)되어야 함
