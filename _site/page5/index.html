@@ -5,6 +5,29 @@
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 페이지가 로드된 후에 실행할 초기화 작업
+    checkAndLoadPage(getAllImgs());
+});
+
+function getAllImgs() {
+  const images = document.querySelectorAll('img');
+  return Array.from(images);
+}
+
+function chkImgsLoaded(allImages) {
+    return allImages.every(image => image.complete);
+}
+
+function checkAndLoadPage(allImages) {
+    if (!chkImgsLoaded(allImages)) {
+      requestAnimationFrame(function() {
+      checkAndLoadPage(allImages);
+      });
+    }
+}
+</script>
 <html lang="ko" class="no-js">
   <head>
     <meta charset="utf-8">
@@ -152,7 +175,6 @@
             data-input-position="top"
             data-theme="dark_dimmed"
             data-lang="ko"
-            data-loading="lazy"
             crossorigin="anonymous"
             async>
         </script>
