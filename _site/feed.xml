@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-25T17:30:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[JS] 자바스크립트 (JavaScript)</title><link href="http://localhost:4000/js1/" rel="alternate" type="text/html" title="[JS] 자바스크립트 (JavaScript)" /><published>2024-01-24T00:00:00+09:00</published><updated>2024-01-24T00:00:00+09:00</updated><id>http://localhost:4000/js1</id><content type="html" xml:base="http://localhost:4000/js1/"><![CDATA[<h2 id="자바스크립트-javascript--동적-클라이언트-사이드-스크립트-언어">자바스크립트 (<code class="language-plaintext highlighter-rouge">JavaScript</code>) : 동적 클라이언트 사이드 스크립트 언어</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-26T22:15:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[JS] 자바스크립트 (JavaScript)</title><link href="http://localhost:4000/js1/" rel="alternate" type="text/html" title="[JS] 자바스크립트 (JavaScript)" /><published>2024-01-24T00:00:00+09:00</published><updated>2024-01-24T00:00:00+09:00</updated><id>http://localhost:4000/js1</id><content type="html" xml:base="http://localhost:4000/js1/"><![CDATA[<h2 id="자바스크립트-javascript--동적-클라이언트-사이드-스크립트-언어">자바스크립트 (<code class="language-plaintext highlighter-rouge">JavaScript</code>) : 동적 클라이언트 사이드 스크립트 언어</h2>
 
 <blockquote>
   <ul>
@@ -145,6 +145,8 @@ let z = 11; // 에러 (암묵적 정의 → 호이스팅)
   <p>코드를 평가하는 시점에 호이스팅이 일어나 선언부와 구현부로 구분</p>
 
   <p>→ 선언부는 스택 영역에, 구현부는 힙 영역에 저장</p>
+
+  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/8e05cc2f-b9d6-45be-b681-73d0f6b98229" width="80%" /></p>
 </blockquote>
 
 <ul>
@@ -395,6 +397,8 @@ var value4 = str?.length; console.log(value4); // 0
   <li>원시 값과 다르게 여러 개의 식별자들이 하나의 객체를 공유할 수 있음</li>
 </ul>
 
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/66b574d8-6033-47c4-ac56-47dfd0440077" width="80%" /></p>
+
 <blockquote>
   <ul>
     <li>원시 타입 (<code class="language-plaintext highlighter-rouge">Primitive</code>) : 값이 스택 영역에 들어감 (<code class="language-plaintext highlighter-rouge">Call-By-Value</code>) (<code class="language-plaintext highlighter-rouge">cf.</code> 변수의 주소는 별도로 관리됨)<br />
@@ -563,7 +567,48 @@ const obj = {
     return this.name;
   }
 }
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어]]></summary></entry><entry><title type="html">자바스크립트 프로토타입 (2024.01.24)</title><link href="http://localhost:4000/digital_hanaro_study3/" rel="alternate" type="text/html" title="자바스크립트 프로토타입 (2024.01.24)" /><published>2024-01-24T00:00:00+09:00</published><updated>2024-01-25T00:00:00+09:00</updated><id>http://localhost:4000/digital_hanaro_study3</id><content type="html" xml:base="http://localhost:4000/digital_hanaro_study3/"><![CDATA[<blockquote>
+</code></pre></div></div>
+
+<h2 id="함수-function--일련의-과정을-코드-블록으로-감싸-하나의-단위로-정의한-것">함수 (<code class="language-plaintext highlighter-rouge">function</code>) : 일련의 과정을 코드 블록으로 감싸 하나의 단위로 정의한 것</h2>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c6d16c9b-7b9c-4340-bbab-88b15bfd53db" width="80%" /></p>
+
+<ul>
+  <li>자바스크립트의 함수는 객체 타입의 값 → 함수 또한 함수 리터럴 (<code class="language-plaintext highlighter-rouge">functional literal</code>)로 생성할 수 있음
+    <ul>
+      <li>일반 객체와 달리, 함수는 호출할 수 있고 함수 객체만의 고유한 프로퍼티를 가짐</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/05176279-d1d8-4756-8bb3-5186474aa123" width="80%" /></p>
+
+<h3 id="함수-정의--함수를-호출하기-이전에-인수를-전달받을-매개변수-문-반환값을-지정하는-것">함수 정의 : 함수를 호출하기 이전에 인수를 전달받을 매개변수, 문, 반환값을 지정하는 것</h3>
+
+<blockquote>
+  <p>함수 선언문이 평가되면 식별자가 암묵적으로 생성되고 함수 객체가 할당되므로, 함수는 정의 (<code class="language-plaintext highlighter-rouge">definition</code>)된다.</p>
+</blockquote>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/0b6c992d-5608-47a8-b2bc-0af11c3c9b24" width="80%" /></p>
+
+<ul>
+  <li>함수 리터럴는 함수 이름을 생략할 수 있으나, 함수 선언문은 함수 이름을 생략할 수 없음
+    <ul>
+      <li>함수 선언문은 표현식이 아닌 문 (<code class="language-plaintext highlighter-rouge">statement</code>) → 함수의 이름을 생략할 수 없음</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>함수 선언문은 표현식이 아닌 문이므로 변수에 할당될 수 없지만, 아래의 함수 선언문은 변수에 할당되는 것처럼 보인다.</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var add = function add (x, y) {
+  return x + y;
+};
+
+console.log(add(2, 5));
+</code></pre></div>  </div>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어]]></summary></entry><entry><title type="html">자바스크립트 프로토타입 (2024.01.24)</title><link href="http://localhost:4000/digital_hanaro_study3/" rel="alternate" type="text/html" title="자바스크립트 프로토타입 (2024.01.24)" /><published>2024-01-24T00:00:00+09:00</published><updated>2024-01-26T00:00:00+09:00</updated><id>http://localhost:4000/digital_hanaro_study3</id><content type="html" xml:base="http://localhost:4000/digital_hanaro_study3/"><![CDATA[<blockquote>
   <p><a href="https://github.com/pocj8ur4in/finance-dev-study">디지털하나路 스터디</a> 3일차 내용을 정리한 글입니다.</p>
 </blockquote>
 
@@ -573,7 +618,11 @@ const obj = {
 
 <h2 id="공부한-내용">공부한 내용</h2>
 
-<p>사전적인 의미의 프로토타입 (<code class="language-plaintext highlighter-rouge">Prototype</code>)이란, 원래의 형태 또는 전형적인 표준을 가리킨다. 소프트웨어 디자인 패턴에서는, 생성한 객체들의 타입을 프로토타입인 인스턴스로부터 결정되도록 하고, 인스턴스는 새 객체를 만들기 위해 자신을 복제하는 프로토타입 패턴 (<code class="language-plaintext highlighter-rouge">Prototype Pattern</code>)의 개념으로 확장하였다. 프로토타입 패턴을 구현하기 위해선 <code class="language-plaintext highlighter-rouge">clone()</code> 메소드를 선언하는 추상 베이스 클래스를 하나 만들고, 생성자가 필요한 클래스가 있으면 이 클래스를 상속하고 <code class="language-plaintext highlighter-rouge">clone()</code> 메소드 내의 코드를 구현한다.</p>
+<p>소프트웨어를 개발하는 과정에서 우리는 수많은 문제점들을 마주치고, 그에 대한 해결책을 찾아 문제를 해결하곤 한다. 소프트웨어 디자인 패턴은 이러한 수많은 문제점들에서 공통점을 가진 것들을 모아 여러 카테고리로 나누고, 이에 대한 해결책을 제시하여 이를 재사용이 가능하도록 한다. 소프트웨어 디자인 패턴은 크게 객체의 생성 방법과 클래스의 인스턴스화를 다루는 생성 패턴 (<code class="language-plaintext highlighter-rouge">Creational Pattern</code>), 클래스나 객체를 더 큰 구조로 합치는 구조 패턴 (<code class="language-plaintext highlighter-rouge">Structural Pattern</code>), 객체 간의 상호 작용 및 역할 분배를 다루는 행동 패턴 (<code class="language-plaintext highlighter-rouge">Behavioral Pattern</code>)으로 나뉜다. 프로토타입 패턴은 이들 중에 생성 패턴에 해당되며, 자신을 복제해서 인스턴스를 생성하는 방법에 대해 다룬다.</p>
+
+<p>사전적인 의미의 프로토타입 (<code class="language-plaintext highlighter-rouge">Prototype</code>)이란, 원래의 형태 또는 전형적인 표준을 가리킨다. 소프트웨어 디자인 패턴에서는 생성한 객체들의 타입을 프로토타입인 인스턴스로부터 결정되도록 하고, 인스턴스는 새 객체를 만들기 위해 자신을 복제하는 프로토타입 패턴 (<code class="language-plaintext highlighter-rouge">Prototype Pattern</code>)의 개념으로 확장하였다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Java</code>에서 클래스의 인스턴스를 만들기 위해서는, 우리는 일반적으로 <code class="language-plaintext highlighter-rouge">new()</code>를 통해 클래스 이름을 지정하고 인스턴스를 생성한다. 프로토타입 패턴은 <code class="language-plaintext highlighter-rouge">new()</code>를  통해 생성자로 인스턴스를 복제하는 것이 아닌, <code class="language-plaintext highlighter-rouge">clone()</code> 메소드를 선언하는 추상 베이스 클래스를 하나 만들어 생성자가 필요한 클래스가 있으면 이 클래스를 상속하고 <code class="language-plaintext highlighter-rouge">clone()</code> 메소드 내의 코드를 구현하게끔 한다.</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">Prototype</code> : 프로토타입을 만드려는 객체 클래스의 인터페이스

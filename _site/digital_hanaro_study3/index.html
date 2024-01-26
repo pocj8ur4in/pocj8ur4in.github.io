@@ -61,7 +61,7 @@ function checkAndLoadPage(allImages) {
 
 
 
-  <meta property="article:modified_time" content="2024-01-25T00:00:00+09:00">
+  <meta property="article:modified_time" content="2024-01-26T00:00:00+09:00">
 
 
 
@@ -318,7 +318,7 @@ function checkAndLoadPage(allImages) {
     <meta itemprop="headline" content="자바스크립트 프로토타입 (2024.01.24)">
     <meta itemprop="description" content="  디지털하나路 스터디 3일차 내용을 정리한 글입니다.">
     <meta itemprop="datePublished" content="2024-01-24T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2024-01-25T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-26T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
@@ -371,7 +371,11 @@ function checkAndLoadPage(allImages) {
 
 <h2 id="공부한-내용">공부한 내용</h2>
 
-<p>사전적인 의미의 프로토타입 (<code class="language-plaintext highlighter-rouge">Prototype</code>)이란, 원래의 형태 또는 전형적인 표준을 가리킨다. 소프트웨어 디자인 패턴에서는, 생성한 객체들의 타입을 프로토타입인 인스턴스로부터 결정되도록 하고, 인스턴스는 새 객체를 만들기 위해 자신을 복제하는 프로토타입 패턴 (<code class="language-plaintext highlighter-rouge">Prototype Pattern</code>)의 개념으로 확장하였다. 프로토타입 패턴을 구현하기 위해선 <code class="language-plaintext highlighter-rouge">clone()</code> 메소드를 선언하는 추상 베이스 클래스를 하나 만들고, 생성자가 필요한 클래스가 있으면 이 클래스를 상속하고 <code class="language-plaintext highlighter-rouge">clone()</code> 메소드 내의 코드를 구현한다.</p>
+<p>소프트웨어를 개발하는 과정에서 우리는 수많은 문제점들을 마주치고, 그에 대한 해결책을 찾아 문제를 해결하곤 한다. 소프트웨어 디자인 패턴은 이러한 수많은 문제점들에서 공통점을 가진 것들을 모아 여러 카테고리로 나누고, 이에 대한 해결책을 제시하여 이를 재사용이 가능하도록 한다. 소프트웨어 디자인 패턴은 크게 객체의 생성 방법과 클래스의 인스턴스화를 다루는 생성 패턴 (<code class="language-plaintext highlighter-rouge">Creational Pattern</code>), 클래스나 객체를 더 큰 구조로 합치는 구조 패턴 (<code class="language-plaintext highlighter-rouge">Structural Pattern</code>), 객체 간의 상호 작용 및 역할 분배를 다루는 행동 패턴 (<code class="language-plaintext highlighter-rouge">Behavioral Pattern</code>)으로 나뉜다. 프로토타입 패턴은 이들 중에 생성 패턴에 해당되며, 자신을 복제해서 인스턴스를 생성하는 방법에 대해 다룬다.</p>
+
+<p>사전적인 의미의 프로토타입 (<code class="language-plaintext highlighter-rouge">Prototype</code>)이란, 원래의 형태 또는 전형적인 표준을 가리킨다. 소프트웨어 디자인 패턴에서는 생성한 객체들의 타입을 프로토타입인 인스턴스로부터 결정되도록 하고, 인스턴스는 새 객체를 만들기 위해 자신을 복제하는 프로토타입 패턴 (<code class="language-plaintext highlighter-rouge">Prototype Pattern</code>)의 개념으로 확장하였다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Java</code>에서 클래스의 인스턴스를 만들기 위해서는, 우리는 일반적으로 <code class="language-plaintext highlighter-rouge">new()</code>를 통해 클래스 이름을 지정하고 인스턴스를 생성한다. 프로토타입 패턴은 <code class="language-plaintext highlighter-rouge">new()</code>를  통해 생성자로 인스턴스를 복제하는 것이 아닌, <code class="language-plaintext highlighter-rouge">clone()</code> 메소드를 선언하는 추상 베이스 클래스를 하나 만들어 생성자가 필요한 클래스가 있으면 이 클래스를 상속하고 <code class="language-plaintext highlighter-rouge">clone()</code> 메소드 내의 코드를 구현하게끔 한다.</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">Prototype</code> : 프로토타입을 만드려는 객체 클래스의 인터페이스
@@ -503,7 +507,7 @@ pocj8ur4in.type = "developer";
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-25">January 25, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-26">January 26, 2024</time></p>
 
       </footer>
       
@@ -583,7 +587,7 @@ pocj8ur4in.type = "developer";
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          11 분 소요
+          12 분 소요
         
       </span>
     
