@@ -341,7 +341,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 분 소요
+          4 분 소요
         
       </span>
     
@@ -356,7 +356,7 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#1-들어가며">1. 들어가며</a></li><li><a href="#2-vocawik-프로젝트-기획--설계">2. vocawik 프로젝트 기획 &amp; 설계</a><ul><li><a href="#1-도메인-정의">(1) 도메인 정의</a></li><li><a href="#2-언어-및-프레임워크-도입">(2) 언어 및 프레임워크 도입</a></li><li><a href="#3-코드-패키지-관리">(3) 코드 패키지 관리</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#1-들어가며">1. 들어가며</a></li><li><a href="#2-vocawik-프로젝트-기획--설계">2. vocawik 프로젝트 기획 &amp; 설계</a><ul><li><a href="#프로젝트-목표--프로젝트를-진행하는-과정에서-이루고-싶은-사항들">프로젝트 목표 : 프로젝트를 진행하는 과정에서 이루고 싶은 사항들</a></li><li><a href="#기능-명세서-ver-001">기능 명세서 (ver-0.0.1)</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -381,30 +381,154 @@ function checkAndLoadPage(allImages) {
 
 <h2 id="2-vocawik-프로젝트-기획--설계">2. <code class="language-plaintext highlighter-rouge">vocawik</code> 프로젝트 기획 &amp; 설계</h2>
 
-<h3 id="1-도메인-정의">(1) 도메인 정의</h3>
-<ul>
-  <li>서버에서 제공할 기능들을 정리해, 도메인별로 명확하게 제공할 기능과 책임을 분리해야 함
+<h3 id="프로젝트-목표--프로젝트를-진행하는-과정에서-이루고-싶은-사항들">프로젝트 목표 : 프로젝트를 진행하는 과정에서 이루고 싶은 사항들</h3>
+
+<ol>
+  <li>도메인 정의
+    <ul>
+      <li>서버에서 제공할 기능들을 정리해, 도메인별로 명확하게 제공할 기능과 책임을 분리해야 함</li>
+    </ul>
     <ul>
       <li>도메인 (<code class="language-plaintext highlighter-rouge">Domain</code>) : 소프트웨어로 해결하고자 하는 문제 영역 (한 도메인은 여러 하위 도메인으로 나눌 수 있음)</li>
     </ul>
   </li>
-</ul>
-
-<h3 id="2-언어-및-프레임워크-도입">(2) 언어 및 프레임워크 도입</h3>
-<ul>
-  <li>더 나은 품질, 더 빠른 개발 속도, 개발자들이 높은 이해도와 숙련도를 갖춰 높은 생산성을 가져올 도구들을 도입해야 함
+  <li>언어 및 프레임워크 도입
+    <ul>
+      <li>더 나은 품질, 더 빠른 개발 속도, 개발자들이 높은 이해도와 숙련도를 갖춰 높은 생산성을 가져올 도구들을 도입해야 함</li>
+    </ul>
     <ul>
       <li>언어 : 보다 높은 유지보수성 (동적 프로그래밍 언어 vs 정적 프로그래밍 언어?)</li>
       <li>프레임워크 : 보다 높은 비즈니스 집중도 (비즈니스 문제들에 필요한 환경과 기술들이 풍부한 개발 생태계!)</li>
     </ul>
   </li>
-</ul>
+  <li>코드 패키지 관리
+    <ul>
+      <li>패키지 내 공통된 규칙을 통해 일관성 있는 코드를 작성해야 함</li>
+      <li>화면만을 위해 동작하는, 혹은 중복된 코드에 대한 리펙터링이 가능한 환경을 구축해야 함</li>
+    </ul>
+  </li>
+</ol>
 
-<h3 id="3-코드-패키지-관리">(3) 코드 패키지 관리</h3>
-<ul>
-  <li>패키지 내 공통된 규칙을 통해 일관성 있는 코드를 작성해야 함</li>
-  <li>화면만을 위해 동작하는, 혹은 중복된 코드에 대한 리펙터링이 가능한 환경을 구축해야 함</li>
-</ul>
+<h3 id="기능-명세서-ver-001">기능 명세서 (<code class="language-plaintext highlighter-rouge">ver-0.0.1</code>)</h3>
+
+<div style="text-align: center;">
+  <table>
+    <thead>
+      <tr>
+        <td nowrap="">분류</td>
+        <td nowrap="">ID</td>
+        <td nowrap="">이름</td>
+        <td>설명</td>
+        <td nowrap="">상태</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td nowrap="" rowspan="1">화면<br />(<code>View</code>)</td>
+        <td nowrap=""><code>TO-001</code></td>
+        <td nowrap="">~ 화면 이동<br />(<code>To~Page</code>)</td>
+        <td>~ 화면으로 이동한다.</td>
+        <td nowrap=""><code>-</code></td>
+      </tr>
+      <tr>
+        <td rowspan="10">회원<br />(<code>User</code>)</td>
+        <td nowrap=""><code>US-001</code></td>
+        <td nowrap=""><code>ID</code> 로그인<br />(<code>IdLogin</code>)</td>
+        <td>'비회원'이 '아이디' 또는 '이메일'과 '비밀번호'를 입력하고 '로그인 버튼'을 눌렀을 때, '유효성 검사' 및 회원에 대한 '인증'이 정상적으로 수행되면 '회원'에 대한 '인가'를 수행한다.</td>
+        <td nowrap=""><code>-</code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-002</code></td>
+        <td nowrap=""><code>OAuth</code> 로그인<br />(<code>OAuthLogin</code>)</td>
+        <td>'비회원'이 '특정 외부 사이트 (<code>Google</code>, <code>Kakao</code>, <code>Naver</code>, <code>Apple</code>, <code>X</code>)로 로그인 버튼'을 눌렀을 때, 해당 외부 사이트에서 '인증'을 진행하도록 한다. 해당 외부 사이트에서 '인증'이 정상적으로 수행됨을 알린다면, '회원'에 대한 '인가'를 수행한다.</td>
+        <td nowrap=""><code>-</code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-003</code></td>
+        <td nowrap=""><code>OTP</code> 로그인<br />(<code>OTPLogin</code>)</td>
+        <td>'회원'이 '2단계 로그인 (<code>OTP</code>) 옵션'을 활성화시켰다면, '비회원'이 '유효성 검사' 및 회원에 대한 '인증'이 정상적으로 수행할 경우에 '일회용 비밀번호'를 확인할 수 있는 '<code>OTP</code> 키'를 발급하고, '2단계 로그인 화면'으로 이동한다. 만약 2단계 로그인 화면에서 입력받은 값이 일회용 비밀번호과 일치하면, '회원'에 대한 '인가'를 수행한다.</td>
+        <td nowrap="">비회원 (인증)</td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-004</code></td>
+        <td nowrap="">이메일 인증 로그인<br />(<code>EmailAuthLogin</code>)</td>
+        <td>'회원'이 '2단계 로그인 (이메일 인증) 옵션'을 활성화시켰다면, '비회원'이 '유효성 검사' 및 회원에 대한 '인증'이 정상적으로 수행되는 경우에 '일회용 비밀번호'를 확인할 수 있는 '인증 이메일'을 생성 및 전송하고, '2단계 로그인 화면'으로 이동한다. 만약 2단계 로그인 화면에서 입력받은 값이 일회용 비밀번호과 일치하면, '회원'에 대한 '인가'를 수행한다.</td>
+        <td nowrap="">비회원 (인증)</td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-005</code></td>
+        <td nowrap="">로그인 유지<br />(<code>RememberMe</code>)</td>
+        <td>'비회원'이 '로그인 유지 옵션'을 활성화한 상태로 로그인을 성공하였을 때, '회원'이 브라우저를 끄고 다시 접속하더라도 로그인 상태를 일정 기간 유지한다. (로그아웃 시에는 해당되지 않는다.)</td>
+        <td nowrap="">비회원<code>→</code>회원</td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-006</code></td>
+        <td nowrap="">비밀번호 재설정<br />(<code>ResetPassword</code>)</td>
+        <td>'비회원'이 '비밀번호 재설정' 버튼을 누르면, '비밀번호 재설정 아이디/이메일 입력 화면'으로 이동한다. 입력받은 값와 일치하는 회원 정보가 존재한다면, '비밀번호 재설정 화면'으로 이동할 수 있는 '비밀번호 재설정 이메일'을 생성 및 전송한다. '비밀번호 재설정 화면'에서 '새 비밀번호' 및 '새 비밀번호 확인'을 입력하고 '비밀번호 재설정 버튼'을 눌렀을 때, '유효성 검사'가 정성작으로 수행되면 '비밀번호 재설정' 및 ''</td>
+        <td nowrap=""><code>-</code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-007</code></td>
+        <td nowrap=""><br />(<code></code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-008</code></td>
+        <td nowrap=""><br />(<code></code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-009</code></td>
+        <td nowrap=""><br />(<code></code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-010</code></td>
+        <td nowrap=""><br />(<code></code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+      </tr>
+      <tr>
+        <td rowspan="1">관리자<br />(<code>Admin</code>)</td>
+        <td nowrap=""><code>AD-001</code></td>
+        <td nowrap=""><br />(<code></code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+      </tr>
+      <tr>
+        <td rowspan="1">위키<br />(<code>Wiki</code>)</td>
+        <td nowrap=""><code>WI-001</code></td>
+        <td nowrap=""><br />(<code></code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+      </tr>
+      <tr>
+        <td rowspan="1">문서<br />(<code>Document</code>)</td>
+        <td nowrap=""><code>DO-001</code></td>
+        <td nowrap=""><br />(<code></code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+      </tr>
+      <tr>
+        <td rowspan="1">검색<br />(<code>Search</code>)</td>
+        <td nowrap=""><code>SE-001</code></td>
+        <td nowrap=""><br />(<code></code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+      </tr>
+      <tr>
+        <td rowspan="1">게시판<br />(<code>Board</code>)</td>
+        <td nowrap=""><code>BO-001</code></td>
+        <td nowrap=""><br />(<code></code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <blockquote>
   <p>참고문헌</p>
