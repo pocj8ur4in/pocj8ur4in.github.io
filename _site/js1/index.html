@@ -6,9 +6,19 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 <script>
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener('mousedown', function(e) {
+  if (e.button === 2) {
+    e.preventDefault();
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
-    // 페이지가 로드된 후에 실행할 초기화 작업
-    checkAndLoadPage(getAllImgs());
+  // 페이지가 로드된 후에 실행할 초기화 작업
+  checkAndLoadPage(getAllImgs());
 });
 
 function getAllImgs() {
@@ -28,12 +38,12 @@ function checkAndLoadPage(allImages) {
     }
 }
 </script>
-<html lang="ko" class="no-js">
+<html lang="ko" class="no-js" oncopy="return false;" oncut="return false;" onpaste="return false;">
   <head>
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[JS] 자바스크립트 (JavaScript) - pocj8ur4in’s blog</title>
-<meta name="description" content="자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어">
+<meta name="description" content="자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어  [name]: ‘Hong’,  // But, name: ‘Hong’은 SyntaxError: Unexpected template string!   [Symbol()]: ‘Hong’,   // OK But, Symbol(): ‘Hong’은 SyntaxError: Unexpected token ‘:’   [${new Date()}]: 365,    // OK! ‘Sun Jul …’: 365">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -49,7 +59,7 @@ function checkAndLoadPage(allImages) {
 <meta property="og:url" content="http://localhost:4000/js1/">
 
 
-  <meta property="og:description" content="자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어">
+  <meta property="og:description" content="자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어  [name]: ‘Hong’,  // But, name: ‘Hong’은 SyntaxError: Unexpected template string!   [Symbol()]: ‘Hong’,   // OK But, Symbol(): ‘Hong’은 SyntaxError: Unexpected token ‘:’   [${new Date()}]: 365,    // OK! ‘Sun Jul …’: 365">
 
 
 
@@ -61,7 +71,7 @@ function checkAndLoadPage(allImages) {
 
 
 
-  <meta property="article:modified_time" content="2024-01-24T00:00:00+09:00">
+  <meta property="article:modified_time" content="2024-01-29T00:00:00+09:00">
 
 
 
@@ -316,9 +326,9 @@ function checkAndLoadPage(allImages) {
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[JS] 자바스크립트 (JavaScript)">
-    <meta itemprop="description" content="자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어">
+    <meta itemprop="description" content="자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어[name]: ‘Hong’,  // But, name: ‘Hong’은 SyntaxError: Unexpected template string!  [Symbol()]: ‘Hong’,   // OK But, Symbol(): ‘Hong’은 SyntaxError: Unexpected token ‘:’  [${new Date()}]: 365,    // OK! ‘Sun Jul …’: 365">
     <meta itemprop="datePublished" content="2024-01-24T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2024-01-24T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-29T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
@@ -341,7 +351,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          11 분 소요
+          18 분 소요
         
       </span>
     
@@ -356,7 +366,7 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#자바스크립트-javascript--동적-클라이언트-사이드-스크립트-언어">자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어</a><ul><li><a href="#nodejs--브라우저-밖에서-자바스크립트-코드를-실행하게-해주는-런타임-환경">Node.js : 브라우저 밖에서 자바스크립트 코드를 실행하게 해주는 런타임 환경</a></li></ul></li><li><a href="#변수-variable--하나의-값을-저장할-수-있는-메모리-공간">변수 (variable) : 하나의 값을 저장할 수 있는 메모리 공간</a><ul><li><a href="#호이스팅-hoisting--선언문을-코드-맨-위에-올려진-것처럼-동작시키는-것">호이스팅 (Hoisting) : 선언문을 코드 맨 위에 올려진 것처럼 동작시키는 것</a></li><li><a href="#값-value--표현식이-평가되어-생성된-결과">값 (value) : 표현식이 평가되어 생성된 결과</a><ul><li><a href="#데이터-타입-date-type--값의-종류">데이터 타입 (Date Type) : 값의 종류</a></li></ul></li><li><a href="#동적-타이핑-dynamic-typing--변수를-선언할-때-데이터-타입을-사전에-선언하지-않음">동적 타이핑 (Dynamic Typing) : 변수를 선언할 때 데이터 타입을 사전에 선언하지 않음</a></li><li><a href="#암묵적-타입-변환--자바스크립트-엔진에서-에러를-발생시키지-않도록-타입을-바꿔-표현식을-평가하는-것">암묵적 타입 변환 : 자바스크립트 엔진에서 에러를 발생시키지 않도록 타입을 바꿔 표현식을 평가하는 것</a></li><li><a href="#명시적-타입-변환--의도적으로-값의-타입을-변환하는-것--타입-캐스팅-type-casting">명시적 타입 변환 : 의도적으로 값의 타입을 변환하는 것 → 타입 캐스팅 (type casting)</a></li><li><a href="#단축-평가-short-circuit-evaluation--표현식을-평가하는-중에-결과가-확정되면-평가-과정을-생략">단축 평가 (short-circuit evaluation) : 표현식을 평가하는 중에 결과가 확정되면, 평가 과정을 생략</a></li></ul></li><li><a href="#객체-object--소프트웨어에서-속성과-기능을-가지는-프로그램의-단위">객체 (Object) : 소프트웨어에서 속성과 기능을 가지는 프로그램의 단위</a><ul><li><a href="#객체-리터럴에-의한-객체-생성--중괄호--내에-0개-이상의-프로퍼티를-정의">객체 리터럴에 의한 객체 생성 : 중괄호 ({}) 내에 0개 이상의 프로퍼티를 정의</a></li><li><a href="#프로퍼티-property--객체의-상태를-나타내는-값-data">프로퍼티 (property) : 객체의 상태를 나타내는 값 (data)</a><ul><li><a href="#메소드-method--프로퍼티를-참조하고-조작할-수-있는-동작-behavior">메소드 (method) : 프로퍼티를 참조하고 조작할 수 있는 동작 (behavior)</a></li></ul></li></ul></li><li><a href="#함수-function--일련의-과정을-코드-블록으로-감싸-하나의-단위로-정의한-것">함수 (function) : 일련의 과정을 코드 블록으로 감싸 하나의 단위로 정의한 것</a><ul><li><a href="#함수-정의--함수를-호출하기-이전에-인수를-전달받을-매개변수-문-반환값을-지정하는-것">함수 정의 : 함수를 호출하기 이전에 인수를 전달받을 매개변수, 문, 반환값을 지정하는 것</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#자바스크립트-javascript--동적-클라이언트-사이드-스크립트-언어">자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어</a><ul><li><a href="#nodejs--브라우저-밖에서-자바스크립트-코드를-실행하게-해주는-런타임-환경">Node.js : 브라우저 밖에서 자바스크립트 코드를 실행하게 해주는 런타임 환경</a></li></ul></li><li><a href="#변수-variable--하나의-값을-저장할-수-있는-메모리-공간">변수 (variable) : 하나의 값을 저장할 수 있는 메모리 공간</a><ul><li><a href="#호이스팅-hoisting--선언문을-코드-맨-위에-올려진-것처럼-동작시키는-것">호이스팅 (Hoisting) : 선언문을 코드 맨 위에 올려진 것처럼 동작시키는 것</a></li><li><a href="#값-value--표현식이-평가되어-생성된-결과">값 (value) : 표현식이 평가되어 생성된 결과</a><ul><li><a href="#데이터-타입-date-type--값의-종류">데이터 타입 (Date Type) : 값의 종류</a></li></ul></li><li><a href="#동적-타이핑-dynamic-typing--변수를-선언할-때-데이터-타입을-사전에-선언하지-않음">동적 타이핑 (Dynamic Typing) : 변수를 선언할 때 데이터 타입을 사전에 선언하지 않음</a></li><li><a href="#암묵적-타입-변환--자바스크립트-엔진에서-에러를-발생시키지-않도록-타입을-바꿔-표현식을-평가하는-것">암묵적 타입 변환 : 자바스크립트 엔진에서 에러를 발생시키지 않도록 타입을 바꿔 표현식을 평가하는 것</a></li><li><a href="#명시적-타입-변환--의도적으로-값의-타입을-변환하는-것--타입-캐스팅-type-casting">명시적 타입 변환 : 의도적으로 값의 타입을 변환하는 것 → 타입 캐스팅 (type casting)</a></li><li><a href="#단축-평가-short-circuit-evaluation--표현식을-평가하는-중에-결과가-확정되면-평가-과정을-생략">단축 평가 (short-circuit evaluation) : 표현식을 평가하는 중에 결과가 확정되면, 평가 과정을 생략</a></li></ul></li><li><a href="#객체-object--소프트웨어에서-속성과-기능을-가지는-프로그램의-단위">객체 (Object) : 소프트웨어에서 속성과 기능을 가지는 프로그램의 단위</a><ul><li><a href="#객체-리터럴에-의한-객체-생성--중괄호--내에-0개-이상의-프로퍼티를-정의">객체 리터럴에 의한 객체 생성 : 중괄호 ({}) 내에 0개 이상의 프로퍼티를 정의</a></li><li><a href="#프로퍼티-property--객체의-상태를-나타내는-값-data">프로퍼티 (property) : 객체의 상태를 나타내는 값 (data)</a><ul><li><a href="#메소드-method--프로퍼티를-참조하고-조작할-수-있는-동작-behavior">메소드 (method) : 프로퍼티를 참조하고 조작할 수 있는 동작 (behavior)</a></li></ul></li><li><a href="#프로퍼티-키-key-표현-규칙">프로퍼티 키 (Key) 표현 규칙</a></li><li><a href="#객체---프로퍼티-제어">객체 - 프로퍼티 제어</a></li><li><a href="#객체-클래스-메소드-object-class-methods">객체 클래스 메소드 (Object Class Methods)</a></li></ul></li><li><a href="#함수-function--일련의-과정을-코드-블록으로-감싸-하나의-단위로-정의한-것">함수 (function) : 일련의 과정을 코드 블록으로 감싸 하나의 단위로 정의한 것</a><ul><li><a href="#함수-정의--함수를-호출하기-이전에-인수를-전달받을-매개변수-문-반환값을-지정하는-것">함수 정의 : 함수를 호출하기 이전에 인수를 전달받을 매개변수, 문, 반환값을 지정하는 것</a></li></ul></li><li><a href="#스코프-scope--객체에서-접근할-수-있는-범위">스코프 (Scope) : 객체에서 접근할 수 있는 범위</a></li><li><a href="#실행-컨텍스트-execution-context--실행할-코드에-제공할-환경-정보들을-모아놓은-객체">실행 컨텍스트 (Execution Context) : 실행할 코드에 제공할 환경 정보들을 모아놓은 객체</a></li><li><a href="#엄격-모드-strict-mode--자바스크립트가-묵인한-에러를-발생시켜-엄격한-오류-검사를-적용">엄격 모드 (Strict Mode) : 자바스크립트가 묵인한 에러를 발생시켜 엄격한 오류 검사를 적용</a></li><li><a href="#클로저-closure--함수가-특정-스코프에-접근할-수-있도록-의도적으로-그-스코프에서-정의한-것">클로저 (Closure) : 함수가 특정 스코프에 접근할 수 있도록 의도적으로 그 스코프에서 정의한 것</a></li></ul>
 
             </nav>
           </aside>
@@ -414,10 +424,6 @@ function checkAndLoadPage(allImages) {
     <li>파싱된 <code class="language-plaintext highlighter-rouge">HTML</code> 요소를 선택 및 조작하는 <code class="language-plaintext highlighter-rouge">DOM API</code>이나 클라이언트 사이드 <code class="language-plaintext highlighter-rouge">Web API</code>를 제공되지 않음</li>
     <li>파일을 생성 및 수정할 수 있는 파일 시스템 및 <code class="language-plaintext highlighter-rouge">Node.js</code> 고유 <code class="language-plaintext highlighter-rouge">API</code> 제공</li>
   </ul>
-
-  <p>브라우저가 제공하는 개발자 도구 (<code class="language-plaintext highlighter-rouge">DevTools</code>) 기능</p>
-
-  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c788a167-03a3-49c3-86b1-9340a67c688c" /></p>
 </blockquote>
 
 <ul>
@@ -769,7 +775,7 @@ var value4 = str?.length; console.log(value4); // 0
     <li>객체 타입 (<code class="language-plaintext highlighter-rouge">Object/Reference</code>) : 값이 힙 영역에 들어감 (<code class="language-plaintext highlighter-rouge">Call-By-Reference</code>)</li>
   </ul>
 
-  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/8dd9f8c1-57e3-4dda-8ea5-1358ef9db7dc" /></p>
+  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/8dd9f8c1-57e3-4dda-8ea5-1358ef9db7dc" width="90%" /></p>
 
   <p>원시 타입과 객체 타입의 차이점? → 메모리 공간에 저장되는 위치에서 비롯된 차이!</p>
 
@@ -932,6 +938,43 @@ const obj = {
 }
 </code></pre></div></div>
 
+<h3 id="프로퍼티-키-key-표현-규칙">프로퍼티 키 (<code class="language-plaintext highlighter-rouge">Key</code>) 표현 규칙</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const user = {
+  '': 1,        
+  ' ': 1,       // 'id': 1, '0y': 2 모두 OK!
+  123: 1,       // user[123], user['123'] OK, but user.123 is SyntaxError!!
+  12345n: 2,    // user[12345], user[12345n], user['12345'] OK, but user['12345n'] is undefined!
+  true: 1,      // OK  user[true]  user.true
+  id: 2,          
+  [`name`]: 'Hong',  // But, `name`: 'Hong'은 SyntaxError: Unexpected template string!
+  [Symbol()]: 'Hong',   // OK But, Symbol(): 'Hong'은 SyntaxError: Unexpected token ':'
+  [`${new Date()}`]: 365,    // OK! 'Sun Jul …': 365
+  'my-friends': ['Han', 'Kim'],
+  getInfo: () =&gt; `${this.id}-${this.name}`,       // OK! But, this is not user!
+  getInfo() { return `${this.id}-${this.name}`; }, // OK! getInfo의 최종 &lt;f.o&gt;
+}
+</code></pre></div></div>
+
+<h3 id="객체---프로퍼티-제어">객체 - 프로퍼티 제어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log(Object.keys(user), Object.keys(user).length); // keys &amp; 15, Symbol은 제외
+console.log(Reflect.ownKeys(user), Reflect.ownKeys(user).length); // keys &amp; 16 (+ Symbol)
+
+user.addr = 'Seoul';   // ⇐⇒ user = {...user, addr: 'Seoul'}
+console.log('addr' in user, user.hasOwnProperty('addr')); // true true
+console.log('Ref.has&gt;', Reflect.has(user, 'addr'));  // true
+console.log('obj.getOwnPropSym&gt;', Object.getOwnPropertySymbols(user)); // [ Symbol() ]
+
+delete user.addr;    // ⇔ Reflect.deleteProperty(user, 'addr');
+console.log('addr' in user); // false
+
+user[`${user.id}'s name`] = `Mr. ${user.name}`;     // prop생성시 snapshot!!(id 변해도 고정)
+console.log('user entries=', Object.entries(user)); // Symbol은 제외!!
+</code></pre></div></div>
+
+<h3 id="객체-클래스-메소드-object-class-methods">객체 클래스 메소드 (<code class="language-plaintext highlighter-rouge">Object Class Methods</code>)</h3>
+
 <h2 id="함수-function--일련의-과정을-코드-블록으로-감싸-하나의-단위로-정의한-것">함수 (<code class="language-plaintext highlighter-rouge">function</code>) : 일련의 과정을 코드 블록으로 감싸 하나의 단위로 정의한 것</h2>
 
 <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c6d16c9b-7b9c-4340-bbab-88b15bfd53db" width="80%" /></p>
@@ -973,6 +1016,363 @@ console.log(add(2, 5));
 </code></pre></div>  </div>
 </blockquote>
 
+<h2 id="스코프-scope--객체에서-접근할-수-있는-범위">스코프 (<code class="language-plaintext highlighter-rouge">Scope</code>) : 객체에서 접근할 수 있는 범위</h2>
+
+<h2 id="실행-컨텍스트-execution-context--실행할-코드에-제공할-환경-정보들을-모아놓은-객체">실행 컨텍스트 (<code class="language-plaintext highlighter-rouge">Execution Context</code>) : 실행할 코드에 제공할 환경 정보들을 모아놓은 객체</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var gg = 1;  let bb = 2;
+
+function f1(x, y) {
+  var gg = 11;   let bb = 22;
+  console.log('f1&gt;', gg, bb, zz, f2, f2.length);
+  f2('first');
+  { 
+    const xx = 99;
+    let lll = 0;
+    f2('nest-first');
+    var zz = 88;
+    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
+  }
+  function f2(t, u) { console.log(t, 'inner', xx, zz); }
+  function f2(t, u, v) { console.log(t, 'inner2', xx, zz); }
+  var zz = 800;
+  f2('second');
+}
+
+function f2(g) {
+  console.log(g, 'global f2&gt;', gg, bb, xx, kk);
+}
+
+let xx = 9;
+if (gg &gt; 0) { var kk = 33; var yy = 9; }
+
+f1(1,2);   console.log(kk, yy);
+
+f2('third');
+</code></pre></div></div>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/40dca0b0-9e4b-44d6-a36c-83aee24fc2e3" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">(1)</code> 전역 코드 평가 단계</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var gg;  let bb;
+function f1(x, y) { ... } // Function Object
+function f2(g) { ... }    // Function Object
+let xx;
+var kk;
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(2)</code> 전역 코드 실행 단계</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var gg = 1;  let bb = 2;
+let xx = 9;
+if (gg &gt; 0) { ... }
+f1(1,2);   console.log(kk, yy);
+f2('third');
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(3)</code> 전역 코드 실행 단계 (<code class="language-plaintext highlighter-rouge">if</code>문 코드 블록 실행 및 종료)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (gg &gt; 0) { // var gg = 1;
+  var kk = 33; var yy = 9;
+}
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(4)</code> 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 호출</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f1(1,2);
+
+function f1(x, y) {
+  var gg;   let bb;
+  { ... }
+  // function f2(t, u) { ... } // Function Object
+  function f2(t, u, v) { ... } // Function Object
+  var zz;
+}
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(5)</code> 함수 코드 평가 단계 내부의 블록 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">{ ... }</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  { 
+    const xx;
+    let lll;
+    var zz;
+    function f2(t) { ... } // Function Object
+  }
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(6)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f1(1,2);
+
+function f1(x, y) {
+  gg = 11;   bb = 22;
+  console.log('f1&gt;', gg, bb, zz, f2, f2.length); // f1&gt; 11, 22, undefined, f2, 3
+  f2('first');
+  { ... }
+  zz = 800;
+  f2('second');
+}
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(7)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('first')</code> 호출</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f1(1,2);
+
+function f1(x, y) {
+  f2('first');
+
+  function f2(t, u, v) { console.log(t, 'inner2', xx, zz); };
+}
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(8)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f2('first')</code> 실행</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f1(1,2);
+
+function f1(x, y) {
+  gg = 11;   bb = 22;
+  f2('first'); // first inner2 9 undefined
+
+  function f2(t, u, v) { console.log(t, 'inner2', xx, zz); };
+}
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(9)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('nest-first')</code> 호출</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f1(x, y) {
+  gg = 11; bb = 22;
+  { 
+    xx = 99;
+    lll = 0;
+    f2('nest-first');
+    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
+  }
+...
+}
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(10)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f2('nest-first')</code> 실행</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f1(x, y) {
+  gg = 11; bb = 22;
+
+  { 
+    xx = 99;
+    lll = 0;
+    f2('nest-first'); // nest-first nested 99 undefined 0
+    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
+  }
+...
+}
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(11)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('second')</code> 호출</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f1(x, y) {
+  gg = 11; bb = 22;
+  
+  {
+    const xx = 99;
+    lll = 0;
+    zz = 88;
+    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
+  }
+
+  f2('second');
+}
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(12)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f2('second')</code> 실행</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f1(x, y) {
+  gg = 11; bb = 22;
+  
+  {
+    const xx = 99;
+    lll = 0;
+    zz = 88;
+    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
+  }
+  f2('second'); // second nested 99 800 0
+}
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(13)</code> 전역 코드 실행 단계 (<code class="language-plaintext highlighter-rouge">console.log</code> 문 실행 및 종료)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gg = 1;  bb = 2;
+
+console.log(kk, yy); // 33 9
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(14)</code> 전역 코드 실행 단계 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('third')</code> 평가</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gg = 1; bb = 2;
+
+function f2(g) {
+  console.log(g, 'global f2&gt;', gg, bb, xx, kk);
+}
+
+let xx = 9;
+if (gg &gt; 0) { var kk = 33; var yy = 9; }
+
+f2('third');
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">(15)</code> 전역 코드 실행 단계 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('third')</code> 실행</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gg = 1; bb = 2;
+
+function f2(g) {
+  console.log(g, 'global f2&gt;', gg, bb, xx, kk);
+}
+
+let xx = 9;
+if (gg &gt; 0) { var kk = 33; var yy = 9; }
+
+f2('third'); // third global f2&gt; 1 2 9 33
+</code></pre></div></div>
+
+<blockquote>
+  <p><b>블록 코드 평가 및 실행</b></p>
+
+  <ol>
+    <li><code class="language-plaintext highlighter-rouge">Global</code>/<code class="language-plaintext highlighter-rouge">Function</code> 평가할 때 <code class="language-plaintext highlighter-rouge">Block scope</code>를 만나면, <code class="language-plaintext highlighter-rouge">Block Lexical Environment</code>를 생성한다.<br />(별도의 <code class="language-plaintext highlighter-rouge">ExecutionContext</code>를 생성하지 않고 독립적인 <code class="language-plaintext highlighter-rouge">Lexical Environment</code>만을 생성한다.)</li>
+    <li><code class="language-plaintext highlighter-rouge">Block code</code>를 평가하여 이 <code class="language-plaintext highlighter-rouge">Block</code>에 대한 <code class="language-plaintext highlighter-rouge">DeclarativeEnvironmentRecord</code>를 생성한다.</li>
+    <li><code class="language-plaintext highlighter-rouge">const</code>/<code class="language-plaintext highlighter-rouge">let</code>은 <code class="language-plaintext highlighter-rouge">notInitializedYet</code> 상태로 <code class="language-plaintext highlighter-rouge">DeclarativeEnvironmentRecord</code>에 등록되고, <code class="language-plaintext highlighter-rouge">var</code>/<code class="language-plaintext highlighter-rouge">function</code> 선언식 등은 부모 <code class="language-plaintext highlighter-rouge">Function scope</code>의 <code class="language-plaintext highlighter-rouge">EnvironmentRecord</code>에 <code class="language-plaintext highlighter-rouge">hoisting</code>한다.<br />(이때 <code class="language-plaintext highlighter-rouge">function</code>은 <code class="language-plaintext highlighter-rouge">&lt;function object&gt;</code>가 아니라 <code class="language-plaintext highlighter-rouge">var</code>와 같이 <code class="language-plaintext highlighter-rouge">undefined</code>로 초기화한다.)</li>
+    <li><code class="language-plaintext highlighter-rouge">Block</code>이 끝나면, 평가 종료 후 상위 <code class="language-plaintext highlighter-rouge">scope code</code>를 계속 평가한다.</li>
+    <li><code class="language-plaintext highlighter-rouge">Block</code>이 실행되면, <code class="language-plaintext highlighter-rouge">Block Lexical Environment</code>를 만들고, 부모 <code class="language-plaintext highlighter-rouge">ExecutionContext</code>의 제어를 가져온다.</li>
+    <li><code class="language-plaintext highlighter-rouge">Block</code> 내의 <code class="language-plaintext highlighter-rouge">Function</code> 선언식은 무조건 <code class="language-plaintext highlighter-rouge">Block</code> 최상단에 <code class="language-plaintext highlighter-rouge">hoisting</code>되어 있으므로 먼저 실행한다.<br />(이 시점에 상위 <code class="language-plaintext highlighter-rouge">function-scope</code>에 함수를 정의해, <code class="language-plaintext highlighter-rouge">&lt;function object&gt;</code>으로 인정된다!)</li>
+    <li>그 외의 코드 (할당문 및 다른 함수 호출)를 한 줄씩 실행된다.</li>
+    <li><code class="language-plaintext highlighter-rouge">Block</code>의 실행이 끝나면, <code class="language-plaintext highlighter-rouge">ExecutionContext</code>의 제어를 다시 부모로 돌려준다.</li>
+    <li><code class="language-plaintext highlighter-rouge">Block</code>은 조건에 따라 실행 여부가 결정된다. 평가 시 블럭 내의 <code class="language-plaintext highlighter-rouge">var</code>/<code class="language-plaintext highlighter-rouge">function</code>은 <code class="language-plaintext highlighter-rouge">undefined</code>로 <code class="language-plaintext highlighter-rouge">hoisting</code>되고, 조건이 만족하여 호출 및 실행될 때에만 <code class="language-plaintext highlighter-rouge">Block Lexical Environment</code>와 <code class="language-plaintext highlighter-rouge">EnvironmentRecord</code>를 만들고 <code class="language-plaintext highlighter-rouge">&lt;function object&gt;</code>로 정의된다.</li>
+  </ol>
+</blockquote>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a69498fb-6f39-413d-8a75-ef547e4ba4b5" /></p>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a1271743-b805-4040-9743-39e7b2cd5bda" /></p>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5272ac93-d18b-4112-a45f-46d657839a3d" /></p>
+
+<h2 id="엄격-모드-strict-mode--자바스크립트가-묵인한-에러를-발생시켜-엄격한-오류-검사를-적용">엄격 모드 (<code class="language-plaintext highlighter-rouge">Strict Mode</code>) : 자바스크립트가 묵인한 에러를 발생시켜 엄격한 오류 검사를 적용</h2>
+
+<ul>
+  <li>선언하지 않은 식별자는 접근할 수 없음</li>
+  <li>암묵적 전역 (<code class="language-plaintext highlighter-rouge">Implicit Global</code>)은 허용하지 않음</li>
+  <li><code class="language-plaintext highlighter-rouge">Delete</code>로 선언된 변수, 함수, 매개변수를 삭제할 수 없음</li>
+  <li>블록 내에서의 함수는 블록 스코프 (블록 내 함수는 볼록의 <code class="language-plaintext highlighter-rouge">DeclarativeEnvironmentRecord</code>에 존재)</li>
+  <li>함수 내에서 매개변수의 이름이 동일해선 안됨</li>
+  <li><code class="language-plaintext highlighter-rouge">NaN</code>, <code class="language-plaintext highlighter-rouge">Infinite</code> 등의 전역 프로퍼티에 값을 할당해선 안됨</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+
+
+var gg = 1;
+let bb = 2;
+
+function f1(x, y) {
+  var gg = 11;
+  let bb = 22;
+  console.log('f1&gt;', gg, bb, zz, f2, f2.length);
+  f2('* first');
+  {
+    const xx = 99;
+    f2('* nest-first');
+    var zz = 88;
+    function f2(t) {
+      console.log(t, '`nested`', xx, zz);
+    }
+  }
+  function f2(t, u) {
+    console.log(t, '`inner`', xx, zz);
+  }
+  function f2(t, u, v) {
+    console.log(t, '`inner2`', xx, zz);
+  }
+  var zz = 800;
+  console.log('gg:', gg);
+  f2('* second');
+}
+
+function f2(g) {
+  console.log(g, 'global f2&gt;', gg, bb, xx, kk);
+}
+let xx = 9;
+if (gg &gt; 0) {
+  var kk = 33;
+  const yy = 9;
+}
+f1(1, 2); 
+console.log('kkkkk&gt;&gt;', kk);
+f2('* third');
+</code></pre></div></div>
+
+<h2 id="클로저-closure--함수가-특정-스코프에-접근할-수-있도록-의도적으로-그-스코프에서-정의한-것">클로저 (<code class="language-plaintext highlighter-rouge">Closure</code>) : 함수가 특정 스코프에 접근할 수 있도록 의도적으로 그 스코프에서 정의한 것</h2>
+
+<ul>
+  <li>상위 스코프의 식별자를 참조하는 하위 스코프 (함수, 메소드)가 외부에서 참조되어 상위 스코프보다 오래 살아있는 것</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let user;
+{
+  const private = {
+    id: 1,
+    name: 'John'
+  }
+  user = private;
+}
+
+user.age = 30;
+
+console.log(user); // { id: 1, name: 'John', age: 30 }
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function func(x) {
+  let clo = function (y) {
+    console.log(y);
+  }
+
+  return clo(x);
+}
+
+func('a'); // a
+</code></pre></div></div>
+
+<blockquote>
+  <p>클로저를 활용하여 외부변수로 인해 오염될 수 있는 비순수함수 (<code class="language-plaintext highlighter-rouge">Impure Function</code>)를, 함수 내부로 전달된 인수에게만 의존하여 반환값을 만드는 순수함수 (<code class="language-plaintext highlighter-rouge">Pure Function</code>)로 바꿀 수 있다.</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 비순수함수
+let cnt1 = 0;
+
+function func1(x) {
+  cnt1 += 1;
+  return cnt1;
+}
+
+console.log(func1()); // 1
+console.log(func1()); // 2
+console.log(func1()); // 3
+
+// → 순수함수
+function func2() {
+  let cnt2 = 0;
+  return function temp() {
+    cnt2 += 1;
+    return cnt2;
+  };
+}
+
+const counter1 = func2();
+const counter2 = func2();
+
+console.log(counter1()); // 1
+console.log(counter1()); // 2
+console.log(counter2()); // 1
+</code></pre></div>  </div>
+</blockquote>
+
+
         
       </section>
 
@@ -998,7 +1398,7 @@ console.log(add(2, 5));
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-24">January 24, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-29">January 29, 2024</time></p>
 
       </footer>
       

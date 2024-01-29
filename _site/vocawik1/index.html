@@ -6,9 +6,19 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 <script>
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener('mousedown', function(e) {
+  if (e.button === 2) {
+    e.preventDefault();
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
-    // 페이지가 로드된 후에 실행할 초기화 작업
-    checkAndLoadPage(getAllImgs());
+  // 페이지가 로드된 후에 실행할 초기화 작업
+  checkAndLoadPage(getAllImgs());
 });
 
 function getAllImgs() {
@@ -28,7 +38,7 @@ function checkAndLoadPage(allImages) {
     }
 }
 </script>
-<html lang="ko" class="no-js">
+<html lang="ko" class="no-js" oncopy="return false;" oncut="return false;" onpaste="return false;">
   <head>
     <meta charset="utf-8">
 
@@ -356,7 +366,7 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#1-들어가며">1. 들어가며</a></li><li><a href="#2-vocawik-프로젝트-기획--설계">2. vocawik 프로젝트 기획 &amp; 설계</a><ul><li><a href="#프로젝트-목표--프로젝트-진행-과정에서-이루고자-하는-내용">프로젝트 목표 : 프로젝트 진행 과정에서 이루고자 하는 내용</a></li><li><a href="#기능-명세서-ver-001">기능 명세서 (ver-0.0.1)</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#1-들어가며">1. 들어가며</a></li><li><a href="#2-vocawik-프로젝트-기획--설계">2. vocawik 프로젝트 기획 &amp; 설계</a><ul><li><a href="#프로젝트-목표-project-goal--프로젝트-진행-과정에서-이루고자-하는-사항들을-정리">프로젝트 목표 (Project Goal) : 프로젝트 진행 과정에서 이루고자 하는 사항들을 정리</a></li><li><a href="#기능-명세서-functional-specification--사이트에서-구현할-기능들을-간략히-정리">기능 명세서 (Functional Specification) : 사이트에서 구현할 기능들을 간략히 정리</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -381,19 +391,36 @@ function checkAndLoadPage(allImages) {
 
 <h2 id="2-vocawik-프로젝트-기획--설계">2. <code class="language-plaintext highlighter-rouge">vocawik</code> 프로젝트 기획 &amp; 설계</h2>
 
-<h3 id="프로젝트-목표--프로젝트-진행-과정에서-이루고자-하는-내용">프로젝트 목표 : 프로젝트 진행 과정에서 이루고자 하는 내용</h3>
+<h3 id="프로젝트-목표-project-goal--프로젝트-진행-과정에서-이루고자-하는-사항들을-정리">프로젝트 목표 (<code class="language-plaintext highlighter-rouge">Project Goal</code>) : 프로젝트 진행 과정에서 이루고자 하는 사항들을 정리</h3>
 
-<ol>
-  <li>도메인 정의 및 어플리케이션 아키텍처 구조 설계
-    <ul>
-      <li>사이트에서 제공하고자 하는 기능 및 책임들이 도메인별로 명확히 분리되어야 함</li>
-      <li></li>
-    </ul>
-  </li>
-  <li>언어, 프레임워크,</li>
-</ol>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ver-0.0.1</code> (<code class="language-plaintext highlighter-rouge">2024-01-28</code>) : 최초 작성</li>
+</ul>
 
-<h3 id="기능-명세서-ver-001">기능 명세서 (<code class="language-plaintext highlighter-rouge">ver-0.0.1</code>)</h3>
+<div style="text-align: center;">
+  <table>
+    <thead>
+      <tr>
+        <td nowrap="">목표</td>
+        <td nowrap="">설명</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td nowrap="">도메인 정의<br />(<code>Domain Definition</code>)</td>
+        <td><ul>
+          <li>사이트에서 제공하고자 하는 기능 및 책임들이 도메인별로 명확히 분리되어야 함</li>
+        </ul></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 id="기능-명세서-functional-specification--사이트에서-구현할-기능들을-간략히-정리">기능 명세서 (<code class="language-plaintext highlighter-rouge">Functional Specification</code>) : 사이트에서 구현할 기능들을 간략히 정리</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ver-0.0.1</code> (<code class="language-plaintext highlighter-rouge">2024-01-28</code>) : 최초 작성</li>
+</ul>
 
 <div style="text-align: center;">
   <table>
@@ -402,8 +429,10 @@ function checkAndLoadPage(allImages) {
         <td nowrap="">분류</td>
         <td nowrap="">ID</td>
         <td nowrap="">이름</td>
-        <td>설명</td>
+        <td nowrap="">설명</td>
         <td nowrap="">상태</td>
+        <td nowrap="">우선<br />순위</td>
+        <td nowrap="">전제<br />조건</td>
       </tr>
     </thead>
     <tbody>
@@ -413,74 +442,194 @@ function checkAndLoadPage(allImages) {
         <td nowrap="">~ 화면 이동<br />(<code>~Page</code>)</td>
         <td>~ 화면으로 이동한다.</td>
         <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
-        <td rowspan="10">회원<br />(<code>User</code>)</td>
+        <td rowspan="21">회원<br />(<code>User</code>)</td>
         <td nowrap=""><code>US-001</code></td>
-        <td nowrap=""><code>ID</code> 로그인<br />(<code>IdLogin</code>)</td>
+        <td nowrap="">회원 <code>ID</code> 로그인<br />(<code>UserIdLogin</code>)</td>
         <td>'비회원'이 '아이디' 또는 '이메일'과 '비밀번호'를 입력하고 '로그인 버튼'을 눌렀을 때, '유효성 검사' 및 회원에 대한 '인증'이 정상적으로 수행되면 '회원'에 대한 '인가'를 수행한다.</td>
         <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
         <td nowrap=""><code>US-002</code></td>
-        <td nowrap=""><code>OAuth</code> 로그인<br />(<code>OAuthLogin</code>)</td>
+        <td nowrap="">회원 <code>OAuth</code> 로그인<br />(<code>UserOAuthLogin</code>)</td>
         <td>'비회원'이 '특정 외부 사이트 (<code>Google</code>, <code>Kakao</code>, <code>Naver</code>, <code>Apple</code>, <code>X</code>)로 로그인 버튼'을 눌렀을 때, 해당 외부 사이트에서 '인증'을 진행하도록 한다. 해당 외부 사이트에서 '인증'이 정상적으로 수행됨을 알린다면, '회원'에 대한 '인가'를 수행한다.</td>
         <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
         <td nowrap=""><code>US-003</code></td>
-        <td nowrap=""><code>OTP</code> 로그인<br />(<code>OTPLogin</code>)</td>
+        <td nowrap="">회원 <code>OTP</code> 로그인<br />(<code>UserLoginCertifyByOTP</code>)</td>
         <td>'회원'이 '2단계 로그인 (<code>OTP</code>) 옵션'을 활성화시켰다면, '비회원'이 '유효성 검사' 및 회원에 대한 '인증'이 정상적으로 수행할 경우에 '일회용 비밀번호'를 확인할 수 있는 '<code>OTP</code> 키'를 발급하고, '2단계 로그인 화면'으로 이동한다. 만약 2단계 로그인 화면에서 입력받은 값이 일회용 비밀번호과 일치하면, '회원'에 대한 '인가'를 수행한다.</td>
         <td nowrap="">비회원 (인증)</td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
         <td nowrap=""><code>US-004</code></td>
-        <td nowrap="">로그인 이메일 인증<br />(<code>EmailAuthLogin</code>)</td>
+        <td nowrap="">회원 로그인 이메일 인증<br />(<code>UserLoginCertifyByEmail</code>)</td>
         <td>'회원'이 '2단계 로그인 (이메일 인증) 옵션'을 활성화시켰다면, '비회원'이 '유효성 검사' 및 회원에 대한 '인증'이 정상적으로 수행되는 경우에 '일회용 비밀번호'를 확인할 수 있는 '인증 이메일'을 생성 및 전송하고, '2단계 로그인 화면'으로 이동한다. 만약 2단계 로그인 화면에서 입력받은 값이 일회용 비밀번호과 일치하면, '회원'에 대한 '인가'를 수행한다.</td>
         <td nowrap="">비회원 (인증)</td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
         <td nowrap=""><code>US-005</code></td>
-        <td nowrap="">로그인 유지<br />(<code>RememberMe</code>)</td>
-        <td>'비회원'이 '로그인 유지 옵션'을 활성화한 상태로 로그인을 성공하였을 때, '회원'이 브라우저를 끄고 다시 접속하더라도 로그인 상태를 일정 기간 유지한다. (로그아웃 시에는 해당되지 않는다.)</td>
-        <td nowrap="">비회원<code>→</code>회원</td>
+        <td nowrap="">회원 로그인 문자 인증<br />(<code>UserLoginCertifyByPhone</code>)</td>
+        <td></td>
+        <td nowrap="">비회원 (인증)</td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
         <td nowrap=""><code>US-006</code></td>
-        <td nowrap="">비밀번호 재설정<br />(<code>ResetPassword</code>)</td>
-        <td>'비회원'이 '비밀번호 재설정' 버튼을 누르면, '비밀번호 재설정 아이디/이메일 입력 화면'으로 이동한다. 입력받은 값와 일치하는 회원 정보가 존재한다면, '임시 비밀번호'가 존재하는 '비밀번호 재설정 이메일'을 생성 및 전송한다.</td>
-        <td nowrap=""><code>-</code></td>
+        <td nowrap="">회원 로그인 유지<br />(<code>UserRememberMe</code>)</td>
+        <td>'비회원'이 '로그인 유지 옵션'을 활성화한 상태로 로그인을 성공하였을 때, '회원'이 브라우저를 끄고 다시 접속하더라도 로그인 상태를 2주간 유지한다. 로그아웃 시에는 로그인 상태를 더 이상 유지하지 않는다.</td>
+        <td nowrap="">비회원 → 회원</td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
         <td nowrap=""><code>US-007</code></td>
-        <td nowrap="">회원가입<br />(<code></code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
+        <td nowrap="">회원 비밀번호 재설정 이메일 인증<br />(<code>UserResetPasswordCertifyByEmail</code>)</td>
+        <td>'비회원'이 '비밀번호 재설정' 버튼을 누르면, '비밀번호 재설정 아이디/이메일 입력 화면'으로 이동한다. 입력받은 값과 일치하는 회원 정보가 존재한다면, '임시 비밀번호'를 생성하여 30분간 유효한 '임시 비밀번호'를 포함한 '비밀번호 재설정 이메일'을 생성 및 전송한다.</td>
+        <td nowrap="">비회원</td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
         <td nowrap=""><code>US-008</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
+        <td nowrap="">회원 비밀번호 재설정 문자 인증<br />(<code>UserResetPasswordCertifyByPhone</code>)</td>
         <td></td>
-        <td nowrap=""><code>-</code></td>
+        <td nowrap="">비회원</td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
         <td nowrap=""><code>US-009</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
+        <td nowrap="">회원 비밀번호 재설정<br />(<code>UserResetPassword</code>)</td>
         <td></td>
-        <td nowrap=""><code>-</code></td>
+        <td nowrap="">비회원 (인증)</td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
         <td nowrap=""><code>US-010</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
+        <td nowrap="">회원 로그아웃<br />(<code>UserLogout</code>)</td>
         <td></td>
-        <td nowrap=""><code>-</code></td>
+        <td nowrap="">회원</td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
-        <td rowspan="1">관리자<br />(<code>Admin</code>)</td>
-        <td nowrap=""><code>AD-001</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
+        <td nowrap=""><code>US-011</code></td>
+        <td nowrap="">회원가입<br />(<code>UserRegister</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-012</code></td>
+        <td nowrap=""><code>OAuth</code> 회원가입<br />(<code>UserOAuthRegister</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-013</code></td>
+        <td nowrap="">회원가입 이메일 인증<br />(<code>UserRegisterCertifyByEmail</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-014</code></td>
+        <td nowrap="">회원가입 문자 인증<br />(<code>UserRegisterCertifyByPhone</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-015</code></td>
+        <td nowrap="">회원정보 조회<br />(<code>UserReadMyInfo</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-016</code></td>
+        <td nowrap="">회원정보 수정<br />(<code>UserUpdateMyInfo</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-017</code></td>
+        <td nowrap="">회원정보 수정 이메일 인증<br />(<code>UserUpdateMyInfoCertifyByEmail</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-018</code></td>
+        <td nowrap="">회원정보 수정 문자 인증<br />(<code>UserUpdateMyInfoCertifyByPhone</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-019</code></td>
+        <td nowrap="">회원 <code>OAuth</code> 연동<br />(<code>UserUpdateOAuth</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-020</code></td>
+        <td nowrap="">회원 <code>OAuth</code> 연동 해제<br />(<code>UserDeleteOAuth</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>US-021</code></td>
+        <td nowrap="">회원 탈퇴<br />(<code>UserDeleteMyInfo</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td rowspan="2">관리자<br />(<code>Admin</code>)</td>
+        <td nowrap=""><code>AD-001</code></td>
+        <td nowrap="">관리자 로그인<br />(<code>AdminLogin</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>AD-002</code></td>
+        <td nowrap="">관리자 로그아웃<br />(<code>AdminLogout</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
         <td rowspan="1">위키<br />(<code>Wiki</code>)</td>
@@ -488,6 +637,8 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><br />(<code></code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
         <td rowspan="1">문서<br />(<code>Document</code>)</td>
@@ -495,6 +646,8 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><br />(<code></code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
         <td rowspan="1">검색<br />(<code>Search</code>)</td>
@@ -502,6 +655,8 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><br />(<code></code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
       <tr>
         <td rowspan="1">게시판<br />(<code>Board</code>)</td>
@@ -509,6 +664,17 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><br />(<code></code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td rowspan="1">알림<br />(<code>Notice</code>)</td>
+        <td nowrap=""><code>NO-001</code></td>
+        <td nowrap=""><br />(<code></code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
       </tr>
     </tbody>
   </table>
@@ -644,7 +810,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          12 분 소요
+          20 분 소요
         
       </span>
     
@@ -653,7 +819,8 @@ function checkAndLoadPage(allImages) {
 
     <p class="archive__item-excerpt" itemprop="description">자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어
 
-</p>
+[name]: ‘Hong’,  // But, name: ‘Hong’은 SyntaxError: Unexpected template string!
+  [Symbol()]: ‘Hong’,   // OK But...</p>
   </article>
 </div>
 

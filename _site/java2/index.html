@@ -6,9 +6,19 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 <script>
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener('mousedown', function(e) {
+  if (e.button === 2) {
+    e.preventDefault();
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
-    // 페이지가 로드된 후에 실행할 초기화 작업
-    checkAndLoadPage(getAllImgs());
+  // 페이지가 로드된 후에 실행할 초기화 작업
+  checkAndLoadPage(getAllImgs());
 });
 
 function getAllImgs() {
@@ -28,7 +38,7 @@ function checkAndLoadPage(allImages) {
     }
 }
 </script>
-<html lang="ko" class="no-js">
+<html lang="ko" class="no-js" oncopy="return false;" oncut="return false;" onpaste="return false;">
   <head>
     <meta charset="utf-8">
 
@@ -1014,7 +1024,7 @@ public void funcB() throws Exception { // throws로 예외 처리를 Exception�
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          12 분 소요
+          20 분 소요
         
       </span>
     
@@ -1023,7 +1033,8 @@ public void funcB() throws Exception { // throws로 예외 처리를 Exception�
 
     <p class="archive__item-excerpt" itemprop="description">자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어
 
-</p>
+[name]: ‘Hong’,  // But, name: ‘Hong’은 SyntaxError: Unexpected template string!
+  [Symbol()]: ‘Hong’,   // OK But...</p>
   </article>
 </div>
 

@@ -9,9 +9,19 @@
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
 <script>
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener('mousedown', function(e) {
+  if (e.button === 2) {
+    e.preventDefault();
+  }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
-    // 페이지가 로드된 후에 실행할 초기화 작업
-    checkAndLoadPage(getAllImgs());
+  // 페이지가 로드된 후에 실행할 초기화 작업
+  checkAndLoadPage(getAllImgs());
 });
 
 function getAllImgs() {
@@ -31,7 +41,7 @@ function checkAndLoadPage(allImages) {
     }
 }
 </script>
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js" oncopy="return false;" oncut="return false;" onpaste="return false;">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
