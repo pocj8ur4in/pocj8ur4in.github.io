@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-29T18:24:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[JS] 자바스크립트 (JavaScript)</title><link href="http://localhost:4000/js1/" rel="alternate" type="text/html" title="[JS] 자바스크립트 (JavaScript)" /><published>2024-01-24T00:00:00+09:00</published><updated>2024-01-29T00:00:00+09:00</updated><id>http://localhost:4000/js1</id><content type="html" xml:base="http://localhost:4000/js1/"><![CDATA[<h2 id="자바스크립트-javascript--동적-클라이언트-사이드-스크립트-언어">자바스크립트 (<code class="language-plaintext highlighter-rouge">JavaScript</code>) : 동적 클라이언트 사이드 스크립트 언어</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-30T15:33:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[JS] 자바스크립트 (JavaScript)</title><link href="http://localhost:4000/js1/" rel="alternate" type="text/html" title="[JS] 자바스크립트 (JavaScript)" /><published>2024-01-24T00:00:00+09:00</published><updated>2024-01-29T00:00:00+09:00</updated><id>http://localhost:4000/js1</id><content type="html" xml:base="http://localhost:4000/js1/"><![CDATA[<h2 id="자바스크립트-javascript--동적-클라이언트-사이드-스크립트-언어">자바스크립트 (<code class="language-plaintext highlighter-rouge">JavaScript</code>) : 동적 클라이언트 사이드 스크립트 언어</h2>
 
 <blockquote>
   <ul>
@@ -641,6 +641,99 @@ console.log('user entries=', Object.entries(user)); // Symbol은 제외!!
 
 console.log(add(2, 5));
 </code></pre></div>  </div>
+</blockquote>
+
+<h3 id="함수-매개변수-argument--값-parameter--변수">함수 매개변수 (<code class="language-plaintext highlighter-rouge">Argument</code> : 값, <code class="language-plaintext highlighter-rouge">Parameter</code> : 변수)</h3>
+
+<h3 id="즉시-호출-함수-iife">즉시 호출 함수 <code class="language-plaintext highlighter-rouge">IIFE</code></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(function() { ... })();
+</code></pre></div></div>
+
+<h3 id="화살표-함수-arrow-function">화살표 함수 (<code class="language-plaintext highlighter-rouge">Arrow Function</code>)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(function f3(a){
+    for(let i = 1; i &lt; 10; i++){
+        console.log(`${a} * ${i} = ${a * i}`);
+    }
+})(2)
+
+console.log();
+
+const af3 = a =&gt; b =&gt; {
+    for(;b &lt; 10; b++){
+        console.log(`${a} * ${b} = ${a * b}`);
+    }
+};
+
+af3(6)(3);
+</code></pre></div></div>
+
+<h3 id="함수의-호출-방식과-this">함수의 호출 방식과 <code class="language-plaintext highlighter-rouge">this</code></h3>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/b706b06f-966b-458a-a6f5-22131c6681ff" width="80%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">this</code>를 바인딩하는 방법 : <code class="language-plaintext highlighter-rouge">call</code>, <code class="language-plaintext highlighter-rouge">apply</code>, <code class="language-plaintext highlighter-rouge">bind</code></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function func(id) {
+  console.log(this, id, this.name);
+}
+
+const obj = { name: 'Kim' };
+
+// bind
+const bf1 = func.bind(obj);
+bf1(1, '서울');
+
+// apply
+func.apply(obj, [ 2, '부산' ]);
+
+// call
+func.call(obj, 3, '대구');
+</code></pre></div></div>
+
+<h3 id="순수-함수-pure-function--함수로서의-함수">순수 함수 (<code class="language-plaintext highlighter-rouge">Pure Function</code>) : 함수로서의 함수</h3>
+
+<ul>
+  <li>입력이 같으면 결과도 같다! → <code class="language-plaintext highlighter-rouge">Side Effect</code>가 없다. 즉, 외부의 값을 변경시키지 않아야 한다!</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const weeks = ['일', '월', '화', '수', '목', '금', '토'];
+
+const getWeekName = function(weekNo) {
+  return `${weeks[weekNo]}요일`;
+};
+
+const day = new Date().getDay();
+console.log(`오늘은 ${getWeekName(day)}입니다!`);
+</code></pre></div></div>
+
+<p>→ 외부에 값을 두지 않고 내부에 값을 두는 클로저를 활용해야 한다!</p>
+
+<h3 id="콜백-함수-callback-function---다른-함수에-인자로-전달되는-함수">콜백 함수 (<code class="language-plaintext highlighter-rouge">Callback Function</code>) :  다른 함수에 인자로 전달되는 함수</h3>
+
+<ul>
+  <li>주로 비동기적인 상황에서 사용되며, 특정 이벤트 발생 시 호출되도록 등록</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<h3 id="고차-함수-higher-order-function--함수를-인자로-받거나-함수를-반환하는-함수">고차 함수 (<code class="language-plaintext highlighter-rouge">Higher-Order Function</code>) : 함수를 인자로 받거나 함수를 반환하는 함수</h3>
+
+<blockquote>
+  <ul>
+    <li>인수 (매개변수)로서의 함수</li>
+    <li>반환 값으로서의 함수 (클로저)</li>
+    <li>식별자로서의 함수 (1급 객체)</li>
+    <li>
+      <p>배열 및 객체 내의 함수 (원소)</p>
+
+      <p>→ 즉, 고차 함수는 <b>1급 객체로서의 함수</b>를 의미한다.</p>
+    </li>
+  </ul>
 </blockquote>
 
 <h2 id="스코프-scope--객체에서-접근할-수-있는-범위">스코프 (<code class="language-plaintext highlighter-rouge">Scope</code>) : 객체에서 접근할 수 있는 범위</h2>
