@@ -79,11 +79,11 @@ function checkAndLoadPage(allImages) {
 
 
 
-  <meta property="article:published_time" content="2024-01-30T00:00:00+09:00">
+  <meta property="article:published_time" content="2024-01-31T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2024-01-30T00:00:00+09:00">
+  <meta property="article:modified_time" content="2024-01-31T00:00:00+09:00">
 
 
 
@@ -339,8 +339,8 @@ function checkAndLoadPage(allImages) {
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[JS] 4. 스코프 (Scope) &amp; 실행 컨텍스트 (Execution Context)">
     <meta itemprop="description" content="스코프 (Scope) : 변수에 접근할 수 있는 범위">
-    <meta itemprop="datePublished" content="2024-01-30T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2024-01-30T00:00:00+09:00">
+    <meta itemprop="datePublished" content="2024-01-31T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-31T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
@@ -378,7 +378,7 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#스코프-scope--변수에-접근할-수-있는-범위">스코프 (Scope) : 변수에 접근할 수 있는 범위</a><ul><li><a href="#전역-스코프-global-level-scope--코드-어디에서나-참조-가능">전역 스코프 (Global-level Scope) → 코드 어디에서나 참조 가능</a></li><li><a href="#함수-스코프-function-level-scope--함수-자신과-하위-함수에서만-참조-가능">함수 스코프 (Function-level Scope) → 함수 자신과 하위 함수에서만 참조 가능</a></li><li><a href="#블록-스코프-block-level-scope--블록-내에서만-참조-가능">블록 스코프 (Block-level Scope) → 블록 내에서만 참조 가능</a></li><li><a href="#렉시컬-스코프-lexical-level-scope">렉시컬 스코프 (Lexical-level Scope)</a></li><li><a href="#암묵적-전역-implicit-global">암묵적 전역 (Implicit Global)</a></li></ul></li><li><a href="#실행-컨텍스트-execution-context--실행할-코드에-제공할-환경-정보들을-모아놓은-객체">실행 컨텍스트 (Execution Context) : 실행할 코드에 제공할 환경 정보들을 모아놓은 객체</a></li><li><a href="#엄격-모드-strict-mode--자바스크립트가-묵인한-에러를-발생시켜-엄격한-오류-검사를-적용">엄격 모드 (Strict Mode) : 자바스크립트가 묵인한 에러를 발생시켜 엄격한 오류 검사를 적용</a></li><li><a href="#클로저-closure--함수가-특정-스코프에-접근할-수-있도록-의도적으로-그-스코프에서-정의한-것">클로저 (Closure) : 함수가 특정 스코프에 접근할 수 있도록 의도적으로 그 스코프에서 정의한 것</a></li></ul>
+              <ul class="toc__menu"><li><a href="#스코프-scope--변수에-접근할-수-있는-범위">스코프 (Scope) : 변수에 접근할 수 있는 범위</a><ul><li><a href="#전역-스코프-global-level-scope--코드-어디에서나-참조-가능">전역 스코프 (Global-level Scope) → 코드 어디에서나 참조 가능</a></li><li><a href="#함수-스코프-function-level-scope--함수-자신과-하위-함수에서만-참조-가능">함수 스코프 (Function-level Scope) → 함수 자신과 하위 함수에서만 참조 가능</a></li><li><a href="#블록-스코프-block-level-scope--블록-내에서만-참조-가능">블록 스코프 (Block-level Scope) → 블록 내에서만 참조 가능</a></li><li><a href="#모듈-스코프-module-level-scope-">모듈 스코프 (Module-level Scope) →</a></li><li><a href="#렉시컬-스코프-lexical-level-scope">렉시컬 스코프 (Lexical-level Scope)</a></li><li><a href="#암묵적-전역-implicit-global">암묵적 전역 (Implicit Global)</a></li></ul></li><li><a href="#실행-컨텍스트-execution-context--실행할-코드에-제공할-환경-정보들을-모아놓은-객체">실행 컨텍스트 (Execution Context) : 실행할 코드에 제공할 환경 정보들을 모아놓은 객체</a></li><li><a href="#엄격-모드-strict-mode--자바스크립트가-묵인한-에러를-발생시켜-엄격한-오류-검사를-적용">엄격 모드 (Strict Mode) : 자바스크립트가 묵인한 에러를 발생시켜 엄격한 오류 검사를 적용</a></li><li><a href="#클로저-closure--함수가-특정-스코프에-접근할-수-있도록-의도적으로-그-스코프에서-정의한-것">클로저 (Closure) : 함수가 특정 스코프에 접근할 수 있도록 의도적으로 그 스코프에서 정의한 것</a></li></ul>
 
             </nav>
           </aside>
@@ -420,6 +420,8 @@ console.log(local); // Uncaught ReferenceError: local is not defined
 </code></pre></div></div>
 
 <h3 id="블록-스코프-block-level-scope--블록-내에서만-참조-가능">블록 스코프 (<code class="language-plaintext highlighter-rouge">Block-level Scope</code>) → 블록 내에서만 참조 가능</h3>
+
+<h3 id="모듈-스코프-module-level-scope-">모듈 스코프 (<code class="language-plaintext highlighter-rouge">Module-level Scope</code>) →</h3>
 
 <h3 id="렉시컬-스코프-lexical-level-scope">렉시컬 스코프 (<code class="language-plaintext highlighter-rouge">Lexical-level Scope</code>)</h3>
 
@@ -804,7 +806,7 @@ console.log(counter2()); // 1
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-30">January 30, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-31">January 31, 2024</time></p>
 
       </footer>
       
@@ -837,7 +839,7 @@ console.log(counter2()); // 1
       
   <nav class="pagination">
     
-      <a href="/js3/" class="pagination--pager" title="[JS] 3. 호이스팅 (Hoisting) &amp; 동적 타이핑 (Type Conversion)
+      <a href="/digital_hanaro_5.md/" class="pagination--pager" title="고차 함수, 콜백 함수 (2024.01.31)
 ">이전</a>
     
     
@@ -856,6 +858,88 @@ console.log(counter2()); // 1
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/js7/" rel="permalink">[JS] 7. 객체지향 프로그래밍 (OOP) &amp; 프로토타입 (Prototype)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">객체지향 프로그래밍 (Object-Oriented Programming) : 원시 타입을 제외한 모든 것이 객체
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/js6/" rel="permalink">[JS] 6. 배열 (Array)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">배열 (Array) : 순서가 있는 데이터 집합
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -907,89 +991,7 @@ console.log(counter2()); // 1
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/js3/" rel="permalink">[JS] 3. 호이스팅 (Hoisting) &amp; 동적 타이핑 (Type Conversion)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">호이스팅 (Hoisting) : 선언문을 코드 맨 위에 올려진 것처럼 동작시키는 것
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/js2/" rel="permalink">[JS] 2. 변수 (Variable) &amp; 객체 (Object)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">변수 (Variable) : 하나의 값을 저장할 수 있는 메모리 공간
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/js1/" rel="permalink">[JS] 1. 자바스크립트 (JavaScript)
+        <a href="/digital_hanaro_5.md/" rel="permalink">고차 함수, 콜백 함수 (2024.01.31)
 </a>
       
     </h2>
@@ -1014,7 +1016,9 @@ console.log(counter2()); // 1
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">자바스크립트 (JavaScript) : 동적 클라이언트 사이드 스크립트 언어
+    <p class="archive__item-excerpt" itemprop="description">
+  디지털하나路 스터디 5일차 내용을 정리한 글입니다.
+
 
 </p>
   </article>

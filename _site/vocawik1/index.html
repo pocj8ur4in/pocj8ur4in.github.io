@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          6 분 소요
+          7 분 소요
         
       </span>
     
@@ -424,6 +424,7 @@ function checkAndLoadPage(allImages) {
         <td><ul>
           <li>사이트에서 제공하고자 하는 기능 및 책임들이 도메인별로 명확히 분리되어야 한다.</li>
         </ul></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -448,18 +449,23 @@ function checkAndLoadPage(allImages) {
         <td nowrap="">이름</td>
         <td nowrap="">설명</td>
         <td nowrap="">업무</td>
-        <td nowrap="">권한</td>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td nowrap="">관리자<br />(<code>Manager; MA</code>)</td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td nowrap="">회원<br />(<code>Member; ME</code>)</td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td nowrap="">비회원<br />(<code>NonMember; NE</code>)</td>
+        <td></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -483,11 +489,12 @@ function checkAndLoadPage(allImages) {
         <td nowrap="">우선<br />순위</td>
         <td nowrap="">전제<br />조건</td>
         <td nowrap="">수용<br />여부</td>
+        <td nowrap="">비고</td>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td rowspan="25">회원<br />(<code>Member</code>)</td>
+        <td rowspan="40">회원<br />(<code>Member</code>)</td>
         <td nowrap=""><code>ME-001</code></td>
         <td nowrap="">회원 <code>ID</code> 로그인<br />(<code>MemberIdLogin</code>)</td>
         <td>'비회원'이 '아이디' 또는 '이메일'과 '비밀번호'를 입력하고 '로그인 버튼'을 눌렀을 때, '유효성 검사' 및 회원에 대한 '인증'이 정상적으로 수행되면 '회원'에 대한 '인가'를 수행한다.</td>
@@ -495,6 +502,7 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-002</code></td>
@@ -504,6 +512,7 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-003</code></td>
@@ -513,6 +522,7 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-004</code></td>
@@ -522,6 +532,7 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-005</code></td>
@@ -531,6 +542,7 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-006</code></td>
@@ -540,15 +552,17 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-007</code></td>
-        <td nowrap="">회원 로그인 유지<br />(<code>MemberRememberMe</code>)</td>
+        <td nowrap="">회원 로그인 유지<br />(<code>MemberCreateRememberMe</code>)</td>
         <td>'비회원'이 '로그인 유지 옵션'을 활성화한 상태로 로그인을 성공하였을 때, '회원'이 브라우저를 끄고 다시 접속하더라도 로그인 상태를 2주간 유지한다.</td>
-        <td nowrap="">비회원 → 회원</td>
+        <td nowrap="">비회원<br />↓<br />회원</td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-008</code></td>
@@ -558,6 +572,7 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-009</code></td>
@@ -567,15 +582,17 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-010</code></td>
         <td nowrap="">회원 비밀번호 재설정<br />(<code>MemberResetPassword</code>)</td>
-        <td>'회원'이 '로그인'을 시도할 때 '비밀번호 재설정'에서 생성된 '임시 비밀번호'를 입력받았거나, '회원'이 '회원정보 수정 화면'에서 '비밀번호 재설정' 버튼을 누른 경우, '비밀번호 재설정' 화면으로 이동한다. 입력받은 '비밀번호' 및 '비밀번호 확인'이 이전에 사용된 적이 있는 '중복된 비밀번호'가 아니면서 유효성 검사가 정상적으로 이루어지고, <code>google reCAPTCHA</code>를 통과하였다면, 입력한 값을 포함하여 회원 정보를 갱신한다. 그리고 이전에 이루어진 '회원 로그인 유지'를 모두 해제한 다음에 '회원'에 대한 인가를 비활성화하고 '홈 화면'으로 이동한다.</td>
+        <td>'회원'이 '로그인'을 시도할 때 '비밀번호 재설정'에서 생성된 '임시 비밀번호'를 입력받았거나, '회원'이 '회원정보 갱신 화면'에서 '비밀번호 재설정' 버튼을 누른 경우, '비밀번호 재설정' 화면으로 이동한다. 입력받은 '비밀번호' 및 '비밀번호 확인'이 이전에 사용된 적이 있는 '중복된 비밀번호'가 아니면서 유효성 검사가 정상적으로 이루어지고, <code>google reCAPTCHA</code>를 통과하였다면, 입력한 값을 포함하여 회원 정보를 갱신한다. 그리고 이전에 이루어진 '회원 로그인 유지'를 모두 해제한 다음에 '회원'에 대한 인가를 비활성화하고 '홈 화면'으로 이동한다.</td>
         <td nowrap="">회원</td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-011</code></td>
@@ -585,24 +602,26 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-012</code></td>
         <td nowrap="">회원가입<br />(<code>MemberRegister</code>)</td>
         <td>'비회원'이 '회원가입' 버튼을 누르면, '회원가입 화면'으로 이동한다. '회원가입' 화면에서 '회원가입' 버튼을 눌렀을 때, 필수 정보 ('아이디', '비밀번호', '비밀번호 확인', '이메일' 등)이 입력되어 '유효성 검사'가 정상적으로 이루어지고, <code>google reCAPTCHA</code>를 통과하였으며, '이메일 인증'이, 혹은 선택 정보인 '문자 인증'이 정상적으로 수행되었다면, 입력한 값들을 포함한 '회원 정보'를 서버 내 데이터베이스에 생성한 다음 '홈 화면'으로 이동한다.</td>
-        <td nowrap=""><code>비회원</code></td>
+        <td nowrap="">비회원</td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
-        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-013</code></td>
         <td nowrap=""><code>OAuth</code> 회원가입<br />(<code>MemberOAuthRegister</code>)</td>
         <td>'비회원'이 '특정 외부 사이트 (<code>Google</code>, <code>Kakao</code>, <code>Naver</code>, <code>Apple</code>, <code>X</code>)로 회원가입 버튼'을 눌렀을 때, 해당 외부 사이트에서 '인증'을 진행하도록 한다. 해당 외부 사이트에서 '인증'이 정상적으로 수행됨을 알린다면, '회원가입 화면'으로 이동한다. '회원가입' 화면에서 '회원가입' 버튼을 눌렀을 때, 필수 정보 ('아이디', '비밀번호', '비밀번호 확인', '이메일' 등)이 입력되어 '유효성 검사'가 정상적으로 이루어지고, <code>google reCAPTCHA</code>를 통과하였으며, '이메일 인증'이, 혹은 선택 정보인 '문자 인증'이 정상적으로 수행되었다면, 입력한 값들을 포함한 '회원 정보'를 데이터베이스에 생성한 다음 '홈 화면'으로 이동한다.</td>
-        <td nowrap=""><code>비회원 → 비회원 (인증)</code></td>
+        <td nowrap="">비회원<br />↓<br />비회원 (인증)</td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-014</code></td>
@@ -612,6 +631,7 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-015</code></td>
@@ -621,6 +641,7 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-016</code></td>
@@ -630,51 +651,57 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-017</code></td>
-        <td nowrap="">회원정보 수정<br />(<code>MemberUpdateMyInfo</code>)</td>
+        <td nowrap="">회원정보 갱신<br />(<code>MemberUpdateMyInfo</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-018</code></td>
-        <td nowrap="">회원정보 수정 이메일 인증<br />(<code>MemberUpdateMyInfoCertifyByEmail</code>)</td>
+        <td nowrap="">회원정보 갱신 이메일 인증<br />(<code>MemberUpdateMyInfoCertifyByEmail</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-019</code></td>
-        <td nowrap="">회원정보 수정 문자 인증<br />(<code>MemberUpdateMyInfoCertifyByPhone</code>)</td>
+        <td nowrap="">회원정보 갱신 문자 인증<br />(<code>MemberUpdateMyInfoCertifyByPhone</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-020</code></td>
-        <td nowrap="">회원 <code>OAuth</code> 연동<br />(<code>MemberUpdateOAuth</code>)</td>
+        <td nowrap="">회원 <code>OAuth</code> 연동<br />(<code>MemberUpdateMyOAuth</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-021</code></td>
-        <td nowrap="">회원 <code>OAuth</code> 연동 해제<br />(<code>MemberDeleteOAuth</code>)</td>
+        <td nowrap="">회원 <code>OAuth</code> 연동 해제<br />(<code>MemberDeleteMyOAuth</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-022</code></td>
@@ -684,36 +711,190 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-023</code></td>
-        <td nowrap="">회원 프로필 조회<br />(<code>MemberReadProfile</code>)</td>
+        <td nowrap="">회원 로그인 기록 조회<br />(<code>MemberReadLoginHistory</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-024</code></td>
-        <td nowrap="">회원 중복 로그인 방지<br />(<code></code>)</td>
+        <td nowrap="">회원 비밀번호 재설정 기록 조회<br />(<code>MemberReadResetPasswordHistory</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>ME-025</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
+        <td nowrap="">회원 중복 로그인 설정<br />(<code>MemberSetDuplicateLogin</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
-        <td rowspan="5">관리자<br />(<code>Manager</code>)</td>
+        <td nowrap=""><code>ME-026</code></td>
+        <td nowrap="">회원 로그인 유지 기기 조회<br />(<code>MemberReadRememberMeHistory</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>ME-027</code></td>
+        <td nowrap="">회원 로그인 유지 기기 해제<br />(<code>MemberDeleteRememberMe</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>ME-028</code></td>
+        <td nowrap="">회원 프로필 조회<br />(<code>MemberReadMyProfile</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>ME-029</code></td>
+        <td nowrap="">회원 프로필 갱신<br />(<code>MemberUpdateMyProfile</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>ME-030</code></td>
+        <td nowrap="">회원 인터페이스 설정 조회<br />(<code>MemberReadMyInterface</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>ME-031</code></td>
+        <td nowrap="">회원 인터페이스 설정 갱신<br />(<code>MemberUpdateMyInterface</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>ME-032</code></td>
+        <td nowrap="">회원 상태 조회<br />(<code>MemberReadMyStatus</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>ME-033</code></td>
+        <td nowrap="">회원 상태 갱신<br />(<code>MemberUpdateMyStatus</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>ME-034</code></td>
+        <td nowrap="">회원 관리자 권한 요청 생성<br />(<code>MemberCreateAuthRequest</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>ME-035</code></td>
+        <td nowrap="">회원 관리자 권한 응답 조회<br />(<code>MemberReadAuthResponse</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>ME-036</code></td>
+        <td nowrap="">회원 관리자 권한 요청 및 응답 기록 조회<br />(<code>MemberReadAuthHistory</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>ME-037</code></td>
+        <td nowrap=""><br />(<code>Member</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>ME-038</code></td>
+        <td nowrap=""><br />(<code>Member</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>ME-039</code></td>
+        <td nowrap=""><br />(<code>Member</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>ME-040</code></td>
+        <td nowrap=""><br />(<code>Member</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td rowspan="15">관리자<br />(<code>Manager</code>)</td>
         <td nowrap=""><code>MA-001</code></td>
         <td nowrap="">관리자 보안 로그인<br />(<code>ManagerSecureLogin</code>)</td>
         <td></td>
@@ -721,6 +902,7 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>MA-002</code></td>
@@ -730,83 +912,214 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>MA-003</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
+        <td nowrap="">관리자 과도한 로그인 시도 제한<br />(<code>ManagerLimitExcessiveLogin</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>MA-004</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
+        <td nowrap="">관리자 회원 권한 갱신<br />(<code>ManagerUpdateAuth</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td nowrap=""><code>MA-005</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
+        <td nowrap="">관리자 권한 요청 기록 조회<br />(<code>ManagerReadAuthRequestHistory</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
-        <td rowspan="1">위키<br />(<code>Wiki</code>)</td>
-        <td nowrap=""><code>WI-001</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
+        <td nowrap=""><code>MA-006</code></td>
+        <td nowrap="">관리자 권한으로 IP 차단<br />(<code>ManagerAuthBlockIP</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>MA-007</code></td>
+        <td nowrap="">관리자 권한으로 회원 제재<br />(<code>ManagerAuthPenaltyMember</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>MA-008</code></td>
+        <td nowrap="">관리자 권한으로 문서 생성<br />(<code>ManagerAuthCreateDocument</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>MA-009</code></td>
+        <td nowrap="">관리자 권한으로 문서 갱신<br />(<code>ManagerAuthUpdateDocument</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>MA-010</code></td>
+        <td nowrap="">관리자 권한으로 문서 삭제<br />(<code>ManagerAuthDeleteDocument</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>MA-011</code></td>
+        <td nowrap="">관리자 권한으로 댓글 생성<br />(<code>ManagerAuthCreateComment</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>MA-012</code></td>
+        <td nowrap="">관리자 권한으로 댓글 갱신<br />(<code>ManagerAuthUpdateComment</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>MA-013</code></td>
+        <td nowrap="">관리자 권한으로 댓글 삭제<br />(<code>ManagerAuthDeleteComment</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>MA-014</code></td>
+        <td nowrap=""><br />(<code>Manager</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td nowrap=""><code>MA-015</code></td>
+        <td nowrap=""><br />(<code>Manager</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td rowspan="1">문서<br />(<code>Document</code>)</td>
         <td nowrap=""><code>DO-001</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
+        <td nowrap=""><br />(<code>Document</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td rowspan="1">위키<br />(<code>Wiki</code>)</td>
+        <td nowrap=""><code>WI-001</code></td>
+        <td nowrap=""><br />(<code>Wiki</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td rowspan="1">검색<br />(<code>Search</code>)</td>
         <td nowrap=""><code>SE-001</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
+        <td nowrap=""><br />(<code>Search</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td rowspan="1">게시판<br />(<code>Board</code>)</td>
         <td nowrap=""><code>BO-001</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
+        <td nowrap=""><br />(<code>Board</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td rowspan="1">댓글<br />(<code>Comment</code>)</td>
+        <td nowrap=""><code>CO-001</code></td>
+        <td nowrap=""><br />(<code>Comment</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
       <tr>
         <td rowspan="1">알림<br />(<code>Notice</code>)</td>
         <td nowrap=""><code>NO-001</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
+        <td nowrap=""><br />(<code>Notice</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
         <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
+      </tr>
+      <tr>
+        <td rowspan="1">채팅<br />(<code>Chat</code>)</td>
+        <td nowrap=""><code>CH-001</code></td>
+        <td nowrap=""><br />(<code>Chat</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><code></code></td>
+        <td nowrap=""><a></a></td>
       </tr>
     </tbody>
   </table>
@@ -936,6 +1249,88 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
+        <a href="/js7/" rel="permalink">[JS] 7. 객체지향 프로그래밍 (OOP) &amp; 프로토타입 (Prototype)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">객체지향 프로그래밍 (Object-Oriented Programming) : 원시 타입을 제외한 모든 것이 객체
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/js6/" rel="permalink">[JS] 6. 배열 (Array)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">배열 (Array) : 순서가 있는 데이터 집합
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
         <a href="/js5/" rel="permalink">[JS] 5. 함수 (Function)
 </a>
       
@@ -1003,88 +1398,6 @@ function checkAndLoadPage(allImages) {
 
 
     <p class="archive__item-excerpt" itemprop="description">스코프 (Scope) : 변수에 접근할 수 있는 범위
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/js3/" rel="permalink">[JS] 3. 호이스팅 (Hoisting) &amp; 동적 타이핑 (Type Conversion)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">호이스팅 (Hoisting) : 선언문을 코드 맨 위에 올려진 것처럼 동작시키는 것
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/js2/" rel="permalink">[JS] 2. 변수 (Variable) &amp; 객체 (Object)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          5 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">변수 (Variable) : 하나의 값을 저장할 수 있는 메모리 공간
 
 </p>
   </article>

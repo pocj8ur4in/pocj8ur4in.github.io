@@ -54,8 +54,8 @@ function checkAndLoadPage(allImages) {
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>자바스크립트 프로토타입 (2024.01.24) - pocj8ur4in’s blog</title>
-<meta name="description" content="디지털하나路 스터디 3일차 내용을 정리한 글입니다.">
+<!-- begin _includes/seo.html --><title>[JS] 6. 배열 (Array) - pocj8ur4in’s blog</title>
+<meta name="description" content="배열 (Array) : 순서가 있는 데이터 집합">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -67,32 +67,32 @@ function checkAndLoadPage(allImages) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="자바스크립트 프로토타입 (2024.01.24)">
-<meta property="og:url" content="http://localhost:4000/digital_hanaro_study3/">
+<meta property="og:title" content="[JS] 6. 배열 (Array)">
+<meta property="og:url" content="http://localhost:4000/js6/">
 
 
-  <meta property="og:description" content="디지털하나路 스터디 3일차 내용을 정리한 글입니다.">
-
-
-
+  <meta property="og:description" content="배열 (Array) : 순서가 있는 데이터 집합">
 
 
 
 
-  <meta property="article:published_time" content="2024-01-24T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2024-01-26T00:00:00+09:00">
+  <meta property="article:published_time" content="2024-01-31T00:00:00+09:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2024-01-31T00:00:00+09:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/digital_hanaro_study3/">
+
+<link rel="canonical" href="http://localhost:4000/js6/">
 
 
 
@@ -211,7 +211,7 @@ function checkAndLoadPage(allImages) {
         <span class="sep">/</span>
       
       
-        <li class="current">자바스크립트 프로토타입 (2024.01.24)</li>
+        <li class="current">[JS] 6. 배열 (Array)</li>
       
     
   </ol>
@@ -337,16 +337,16 @@ function checkAndLoadPage(allImages) {
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="자바스크립트 프로토타입 (2024.01.24)">
-    <meta itemprop="description" content="  디지털하나路 스터디 3일차 내용을 정리한 글입니다.">
-    <meta itemprop="datePublished" content="2024-01-24T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2024-01-26T00:00:00+09:00">
+    <meta itemprop="headline" content="[JS] 6. 배열 (Array)">
+    <meta itemprop="description" content="배열 (Array) : 순서가 있는 데이터 집합">
+    <meta itemprop="datePublished" content="2024-01-31T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-01-31T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/digital_hanaro_study3/" class="u-url" itemprop="url">자바스크립트 프로토타입 (2024.01.24)
+            <a href="http://localhost:4000/js6/" class="u-url" itemprop="url">[JS] 6. 배열 (Array)
 </a>
           </h1>
           
@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 분 소요
+          3 분 소요
         
       </span>
     
@@ -378,131 +378,171 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#공부하고자-한-이유">공부하고자 한 이유</a></li><li><a href="#공부한-내용">공부한 내용</a></li></ul>
+              <ul class="toc__menu"><li><a href="#배열-array--순서가-있는-데이터-집합">배열 (Array) : 순서가 있는 데이터 집합</a><ul><li><a href="#유사-배열-객체-array-like-object--배열과-유사한-형태를-갖지만-배열은-아닌-객체">유사 배열 객체 (Array-like Object) : 배열과 유사한 형태를 갖지만, 배열은 아닌 객체</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <blockquote>
-  <p><a href="https://github.com/pocj8ur4in/finance-dev-study">디지털하나路 스터디</a> 3일차 내용을 정리한 글입니다.</p>
-</blockquote>
-
-<h2 id="공부하고자-한-이유">공부하고자 한 이유</h2>
-
-<p>자바스크립트에서는 자바와 달리 클래스라는 개념이 없었고 대신 프로토타입을 통해 새로운 객체를 만드는 방식이라는 것을 알게 되었는데, 자바스크립트가 객체지향 프로그래밍을 하기 위해 어떻게 프로토타입이라는 개념을 사용하는지 궁금하였다.</p>
-
-<h2 id="공부한-내용">공부한 내용</h2>
-
-<p>소프트웨어를 개발하는 과정에서 우리는 수많은 문제점들을 마주치고, 그에 대한 해결책을 찾아 문제를 해결하곤 한다. 소프트웨어 디자인 패턴은 이러한 수많은 문제점들에서 공통점을 가진 것들을 모아 여러 카테고리로 나누고, 이에 대한 해결책을 제시하여 이를 재사용이 가능하도록 한다. 소프트웨어 디자인 패턴은 크게 객체의 생성 방법과 클래스의 인스턴스화를 다루는 생성 패턴 (<code class="language-plaintext highlighter-rouge">Creational Pattern</code>), 클래스나 객체를 더 큰 구조로 합치는 구조 패턴 (<code class="language-plaintext highlighter-rouge">Structural Pattern</code>), 객체 간의 상호 작용 및 역할 분배를 다루는 행동 패턴 (<code class="language-plaintext highlighter-rouge">Behavioral Pattern</code>)으로 나뉜다. 프로토타입 패턴은 이들 중에 생성 패턴에 해당되며, 자신을 복제해서 인스턴스를 생성하는 방법에 대해 다룬다.</p>
-
-<p>사전적인 의미의 프로토타입 (<code class="language-plaintext highlighter-rouge">Prototype</code>)이란, 원래의 형태 또는 전형적인 표준을 가리킨다. 소프트웨어 디자인 패턴에서는 생성한 객체들의 타입을 프로토타입인 인스턴스로부터 결정되도록 하고, 인스턴스는 새 객체를 만들기 위해 자신을 복제하는 프로토타입 패턴 (<code class="language-plaintext highlighter-rouge">Prototype Pattern</code>)의 개념으로 확장하였다.</p>
-
-<p><code class="language-plaintext highlighter-rouge">Java</code>에서 클래스의 인스턴스를 만들기 위해서는, 우리는 일반적으로 <code class="language-plaintext highlighter-rouge">new()</code>를 통해 클래스 이름을 지정하고 인스턴스를 생성한다. 프로토타입 패턴은 <code class="language-plaintext highlighter-rouge">new()</code>를  통해 생성자로 인스턴스를 복제하는 것이 아닌, <code class="language-plaintext highlighter-rouge">clone()</code> 메소드를 선언하는 추상 베이스 클래스를 하나 만들어 생성자가 필요한 클래스가 있으면 이 클래스를 상속하고 <code class="language-plaintext highlighter-rouge">clone()</code> 메소드 내의 코드를 구현하게끔 한다.</p>
+        <h2 id="배열-array--순서가-있는-데이터-집합">배열 (<code class="language-plaintext highlighter-rouge">Array</code>) : 순서가 있는 데이터 집합</h2>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">Prototype</code> : 프로토타입을 만드려는 객체 클래스의 인터페이스
+  <li>배열의 각 요소 (<code class="language-plaintext highlighter-rouge">element</code>)인 프로퍼티 리터럴을 인덱스 (프로퍼티 키)로 접근</li>
+  <li><code class="language-plaintext highlighter-rouge">length</code> 프로퍼티를 가지며, 배열의 길이보다 큰 접근은 <code class="language-plaintext highlighter-rouge">undefined</code>
     <ul>
-      <li>인터페이스를 통해서 <code class="language-plaintext highlighter-rouge">clone</code>을 상속받고, 프로토타입 객체들을 이 공통 타입으로 받음 (다형성 보장)</li>
+      <li><code class="language-plaintext highlighter-rouge">length</code> 프로퍼티를 조정해 배열 길이를 조절할 수 있음 (<code class="language-plaintext highlighter-rouge">-1 &lt; length &lt; 2^32</code>)</li>
+    </ul>
+  </li>
+  <li>자바스크립트에서 배열은 비균질적 (<code class="language-plaintext highlighter-rouge">Nonhomogeneous</code>) : 고정 위치 및 크기를 가지지 않음
+    <ul>
+      <li>희소 배열 (<code class="language-plaintext highlighter-rouge">sparse array</code>) 자료 구조 : 검색에는 약하지만, 조작에는 우수!</li>
     </ul>
   </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public interface Prototype {
-    public Prototype clone();
-}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> // 3의 크기를 갖는 배열 생성
+const arr1 = Array(3); // [ &lt;3 empty items&gt; ]
+const arr2 = new Array(3); // [ &lt;3 empty items&gt; ]
+const arr3 = [,,,]; // [ &lt;3 empty items&gt; ]
+
+// 3의 크기를 갖고 1로 채워진 배열 생성
+const arr4 = Array(3).fill(1); // [ 1,1,1 ]
+
+// 3의 크기를 갖고 인덱스 1부터 1이 존재하는 배열 생성
+const arr5 = Array(3).fill(1, 1); // [ &lt;1 empty item&gt;, 1, 1 ]
+
+// 3의 크기를 갖고 인덱스 1 이상 2 미만에 1이 존재하는 배열 생성
+const arr6 = Array(3).fill(1, 0, 2); // [ &lt;1 empty item&gt;, 1, &lt;1 empty item&gt; ]
+
+// arr2를 복제한 유사 배열 객체 생성
+const arr7 = Array.from(arr2); // [ undefined, undefined, undefined ]
+
+// 3의 크기를 갖는 유사 배열 객체 생성
+const arr8 = Array.from(Array(3)); // [ undefined, undefined, undefined ]
+
+// 3의 크기를 갖고 1,2,3이 존재하는 유사 배열 객체 생성
+const arr9 = Array.from(Array(3), (_, i)  =&gt; i + 1); // [ 1, 2, 3 ]
+
+// 3의 크기를 갖고 1,2,3이 존재하는 유사 배열 객체 생성
+const arr10 = Array.from(Array(3).keys()); // [ 1, 2, 3 ]
+
+// 3의 크기를 갖고 1로 채워진 배열 생성
+const arr11 = [];
+arr11.push(1); // [ 1 ]
+arr11.push(1); // [ 1, 1 ]
+arr11.push(1); // [ 1, 1, 1 ]
+
+// 스택 배열
+const stack = [];
+stack.push(1);
+stack.push(2);
+stack.push(3);
+stack.pop();
+
+// 큐 배열
+const queue = [];
+queue.push(1);
+queue.push(2);
+queue.push(3);
+queue.shift();
+
+// 스택 배열, 큐 배열 초기화
+stack.length = 0;
+queue.length = 0;
+
+// 배열 검색
+const arr12 = [ 3, 7, 3, 9, 2];
+arr12.indexOf(3);  // 0
+arr.lastIndexOf(3); // 2
+arr.includes(3); // true
+
+const arr13 = [ { id : 1 }, { id : 2 }, { id : 3 }, { id : 2 } ];
+const idx = arr13.findIndex(item =&gt; item.id === 2); // 1
+
+// 배열 루프
+arr13.forEach(( arr, idx ) =&gt; console.log(arr.id));
+
+// 배열 요소 합치기
+const arr14 = arr1.concat(arr2);
+const arr15 = [...arr1, ...arr2];
+
+// 배열 평탄화
+const arr16 = [ 1, 2, [3] ].flat();
+console.log(arr16); // 1, 2, 3
+
+const arr17 = [ 1, 2, [[3]] ].flat();
+console.log(arr17); // 1, 2, [3]
+
+const arr18 = [ 1, 2, [[3]] ].flat(2);
+console.log(arr18); // 1, 2, 3
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const arr = [1, 2, 3, 4, 5];
+
+// ex1) [2,3]을 추출
+const ex1 = arr.slice(1,3);
+
+console.log(`\n#1`);
+console.log(ex1);
+
+// ex2) [3]부터 모두 다 추출
+const ex2 = arr.slice(arr.indexOf(3));
+
+console.log(`\n#2`);
+console.log(ex2);
+
+// ex3) [2,3,4] 제거하기
+arr.splice(1, 3)
+
+console.log(`\n#3`);
+console.log(arr);
+
+// ex4) 복원하기
+arr.splice(1, 0, 2,3,4)
+
+console.log(`\n#4`);
+console.log(arr);
+
+// ex5) [3] 부터 끝까지 제거하기
+arr.splice(arr.indexOf(3))
+
+console.log(`\n#5`);
+console.log(arr);
+
+// ex6) 복원하기
+arr.splice(2, 0, 3,4,5)
+
+console.log(`\n#6`);
+console.log(arr);
+
+// ex7) [1,2, 'X', 'Y', 'Z', 4, 5] 만들기
+arr.splice(2, 1)
+arr.splice(2, 0, 'X', 'Y', 'Z')
+
+console.log(`\n#7`);
+console.log(arr);
+
+// ex8) 위 7번 문제를 splice를 사용하지 말고 작성하시오.
+arr.splice(2, 3)
+const ex8 = [...arr.slice(0, 2), 'X', 'Y', 'Z' , ...arr.slice(2)]
+
+console.log(`\n#8`);
+console.log(ex8);
+</code></pre></div></div>
+
+<h3 id="유사-배열-객체-array-like-object--배열과-유사한-형태를-갖지만-배열은-아닌-객체">유사 배열 객체 (<code class="language-plaintext highlighter-rouge">Array-like Object</code>) : 배열과 유사한 형태를 갖지만, 배열은 아닌 객체</h3>
+
+<ul>
+  <li>문자열, <code class="language-plaintext highlighter-rouge">Object</code>, <code class="language-plaintext highlighter-rouge">arguments</code>, <code class="language-plaintext highlighter-rouge">NodeList</code>, <code class="language-plaintext highlighter-rouge">JQuery</code> 객체 등 컬렉션 (<code class="language-plaintext highlighter-rouge">Collection</code>) 형태의 객체 데이터</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Array.isArray(x) || x instanceof Array : false
 </code></pre></div></div>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">ConcretePrototype</code> : 프로토타입의 인터페이스 구현
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">clone()</code> : 생성자에 자신의 타입을 가진 객체를 넘기고, 초기화를 위해 패러미터로 받는 생성자를 생성함</li>
-    </ul>
-  </li>
+  <li>인덱스는 <code class="language-plaintext highlighter-rouge">0</code>부터 시작해야 하며, 반드시 <code class="language-plaintext highlighter-rouge">length</code> 프로퍼티를 가짐</li>
+  <li><code class="language-plaintext highlighter-rouge">for ~ of</code> 등을 통해 순회 가능한 <code class="language-plaintext highlighter-rouge">iterable</code>한 객체 (<code class="language-plaintext highlighter-rouge">cf</code>. <code class="language-plaintext highlighter-rouge">iterator</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">forEach</code>를 제외한 나머지 유사 배열 객체는 <code class="language-plaintext highlighter-rouge">Array</code> 메소드를 사용할 수 없음</li>
+  <li><code class="language-plaintext highlighter-rouge">Array.from()</code>으로 배열로 만들 수 있음</li>
 </ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class Circle implements Prototype {
-    private int x;
-    private int y;
-
-    public Circle(Circle prototype) {
-        this.x = prototype.x;
-        this.y = prototype.y;
-    }
-
-    public Circle(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    @Override
-    public Prototype clone() {
-        return new Circle(this);
-    }
-}
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Sub-Class</code> : 상위 클래스에 값을 전달할 하위 클래스</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class RedCircle extends Circle {
-    private String color;
-
-    public RedCircle(RedCircle prototype) {
-        super(prototype);
-        this.color = prototype.color;
-    }
-
-    public RedCircle(Circle circle, String color) {
-        super(circle);
-        this.color = color;
-    }
-
-    public RedCircle(int x, int y, String color) {
-        super(x, y);
-        this.color = color;
-    }
-
-    public getColor() {
-      return this.color;
-    }
-
-    public Prototype clone() {
-        return new RedCircle(this);
-    }
-}
-</code></pre></div></div>
-
-<ul>
-  <li>클라이언트 클래스 : 프로토타입 인터페이스를 통해 객체를 생성함</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class Client {
-    Prototype circle = new Circle(3, 5);
-    Prototype redCircle1 = new RedCircle(3, 5, "red");
-    Prototype redCircle2 = new RedCircle((Circle) circle, "red");
-
-    Prototype newCircle = circle.clone();
-    Prototype newRedCircle = redCircle1.clone();
-
-    newCircle.getColor(); // 에러
-    newRedCircle.getColor();
-}
-</code></pre></div></div>
-
-<p>위 예시는 자바에서 프로토타입 패턴을 적용한 사례이다. 프로토타입 패턴을 통해 객체를 복제하는 책임이 기존 클래스에서 복제하는 객체로 넘어가나, 이럴 경우에는 객체를 이용하려면 타입을 알아야 한다. 타입이 동적으로 변하는 자바스크립트의 경우에는 이 패턴을 객체를 생성하는 방식으로 활용한다. 자바스크립트는 기본 데이터 타입을 제외한 나머지는 모두 객체인데, 객체 안에 <code class="language-plaintext highlighter-rouge">__proto__</code> 속성이 존재한다. <code class="language-plaintext highlighter-rouge">__proto__</code> 속성은 객체가 만들어지기 위해 사용되는 원형인 프로토타입 객체를 숨은 경로로 참조하는 역할을 한다.</p>
-
-<p>모든 객체는 프로토타입 객체에 접근할 수 있으며, 프로토타입 객체 역시 동적으로 런타임에 멤버를 추가할 수 있다. 또한 같은 원형을 복사로 생성된 모든 객체는 추가된 멤버를 사용할 수 있다. 코드 재사용의 대표적인 방식인 상속을 예시로 들어보자. 자바스크립트의 상속을 <code class="language-plaintext highlighter-rouge">classical</code>이 아닌 <code class="language-plaintext highlighter-rouge">prototypal</code> 방식으로 생성한다면, 리터럴 혹은 <code class="language-plaintext highlighter-rouge">Object.create()</code>를 이용해 객체를 생성하고 확장한다.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var person = {
-  type: 'person',
-  getType: function() { return this.type; },
-  getValue: function () { return this.value; };
-}
-
-var pocj8ur4in = Object.create(person);
-pocj8ur4in.type = "developer";
-</code></pre></div></div>
 
         
       </section>
@@ -519,7 +559,7 @@ pocj8ur4in.type = "developer";
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#digital-hanaro-study" class="page__taxonomy-item p-category" rel="tag">Digital Hanaro Study</a>
+      <a href="/tags/#js" class="page__taxonomy-item p-category" rel="tag">JS</a>
     
     </span>
   </p>
@@ -529,7 +569,7 @@ pocj8ur4in.type = "developer";
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-26">January 26, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-31">January 31, 2024</time></p>
 
       </footer>
       
@@ -552,9 +592,9 @@ pocj8ur4in.type = "developer";
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8+%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85+%282024.01.24%29%20http%3A%2F%2Flocalhost%3A4000%2Fdigital_hanaro_study3%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BJS%5D+6.+%EB%B0%B0%EC%97%B4+%28Array%29%20http%3A%2F%2Flocalhost%3A4000%2Fjs6%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fdigital_hanaro_study3%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fjs6%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
 </section>
 
@@ -562,11 +602,11 @@ pocj8ur4in.type = "developer";
       
   <nav class="pagination">
     
-      <a href="/springboot2/" class="pagination--pager" title="[SpringBoot] 2. SpringBoot Common Task
+      <a href="/js5/" class="pagination--pager" title="[JS] 5. 함수 (Function)
 ">이전</a>
     
     
-      <a href="/js1/" class="pagination--pager" title="[JS] 1. 자바스크립트 (JavaScript)
+      <a href="/js7/" class="pagination--pager" title="[JS] 7. 객체지향 프로그래밍 (OOP) &amp; 프로토타입 (Prototype)
 ">다음</a>
     
   </nav>
@@ -617,47 +657,6 @@ pocj8ur4in.type = "developer";
 
 
     <p class="archive__item-excerpt" itemprop="description">객체지향 프로그래밍 (Object-Oriented Programming) : 원시 타입을 제외한 모든 것이 객체
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/js6/" rel="permalink">[JS] 6. 배열 (Array)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">배열 (Array) : 순서가 있는 데이터 집합
 
 </p>
   </article>
@@ -732,7 +731,7 @@ pocj8ur4in.type = "developer";
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          7 분 소요
+          6 분 소요
         
       </span>
     
@@ -740,6 +739,49 @@ pocj8ur4in.type = "developer";
 
 
     <p class="archive__item-excerpt" itemprop="description">스코프 (Scope) : 변수에 접근할 수 있는 범위
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/digital_hanaro_5.md/" rel="permalink">고차 함수, 콜백 함수 (2024.01.31)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  디지털하나路 스터디 5일차 내용을 정리한 글입니다.
+
 
 </p>
   </article>
