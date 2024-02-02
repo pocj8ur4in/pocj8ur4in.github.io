@@ -54,7 +54,7 @@ function checkAndLoadPage(allImages) {
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[JS] 7. 객체지향 프로그래밍 (OOP) &amp; 프로토타입 (Prototype) - pocj8ur4in’s blog</title>
+<!-- begin _includes/seo.html --><title>[JS] 7. 객체지향 프로그래밍 (OOP) - pocj8ur4in’s blog</title>
 <meta name="description" content="객체지향 프로그래밍 (Object-Oriented Programming) : 원시 타입을 제외한 모든 것이 객체">
 
 
@@ -67,7 +67,7 @@ function checkAndLoadPage(allImages) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[JS] 7. 객체지향 프로그래밍 (OOP) &amp; 프로토타입 (Prototype)">
+<meta property="og:title" content="[JS] 7. 객체지향 프로그래밍 (OOP)">
 <meta property="og:url" content="http://localhost:4000/js7/">
 
 
@@ -211,7 +211,7 @@ function checkAndLoadPage(allImages) {
         <span class="sep">/</span>
       
       
-        <li class="current">[JS] 7. 객체지향 프로그래밍 (OOP) & 프로토타입 (Prototype)</li>
+        <li class="current">[JS] 7. 객체지향 프로그래밍 (OOP)</li>
       
     
   </ol>
@@ -337,7 +337,7 @@ function checkAndLoadPage(allImages) {
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[JS] 7. 객체지향 프로그래밍 (OOP) &amp; 프로토타입 (Prototype)">
+    <meta itemprop="headline" content="[JS] 7. 객체지향 프로그래밍 (OOP)">
     <meta itemprop="description" content="객체지향 프로그래밍 (Object-Oriented Programming) : 원시 타입을 제외한 모든 것이 객체">
     <meta itemprop="datePublished" content="2024-01-31T00:00:00+09:00">
     <meta itemprop="dateModified" content="2024-01-31T00:00:00+09:00">
@@ -346,7 +346,7 @@ function checkAndLoadPage(allImages) {
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/js7/" class="u-url" itemprop="url">[JS] 7. 객체지향 프로그래밍 (OOP) &amp; 프로토타입 (Prototype)
+            <a href="http://localhost:4000/js7/" class="u-url" itemprop="url">[JS] 7. 객체지향 프로그래밍 (OOP)
 </a>
           </h1>
           
@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          3 분 소요
         
       </span>
     
@@ -378,7 +378,7 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#객체지향-프로그래밍-object-oriented-programming--원시-타입을-제외한-모든-것이-객체">객체지향 프로그래밍 (Object-Oriented Programming) : 원시 타입을 제외한 모든 것이 객체</a></li></ul>
+              <ul class="toc__menu"><li><a href="#객체지향-프로그래밍-object-oriented-programming--원시-타입을-제외한-모든-것이-객체">객체지향 프로그래밍 (Object-Oriented Programming) : 원시 타입을 제외한 모든 것이 객체</a><ul><li><a href="#정적-필드--메소드-static-field--method--특정-인스턴스와-무관하게-클래스에-존재하는-메소드">정적 필드 &amp; 메소드 (Static Field &amp; Method) : 특정 인스턴스와 무관하게 클래스에 존재하는 메소드</a></li><li><a href="#접근자-accessor-프로퍼티--특정-인스턴스와-무관하게-클래스에-존재하는-메소드">접근자 (Accessor) 프로퍼티 : 특정 인스턴스와 무관하게 클래스에 존재하는 메소드</a></li><li><a href="#프록시-proxy-객체--객체의-특정-동작을-가로채서-hooking해서-추가-동작-수행">프록시 (Proxy) 객체 : 객체의 특정 동작을 가로채서 (Hooking)해서 추가 동작 수행</a></li><li><a href="#상속-inheritance--subclass가-프로토타입-체인으로-superclass의-모든-데이터와-기능을-상속">상속 (Inheritance) : SubClass가 프로토타입 체인으로 Superclass의 모든 데이터와 기능을 상속</a><ul><li><a href="#메소드-오버라이딩-method-overriding--자식-클래스가-부모-클래스의-메소드를-재정의">메소드 오버라이딩 (Method Overriding) : 자식 클래스가 부모 클래스의 메소드를 재정의</a></li><li><a href="#다중-상속-multiple-inheritance--한-클래스가-여러-클래스들을-상속">다중 상속 (Multiple Inheritance) : 한 클래스가 여러 클래스들을 상속</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -421,6 +421,219 @@ console.log(Object.getPrototypeOf(Animal)); // {}
 
 <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/eabe913e-8056-4309-bd18-ea12d555dfc5" width="50%" /></p>
 
+<h3 id="정적-필드--메소드-static-field--method--특정-인스턴스와-무관하게-클래스에-존재하는-메소드">정적 필드 &amp; 메소드 (<code class="language-plaintext highlighter-rouge">Static Field &amp; Method</code>) : 특정 인스턴스와 무관하게 클래스에 존재하는 메소드</h3>
+
+<ul>
+  <li>인스턴스 프로퍼티를 참조할 수 없음 → <code class="language-plaintext highlighter-rouge">Static</code>  영역에 생성</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Animal {
+  static ID = 1;
+  static isDog(ani) {
+    return ani.name === 'Dog';
+  }
+} 
+const dog = new Animal('Dog');
+dog.isDog(dog); // TypeError: dog.isDog is not a function
+Animal.isDog(dog); // OK
+</code></pre></div></div>
+
+<blockquote>
+  <p>싱글톤 패턴 (<code class="language-plaintext highlighter-rouge">Singleton Pattern</code>) : 어떤 클래스가 한 번만 인스턴스화되어, 그 인스턴스에 대한 전역 접근 제공</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Singleton {
+  static #_instance; // 관례상 protected
+  constructor() {
+    if (Singleton.#_instance) return Singleton;
+    this.name = 'Singleton';
+    Singleton.#_instance = this;
+  }
+
+  static getInstance() {
+    return this.#_instance || new this();
+  }
+}
+
+const s1 = new Singleton();
+const s2 = new Singleton();
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="접근자-accessor-프로퍼티--특정-인스턴스와-무관하게-클래스에-존재하는-메소드">접근자 (<code class="language-plaintext highlighter-rouge">Accessor</code>) 프로퍼티 : 특정 인스턴스와 무관하게 클래스에 존재하는 메소드</h3>
+
+<ul>
+  <li>접근자 프로퍼티을 통해 함수를 프로퍼티처럼 활용할 수 있음</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Emp1 {
+  set fullName(name) { // set을 프로퍼티처럼 활용할 수 있음 → accessor
+    [this.firstName, this.lastName] = name.split(' ');
+  }
+  
+  get fullName() {  // get을 프로퍼티처럼 활용할 수 있음 → accessor
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+class Emp2 { // stackOverflow 발생!
+  set name(nm) { this.name = nm; }
+  get name() { return this.name; }
+}
+
+class Emp3 {
+  #name;
+
+  set name(#name) { this.#name = name; }
+  get name() { return this.name; }
+}
+
+const hong1 = new Emp1();
+hong1.fullName = 'Gil-Dong Hong';
+console.log(hong1.fullName);
+
+const hong2 = new Emp2();
+hong2.fullName = 'Gil-Dong Hong';
+console.log(hong2.fullName);
+
+const hong3 = new Emp3();
+hong3.fullName = 'Gil-Dong Hong';
+console.log(hong3.fullName);
+</code></pre></div></div>
+
+<h3 id="프록시-proxy-객체--객체의-특정-동작을-가로채서-hooking해서-추가-동작-수행">프록시 (<code class="language-plaintext highlighter-rouge">Proxy</code>) 객체 : 객체의 특정 동작을 가로채서 (<code class="language-plaintext highlighter-rouge">Hooking</code>)해서 추가 동작 수행</h3>
+
+<ul>
+  <li>객체의 작업에 대한 기록 → 로깅 (<code class="language-plaintext highlighter-rouge">Logging</code>)</li>
+  <li>잘못된 접근에 대한 오류 (<code class="language-plaintext highlighter-rouge">Validation Check</code>)</li>
+  <li>기능 제어 (읽기 전용 등) 및 객체 정보 숨기기</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const obj = {
+  id: 1,
+  name: 'Hong',
+  f() {
+    console.log('fffff')
+  },
+};
+
+export const objProxy = new Proxy(obj, {
+  set(target, prop, value){
+    console.log('proxy.set&gt;&gt;', prop, value);
+    target[prop] = value;
+  },
+  get(target, prop){
+    console.log('proxy.get &gt;&gt; ', prop);
+    return target[prop];
+  },
+});
+
+objProxy.id = 100;
+console.log('obj.id&gt;&gt;', objProxy.id, obj['id']);
+</code></pre></div></div>
+
+<h3 id="상속-inheritance--subclass가-프로토타입-체인으로-superclass의-모든-데이터와-기능을-상속">상속 (<code class="language-plaintext highlighter-rouge">Inheritance</code>) : <code class="language-plaintext highlighter-rouge">SubClass</code>가 프로토타입 체인으로 <code class="language-plaintext highlighter-rouge">Superclass</code>의 모든 데이터와 기능을 상속</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Dog extends Animal {
+  constructor(name) {
+    super(name); // 필수(for chaining) + 중복(overload) 불가!
+  }
+
+  bark() {
+    console.log('bowwow!');
+  }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>모든 객체는 프로토타입 체인 (<code class="language-plaintext highlighter-rouge">__proto__</code>) 이라는 내부 속성을 가짐
+    <ul>
+      <li>객체를 생성하는 생성자 함수는 <code class="language-plaintext highlighter-rouge">prototype</code> 속성을 가짐 → 해당 프로토타입이 객체의 프로토타입가 됨</li>
+      <li>하위 객체는 상위 객체의 프로토타입을 따라 상위 객체의 속성 및 메소드를 탐색</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>스택 (<code class="language-plaintext highlighter-rouge">Stack</code>) &amp; 큐 (<code class="language-plaintext highlighter-rouge">Queue</code>) : 데이터를 저장하고 관리하기 위한 자료구조</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Stack { // 스택 자료구조
+    collection = [];
+
+    push(value) {
+        this.collection.push(value);
+    }
+    pop() {
+        return this.collection.pop();
+    }
+}
+
+const stack = new Stack();
+stack.push(1); // 추가하기
+stack.push(2); // 추가하기
+stack.push(3); // 추가하기
+console.log(stack.pop()) // 마지막으로 추가된 하나 꺼내기
+
+class Queue { // 큐 자료구조
+    collection = [];
+
+    enqueue(value) {
+        this.collection.push(value);
+    }
+
+    dequeue() {
+        return this.collection.shift();
+    }
+}
+
+const queue = new Queue();
+queue.enqueue(1); // 추가하기
+queue.enqueue(2); // 추가하기
+queue.enqueue(3); // 추가하기
+console.log(queue.dequeue()) // 마지막으로 추가된 하나 꺼내기
+
+
+</code></pre></div>  </div>
+</blockquote>
+
+<h4 id="메소드-오버라이딩-method-overriding--자식-클래스가-부모-클래스의-메소드를-재정의">메소드 오버라이딩 (<code class="language-plaintext highlighter-rouge">Method Overriding</code>) : 자식 클래스가 부모 클래스의 메소드를 재정의</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Animal {
+  ...
+  id = 1;       // 멤버 프로퍼티
+  #age = 10;    // 멤버 프로퍼티 (protected)
+  
+  toString() {  // 객체의 toString() 오버라이딩 ([메소드] 다형성!)
+    return `This animal's name is ${this.name}.`;
+  }
+} 
+</code></pre></div></div>
+
+<h4 id="다중-상속-multiple-inheritance--한-클래스가-여러-클래스들을-상속">다중 상속 (<code class="language-plaintext highlighter-rouge">Multiple Inheritance</code>) : 한 클래스가 여러 클래스들을 상속</h4>
+
+<ul>
+  <li>자바스크립트는 단일 상속 언어 → <code class="language-plaintext highlighter-rouge">Mixin</code>을 통해 제한적으로 구현할 수 있음 (타입스크립트 : <code class="language-plaintext highlighter-rouge">Interface</code>)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Mixin 정의
+const myMixin = {
+  sayHello() {
+    console.log("Hello!");
+  },
+  sayGoodbye() {
+    console.log("Goodbye!");
+  },
+};
+
+function MyClass() {
+  ... // 클래스의 생성자 로직
+}
+
+Object.assign(MyClass.prototype, myMixin); // Mixin 적용
+
+const obj = new MyClass(); // 객체 생성 및 Mixin 메서드 호출
+obj.sayHello();    // 출력: Hello!
+obj.sayGoodbye();  // 출력: Goodbye!
+</code></pre></div></div>
 
         
       </section>
@@ -470,7 +683,7 @@ console.log(Object.getPrototypeOf(Animal)); // {}
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BJS%5D+7.+%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5+%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D+%28OOP%29+%26+%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85+%28Prototype%29%20http%3A%2F%2Flocalhost%3A4000%2Fjs7%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BJS%5D+7.+%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5+%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D+%28OOP%29%20http%3A%2F%2Flocalhost%3A4000%2Fjs7%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fjs7%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
@@ -480,11 +693,12 @@ console.log(Object.getPrototypeOf(Animal)); // {}
       
   <nav class="pagination">
     
-      <a href="/js6/" class="pagination--pager" title="[JS] 6. 배열 (Array)
+      <a href="/js6/" class="pagination--pager" title="[JS] 6. 배열 (Array) &amp; 이터레이터 (Iterator)
 ">이전</a>
     
     
-      <a href="#" class="pagination--pager disabled">다음</a>
+      <a href="/vocawik2/" class="pagination--pager" title="[vocawik] 2. vocawik 프로젝트 설계
+">다음</a>
     
   </nav>
 
@@ -508,7 +722,7 @@ console.log(Object.getPrototypeOf(Animal)); // {}
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/js6/" rel="permalink">[JS] 6. 배열 (Array)
+        <a href="/js8/" rel="permalink">[JS] 8. 모듈 (Module)
 </a>
       
     </h2>
@@ -526,7 +740,130 @@ console.log(Object.getPrototypeOf(Animal)); // {}
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 분 소요
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">모듈 (Module) : 코드를 재사용 가능한 파일 단위의 조각으로 나눈 것
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/til2/" rel="permalink">[TIL] 2024년 02월 TIL
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">February, 2024 : TIL를 작성하자!
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/vocawik2/" rel="permalink">[vocawik] 2. vocawik 프로젝트 설계
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">프로젝트 목표 (Project Goal) : 프로젝트 진행 과정에서 이루고자 하는 사항들을 정리
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/js6/" rel="permalink">[JS] 6. 배열 (Array) &amp; 이터레이터 (Iterator)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
         
       </span>
     
@@ -534,131 +871,6 @@ console.log(Object.getPrototypeOf(Animal)); // {}
 
 
     <p class="archive__item-excerpt" itemprop="description">배열 (Array) : 순서가 있는 데이터 집합
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/js5/" rel="permalink">[JS] 5. 함수 (Function)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">함수 (Function) : 일련의 과정을 코드 블록으로 감싸 하나의 단위로 정의한 것
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/js4/" rel="permalink">[JS] 4. 스코프 (Scope) &amp; 실행 컨텍스트 (Execution Context)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          6 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">스코프 (Scope) : 변수에 접근할 수 있는 범위
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/digital_hanaro_5.md/" rel="permalink">고차 함수, 콜백 함수 (2024.01.31)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  디지털하나路 스터디 5일차 내용을 정리한 글입니다.
-
 
 </p>
   </article>

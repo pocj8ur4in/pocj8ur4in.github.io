@@ -54,7 +54,7 @@ function checkAndLoadPage(allImages) {
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[JS] 6. 배열 (Array) - pocj8ur4in’s blog</title>
+<!-- begin _includes/seo.html --><title>[JS] 6. 배열 (Array) &amp; 이터레이터 (Iterator) - pocj8ur4in’s blog</title>
 <meta name="description" content="배열 (Array) : 순서가 있는 데이터 집합">
 
 
@@ -67,7 +67,7 @@ function checkAndLoadPage(allImages) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[JS] 6. 배열 (Array)">
+<meta property="og:title" content="[JS] 6. 배열 (Array) &amp; 이터레이터 (Iterator)">
 <meta property="og:url" content="http://localhost:4000/js6/">
 
 
@@ -211,7 +211,7 @@ function checkAndLoadPage(allImages) {
         <span class="sep">/</span>
       
       
-        <li class="current">[JS] 6. 배열 (Array)</li>
+        <li class="current">[JS] 6. 배열 (Array) & 이터레이터 (Iterator)</li>
       
     
   </ol>
@@ -337,7 +337,7 @@ function checkAndLoadPage(allImages) {
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[JS] 6. 배열 (Array)">
+    <meta itemprop="headline" content="[JS] 6. 배열 (Array) &amp; 이터레이터 (Iterator)">
     <meta itemprop="description" content="배열 (Array) : 순서가 있는 데이터 집합">
     <meta itemprop="datePublished" content="2024-01-31T00:00:00+09:00">
     <meta itemprop="dateModified" content="2024-01-31T00:00:00+09:00">
@@ -346,7 +346,7 @@ function checkAndLoadPage(allImages) {
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/js6/" class="u-url" itemprop="url">[JS] 6. 배열 (Array)
+            <a href="http://localhost:4000/js6/" class="u-url" itemprop="url">[JS] 6. 배열 (Array) &amp; 이터레이터 (Iterator)
 </a>
           </h1>
           
@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 분 소요
+          4 분 소요
         
       </span>
     
@@ -378,7 +378,7 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#배열-array--순서가-있는-데이터-집합">배열 (Array) : 순서가 있는 데이터 집합</a><ul><li><a href="#유사-배열-객체-array-like-object--배열과-유사한-형태를-갖지만-배열은-아닌-객체">유사 배열 객체 (Array-like Object) : 배열과 유사한 형태를 갖지만, 배열은 아닌 객체</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#배열-array--순서가-있는-데이터-집합">배열 (Array) : 순서가 있는 데이터 집합</a><ul><li><a href="#유사-배열-객체-array-like-object--배열과-유사한-형태를-갖지만-배열은-아닌-객체">유사 배열 객체 (Array-like Object) : 배열과 유사한 형태를 갖지만, 배열은 아닌 객체</a></li></ul></li><li><a href="#이터레이터-iterator--next-함수-호출-시-계속-그-다음-값을-반환하는-객체">이터레이터 (Iterator) : next() 함수 호출 시 계속 그 다음 값을 반환하는 객체</a><ul><li><a href="#제너레이터-generator--제너레이터-함수-function의-실행을-제어하는-함수">제너레이터 (Generator) : 제너레이터 함수 function*()의 실행을 제어하는 함수</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -528,6 +528,26 @@ console.log(`\n#8`);
 console.log(ex8);
 </code></pre></div></div>
 
+<blockquote>
+  <p>리스트 (<code class="language-plaintext highlighter-rouge">List</code>) : 중첩 참조 <code class="language-plaintext highlighter-rouge">link</code>를 가진 객체</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const array = [1, 2, 3, …]; // 배열
+
+const list = { // 리스트
+    value: 1,
+    rest: {   // 메모리 주소 (link)
+        value: 2,
+        rest: {
+            value: 3,
+            rest: {...}
+        }
+    }
+}
+</code></pre></div>  </div>
+
+  <p>→ 자비스크립트의 <code class="language-plaintext highlighter-rouge">Array</code>는 <code class="language-plaintext highlighter-rouge">List</code> : <code class="language-plaintext highlighter-rouge">List</code>는 검색은 느리지만, 조작하는 것은 쉽다!</p>
+</blockquote>
+
 <h3 id="유사-배열-객체-array-like-object--배열과-유사한-형태를-갖지만-배열은-아닌-객체">유사 배열 객체 (<code class="language-plaintext highlighter-rouge">Array-like Object</code>) : 배열과 유사한 형태를 갖지만, 배열은 아닌 객체</h3>
 
 <ul>
@@ -543,6 +563,67 @@ console.log(ex8);
   <li><code class="language-plaintext highlighter-rouge">forEach</code>를 제외한 나머지 유사 배열 객체는 <code class="language-plaintext highlighter-rouge">Array</code> 메소드를 사용할 수 없음</li>
   <li><code class="language-plaintext highlighter-rouge">Array.from()</code>으로 배열로 만들 수 있음</li>
 </ul>
+
+<h2 id="이터레이터-iterator--next-함수-호출-시-계속-그-다음-값을-반환하는-객체">이터레이터 (<code class="language-plaintext highlighter-rouge">Iterator</code>) : <code class="language-plaintext highlighter-rouge">next()</code> 함수 호출 시 계속 그 다음 값을 반환하는 객체</h2>
+
+<ul>
+  <li>현재 어디에 있고, 다음엔 어디로 가는지 아는 포인터 (<code class="language-plaintext highlighter-rouge">Pointer</code>)
+    <ul>
+      <li>이터러블 (<code class="language-plaintext highlighter-rouge">Iterable</code>) 프로토콜 : <code class="language-plaintext highlighter-rouge">Symbol.iterator</code>를 구현 및 상속한 메소드를 호출하면, 이터레이터 반환</li>
+      <li>이터레이터 (<code class="language-plaintext highlighter-rouge">Iterator</code>) 프로토콜 : <code class="language-plaintext highlighter-rouge">next()</code>를 호출하면, <code class="language-plaintext highlighter-rouge">value()</code>, <code class="language-plaintext highlighter-rouge">done()</code>을 가진 이터레이터 리터럴 반환</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class ItDog1 extends Dog {
+  [Symbol.iterator]() {
+    return this.name.split(', ').values();
+  }
+}
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const itDog1 = new ItDog1('Toby, Max, Sam');
+console.log([...itDog1]);
+
+class ItDog2 extends Dog {
+  [Symbol.iterator]() {
+    let idx = 0;
+    const names = this.name.split(/,\s?/);
+    return {
+      next() {
+        return { value: names[idx++],
+                 done: idx &gt; names.length };
+      }
+    };
+  }
+} 
+const itDog2 = new ItDog2('Toby, Max, Sam');
+for (const d of itDog2) console.log(d);
+const iter = itDog2[Symbol.iterator]();
+console.log(iter.next());  // 4회 반복
+</code></pre></div></div>
+
+<h3 id="제너레이터-generator--제너레이터-함수-function의-실행을-제어하는-함수">제너레이터 (<code class="language-plaintext highlighter-rouge">Generator</code>) : 제너레이터 함수 <code class="language-plaintext highlighter-rouge">function*()</code>의 실행을 제어하는 함수</h3>
+
+<ul>
+  <li>실행 과정에서 <code class="language-plaintext highlighter-rouge">yield</code>를 만나면, 호출자 (<code class="language-plaintext highlighter-rouge">caller</code>)에게 정보 반환과 제어권을 넘김
+    <ul>
+      <li>제너레이터를 호출하면 이터레이터를 얻음 → 실행이 한번에 끝나지 않는다!</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function* route() { // function* ~ yield → iterator를 return하고, 일시정지(pause)한 상태로 시작!
+  const start = yield "출발 역은?";  // yield가 있으므로 caller에게 제어권을 넘긴다.
+  const end = yield "도착 역은?";
+
+  return `${start}역에서 출발하여 ${end}역에 도착합니다.`;
+}
+
+const caller = route();
+caller.next();
+caller.next('을지로입구');
+caller.next('강남');
+</code></pre></div></div>
 
         
       </section>
@@ -592,7 +673,7 @@ console.log(ex8);
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BJS%5D+6.+%EB%B0%B0%EC%97%B4+%28Array%29%20http%3A%2F%2Flocalhost%3A4000%2Fjs6%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BJS%5D+6.+%EB%B0%B0%EC%97%B4+%28Array%29+%26+%EC%9D%B4%ED%84%B0%EB%A0%88%EC%9D%B4%ED%84%B0+%28Iterator%29%20http%3A%2F%2Flocalhost%3A4000%2Fjs6%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fjs6%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
@@ -606,7 +687,7 @@ console.log(ex8);
 ">이전</a>
     
     
-      <a href="/js7/" class="pagination--pager" title="[JS] 7. 객체지향 프로그래밍 (OOP) &amp; 프로토타입 (Prototype)
+      <a href="/js7/" class="pagination--pager" title="[JS] 7. 객체지향 프로그래밍 (OOP)
 ">다음</a>
     
   </nav>
@@ -631,7 +712,7 @@ console.log(ex8);
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/js7/" rel="permalink">[JS] 7. 객체지향 프로그래밍 (OOP) &amp; 프로토타입 (Prototype)
+        <a href="/js8/" rel="permalink">[JS] 8. 모듈 (Module)
 </a>
       
     </h2>
@@ -656,132 +737,130 @@ console.log(ex8);
   </p>
 
 
+    <p class="archive__item-excerpt" itemprop="description">모듈 (Module) : 코드를 재사용 가능한 파일 단위의 조각으로 나눈 것
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/til2/" rel="permalink">[TIL] 2024년 02월 TIL
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">February, 2024 : TIL를 작성하자!
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/vocawik2/" rel="permalink">[vocawik] 2. vocawik 프로젝트 설계
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">프로젝트 목표 (Project Goal) : 프로젝트 진행 과정에서 이루고자 하는 사항들을 정리
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/js7/" rel="permalink">[JS] 7. 객체지향 프로그래밍 (OOP)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
+    
+  </p>
+
+
     <p class="archive__item-excerpt" itemprop="description">객체지향 프로그래밍 (Object-Oriented Programming) : 원시 타입을 제외한 모든 것이 객체
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/js5/" rel="permalink">[JS] 5. 함수 (Function)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">함수 (Function) : 일련의 과정을 코드 블록으로 감싸 하나의 단위로 정의한 것
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/js4/" rel="permalink">[JS] 4. 스코프 (Scope) &amp; 실행 컨텍스트 (Execution Context)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          6 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">스코프 (Scope) : 변수에 접근할 수 있는 범위
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/digital_hanaro_5.md/" rel="permalink">고차 함수, 콜백 함수 (2024.01.31)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  디지털하나路 스터디 5일차 내용을 정리한 글입니다.
-
 
 </p>
   </article>
