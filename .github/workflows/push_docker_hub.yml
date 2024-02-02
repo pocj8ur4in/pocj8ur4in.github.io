@@ -34,6 +34,10 @@ jobs:
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_NAME }}:${{ github.sha }}
 
+      # Docker Hub에 푸시
+      - name: Push Docker image
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_NAME }}:latest
+
       # 빌드된 Docker 이미지의 디제스트 값 출력
       - name: Image digest
         run: echo "Docker image pushed with digest ${{ steps.docker_push.outputs.digest }}"
