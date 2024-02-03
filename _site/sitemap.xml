@@ -217,10 +217,6 @@
 <lastmod>2024-01-31T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/vocawik2/</loc>
-<lastmod>2024-01-31T00:00:00+09:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/til2/</loc>
 <lastmod>2024-02-02T00:00:00+09:00</lastmod>
 </url>
@@ -231,6 +227,10 @@
 <url>
 <loc>http://localhost:4000/js8/</loc>
 <lastmod>2024-02-02T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/vocawik2/</loc>
+<lastmod>2024-02-03T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
