@@ -1,0 +1,998 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<script>
+document.addEventListener('mousedown', (event) => { // 클릭 금지
+  if (event.button === 1) {
+    event.preventDefault();
+  }
+
+  if (event.button === 2) {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener('dragstart', (event) => { // 드래그 금지
+  event.preventDefault();
+});
+
+document.addEventListener('contextmenu', (event) => { // 선택 금지
+  event.preventDefault();
+});
+
+document.addEventListener('selectstart', (event) => { // 텍스트 선택 금지
+  event.preventDefault();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  checkAndLoadPage(getAllImgs());
+});
+
+function getAllImgs() {
+  const images = document.querySelectorAll('img');
+  return Array.from(images);
+}
+
+function chkImgsLoaded(allImages) {
+    return allImages.every(image => image.complete);
+}
+
+function checkAndLoadPage(allImages) {
+    if (!chkImgsLoaded(allImages)) {
+      requestAnimationFrame(function() {
+      checkAndLoadPage(allImages);
+      });
+    }
+}
+
+</script>
+<html lang="ko" class="no-js" oncopy="return false;" oncut="return false;" onpaste="return false;">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[JS] 9. 비동기 처리 (Asynchronous Processing) - pocj8ur4in’s blog</title>
+<meta name="description" content="비동기 처리 (Asynchronous Processing) : 프로세스의 완료를 기다리지 않고 다른 작업을 진행">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[JS] 9. 비동기 처리 (Asynchronous Processing)">
+<meta property="og:url" content="http://localhost:4000/js9/">
+
+
+  <meta property="og:description" content="비동기 처리 (Asynchronous Processing) : 프로세스의 완료를 기다리지 않고 다른 작업을 진행">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-02-05T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2024-02-05T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/js9/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in's blog",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[JS] 9. 비동기 처리 (Asynchronous Processing)</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c175e6a8-9aa2-44bb-8359-abbb68d5fe1b" alt="pocj8ur4in" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">pocj8ur4in</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:pocj8ur4in@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="pocj8ur4in@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[JS] 9. 비동기 처리 (Asynchronous Processing)">
+    <meta itemprop="description" content="비동기 처리 (Asynchronous Processing) : 프로세스의 완료를 기다리지 않고 다른 작업을 진행">
+    <meta itemprop="datePublished" content="2024-02-05T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-02-05T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/js9/" class="u-url" itemprop="url">[JS] 9. 비동기 처리 (Asynchronous Processing)
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#비동기-처리-asynchronous-processing--프로세스의-완료를-기다리지-않고-다른-작업을-진행">비동기 처리 (Asynchronous Processing) : 프로세스의 완료를 기다리지 않고 다른 작업을 진행</a><ul><li><a href="#자바스크립트-런타임-javascript-runtime--자바스크립트가-실행되는-환경">자바스크립트 런타임 (JavaScript Runtime) : 자바스크립트가 실행되는 환경</a></li><li><a href="#비동기-콜백-패턴-asynchronous-callback-pattern--비동기-작업의-완료를-다루는-전통적인-방식">비동기 콜백 패턴 (Asynchronous Callback Pattern) : 비동기 작업의 완료를 다루는 전통적인 방식</a></li></ul></li><li><a href="#프로미스-promise--비동기-작업의-성공-및-실패에-대한-완료-결과를-처리하는-객체">프로미스 (Promise) : 비동기 작업의 성공 및 실패에 대한 완료 결과를 처리하는 객체</a><ul><li><a href="#프로미스-클래스-메소드-promise-class-method--프로미스에서-비동기-작업을-다루기-위해-제공">프로미스 클래스 메소드 (Promise Class Method) : 프로미스에서 비동기 작업을 다루기 위해 제공</a></li></ul></li><li><a href="#async-await--프로미스를-생성하고-소비하기-위한-문법적-설탕">async, await : 프로미스를 생성하고 소비하기 위한 문법적 설탕</a><ul><li><a href="#for-await-of--비동기적으로-이터레이터-iterator를-반복하는-문법">for-await-of : 비동기적으로 이터레이터 (Iterator)를 반복하는 문법</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="비동기-처리-asynchronous-processing--프로세스의-완료를-기다리지-않고-다른-작업을-진행">비동기 처리 (<code class="language-plaintext highlighter-rouge">Asynchronous Processing</code>) : 프로세스의 완료를 기다리지 않고 다른 작업을 진행</h2>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a3f7aa41-e708-45b7-8397-068980fc6f3c" width="70%" /></p>
+
+<ul>
+  <li>싱글 쓰레드 (<code class="language-plaintext highlighter-rouge">Single Thread</code>) : 한번에 하나의 함수만 실행 → 동기 처리 (<code class="language-plaintext highlighter-rouge">Synchronous Processing</code>)과 동일
+    <ul>
+      <li>자바스크립트는 콜 스택이 하나 → 콜 스택에 쌓인 함수나 코드를 위에서 아래로 차례대로 실행</li>
+    </ul>
+  </li>
+  <li>논블로킹 (<code class="language-plaintext highlighter-rouge">Non-Blocking</code>) : <code class="language-plaintext highlighter-rouge">I/O</code>를 수행하는 비동기 함수는 백그라운드에 넘김</li>
+  <li>멀티 프로세스 (<code class="language-plaintext highlighter-rouge">Multi Processes</code>) : 백그라운드는 <code class="language-plaintext highlighter-rouge">OS</code> 프로세스에 의존</li>
+</ul>
+
+<blockquote>
+  <p>비동기 처리의 순서?</p>
+
+  <ol>
+    <li>런타임 (<code class="language-plaintext highlighter-rouge">Runtime</code>) → 실행 컨텍스트 (<code class="language-plaintext highlighter-rouge">Execution Context</code>) → 콜 스택 (<code class="language-plaintext highlighter-rouge">CallStack</code>)</li>
+    <li>백그라운드 (<code class="language-plaintext highlighter-rouge">Background</code>) → 운영체제 (<code class="language-plaintext highlighter-rouge">OS</code>)</li>
+    <li>테스크 큐 (<code class="language-plaintext highlighter-rouge">Task Queue</code>) → 콜 스택 (<code class="language-plaintext highlighter-rouge">Call Stack</code>)</li>
+  </ol>
+</blockquote>
+
+<h3 id="자바스크립트-런타임-javascript-runtime--자바스크립트가-실행되는-환경">자바스크립트 런타임 (<code class="language-plaintext highlighter-rouge">JavaScript Runtime</code>) : 자바스크립트가 실행되는 환경</h3>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/f0c9726e-4743-4b62-aa15-5a5cde2cdef9" width="80%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Web API</code> : 브라우저에서 제공하는 <code class="language-plaintext highlighter-rouge">API</code> (<code class="language-plaintext highlighter-rouge">setTimeout</code>, <code class="language-plaintext highlighter-rouge">HTTP</code> 요청 메소드, <code class="language-plaintext highlighter-rouge">DOM</code> 이벤트)</li>
+  <li>테스트 큐 (<code class="language-plaintext highlighter-rouge">Task Queue</code>) : 이벤트가 발생한 뒤에 호출되어야 할 콜백 함수들이 대기하는 공간</li>
+  <li>이벤트 루프 (<code class="language-plaintext highlighter-rouge">Event Loop</code>) : 이벤트 발생 시 콜백 함수들을 관리, 호출된 콜백 함수의 실행 순서 결정</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1ebeb0a1-a9fc-4234-ab64-f4b720b9cc43" width="80%" /></p>
+
+<h3 id="비동기-콜백-패턴-asynchronous-callback-pattern--비동기-작업의-완료를-다루는-전통적인-방식">비동기 콜백 패턴 (<code class="language-plaintext highlighter-rouge">Asynchronous Callback Pattern</code>) : 비동기 작업의 완료를 다루는 전통적인 방식</h3>
+
+<ul>
+  <li>현재 실행되고 있는 함수가 끝난 뒤에 실행되는 콜백 함수를 통해 실행 순서를 지정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>setTimeout(function() {
+  console.log('task1', new Date());
+  setTimeout(function() {
+    console.log('task2', new Date());
+    setTimeout(function() {
+      console.log('task3', new Date());
+      console.log('END&gt;&gt;', new Date());
+    }, 1000 );
+  }, 2000);
+}, 3000);
+console.log('START', new Date());
+</code></pre></div></div>
+
+<blockquote>
+  <p>콜백 함수를 여러 개 중첩하면, 코드의 가독성이 떨어지는 콜백 지옥 (<code class="language-plaintext highlighter-rouge">Callback Hell</code>)이 발생!</p>
+</blockquote>
+
+<h2 id="프로미스-promise--비동기-작업의-성공-및-실패에-대한-완료-결과를-처리하는-객체">프로미스 (<code class="language-plaintext highlighter-rouge">Promise</code>) : 비동기 작업의 성공 및 실패에 대한 완료 결과를 처리하는 객체</h2>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/6acaa363-7157-4636-9f62-1da04e7a6a9c" width="90%" /></p>
+
+<ul>
+  <li>콜백 지옥을 피하고 비동기 처리를 쉽게 처리할 수 있도록 <code class="language-plaintext highlighter-rouge">ES6</code>부터 <code class="language-plaintext highlighter-rouge">then</code> 도입</li>
+  <li>프로미스를 호출하면 프로미스 인스턴스 (<code class="language-plaintext highlighter-rouge">Promise Instance</code>)를 반환한 후 <code class="language-plaintext highlighter-rouge">Resolve</code> &amp; <code class="language-plaintext highlighter-rouge">Reject</code></li>
+</ul>
+
+<blockquote>
+  <p>프로미스의 3가지 상태 (<code class="language-plaintext highlighter-rouge">Status</code>)</p>
+
+  <ul>
+    <li>대기 (<code class="language-plaintext highlighter-rouge">Pending</code>) : 비동기 처리 로직이 미완료된 초기 상태, 성공 또는 실패할 때까지 대기</li>
+    <li>이행 (<code class="language-plaintext highlighter-rouge">Fulfilled</code> ): 비동기 처리가 완료되어, 프로미스가 결과 값을 반환한 상태</li>
+    <li>거부 (<code class="language-plaintext highlighter-rouge">Rejected</code>) : 비동기 처리가 실패하거나 오류가 발생한 상태</li>
+  </ul>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const promise = new Promise((resolve, reject) =&gt; {
+    setTimeout(() =&gt; {
+        const now = Date.now();
+        
+        if (now % 2 === 0) {
+            resolve(console.log('[Fulfilled]'), now);    
+        } else reject('Rejected');
+    }, 1000);
+
+    setTimeout(() =&gt; {
+        reject(new Error('[TimeExceeded]'),);
+    }, 1001);
+});
+
+promise.then(
+    success =&gt; console.log('[Resolved]'),
+    fail =&gt; console.log('[Rejected]')
+)
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 프로미스를 클래스로 표현한다면?
+class Promise {
+  constructor(callback) {
+    console.log('[Promise 생성자]')
+    callback (this.resolve.bind(this), this.reject.bind(this));
+}
+
+  then(resolve) {
+    console.log('[then 메소드 실행]')
+    this.success = callback;
+  }
+
+  catch(x) {
+    console.log('[catch 메소드 실행]')
+    this.failure = callback;
+  }
+
+  success(x) {
+    console.log('[success 메소드 실행] ' + x)
+  }
+
+  failure(x) {
+    console.log('[failure 메소드 실행] ' + x)
+  }
+
+  resolve(x) { 
+    console.log('[resolve 메소드 실행]')
+    return this.success(x);
+  }
+
+  reject(x) {
+    console.log('[reject 메소드 실행]')
+    return this.failure(x);
+  }
+
+  callback(resolve, reject) {
+    console.log('[callback 메소드 실행]')
+  }
+};
+
+let promise = new Promise((resolve, reject) =&gt; {
+        setTimeout(() =&gt; {
+            const now = Date.now();
+            console.log('이행 :', now)
+
+            if (now % 2 === 0)
+                resolve(now)
+            else
+                reject(new Error("실패"))
+
+            console.log("[setTimeout 메소드 실행]")
+        }, 1000)
+    }
+);
+</code></pre></div></div>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/71628456-0e58-4bbb-b1f7-45cff3e5b96a" width="90%" /></p>
+
+<h3 id="프로미스-클래스-메소드-promise-class-method--프로미스에서-비동기-작업을-다루기-위해-제공">프로미스 클래스 메소드 (<code class="language-plaintext highlighter-rouge">Promise Class Method</code>) : 프로미스에서 비동기 작업을 다루기 위해 제공</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Promise.resolve</code> : 주어진 값을 성공 상태의 프로미스로 반환
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Promise.resolve(x).then(val =&gt; console.log(val));</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Promise.reject</code> : 주어진 값을 실패 상태의 프로미스로 반환
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Promise.reject(new Error('...')).catch(console.error);</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Promise.all</code> : 여러 프로미스가 모두 성공 시 <b>시간과 무관하게 순서를 보장하여</b> 프로미스들을 모두 반환, 하나라도 실패하면 첫번째로 실패한 프로미스 반환
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Promise.all(iterables).then().catch(...)</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Promise.race</code> : 여러 프로미스 중에서 가장 빠른 것을 반환, 하나라도 실패하면 첫번째로 실패한 프로미스 반환
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Promise.race(iterables).then().catch(...)</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Promise.any</code> : 여러 프로미스 중에서 제일 빨리 성공한 것을 반환
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Promise.any(iterables).then().catch(...)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">Node.js</code> 모듈의 <code class="language-plaintext highlighter-rouge">util.promisify</code> : 콜백 함수 기반의 비동기 함수를 프로미스 기반으로 변환</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function promisify(fn) {
+  return new Promise( (resolve, reject) =&gt; {
+    try {
+      const ret = fn();
+      resolve(ret);
+    } catch(err) {
+      reject(err);
+    }
+  })
+}
+
+const exec = util.promisify(execute);
+exec.then(...).catch(...)
+</code></pre></div>  </div>
+</blockquote>
+
+<h2 id="async-await--프로미스를-생성하고-소비하기-위한-문법적-설탕"><code class="language-plaintext highlighter-rouge">async</code>, <code class="language-plaintext highlighter-rouge">await</code> : 프로미스를 생성하고 소비하기 위한 문법적 설탕</h2>
+
+<blockquote>
+  <p>문법적 설탕 (<code class="language-plaintext highlighter-rouge">Syntax Sugar</code>) : 문법적 기능은 그대로인데, 사람이 직관적으로 읽을 수 있게끔 만드는 것</p>
+</blockquote>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/4297057d-9df5-4864-aaf9-1fa77598e056" width="40%" /></p>
+
+<ul>
+  <li>비동기 함수에서 콜백을 사용하는 대신에, 단순한 논리적 흐름을 작성
+    <ul>
+      <li>프로미스의 <code class="language-plaintext highlighter-rouge">then</code>, <code class="language-plaintext highlighter-rouge">catch</code>, <code class="language-plaintext highlighter-rouge">finally</code>를 사용할 필요 없음</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">async</code>는 프로미스를 반환하고, <code class="language-plaintext highlighter-rouge">await</code>는 <code class="language-plaintext highlighter-rouge">resolve</code> 및 <code class="language-plaintext highlighter-rouge">reject</code>와 매핑
+    <ul>
+      <li>성공 : <code class="language-plaintext highlighter-rouge">return</code> → <code class="language-plaintext highlighter-rouge">resolve</code> → <code class="language-plaintext highlighter-rouge">result</code></li>
+      <li>실패 : <code class="language-plaintext highlighter-rouge">error</code> → <code class="language-plaintext highlighter-rouge">reject</code> → <code class="language-plaintext highlighter-rouge">throw</code></li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// const fn = async() =&gt; {...}
+async function fn() {   // Promise 반환
+  ...
+  result = await fetch(url);  // fetch.then().catch()
+}
+console.log(await fn());
+</code></pre></div></div>
+
+<blockquote>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">Promise</code> &amp; <code class="language-plaintext highlighter-rouge">then</code> : 각각이 별도의 쓰레드로 실행되므로 <b>병렬</b></li>
+    <li><code class="language-plaintext highlighter-rouge">async</code>, <code class="language-plaintext highlighter-rouge">await</code> : 단일 쓰레드를 차례로 실행하므로 <b>직렬</b></li>
+  </ul>
+
+  <p>→ 연관이 없는 비동기 함수 실행에 <code class="language-plaintext highlighter-rouge">async</code>, <code class="language-plaintext highlighter-rouge">await</code>을 남발하지 말자!</p>
+
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// promise, async, await을 활용하여 페치한 뒤에 2초간 sleep 구현
+const f = async () =&gt; {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users/1");  
+  if (!res.ok) throw new Error("Fail to Fetch!!");
+  console.log(Date.now())
+  await new Promise((resolve) =&gt; {setTimeout(resolve, 2000)});
+  const data = await res.json();
+  return data.name;
+};
+
+console.log(await f());
+console.log(Date.now())
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// promise, async, await을 활용하여 1초 간격으로 3번 출력하는 depthTimer 구현
+let depthTimer = async (str) =&gt; {
+  console.log(str, new Date());
+  await new Promise((resolve) =&gt; setTimeout(resolve, 1000));
+};
+  
+(async function () {
+  await depthTimer('START!');
+  await depthTimer('depth1');
+  await depthTimer('depth2');
+  await depthTimer('depth3');
+  console.log('Already 3-depth!!');
+})();
+</code></pre></div></div>
+
+<h3 id="for-await-of--비동기적으로-이터레이터-iterator를-반복하는-문법"><code class="language-plaintext highlighter-rouge">for-await-of</code> : 비동기적으로 이터레이터 (<code class="language-plaintext highlighter-rouge">Iterator</code>)를 반복하는 문법</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">async</code> 함수에서 비동기적으로 값을 가져와 처리할 때 활용</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const afterTime = sec =&gt; new Promise(
+    resolve =&gt; setTimeout(resolve, sec * 1000, sec
+  ));
+  console.time('for-await-of ');
+  const arr = [afterTime(1), afterTime(2)];
+  
+  for (const fo of arr.values()) {
+    console.log('fo =', fo);
+  }
+  
+  for await (const fao of arr.values()) {
+    console.log('fao =', fao);
+  }
+  
+  console.timeEnd('for-await-of ');
+
+// &gt; fo = Promise { &lt;pending&gt; }
+// &gt; fo = Promise { &lt;pending&gt; }
+// &gt; fao = 1
+// &gt; fao = 2
+// &gt; for-await-of : 2.003s
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#js" class="page__taxonomy-item p-category" rel="tag">JS</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-02-05">February 5, 2024</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BJS%5D+9.+%EB%B9%84%EB%8F%99%EA%B8%B0+%EC%B2%98%EB%A6%AC+%28Asynchronous+Processing%29%20http%3A%2F%2Flocalhost%3A4000%2Fjs9%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fjs9%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/digital_hanaro_6/" class="pagination--pager" title="자바스크립트 프록시 (2024.02.04)
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/digital_hanaro_6/" rel="permalink">자바스크립트 프록시 (2024.02.04)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  디지털하나路 스터디 6일차 내용을 정리한 글입니다.
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/vocawik2/" rel="permalink">[vocawik] 2. vocawik 프로젝트 설계
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          11 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">프로젝트 목표 (Project Goal) : 프로젝트 진행 과정에서 이루고자 하는 사항들을 정리
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/js8/" rel="permalink">[JS] 8. 모듈 (Module)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">모듈 (Module) : 코드를 재사용 가능한 파일 단위의 조각으로 나눈 것
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/til2/" rel="permalink">[TIL] 2024년 02월 TIL
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">February, 2024 : 시간 관리의 중요성!
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.pinterest.co.kr/pocj8ur4in/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-pinterest-square" aria-hidden="true"></i> Pinterest</a></li>
+        
+      
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 pocj8ur4in's blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
