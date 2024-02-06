@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          2 분 소요
         
       </span>
     
@@ -446,6 +446,7 @@ function checkAndLoadPage(allImages) {
   alert ("Hello");
 &lt;/script&gt;
 </code></pre></div></div>
+
 <ul>
   <li><code class="language-plaintext highlighter-rouge">Linking JavaScript</code> : 별도의 <code class="language-plaintext highlighter-rouge">.js</code> 파일을 만들고 이를 <code class="language-plaintext highlighter-rouge">HTML</code> 문서와 연결하는 방법</li>
 </ul>
@@ -456,6 +457,21 @@ alert ("Hello");
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// index.html
 &lt;script src="hello.js"&gt;&lt;/script&gt;
 </code></pre></div></div>
+
+<blockquote>
+  <p>브라우저 렌더링 (<code class="language-plaintext highlighter-rouge">Browser Rendering</code>)이 이루어지는 과정?</p>
+
+  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/72f91c62-550a-4c59-9aef-c6a25d601d32" /></p>
+
+  <ol>
+    <li><code class="language-plaintext highlighter-rouge">Connect &amp; Request to Server</code></li>
+    <li><code class="language-plaintext highlighter-rouge">HTML/CSS Parsing → Token/Lexer → Node → DOM, CSSOM → Render(DOM/CSSOM) Tree</code></li>
+    <li><code class="language-plaintext highlighter-rouge">JS Parsing ⇒ AST(ByteCode) → Run with Render Tree(DOM/CSSOM)</code></li>
+    <li><code class="language-plaintext highlighter-rouge">Layout (Reflow ← Change Browser Size)</code></li>
+    <li><code class="language-plaintext highlighter-rouge">Paint (Repaint ← Reflow)</code></li>
+    <li><code class="language-plaintext highlighter-rouge">Composite</code></li>
+  </ol>
+</blockquote>
 
 <h3 id="nodejs--브라우저-밖에서-자바스크립트-코드를-실행하게-해주는-런타임-환경"><code class="language-plaintext highlighter-rouge">Node.js</code> : 브라우저 밖에서 자바스크립트 코드를 실행하게 해주는 런타임 환경</h3>
 
@@ -658,7 +674,7 @@ alert ("Hello");
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          11 분 소요
+          12 분 소요
         
       </span>
     
