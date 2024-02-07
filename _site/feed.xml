@@ -1,4 +1,379 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-06T15:18:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[JS] 9. 비동기 처리 (Asynchronous Processing)</title><link href="http://localhost:4000/js9/" rel="alternate" type="text/html" title="[JS] 9. 비동기 처리 (Asynchronous Processing)" /><published>2024-02-05T00:00:00+09:00</published><updated>2024-02-05T00:00:00+09:00</updated><id>http://localhost:4000/js9</id><content type="html" xml:base="http://localhost:4000/js9/"><![CDATA[<h2 id="비동기-처리-asynchronous-processing--프로세스의-완료를-기다리지-않고-다른-작업을-진행">비동기 처리 (<code class="language-plaintext highlighter-rouge">Asynchronous Processing</code>) : 프로세스의 완료를 기다리지 않고 다른 작업을 진행</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-07T17:55:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
+
+<ul>
+  <li>정적 타입 (<code class="language-plaintext highlighter-rouge">Static Type</code>) : 변수, 매개변수, 함수 반환 값 등에 대한 타입을 명시적으로 지정 가능</li>
+  <li>컴파일 언어 (<code class="language-plaintext highlighter-rouge">Compile Language</code>) : <code class="language-plaintext highlighter-rouge">TypeScript</code> 컴파일러는 <code class="language-plaintext highlighter-rouge">TypeScript</code> 코드를 <code class="language-plaintext highlighter-rouge">JavaScript</code> 코드로 변환</li>
+  <li>타입 검사 (<code class="language-plaintext highlighter-rouge">Type Checking</code>) : 타입을 명시하지 않아도 코드에서 사용된 패턴과 값에 기반해 타입을 추론</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm init -y
+npm install -g typescript ts-node
+tsc -v
+tsc --init
+cat tsconfig.json
+ts-node temp.ts
+</code></pre></div></div>
+
+<h3 id="타입스크립트-컴파일러-tsc--typescript-코드를-javascript-코드로-변환하는-도구">타입스크립트 컴파일러 (<code class="language-plaintext highlighter-rouge">TSC</code>) : <code class="language-plaintext highlighter-rouge">TypeScript</code> 코드를 <code class="language-plaintext highlighter-rouge">JavaScript</code> 코드로 변환하는 도구</h3>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">tsconfig.json</code> 조회 : 프로그램 설정 및 파일 실행</li>
+  <li>사용 가능한 모든 파일들을 임포트 (<code class="language-plaintext highlighter-rouge">import</code>) (→ 파일들을 하나의 모듈 내에 있는 것처럼 관리)</li>
+  <li>추상 구문 트리 (<code class="language-plaintext highlighter-rouge">AST; Abstract Syntax Tree</code>)를 토큰화 (<code class="language-plaintext highlighter-rouge">Tokenize</code>) 및 파싱 (<code class="language-plaintext highlighter-rouge">Parse</code>)</li>
+  <li>바인더 (<code class="language-plaintext highlighter-rouge">Binder</code>)가 추상 구문 트리의 식별자를 <code class="language-plaintext highlighter-rouge">Symbol</code>로 변환</li>
+  <li>바인더와 추상 구문 트리로 타입 검사를 실행</li>
+  <li>프로그램에 설정한 옵션에 기반하여 추상 구문 트리를 <code class="language-plaintext highlighter-rouge">*.js</code>, <code class="language-plaintext highlighter-rouge">*.d.ts</code>의 형태로 변환</li>
+</ol>
+
+<h2 id="타입-시스템-type-system--프로그램에서-가질-수-있는-타입을-이해하는-방법에-대한-규칙-집합">타입 시스템 (<code class="language-plaintext highlighter-rouge">Type system</code>) : 프로그램에서 가질 수 있는 타입을 이해하는 방법에 대한 규칙 집합</h2>
+
+<ol>
+  <li>코드를 읽고 존재하는 모든 타입과 값을 이해한다.</li>
+  <li>각 값이 초기 선언에서 가질 수 있는 타입을 확인하고, 각 값이 추후 코드에서 어떻게 사용될 수 있는지 확인한다.</li>
+  <li>모든 방법을 확인했을 때, 값의 사용법이 타입과 일치하지 않으면 사용자에게 타입 오류로 표시한다.</li>
+</ol>
+
+<blockquote>
+  <p>타입 오류 vs 구문 오류?</p>
+
+  <ul>
+    <li>타입 오류 (<code class="language-plaintext highlighter-rouge">Type Error</code>) : 타입 검사기에 따라 일치하지 않는 것이 감지된 경우
+      <ul>
+        <li>타입스크립트의 타입 검사기가 프로그램의 타입에서 오류를 감지했을 때 발생</li>
+      </ul>
+    </li>
+    <li>구문 오류 (<code class="language-plaintext highlighter-rouge">Syntax Error</code>) : 타입스크립트가 자바스크립트로 변환되는 것을 차단한 경우
+      <ul>
+        <li>타입스크립트가 코드로 이해할 수 없는 잘못된 구문을 감지할 때 발생</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h3 id="할당-가능성-assignability--함수-호출이나-변수에-값을-제공할-수-있는지-여부를-확인-가능">할당 가능성 (<code class="language-plaintext highlighter-rouge">Assignability</code>) : 함수 호출이나 변수에 값을 제공할 수 있는지 여부를 확인 가능</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">TypeScript</code>에선 변수나 속성에 값을 할당할 때 해당 값의 타입이 변수나 속성의 타입과 호환 가능해야함</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let firstName = "Noah";
+firstName = "Tom";
+</code></pre></div></div>
+
+<h3 id="타입-어노테이션-type-annotation--초기값을-할당하지-않고도-타입을-명시적으로-지정-가능">타입 어노테이션 (<code class="language-plaintext highlighter-rouge">Type Annotation</code>) : 초기값을 할당하지 않고도 타입을 명시적으로 지정 가능</h3>
+
+<blockquote>
+  <p>메모리 사이즈가 변하지 않는 변수는 타입 어노테이션을 추가하지 않는 것이 좋으나, 코드를 명확하게 문서화하거나 실수로 변수 타입이 변경되지 않도록 타입스크립트를 보호하기 위해 변수에 명시적으로 타입 어노테이션을 포함하는 것이 경우에 따라서는 유용할 수 있다.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let variable: Type; // 변수의 이름 : 값의 타입
+</code></pre></div></div>
+
+<h3 id="타입-형태-type-shape--타입을-정의할-때-객체의-형태를-명시적으로-지정-가능">타입 형태 (<code class="language-plaintext highlighter-rouge">Type Shape</code>) : 타입을 정의할 때 객체의 형태를 명시적으로 지정 가능</h3>
+
+<ul>
+  <li>인터페이스 (<code class="language-plaintext highlighter-rouge">Interface</code>) : 객체의 구조를 정의</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>interface Person {
+    name: string;
+    age: number;
+}
+
+let person: Person = {
+    name: "John",
+    age: 25
+};
+</code></pre></div></div>
+
+<ul>
+  <li>타입 (<code class="language-plaintext highlighter-rouge">Type</code>) : 객체의 타입을 정의</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type Point = {
+    x: number;
+    y: number;
+};
+
+let point: Point = {
+    x: 10,
+    y: 20
+};
+</code></pre></div></div>
+
+<h2 id="타입-별칭-alias--자주-사용할-타입에-이름을-붙이는-것">타입 별칭 (<code class="language-plaintext highlighter-rouge">Alias</code>) : 자주 사용할 타입에 이름을 붙이는 것</h2>
+
+<blockquote>
+  <p>타입 별칭은 타입 어노테이션과 마찬가지로 자바스크립트로 컴파일되지 않으므로, 런타임 코드에서는 참조할 수 없다.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type Age = number;
+type Name = string;
+
+type Person = {
+    name: Name;
+    age: Age;
+};
+
+
+let person: Person = { name: "John", age: 25 };
+</code></pre></div></div>
+
+<h3 id="리터럴-타입-literal-type--원시-타입보다-더-구체적인-원시-값-자체를-타입으로-활용하는-것">리터럴 타입 (<code class="language-plaintext highlighter-rouge">Literal Type</code>) : 원시 타입보다 더 구체적인 원시 값 자체를 타입으로 활용하는 것</h3>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c9e566fc-2985-4d75-aba6-0f42082c8ab1" width="80%" /></p>
+
+<ul>
+  <li>특정 값들을 타입으로 정의하고, 해당 값들만이 유효한 값으로 간주
+    <ul>
+      <li>리터럴 할당 가능성 : 서로 다른 리터럴 타입은 서로 할당될 수 없음</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let isString = '문자열';
+let isLiteral: 'LITERAL';
+
+isLiteral = isString;
+// Error type 'string' is not assignable to type '"LITERAL"'.
+</code></pre></div></div>
+
+<h3 id="유니언-타입-union-type--값에-허용되는-타입을-두-개-이상의-가능한-타입으로-확장하는-것">유니언 타입 (<code class="language-plaintext highlighter-rouge">Union Type</code>) : 값에 허용되는 타입을 두 개 이상의 가능한 타입으로 확장하는 것</h3>
+
+<ul>
+  <li>둘 이상의 타입으로 확장된 타입에서, 일부 속성들의 조합이 하나의 타입에 할당 가능하면 유니온 타입으로 사용 가능
+    <ul>
+      <li>유니언으로 선언한 모든 타입에 존재하는 속성에만 접근 가능!</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type Person = {
+   name: string;
+   age: number;
+   phone: number | string; // number 또는 string 타입을 가질 수 있음
+   addr?: string; // 선택적으로 사용할 수 있음
+};
+</code></pre></div></div>
+
+<h3 id="내로잉-narrowing--값이-더-구체적인-타입임을-코드에서-유추하는-것">내로잉 (<code class="language-plaintext highlighter-rouge">narrowing</code>) : 값이 더 구체적인 타입임을 코드에서 유추하는 것</h3>
+
+<ul>
+  <li>타입스크립트에서 변수의 타입을 조건문을 통해 줄여나가는 것
+    <ul>
+      <li>값 할당 <code class="language-plaintext highlighter-rouge">ex) x = 1</code></li>
+      <li><code class="language-plaintext highlighter-rouge">typeof</code> 검사 <code class="language-plaintext highlighter-rouge">ex) typeof(value)</code></li>
+      <li>조건 검사 : <code class="language-plaintext highlighter-rouge">ex) if x === 'stringValue'</code></li>
+      <li><code class="language-plaintext highlighter-rouge">in</code>, <code class="language-plaintext highlighter-rouge">instanceof</code>, <code class="language-plaintext highlighter-rouge">Array.isArray</code>를 활용</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>내로잉을 수행하는 함수 또는 구문을 타입 가드 (<code class="language-plaintext highlighter-rouge">Type guard</code>)라 한다.</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type Member = {
+  name: string;
+  address: string;
+}
+
+function inFunc (user: Member) {
+  if ('name' in user) // cf. user.hasOwnProperty('name')로는 불가능
+    console.log('user.name); 
+}
+</code></pre></div></div>
+
+<h3 id="strictnullchecks--엄격한-null-검사-활성화-옵션"><code class="language-plaintext highlighter-rouge">strictNullChecks</code> : 엄격한 <code class="language-plaintext highlighter-rouge">null</code> 검사 활성화 옵션</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">null</code> 혹은 <code class="language-plaintext highlighter-rouge">undefined</code> 값을 참조 및 할당 했을 때, 타입 에러를 발생시킬지 여부</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// tsconfig.json 
+//  {
+//    "compilerOptions": {
+//      "strictNullChecks": true
+//    }
+//  }
+
+let un: string | undefined;
+un.toLowerCase(); // Type 'undefined' is not assigned to type 'string'
+un?.toLowerCase();
+</code></pre></div></div>
+
+<h2 id="객체-타입-object-type--객체의-형태를-정의하고-객체의-할당-가능성을-확인">객체 타입 (<code class="language-plaintext highlighter-rouge">Object Type</code>) : 객체의 형태를 정의하고, 객체의 할당 가능성을 확인</h2>
+
+<ul>
+  <li>타입스크립트의 타입 시스템은 타입을 구조화하여 정의하고 있음 → <code class="language-plaintext highlighter-rouge">Structured Type Definition</code>
+    <ul>
+      <li>타입 체크 시스템 (<code class="language-plaintext highlighter-rouge">Type Check System</code>) 을 통해 구조화된 형식을 검사</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let x_user: {id: number, name: string};
+x_user = {id: 1, name: 'xx'}; // OK
+x_user = {id: 1}; // Error (Property 'name' missing in type)
+x_user = {id: 1, name: 'xx', age: 30}; // Error ({id, name, age} is not assignable to type {id,name} )
+
+// 타입 별칭(type alias)
+type T_User = {
+  id: number;
+  name: string;
+};
+
+let hong: T_User;
+hong = {id: 1, name: 'Hong'}; // OK
+hong = {id: 1}; // Error (name property missing)
+hong = {id: 1, name: 'Hong', addr: 'Pusan'}; // Error(not assignable) 
+hong = {id: 1, name: 'Hong', addr: 'Pusan'} as T_User;
+</code></pre></div></div>
+
+<h3 id="타입스트립트는-covariance--contravariance를-원칙으로-하는-언어">타입스트립트는 <code class="language-plaintext highlighter-rouge">CoVariance | ContraVariance</code>를 원칙으로 하는 언어?</h3>
+
+<ul>
+  <li>공변성 (<code class="language-plaintext highlighter-rouge">CoVariance</code>) : 원래 지정된 것보다 더 파생된 형식을 사용 가능한 것<br />→ 타입 간의 계층 구조가 유지되면 변환을 허용 <code class="language-plaintext highlighter-rouge">ex)</code> 배열</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let baseArray: Animal[] = [];
+let derivedArray: Dog[] = [];
+
+// Covariant: 하위 타입인 Dog[]가 상위 타입인 Animal[]로 할당 가능
+baseArray = derivedArray;
+</code></pre></div></div>
+
+<ul>
+  <li>반변성 (<code class="language-plaintext highlighter-rouge">ContraVariance</code>) : 원래 지정된 것보다 덜 파생적인 형식을 사용 가능한 것<br />→ 하위 타입이 하위 타입으로 할당될 수 있음 <code class="language-plaintext highlighter-rouge">ex)</code> 함수의 매개변수</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type AnimalHandler = (animal: Animal) =&gt; void;
+type DogHandler = (dog: Dog) =&gt; void;
+
+// Contravariant: 상위 타입인 AnimalHandler가 하위 타입인 DogHandler로 할당 가능
+let animalHandler: AnimalHandler = (animal: Animal) =&gt; { /*...*/ };
+let dogHandler: DogHandler = animalHandler;
+</code></pre></div></div>
+
+<blockquote>
+  <p>타입스크립트는 <code class="language-plaintext highlighter-rouge">CoVariance</code>를 원칙이나, 함수의 매개변수처럼 <code class="language-plaintext highlighter-rouge">ContraVariance</code>가 적용되는 경우 또한 존재한다.</p>
+</blockquote>
+
+<h3 id="신선도-freshness--구조적으로-타입-호환성이-있는-객체-리터럴의-타입-검사">신선도 (<code class="language-plaintext highlighter-rouge">Freshness</code>) : 구조적으로 타입 호환성이 있는 객체 리터럴의 타입 검사</h3>
+
+<ul>
+  <li>신선도로 인한 오류는 ‘객체 리터럴을 사용한 경우에만’ 발생한다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function logName(something: { name: string }) {
+    console.log(something.name);
+}
+
+var person = { name: 'John', job: 'cowboy' };
+var animal = { name: 'cow', description: 'element who hate John' };
+var event = { note: `random` };
+
+logName(person);
+logName(animal);
+logName(event); // 오류: 속성 `name` 누락 (신선도로 인한 오류 O)
+
+function logName(something: { name: string }) {
+  console.log(something.name);
+}
+
+logName({ name: 'John' });
+logName({ name: 'John', job: 'cowboy' }); // 오류: 객체 리터럴은 정의된 속성만 지정해야 함. (신선도로 인한 오류 X)
+</code></pre></div></div>
+
+<blockquote>
+  <p>신선도를 끄는 방법?</p>
+
+  <ol>
+    <li>변수에 할당한다.</li>
+    <li>강제로 타입 캐스팅 (<code class="language-plaintext highlighter-rouge">type casting</code>)을 한다.</li>
+    <li><code class="language-plaintext highlighter-rouge">union</code> 타입으로 제외시킨다.</li>
+    <li><code class="language-plaintext highlighter-rouge">suppressExcessPropertyError</code>를 활성화한다.</li>
+  </ol>
+</blockquote>
+
+<h2 id="함수-타입-function-type--함수가-가져야-하는-매개변수와-반환-타입을-명시">함수 타입 (<code class="language-plaintext highlighter-rouge">Function Type</code>) : 함수가 가져야 하는 매개변수와 반환 타입을 명시</h2>
+
+<ul>
+  <li>변수에 할당되거나 매개변수로 전달되는 함수의 타입을 정의
+    <ul>
+      <li>필수 매개변수 : 함수에 선언된 모든 매개변수를 필수라고 가정 → 타입 안정성이 강화</li>
+      <li>선택 매개변수 : 타입 애너테이션의 : 앞에 <code class="language-plaintext highlighter-rouge">?</code>를 추가하여, 매개변수가 선택적이란 것을 표시</li>
+      <li>기본 매개변수 : 기본적으로 값을 제공되므로, 함수 내부에 암묵적으로 <code class="language-plaintext highlighter-rouge">| undefined union type</code>이 추가<br />→ 타입스크립트는 함수의 매개변수에 대해 인수를 누락하거나 <code class="language-plaintext highlighter-rouge">undefined</code> 인수를 사용한 호출을 허용</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function add(a: number, b: number) {
+   return a + b;
+}
+
+type ANY = any;
+function addY (a: ANY, b: ANY) {
+  return a + b;
+}
+
+function addZ (a: ANY, b?: ANY) {
+  return a + (b ?? 0);
+}
+
+addX(1, 0); addY(1, 0); addZ(1, 0);
+addZ(1); // addX(1); addY(1);
+</code></pre></div></div>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">?</code>으로 표시된 선택 매개변수가 아닌 필수 매개변수는 값이 명시적으로 <code class="language-plaintext highlighter-rouge">undefined</code>이라도 항상 제공되어야 한다.</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const introduce2 = (name:string, 
+
+height : number|undefined ) =&gt; {
+   console.log(`이름 : ${name}`);
+
+if(typeof height === 'number'){
+   	console.log(`키 : ${height + 10}`)   
+ 	}
+}
+
+introduce2("김군"); // Error : Expected 2 arguments, but got 1.
+introduce2("김군", undefined);
+introduce2("김군", 170);
+</code></pre></div>  </div>
+</blockquote>
+
+<h2 id="인터페이스-interface--타입을-정의할-때-객체의-구조를-명시적으로-지정-가능">인터페이스 (<code class="language-plaintext highlighter-rouge">Interface</code>) : 타입을 정의할 때 객체의 구조를 명시적으로 지정 가능</h2>
+
+<h3 id="호출-시그니처-call-signature--함수-호출-방법에-대한-타입-시스템을-설명">호출 시그니처 (<code class="language-plaintext highlighter-rouge">Call Signature</code>) : 함수 호출 방법에 대한 타입 시스템을 설명</h3>
+
+<ul>
+  <li>매개변수의 목록 (<code class="language-plaintext highlighter-rouge">with type</code>)과 반환 타입을 포함</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type FunctionAlias = (input: string) =&gt; number;
+
+interface CallSignature {
+    (input: string): number;
+}
+
+const typedFunctionAlias: FunctionAlias = (input) =&gt; input.length;
+
+const typedCallSignature: CallSignature = (input) =&gt; input.length;
+</code></pre></div></div>
+
+<blockquote>
+  <p>호출 시그니처는 사용자 정의 속성을 추가로 갖는 함수를 설명하는 데에도 사용할 수 있다.</p>
+</blockquote>
+
+<h3 id="인덱스-시그니처-index-signature--임의의-키를-받고-해당-키에-대한-값의-타입을-지정">인덱스 시그니처 (<code class="language-plaintext highlighter-rouge">Index Signature</code>) : 임의의 키를 받고, 해당 키에 대한 값의 타입을 지정</h3>
+
+<blockquote>
+  <p>인덱스 시그니처를 사용하면, 프로퍼티의 존재 유무를 알 수 없다!</p>
+</blockquote>
+
+<h3 id="중첩-시그니처-nested-interface--속성의-타입이-다른-인터페이스나-객체-타입을-가질-수-있음">중첩 시그니처 (<code class="language-plaintext highlighter-rouge">Nested Interface</code>) : 속성의 타입이 다른 인터페이스나 객체 타입을 가질 수 있음</h3>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TS" /><summary type="html"><![CDATA[타입스크립트 (TypeScript) : JavaScript을 확장하여 정적 타입을 지원하는 프로그래밍 언어]]></summary></entry><entry><title type="html">[JS] 9. 비동기 처리 (Asynchronous Processing)</title><link href="http://localhost:4000/js9/" rel="alternate" type="text/html" title="[JS] 9. 비동기 처리 (Asynchronous Processing)" /><published>2024-02-05T00:00:00+09:00</published><updated>2024-02-05T00:00:00+09:00</updated><id>http://localhost:4000/js9</id><content type="html" xml:base="http://localhost:4000/js9/"><![CDATA[<h2 id="비동기-처리-asynchronous-processing--프로세스의-완료를-기다리지-않고-다른-작업을-진행">비동기 처리 (<code class="language-plaintext highlighter-rouge">Asynchronous Processing</code>) : 프로세스의 완료를 기다리지 않고 다른 작업을 진행</h2>
 
 <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a3f7aa41-e708-45b7-8397-068980fc6f3c" width="70%" /></p>
 
@@ -297,7 +672,8 @@ let depthTimer = async (str) =&gt; {
 // &gt; fao = 1
 // &gt; fao = 2
 // &gt; for-await-of : 2.003s
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[비동기 처리 (Asynchronous Processing) : 프로세스의 완료를 기다리지 않고 다른 작업을 진행]]></summary></entry><entry><title type="html">자바스크립트 프록시 (2024.02.04)</title><link href="http://localhost:4000/digital_hanaro_6/" rel="alternate" type="text/html" title="자바스크립트 프록시 (2024.02.04)" /><published>2024-02-04T00:00:00+09:00</published><updated>2024-02-05T00:00:00+09:00</updated><id>http://localhost:4000/digital_hanaro_6</id><content type="html" xml:base="http://localhost:4000/digital_hanaro_6/"><![CDATA[<blockquote>
+</code></pre></div></div>
+<hr />]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[비동기 처리 (Asynchronous Processing) : 프로세스의 완료를 기다리지 않고 다른 작업을 진행]]></summary></entry><entry><title type="html">자바스크립트 프록시 (2024.02.04)</title><link href="http://localhost:4000/digital_hanaro_6/" rel="alternate" type="text/html" title="자바스크립트 프록시 (2024.02.04)" /><published>2024-02-04T00:00:00+09:00</published><updated>2024-02-05T00:00:00+09:00</updated><id>http://localhost:4000/digital_hanaro_6</id><content type="html" xml:base="http://localhost:4000/digital_hanaro_6/"><![CDATA[<blockquote>
   <p><a href="https://github.com/pocj8ur4in/finance-dev-study">디지털하나路 스터디</a> 6일차 내용을 정리한 글입니다.</p>
 </blockquote>
 
@@ -1426,7 +1802,247 @@ Mutable: false
   <li><code class="language-plaintext highlighter-rouge">npm init</code>으로 <code class="language-plaintext highlighter-rouge">package.json</code> 작성</li>
   <li>의존 관계가 있으면 <code class="language-plaintext highlighter-rouge">npm install</code></li>
   <li><code class="language-plaintext highlighter-rouge">npm login</code> 후 배포 <code class="language-plaintext highlighter-rouge">npm publish --access public</code></li>
-</ol>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[모듈 (Module) : 코드를 재사용 가능한 파일 단위의 조각으로 나눈 것]]></summary></entry><entry><title type="html">[JS] 5. 함수 (Function)</title><link href="http://localhost:4000/js5/" rel="alternate" type="text/html" title="[JS] 5. 함수 (Function)" /><published>2024-01-31T00:00:00+09:00</published><updated>2024-01-31T00:00:00+09:00</updated><id>http://localhost:4000/js5</id><content type="html" xml:base="http://localhost:4000/js5/"><![CDATA[<h2 id="함수-function--일련의-과정을-코드-블록으로-감싸-하나의-단위로-정의한-것">함수 (<code class="language-plaintext highlighter-rouge">Function</code>) : 일련의 과정을 코드 블록으로 감싸 하나의 단위로 정의한 것</h2>
+</ol>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[모듈 (Module) : 코드를 재사용 가능한 파일 단위의 조각으로 나눈 것]]></summary></entry><entry><title type="html">[JS] 6. 배열 (Array) &amp;amp; 이터레이터 (Iterator)</title><link href="http://localhost:4000/js6/" rel="alternate" type="text/html" title="[JS] 6. 배열 (Array) &amp;amp; 이터레이터 (Iterator)" /><published>2024-01-31T00:00:00+09:00</published><updated>2024-01-31T00:00:00+09:00</updated><id>http://localhost:4000/js6</id><content type="html" xml:base="http://localhost:4000/js6/"><![CDATA[<h2 id="배열-array--순서가-있는-데이터-집합">배열 (<code class="language-plaintext highlighter-rouge">Array</code>) : 순서가 있는 데이터 집합</h2>
+
+<ul>
+  <li>배열의 각 요소 (<code class="language-plaintext highlighter-rouge">element</code>)인 프로퍼티 리터럴을 인덱스 (프로퍼티 키)로 접근</li>
+  <li><code class="language-plaintext highlighter-rouge">length</code> 프로퍼티를 가지며, 배열의 길이보다 큰 접근은 <code class="language-plaintext highlighter-rouge">undefined</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">length</code> 프로퍼티를 조정해 배열 길이를 조절할 수 있음 (<code class="language-plaintext highlighter-rouge">-1 &lt; length &lt; 2^32</code>)</li>
+    </ul>
+  </li>
+  <li>자바스크립트에서 배열은 비균질적 (<code class="language-plaintext highlighter-rouge">Nonhomogeneous</code>) : 고정 위치 및 크기를 가지지 않음
+    <ul>
+      <li>희소 배열 (<code class="language-plaintext highlighter-rouge">sparse array</code>) 자료 구조 : 검색에는 약하지만, 조작에는 우수!</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> // 3의 크기를 갖는 배열 생성
+const arr1 = Array(3); // [ &lt;3 empty items&gt; ]
+const arr2 = new Array(3); // [ &lt;3 empty items&gt; ]
+const arr3 = [,,,]; // [ &lt;3 empty items&gt; ]
+
+// 3의 크기를 갖고 1로 채워진 배열 생성
+const arr4 = Array(3).fill(1); // [ 1,1,1 ]
+
+// 3의 크기를 갖고 인덱스 1부터 1이 존재하는 배열 생성
+const arr5 = Array(3).fill(1, 1); // [ &lt;1 empty item&gt;, 1, 1 ]
+
+// 3의 크기를 갖고 인덱스 1 이상 2 미만에 1이 존재하는 배열 생성
+const arr6 = Array(3).fill(1, 0, 2); // [ &lt;1 empty item&gt;, 1, &lt;1 empty item&gt; ]
+
+// arr2를 복제한 유사 배열 객체 생성
+const arr7 = Array.from(arr2); // [ undefined, undefined, undefined ]
+
+// 3의 크기를 갖는 유사 배열 객체 생성
+const arr8 = Array.from(Array(3)); // [ undefined, undefined, undefined ]
+
+// 3의 크기를 갖고 1,2,3이 존재하는 유사 배열 객체 생성
+const arr9 = Array.from(Array(3), (_, i)  =&gt; i + 1); // [ 1, 2, 3 ]
+
+// 3의 크기를 갖고 1,2,3이 존재하는 유사 배열 객체 생성
+const arr10 = Array.from(Array(3).keys()); // [ 1, 2, 3 ]
+
+// 3의 크기를 갖고 1로 채워진 배열 생성
+const arr11 = [];
+arr11.push(1); // [ 1 ]
+arr11.push(1); // [ 1, 1 ]
+arr11.push(1); // [ 1, 1, 1 ]
+
+// 스택 배열
+const stack = [];
+stack.push(1);
+stack.push(2);
+stack.push(3);
+stack.pop();
+
+// 큐 배열
+const queue = [];
+queue.push(1);
+queue.push(2);
+queue.push(3);
+queue.shift();
+
+// 스택 배열, 큐 배열 초기화
+stack.length = 0;
+queue.length = 0;
+
+// 배열 검색
+const arr12 = [ 3, 7, 3, 9, 2];
+arr12.indexOf(3);  // 0
+arr.lastIndexOf(3); // 2
+arr.includes(3); // true
+
+const arr13 = [ { id : 1 }, { id : 2 }, { id : 3 }, { id : 2 } ];
+const idx = arr13.findIndex(item =&gt; item.id === 2); // 1
+
+// 배열 루프
+arr13.forEach(( arr, idx ) =&gt; console.log(arr.id));
+
+// 배열 요소 합치기
+const arr14 = arr1.concat(arr2);
+const arr15 = [...arr1, ...arr2];
+
+// 배열 평탄화
+const arr16 = [ 1, 2, [3] ].flat();
+console.log(arr16); // 1, 2, 3
+
+const arr17 = [ 1, 2, [[3]] ].flat();
+console.log(arr17); // 1, 2, [3]
+
+const arr18 = [ 1, 2, [[3]] ].flat(2);
+console.log(arr18); // 1, 2, 3
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const arr = [1, 2, 3, 4, 5];
+
+// ex1) [2,3]을 추출
+const ex1 = arr.slice(1,3);
+
+console.log(`\n#1`);
+console.log(ex1);
+
+// ex2) [3]부터 모두 다 추출
+const ex2 = arr.slice(arr.indexOf(3));
+
+console.log(`\n#2`);
+console.log(ex2);
+
+// ex3) [2,3,4] 제거하기
+arr.splice(1, 3)
+
+console.log(`\n#3`);
+console.log(arr);
+
+// ex4) 복원하기
+arr.splice(1, 0, 2,3,4)
+
+console.log(`\n#4`);
+console.log(arr);
+
+// ex5) [3] 부터 끝까지 제거하기
+arr.splice(arr.indexOf(3))
+
+console.log(`\n#5`);
+console.log(arr);
+
+// ex6) 복원하기
+arr.splice(2, 0, 3,4,5)
+
+console.log(`\n#6`);
+console.log(arr);
+
+// ex7) [1,2, 'X', 'Y', 'Z', 4, 5] 만들기
+arr.splice(2, 1)
+arr.splice(2, 0, 'X', 'Y', 'Z')
+
+console.log(`\n#7`);
+console.log(arr);
+
+// ex8) 위 7번 문제를 splice를 사용하지 말고 작성하시오.
+arr.splice(2, 3)
+const ex8 = [...arr.slice(0, 2), 'X', 'Y', 'Z' , ...arr.slice(2)]
+
+console.log(`\n#8`);
+console.log(ex8);
+</code></pre></div></div>
+
+<blockquote>
+  <p>리스트 (<code class="language-plaintext highlighter-rouge">List</code>) : 중첩 참조 <code class="language-plaintext highlighter-rouge">link</code>를 가진 객체</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const array = [1, 2, 3, …]; // 배열
+
+const list = { // 리스트
+    value: 1,
+    rest: {   // 메모리 주소 (link)
+        value: 2,
+        rest: {
+            value: 3,
+            rest: {...}
+        }
+    }
+}
+</code></pre></div>  </div>
+
+  <p>→ 자비스크립트의 <code class="language-plaintext highlighter-rouge">Array</code>는 <code class="language-plaintext highlighter-rouge">List</code> : <code class="language-plaintext highlighter-rouge">List</code>는 검색은 느리지만, 조작하는 것은 쉽다!</p>
+</blockquote>
+
+<h3 id="유사-배열-객체-array-like-object--배열과-유사한-형태를-갖지만-배열은-아닌-객체">유사 배열 객체 (<code class="language-plaintext highlighter-rouge">Array-like Object</code>) : 배열과 유사한 형태를 갖지만, 배열은 아닌 객체</h3>
+
+<ul>
+  <li>문자열, <code class="language-plaintext highlighter-rouge">Object</code>, <code class="language-plaintext highlighter-rouge">arguments</code>, <code class="language-plaintext highlighter-rouge">NodeList</code>, <code class="language-plaintext highlighter-rouge">JQuery</code> 객체 등 컬렉션 (<code class="language-plaintext highlighter-rouge">Collection</code>) 형태의 객체 데이터</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Array.isArray(x) || x instanceof Array : false
+</code></pre></div></div>
+
+<ul>
+  <li>인덱스는 <code class="language-plaintext highlighter-rouge">0</code>부터 시작해야 하며, 반드시 <code class="language-plaintext highlighter-rouge">length</code> 프로퍼티를 가짐</li>
+  <li><code class="language-plaintext highlighter-rouge">for ~ of</code> 등을 통해 순회 가능한 <code class="language-plaintext highlighter-rouge">iterable</code>한 객체 (<code class="language-plaintext highlighter-rouge">cf</code>. <code class="language-plaintext highlighter-rouge">iterator</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">forEach</code>를 제외한 나머지 유사 배열 객체는 <code class="language-plaintext highlighter-rouge">Array</code> 메소드를 사용할 수 없음</li>
+  <li><code class="language-plaintext highlighter-rouge">Array.from()</code>으로 배열로 만들 수 있음</li>
+</ul>
+
+<h2 id="이터레이터-iterator--next-함수-호출-시-계속-그-다음-값을-반환하는-객체">이터레이터 (<code class="language-plaintext highlighter-rouge">Iterator</code>) : <code class="language-plaintext highlighter-rouge">next()</code> 함수 호출 시 계속 그 다음 값을 반환하는 객체</h2>
+
+<ul>
+  <li>현재 어디에 있고, 다음엔 어디로 가는지 아는 포인터 (<code class="language-plaintext highlighter-rouge">Pointer</code>)
+    <ul>
+      <li>이터러블 (<code class="language-plaintext highlighter-rouge">Iterable</code>) 프로토콜 : <code class="language-plaintext highlighter-rouge">Symbol.iterator</code>를 구현 및 상속한 메소드를 호출하면, 이터레이터 반환</li>
+      <li>이터레이터 (<code class="language-plaintext highlighter-rouge">Iterator</code>) 프로토콜 : <code class="language-plaintext highlighter-rouge">next()</code>를 호출하면, <code class="language-plaintext highlighter-rouge">value()</code>, <code class="language-plaintext highlighter-rouge">done()</code>을 가진 이터레이터 리터럴 반환</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class ItDog1 extends Dog {
+  [Symbol.iterator]() {
+    return this.name.split(', ').values();
+  }
+}
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const itDog1 = new ItDog1('Toby, Max, Sam');
+console.log([...itDog1]);
+
+class ItDog2 extends Dog {
+  [Symbol.iterator]() {
+    let idx = 0;
+    const names = this.name.split(/,\s?/);
+    return {
+      next() {
+        return { value: names[idx++],
+                 done: idx &gt; names.length };
+      }
+    };
+  }
+} 
+const itDog2 = new ItDog2('Toby, Max, Sam');
+for (const d of itDog2) console.log(d);
+const iter = itDog2[Symbol.iterator]();
+console.log(iter.next());  // 4회 반복
+</code></pre></div></div>
+
+<h3 id="제너레이터-generator--제너레이터-함수-function의-실행을-제어하는-함수">제너레이터 (<code class="language-plaintext highlighter-rouge">Generator</code>) : 제너레이터 함수 <code class="language-plaintext highlighter-rouge">function*()</code>의 실행을 제어하는 함수</h3>
+
+<ul>
+  <li>실행 과정에서 <code class="language-plaintext highlighter-rouge">yield</code>를 만나면, 호출자 (<code class="language-plaintext highlighter-rouge">caller</code>)에게 정보 반환과 제어권을 넘김
+    <ul>
+      <li>제너레이터를 호출하면 이터레이터를 얻음 → 실행이 한번에 끝나지 않는다!</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function* route() { // function* ~ yield → iterator를 return하고, 일시정지(pause)한 상태로 시작!
+  const start = yield "출발 역은?";  // yield가 있으므로 caller에게 제어권을 넘긴다.
+  const end = yield "도착 역은?";
+
+  return `${start}역에서 출발하여 ${end}역에 도착합니다.`;
+}
+
+const caller = route();
+caller.next();
+caller.next('을지로입구');
+caller.next('강남');
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[배열 (Array) : 순서가 있는 데이터 집합]]></summary></entry><entry><title type="html">[JS] 5. 함수 (Function)</title><link href="http://localhost:4000/js5/" rel="alternate" type="text/html" title="[JS] 5. 함수 (Function)" /><published>2024-01-31T00:00:00+09:00</published><updated>2024-01-31T00:00:00+09:00</updated><id>http://localhost:4000/js5</id><content type="html" xml:base="http://localhost:4000/js5/"><![CDATA[<h2 id="함수-function--일련의-과정을-코드-블록으로-감싸-하나의-단위로-정의한-것">함수 (<code class="language-plaintext highlighter-rouge">Function</code>) : 일련의 과정을 코드 블록으로 감싸 하나의 단위로 정의한 것</h2>
 
 <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c6d16c9b-7b9c-4340-bbab-88b15bfd53db" width="80%" /></p>
 
@@ -2141,7 +2757,7 @@ printString(concatFirst, concatAgain, '시작은'); // 시작은 반이고 가�
 <ul>
   <li>디지털하나路 및 모던 자바스크립트 <code class="language-plaintext highlighter-rouge">Deep Dive</code>에서 배운 내용을 정리한 게시글을 작성하고 있다.
     <ul>
-      <li>오늘은 자바스크립트의 객체지향 프로그래밍에 대해 공부하는 시간을 가졌다. 흔히 자바스크립트는 프로토타입 기반 객체지향 언어로 정의하는데, 각각의 프로퍼티들은 프로토타입 체인을 통해 내부 참조를 따라 상위 프로토타입을 순차적으로 검색하는 구조를 갖는다.</li>
+      <li>오늘은 자바스크립트의 객체지향 프로그래밍에 대해 공부하는 시간을 가졌다. 흔히 자바스크립트는 프로토타입 기반 객체지향 언어로 정의되는데, 각각의 프로퍼티들은 프로토타입 체인을 통해 내부 참조를 따라 상위 프로토타입을 순차적으로 검색하는 구조를 가진다. 아무래도 <code class="language-plaintext highlighter-rouge">C++</code>, <code class="language-plaintext highlighter-rouge">Java</code>에도 존재하는 개념이라 금방 이해가 되서 클래스, 오버라이딩, 상속을 자바스크립트에 적용할 수 있었던 것 같다.</li>
     </ul>
   </li>
 </ul>
@@ -2149,507 +2765,131 @@ printString(concatFirst, concatAgain, '시작은'); // 시작은 반이고 가�
 <h3 id="2024년-02월-02일-금">2024년 02월 02일 (금)</h3>
 
 <ul>
-  <li>디지털하나路 및 모던 자바스크립트 <code class="language-plaintext highlighter-rouge">Deep Dive</code>에서 배운 내용을 정리한 게시글을 작성하고 있다.</li>
+  <li>디지털하나路 및 모던 자바스크립트 <code class="language-plaintext highlighter-rouge">Deep Dive</code>에서 배운 내용을 정리한 게시글을 작성하고 있다.
+    <ul>
+      <li>오늘은 자바스크립트의 배열에 대해 공부하는 시간을 가졌다. 어제처럼 배열도 다른 언어에 존재해서 금방 적용해 볼 수 있었는데, 배열과 유사 배열 객체의 차이점이 잘 이해가 되지 않아 코드를 작성하는 데에 애를 먹었다. 그렇지만 <code class="language-plaintext highlighter-rouge">length</code> 프로퍼티를 가지면서 <code class="language-plaintext highlighter-rouge">iterable</code>한 객체들의 구조가 배열과 유사해서 유사 배열 객체라 분류하지만, 배열과는 프로토타입이 달라 <code class="language-plaintext highlighter-rouge">Array</code>가 제공하는 메소드를 사용하지 못한다고 내 나름대로 정리해보니 이후에는 비교적 수월하게 코드를 작성할 수 있었다.</li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="2024년-02월-03일-토">2024년 02월 03일 (토)</h3>
 
 <ul>
-  <li>어제에 이어, <code class="language-plaintext highlighter-rouge">vocawik</code> 기획서의 기능 명세서를 작성하고 있다. 그리고 그동안 작업한 내용을 바탕으로 <code class="language-plaintext highlighter-rouge">vocawik</code> <a href="https://pocj8ur4in.github.io/vocawik1/">프로젝트 소개</a> 및 <a href="https://pocj8ur4in.github.io/vocawik2/">프로젝트 설계</a>에 대한 포스트를 작성하였다.</li>
+  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 기획서의 기능 명세서를 작성하고 있다.
+    <ul>
+      <li>이전에 협업하기로 한 분과 만나기로 한 날짜를 착각해서 (…) 하루가 생겼는데, <code class="language-plaintext highlighter-rouge">MSA</code>나 이벤트 드리븐으로 프로젝트를 진행하는 것은 처음이라 아직 설계 관련 내용에 미완성된 부분이 많아 우선 소개 및 기획에 해당하는 부분을 전달드리고 작성중인 설계에 해당하는 부분을 전반적으로 검토하는 방향으로 이야기가 진행되었다. 그래도 기능 명세를 최대한 할 수 있는 부분까지 작성하면서, 구현 과정에 들어가기 앞서 진행할 작업들을 진행하고자 한다.</li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="2024년-02월-04일-일">2024년 02월 04일 (일)</h3>
 
 <ul>
-  <li></li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[February, 2024 : 시간 관리의 중요성!]]></summary></entry><entry><title type="html">[JS] 7. 객체지향 프로그래밍 (OOP)</title><link href="http://localhost:4000/js7/" rel="alternate" type="text/html" title="[JS] 7. 객체지향 프로그래밍 (OOP)" /><published>2024-01-31T00:00:00+09:00</published><updated>2024-01-31T00:00:00+09:00</updated><id>http://localhost:4000/js7</id><content type="html" xml:base="http://localhost:4000/js7/"><![CDATA[<h2 id="객체지향-프로그래밍-object-oriented-programming--원시-타입을-제외한-모든-것이-객체">객체지향 프로그래밍 (<code class="language-plaintext highlighter-rouge">Object-Oriented Programming</code>) : 원시 타입을 제외한 모든 것이 객체</h2>
-
-<blockquote>
-  <p>자바스크립트는 프로토타입 (<code class="language-plaintext highlighter-rouge">Prototype</code>) 기반 객체지향 프로그래밍 언어 (<code class="language-plaintext highlighter-rouge">Lisp</code>  → <code class="language-plaintext highlighter-rouge">Scheme</code> → <code class="language-plaintext highlighter-rouge">JavaScript</code>)</p>
-</blockquote>
-
-<ul>
-  <li>객체 타입 (<code class="language-plaintext highlighter-rouge">Object Type</code>)과 클래스 (<code class="language-plaintext highlighter-rouge">Class</code>)를 통해 생성된 인스턴스 타입 (<code class="language-plaintext highlighter-rouge">Instance Type</code>) → <code class="language-plaintext highlighter-rouge">this</code></li>
-  <li>프로퍼티는 각 인스턴스의 <code class="language-plaintext highlighter-rouge">EnvRec</code>에 생성되고, 메소드는 프로토타입에 할당되어 모든 인스턴스가 동일
+  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 프로젝트를 위한 도커 레지스트리 서버 및 <code class="language-plaintext highlighter-rouge">UI</code> 컨테이너를 생성하였다.
     <ul>
-      <li>특정 인스턴스에 종속되지 않는 함수는 정적인 클래스 메소드 (<code class="language-plaintext highlighter-rouge">Class Method</code>)</li>
+      <li>그동안 <code class="language-plaintext highlighter-rouge">vocawik</code> 프로젝트에서 활용될 이미지를 정리하고 구현 과정에서 생성된 이미지를 관리할 수 있는 방안에 대해 고심하고 있었는데, 도커 교과서를 통해 도커 레지스트리 서버에 대해 알게 되었다. 그래서 우선 이를 로컬 환경에 구축해본 다음에, 어느 정도 프로젝트가 진행되면 외부 서버에 마이그레이션할 계획으로 도커 컴포즈를 통해 컨테이너들을 구현하였다. (이후에 작성된 도커 컴포즈 파일로 외부 서버에서도 적용하긴 하였는데, 외부에서 도커 레지스트리로 접속하는 것이 잘 작동하지 않아 보류하기로 하였다. 추가로 여러 기술 블로그에서 도커 레지스트리와 비슷한 기능을 지원하는 <code class="language-plaintext highlighter-rouge">Harbor</code>을 적용한 것을 알게 되었는데, 일단은 프로젝트의 빠른 진행을 위해서 도커 레지스트리를 이용하다가, 마이그레이션할 필요성이 있다고 느낄 때 이를 적용해볼까 한다.)</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 기획서와 관련한 내용을 바탕으로 <code class="language-plaintext highlighter-rouge">vocawik</code> <a href="https://pocj8ur4in.github.io/vocawik1/">프로젝트 소개</a> 및 <a href="https://pocj8ur4in.github.io/vocawik2/">프로젝트 설계</a>에 대한 포스트를 작성하였다.
+    <ul>
+      <li>오늘 프로젝트 기획 및 설계에 대해 검토받는 시간을 가졌는데, 기능 명세서만이 아닌 프로젝트 목표 정의나 아키텍처 구조도 등과 같은 다른 설계 자료 또한 작성할 필요성이 있다는 피드백을 받았다. 그래서 원래는 하나로 통합되어 있던 소개 및 기획과 설계에 관련된 부분을 나누고, 후자를 작성하는 데에 집중하기로 하였다. 추가로 도커 레지스트리 서버 말고도 프로젝트 구현에 필요한 사항들을 검토하는 시간을 가졌는데, 이전에 작성한 스프링 이니셜라이저와 관련된 스크립트를 보다 더 발전시켜서, 아예 템플릿 프로젝트를 만들면 어떨까 하는 생각을 하게 되었다.</li>
     </ul>
   </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Animal {}
-class Dog extends Animal {}
-const lucy = new Dog();
-
-console.log(lucy instanceof Dog); // true
-console.log(lucy instanceof Animal); // true
-console.log(lucy instanceof Object); // true
-
-console.log(Object.getPrototypeOf(lucy)); // Animal {}
-console.log(Object.getPrototypeOf(Dog)); // [class Animal]
-console.log(Object.getPrototypeOf(Animal)); // {}
-</code></pre></div></div>
+<h3 id="2024년-02월-05일-월">2024년 02월 05일 (월)</h3>
 
 <ul>
-  <li>프로토타입은 단방향 <code class="language-plaintext highlighter-rouge">LinkedList</code>으로 연결된 구조 → 프로토타입 체인 (<code class="language-plaintext highlighter-rouge">Prototype Chain</code>)
+  <li>디지털하나路 및 모던 자바스크립트 <code class="language-plaintext highlighter-rouge">Deep Dive</code>에서 배운 내용을 정리한 게시글을 작성하고 있다.
     <ul>
-      <li>특정 프로퍼티에 접근할 때 해당 객체에 프로퍼티가 없으면, 내부 참조를 따라 상위 프로토타입을 순차적으로 검색</li>
+      <li>오늘은 자바스크립트의 꽃이라고 할 수 있는 비동기 처리에 대해 학습하였다. 나 같은 경우에는 <code class="language-plaintext highlighter-rouge">async</code>나 <code class="language-plaintext highlighter-rouge">await</code>를 활용하여 자바스크립트 함수를 구현해본 경험이 있었는데, 프로미스는 이번에 처음 접해서 이해하고 구현하는 데에 조금 애를 먹었다. (사실 프로미스를 쉽게 사용할 수 있도록 나온 것이 <code class="language-plaintext highlighter-rouge">async</code>나 <code class="language-plaintext highlighter-rouge">await</code>이므로, 나만 어려운 게 아니라는 데에 안도하긴 했는데… 과제로 나온 것이 이 세개를 골고루 활용해 구현하는 거라;;)</li>
+    </ul>
+  </li>
+  <li>디지털하나路 스터디 6일차 주제에 대해 스터디 팀원과 이야기를 나누고, 서로 자유롭게 의견을 교류하는 시간을 가졌다.
+    <ul>
+      <li>오늘은 자바스크립트에서 활용된 프록시에 대해 다루었다. 사실 프록시 자체보다는 프록시가 활용되는 부분에 관심이 있어서 프록시 패턴이나 프록시 객체는 간단히 정리한 다음에 프록시를 응용한 사례인 캐싱, 유효성 검사기, 로거를 직접 구현해보는 데에 중점을 두었다.</li>
     </ul>
   </li>
 </ul>
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/eabe913e-8056-4309-bd18-ea12d555dfc5" width="50%" /></p>
-
-<h3 id="정적-필드--메소드-static-field--method--특정-인스턴스와-무관하게-클래스에-존재하는-메소드">정적 필드 &amp; 메소드 (<code class="language-plaintext highlighter-rouge">Static Field &amp; Method</code>) : 특정 인스턴스와 무관하게 클래스에 존재하는 메소드</h3>
+<h3 id="2024년-02월-06일-화">2024년 02월 06일 (화)</h3>
 
 <ul>
-  <li>인스턴스 프로퍼티를 참조할 수 없음 → <code class="language-plaintext highlighter-rouge">Static</code>  영역에 생성</li>
+  <li>디지털하나路 및 모던 자바스크립트 <code class="language-plaintext highlighter-rouge">Deep Dive</code>에서 배운 내용을 정리한 게시글을 작성하고 있다.
+    <ul>
+      <li>오늘은 브라우저에 직접 <code class="language-plaintext highlighter-rouge">HTML</code>, <code class="language-plaintext highlighter-rouge">CSS</code>, 자바스크립트를 활용하여 구성 요소를 만들어 보는 시간을 가졌다. 아래의 내용은 해당 시간에서 테이블을 구현해본 연습 문제이다.</li>
+    </ul>
+  </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Animal {
-  static ID = 1;
-  static isDog(ani) {
-    return ani.name === 'Dog';
-  }
-} 
-const dog = new Animal('Dog');
-dog.isDog(dog); // TypeError: dog.isDog is not a function
-Animal.isDog(dog); // OK
-</code></pre></div></div>
-
-<blockquote>
-  <p>싱글톤 패턴 (<code class="language-plaintext highlighter-rouge">Singleton Pattern</code>) : 어떤 클래스가 한 번만 인스턴스화되어, 그 인스턴스에 대한 전역 접근 제공</p>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Singleton {
-  static #_instance; // 관례상 protected
-  constructor() {
-    if (Singleton.#_instance) return Singleton;
-    this.name = 'Singleton';
-    Singleton.#_instance = this;
-  }
-
-  static getInstance() {
-    return this.#_instance || new this();
-  }
-}
-
-const s1 = new Singleton();
-const s2 = new Singleton();
-</code></pre></div>  </div>
-</blockquote>
-
-<h3 id="접근자-accessor-프로퍼티--특정-인스턴스와-무관하게-클래스에-존재하는-메소드">접근자 (<code class="language-plaintext highlighter-rouge">Accessor</code>) 프로퍼티 : 특정 인스턴스와 무관하게 클래스에 존재하는 메소드</h3>
-
-<ul>
-  <li>접근자 프로퍼티을 통해 함수를 프로퍼티처럼 활용할 수 있음</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Emp1 {
-  set fullName(name) { // set을 프로퍼티처럼 활용할 수 있음 → accessor
-    [this.firstName, this.lastName] = name.split(' ');
-  }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const users = [
+    { id: 1, name: '홍길동', tel: '01088889991', addr: '서울' },
+    { id: 2, name: '김길동', tel: '01088889992', addr: '부산' },
+    { id: 3, name: '이길동', tel: '01088889993', addr: '서울' },
+    { id: 4, name: '박길동', tel: '01088889994', addr: '서울' },
+    { id: 5, name: '오길동', tel: '01088889995', addr: '서울' },
+    { id: 6, name: '박길동', tel: '01088889996', addr: '부산' },
+    { id: 7, name: '윤길동', tel: '01088889997', addr: '대구' },
+    { id: 8, name: '송길동', tel: '01088889998', addr: '대전' },
+    { id: 9, name: '신길동', tel: '01088889999', addr: '광주' },
+  ];
   
-  get fullName() {  // get을 프로퍼티처럼 활용할 수 있음 → accessor
-    return `${this.firstName} ${this.lastName}`;
-  }
-}
+const createTable =  (data) =&gt; {
+  let table = document.createElement('table');
+  table.style.textAlign = 'center';
+  table.style.textDecoration = 'underline';
+  table.style.padding = '1%';
 
-class Emp2 { // stackOverflow 발생!
-  set name(nm) { this.name = nm; }
-  get name() { return this.name; }
-}
+  let headerRow = table.insertRow();
 
-class Emp3 {
-  #name;
-
-  set name(#name) { this.#name = name; }
-  get name() { return this.name; }
-}
-
-const hong1 = new Emp1();
-hong1.fullName = 'Gil-Dong Hong';
-console.log(hong1.fullName);
-
-const hong2 = new Emp2();
-hong2.fullName = 'Gil-Dong Hong';
-console.log(hong2.fullName);
-
-const hong3 = new Emp3();
-hong3.fullName = 'Gil-Dong Hong';
-console.log(hong3.fullName);
-</code></pre></div></div>
-
-<h3 id="프록시-proxy-객체--객체의-특정-동작을-가로채서-hooking해서-추가-동작-수행">프록시 (<code class="language-plaintext highlighter-rouge">Proxy</code>) 객체 : 객체의 특정 동작을 가로채서 (<code class="language-plaintext highlighter-rouge">Hooking</code>)해서 추가 동작 수행</h3>
-
-<ul>
-  <li>객체의 작업에 대한 기록 → 로깅 (<code class="language-plaintext highlighter-rouge">Logging</code>)</li>
-  <li>잘못된 접근에 대한 오류 (<code class="language-plaintext highlighter-rouge">Validation Check</code>)</li>
-  <li>기능 제어 (읽기 전용 등) 및 객체 정보 숨기기</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const obj = {
-  id: 1,
-  name: 'Hong',
-  f() {
-    console.log('fffff')
-  },
-};
-
-export const objProxy = new Proxy(obj, {
-  set(target, prop, value){
-    console.log('proxy.set&gt;&gt;', prop, value);
-    target[prop] = value;
-  },
-  get(target, prop){
-    console.log('proxy.get &gt;&gt; ', prop);
-    return target[prop];
-  },
-});
-
-objProxy.id = 100;
-console.log('obj.id&gt;&gt;', objProxy.id, obj['id']);
-</code></pre></div></div>
-
-<h3 id="상속-inheritance--subclass가-프로토타입-체인으로-superclass의-모든-데이터와-기능을-상속">상속 (<code class="language-plaintext highlighter-rouge">Inheritance</code>) : <code class="language-plaintext highlighter-rouge">SubClass</code>가 프로토타입 체인으로 <code class="language-plaintext highlighter-rouge">Superclass</code>의 모든 데이터와 기능을 상속</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Dog extends Animal {
-  constructor(name) {
-    super(name); // 필수(for chaining) + 중복(overload) 불가!
+  for (let key in data[0]) {
+    let th = document.createElement('th');
+    th.textContent = key.toUpperCase();
+    headerRow.appendChild(th);
   }
 
-  bark() {
-    console.log('bowwow!');
-  }
-}
-</code></pre></div></div>
+  let th1 = document.createElement('th');
+  th1.textContent = 'RES';
+  headerRow.appendChild(th1);
+  let th2 = document.createElement('th');
+  th2.textContent = 'DEL';
+  headerRow.appendChild(th2);
 
-<ul>
-  <li>모든 객체는 프로토타입 체인 (<code class="language-plaintext highlighter-rouge">__proto__</code>) 이라는 내부 속성을 가짐
-    <ul>
-      <li>객체를 생성하는 생성자 함수는 <code class="language-plaintext highlighter-rouge">prototype</code> 속성을 가짐 → 해당 프로토타입이 객체의 프로토타입가 됨</li>
-      <li>하위 객체는 상위 객체의 프로토타입을 따라 상위 객체의 속성 및 메소드를 탐색</li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <p>스택 (<code class="language-plaintext highlighter-rouge">Stack</code>) &amp; 큐 (<code class="language-plaintext highlighter-rouge">Queue</code>) : 데이터를 저장하고 관리하기 위한 자료구조</p>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Stack { // 스택 자료구조
-    collection = [];
-
-    push(value) {
-        this.collection.push(value);
+  data.forEach(user =&gt; {
+    let row = table.insertRow();
+    for (let key in user) {
+        let cell = row.insertCell();
+      cell.textContent = user[key];
     }
-    pop() {
-        return this.collection.pop();
-    }
-}
-
-const stack = new Stack();
-stack.push(1); // 추가하기
-stack.push(2); // 추가하기
-stack.push(3); // 추가하기
-console.log(stack.pop()) // 마지막으로 추가된 하나 꺼내기
-
-class Queue { // 큐 자료구조
-    collection = [];
-
-    enqueue(value) {
-        this.collection.push(value);
-    }
-
-    dequeue() {
-        return this.collection.shift();
-    }
-}
-
-const queue = new Queue();
-queue.enqueue(1); // 추가하기
-queue.enqueue(2); // 추가하기
-queue.enqueue(3); // 추가하기
-console.log(queue.dequeue()) // 마지막으로 추가된 하나 꺼내기
-
-
-</code></pre></div>  </div>
-</blockquote>
-
-<h4 id="메소드-오버라이딩-method-overriding--자식-클래스가-부모-클래스의-메소드를-재정의">메소드 오버라이딩 (<code class="language-plaintext highlighter-rouge">Method Overriding</code>) : 자식 클래스가 부모 클래스의 메소드를 재정의</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Animal {
-  ...
-  id = 1;       // 멤버 프로퍼티
-  #age = 10;    // 멤버 프로퍼티 (protected)
   
-  toString() {  // 객체의 toString() 오버라이딩 ([메소드] 다형성!)
-    return `This animal's name is ${this.name}.`;
-  }
-} 
-</code></pre></div></div>
+    let restoreCell = row.insertCell();
+    let restoreButton = document.createElement('button');
+    restoreButton.textContent = '복구';
+    restoreButton.addEventListener('click', () =&gt; {
+      console.log(`복구: ${user.id}`);
 
-<h4 id="다중-상속-multiple-inheritance--한-클래스가-여러-클래스들을-상속">다중 상속 (<code class="language-plaintext highlighter-rouge">Multiple Inheritance</code>) : 한 클래스가 여러 클래스들을 상속</h4>
+      Array.from(row.cells).forEach((cell, columnIndex) =&gt; {
+        if (columnIndex !== 0) cell.style.display = 'block';
+      });
+    })
 
-<ul>
-  <li>자바스크립트는 단일 상속 언어 → <code class="language-plaintext highlighter-rouge">Mixin</code>을 통해 제한적으로 구현할 수 있음 (타입스크립트 : <code class="language-plaintext highlighter-rouge">Interface</code>)</li>
-</ul>
+    let deleteCell = row.insertCell();
+    let deleteButton = document.createElement('button');
+    deleteButton.textContent = '삭제';
+    deleteButton.addEventListener('click', () =&gt; {
+      console.log(`삭제: ${user.id}`);
+      
+      Array.from(row.cells).forEach((cell, columnIndex) =&gt; {
+        if (columnIndex !== 0 &amp;&amp; columnIndex !== row.cells.length - 2) cell.style.display = 'none';
+      });
+    });
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Mixin 정의
-const myMixin = {
-  sayHello() {
-    console.log("Hello!");
-  },
-  sayGoodbye() {
-    console.log("Goodbye!");
-  },
-};
+    deleteCell.appendChild(deleteButton);
+    restoreCell.appendChild(restoreButton);
+  });
 
-function MyClass() {
-  ... // 클래스의 생성자 로직
+  document.body.appendChild(table);
 }
 
-Object.assign(MyClass.prototype, myMixin); // Mixin 적용
-
-const obj = new MyClass(); // 객체 생성 및 Mixin 메서드 호출
-obj.sayHello();    // 출력: Hello!
-obj.sayGoodbye();  // 출력: Goodbye!
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[객체지향 프로그래밍 (Object-Oriented Programming) : 원시 타입을 제외한 모든 것이 객체]]></summary></entry><entry><title type="html">[JS] 6. 배열 (Array) &amp;amp; 이터레이터 (Iterator)</title><link href="http://localhost:4000/js6/" rel="alternate" type="text/html" title="[JS] 6. 배열 (Array) &amp;amp; 이터레이터 (Iterator)" /><published>2024-01-31T00:00:00+09:00</published><updated>2024-01-31T00:00:00+09:00</updated><id>http://localhost:4000/js6</id><content type="html" xml:base="http://localhost:4000/js6/"><![CDATA[<h2 id="배열-array--순서가-있는-데이터-집합">배열 (<code class="language-plaintext highlighter-rouge">Array</code>) : 순서가 있는 데이터 집합</h2>
-
-<ul>
-  <li>배열의 각 요소 (<code class="language-plaintext highlighter-rouge">element</code>)인 프로퍼티 리터럴을 인덱스 (프로퍼티 키)로 접근</li>
-  <li><code class="language-plaintext highlighter-rouge">length</code> 프로퍼티를 가지며, 배열의 길이보다 큰 접근은 <code class="language-plaintext highlighter-rouge">undefined</code>
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">length</code> 프로퍼티를 조정해 배열 길이를 조절할 수 있음 (<code class="language-plaintext highlighter-rouge">-1 &lt; length &lt; 2^32</code>)</li>
-    </ul>
-  </li>
-  <li>자바스크립트에서 배열은 비균질적 (<code class="language-plaintext highlighter-rouge">Nonhomogeneous</code>) : 고정 위치 및 크기를 가지지 않음
-    <ul>
-      <li>희소 배열 (<code class="language-plaintext highlighter-rouge">sparse array</code>) 자료 구조 : 검색에는 약하지만, 조작에는 우수!</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> // 3의 크기를 갖는 배열 생성
-const arr1 = Array(3); // [ &lt;3 empty items&gt; ]
-const arr2 = new Array(3); // [ &lt;3 empty items&gt; ]
-const arr3 = [,,,]; // [ &lt;3 empty items&gt; ]
-
-// 3의 크기를 갖고 1로 채워진 배열 생성
-const arr4 = Array(3).fill(1); // [ 1,1,1 ]
-
-// 3의 크기를 갖고 인덱스 1부터 1이 존재하는 배열 생성
-const arr5 = Array(3).fill(1, 1); // [ &lt;1 empty item&gt;, 1, 1 ]
-
-// 3의 크기를 갖고 인덱스 1 이상 2 미만에 1이 존재하는 배열 생성
-const arr6 = Array(3).fill(1, 0, 2); // [ &lt;1 empty item&gt;, 1, &lt;1 empty item&gt; ]
-
-// arr2를 복제한 유사 배열 객체 생성
-const arr7 = Array.from(arr2); // [ undefined, undefined, undefined ]
-
-// 3의 크기를 갖는 유사 배열 객체 생성
-const arr8 = Array.from(Array(3)); // [ undefined, undefined, undefined ]
-
-// 3의 크기를 갖고 1,2,3이 존재하는 유사 배열 객체 생성
-const arr9 = Array.from(Array(3), (_, i)  =&gt; i + 1); // [ 1, 2, 3 ]
-
-// 3의 크기를 갖고 1,2,3이 존재하는 유사 배열 객체 생성
-const arr10 = Array.from(Array(3).keys()); // [ 1, 2, 3 ]
-
-// 3의 크기를 갖고 1로 채워진 배열 생성
-const arr11 = [];
-arr11.push(1); // [ 1 ]
-arr11.push(1); // [ 1, 1 ]
-arr11.push(1); // [ 1, 1, 1 ]
-
-// 스택 배열
-const stack = [];
-stack.push(1);
-stack.push(2);
-stack.push(3);
-stack.pop();
-
-// 큐 배열
-const queue = [];
-queue.push(1);
-queue.push(2);
-queue.push(3);
-queue.shift();
-
-// 스택 배열, 큐 배열 초기화
-stack.length = 0;
-queue.length = 0;
-
-// 배열 검색
-const arr12 = [ 3, 7, 3, 9, 2];
-arr12.indexOf(3);  // 0
-arr.lastIndexOf(3); // 2
-arr.includes(3); // true
-
-const arr13 = [ { id : 1 }, { id : 2 }, { id : 3 }, { id : 2 } ];
-const idx = arr13.findIndex(item =&gt; item.id === 2); // 1
-
-// 배열 루프
-arr13.forEach(( arr, idx ) =&gt; console.log(arr.id));
-
-// 배열 요소 합치기
-const arr14 = arr1.concat(arr2);
-const arr15 = [...arr1, ...arr2];
-
-// 배열 평탄화
-const arr16 = [ 1, 2, [3] ].flat();
-console.log(arr16); // 1, 2, 3
-
-const arr17 = [ 1, 2, [[3]] ].flat();
-console.log(arr17); // 1, 2, [3]
-
-const arr18 = [ 1, 2, [[3]] ].flat(2);
-console.log(arr18); // 1, 2, 3
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const arr = [1, 2, 3, 4, 5];
-
-// ex1) [2,3]을 추출
-const ex1 = arr.slice(1,3);
-
-console.log(`\n#1`);
-console.log(ex1);
-
-// ex2) [3]부터 모두 다 추출
-const ex2 = arr.slice(arr.indexOf(3));
-
-console.log(`\n#2`);
-console.log(ex2);
-
-// ex3) [2,3,4] 제거하기
-arr.splice(1, 3)
-
-console.log(`\n#3`);
-console.log(arr);
-
-// ex4) 복원하기
-arr.splice(1, 0, 2,3,4)
-
-console.log(`\n#4`);
-console.log(arr);
-
-// ex5) [3] 부터 끝까지 제거하기
-arr.splice(arr.indexOf(3))
-
-console.log(`\n#5`);
-console.log(arr);
-
-// ex6) 복원하기
-arr.splice(2, 0, 3,4,5)
-
-console.log(`\n#6`);
-console.log(arr);
-
-// ex7) [1,2, 'X', 'Y', 'Z', 4, 5] 만들기
-arr.splice(2, 1)
-arr.splice(2, 0, 'X', 'Y', 'Z')
-
-console.log(`\n#7`);
-console.log(arr);
-
-// ex8) 위 7번 문제를 splice를 사용하지 말고 작성하시오.
-arr.splice(2, 3)
-const ex8 = [...arr.slice(0, 2), 'X', 'Y', 'Z' , ...arr.slice(2)]
-
-console.log(`\n#8`);
-console.log(ex8);
-</code></pre></div></div>
-
-<blockquote>
-  <p>리스트 (<code class="language-plaintext highlighter-rouge">List</code>) : 중첩 참조 <code class="language-plaintext highlighter-rouge">link</code>를 가진 객체</p>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const array = [1, 2, 3, …]; // 배열
-
-const list = { // 리스트
-    value: 1,
-    rest: {   // 메모리 주소 (link)
-        value: 2,
-        rest: {
-            value: 3,
-            rest: {...}
-        }
-    }
-}
-</code></pre></div>  </div>
-
-  <p>→ 자비스크립트의 <code class="language-plaintext highlighter-rouge">Array</code>는 <code class="language-plaintext highlighter-rouge">List</code> : <code class="language-plaintext highlighter-rouge">List</code>는 검색은 느리지만, 조작하는 것은 쉽다!</p>
-</blockquote>
-
-<h3 id="유사-배열-객체-array-like-object--배열과-유사한-형태를-갖지만-배열은-아닌-객체">유사 배열 객체 (<code class="language-plaintext highlighter-rouge">Array-like Object</code>) : 배열과 유사한 형태를 갖지만, 배열은 아닌 객체</h3>
-
-<ul>
-  <li>문자열, <code class="language-plaintext highlighter-rouge">Object</code>, <code class="language-plaintext highlighter-rouge">arguments</code>, <code class="language-plaintext highlighter-rouge">NodeList</code>, <code class="language-plaintext highlighter-rouge">JQuery</code> 객체 등 컬렉션 (<code class="language-plaintext highlighter-rouge">Collection</code>) 형태의 객체 데이터</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Array.isArray(x) || x instanceof Array : false
-</code></pre></div></div>
-
-<ul>
-  <li>인덱스는 <code class="language-plaintext highlighter-rouge">0</code>부터 시작해야 하며, 반드시 <code class="language-plaintext highlighter-rouge">length</code> 프로퍼티를 가짐</li>
-  <li><code class="language-plaintext highlighter-rouge">for ~ of</code> 등을 통해 순회 가능한 <code class="language-plaintext highlighter-rouge">iterable</code>한 객체 (<code class="language-plaintext highlighter-rouge">cf</code>. <code class="language-plaintext highlighter-rouge">iterator</code>)</li>
-  <li><code class="language-plaintext highlighter-rouge">forEach</code>를 제외한 나머지 유사 배열 객체는 <code class="language-plaintext highlighter-rouge">Array</code> 메소드를 사용할 수 없음</li>
-  <li><code class="language-plaintext highlighter-rouge">Array.from()</code>으로 배열로 만들 수 있음</li>
-</ul>
-
-<h2 id="이터레이터-iterator--next-함수-호출-시-계속-그-다음-값을-반환하는-객체">이터레이터 (<code class="language-plaintext highlighter-rouge">Iterator</code>) : <code class="language-plaintext highlighter-rouge">next()</code> 함수 호출 시 계속 그 다음 값을 반환하는 객체</h2>
-
-<ul>
-  <li>현재 어디에 있고, 다음엔 어디로 가는지 아는 포인터 (<code class="language-plaintext highlighter-rouge">Pointer</code>)
-    <ul>
-      <li>이터러블 (<code class="language-plaintext highlighter-rouge">Iterable</code>) 프로토콜 : <code class="language-plaintext highlighter-rouge">Symbol.iterator</code>를 구현 및 상속한 메소드를 호출하면, 이터레이터 반환</li>
-      <li>이터레이터 (<code class="language-plaintext highlighter-rouge">Iterator</code>) 프로토콜 : <code class="language-plaintext highlighter-rouge">next()</code>를 호출하면, <code class="language-plaintext highlighter-rouge">value()</code>, <code class="language-plaintext highlighter-rouge">done()</code>을 가진 이터레이터 리터럴 반환</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class ItDog1 extends Dog {
-  [Symbol.iterator]() {
-    return this.name.split(', ').values();
-  }
-}
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const itDog1 = new ItDog1('Toby, Max, Sam');
-console.log([...itDog1]);
-
-class ItDog2 extends Dog {
-  [Symbol.iterator]() {
-    let idx = 0;
-    const names = this.name.split(/,\s?/);
-    return {
-      next() {
-        return { value: names[idx++],
-                 done: idx &gt; names.length };
-      }
-    };
-  }
-} 
-const itDog2 = new ItDog2('Toby, Max, Sam');
-for (const d of itDog2) console.log(d);
-const iter = itDog2[Symbol.iterator]();
-console.log(iter.next());  // 4회 반복
-</code></pre></div></div>
-
-<h3 id="제너레이터-generator--제너레이터-함수-function의-실행을-제어하는-함수">제너레이터 (<code class="language-plaintext highlighter-rouge">Generator</code>) : 제너레이터 함수 <code class="language-plaintext highlighter-rouge">function*()</code>의 실행을 제어하는 함수</h3>
-
-<ul>
-  <li>실행 과정에서 <code class="language-plaintext highlighter-rouge">yield</code>를 만나면, 호출자 (<code class="language-plaintext highlighter-rouge">caller</code>)에게 정보 반환과 제어권을 넘김
-    <ul>
-      <li>제너레이터를 호출하면 이터레이터를 얻음 → 실행이 한번에 끝나지 않는다!</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function* route() { // function* ~ yield → iterator를 return하고, 일시정지(pause)한 상태로 시작!
-  const start = yield "출발 역은?";  // yield가 있으므로 caller에게 제어권을 넘긴다.
-  const end = yield "도착 역은?";
-
-  return `${start}역에서 출발하여 ${end}역에 도착합니다.`;
-}
-
-const caller = route();
-caller.next();
-caller.next('을지로입구');
-caller.next('강남');
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[배열 (Array) : 순서가 있는 데이터 집합]]></summary></entry></feed>
+createTable(users);
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[February, 2024 : 시간 관리의 중요성!]]></summary></entry></feed>
