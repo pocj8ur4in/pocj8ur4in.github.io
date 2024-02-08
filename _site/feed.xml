@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-07T17:55:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-08T15:34:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
 
 <ul>
   <li>정적 타입 (<code class="language-plaintext highlighter-rouge">Static Type</code>) : 변수, 매개변수, 함수 반환 값 등에 대한 타입을 명시적으로 지정 가능</li>
@@ -343,6 +343,28 @@ introduce2("김군", undefined);
 introduce2("김군", 170);
 </code></pre></div>  </div>
 </blockquote>
+
+<h3 id="함수-오버로딩-function-overloading--동일한-이름에-매개-변수만-다른-함수를-여러-개-만드는-것">함수 오버로딩 (<code class="language-plaintext highlighter-rouge">Function Overloading</code>) : 동일한 이름에 매개 변수만 다른 함수를 여러 개 만드는 것</h3>
+
+<ul>
+  <li>매개변수의 형태가 다양한 여러 케이스에 대응하는 같은 이름의 함수를 만드는 것</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 서로 다른 버전의 함수들 -&gt; `오버로드 시그니처`
+function func(a : number): void;
+function func(a : number, b : number, c : number) : void;
+
+// 실제 구현부 -&gt; `구현 시그니처`
+function func(a:number, b?: number, c?:number) {
+  if(typeof b === 'number' &amp;&amp; typeof c === 'number') {
+    console.log(a + b + c);
+  } else {
+    console.log(a + b + c);
+  }
+}
+
+func(1); func(1, 2, 3);
+</code></pre></div></div>
 
 <h2 id="인터페이스-interface--타입을-정의할-때-객체의-구조를-명시적으로-지정-가능">인터페이스 (<code class="language-plaintext highlighter-rouge">Interface</code>) : 타입을 정의할 때 객체의 구조를 명시적으로 지정 가능</h2>
 
@@ -2817,7 +2839,7 @@ printString(concatFirst, concatAgain, '시작은'); // 시작은 반이고 가�
 <ul>
   <li>디지털하나路 및 모던 자바스크립트 <code class="language-plaintext highlighter-rouge">Deep Dive</code>에서 배운 내용을 정리한 게시글을 작성하고 있다.
     <ul>
-      <li>오늘은 브라우저에 직접 <code class="language-plaintext highlighter-rouge">HTML</code>, <code class="language-plaintext highlighter-rouge">CSS</code>, 자바스크립트를 활용하여 구성 요소를 만들어 보는 시간을 가졌다. 아래의 내용은 해당 시간에서 테이블을 구현해본 연습 문제이다.</li>
+      <li>오늘은 브라우저에 직접 <code class="language-plaintext highlighter-rouge">HTML</code>, <code class="language-plaintext highlighter-rouge">CSS</code>, 자바스크립트를 활용하여 구성 요소를 만들어 보는 시간을 가졌다. 아래의 내용은 해당 시간에서 테이블을 구현해본 연습 문제이다. 오늘을 끝으로 자바스크립트 수업은 마무리를 지었지만, 아직 자바스크립트 시리즈 내의 게시글들은 전반적인 틀만 잡혀있고 군데군데 부족한 부분들이 많다고 생각한다. 그래서 추후에 도서를 공부한 내용을 지속적으로 더해나가 더 완성도 있는 글을 작성할 계획이다.</li>
     </ul>
   </li>
 </ul>
@@ -2892,4 +2914,14 @@ const createTable =  (data) =&gt; {
 }
 
 createTable(users);
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[February, 2024 : 시간 관리의 중요성!]]></summary></entry></feed>
+</code></pre></div></div>
+
+<h3 id="2024년-02월-07일-수">2024년 02월 07일 (수)</h3>
+
+<ul>
+  <li>디지털하나路 및 우아한 타입스크립트 <code class="language-plaintext highlighter-rouge">with</code> 리액트에서 배운 내용을 정리한 게시글을 작성하고 있다.
+    <ul>
+      <li>어제부로 드디어 자바스크립트를 마치고, 오늘부터 며칠간 타입스크립트에 대해 배우게 되었다. 처음 접했을 때의 인상은 자바스크립트에 정적 타입만 확장한 것뿐인데 왜 굳이 현업에서 자주 활용되는지 몰랐는데, 배우면 배울수록 타입을 도입한 것 자체가 안정적이고 가독성 있는 코드를 작성하는 데에 도움이 된다는 생각이 들었다. 다만 타입스크립트를 배우는 시간이 너무 짧아 (일주일도 안된다…), 추후에 따로 공부하는 시간을 가져야 할 것 같아 공부할 때 참고할만한 책을 더해 게시글을 작성하려고 한다.</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[February, 2024 : 시간 관리의 중요성!]]></summary></entry></feed>
