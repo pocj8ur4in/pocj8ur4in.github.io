@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-08T15:34:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-09T21:43:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
 
 <ul>
   <li>정적 타입 (<code class="language-plaintext highlighter-rouge">Static Type</code>) : 변수, 매개변수, 함수 반환 값 등에 대한 타입을 명시적으로 지정 가능</li>
@@ -2922,6 +2922,26 @@ createTable(users);
   <li>디지털하나路 및 우아한 타입스크립트 <code class="language-plaintext highlighter-rouge">with</code> 리액트에서 배운 내용을 정리한 게시글을 작성하고 있다.
     <ul>
       <li>어제부로 드디어 자바스크립트를 마치고, 오늘부터 며칠간 타입스크립트에 대해 배우게 되었다. 처음 접했을 때의 인상은 자바스크립트에 정적 타입만 확장한 것뿐인데 왜 굳이 현업에서 자주 활용되는지 몰랐는데, 배우면 배울수록 타입을 도입한 것 자체가 안정적이고 가독성 있는 코드를 작성하는 데에 도움이 된다는 생각이 들었다. 다만 타입스크립트를 배우는 시간이 너무 짧아 (일주일도 안된다…), 추후에 따로 공부하는 시간을 가져야 할 것 같아 공부할 때 참고할만한 책을 더해 게시글을 작성하려고 한다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2024년-02월-08일-목">2024년 02월 08일 (목)</h3>
+
+<ul>
+  <li>디지털하나路 및 우아한 타입스크립트 <code class="language-plaintext highlighter-rouge">with</code> 리액트에서 배운 내용을 정리한 게시글을 작성하고 있다.
+    <ul>
+      <li>어제는 타입스크립트의 타입 시스템에 대해 전반적으로 배웠다면, 오늘은 타입스크립트의 함수 타입와 인터페이스에 대해 다루는 시간을 가졌다. 자바스크립트와 달리 타입을 쓰면서 제약 조건이 많아진 것 같으면서도, 오히려 확장성 측면에서는 무궁무진하다는 말에 맞게 다양한 개념들이 적용되었다고 생각한다. 특히 인터페이스를 타입으로 하는 객체 리터럴에서 인터페이스에 정의되지 않은 동적 타입이 할당되는 것을 금지하면서도, 객체의 새로운 추가 속성을 명시적으로 any 타입으로 설정하는 인덱스 시그니처를 통해서는 가능하게 하는 것은… 처음에 각 개념들을 바로바로 이해하는 것은 어렵지만 실제로 코드를 작성할 때 왜 타입을 통해 어떤 부분이 제약되었나, 그리고 제약된 부분을 확장하고자 어떤 시도가 있었는지를 생각하다보니 조금이나마 알게 되었던 것 같다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2024년-02월-09일-금">2024년 02월 09일 (금)</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 템플릿 프로젝트로 <code class="language-plaintext highlighter-rouge">vw-temp</code>에 대한 작업을 진행하고 있다.
+    <ul>
+      <li>4일에 구상하였던 템플릿 프로젝트를 시간 날 때 틈틈이 해보려고 한다. 일단 프레임워크는 내가 가장 빠르게 작업할 수 있는 자바 스프링부트로 진행하고, 내부 구조는 멀티 모듈로 구성하였다. 그러나 그동안 작업해본 토이 프로젝트와 달리, 모듈을 10개로 나누었는데 이는 책에서 배운 클린 마이크로서비스의 아키텍처를 최대한 반영해보려고 한 것이다. 그리고 커밋의 단위를 어떤 기능을 만들었는지, 가 아닌 어떤 기술을 적용하는지, 로 하고, 분류는 모두 <code class="language-plaintext highlighter-rouge">init:</code>로 하여 향후 <code class="language-plaintext highlighter-rouge">fork</code>하여 프로젝트를 분화시키기 쉽도록 하려고 한다. 원래대로라면 서비스에 특화된 아키텍처 구조를 가진 각각의 배포판이 나오는 것이 가장 이상적일 것 같지만… 너무 작업량이 많아 배보다 배꼽이 큰 상황이 되버리므로 올인원 (<code class="language-plaintext highlighter-rouge">All-in-one</code>)으로 하여 프로젝트에서 필요할 때 의존 관계나 모듈을 제외할 수 있도록 할 생각이다. 또 기술을 적용한 부분이 많아 코드처럼 바로바로 그것이 무엇인지 체크하기 어려우므로 주석을 굉장히 세세하게 달아서 향후 내가 작업할 때 최대한 참고할 수 있도록 할 것이다. 사실 그동안 <code class="language-plaintext highlighter-rouge">HTML</code>이랑 자바스크립트만 보다가 오랜만에 본 자바 &amp; 스프링부트라 좀 삽질이 많았는데, 연휴라고 놀지 말고 빠르게 작업하도록 해야겠다.</li>
     </ul>
   </li>
 </ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[February, 2024 : 시간 관리의 중요성!]]></summary></entry></feed>
