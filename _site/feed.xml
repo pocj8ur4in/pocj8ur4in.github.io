@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-09T21:43:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-10T22:22:19+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
 
 <ul>
   <li>정적 타입 (<code class="language-plaintext highlighter-rouge">Static Type</code>) : 변수, 매개변수, 함수 반환 값 등에 대한 타입을 명시적으로 지정 가능</li>
@@ -2942,6 +2942,16 @@ createTable(users);
   <li><code class="language-plaintext highlighter-rouge">vocawik</code> 템플릿 프로젝트로 <code class="language-plaintext highlighter-rouge">vw-temp</code>에 대한 작업을 진행하고 있다.
     <ul>
       <li>4일에 구상하였던 템플릿 프로젝트를 시간 날 때 틈틈이 해보려고 한다. 일단 프레임워크는 내가 가장 빠르게 작업할 수 있는 자바 스프링부트로 진행하고, 내부 구조는 멀티 모듈로 구성하였다. 그러나 그동안 작업해본 토이 프로젝트와 달리, 모듈을 10개로 나누었는데 이는 책에서 배운 클린 마이크로서비스의 아키텍처를 최대한 반영해보려고 한 것이다. 그리고 커밋의 단위를 어떤 기능을 만들었는지, 가 아닌 어떤 기술을 적용하는지, 로 하고, 분류는 모두 <code class="language-plaintext highlighter-rouge">init:</code>로 하여 향후 <code class="language-plaintext highlighter-rouge">fork</code>하여 프로젝트를 분화시키기 쉽도록 하려고 한다. 원래대로라면 서비스에 특화된 아키텍처 구조를 가진 각각의 배포판이 나오는 것이 가장 이상적일 것 같지만… 너무 작업량이 많아 배보다 배꼽이 큰 상황이 되버리므로 올인원 (<code class="language-plaintext highlighter-rouge">All-in-one</code>)으로 하여 프로젝트에서 필요할 때 의존 관계나 모듈을 제외할 수 있도록 할 생각이다. 또 기술을 적용한 부분이 많아 코드처럼 바로바로 그것이 무엇인지 체크하기 어려우므로 주석을 굉장히 세세하게 달아서 향후 내가 작업할 때 최대한 참고할 수 있도록 할 것이다. 사실 그동안 <code class="language-plaintext highlighter-rouge">HTML</code>이랑 자바스크립트만 보다가 오랜만에 본 자바 &amp; 스프링부트라 좀 삽질이 많았는데, 연휴라고 놀지 말고 빠르게 작업하도록 해야겠다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2024년-02월-10일-토">2024년 02월 10일 (토)</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 템플릿 프로젝트로 <code class="language-plaintext highlighter-rouge">vw-temp</code>에 대한 작업을 진행하고 있다.
+    <ul>
+      <li>일단은 <code class="language-plaintext highlighter-rouge">vw-temp</code> 상위 모듈에 대한 세팅을 마쳤다. 그리고 하나씩 의존 관계를 추가해보면서 바로 적용하는 데에 실패하면 오류를 찾아 해결하고, 성공하면 이게 이 모듈에 들어가는 것이 맞나? 혹은 더 나은 방향이 있나 생각해보고 있다. 그래도 딱히 많이 한 건 아니고 이제 웹이랑 데이터베이스 쪽의 의존 관계를 건드려보는 중이라 생각보다 더딘데, 아직까지 초반이라 그런지 좀 실행 과정에 오류가 잦아 최대한 해결해보려 하고 있다. (내일 외가에 내려갈 예정이라 좀 많이 다뤄보려고 했는데, 속도가 다소 아쉽긴 하다.)</li>
     </ul>
   </li>
 </ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[February, 2024 : 시간 관리의 중요성!]]></summary></entry></feed>
