@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-11T17:50:26+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-12T21:19:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
 
 <ul>
   <li>정적 타입 (<code class="language-plaintext highlighter-rouge">Static Type</code>) : 변수, 매개변수, 함수 반환 값 등에 대한 타입을 명시적으로 지정 가능</li>
@@ -2962,6 +2962,21 @@ createTable(users);
   <li><code class="language-plaintext highlighter-rouge">vocawik</code> 템플릿 프로젝트로 <code class="language-plaintext highlighter-rouge">vw-temp</code>에 대한 작업을 진행하고 있다.
     <ul>
       <li>이전부터 관심 있었던 커스텀 어노테이션을 적용해보았는데, 막상 설정하고 보니 할 수 있는 일이 없는 것 같아 커스텀 어노테이션에 대해 더 찾아보았다. 내가 생각한 것은 프록시 패턴처럼 해당 정보를 가져와 로그를 출력하는 로깅 (<code class="language-plaintext highlighter-rouge">Logging</code>)을 처리하는 것이었는데, 리플렉션 (<code class="language-plaintext highlighter-rouge">reflection</code>)을 이용해 내가 생각한 작업을 한다는 것을 알게 되어서 향후 그 부분을 <code class="language-plaintext highlighter-rouge">common</code>이나 <code class="language-plaintext highlighter-rouge">infra</code> 모듈에 추가할 생각이다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2024년-02월-12일-월">2024년 02월 12일 (월)</h3>
+
+<ul>
+  <li>디지털하나路 1차 과제를 해결하였다.
+    <ul>
+      <li>그동안 배웠던 프론트엔드 기초에 해당하는 영역에서 총 4문제들을 주어진 기한 내에 해결하는 것이었는데, 생각보다 자잘한 조건들이 많아서 시간이 오래 걸렸던 것 같다. 모레까지 제출이긴 하지만 내일 수업도 다시 진행될테니 미리 다 해결하려고 노력하였다.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 템플릿 프로젝트로 <code class="language-plaintext highlighter-rouge">vw-temp</code>에 대한 작업을 진행하고 있다.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">sonarqube</code>, <code class="language-plaintext highlighter-rouge">Feign</code>, <code class="language-plaintext highlighter-rouge">Redis</code>를 프로젝트에 적용하는 작업을 진행하였다. <code class="language-plaintext highlighter-rouge">sonarqube</code>는 일단 의존 관계와 설정만 추가하고, 이를 젠킨스와 같은 <code class="language-plaintext highlighter-rouge">CI/CD</code> 파이프라인 툴에 적용할 수 있도록 할 계획이고, <code class="language-plaintext highlighter-rouge">Feign</code>와 <code class="language-plaintext highlighter-rouge">Redis</code> 역시 추후 예시 클래스를 만들 때 쓸 수 있고자 도입하였다.</li>
     </ul>
   </li>
 </ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[February, 2024 : 시간 관리의 중요성!]]></summary></entry></feed>
