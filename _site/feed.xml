@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-12T21:19:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-13T10:59:07+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
 
 <ul>
   <li>정적 타입 (<code class="language-plaintext highlighter-rouge">Static Type</code>) : 변수, 매개변수, 함수 반환 값 등에 대한 타입을 명시적으로 지정 가능</li>
@@ -304,6 +304,7 @@ logName({ name: 'John', job: 'cowboy' }); // 오류: 객체 리터럴은 정의�
       <li>필수 매개변수 : 함수에 선언된 모든 매개변수를 필수라고 가정 → 타입 안정성이 강화</li>
       <li>선택 매개변수 : 타입 애너테이션의 : 앞에 <code class="language-plaintext highlighter-rouge">?</code>를 추가하여, 매개변수가 선택적이란 것을 표시</li>
       <li>기본 매개변수 : 기본적으로 값을 제공되므로, 함수 내부에 암묵적으로 <code class="language-plaintext highlighter-rouge">| undefined union type</code>이 추가<br />→ 타입스크립트는 함수의 매개변수에 대해 인수를 누락하거나 <code class="language-plaintext highlighter-rouge">undefined</code> 인수를 사용한 호출을 허용</li>
+      <li>나머지 매개변수 : 함수 선언의 마지막 매개 변수에 위치한 <code class="language-plaintext highlighter-rouge">...</code> 스프레드 연산자로 표현<br />→ 해당 매개변수에서 시작해 함수에 전달된 나머지 인수가 모두 단일 배열에 저장<br />(인수 배열을 나타내기 위해 끝에 <code class="language-plaintext highlighter-rouge">[]</code> 구문이 추가)</li>
     </ul>
   </li>
 </ul>
@@ -323,6 +324,12 @@ function addZ (a: ANY, b?: ANY) {
 
 addX(1, 0); addY(1, 0); addZ(1, 0);
 addZ(1); // addX(1); addY(1);
+
+const getSum = (...rest:number[]) =&gt;{
+ let sum = 0;
+ rest.forEach((el) =&gt; sum += el);
+ return console.log(sum);
+}
 </code></pre></div></div>
 
 <blockquote>
@@ -343,6 +350,76 @@ introduce2("김군", undefined);
 introduce2("김군", 170);
 </code></pre></div>  </div>
 </blockquote>
+
+<ul>
+  <li>함수의 반환 타입 : 함수가 반환할 수 있는 가능한 모든 값을 이해하면 함수가 반환하는 타입을 알 수 있음
+    <ul>
+      <li>그러나, 함수에서 반환 타입을 명시적으로 선언하는 방식이 유용할 때가 종종 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function singSongRecursive(songs : string[], count = 0) : number {
+    return songs.length ? singSongRecursive(songs.slice(1), count + 1) : count;
+}
+
+const singSongsRecursive = (songs : string[], count=0) : number =&gt;
+ songs.length ? singSongsRecursive(songs.slice(1), 
+count + 1) : count;
+</code></pre></div></div>
+
+<ul>
+  <li>함수 매개변수 타입 : 함수를 가지기 위한 매개변수 또는 변수의 타입을 선언하는 방법
+    <ul>
+      <li>함수 타입 구문은 화살표 함수와 유사하지만 함수 본문 대신 타입이 존재</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let nothingGivesString : () =&gt; string;
+
+let inputAndOutput : (songs: string[], count?: number) =&gt; number;
+</code></pre></div></div>
+
+<ul>
+  <li>함수 타입 괄호 : 함수 타입은 다른 타입이 사용되는 모든 곳에 배치할 수 있음 (유니온 타입 포함)
+    <ul>
+      <li>유니언 타입의 애너테이션에서 함수 반환 위치를 나타내거나 타입을 감싸는 부분을 표시할 때 괄호 사용</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 타입은 string | undefined 유니언을 반환하는 함수
+let returnsStringOrUndefined : () =&gt; string | undefined;
+
+// 타입은 undefined나 string 을 반환하는 함수
+let maybeReturnsString : (() =&gt; string) | undefined;
+</code></pre></div></div>
+
+<ul>
+  <li>매개변수 타입 추론 : 선언된 타입의 위치에 제공된 함수의 매개변수 타입을 유추할 수 있음
+    <ul>
+      <li>또한, 함수를 매개변수로 갖는 함수에 인수로 전달된 함수는 해당 매개변수 타입도 유추할 수 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let singer : (song : string) =&gt; string;
+
+singer = function(song){
+    // song : string의 타입
+    return `Singing : ${song.toUpperCase()}!`; // OK
+}
+
+const songs = ["One More Time", "I AM", "Cry"];
+
+// song : string
+// index : number
+
+songs.forEach((song, index) =&gt; {
+    console.log(`${song} is at index ${index}`);
+});
+</code></pre></div></div>
 
 <h3 id="함수-오버로딩-function-overloading--동일한-이름에-매개-변수만-다른-함수를-여러-개-만드는-것">함수 오버로딩 (<code class="language-plaintext highlighter-rouge">Function Overloading</code>) : 동일한 이름에 매개 변수만 다른 함수를 여러 개 만드는 것</h3>
 
@@ -395,7 +472,33 @@ const typedCallSignature: CallSignature = (input) =&gt; input.length;
   <p>인덱스 시그니처를 사용하면, 프로퍼티의 존재 유무를 알 수 없다!</p>
 </blockquote>
 
-<h3 id="중첩-시그니처-nested-interface--속성의-타입이-다른-인터페이스나-객체-타입을-가질-수-있음">중첩 시그니처 (<code class="language-plaintext highlighter-rouge">Nested Interface</code>) : 속성의 타입이 다른 인터페이스나 객체 타입을 가질 수 있음</h3>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TS" /><summary type="html"><![CDATA[타입스크립트 (TypeScript) : JavaScript을 확장하여 정적 타입을 지원하는 프로그래밍 언어]]></summary></entry><entry><title type="html">[JS] 9. 비동기 처리 (Asynchronous Processing)</title><link href="http://localhost:4000/js9/" rel="alternate" type="text/html" title="[JS] 9. 비동기 처리 (Asynchronous Processing)" /><published>2024-02-05T00:00:00+09:00</published><updated>2024-02-05T00:00:00+09:00</updated><id>http://localhost:4000/js9</id><content type="html" xml:base="http://localhost:4000/js9/"><![CDATA[<h2 id="비동기-처리-asynchronous-processing--프로세스의-완료를-기다리지-않고-다른-작업을-진행">비동기 처리 (<code class="language-plaintext highlighter-rouge">Asynchronous Processing</code>) : 프로세스의 완료를 기다리지 않고 다른 작업을 진행</h2>
+<h3 id="중첩-시그니처-nested-interface--속성의-타입이-다른-인터페이스나-객체-타입을-가질-수-있음">중첩 시그니처 (<code class="language-plaintext highlighter-rouge">Nested Interface</code>) : 속성의 타입이 다른 인터페이스나 객체 타입을 가질 수 있음</h3>
+
+<h2 id="클래스-속성-class-attribute--클래스의-속성을-읽거나-쓰려면-명시적으로-선언해야-함">클래스 속성 (<code class="language-plaintext highlighter-rouge">Class Attribute</code>) : 클래스의 속성을 읽거나 쓰려면 명시적으로 선언해야 함</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class FieldTrip{
+    destination  : string; // 불필요
+
+    constructor(destination : string){
+        this.destination = destination;
+        console.log(`We're going to ${destination}!`);
+
+    this.nonexistent = destination;
+    //Error: Property 'nonexistent' does not exist on type 'FieldTrip'
+    }
+}
+</code></pre></div></div>
+
+<h3 id="클래스-메소드-class-method">클래스 메소드 (<code class="language-plaintext highlighter-rouge">Class Method</code>)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Greeted {
+    constructor(message : string){
+        console.log(`As I always say : ${message}!`);
+    }
+}
+//Greeted 클래스의 생성자는 message:string으로 매개변수가 제공되어야 함
+new Greeted("Practice makes perfect.");
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TS" /><summary type="html"><![CDATA[타입스크립트 (TypeScript) : JavaScript을 확장하여 정적 타입을 지원하는 프로그래밍 언어]]></summary></entry><entry><title type="html">[JS] 9. 비동기 처리 (Asynchronous Processing)</title><link href="http://localhost:4000/js9/" rel="alternate" type="text/html" title="[JS] 9. 비동기 처리 (Asynchronous Processing)" /><published>2024-02-05T00:00:00+09:00</published><updated>2024-02-05T00:00:00+09:00</updated><id>http://localhost:4000/js9</id><content type="html" xml:base="http://localhost:4000/js9/"><![CDATA[<h2 id="비동기-처리-asynchronous-processing--프로세스의-완료를-기다리지-않고-다른-작업을-진행">비동기 처리 (<code class="language-plaintext highlighter-rouge">Asynchronous Processing</code>) : 프로세스의 완료를 기다리지 않고 다른 작업을 진행</h2>
 
 <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a3f7aa41-e708-45b7-8397-068980fc6f3c" width="70%" /></p>
 
