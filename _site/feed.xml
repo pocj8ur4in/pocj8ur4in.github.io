@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-13T10:59:07+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-14T23:02:53+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
 
 <ul>
   <li>정적 타입 (<code class="language-plaintext highlighter-rouge">Static Type</code>) : 변수, 매개변수, 함수 반환 값 등에 대한 타입을 명시적으로 지정 가능</li>
@@ -3080,6 +3080,31 @@ createTable(users);
   <li><code class="language-plaintext highlighter-rouge">vocawik</code> 템플릿 프로젝트로 <code class="language-plaintext highlighter-rouge">vw-temp</code>에 대한 작업을 진행하고 있다.
     <ul>
       <li><code class="language-plaintext highlighter-rouge">sonarqube</code>, <code class="language-plaintext highlighter-rouge">Feign</code>, <code class="language-plaintext highlighter-rouge">Redis</code>를 프로젝트에 적용하는 작업을 진행하였다. <code class="language-plaintext highlighter-rouge">sonarqube</code>는 일단 의존 관계와 설정만 추가하고, 이를 젠킨스와 같은 <code class="language-plaintext highlighter-rouge">CI/CD</code> 파이프라인 툴에 적용할 수 있도록 할 계획이고, <code class="language-plaintext highlighter-rouge">Feign</code>와 <code class="language-plaintext highlighter-rouge">Redis</code> 역시 추후 예시 클래스를 만들 때 쓸 수 있고자 도입하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2024년-02월-13일-화">2024년 02월 13일 (화)</h3>
+
+<ul>
+  <li>디지털하나路 및 우아한 타입스크립트 <code class="language-plaintext highlighter-rouge">with</code> 리액트에서 배운 내용을 정리한 게시글을 작성하고 있다.
+    <ul>
+      <li>오늘은 타입스크립트의 클래스에 대해 배우는 시간을 가졌다. 타입스크립트의 클래스 또한 타입스크립트에서 타입을 도입한 것과 맞물린다고 생각하였는데, 멤버 변수 및 매개 변수에 정적 타입을 지원하여 클래스의 멤버 변수 및 함수 매개변수에 대한 타입을 명시 가능하다는 것과 클래스 확장 (<code class="language-plaintext highlighter-rouge">extends</code>)를 통해 생성자를 재정의할 수 있다는 부분이 가장 큰 특징인 것 같았다. 특히 타입스크립트의 구조적 타이핑이 선언되는 방식이 아니라 객체의 형태만 고려하므로 타입스크립트의 클래스는 동일한 멤버를 모두 포함하는 모든 객체 타입을 클래스에 할 수 있는 것으로 간주된다는 것은 자바스크립트의 확장성을 최대한 보장하면서도 ‘타입’이라는 구조를 지키게 하는 타입스크립트의 철학과 맞닿는 부분이 있다고 생각하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2024년-02월-14일-수">2024년 02월 14일 (수)</h3>
+
+<ul>
+  <li>디지털하나路 1차 과제를 재검토 후 제출하였다.
+    <ul>
+      <li>문제와 코드를 번갈아보니 미처 신경쓰지 못한 부분이 몇몇 보였다. 기억에 나는 것들은 2번 문제에서 테이블 자체를 동적으로 생성하는 게 아니라 테이블 내의 열과 셀을 동적으로 생성하는 부분과, 내가 설정하는 값이 아니라 <code class="language-plaintext highlighter-rouge">JSON</code> 파일에서 <code class="language-plaintext highlighter-rouge">base_time</code>이라는 변수를 통해 작동하는 부분을 수정한 것이었다. 그 외에 코드의 결과를 그대로 유지하면서 최대한 코드를 간결하게 리펙토링한 뒤에 제출하였다.</li>
+    </ul>
+  </li>
+  <li>디지털하나路 및 우아한 타입스크립트 <code class="language-plaintext highlighter-rouge">with</code> 리액트에서 배운 내용을 정리한 게시글을 작성하고 있다.
+    <ul>
+      <li>오늘은 타입스크립트의 타입 제한자와 제너릭에 대해 배웠다. 타입 연산자 <code class="language-plaintext highlighter-rouge">typeof</code>나 <code class="language-plaintext highlighter-rouge">keyof</code>와 타입 어서션 <code class="language-plaintext highlighter-rouge">as</code>를 통해 제너릭 클래스인 유틸리티 클래스를 만드는 것이 오늘 실습이었는데, 솔직히 말하면 이전에 언급한 개념들에 대한 명확한 이해 없이 문제를 풀다가 이해가 된 것 같다. 나 혼자서 코드를 작성하면서 알아챌 수 있는 부분도 있겠지만, 강의나 다른 사람의 시선을 통해 알 수 있는 부분 또한 있을 것인데 그 부분은 놓치게 되었다는 반성을 하였다. 이제 내일을 끝으로 타입스크립트에 대한 내용은 끝이 나는데, 자바스크립트와 달리 타입스크립트에 대한 게시글 작성 또한 잘 진행되지 않은 것 같아서 아쉬운 부분이 있다. 향후 타입스크립트가 활용되는 리액트 파트에서 다시 점검하는 시간을 가져야할 것 같다…</li>
     </ul>
   </li>
 </ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[February, 2024 : 시간 관리의 중요성!]]></summary></entry></feed>
