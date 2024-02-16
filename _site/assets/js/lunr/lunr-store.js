@@ -358,4 +358,10 @@ var store = [{
         "tags": ["TS"],
         "url": "/ts1/",
         "teaser": null
+      },{
+        "title": "[React] 1. 리액트 (React)",
+        "excerpt":"리액트 (React) : 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리      가상 DOM : 실제 DOM가 상호 작용하면서 웹 어플리케이션의 빠른 렌더링이 가능   선언형 뷰 (Declarative View) : 사용자 인터페이스를 어떻게 보일지 명시적으로 선언하고, 개발자가 그 명세를 작성   컴포넌트 기반 구조 : 부모-자식 관계 및 상태 (State)를 갖는 재사용 가능한 모듈들로 어플리케이션 구성   단방향 데이터 바인딩 : 데이터의 흐름이 단일 방향으로 진행하여 디버깅 용이   JSX (JavaScript XML) : 자바스크립트 코드 내에 마크업을 작성해 가독성 향상 및 명확한 표현 가능      가상 DOM (Virtual DOM) : 실제 DOM (Document Object Model) 에 대한 가벼운 복사본      초기 렌더링 : 초기 상태에서 가상 DOM은 실제 DOM과 동일한 구조를 가짐   상태 변화 감지 : 사용자 상호 작용 또는 데이터의 변경과 같은 이벤트가 발생하면, 렌더링 엔진은 새로운 가상 DOM 생성   가상 DOM 비교 : 새로운 가상 DOM과 이전의 가상 DOM을 비교하여 변경된 부분 탐색   실제 DOM 업데이트 : 변경된 부분만을 실제 DOM에 적용      단일 페이지 어플리케이션 (SPA)?          전체 어플리케이션 HTML 페이지 하나만을 로드하고, 사용자가 페이지를 이동할 때 동적으로 업데이트     동적 로딩을 통해 필요한 데이터나 자원을 비동기적으로 필요할 때 로드 및 화면 업데이트     클라이언트 사이드 라우팅을 통해 URL의 변경에 따라 필요한 컴포넌트만을 로드 및 업데이트     사용자가 페이지를 이동할 때마다 매번 서버에 요청을 보내지 않아도 됨     데이터와 화면이 양방향으로 바인딩되어 있어, 데이터의 변경을 화면에 자동으로 반영할 수 있음       ↔ 서버 사이드 렌더링 (SSR) : 서버에서 초기 HTML을 렌더링하고 클라이언트에 전달    컴포넌트 (Component) : 리액트 애플리케이션에서 UI를 구성하고 재사용 가능한 모듈을 표현      속성 (Props) 을 받고, 상태 (state)와 메소드 (Method)를 가짐   반복되는 UI 단위 (JS Code 또는 HTML-JSX) → 재사용성과 가독성을 위한 도구   가능한 독립적으로 실행되도록 작성하고, 데이터 영역과 UI를 분리   클래스 컴포넌트 (Class Component) : state와 라이프사이클 메소드를 통해 상태와 생명주기 관리      state를 사용하여 컴포넌트의 상태를 관리   라이프사이클 메소드를 활용하여 컴포넌트의 생명주기에 따른 동작을 수행 가능   this 키워드를 사용하여 상태 및 메소드에 접근      함수 컴포넌트 (Functional Component) : 훅을 통해 상태와 생명주기를 관리      useState, useEffect, useContext와 같은 훅을 사용하여 상태를 관리   useEffect 훅을 통해 라이프사이클 메소드와 유사한 동작을 수행 가능   클래스 컴포넌트보다 간결하고 명료하게 작성 가능         index.tsx에서 React.StrictMode로 App이 감싸져 있으면, LifeCycle이 두 번씩 호출됨!     &lt;React.StrictMode&gt;   &lt;App/&gt; &lt;/React.StrictMode&gt;     ","categories": [],
+        "tags": ["React"],
+        "url": "/react1/",
+        "teaser": null
       }]
