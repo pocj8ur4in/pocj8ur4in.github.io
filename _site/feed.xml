@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-16T14:54:30+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[React] 1. 리액트 (React)</title><link href="http://localhost:4000/react1/" rel="alternate" type="text/html" title="[React] 1. 리액트 (React)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react1</id><content type="html" xml:base="http://localhost:4000/react1/"><![CDATA[<h2 id="리액트-react--사용자-인터페이스를-만들기-위한-javascript-라이브러리">리액트 (<code class="language-plaintext highlighter-rouge">React</code>) : 사용자 인터페이스를 만들기 위한 <code class="language-plaintext highlighter-rouge">JavaScript</code> 라이브러리</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-17T22:05:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[React] 1. 리액트 (React)</title><link href="http://localhost:4000/react1/" rel="alternate" type="text/html" title="[React] 1. 리액트 (React)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react1</id><content type="html" xml:base="http://localhost:4000/react1/"><![CDATA[<h2 id="리액트-react--사용자-인터페이스를-만들기-위한-javascript-라이브러리">리액트 (<code class="language-plaintext highlighter-rouge">React</code>) : 사용자 인터페이스를 만들기 위한 <code class="language-plaintext highlighter-rouge">JavaScript</code> 라이브러리</h2>
 
 <ul>
   <li>가상 <code class="language-plaintext highlighter-rouge">DOM</code> : 실제 <code class="language-plaintext highlighter-rouge">DOM</code>가 상호 작용하면서 웹 어플리케이션의 빠른 렌더링이 가능</li>
@@ -3008,6 +3008,26 @@ createTable(users);
   <li><code class="language-plaintext highlighter-rouge">vocawik</code> 템플릿 프로젝트로 <code class="language-plaintext highlighter-rouge">vw-temp</code>에 대한 작업을 진행하고 있다.
     <ul>
       <li>화요일엔 레디스와 페인을 적용하고, 수요일엔 멀티모듈 구조를 수정하고 나니 멀티모듈의 테스트 환경이 눈에 들어왔다. 구체적으로는 인프라 모듈에서의 레디스와 레포 모듈에서의 데이터베이스들의 연결 설정이 되지 않아 테스트 환경에서는 정상적으로 구동되지 않았는데, <code class="language-plaintext highlighter-rouge">H2</code> 데이터베이스를 테스트 환경에서 쓴다면 각 데이터베이스의 특징을 제대로 담아내지 못할 것 같아 찾아보니 도커 컨테이너를 통해 테스트를 진행하는 테스트 컨테이너 기술이 스프링에 있어 이를 구현하였다. 다만, 컨테이너가 여러 개가 하나씩 열리게 되었는데 이를 도커 컴포즈로도 실행 가능한 것 같아 향후 의존 관게를 도입하는 부분이 일단락되면 리펙토링을 통해 도입할 계획이다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2024년-02월-16일-금">2024년 02월 16일 (금)</h3>
+
+<ul>
+  <li>디지털하나路 및 우아한 모던 리액트에서 배운 내용을 정리한 게시글을 작성하고 있다.
+    <ul>
+      <li>오늘은 리액트를 처음 다뤄보는 시간을 가졌다. 이전에 사용한 자바스크립트, 타입스크립트 모두 리액트에서 활용이 가능하여 실제로 바로 결과물을 구현해볼 수 있었는데 역시 계속 코드로만 보던 것을 직접 브라우저에 표현되는 것을 보니 감회가 남달랐다고 해야 하나… 그래도 가상 <code class="language-plaintext highlighter-rouge">DOM</code>이나 상태와 같이 이전에 경험해보지 못한 새로운 개념들 또한 존재하였고 그 부분을 위주로 공부하면서 리액트에 대해 처음 알아가는 시간을 가졌다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2024년-02월-17일-토">2024년 02월 17일 (토)</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 템플릿 프로젝트로 <code class="language-plaintext highlighter-rouge">vw-temp</code>에 대한 작업을 진행하고 있다.
+    <ul>
+      <li>오늘은 엘라스틱서치를 적용하려고 계속 시행착오를 거듭한 하루였다. 이젠 도커 컨테이너로 엘라스틱서치나 키바나를 구동하고 이를 어플리케이션에 연결하는 작업은 손쉽게 할 수 있는 것 같은데, 바로 이전에 도입한 엘라스틱서치를 테스트 컨테이너로 구동하는 것이 말썽이었다. <code class="language-plaintext highlighter-rouge">MySQL</code>도 그랬듯이, 아마 테스트 컨테이너와 어플리케이션 사이에 연결되는 부분에서 문제가 발생하는 것 같은데, 실제 컨테이너에서 이를 확인해볼 수 없어 직접 하나씩 설정은 손봐야하는 것이 너무 많은 시간을 요하고 있다. (처음에는 안되나? 싶었는데, 실제로 이를 적용한 사례 또한 존재하고 애초에 테스트 컨테이너 중에 엘라스틱서치 전용 컨테이너가 있어서 그건 아닌 것 같다…)</li>
     </ul>
   </li>
 </ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[February, 2024 : 시간 관리의 중요성!]]></summary></entry></feed>
