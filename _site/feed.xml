@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-18T22:30:52+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[React] 1. 리액트 (React)</title><link href="http://localhost:4000/react1/" rel="alternate" type="text/html" title="[React] 1. 리액트 (React)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react1</id><content type="html" xml:base="http://localhost:4000/react1/"><![CDATA[<h2 id="리액트-react--사용자-인터페이스를-만들기-위한-javascript-라이브러리">리액트 (<code class="language-plaintext highlighter-rouge">React</code>) : 사용자 인터페이스를 만들기 위한 <code class="language-plaintext highlighter-rouge">JavaScript</code> 라이브러리</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-19T16:25:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[React] 1. 리액트 (React)</title><link href="http://localhost:4000/react1/" rel="alternate" type="text/html" title="[React] 1. 리액트 (React)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react1</id><content type="html" xml:base="http://localhost:4000/react1/"><![CDATA[<h2 id="리액트-react--사용자-인터페이스를-만들기-위한-javascript-라이브러리">리액트 (<code class="language-plaintext highlighter-rouge">React</code>) : 사용자 인터페이스를 만들기 위한 <code class="language-plaintext highlighter-rouge">JavaScript</code> 라이브러리</h2>
 
 <ul>
   <li>가상 <code class="language-plaintext highlighter-rouge">DOM</code> : 실제 <code class="language-plaintext highlighter-rouge">DOM</code>가 상호 작용하면서 웹 어플리케이션의 빠른 렌더링이 가능</li>
@@ -33,7 +33,7 @@
   <p>↔ 서버 사이드 렌더링 (<code class="language-plaintext highlighter-rouge">SSR</code>) : 서버에서 초기 <code class="language-plaintext highlighter-rouge">HTML</code>을 렌더링하고 클라이언트에 전달</p>
 </blockquote>
 
-<h3 id="컴포넌트-component--리액트-애플리케이션에서-ui를-구성하고-재사용-가능한-모듈을-표현">컴포넌트 (<code class="language-plaintext highlighter-rouge">Component</code>) : 리액트 애플리케이션에서 <code class="language-plaintext highlighter-rouge">UI</code>를 구성하고 재사용 가능한 모듈을 표현</h3>
+<h2 id="컴포넌트-component--리액트-애플리케이션에서-ui를-구성하고-재사용-가능한-모듈을-표현">컴포넌트 (<code class="language-plaintext highlighter-rouge">Component</code>) : 리액트 애플리케이션에서 <code class="language-plaintext highlighter-rouge">UI</code>를 구성하고 재사용 가능한 모듈을 표현</h2>
 
 <ul>
   <li>속성 (<code class="language-plaintext highlighter-rouge">Props</code>) 을 받고, 상태 (<code class="language-plaintext highlighter-rouge">state</code>)와 메소드 (<code class="language-plaintext highlighter-rouge">Method</code>)를 가짐</li>
@@ -41,7 +41,7 @@
   <li>가능한 독립적으로 실행되도록 작성하고, 데이터 영역과 <code class="language-plaintext highlighter-rouge">UI</code>를 분리</li>
 </ul>
 
-<h4 id="클래스-컴포넌트-class-component--state와-라이프사이클-메소드를-통해-상태와-생명주기-관리">클래스 컴포넌트 (<code class="language-plaintext highlighter-rouge">Class Component</code>) : <code class="language-plaintext highlighter-rouge">state</code>와 라이프사이클 메소드를 통해 상태와 생명주기 관리</h4>
+<h3 id="클래스-컴포넌트-class-component--state와-라이프사이클-메소드를-통해-상태와-생명주기-관리">클래스 컴포넌트 (<code class="language-plaintext highlighter-rouge">Class Component</code>) : <code class="language-plaintext highlighter-rouge">state</code>와 라이프사이클 메소드를 통해 상태와 생명주기 관리</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">state</code>를 사용하여 컴포넌트의 상태를 관리</li>
@@ -51,7 +51,7 @@
 
 <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/ebe188c3-b6a2-4d06-b376-03fcf2e642f4" width="50%" /></p>
 
-<h4 id="함수-컴포넌트-functional-component--훅을-통해-상태와-생명주기를-관리">함수 컴포넌트 (<code class="language-plaintext highlighter-rouge">Functional Component</code>) : 훅을 통해 상태와 생명주기를 관리</h4>
+<h3 id="함수-컴포넌트-functional-component--훅을-통해-상태와-생명주기를-관리">함수 컴포넌트 (<code class="language-plaintext highlighter-rouge">Functional Component</code>) : 훅을 통해 상태와 생명주기를 관리</h3>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">useState</code>, <code class="language-plaintext highlighter-rouge">useEffect</code>, <code class="language-plaintext highlighter-rouge">useContext</code>와 같은 훅을 사용하여 상태를 관리</li>
@@ -68,7 +68,175 @@
   &lt;App/&gt;
 &lt;/React.StrictMode&gt;
 </code></pre></div>  </div>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[리액트 (React) : 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리]]></summary></entry><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
+</blockquote>
+
+<h3 id="속성-prop--부모-컴포넌트로부터-자식-컴포넌트로-데이터를-전달하는-데에-사용">속성 (<code class="language-plaintext highlighter-rouge">Prop</code>) : 부모 컴포넌트로부터 자식 컴포넌트로 데이터를 전달하는 데에 사용</h3>
+
+<ul>
+  <li>변수나 함수와 같은 속성들을 부모에서 자식으로 전달 (<code class="language-plaintext highlighter-rouge">MyComponent.defaultProps = { ... }</code>)
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Read-Only</code> : 속성이 변경되도 <code class="language-plaintext highlighter-rouge">Re-Rendering</code>하지 않음! (값은 바꿔도 화면엔 아무런 영향 없음!)</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 부모 컴포넌트
+import React from 'react';
+import ChildComponent from './ChildComponent';
+
+function ParentComponent() {
+  const dataToPass = "안녕하세요!";
+  
+  return (
+    &lt;ChildComponent message={dataToPass} /&gt;
+  );
+}
+
+// 자식 컴포넌트
+import React from 'react';
+
+function ChildComponent(props) {
+  return (
+    &lt;div&gt;
+      &lt;p&gt;{props.message}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre></div></div>
+
+<h3 id="상태-state---사용자-상호작용에-응답하거나-컴포넌트의-생명주기에-변경되는-정보를-저장하는-데에-사용">상태 (<code class="language-plaintext highlighter-rouge">State</code>) :  사용자 상호작용에 응답하거나 컴포넌트의 생명주기에 변경되는 정보를 저장하는 데에 사용</h3>
+
+<ul>
+  <li>부모의 상태가 변경되면, 그 상태를 참조하는 모든 자식 컴포넌트가 <code class="language-plaintext highlighter-rouge">Re-Rendering</code>
+    <ul>
+      <li>상태를 통합하면 <code class="language-plaintext highlighter-rouge">Re-Rendering</code>이 많이 일어나므로, 상태를 연관성에 맞게 분리해 좁게 사용해야 함</li>
+      <li><code class="language-plaintext highlighter-rouge">Setter</code>로 값을 수신하면 <code class="language-plaintext highlighter-rouge">Dispatcher</code> 값이 세팅 → <code class="language-plaintext highlighter-rouge">re-rendering</code>을 <code class="language-plaintext highlighter-rouge">trigger</code> (<code class="language-plaintext highlighter-rouge">DOM</code> 갱신)</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React, { useState } from 'react';
+
+function ExampleComponent() {
+  const [count, setCount] = useState(0);
+  const [message, setMessage] = useState('안녕하세요!');
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;{message}&lt;/p&gt;
+      &lt;p&gt;카운트: {count}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre></div></div>
+
+<blockquote>
+  <p>초기화는 동기 방식이면 오래 걸리더라도 가능, <code class="language-plaintext highlighter-rouge">Promise</code>는 <code class="language-plaintext highlighter-rouge">async</code>/<code class="language-plaintext highlighter-rouge">await</code>로 처리해도 <code class="language-plaintext highlighter-rouge">Promise</code>가 세팅</p>
+</blockquote>
+
+<h3 id="컴포넌트-개발-원칙--코드의-가독성-유지보수성-재사용성을-향상하여-구성-요소를-생성">컴포넌트 개발 원칙 : 코드의 가독성, 유지보수성, 재사용성을 향상하여 구성 요소를 생성</h3>
+
+<ul>
+  <li>함수형 컴포넌트 (<code class="language-plaintext highlighter-rouge">Pure Functional Component</code>)를 활용할 것
+    <ul>
+      <li>상태나 생명주기 메서드 없이 단순히 <code class="language-plaintext highlighter-rouge">props</code>를 받아 렌더링하는 컴포넌트 → 간결하고 재사용성이 높힐 수 있음</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Container Component</code>와 <code class="language-plaintext highlighter-rouge">Presentational Component</code>를 분리할 것
+    <ul>
+      <li>데이터를 가져오는 로직과 <code class="language-plaintext highlighter-rouge">UI</code>를 그리는 로직을 분리하여 관리</li>
+    </ul>
+  </li>
+  <li>상태를 공유하는 단위로 분리할 것
+    <ul>
+      <li>관련된 상태를 함께 관리하고, 필요한 경우 <code class="language-plaintext highlighter-rouge">useContext</code>를 사용하여 상태 공유를 구현</li>
+    </ul>
+  </li>
+  <li>아주 깊은 구조로 중첩되는 <code class="language-plaintext highlighter-rouge">Container</code> 컴포넌트는 피할 것
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Context</code>를 남발하는 대신, 상태 관리 등의 용도로 필요한 경우에만 적절히 사용할 것</li>
+    </ul>
+  </li>
+  <li>각 컴포넌트는 독립적으로 작성할 것
+    <ul>
+      <li>컴포넌트 간의 결합도를 최소화해 재사용성을 높이고 유지보수를 용이하게 만들어야 함</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="리액트-훅-react-hook--함수형-컴포넌트에서-상태와-생명주기-메서드를-사용할-때-사용">리액트 훅 (<code class="language-plaintext highlighter-rouge">React Hook</code>) : 함수형 컴포넌트에서 상태와 생명주기 메서드를 사용할 때 사용</h2>
+
+<ul>
+  <li>상태 관리 훅 : <code class="language-plaintext highlighter-rouge">useState</code>, <code class="language-plaintext highlighter-rouge">userContext</code>, <code class="language-plaintext highlighter-rouge">useReducer</code></li>
+  <li>시점 훅 : <code class="language-plaintext highlighter-rouge">useLayoutEffect</code>, <code class="language-plaintext highlighter-rouge">useEffect</code></li>
+  <li>메모화 훅 : <code class="language-plaintext highlighter-rouge">useMemo</code>, <code class="language-plaintext highlighter-rouge">useCallback</code>, <code class="language-plaintext highlighter-rouge">memo</code></li>
+</ul>
+
+<blockquote>
+  <p>리액트 훅의 3원칙?</p>
+
+  <ol>
+    <li>컴포넌트의 영역 안에서만 작동한다!
+      <ul>
+        <li>컴포넌트 혹은 커스텀 훅 내부에서만 호출해야 함</li>
+      </ul>
+    </li>
+    <li>기능을 여러 훅으로 나누면 좋다!
+      <ul>
+        <li>여러 훅으로 나누어져 있어도 컴포넌트에서 한번에 순차 호출</li>
+        <li>함수형 컴포넌트 ⇒ 함수 ⇒ 기능 단위 분리 ⇒ 가독성 ⇒ 테스트 및 유지보수에 유리</li>
+      </ul>
+    </li>
+    <li>컴포넌트의 최상위 레이어(스코프)에서만 호출해야 한다!
+      <ul>
+        <li>블록 내부에서는 호출할 수 없음</li>
+      </ul>
+    </li>
+  </ol>
+</blockquote>
+
+<h3 id="usestate--함수형-컴포넌트에서-상태를-추가하고-업데이트할-때-사용"><code class="language-plaintext highlighter-rouge">useState</code> : 함수형 컴포넌트에서 상태를 추가하고 업데이트할 때 사용</h3>
+
+<ul>
+  <li>클래스 컴포넌트에서의 <code class="language-plaintext highlighter-rouge">this.state</code>와 <code class="language-plaintext highlighter-rouge">this.setState</code>와 유사한 역할</li>
+  <li>첫번째 값에 현재 상태의 값, 두번째 값에 상태를 업데이트하는 함수가 담긴 배열을 반환</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React, { useState } from 'react';
+
+function ExampleComponent() {
+  // useState를 사용하여 count라는 상태를 정의하고 초기값을 0으로 설정
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Count: {count}&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;증가&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre></div></div>
+
+<h3 id="useref--함수형-컴포넌트-내에서-참조를-생성하고-관리할-때-사용"><code class="language-plaintext highlighter-rouge">useRef</code> : 함수형 컴포넌트 내에서 참조를 생성하고 관리할 때 사용</h3>
+
+<ul>
+  <li>컴포넌트의 렌더링과 관계없이 변수를 저장 가능 → <code class="language-plaintext highlighter-rouge">useState</code>와 달리 매번 <code class="language-plaintext highlighter-rouge">Re-Rendering</code>이 일어나지 않음</li>
+  <li>주로 <code class="language-plaintext highlighter-rouge">DOM</code> 요소에 접근하거나 컴포넌트의 생명주기와 독립적으로 값을 유지하는 상황에서 활용</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React, { useRef, useEffect } from 'react';
+
+function MyComponent() {
+  const myInputRef = useRef(null);
+
+  useEffect(() =&gt; {
+    // 컴포넌트가 마운트된 후, input 요소에 포커스를 줌
+    myInputRef.current.focus();
+  }, []);
+
+  return &lt;input ref={myInputRef} /&gt;;
+}
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[리액트 (React) : 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리]]></summary></entry><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
 
 <ul>
   <li>정적 타입 (<code class="language-plaintext highlighter-rouge">Static Type</code>) : 변수, 매개변수, 함수 반환 값 등에 대한 타입을 명시적으로 지정 가능</li>
@@ -3030,4 +3198,8 @@ createTable(users);
       <li>오늘은 엘라스틱서치를 적용하려고 계속 시행착오를 거듭한 하루였다. 이젠 도커 컨테이너로 엘라스틱서치나 키바나를 구동하고 이를 어플리케이션에 연결하는 작업은 손쉽게 할 수 있는 것 같은데, 바로 이전에 도입한 엘라스틱서치를 테스트 컨테이너로 구동하는 것이 말썽이었다. <code class="language-plaintext highlighter-rouge">MySQL</code>도 그랬듯이, 아마 테스트 컨테이너와 어플리케이션 사이에 연결되는 부분에서 문제가 발생하는 것 같은데, 실제 컨테이너에서 이를 확인해볼 수 없어 직접 하나씩 설정은 손봐야하는 것이 너무 많은 시간을 요하고 있다. (처음에는 안되나? 싶었는데, 실제로 이를 적용한 사례 또한 존재하고 애초에 테스트 컨테이너 중에 엘라스틱서치 전용 컨테이너가 있어서 그건 아닌 것 같다…)</li>
     </ul>
   </li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[February, 2024 : 시간 관리의 중요성!]]></summary></entry></feed>
+</ul>
+
+<h3 id="2024년-02월-18일-일">2024년 02월 18일 (일)</h3>
+
+<h3 id="2024년-02월-19일-월">2024년 02월 19일 (월)</h3>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[February, 2024 : 시간 관리의 중요성!]]></summary></entry></feed>
