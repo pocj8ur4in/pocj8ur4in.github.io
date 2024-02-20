@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-19T16:25:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[React] 1. 리액트 (React)</title><link href="http://localhost:4000/react1/" rel="alternate" type="text/html" title="[React] 1. 리액트 (React)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react1</id><content type="html" xml:base="http://localhost:4000/react1/"><![CDATA[<h2 id="리액트-react--사용자-인터페이스를-만들기-위한-javascript-라이브러리">리액트 (<code class="language-plaintext highlighter-rouge">React</code>) : 사용자 인터페이스를 만들기 위한 <code class="language-plaintext highlighter-rouge">JavaScript</code> 라이브러리</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-20T17:14:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[React] 1. 리액트 (React)</title><link href="http://localhost:4000/react1/" rel="alternate" type="text/html" title="[React] 1. 리액트 (React)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react1</id><content type="html" xml:base="http://localhost:4000/react1/"><![CDATA[<h2 id="리액트-react--사용자-인터페이스를-만들기-위한-javascript-라이브러리">리액트 (<code class="language-plaintext highlighter-rouge">React</code>) : 사용자 인터페이스를 만들기 위한 <code class="language-plaintext highlighter-rouge">JavaScript</code> 라이브러리</h2>
 
 <ul>
   <li>가상 <code class="language-plaintext highlighter-rouge">DOM</code> : 실제 <code class="language-plaintext highlighter-rouge">DOM</code>가 상호 작용하면서 웹 어플리케이션의 빠른 렌더링이 가능</li>
@@ -236,6 +236,122 @@ function MyComponent() {
 
   return &lt;input ref={myInputRef} /&gt;;
 }
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useRef, useState, useEffect } from 'react';
+
+function MyComponent() {
+  const countRef = useRef(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() =&gt; {
+    // countRef는 렌더링과 무관하게 유지되는 변수
+    countRef.current = count;
+  }, [count]);
+
+  const handleClick = () =&gt; {
+    setCount(count + 1);
+    console.log(countRef.current); // 항상 가장 최근 값 출력
+  };
+
+  return &lt;button onClick={handleClick}&gt;증가&lt;/button&gt;;
+}
+</code></pre></div></div>
+
+<h3 id="forwardref--부모-컴포넌트에서-자식-컴포넌트로-ref를-전달할-수-있게-함"><code class="language-plaintext highlighter-rouge">forwardRef</code> : 부모 컴포넌트에서 자식 컴포넌트로 <code class="language-plaintext highlighter-rouge">ref</code>를 전달할 수 있게 함</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">useRef</code>로 컴포넌트 외부 (자식)의 <code class="language-plaintext highlighter-rouge">DOM</code>에 접근
+    <ul>
+      <li>부모에서 선언 → 자식에게 전달 → 자식에서 참조 걸기 → 부모에서 컨트롤</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React, { useRef, forwardRef } from 'react';
+
+// 자식 컴포넌트
+const ChildComponent = forwardRef((props, ref) =&gt; {
+  const internalState = useRef(null);
+
+  // 부모 컴포넌트에서 전달한 ref에 직접 접근
+  // ref.current를 통해 부모 컴포넌트의 ref를 참조할 수 있음
+  const handleButtonClick = () =&gt; {
+    console.log('자식 컴포넌트에서 버튼 클릭');
+    console.log('내부 상태:', internalState.current);
+  };
+
+  return (
+    // 여기에 컴포넌트 JSX를 작성
+    &lt;div&gt;
+      &lt;button onClick={handleButtonClick}&gt;자식 컴포넌트에서 클릭&lt;/button&gt;
+    &lt;/div&gt;
+  );
+});
+
+// 부모 컴포넌트
+const ParentComponent = () =&gt; {
+  // ref를 생성하여 자식 컴포넌트에 전달
+  const childRef = useRef();
+
+  // 부모 컴포넌트에서 ref를 자식 컴포넌트에 전달
+  return (
+    &lt;div&gt;
+      {/* forwardRef를 사용하여 자식 컴포넌트에 ref 전달 */}
+      &lt;ChildComponent ref={childRef} /&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default ParentComponent;
+</code></pre></div></div>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">But</code>, 외부 <code class="language-plaintext highlighter-rouge">DOM</code>을 참조하는 <code class="language-plaintext highlighter-rouge">ref</code>를 갖는 것은 <code class="language-plaintext highlighter-rouge">Coupling</code>이 강해지므로 좋지 않다!</p>
+</blockquote>
+
+<h4 id="useimperativehandle-with-forwardref--부모-컴포넌트가-자식-컴포넌트를-컨트롤할-수-있게-함"><code class="language-plaintext highlighter-rouge">useImperativeHandle (with forwardRef)</code> : 부모 컴포넌트가 자식 컴포넌트를 컨트롤할 수 있게 함</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">useImperativeHandle</code>을 통해 부모 컴포넌트에 함수 및 기능을 노출시킴
+    <ul>
+      <li>부모에게 참조값을 전달 → 자식은 객체를 반환</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React, { forwardRef, useRef, useImperativeHandle } from 'react';
+
+const ChildComponent = forwardRef((props, ref) =&gt; {
+  // useImperativeHandle을 사용하여 부모 컴포넌트에 특정 함수나 값들을 노출
+  useImperativeHandle(ref, () =&gt; ({
+    // 부모 컴포넌트에서 입력 엘리먼트에 포커스를 맞추기 위해 함수를 노출
+    focusInput: () =&gt; {
+      inputRef.current.focus();
+    }
+  }));
+
+  const inputRef = useRef(null);
+
+  return &lt;input ref={inputRef} /&gt;;
+});
+
+const ParentComponent = () =&gt; {
+  const childRef = useRef(null);
+
+  const handleClick = () =&gt; {
+    // 자식 컴포넌트에서 노출한 함수를 호출하여 입력 엘리먼트에 포커스를 맞춤
+    childRef.current.focusInput();
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;ChildComponent ref={childRef} /&gt;
+      &lt;button onClick={handleClick}&gt;입력에 포커스 맞추기&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default ParentComponent;
 </code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[리액트 (React) : 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리]]></summary></entry><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
 
 <ul>
