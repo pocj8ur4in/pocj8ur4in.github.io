@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-20T17:14:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[React] 1. 리액트 (React)</title><link href="http://localhost:4000/react1/" rel="alternate" type="text/html" title="[React] 1. 리액트 (React)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react1</id><content type="html" xml:base="http://localhost:4000/react1/"><![CDATA[<h2 id="리액트-react--사용자-인터페이스를-만들기-위한-javascript-라이브러리">리액트 (<code class="language-plaintext highlighter-rouge">React</code>) : 사용자 인터페이스를 만들기 위한 <code class="language-plaintext highlighter-rouge">JavaScript</code> 라이브러리</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-21T17:28:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[React] 1. 리액트 (React)</title><link href="http://localhost:4000/react1/" rel="alternate" type="text/html" title="[React] 1. 리액트 (React)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react1</id><content type="html" xml:base="http://localhost:4000/react1/"><![CDATA[<h2 id="리액트-react--사용자-인터페이스를-만들기-위한-javascript-라이브러리">리액트 (<code class="language-plaintext highlighter-rouge">React</code>) : 사용자 인터페이스를 만들기 위한 <code class="language-plaintext highlighter-rouge">JavaScript</code> 라이브러리</h2>
 
 <ul>
   <li>가상 <code class="language-plaintext highlighter-rouge">DOM</code> : 실제 <code class="language-plaintext highlighter-rouge">DOM</code>가 상호 작용하면서 웹 어플리케이션의 빠른 렌더링이 가능</li>
@@ -352,7 +352,77 @@ const ParentComponent = () =&gt; {
 };
 
 export default ParentComponent;
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[리액트 (React) : 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리]]></summary></entry><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
+</code></pre></div></div>
+
+<h3 id="usecontext--react-context를-통해-전역으로-상태를-공유하거나-전달할-때-사용"><code class="language-plaintext highlighter-rouge">useContext</code> : <code class="language-plaintext highlighter-rouge">React Context</code>를 통해 전역으로 상태를 공유하거나 전달할 때 사용</h3>
+
+<ul>
+  <li>리액트 컨텍스트 (<code class="language-plaintext highlighter-rouge">React Context</code>) : 컴포넌트 트리 안에서 전역적으로 데이터를 공유
+    <ul>
+      <li>중첩 컴포넌트 간에 데이터를 명시적으로 전달하지 않아도 되므로, <code class="language-plaintext highlighter-rouge">Props</code>를 여러 단계에 걸쳐 전달하지 않아도 됨</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 1. Context 객체 생성
+const MyContext = React.createContext(defaultValue);
+
+// 2. Context를 제공하는 컴포넌트 작성
+const MyContextProvider = ({ children }) =&gt; {
+  const contextValue = // ... (상태 값이나 함수 등)
+
+  return (
+    &lt;MyContext.Provider value={contextValue}&gt;
+      {children}
+    &lt;/MyContext.Provider&gt;
+  );
+};
+
+// 3. useContext를 사용하여 값에 접근
+import { useContext } from 'react';
+
+const MyComponent = () =&gt; {
+  const contextValue = useContext(MyContext);
+
+  // contextValue를 사용하여 렌더링 또는 다른 로직 수행
+};
+</code></pre></div></div>
+
+<h4 id="contextprovider--컨텍스트-값을-하위-컴포넌트에-제공"><code class="language-plaintext highlighter-rouge">Context.Provider</code> : 컨텍스트 값을 하위 컴포넌트에 제공</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">value</code> 속성을 통해 전달할 값을 설정</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const MyContextProvider = ({ children }) =&gt; {
+  const contextValue = // ... (상태 값이나 함수 등)
+
+  return (
+    &lt;MyContext.Provider value={contextValue}&gt;
+      {children}
+    &lt;/MyContext.Provider&gt;
+  );
+};
+</code></pre></div></div>
+
+<h3 id="useeffect--rendering-이후-mount-이후에-실행"><code class="language-plaintext highlighter-rouge">useEffect</code> : <code class="language-plaintext highlighter-rouge">rendering</code> 이후, <code class="language-plaintext highlighter-rouge">mount</code> 이후에 실행</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">componentDidMount</code> 시점에 비동기로 실행 (<code class="language-plaintext highlighter-rouge">ex.</code> <code class="language-plaintext highlighter-rouge">alert</code>, <code class="language-plaintext highlighter-rouge">focus</code>, <code class="language-plaintext highlighter-rouge">sound</code> 등 <code class="language-plaintext highlighter-rouge">After DOM</code> 처리)
+    <ul>
+      <li>함수형 컴포넌트에서 <code class="language-plaintext highlighter-rouge">return JSX (render)</code> 다음에 실행 (<code class="language-plaintext highlighter-rouge">ex.</code> <code class="language-plaintext highlighter-rouge">focus</code> 주기, 미디어 재생, 지도에 추가 등)</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">clean-up</code> 코드는 <code class="language-plaintext highlighter-rouge">componentWillUnMount</code> 시점에 실행 (<code class="language-plaintext highlighter-rouge">useEffect's return function</code>)</li>
+  <li>의존 관계 배열 (<code class="language-plaintext highlighter-rouge">Dependency Array</code>) 가 비워져 있다면 1회만 실행 (<code class="language-plaintext highlighter-rouge">re-render</code>시 <code class="language-plaintext highlighter-rouge">skip except StrictMode</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">useEffect(() =&gt; { 수행 코드…; return () =&gt; 정리 코드; }, [의존 관계 배열: observer에 등록]);</code></li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/0db5c916-f0a3-46ba-b33e-3999daa244bf" width="60%" /></p>
+
+<h3 id="uselayouteffect--rendering-이후-mount-이전에-실행"><code class="language-plaintext highlighter-rouge">useLayoutEffect</code> : <code class="language-plaintext highlighter-rouge">rendering</code> 이후, <code class="language-plaintext highlighter-rouge">mount</code> 이전에 실행</h3>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/db687861-6983-4eac-8615-a144ef0efb3c" width="90%" /></p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[리액트 (React) : 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리]]></summary></entry><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
 
 <ul>
   <li>정적 타입 (<code class="language-plaintext highlighter-rouge">Static Type</code>) : 변수, 매개변수, 함수 반환 값 등에 대한 타입을 명시적으로 지정 가능</li>
