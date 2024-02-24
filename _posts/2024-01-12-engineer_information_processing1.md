@@ -209,7 +209,7 @@ last_modified_at: 2024-02-22
   - <code>UI</code> 메뉴 구조 설계, 내부 및 외부 화면과 폼 설계, <code>UI</code> 검토 수행
   - <code>UI</code> 요구사항 정의 : 시스템 구조, 사이트맵, 프로세스 정의, 화면 설계
 - <b><code>UI</code>의 종류 : <code>CLI</code>, <code>GUI</code>, <code>NUI</code>, <code>OUI</code>, <code>TUI</code>, <code>WUI</code>, <code>Touch UI</code></b>
-- <code>UI</code> 설계 도구 : 
+- <code>UI</code> 설계 도구
 
 ## 소프트웨어 설계
 
