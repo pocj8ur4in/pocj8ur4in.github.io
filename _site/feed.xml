@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-24T18:15:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[React] 1. 리액트 (React)</title><link href="http://localhost:4000/react1/" rel="alternate" type="text/html" title="[React] 1. 리액트 (React)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react1</id><content type="html" xml:base="http://localhost:4000/react1/"><![CDATA[<h2 id="리액트-react--사용자-인터페이스를-만들기-위한-javascript-라이브러리">리액트 (<code class="language-plaintext highlighter-rouge">React</code>) : 사용자 인터페이스를 만들기 위한 <code class="language-plaintext highlighter-rouge">JavaScript</code> 라이브러리</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-26T19:59:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[React] 1. 리액트 (React)</title><link href="http://localhost:4000/react1/" rel="alternate" type="text/html" title="[React] 1. 리액트 (React)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react1</id><content type="html" xml:base="http://localhost:4000/react1/"><![CDATA[<h2 id="리액트-react--사용자-인터페이스를-만들기-위한-javascript-라이브러리">리액트 (<code class="language-plaintext highlighter-rouge">React</code>) : 사용자 인터페이스를 만들기 위한 <code class="language-plaintext highlighter-rouge">JavaScript</code> 라이브러리</h2>
 
 <ul>
   <li>가상 <code class="language-plaintext highlighter-rouge">DOM</code> : 실제 <code class="language-plaintext highlighter-rouge">DOM</code>가 상호 작용하면서 웹 어플리케이션의 빠른 렌더링이 가능</li>
@@ -513,6 +513,15 @@ export default MyFunctionalComponent;
   </ol>
 </blockquote>
 
+<ul>
+  <li>훅의 규칙 (<code class="language-plaintext highlighter-rouge">Rules-of-Hooks</code>) : 관련 <code class="language-plaintext highlighter-rouge">ESLint</code> 규칙으로 <code class="language-plaintext highlighter-rouge">react-hooks/rules-of-hooks</code> 또한 존재
+    <ol>
+      <li>최상위에서만 훅을 호출해야 한다. 반복문이나 조건문, 중첩된 함수 내에서 훅을 실행할 수 없다. 그래야 컴포넌트가 렌더링될 때마다 항상 동일한 순서로 훅이 호출되는 것을 보장할 수 있다.</li>
+      <li>훅을 호출할 수 있는 것은 함수 컴포넌트, 혹은 커스텀 훅만 가능하다.</li>
+    </ol>
+  </li>
+</ul>
+
 <h4 id="usestate--함수형-컴포넌트-내부에서-상태를-정의하고-관리할-때-사용"><code class="language-plaintext highlighter-rouge">useState</code> : 함수형 컴포넌트 내부에서 상태를 정의하고 관리할 때 사용</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useState } from 'react'
@@ -572,7 +581,7 @@ const Component = () =&gt; {
     </ul>
   </li>
   <li>클래스 컴포넌트의 생명주기와 비슷한 동작을 구현 가능 : 의존성 배열에 빈 배열을 넣으면 컴포넌트가 마운트될 때만 실행</li>
-  <li>클린업 함수를 반환 가능 : 컴포넌트가 언마운트될 때 실행 (<code class="language-plaintext highlighter-rouge">componentWillUnMount</code>)</li>
+  <li>렌더링이 실행될 때마다 의존성에 있는 값을 보면서 값 (<code class="language-plaintext highlighter-rouge">state</code>, <code class="language-plaintext highlighter-rouge">props</code>)이 변경되면 부수 효과를 실행</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const Component = () =&gt; {
@@ -600,15 +609,174 @@ const Component = () =&gt; {
 </code></pre></div></div>
 
 <ul>
-  <li>렌더링이 실행될 때마다 의존성에 있는 값을 보면서 값 (<code class="language-plaintext highlighter-rouge">state</code>, <code class="language-plaintext highlighter-rouge">props</code>)이 변경되면 부수 효과를 실행</li>
+  <li>클린업 함수를 반환 가능 : 컴포넌트가 언마운트될 때 실행 (<code class="language-plaintext highlighter-rouge">componentWillUnMount</code>)
+    <ul>
+      <li>함수 컴포넌트가 리렌더링되었을 때 의존성 변화가 있었을 당시의 값 기준으로 실행되어 이전 상태를 청소</li>
+      <li>함수 컴포넌트의 <code class="language-plaintext highlighter-rouge">useEffect</code>는 콜백이 실행될 때마다 이전 클린업 함수가 존재하면 그 클린업 함수를 실행한 뒤 콜백 실행
+        <ul>
+          <li>특정 이벤트 핸돌러가 무한히 생성되는 것을 방지</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useState, useEffect } from 'react'
+
+export default function App() {
+  const [counter, setCounter] = useState(0)
+
+  const handleClick = () =&gt; {
+    setCounter((prev) =&gt; prev + 1);
+  }
+
+  useEffect(() =&gt; {
+    const addMouseEffect = () =&gt; {
+      console.log(counter)
+    }
+
+    window.addEventListener('click', addMouseEffect);
+
+    return () =&gt; {
+      console.log('클린업 함수', counter);
+      window.removeEventListener('click', addMouseEffect);
+    }
+  }, [counter]);
+
+  return (
+    &lt;&gt;
+      &lt;h1&gt;{counter}&lt;/h1&gt;
+      &lt;button onclick={handleClick}&gt;+&lt;/button&gt;
+    &lt;/&gt;
+  )
+}
+
+// 클린업 함수 0
+// 1
+// 클린업 함수 1
+// 2
+// ...
+</code></pre></div></div>
+
+<ul>
+  <li>의존성 배열 (<code class="language-plaintext highlighter-rouge">dependency arra</code>) : 내부의 특정 값이 변경될 때에만 <code class="language-plaintext highlighter-rouge">useEffect</code> 콜백이 실행되도록 제어
+    <ul>
+      <li>의존성 배열에 사용자가 원하는 값을 넣는 경우 : 해당 값이 변경될 따마다 실행</li>
+      <li>의존성 배열에 빈 배열을 두는 경우 : 최초 렌더링 직후에 한번 실행하고 더 이상 실행하지 않음</li>
+      <li>의존성 배열에 아무런 값을 두지 않는 경우 : 렌더링이 발생할 때마다 매번 실행
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">vs</code> 직접 실행? : 클라이언트 사이드에서 실행 보장, 컴포넌트 렌더링 완료 이후에 실행</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>useEffect(() =&gt; {
+  // 실행될 코드
+}, [dependency1, dependency2, ...]); // 의존성 배열
+</code></pre></div></div>
+
+<h4 id="usememo--큰-연산에-대한-결과를-메모이제이션-memoization할-때-사용"><code class="language-plaintext highlighter-rouge">useMemo</code> : 큰 연산에 대한 결과를 메모이제이션 (<code class="language-plaintext highlighter-rouge">Memoization</code>)할 때 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useMemo, useState } from 'react'
+
+const ExpensiveComponent = ({ value }) =&gt; {
+  useEffect(() =&gt; {
+    console.log('rendering')
+  })
+
+  return &lt;span{value + 10000}&gt;&lt;/span&gt;
+}
+
+const App = () =&gt; {
+  const [value, setValue] = useState(10);
+  const [, triggerRendering] = useState(false);
+
+  const MemoizedComponent = useMemo(
+    () =&gt; &lt;ExpensiveComponent value={value}&gt;, [value]
+  )
+
+  const handleChange = (e) =&gt; {
+    setValue(Number(e.target.value))
+  }
+
+  const handleClick = () =&gt; {
+    setValue(Number(e.target.value))
+  }
+
+  return (
+    &lt;&gt;
+      &lt;input value={value} onChange={handleChange}&gt;&lt;/input&gt;
+      &lt;button = onClick={handleClick}&gt;렌더링 발생&lt;/button&gt;
+      {MemoizedComponent}
+    &lt;/&gt;
+  )
+}
+</code></pre></div></div>
+
+<ul>
+  <li>첫번째 인수로 생성 함수, 두번째 인수로 해당 함수가 의존하는 값의 배열을 전달
+    <ul>
+      <li>렌더링 발생 시 의존성 배열의 값이 변경되지 않았으면, 함수를 재실행하지 않고 이전의 값을 반환</li>
+      <li>렌더링 발생 시 의존성 배열의 값이 변경되었으면, 첫번째 인수의 함수를 실행한 후에 그 값을 반환 및 메모이제이션</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="usecallback--인수로-넘겨받은-콜백-자체를-저장해-재성성-대신-재사용할-때-사용"><code class="language-plaintext highlighter-rouge">useCallback</code> : 인수로 넘겨받은 콜백 자체를 저장해, 재성성 대신 재사용할 때 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const ChildComponent = memo(({name, value, onChange}) =&gt; {
+  useEffect(
+    () =&gt; {
+      console.log('rendering', name)
+    }
+  )
+
+  return(
+    &lt;&gt;
+      &lt;h1&gt;{name} (value ? '켜짐' : '꺼짐')&lt;/h1&gt;
+      &lt;button onClick={onChange}&gt;toggle&lt;/button&gt;
+    &lt;/&gt;
+  )
+})
+
+const App = () =&gt; {
+  const [status1, setStatus1] = useState(false)
+  const [status2, setStatus2] = useState(false)
+
+  const toggle1 = useCallback(
+    function toggle1() {
+      setStatus(!status1)
+    }, [status1],
+  )
+
+  const toggle2 = useCallback(
+    function toggle2() {
+      setStatus(!status2)
+    }, [status2],
+  )
+
+  return (
+    &lt;&gt;
+      &lt;ChildComponent name="1" value={status1} onChange={toggle1}&gt;&lt;/ChildComponent&gt;
+      &lt;ChildComponent name="2" value={status2} onChange={toggle2}&gt;&lt;/ChildComponent&gt;
+    &lt;/&gt;
+  )
+}
+</code></pre></div></div>
+
+<ul>
+  <li>첫번째 인수로 함수, 두번째 인수로 해당 함수가 의존하는 값의 배열을 전달</li>
+  <li>값의 메모이제이션을 위해 <code class="language-plaintext highlighter-rouge">useMemo</code>를 사용했다면, 함수의 메모이제이션을 위해 사용하는 것이 <code class="language-plaintext highlighter-rouge">useCallback</code>!
+    <ul>
+      <li>해당 의존성이 변경되었을 때만 함수가 재생성 : 불필요한 리소스 및 리렌더링 방지 가능</li>
+      <li><code class="language-plaintext highlighter-rouge">useMemo</code>을 통해 <code class="language-plaintext highlighter-rouge">useCallback</code>를 구현할 수 있음</li>
+    </ul>
+  </li>
 </ul>
 
 <h4 id="useref--함수형-컴포넌트-내에서-참조를-생성하고-관리할-때-사용"><code class="language-plaintext highlighter-rouge">useRef</code> : 함수형 컴포넌트 내에서 참조를 생성하고 관리할 때 사용</h4>
-
-<ul>
-  <li>컴포넌트의 렌더링과 관계없이 변수를 저장 가능 → <code class="language-plaintext highlighter-rouge">useState</code>와 달리 매번 <code class="language-plaintext highlighter-rouge">Re-Rendering</code>이 일어나지 않음</li>
-  <li>주로 <code class="language-plaintext highlighter-rouge">DOM</code> 요소에 접근하거나 컴포넌트의 생명주기와 독립적으로 값을 유지하는 상황에서 활용</li>
-</ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useRef, useEffect } from 'react';
 
@@ -623,6 +791,13 @@ function MyComponent() {
   return &lt;input ref={myInputRef} /&gt;;
 }
 </code></pre></div></div>
+
+<ul>
+  <li>반환값인 객체 내부에 있는 <code class="language-plaintext highlighter-rouge">.current</code>로 값에 접근 혹은 변경이 가능</li>
+  <li>컴포넌트의 렌더링과 관계없이 변수를 저장 가능 → <code class="language-plaintext highlighter-rouge">useState</code>와 달리, 매번 리렌더링이 일어나지 않음</li>
+  <li>주로 <code class="language-plaintext highlighter-rouge">DOM</code> 요소에 접근하거나 컴포넌트의 생명주기와 독립적으로 값을 유지하는 상황에서 활용</li>
+</ul>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useRef, useState, useEffect } from 'react';
 
 function MyComponent() {
@@ -643,15 +818,153 @@ function MyComponent() {
 }
 </code></pre></div></div>
 
-<h4 id="forwardref--부모-컴포넌트에서-자식-컴포넌트로-ref를-전달할-수-있게-함"><code class="language-plaintext highlighter-rouge">forwardRef</code> : 부모 컴포넌트에서 자식 컴포넌트로 <code class="language-plaintext highlighter-rouge">ref</code>를 전달할 수 있게 함</h4>
+<h4 id="usecontext--react-context를-통해-전역으로-상태를-공유하거나-전달할-때-사용"><code class="language-plaintext highlighter-rouge">useContext</code> : <code class="language-plaintext highlighter-rouge">React Context</code>를 통해 전역으로 상태를 공유하거나 전달할 때 사용</h4>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">useRef</code>로 컴포넌트 외부 (자식)의 <code class="language-plaintext highlighter-rouge">DOM</code>에 접근
+  <li><code class="language-plaintext highlighter-rouge">prop</code> 내려주기 : <code class="language-plaintext highlighter-rouge">A</code> 컴포넌트가 제공하는 데이터를 <code class="language-plaintext highlighter-rouge">D</code> 컴포넌트에서 사용하려면, …
     <ul>
-      <li>부모에서 선언 → 자식에게 전달 → 자식에서 참조 걸기 → 부모에서 컨트롤</li>
+      <li>하위 컴포넌트로 필요한 위치까지 계속해서 넘겨주어야 함 → 제공하는 쪽, 제공받는 쪽 모두 번거로운 작업!</li>
     </ul>
   </li>
 </ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;A props={props}&gt;
+  &lt;B props={props}&gt;
+    &lt;C props={props}&gt;
+      &lt;D props={props}&gt;
+        ...
+      &lt;/D&gt;
+    &lt;/C&gt;
+  &lt;/B&gt;
+&lt;/A&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>리액트 컨텍스트 (<code class="language-plaintext highlighter-rouge">React Context</code>) : 컴포넌트 트리 안에서 전역적으로 데이터를 공유
+    <ul>
+      <li>중첩 컴포넌트 간에 데이터를 명시적으로 전달하지 않아도 되므로, <code class="language-plaintext highlighter-rouge">Props</code>를 여러 단계에 걸쳐 전달하지 않아도 됨</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 1. Context 객체 생성
+const MyContext = React.createContext(defaultValue);
+
+// 2. Context를 제공하는 컴포넌트 작성
+const MyContextProvider = ({ children }) =&gt; {
+  const contextValue = // ... (상태 값이나 함수 등)
+
+  return (
+    &lt;MyContext.Provider value={contextValue}&gt;
+      {children}
+    &lt;/MyContext.Provider&gt;
+  );
+};
+
+// 3. useContext를 사용하여 값에 접근
+import { useContext } from 'react';
+
+const MyComponent = () =&gt; {
+  const contextValue = useContext(MyContext); // 이때, 리액트가 아닌 자비스크립트가 반환된다.
+
+  // contextValue를 사용하여 렌더링 또는 다른 로직 수행
+};
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Context.Provider</code> : 컨텍스트 값을 하위 컴포넌트에 제공
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">value</code> 속성을 통해 전달할 값을 설정</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const MyContextProvider = ({ children }) =&gt; {
+  const contextValue = // ... (상태 값이나 함수 등)
+
+  return (
+    &lt;MyContext.Provider value={contextValue}&gt;
+      {children}
+    &lt;/MyContext.Provider&gt;
+  );
+};
+</code></pre></div></div>
+
+<h4 id="usereducer--복잡한-상태-로직을-다룰-때-사용"><code class="language-plaintext highlighter-rouge">useReducer</code> : 복잡한 상태 로직을 다룰 때 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// useReducer가 사용할 State 정의
+type State = {
+  count: number
+}
+
+// State의 변화를 발생시킬 Action의 타입과 넘겨줄 payload 정의
+type Action = {
+  type: 'up' | 'down' | 'reset';
+  payload?: State;
+}
+
+// 무거운 연산이 포함된 게으른 초기화 함수 init 정의
+const init = (count: State) =&gt; {
+  return count
+}
+
+const initState: State = { count: 0 }
+
+const reducer = ((state: State, action: Action): State) =&gt; {
+  switch (action.type) {
+    case 'up':
+      return { count: state.count + 1 }
+    case 'down':
+      return { count: state.count - 1 &gt; 0 ? state.count - 1 : 0 }
+    case 'down':
+      return init(action.payload || { count: 0 })
+    default:
+      throw new Error(`Unexpected Action type: ${action.type}`)
+  }
+}
+
+const export default App = () =&gt; {
+  const [state, dispatcher] = useReducer(reducer, initialState, init)
+
+  const handleUpButtonClick = () =&gt; {
+    dispatcher({ type: 'up' })
+  }
+
+  const handleDownButtonClick = () =&gt; {
+    dispatcher({ type: 'down' })
+  }
+
+  const handleResetButtonClick = () =&gt; {
+    dispatcher({ type: 'reset', payload: { count: 1 } })
+  }
+
+  return {
+    &lt;div className="App"&gt;
+      &lt;button onclick={handleUpButtonClick}&gt;+&lt;/button&gt;
+      &lt;button onclick={handleDownButtonClick}&gt;-&lt;/button&gt;
+      &lt;button onclick={handleResetButtonClick}&gt;Reset&lt;/button&gt;
+    &lt;/div&gt;
+  }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>반환값은 <code class="language-plaintext highlighter-rouge">useState</code>와 동일하게 길이가 <code class="language-plaintext highlighter-rouge">2</code>인 배열
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">state</code> : 현재 <code class="language-plaintext highlighter-rouge">useReducer</code>가 갖고 있는 값</li>
+      <li><code class="language-plaintext highlighter-rouge">dispatcher</code> : <code class="language-plaintext highlighter-rouge">state</code>를 업데이트하는 함수. 값만 넘겨주는 <code class="language-plaintext highlighter-rouge">setState</code>와 달리, <code class="language-plaintext highlighter-rouge">state</code>를 변경할 수 있는 액션 (<code class="language-plaintext highlighter-rouge">action</code>)을 반환</li>
+    </ul>
+  </li>
+  <li>인수는 <code class="language-plaintext highlighter-rouge">useState</code>와 달리 2~3개의 인수를 필요로 함
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">reducer</code> :</li>
+      <li><code class="language-plaintext highlighter-rouge">initialState</code> :</li>
+      <li><code class="language-plaintext highlighter-rouge">init</code> :</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="forwardref--부모-컴포넌트에서-자식-컴포넌트로-ref를-전달할-수-있게-함"><code class="language-plaintext highlighter-rouge">forwardRef</code> : 부모 컴포넌트에서 자식 컴포넌트로 <code class="language-plaintext highlighter-rouge">ref</code>를 전달할 수 있게 함</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useRef, forwardRef } from 'react';
 
@@ -691,19 +1004,19 @@ const ParentComponent = () =&gt; {
 export default ParentComponent;
 </code></pre></div></div>
 
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">useRef</code>로 컴포넌트 외부 (자식)의 <code class="language-plaintext highlighter-rouge">DOM</code>에 접근
+    <ul>
+      <li>부모에서 선언 → 자식에게 전달 → 자식에서 참조 걸기 → 부모에서 컨트롤</li>
+    </ul>
+  </li>
+</ul>
+
 <blockquote>
   <p><code class="language-plaintext highlighter-rouge">But</code>, 외부 <code class="language-plaintext highlighter-rouge">DOM</code>을 참조하는 <code class="language-plaintext highlighter-rouge">ref</code>를 갖는 것은 <code class="language-plaintext highlighter-rouge">Coupling</code>이 강해지므로 좋지 않다!</p>
 </blockquote>
 
 <h4 id="useimperativehandle-with-forwardref--부모-컴포넌트가-자식-컴포넌트를-컨트롤할-수-있게-함"><code class="language-plaintext highlighter-rouge">useImperativeHandle (with forwardRef)</code> : 부모 컴포넌트가 자식 컴포넌트를 컨트롤할 수 있게 함</h4>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">useImperativeHandle</code>을 통해 부모 컴포넌트에 함수 및 기능을 노출시킴
-    <ul>
-      <li>부모에게 참조값을 전달 → 자식은 객체를 반환</li>
-    </ul>
-  </li>
-</ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { forwardRef, useRef, useImperativeHandle } from 'react';
 
@@ -740,58 +1053,13 @@ const ParentComponent = () =&gt; {
 export default ParentComponent;
 </code></pre></div></div>
 
-<h4 id="usecontext--react-context를-통해-전역으로-상태를-공유하거나-전달할-때-사용"><code class="language-plaintext highlighter-rouge">useContext</code> : <code class="language-plaintext highlighter-rouge">React Context</code>를 통해 전역으로 상태를 공유하거나 전달할 때 사용</h4>
-
 <ul>
-  <li>리액트 컨텍스트 (<code class="language-plaintext highlighter-rouge">React Context</code>) : 컴포넌트 트리 안에서 전역적으로 데이터를 공유
+  <li><code class="language-plaintext highlighter-rouge">useImperativeHandle</code>을 통해 부모 컴포넌트에 함수 및 기능을 노출시킴
     <ul>
-      <li>중첩 컴포넌트 간에 데이터를 명시적으로 전달하지 않아도 되므로, <code class="language-plaintext highlighter-rouge">Props</code>를 여러 단계에 걸쳐 전달하지 않아도 됨</li>
+      <li>부모에게 참조값을 전달 → 자식은 객체를 반환</li>
     </ul>
   </li>
 </ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 1. Context 객체 생성
-const MyContext = React.createContext(defaultValue);
-
-// 2. Context를 제공하는 컴포넌트 작성
-const MyContextProvider = ({ children }) =&gt; {
-  const contextValue = // ... (상태 값이나 함수 등)
-
-  return (
-    &lt;MyContext.Provider value={contextValue}&gt;
-      {children}
-    &lt;/MyContext.Provider&gt;
-  );
-};
-
-// 3. useContext를 사용하여 값에 접근
-import { useContext } from 'react';
-
-const MyComponent = () =&gt; {
-  const contextValue = useContext(MyContext);
-
-  // contextValue를 사용하여 렌더링 또는 다른 로직 수행
-};
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Context.Provider</code> : 컨텍스트 값을 하위 컴포넌트에 제공
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">value</code> 속성을 통해 전달할 값을 설정</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const MyContextProvider = ({ children }) =&gt; {
-  const contextValue = // ... (상태 값이나 함수 등)
-
-  return (
-    &lt;MyContext.Provider value={contextValue}&gt;
-      {children}
-    &lt;/MyContext.Provider&gt;
-  );
-};
-</code></pre></div></div>
 
 <h4 id="uselayouteffect--rendering-이후-mount-이전에-실행"><code class="language-plaintext highlighter-rouge">useLayoutEffect</code> : <code class="language-plaintext highlighter-rouge">rendering</code> 이후, <code class="language-plaintext highlighter-rouge">mount</code> 이전에 실행</h4>
 
