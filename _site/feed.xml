@@ -1,448 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-26T19:59:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[React] 1. 리액트 (React)</title><link href="http://localhost:4000/react1/" rel="alternate" type="text/html" title="[React] 1. 리액트 (React)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react1</id><content type="html" xml:base="http://localhost:4000/react1/"><![CDATA[<h2 id="리액트-react--사용자-인터페이스를-만들기-위한-javascript-라이브러리">리액트 (<code class="language-plaintext highlighter-rouge">React</code>) : 사용자 인터페이스를 만들기 위한 <code class="language-plaintext highlighter-rouge">JavaScript</code> 라이브러리</h2>
-
-<ul>
-  <li>가상 <code class="language-plaintext highlighter-rouge">DOM</code> : 실제 <code class="language-plaintext highlighter-rouge">DOM</code>가 상호 작용하면서 웹 어플리케이션의 빠른 렌더링이 가능</li>
-  <li>선언형 뷰 (<code class="language-plaintext highlighter-rouge">Declarative View</code>) : 사용자 인터페이스를 어떻게 보일지 명시적으로 선언하고, 개발자가 그 명세를 작성</li>
-  <li>컴포넌트 기반 구조 : 부모-자식 관계 및 상태 (<code class="language-plaintext highlighter-rouge">State</code>)를 갖는 재사용 가능한 모듈들로 어플리케이션 구성</li>
-  <li>단방향 데이터 바인딩 : 데이터의 흐름이 단일 방향으로 진행하여 디버깅 용이 → 명시적인 상태 변경이 가능</li>
-  <li><code class="language-plaintext highlighter-rouge">JSX</code> : 자바스크립트 코드 내에 마크업을 작성해 가독성 향상 및 명확한 표현 가능</li>
-</ul>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/ca8780dc-5a83-45cb-972d-e66b4fea19e4" width="90%" /></p>
-
-<blockquote>
-  <p>리액트에서 자주 쓰이는 <code class="language-plaintext highlighter-rouge">JS</code> 문법?</p>
-
-  <ul>
-    <li>구조 분해 할당 (<code class="language-plaintext highlighter-rouge">Destructuring Assignment</code>) : 배열 또는 객체의 값을 분해해서 할당하는 것</li>
-  </ul>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 객체 구조 분해 할당
-const person = { name: 'John', age: 30 };
-const { name, age } = person;
-
-console.log(name); // 'John'
-console.log(age);  // 30
-</code></pre></div>  </div>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 배열 구조 분해 할당
-const numbers = [1, 2, 3, 4, 5];
-const [first, second, ...rest] = numbers;
-
-console.log(first); // 1
-console.log(second); // 2
-console.log(rest); // [3, 4, 5]
-</code></pre></div>  </div>
-
-  <ul>
-    <li>전개 구문 (<code class="language-plaintext highlighter-rouge">Spread Syntax</code>) : 배열이나 객체를 확장하여 개별 요소로 분리하거나 복사</li>
-  </ul>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 배열의 전개 구문을 사용하여 두 배열을 병합
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
-
-const mergedArray = [...arr1, ...arr2];
-console.log(mergedArray); // [1, 2, 3, 4, 5, 6]
-</code></pre></div>  </div>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 객체의 전개 구문을 사용하여 두 객체를 병합
-const obj1 = { x: 1, y: 2 };
-const obj2 = { z: 3, w: 4 };
-
-const mergedObject = { ...obj1, ...obj2 };
-console.log(mergedObject); // { x: 1, y: 2, z: 3, w: 4 }
-</code></pre></div>  </div>
-
-  <ul>
-    <li>객체 초기자 (<code class="language-plaintext highlighter-rouge">Object Shorthand Assignment</code>) : 객체를 간결히 생성하고 초기값을 설정</li>
-  </ul>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 일반적인 객체 생성 방법
-const person1 = new Object();
-person1.name = 'Alice';
-person1.age = 25;
-
-// 객체 초기자를 사용한 방법
-const person2 = {
-  name: 'Alice',
-  age: 25
-};
-
-console.log(person1); // { name: 'Alice', age: 25 }
-console.log(person2); // { name: 'Alice', age: 25 }
-
-</code></pre></div>  </div>
-
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">Array</code> 프로토타입 메소드 : <code class="language-plaintext highlighter-rouge">map</code>, <code class="language-plaintext highlighter-rouge">filter</code>, <code class="language-plaintext highlighter-rouge">reduce</code>, <code class="language-plaintext highlighter-rouge">forEach</code></li>
-  </ul>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const numbers = [1, 2, 3, 4];
-
-// map 메소드: 각 숫자를 두 배로 만듭니다.
-const doubledNumbers = numbers.map((num) =&gt; num * 2);
-
-// filter 메소드: 짝수만을 걸러냅니다.
-const evenNumbers = numbers.filter((num) =&gt; num % 2 === 0);
-
-// reduce 메소드: 모든 숫자의 합을 계산합니다.
-const sum = numbers.reduce((acc, num) =&gt; acc + num, 0);
-
-// forEach 메소드: 각 숫자를 콘솔에 출력합니다.
-numbers.forEach((num) =&gt; console.log(num));
-
-console.log('Doubled Numbers:', doubledNumbers);
-console.log('Even Numbers:', evenNumbers);
-console.log('Sum:', sum);
-</code></pre></div>  </div>
-</blockquote>
-
-<h3 id="jsx-javascript-xml--기존-js에-html-css를-더해-리액트-컴포넌트-작성"><code class="language-plaintext highlighter-rouge">JSX</code> (<code class="language-plaintext highlighter-rouge">JavaScript XML</code>) : 기존 <code class="language-plaintext highlighter-rouge">JS</code>에 <code class="language-plaintext highlighter-rouge">HTML</code>, <code class="language-plaintext highlighter-rouge">CSS</code>를 더해 리액트 컴포넌트 작성</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">JSXElement</code> : <code class="language-plaintext highlighter-rouge">JSX</code> 엘리먼트<br />(<code class="language-plaintext highlighter-rouge">&lt;div&gt;Hello, World!&lt;/div&gt;</code>에서 <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>)</li>
-  <li><code class="language-plaintext highlighter-rouge">JSXAttribute</code> : <code class="language-plaintext highlighter-rouge">JSX</code> 엘리먼트의 속성<br />(<code class="language-plaintext highlighter-rouge">&lt;div className="container"&gt;Hello, World!&lt;/div&gt;</code>에서 <code class="language-plaintext highlighter-rouge">className="container"</code>)</li>
-  <li><code class="language-plaintext highlighter-rouge">JSXChildren</code> : <code class="language-plaintext highlighter-rouge">JSX</code> 엘리먼트의 자식 요소<br />(<code class="language-plaintext highlighter-rouge">&lt;div&gt;Hello, &lt;span&gt;React&lt;/span&gt;!&lt;/div&gt;</code>에서 <code class="language-plaintext highlighter-rouge">Hello, &lt;span&gt;React&lt;/span&gt;!</code>)</li>
-  <li><code class="language-plaintext highlighter-rouge">JSXString</code> : <code class="language-plaintext highlighter-rouge">JSX</code> 문자열<br />(<code class="language-plaintext highlighter-rouge">&lt;div&gt;Hello, World!&lt;/div&gt;</code>에서 <code class="language-plaintext highlighter-rouge">"Hello, World!"</code>)</li>
-</ul>
-
-<h3 id="가상-dom-virtual-dom--실제-dom-document-object-model-에-대한-가벼운-복사본">가상 <code class="language-plaintext highlighter-rouge">DOM</code> (<code class="language-plaintext highlighter-rouge">Virtual DOM</code>) : 실제 <code class="language-plaintext highlighter-rouge">DOM</code> (<code class="language-plaintext highlighter-rouge">Document Object Model</code>) 에 대한 가벼운 복사본</h3>
-
-<ul>
-  <li>리액트 파이버 (<code class="language-plaintext highlighter-rouge">React Fiber</code>) : 가상 <code class="language-plaintext highlighter-rouge">DOM</code>과 실제 <code class="language-plaintext highlighter-rouge">DOM</code>을 비교해 변경 사항을 수집
-    <ul>
-      <li>동기성 : 렌더링 작업을 여러 프레임에 나눠 렌더링 작업이 한 번에 실행되지 않더라도 앱이 반응적으로 유지 가능</li>
-      <li>우선순위 관리 : 각 작업에 우선순위를 할당하고, 중요한 작업을 먼저 처리하여 사용자 인터랙션에 빠르게 응답 가능</li>
-      <li>종료 및 재시작 가능 : 사용자 인터랙션에 우선순위를 두면서도 작업을 중단하고 다시 시작 가능</li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">DOM</code>과 <code class="language-plaintext highlighter-rouge">CSSOM</code>으로 렌더링 트리가 만들어지는 과정?</p>
-
-  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/95ef558e-965b-4525-873f-140e4292b29e" width="90%" /></p>
-
-  <ol>
-    <li>브라우저가 사용자가 요청한 주소를 방문해 <code class="language-plaintext highlighter-rouge">HTML</code> 파일을 다운로드</li>
-    <li>브라우저의 렌더링 엔진은 <code class="language-plaintext highlighter-rouge">HTML</code>을 파싱해 <code class="language-plaintext highlighter-rouge">DOM</code> 노드로 구성된 트리를 생성</li>
-    <li><code class="language-plaintext highlighter-rouge">CSS</code> 파일을 만나면, 해당 <code class="language-plaintext highlighter-rouge">CSS</code> 파일도 다운로드</li>
-    <li><code class="language-plaintext highlighter-rouge">CSS</code> 파일을 파싱하여 <code class="language-plaintext highlighter-rouge">CSS</code> 노드로 구성된 트리 (<code class="language-plaintext highlighter-rouge">CSSOM</code>)를 생성</li>
-    <li>사용자의 눈에 보일 <code class="language-plaintext highlighter-rouge">DOM</code> 노드만을 순회</li>
-    <li>눈에 보이는 노드를 대상으로 해당 노드에 대한 <code class="language-plaintext highlighter-rouge">CSSOM</code> 정보를 찾고 <code class="language-plaintext highlighter-rouge">CSS</code> 스타일 정보를 적용
-      <ul>
-        <li>레이아웃 (<code class="language-plaintext highlighter-rouge">Layout</code>) : 각 노드가 브라우저 화면에 어느 좌표에 나타날지 계산하는 과정</li>
-        <li>페인팅 (<code class="language-plaintext highlighter-rouge">Painting</code>) : 레이아웃 단계를 거친 노드에 색과 같은 실제 유효한 모습을 그리는 과정</li>
-      </ul>
-    </li>
-  </ol>
-
-  <p>… 모든 <code class="language-plaintext highlighter-rouge">DOM</code>의 변경보다 결과적으로 만들어질 <code class="language-plaintext highlighter-rouge">DOM</code>의 최종 결과물만을 제공하자!</p>
-</blockquote>
-
-<ol>
-  <li>초기 렌더링 : 초기 상태에서 가상 <code class="language-plaintext highlighter-rouge">DOM</code>은 실제 <code class="language-plaintext highlighter-rouge">DOM</code>과 동일한 구조를 가짐</li>
-  <li>상태 변화 감지 : 사용자 상호 작용이나 데이터 변경 등의 이벤트가 발생하면, 렌더링 엔진은 새로운 가상 <code class="language-plaintext highlighter-rouge">DOM</code> 생성</li>
-  <li>가상 <code class="language-plaintext highlighter-rouge">DOM</code> 비교 : 새로운 가상 <code class="language-plaintext highlighter-rouge">DOM</code>과 이전의 가상 <code class="language-plaintext highlighter-rouge">DOM</code>을 비교하여 변경된 부분 탐색</li>
-  <li>실제 <code class="language-plaintext highlighter-rouge">DOM</code> 업데이트 : 변경된 부분만을 실제 <code class="language-plaintext highlighter-rouge">DOM</code>에 적용</li>
-</ol>
-
-<h2 id="컴포넌트-component--리액트-애플리케이션에서-ui를-구성하고-재사용-가능한-모듈을-표현">컴포넌트 (<code class="language-plaintext highlighter-rouge">Component</code>) : 리액트 애플리케이션에서 <code class="language-plaintext highlighter-rouge">UI</code>를 구성하고 재사용 가능한 모듈을 표현</h2>
-
-<ul>
-  <li>속성 (<code class="language-plaintext highlighter-rouge">Props</code>) 을 받고, 상태 (<code class="language-plaintext highlighter-rouge">state</code>)와 메소드 (<code class="language-plaintext highlighter-rouge">Method</code>)를 가짐</li>
-  <li>반복되는 <code class="language-plaintext highlighter-rouge">UI</code> 단위 (<code class="language-plaintext highlighter-rouge">JS Code</code> 또는 <code class="language-plaintext highlighter-rouge">HTML-JSX</code>) → 재사용성과 가독성을 위한 도구</li>
-  <li>가능한 독립적으로 실행되도록 작성하고, 데이터 영역과 <code class="language-plaintext highlighter-rouge">UI</code>를 분리</li>
-</ul>
-
-<h3 id="상태-state---사용자-상호작용에-응답하거나-컴포넌트의-생명주기에-변경되는-정보를-저장하는-데에-사용">상태 (<code class="language-plaintext highlighter-rouge">State</code>) :  사용자 상호작용에 응답하거나 컴포넌트의 생명주기에 변경되는 정보를 저장하는 데에 사용</h3>
-
-<ul>
-  <li>부모의 상태가 변경되면, 그 상태를 참조하는 모든 자식 컴포넌트가 <code class="language-plaintext highlighter-rouge">Re-Rendering</code>
-    <ul>
-      <li>상태를 통합하면 <code class="language-plaintext highlighter-rouge">Re-Rendering</code>이 많이 일어나므로, 상태를 연관성에 맞게 분리해 좁게 사용해야 함</li>
-      <li><code class="language-plaintext highlighter-rouge">Setter</code>로 값을 수신하면 <code class="language-plaintext highlighter-rouge">Dispatcher</code> 값이 세팅 → <code class="language-plaintext highlighter-rouge">re-rendering</code>을 <code class="language-plaintext highlighter-rouge">trigger</code> (<code class="language-plaintext highlighter-rouge">DOM</code> 갱신)</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useState } from 'react';
-
-function ExampleComponent() {
-  const [count, setCount] = useState(0);
-  const [message, setMessage] = useState('안녕하세요!');
-
-  return (
-    &lt;div&gt;
-      &lt;p&gt;{message}&lt;/p&gt;
-      &lt;p&gt;카운트: {count}&lt;/p&gt;
-    &lt;/div&gt;
-  );
-}
-</code></pre></div></div>
-
-<blockquote>
-  <p>초기화는 동기 방식이면 오래 걸리더라도 가능, <code class="language-plaintext highlighter-rouge">Promise</code>는 <code class="language-plaintext highlighter-rouge">async</code>/<code class="language-plaintext highlighter-rouge">await</code>로 처리해도 <code class="language-plaintext highlighter-rouge">Promise</code>가 세팅</p>
-</blockquote>
-
-<h3 id="속성-prop--부모-컴포넌트로부터-자식-컴포넌트로-데이터를-전달하는-데에-사용">속성 (<code class="language-plaintext highlighter-rouge">Prop</code>) : 부모 컴포넌트로부터 자식 컴포넌트로 데이터를 전달하는 데에 사용</h3>
-
-<ul>
-  <li>변수나 함수와 같은 속성들을 부모에서 자식으로 전달 (<code class="language-plaintext highlighter-rouge">MyComponent.defaultProps = { ... }</code>)
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Read-Only</code> : 속성이 변경되도 <code class="language-plaintext highlighter-rouge">Re-Rendering</code>하지 않음! (값은 바꿔도 화면엔 아무런 영향 없음!)</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 부모 컴포넌트
-import ChildComponent from './ChildComponent';
-
-function ParentComponent() {
-  const dataToPass = "안녕하세요!";
-  
-  return (
-    &lt;ChildComponent message={dataToPass} /&gt;
-  );
-}
-
-// 자식 컴포넌트
-function ChildComponent(props) {
-  return (
-    &lt;div&gt;
-      &lt;p&gt;{props.message}&lt;/p&gt;
-    &lt;/div&gt;
-  );
-}
-</code></pre></div></div>
-
-<h3 id="컴포넌트-개발-원칙--코드의-가독성-유지보수성-재사용성을-향상하여-구성-요소를-생성">컴포넌트 개발 원칙 : 코드의 가독성, 유지보수성, 재사용성을 향상하여 구성 요소를 생성</h3>
-
-<ul>
-  <li><b>가급적 순수 함수 컴포넌트 (<code>Pure Functional Component</code>)를 활용할 것!</b>
-    <ul>
-      <li>상태나 생명주기 메서드 없이 단순히 <code class="language-plaintext highlighter-rouge">props</code>를 받아 렌더링하는 컴포넌트 → 간결하고 재사용성이 높힐 수 있음</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">Container Component</code>와 <code class="language-plaintext highlighter-rouge">Presentational Component</code>를 분리할 것
-    <ul>
-      <li>데이터를 가져오는 로직과 <code class="language-plaintext highlighter-rouge">UI</code>를 그리는 로직을 분리하여 관리</li>
-    </ul>
-  </li>
-  <li>상태를 공유하는 단위로 분리할 것
-    <ul>
-      <li>관련된 상태를 함께 관리하고, 필요한 경우 <code class="language-plaintext highlighter-rouge">useContext</code>를 사용하여 상태 공유를 구현</li>
-    </ul>
-  </li>
-  <li>아주 깊은 구조로 중첩되는 <code class="language-plaintext highlighter-rouge">Container</code> 컴포넌트는 피할 것
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Context</code>를 남발하는 대신, 상태 관리 등의 용도로 필요한 경우에만 적절히 사용할 것</li>
-    </ul>
-  </li>
-  <li>각 컴포넌트는 독립적으로 작성할 것
-    <ul>
-      <li>컴포넌트 간의 결합도를 최소화해 재사용성을 높이고 유지보수를 용이하게 만들어야 함</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="렌더링-rendering--html-css-리소스로-웹-페이지의-ui를-그리는-과정">렌더링 (<code class="language-plaintext highlighter-rouge">Rendering</code>) : <code class="language-plaintext highlighter-rouge">HTML</code>, <code class="language-plaintext highlighter-rouge">CSS</code> 리소스로 웹 페이지의 <code class="language-plaintext highlighter-rouge">UI</code>를 그리는 과정</h2>
-
-<ul>
-  <li>리액트의 렌더링 : 리액트 어플리케이션 트리 내의 모든 컴포넌트들이 갖고 있는 현재 상태와 속성의 값을 기반하여 어떻게<code class="language-plaintext highlighter-rouge">UI</code>를 구성하고 어떤 <code class="language-plaintext highlighter-rouge">DOM</code> 결과를 브라우저에 제공할지 계산하는 일련의 과정
-    <ul>
-      <li>초기 렌더링 : 사용자가 처음 어플리케이션이 진입할 때 최초로 수행</li>
-      <li>리렌더링 (<code class="language-plaintext highlighter-rouge">Re-rendering</code>) : 처음 어플리케이션 이후에 발생하는 모든 렌더링들을 총칭
-        <ul>
-          <li>클래스 컴포넌트의 <code class="language-plaintext highlighter-rouge">setState()</code>나 <code class="language-plaintext highlighter-rouge">forceUpdate()</code>가 실행되는 경우</li>
-          <li>함수 컴포넌트의 <code class="language-plaintext highlighter-rouge">useState()</code>의 두번째 배열 요소인 <code class="language-plaintext highlighter-rouge">setter</code>가 실행되는 경우</li>
-          <li>함수 컴포넌트의 <code class="language-plaintext highlighter-rouge">useReducer()</code>의 두번째 배열 요소인 <code class="language-plaintext highlighter-rouge">dispatch</code>가 실행되는 경우</li>
-          <li>컴포넌트의 <code class="language-plaintext highlighter-rouge">key props</code>가 변경되는 경우</li>
-          <li>부모 컴포넌트로부터 전달받는 값인 <code class="language-plaintext highlighter-rouge">props</code>가 변경되거나 부모 컴포넌트가 리렌더링될 경우</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="렌더링-프로세스-rendering-process--리액트의-재조정을-위해-변경-사항을-탐색-비교-수집하는-과정">렌더링 프로세스 (<code class="language-plaintext highlighter-rouge">Rendering Process</code>) : 리액트의 재조정을 위해 변경 사항을 탐색, 비교, 수집하는 과정</h3>
-
-<ol>
-  <li>리액트가 컴포넌트의 루트에서부터 업데이트가 필요한 모든 컴포넌트를 탐색</li>
-  <li>클래스 컴포넌트는 클래스 내 <code class="language-plaintext highlighter-rouge">render()</code> 함수를, 함수 컴포넌트는 <code class="language-plaintext highlighter-rouge">FunctionComponent()</code> 자체를 호출</li>
-  <li><code class="language-plaintext highlighter-rouge">JSX</code>로 구성된 렌더링 결과물을 자바스크립트로 컴파일하면 <code class="language-plaintext highlighter-rouge">React.createElement()</code>를 반환</li>
-  <li><code class="language-plaintext highlighter-rouge">React.createElement()</code>가 브라우저 <code class="language-plaintext highlighter-rouge">UI</code> 구조를 설명하는 자바스크립트 객체를 반환</li>
-</ol>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/9ce93fdd-ed10-4a4a-84c4-58234265ffb2" width="80%" /></p>
-
-<h4 id="1-렌더-단계-render-phase--컴포넌트를-렌더링하고-변경-사항을-계산하는-모든-작업"><code class="language-plaintext highlighter-rouge">(1)</code> 렌더 단계 (<code class="language-plaintext highlighter-rouge">Render Phase</code>) : 컴포넌트를 렌더링하고 변경 사항을 계산하는 모든 작업</h4>
-
-<ol>
-  <li>렌더링 프로세스에서 컴포넌트를 실행 (<code class="language-plaintext highlighter-rouge">render()</code> 또는 <code class="language-plaintext highlighter-rouge">return</code>)</li>
-  <li>이전 가상 <code class="language-plaintext highlighter-rouge">DOM</code>과 결과 가상 <code class="language-plaintext highlighter-rouge">DOM</code>를 비교</li>
-  <li><code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">props</code>, <code class="language-plaintext highlighter-rouge">key</code>를 비교하여, 하나라도 변경된 것이 있으면 변경이 필요한 컴포넌트로 체크</li>
-</ol>
-
-<h4 id="2-커밋-단계-commit-phase--렌더-단계의-변경-사항을-실제-dom에-적용해-사용자에게-표현"><code class="language-plaintext highlighter-rouge">(2)</code> 커밋 단계 (<code class="language-plaintext highlighter-rouge">Commit Phase</code>) : 렌더 단계의 변경 사항을 실제 <code class="language-plaintext highlighter-rouge">DOM</code>에 적용해 사용자에게 표현</h4>
-
-<ol>
-  <li>리액트가 먼저 <code class="language-plaintext highlighter-rouge">DOM</code>을 커밋 단계에서 업데이트</li>
-  <li>생성된 모든 <code class="language-plaintext highlighter-rouge">DOM</code> 노드 및 인스턴스를 가리키도록 리액트 내부의 참조를 업데이트</li>
-  <li>클래스 컴포넌트는 <code class="language-plaintext highlighter-rouge">componentDidMount</code>, <code class="language-plaintext highlighter-rouge">componentDidUpdate</code> 메소드를,<br />함수 컴포넌트는 <code class="language-plaintext highlighter-rouge">useLayoutEffect</code> 훅을 호출</li>
-</ol>
-
-<blockquote>
-  <ul>
-    <li>리액트의 렌더링이 일어난다고 무조건 <code class="language-plaintext highlighter-rouge">DOM</code> 업데이트가 일어나지 않음! (커밋 단계 생략 가능)
-      <ul>
-        <li>리액트의 렌더링은 가시적 변경 없이 발생 가능!! (커밋 단계가 생략되어 <code class="language-plaintext highlighter-rouge">DOM</code> 업데이트가 발생하지 않음)</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<h4 id="렌더링-시나리오---어플리케이션의-숫자-증가-버튼">렌더링 시나리오 - 어플리케이션의 숫자 증가 버튼</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useState } from 'react'
-
-export default function A() {
-  return (
-  &lt;div className="App"&gt;
-    &lt;h1&gt;Hello React!&lt;/h1&gt;
-    &lt;B /&gt;
-  &lt;/div&gt;
-  )
-}
-
-function B() {
-  const [counter, setCounter] = useState(0)
-
-  function handleButtonClick() {
-    setCounter((previous) =&gt; previous + 1)
-  }
-
-  return (
-    &lt;&gt;
-      &lt;label&gt;
-        &lt;C number={counter}/&gt;
-      &lt;/label&gt;
-      &lt;button onClick={handleButtonClick}&gt;&lt;/button&gt;
-    &lt;/&gt;
-  )
-}
-
-function C({number}: {number: number}) {
-  return (
-    &lt;div&gt;
-      {number} &lt;D/&gt;
-    &lt;/div&gt;
-  )
-}
-
-function D() {
-  return (
-    &lt;&gt;
-      안녕 리액트!
-    &lt;/&gt;
-    );
-}
-</code></pre></div></div>
-
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">B</code> 컴포넌트의 <code class="language-plaintext highlighter-rouge">setState</code> 호출</li>
-  <li><code class="language-plaintext highlighter-rouge">B</code> 컴포넌트의 리렌더링 작업이 큐에 들어감</li>
-  <li>리액트는 트리 최상단에서부터 렌더링 경로를 갱신</li>
-  <li><code class="language-plaintext highlighter-rouge">A</code> 컴포넌트가 리렌더링이 필요한 컴포넌트로 표시되어 있지 않으므로, 커밋 단계를 생략</li>
-  <li><code class="language-plaintext highlighter-rouge">B</code> 컴포넌트가 리렌더링이 필요한 컴포넌트로 표시되어 있으므로, <code class="language-plaintext highlighter-rouge">B</code>를 리렌더링</li>
-  <li><code class="language-plaintext highlighter-rouge">B</code> 컴포넌트가 <code class="language-plaintext highlighter-rouge">C</code> 컴포넌트를 반환</li>
-  <li><code class="language-plaintext highlighter-rouge">C</code> 컴포넌트의 <code class="language-plaintext highlighter-rouge">props</code>인 <code class="language-plaintext highlighter-rouge">number</code>가 업데이트</li>
-  <li><code class="language-plaintext highlighter-rouge">C</code> 컴포넌트가 리렌더링이 필요한 컴포넌트로 표시되어 있으므로, <code class="language-plaintext highlighter-rouge">C</code>를 리렌더링</li>
-  <li><code class="language-plaintext highlighter-rouge">C</code> 컴포넌트가 <code class="language-plaintext highlighter-rouge">D</code> 컴포넌트를 반환</li>
-  <li><code class="language-plaintext highlighter-rouge">D</code> 컴포넌트의 부모인 <code class="language-plaintext highlighter-rouge">C</code> 컴포넌트가 리렌더링이 필요한 컴포넌트로 표시되어 있으므로, <code class="language-plaintext highlighter-rouge">D</code>를 리렌더링</li>
-</ol>
-
-<h2 id="클래스-컴포넌트-class-component--생성자와-생명주기-메소드를-통해-상태와-생명주기-관리">클래스 컴포넌트 (<code class="language-plaintext highlighter-rouge">Class Component</code>) : 생성자와 생명주기 메소드를 통해 상태와 생명주기 관리</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { Component } from 'react';
-
-class MyClassComponent extends Component {
-  constructor(props) {
-    super(props);
-    // 초기 상태 설정
-    this.state = {
-      count: 0
-    };
-  }
-
-  componentDidMount() {
-    // 컴포넌트가 마운트된 후 실행되는 코드
-    console.log('Component mounted');
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    // 상태 또는 속성이 업데이트된 후 실행되는 코드
-    console.log('Component updated', prevState.count, '-&gt;', this.state.count);
-  }
-
-  componentWillUnmount() {
-    // 컴포넌트가 언마운트되기 전 실행되는 코드
-    console.log('Component will unmount');
-  }
-
-  handleIncrement = () =&gt; {
-    // 상태 업데이트 예시
-    this.setState({ count: this.state.count + 1 });
-  };
-
-  render() {
-    return (
-      &lt;div&gt;
-        &lt;p&gt;Count: {this.state.count}&lt;/p&gt;
-        &lt;button onClick={this.handleIncrement}&gt;Increment&lt;/button&gt;
-      &lt;/div&gt;
-    );
-  }
-}
-
-export default MyClassComponent;
-</code></pre></div></div>
-
-<h3 id="생성자-constructor--메소드-내에서-컴포넌트-자체를-참조--this">생성자 (<code class="language-plaintext highlighter-rouge">Constructor</code>) : 메소드 내에서 컴포넌트 자체를 참조 → <code class="language-plaintext highlighter-rouge">this</code></h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">this.state</code> : 컴포넌트의 상태를 저장 (<code class="language-plaintext highlighter-rouge">setState</code> 메소드를 사용하여 업데이트)</li>
-  <li><code class="language-plaintext highlighter-rouge">this.props</code> : 컴포넌트에서 사용되는 속성에 접근</li>
-</ul>
-
-<h3 id="생명주기-메소드-lifecycle-methods--클래스-컴포넌트의-생명주기에-따라-메소드를-실행">생명주기 메소드 (<code class="language-plaintext highlighter-rouge">Lifecycle Methods</code>) : 클래스 컴포넌트의 생명주기에 따라 메소드를 실행</h3>
-
-<blockquote>
-  <p>클래스 컴포넌트의 생명주기 메소드가 실행되는 시점?</p>
-
-  <ul>
-    <li>마운트 (<code class="language-plaintext highlighter-rouge">Mount</code>) : 컴포넌트가 생성되는 시점</li>
-    <li>업데이트 (<code class="language-plaintext highlighter-rouge">Update</code>) : 이미 생성된 컴포넌트의 내용이 변경되는 시점</li>
-    <li>언마운트 (<code class="language-plaintext highlighter-rouge">Unmount</code>) : 컴포넌트가 더 이상 존재하지 않는 시점</li>
-  </ul>
-
-  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/aec795ea-ff51-4f9d-ada3-ebca3616178f" width="80%" /></p>
-</blockquote>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">render()</code> : 컴포넌트가 <code class="language-plaintext highlighter-rouge">UI</code>를 렌더링하기 위해 사용 (마운트, 업데이트 과정에서 실행)
-    <ul>
-      <li>리액트 클래스 컴포넌트의 유일한 필수 값으로 사용</li>
-      <li>항상 순수해야 하며 부수 효과가 없어야 함 → <code class="language-plaintext highlighter-rouge">render()</code> 내에서 <code class="language-plaintext highlighter-rouge">this.setState</code>를 호출하면 안됨</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">componentDidMount()</code> : 클래스 컴포넌트가 마운트된 이후에 실행</li>
-  <li><code class="language-plaintext highlighter-rouge">componentDidUpdate()</code> : 컴포넌트 업데이트가 일어난 이후에 실행</li>
-  <li><code class="language-plaintext highlighter-rouge">componentWillUnmount()</code> : 컴포넌트가 언마운트되거나 더 이상 사용되지 않기 직전에 실행
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">clean-up</code> 함수를 호출하기 위한 최적의 위치</li>
-    </ul>
-  </li>
-</ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-27T15:30:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[React] 3. 리액트 컴포넌트 스타일링 (React Component Styling)</title><link href="http://localhost:4000/react4/" rel="alternate" type="text/html" title="[React] 3. 리액트 컴포넌트 스타일링 (React Component Styling)" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/react4</id><content type="html" xml:base="http://localhost:4000/react4/"><![CDATA[]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">[React] 3. 리액트 라우팅 (React Routing)</title><link href="http://localhost:4000/react5/" rel="alternate" type="text/html" title="[React] 3. 리액트 라우팅 (React Routing)" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/react5</id><content type="html" xml:base="http://localhost:4000/react5/"><![CDATA[]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">[React] 3. 함수 컴포넌트 (Functional Component)</title><link href="http://localhost:4000/react3/" rel="alternate" type="text/html" title="[React] 3. 함수 컴포넌트 (Functional Component)" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/react3</id><content type="html" xml:base="http://localhost:4000/react3/"><![CDATA[<h2 id="함수-컴포넌트-functional-component--리액트-훅을-통한-상태와-생명주기-관리">함수 컴포넌트 (<code class="language-plaintext highlighter-rouge">Functional Component</code>) : 리액트 훅을 통한 상태와 생명주기 관리</h2>
 
 <blockquote>
   <p>클래스 컴포넌트의 한계?</p>
@@ -453,8 +9,6 @@ export default MyClassComponent;
     <li>기능이 많아질수록 컴포넌트의 크기가 커짐 : 내부에서 처리하는 데이터 흐름이 복잡해짐</li>
   </ul>
 </blockquote>
-
-<h2 id="함수-컴포넌트-functional-component--리액트-훅을-통해-상태와-생명주기-관리">함수 컴포넌트 (<code class="language-plaintext highlighter-rouge">Functional Component</code>) : 리액트 훅을 통해 상태와 생명주기 관리</h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useState, useEffect } from 'react';
 
@@ -722,6 +276,33 @@ const App = () =&gt; {
       <li>렌더링 발생 시 의존성 배열의 값이 변경되었으면, 첫번째 인수의 함수를 실행한 후에 그 값을 반환 및 메모이제이션</li>
     </ul>
   </li>
+</ul>
+
+<h4 id="reactmemo--외부-상태나-컨텍스트에-의존하지-않고-순수-함수형-컴포넌트를-메모이제이션할-때-사용"><code class="language-plaintext highlighter-rouge">React.Memo</code> : 외부 상태나 컨텍스트에 의존하지 않고 순수 함수형 컴포넌트를 메모이제이션할 때 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const CreateUser = React.memo(({ username, email, onChange, onCreate }) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;input
+        name="username"
+        placeholder="계정명"
+        onChange={onChange}
+        value={username}
+      /&gt;
+      &lt;input
+        name="email"
+        placeholder="이메일"
+        onChange={onChange}
+        value={email}
+      /&gt;
+      &lt;button onClick={onCreate}&gt;등록&lt;/button&gt;
+    &lt;/div&gt;
+  );
+});
+</code></pre></div></div>
+
+<ul>
+  <li>컴포넌트의 속성 (<code class="language-plaintext highlighter-rouge">props</code>)이 바뀔 때에만 리렌더링을 수행</li>
 </ul>
 
 <h4 id="usecallback--인수로-넘겨받은-콜백-자체를-저장해-재성성-대신-재사용할-때-사용"><code class="language-plaintext highlighter-rouge">useCallback</code> : 인수로 넘겨받은 콜백 자체를 저장해, 재성성 대신 재사용할 때 사용</h4>
@@ -1063,7 +644,470 @@ export default ParentComponent;
 
 <h4 id="uselayouteffect--rendering-이후-mount-이전에-실행"><code class="language-plaintext highlighter-rouge">useLayoutEffect</code> : <code class="language-plaintext highlighter-rouge">rendering</code> 이후, <code class="language-plaintext highlighter-rouge">mount</code> 이전에 실행</h4>
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/db687861-6983-4eac-8615-a144ef0efb3c" width="90%" /></p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[리액트 (React) : 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리]]></summary></entry><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/db687861-6983-4eac-8615-a144ef0efb3c" width="90%" /></p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[함수 컴포넌트 (Functional Component) : 리액트 훅을 통한 상태와 생명주기 관리]]></summary></entry><entry><title type="html">[React] 2. 클래스 컴포넌트 (Class Component)</title><link href="http://localhost:4000/react2/" rel="alternate" type="text/html" title="[React] 2. 클래스 컴포넌트 (Class Component)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react2</id><content type="html" xml:base="http://localhost:4000/react2/"><![CDATA[<h2 id="클래스-컴포넌트-class-component--생성자와-생명주기-메소드를-통한-상태와-생명주기-관리">클래스 컴포넌트 (<code class="language-plaintext highlighter-rouge">Class Component</code>) : 생성자와 생명주기 메소드를 통한 상태와 생명주기 관리</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { Component } from 'react';
+
+class MyClassComponent extends Component {
+  constructor(props) {
+    super(props);
+    // 초기 상태 설정
+    this.state = {
+      count: 0
+    };
+  }
+
+  componentDidMount() {
+    // 컴포넌트가 마운트된 후 실행되는 코드
+    console.log('Component mounted');
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    // 상태 또는 속성이 업데이트된 후 실행되는 코드
+    console.log('Component updated', prevState.count, '-&gt;', this.state.count);
+  }
+
+  componentWillUnmount() {
+    // 컴포넌트가 언마운트되기 전 실행되는 코드
+    console.log('Component will unmount');
+  }
+
+  handleIncrement = () =&gt; {
+    // 상태 업데이트 예시
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;p&gt;Count: {this.state.count}&lt;/p&gt;
+        &lt;button onClick={this.handleIncrement}&gt;Increment&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default MyClassComponent;
+</code></pre></div></div>
+
+<h3 id="생성자-constructor--메소드-내에서-컴포넌트-자체를-참조--this">생성자 (<code class="language-plaintext highlighter-rouge">Constructor</code>) : 메소드 내에서 컴포넌트 자체를 참조 → <code class="language-plaintext highlighter-rouge">this</code></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>constructor(props) {
+  super(props);
+  console.log("constructor");
+}
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">this.state</code> : 컴포넌트의 상태를 저장 (<code class="language-plaintext highlighter-rouge">setState</code> 메소드를 사용하여 업데이트)</li>
+  <li><code class="language-plaintext highlighter-rouge">this.props</code> : 컴포넌트에서 사용되는 속성에 접근</li>
+</ul>
+
+<h3 id="생명주기-메소드-lifecycle-methods--클래스-컴포넌트의-생명주기에-따라-메소드를-실행">생명주기 메소드 (<code class="language-plaintext highlighter-rouge">Lifecycle Methods</code>) : 클래스 컴포넌트의 생명주기에 따라 메소드를 실행</h3>
+
+<blockquote>
+  <p>클래스 컴포넌트의 생명주기 메소드가 실행되는 시점?</p>
+
+  <ul>
+    <li>마운트 (<code class="language-plaintext highlighter-rouge">Mount</code>) : 컴포넌트가 생성되는 시점
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">Constructor</code>, <code class="language-plaintext highlighter-rouge">getDerivedStateFromProps</code>, <code class="language-plaintext highlighter-rouge">render</code>, <code class="language-plaintext highlighter-rouge">componentDidMount</code></li>
+      </ul>
+    </li>
+    <li>업데이트 (<code class="language-plaintext highlighter-rouge">Update</code>) : 이미 생성된 컴포넌트의 내용이 변경되는 시점
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">getDerivedStateFromProps</code>, <code class="language-plaintext highlighter-rouge">shouldComponentUpdate</code>, <code class="language-plaintext highlighter-rouge">render</code>, <code class="language-plaintext highlighter-rouge">getSnapshotBeforeUpdate</code>, <code class="language-plaintext highlighter-rouge">componentDidUpdate</code></li>
+      </ul>
+    </li>
+    <li>언마운트 (<code class="language-plaintext highlighter-rouge">Unmount</code>) : 컴포넌트가 더 이상 존재하지 않는 시점
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">componentWillUnmount</code></li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/aec795ea-ff51-4f9d-ada3-ebca3616178f" width="80%" /></p>
+</blockquote>
+
+<h4 id="render--컴포넌트가-ui를-렌더링하기-위해-사용-마운트-업데이트-과정에서-실행"><code class="language-plaintext highlighter-rouge">render</code> : 컴포넌트가 <code class="language-plaintext highlighter-rouge">UI</code>를 렌더링하기 위해 사용 (마운트, 업데이트 과정에서 실행)</h4>
+
+<ul>
+  <li>리액트 클래스 컴포넌트의 유일한 필수 값으로 사용</li>
+  <li>항상 순수해야 하며 부수 효과가 없어야 함 → <code class="language-plaintext highlighter-rouge">render</code> 내에서 <code class="language-plaintext highlighter-rouge">this.setState</code>를 호출하면 안됨</li>
+</ul>
+
+<h4 id="getderivedstatefromprops--속성에-가져온-값을-상태에-넣을-때-속성이나-상태가-변화했을-때-실행"><code class="language-plaintext highlighter-rouge">getDerivedStateFromProps</code> : 속성에 가져온 값을 상태에 넣을 때, 속성이나 상태가 변화했을 때 실행</h4>
+
+<h4 id="componentdidmount--클래스-컴포넌트가-마운트된-이후에-실행"><code class="language-plaintext highlighter-rouge">componentDidMount</code> : 클래스 컴포넌트가 마운트된 이후에 실행</h4>
+
+<h4 id="shouldcomponentupdate--클래스-컴포넌트가-리렌더링을-할지-안할지-결정"><code class="language-plaintext highlighter-rouge">shouldComponentUpdate</code> : 클래스 컴포넌트가 리렌더링을 할지 안할지 결정</h4>
+
+<h4 id="getsnapshotbeforeupdate--클래스-컴포넌트가-엄데이트되기-직전의-dom-내의-특정-값을-반환하면-그-다음의-componentdidupdate-반환"><code class="language-plaintext highlighter-rouge">getSnapshotBeforeUpdate</code> : 클래스 컴포넌트가 엄데이트되기 직전의 <code class="language-plaintext highlighter-rouge">DOM</code> 내의 특정 값을 반환하면, 그 다음의 <code class="language-plaintext highlighter-rouge">componentDidUpdate</code> 반환</h4>
+
+<h4 id="componentdidupdate--컴포넌트-업데이트가-일어난-이후에-실행"><code class="language-plaintext highlighter-rouge">componentDidUpdate</code> : 컴포넌트 업데이트가 일어난 이후에 실행</h4>
+
+<h4 id="componentwillunmount--컴포넌트가-언마운트되거나-더-이상-사용되지-않기-직전에-실행"><code class="language-plaintext highlighter-rouge">componentWillUnmount</code> : 컴포넌트가 언마운트되거나 더 이상 사용되지 않기 직전에 실행</h4>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[클래스 컴포넌트 (Class Component) : 생성자와 생명주기 메소드를 통한 상태와 생명주기 관리]]></summary></entry><entry><title type="html">[React] 1. 리액트 (React)</title><link href="http://localhost:4000/react1/" rel="alternate" type="text/html" title="[React] 1. 리액트 (React)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react1</id><content type="html" xml:base="http://localhost:4000/react1/"><![CDATA[<h2 id="리액트-react--사용자-인터페이스를-만들기-위한-javascript-라이브러리">리액트 (<code class="language-plaintext highlighter-rouge">React</code>) : 사용자 인터페이스를 만들기 위한 <code class="language-plaintext highlighter-rouge">JavaScript</code> 라이브러리</h2>
+
+<ul>
+  <li>가상 <code class="language-plaintext highlighter-rouge">DOM</code> : 실제 <code class="language-plaintext highlighter-rouge">DOM</code>가 상호 작용하면서 웹 어플리케이션의 빠른 렌더링이 가능</li>
+  <li>선언형 뷰 (<code class="language-plaintext highlighter-rouge">Declarative View</code>) : 사용자 인터페이스를 어떻게 보일지 명시적으로 선언하고, 개발자가 그 명세를 작성</li>
+  <li>컴포넌트 기반 구조 : 부모-자식 관계 및 상태 (<code class="language-plaintext highlighter-rouge">State</code>)를 갖는 재사용 가능한 모듈들로 어플리케이션 구성</li>
+  <li>단방향 데이터 바인딩 : 데이터의 흐름이 단일 방향으로 진행하여 디버깅 용이 → 명시적인 상태 변경이 가능</li>
+  <li><code class="language-plaintext highlighter-rouge">JSX</code> : 자바스크립트 코드 내에 마크업을 작성해 가독성 향상 및 명확한 표현 가능</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/ca8780dc-5a83-45cb-972d-e66b4fea19e4" width="90%" /></p>
+
+<blockquote>
+  <p>리액트에서 자주 쓰이는 <code class="language-plaintext highlighter-rouge">JS</code> 문법?</p>
+
+  <ul>
+    <li>구조 분해 할당 (<code class="language-plaintext highlighter-rouge">Destructuring Assignment</code>) : 배열 또는 객체의 값을 분해해서 할당하는 것</li>
+  </ul>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 객체 구조 분해 할당
+const person = { name: 'John', age: 30 };
+const { name, age } = person;
+
+console.log(name); // 'John'
+console.log(age);  // 30
+</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 배열 구조 분해 할당
+const numbers = [1, 2, 3, 4, 5];
+const [first, second, ...rest] = numbers;
+
+console.log(first); // 1
+console.log(second); // 2
+console.log(rest); // [3, 4, 5]
+</code></pre></div>  </div>
+
+  <ul>
+    <li>전개 구문 (<code class="language-plaintext highlighter-rouge">Spread Syntax</code>) : 배열이나 객체를 확장하여 개별 요소로 분리하거나 복사</li>
+  </ul>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 배열의 전개 구문을 사용하여 두 배열을 병합
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+const mergedArray = [...arr1, ...arr2];
+console.log(mergedArray); // [1, 2, 3, 4, 5, 6]
+</code></pre></div>  </div>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 객체의 전개 구문을 사용하여 두 객체를 병합
+const obj1 = { x: 1, y: 2 };
+const obj2 = { z: 3, w: 4 };
+
+const mergedObject = { ...obj1, ...obj2 };
+console.log(mergedObject); // { x: 1, y: 2, z: 3, w: 4 }
+</code></pre></div>  </div>
+
+  <ul>
+    <li>객체 초기자 (<code class="language-plaintext highlighter-rouge">Object Shorthand Assignment</code>) : 객체를 간결히 생성하고 초기값을 설정</li>
+  </ul>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 일반적인 객체 생성 방법
+const person1 = new Object();
+person1.name = 'Alice';
+person1.age = 25;
+
+// 객체 초기자를 사용한 방법
+const person2 = {
+  name: 'Alice',
+  age: 25
+};
+
+console.log(person1); // { name: 'Alice', age: 25 }
+console.log(person2); // { name: 'Alice', age: 25 }
+
+</code></pre></div>  </div>
+
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">Array</code> 프로토타입 메소드 : <code class="language-plaintext highlighter-rouge">map</code>, <code class="language-plaintext highlighter-rouge">filter</code>, <code class="language-plaintext highlighter-rouge">reduce</code>, <code class="language-plaintext highlighter-rouge">forEach</code></li>
+  </ul>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const numbers = [1, 2, 3, 4];
+
+// map 메소드: 각 숫자를 두 배로 만듭니다.
+const doubledNumbers = numbers.map((num) =&gt; num * 2);
+
+// filter 메소드: 짝수만을 걸러냅니다.
+const evenNumbers = numbers.filter((num) =&gt; num % 2 === 0);
+
+// reduce 메소드: 모든 숫자의 합을 계산합니다.
+const sum = numbers.reduce((acc, num) =&gt; acc + num, 0);
+
+// forEach 메소드: 각 숫자를 콘솔에 출력합니다.
+numbers.forEach((num) =&gt; console.log(num));
+
+console.log('Doubled Numbers:', doubledNumbers);
+console.log('Even Numbers:', evenNumbers);
+console.log('Sum:', sum);
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="jsx-javascript-xml--기존-js에-html-css를-더해-리액트-컴포넌트-작성"><code class="language-plaintext highlighter-rouge">JSX</code> (<code class="language-plaintext highlighter-rouge">JavaScript XML</code>) : 기존 <code class="language-plaintext highlighter-rouge">JS</code>에 <code class="language-plaintext highlighter-rouge">HTML</code>, <code class="language-plaintext highlighter-rouge">CSS</code>를 더해 리액트 컴포넌트 작성</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">JSXElement</code> : <code class="language-plaintext highlighter-rouge">JSX</code> 엘리먼트<br />(<code class="language-plaintext highlighter-rouge">&lt;div&gt;Hello, World!&lt;/div&gt;</code>에서 <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">JSXAttribute</code> : <code class="language-plaintext highlighter-rouge">JSX</code> 엘리먼트의 속성<br />(<code class="language-plaintext highlighter-rouge">&lt;div className="container"&gt;Hello, World!&lt;/div&gt;</code>에서 <code class="language-plaintext highlighter-rouge">className="container"</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">JSXChildren</code> : <code class="language-plaintext highlighter-rouge">JSX</code> 엘리먼트의 자식 요소<br />(<code class="language-plaintext highlighter-rouge">&lt;div&gt;Hello, &lt;span&gt;React&lt;/span&gt;!&lt;/div&gt;</code>에서 <code class="language-plaintext highlighter-rouge">Hello, &lt;span&gt;React&lt;/span&gt;!</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">JSXString</code> : <code class="language-plaintext highlighter-rouge">JSX</code> 문자열<br />(<code class="language-plaintext highlighter-rouge">&lt;div&gt;Hello, World!&lt;/div&gt;</code>에서 <code class="language-plaintext highlighter-rouge">"Hello, World!"</code>)</li>
+</ul>
+
+<h3 id="가상-dom-virtual-dom--실제-dom-document-object-model-에-대한-가벼운-복사본">가상 <code class="language-plaintext highlighter-rouge">DOM</code> (<code class="language-plaintext highlighter-rouge">Virtual DOM</code>) : 실제 <code class="language-plaintext highlighter-rouge">DOM</code> (<code class="language-plaintext highlighter-rouge">Document Object Model</code>) 에 대한 가벼운 복사본</h3>
+
+<ul>
+  <li>리액트 파이버 (<code class="language-plaintext highlighter-rouge">React Fiber</code>) : 가상 <code class="language-plaintext highlighter-rouge">DOM</code>과 실제 <code class="language-plaintext highlighter-rouge">DOM</code>을 비교해 변경 사항을 수집
+    <ul>
+      <li>동기성 : 렌더링 작업을 여러 프레임에 나눠 렌더링 작업이 한 번에 실행되지 않더라도 앱이 반응적으로 유지 가능</li>
+      <li>우선순위 관리 : 각 작업에 우선순위를 할당하고, 중요한 작업을 먼저 처리하여 사용자 인터랙션에 빠르게 응답 가능</li>
+      <li>종료 및 재시작 가능 : 사용자 인터랙션에 우선순위를 두면서도 작업을 중단하고 다시 시작 가능</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">DOM</code>과 <code class="language-plaintext highlighter-rouge">CSSOM</code>으로 렌더링 트리가 만들어지는 과정?</p>
+
+  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/95ef558e-965b-4525-873f-140e4292b29e" width="90%" /></p>
+
+  <ol>
+    <li>브라우저가 사용자가 요청한 주소를 방문해 <code class="language-plaintext highlighter-rouge">HTML</code> 파일을 다운로드</li>
+    <li>브라우저의 렌더링 엔진은 <code class="language-plaintext highlighter-rouge">HTML</code>을 파싱해 <code class="language-plaintext highlighter-rouge">DOM</code> 노드로 구성된 트리를 생성</li>
+    <li><code class="language-plaintext highlighter-rouge">CSS</code> 파일을 만나면, 해당 <code class="language-plaintext highlighter-rouge">CSS</code> 파일도 다운로드</li>
+    <li><code class="language-plaintext highlighter-rouge">CSS</code> 파일을 파싱하여 <code class="language-plaintext highlighter-rouge">CSS</code> 노드로 구성된 트리 (<code class="language-plaintext highlighter-rouge">CSSOM</code>)를 생성</li>
+    <li>사용자의 눈에 보일 <code class="language-plaintext highlighter-rouge">DOM</code> 노드만을 순회</li>
+    <li>눈에 보이는 노드를 대상으로 해당 노드에 대한 <code class="language-plaintext highlighter-rouge">CSSOM</code> 정보를 찾고 <code class="language-plaintext highlighter-rouge">CSS</code> 스타일 정보를 적용
+      <ul>
+        <li>레이아웃 (<code class="language-plaintext highlighter-rouge">Layout</code>) : 각 노드가 브라우저 화면에 어느 좌표에 나타날지 계산하는 과정</li>
+        <li>페인팅 (<code class="language-plaintext highlighter-rouge">Painting</code>) : 레이아웃 단계를 거친 노드에 색과 같은 실제 유효한 모습을 그리는 과정</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>… 모든 <code class="language-plaintext highlighter-rouge">DOM</code>의 변경보다 결과적으로 만들어질 <code class="language-plaintext highlighter-rouge">DOM</code>의 최종 결과물만을 제공하자!</p>
+</blockquote>
+
+<ol>
+  <li>초기 렌더링 : 초기 상태에서 가상 <code class="language-plaintext highlighter-rouge">DOM</code>은 실제 <code class="language-plaintext highlighter-rouge">DOM</code>과 동일한 구조를 가짐</li>
+  <li>상태 변화 감지 : 사용자 상호 작용이나 데이터 변경 등의 이벤트가 발생하면, 렌더링 엔진은 새로운 가상 <code class="language-plaintext highlighter-rouge">DOM</code> 생성</li>
+  <li>가상 <code class="language-plaintext highlighter-rouge">DOM</code> 비교 : 새로운 가상 <code class="language-plaintext highlighter-rouge">DOM</code>과 이전의 가상 <code class="language-plaintext highlighter-rouge">DOM</code>을 비교하여 변경된 부분 탐색</li>
+  <li>실제 <code class="language-plaintext highlighter-rouge">DOM</code> 업데이트 : 변경된 부분만을 실제 <code class="language-plaintext highlighter-rouge">DOM</code>에 적용</li>
+</ol>
+
+<h2 id="컴포넌트-component--리액트-애플리케이션에서-ui를-구성하고-재사용-가능한-모듈을-표현">컴포넌트 (<code class="language-plaintext highlighter-rouge">Component</code>) : 리액트 애플리케이션에서 <code class="language-plaintext highlighter-rouge">UI</code>를 구성하고 재사용 가능한 모듈을 표현</h2>
+
+<ul>
+  <li>속성 (<code class="language-plaintext highlighter-rouge">Props</code>) 을 받고, 상태 (<code class="language-plaintext highlighter-rouge">state</code>)와 메소드 (<code class="language-plaintext highlighter-rouge">Method</code>)를 가짐</li>
+  <li>반복되는 <code class="language-plaintext highlighter-rouge">UI</code> 단위 (<code class="language-plaintext highlighter-rouge">JS Code</code> 또는 <code class="language-plaintext highlighter-rouge">HTML-JSX</code>) → 재사용성과 가독성을 위한 도구</li>
+  <li>가능한 독립적으로 실행되도록 작성하고, 데이터 영역과 <code class="language-plaintext highlighter-rouge">UI</code>를 분리</li>
+</ul>
+
+<h3 id="상태-state---사용자-상호작용에-응답하거나-컴포넌트의-생명주기에-변경되는-정보를-저장하는-데에-사용">상태 (<code class="language-plaintext highlighter-rouge">State</code>) :  사용자 상호작용에 응답하거나 컴포넌트의 생명주기에 변경되는 정보를 저장하는 데에 사용</h3>
+
+<ul>
+  <li>부모의 상태가 변경되면, 그 상태를 참조하는 모든 자식 컴포넌트가 <code class="language-plaintext highlighter-rouge">Re-Rendering</code>
+    <ul>
+      <li>상태를 통합하면 <code class="language-plaintext highlighter-rouge">Re-Rendering</code>이 많이 일어나므로, 상태를 연관성에 맞게 분리해 좁게 사용해야 함</li>
+      <li><code class="language-plaintext highlighter-rouge">Setter</code>로 값을 수신하면 <code class="language-plaintext highlighter-rouge">Dispatcher</code> 값이 세팅 → <code class="language-plaintext highlighter-rouge">re-rendering</code>을 <code class="language-plaintext highlighter-rouge">trigger</code> (<code class="language-plaintext highlighter-rouge">DOM</code> 갱신)</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useState } from 'react';
+
+function ExampleComponent() {
+  const [count, setCount] = useState(0);
+  const [message, setMessage] = useState('안녕하세요!');
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;{message}&lt;/p&gt;
+      &lt;p&gt;카운트: {count}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre></div></div>
+
+<blockquote>
+  <p>초기화는 동기 방식이면 오래 걸리더라도 가능, <code class="language-plaintext highlighter-rouge">Promise</code>는 <code class="language-plaintext highlighter-rouge">async</code>/<code class="language-plaintext highlighter-rouge">await</code>로 처리해도 <code class="language-plaintext highlighter-rouge">Promise</code>가 세팅</p>
+</blockquote>
+
+<h3 id="속성-prop--부모-컴포넌트로부터-자식-컴포넌트로-데이터를-전달하는-데에-사용">속성 (<code class="language-plaintext highlighter-rouge">Prop</code>) : 부모 컴포넌트로부터 자식 컴포넌트로 데이터를 전달하는 데에 사용</h3>
+
+<ul>
+  <li>변수나 함수와 같은 속성들을 부모에서 자식으로 전달 (<code class="language-plaintext highlighter-rouge">MyComponent.defaultProps = { ... }</code>)
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Read-Only</code> : 속성이 변경되도 <code class="language-plaintext highlighter-rouge">Re-Rendering</code>하지 않음! (값은 바꿔도 화면엔 아무런 영향 없음!)</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 부모 컴포넌트
+import ChildComponent from './ChildComponent';
+
+function ParentComponent() {
+  const dataToPass = "안녕하세요!";
+  
+  return (
+    &lt;ChildComponent message={dataToPass} /&gt;
+  );
+}
+
+// 자식 컴포넌트
+function ChildComponent(props) {
+  return (
+    &lt;div&gt;
+      &lt;p&gt;{props.message}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre></div></div>
+
+<h3 id="컴포넌트-개발-원칙--코드의-가독성-유지보수성-재사용성을-향상하여-구성-요소를-생성">컴포넌트 개발 원칙 : 코드의 가독성, 유지보수성, 재사용성을 향상하여 구성 요소를 생성</h3>
+
+<ul>
+  <li><b>가급적 순수 함수 컴포넌트 (<code>Pure Functional Component</code>)를 활용할 것!</b>
+    <ul>
+      <li>상태나 생명주기 메서드 없이 단순히 <code class="language-plaintext highlighter-rouge">props</code>를 받아 렌더링하는 컴포넌트 → 간결하고 재사용성이 높힐 수 있음</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Container Component</code>와 <code class="language-plaintext highlighter-rouge">Presentational Component</code>를 분리할 것
+    <ul>
+      <li>데이터를 가져오는 로직과 <code class="language-plaintext highlighter-rouge">UI</code>를 그리는 로직을 분리하여 관리</li>
+    </ul>
+  </li>
+  <li>상태를 공유하는 단위로 분리할 것
+    <ul>
+      <li>관련된 상태를 함께 관리하고, 필요한 경우 <code class="language-plaintext highlighter-rouge">useContext</code>를 사용하여 상태 공유를 구현</li>
+    </ul>
+  </li>
+  <li>아주 깊은 구조로 중첩되는 <code class="language-plaintext highlighter-rouge">Container</code> 컴포넌트는 피할 것
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Context</code>를 남발하는 대신, 상태 관리 등의 용도로 필요한 경우에만 적절히 사용할 것</li>
+    </ul>
+  </li>
+  <li>각 컴포넌트는 독립적으로 작성할 것
+    <ul>
+      <li>컴포넌트 간의 결합도를 최소화해 재사용성을 높이고 유지보수를 용이하게 만들어야 함</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="렌더링-rendering--html-css-리소스로-웹-페이지의-ui를-그리는-과정">렌더링 (<code class="language-plaintext highlighter-rouge">Rendering</code>) : <code class="language-plaintext highlighter-rouge">HTML</code>, <code class="language-plaintext highlighter-rouge">CSS</code> 리소스로 웹 페이지의 <code class="language-plaintext highlighter-rouge">UI</code>를 그리는 과정</h2>
+
+<ul>
+  <li>리액트의 렌더링 : 리액트 어플리케이션 트리 내의 모든 컴포넌트들이 갖고 있는 현재 상태와 속성의 값을 기반하여 어떻게<code class="language-plaintext highlighter-rouge">UI</code>를 구성하고 어떤 <code class="language-plaintext highlighter-rouge">DOM</code> 결과를 브라우저에 제공할지 계산하는 일련의 과정
+    <ul>
+      <li>초기 렌더링 : 사용자가 처음 어플리케이션이 진입할 때 최초로 수행</li>
+      <li>리렌더링 (<code class="language-plaintext highlighter-rouge">Re-rendering</code>) : 처음 어플리케이션 이후에 발생하는 모든 렌더링들을 총칭
+        <ul>
+          <li>클래스 컴포넌트의 <code class="language-plaintext highlighter-rouge">setState()</code>나 <code class="language-plaintext highlighter-rouge">forceUpdate()</code>가 실행되는 경우</li>
+          <li>함수 컴포넌트의 <code class="language-plaintext highlighter-rouge">useState()</code>의 두번째 배열 요소인 <code class="language-plaintext highlighter-rouge">setter</code>가 실행되는 경우</li>
+          <li>함수 컴포넌트의 <code class="language-plaintext highlighter-rouge">useReducer()</code>의 두번째 배열 요소인 <code class="language-plaintext highlighter-rouge">dispatch</code>가 실행되는 경우</li>
+          <li>컴포넌트의 <code class="language-plaintext highlighter-rouge">key props</code>가 변경되는 경우</li>
+          <li>부모 컴포넌트로부터 전달받는 값인 <code class="language-plaintext highlighter-rouge">props</code>가 변경되거나 부모 컴포넌트가 리렌더링될 경우</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="렌더링-프로세스-rendering-process--리액트의-재조정을-위해-변경-사항을-탐색-비교-수집하는-과정">렌더링 프로세스 (<code class="language-plaintext highlighter-rouge">Rendering Process</code>) : 리액트의 재조정을 위해 변경 사항을 탐색, 비교, 수집하는 과정</h3>
+
+<ol>
+  <li>리액트가 컴포넌트의 루트에서부터 업데이트가 필요한 모든 컴포넌트를 탐색</li>
+  <li>클래스 컴포넌트는 클래스 내 <code class="language-plaintext highlighter-rouge">render()</code> 함수를, 함수 컴포넌트는 <code class="language-plaintext highlighter-rouge">FunctionComponent()</code> 자체를 호출</li>
+  <li><code class="language-plaintext highlighter-rouge">JSX</code>로 구성된 렌더링 결과물을 자바스크립트로 컴파일하면 <code class="language-plaintext highlighter-rouge">React.createElement()</code>를 반환</li>
+  <li><code class="language-plaintext highlighter-rouge">React.createElement()</code>가 브라우저 <code class="language-plaintext highlighter-rouge">UI</code> 구조를 설명하는 자바스크립트 객체를 반환</li>
+</ol>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/9ce93fdd-ed10-4a4a-84c4-58234265ffb2" width="80%" /></p>
+
+<h4 id="1-렌더-단계-render-phase--컴포넌트를-렌더링하고-변경-사항을-계산하는-모든-작업"><code class="language-plaintext highlighter-rouge">(1)</code> 렌더 단계 (<code class="language-plaintext highlighter-rouge">Render Phase</code>) : 컴포넌트를 렌더링하고 변경 사항을 계산하는 모든 작업</h4>
+
+<ol>
+  <li>렌더링 프로세스에서 컴포넌트를 실행 (<code class="language-plaintext highlighter-rouge">render()</code> 또는 <code class="language-plaintext highlighter-rouge">return</code>)</li>
+  <li>이전 가상 <code class="language-plaintext highlighter-rouge">DOM</code>과 결과 가상 <code class="language-plaintext highlighter-rouge">DOM</code>를 비교</li>
+  <li><code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">props</code>, <code class="language-plaintext highlighter-rouge">key</code>를 비교하여, 하나라도 변경된 것이 있으면 변경이 필요한 컴포넌트로 체크</li>
+</ol>
+
+<h4 id="2-커밋-단계-commit-phase--렌더-단계의-변경-사항을-실제-dom에-적용해-사용자에게-표현"><code class="language-plaintext highlighter-rouge">(2)</code> 커밋 단계 (<code class="language-plaintext highlighter-rouge">Commit Phase</code>) : 렌더 단계의 변경 사항을 실제 <code class="language-plaintext highlighter-rouge">DOM</code>에 적용해 사용자에게 표현</h4>
+
+<ol>
+  <li>리액트가 먼저 <code class="language-plaintext highlighter-rouge">DOM</code>을 커밋 단계에서 업데이트</li>
+  <li>생성된 모든 <code class="language-plaintext highlighter-rouge">DOM</code> 노드 및 인스턴스를 가리키도록 리액트 내부의 참조를 업데이트</li>
+  <li>클래스 컴포넌트는 <code class="language-plaintext highlighter-rouge">componentDidMount</code>, <code class="language-plaintext highlighter-rouge">componentDidUpdate</code> 메소드를,<br />함수 컴포넌트는 <code class="language-plaintext highlighter-rouge">useLayoutEffect</code> 훅을 호출</li>
+</ol>
+
+<ul>
+  <li>리액트의 렌더링이 일어난다고 무조건 <code class="language-plaintext highlighter-rouge">DOM</code> 업데이트가 일어나지 않음! (커밋 단계 생략 가능)
+    <ul>
+      <li>리액트의 렌더링은 가시적 변경 없이 발생 가능!! (커밋 단계가 생략되어 <code class="language-plaintext highlighter-rouge">DOM</code> 업데이트가 발생하지 않음)</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>렌더링 시나리오 - 어플리케이션의 숫자 증가 버튼</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useState } from 'react'
+
+export default function A() {
+  return (
+  &lt;div className="App"&gt;
+    &lt;h1&gt;Hello React!&lt;/h1&gt;
+    &lt;B /&gt;
+  &lt;/div&gt;
+  )
+}
+
+function B() {
+  const [counter, setCounter] = useState(0)
+
+  function handleButtonClick() {
+    setCounter((previous) =&gt; previous + 1)
+  }
+
+  return (
+    &lt;&gt;
+      &lt;label&gt;
+        &lt;C number={counter}/&gt;
+      &lt;/label&gt;
+      &lt;button onClick={handleButtonClick}&gt;&lt;/button&gt;
+    &lt;/&gt;
+  )
+}
+
+function C({number}: {number: number}) {
+  return (
+    &lt;div&gt;
+      {number} &lt;D/&gt;
+    &lt;/div&gt;
+  )
+}
+
+function D() {
+  return (
+    &lt;&gt;
+      안녕 리액트!
+    &lt;/&gt;
+    );
+}
+</code></pre></div>  </div>
+
+  <ol>
+    <li><code class="language-plaintext highlighter-rouge">B</code> 컴포넌트의 <code class="language-plaintext highlighter-rouge">setState</code> 호출</li>
+    <li><code class="language-plaintext highlighter-rouge">B</code> 컴포넌트의 리렌더링 작업이 큐에 들어감</li>
+    <li>리액트는 트리 최상단에서부터 렌더링 경로를 갱신</li>
+    <li><code class="language-plaintext highlighter-rouge">A</code> 컴포넌트가 리렌더링이 필요한 컴포넌트로 표시되어 있지 않으므로, 커밋 단계를 생략</li>
+    <li><code class="language-plaintext highlighter-rouge">B</code> 컴포넌트가 리렌더링이 필요한 컴포넌트로 표시되어 있으므로, <code class="language-plaintext highlighter-rouge">B</code>를 리렌더링</li>
+    <li><code class="language-plaintext highlighter-rouge">B</code> 컴포넌트가 <code class="language-plaintext highlighter-rouge">C</code> 컴포넌트를 반환</li>
+    <li><code class="language-plaintext highlighter-rouge">C</code> 컴포넌트의 <code class="language-plaintext highlighter-rouge">props</code>인 <code class="language-plaintext highlighter-rouge">number</code>가 업데이트</li>
+    <li><code class="language-plaintext highlighter-rouge">C</code> 컴포넌트가 리렌더링이 필요한 컴포넌트로 표시되어 있으므로, <code class="language-plaintext highlighter-rouge">C</code>를 리렌더링</li>
+    <li><code class="language-plaintext highlighter-rouge">C</code> 컴포넌트가 <code class="language-plaintext highlighter-rouge">D</code> 컴포넌트를 반환</li>
+    <li><code class="language-plaintext highlighter-rouge">D</code> 컴포넌트의 부모인 <code class="language-plaintext highlighter-rouge">C</code> 컴포넌트가 리렌더링이 필요한 컴포넌트로 표시되어 있으므로, <code class="language-plaintext highlighter-rouge">D</code>를 리렌더링</li>
+  </ol>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[리액트 (React) : 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리]]></summary></entry><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
 
 <ul>
   <li>정적 타입 (<code class="language-plaintext highlighter-rouge">Static Type</code>) : 변수, 매개변수, 함수 반환 값 등에 대한 타입을 명시적으로 지정 가능</li>
@@ -2992,1041 +3036,4 @@ Mutable: false
   <li><code class="language-plaintext highlighter-rouge">npm init</code>으로 <code class="language-plaintext highlighter-rouge">package.json</code> 작성</li>
   <li>의존 관계가 있으면 <code class="language-plaintext highlighter-rouge">npm install</code></li>
   <li><code class="language-plaintext highlighter-rouge">npm login</code> 후 배포 <code class="language-plaintext highlighter-rouge">npm publish --access public</code></li>
-</ol>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[모듈 (Module) : 코드를 재사용 가능한 파일 단위의 조각으로 나눈 것]]></summary></entry><entry><title type="html">[JS] 4. 스코프 (Scope) &amp;amp; 실행 컨텍스트 (Execution Context)</title><link href="http://localhost:4000/js4/" rel="alternate" type="text/html" title="[JS] 4. 스코프 (Scope) &amp;amp; 실행 컨텍스트 (Execution Context)" /><published>2024-01-31T00:00:00+09:00</published><updated>2024-01-31T00:00:00+09:00</updated><id>http://localhost:4000/js4</id><content type="html" xml:base="http://localhost:4000/js4/"><![CDATA[<h2 id="스코프-scope--변수에-접근할-수-있는-범위">스코프 (<code class="language-plaintext highlighter-rouge">Scope</code>) : 변수에 접근할 수 있는 범위</h2>
-
-<ul>
-  <li>변수가 선언되었을 때, 선언 위치에 의해 해당 변수에 접근할 수 있는 코드의 영역이 결정
-    <ul>
-      <li>자바스크립트 엔진은 스코프를 통해 참조 대상 식별자를 찾아 변수를 식별</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="전역-스코프-global-level-scope--코드-어디에서나-참조-가능">전역 스코프 (<code class="language-plaintext highlighter-rouge">Global-level Scope</code>) → 코드 어디에서나 참조 가능</h3>
-
-<ul>
-  <li>전역에 선언된 전역 변수 (<code class="language-plaintext highlighter-rouge">Global variable</code>) 는 전역 객체 (<code class="language-plaintext highlighter-rouge">Global Object</code>)의 프로퍼티</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var global = 'global';
-
-function main() {
-  var local = 'local';
-  console.log(global);
-  console.log(local);
-}
-
-console.log(global);
-console.log(local); // Uncaught ReferenceError: local is not defined
-</code></pre></div></div>
-
-<h3 id="함수-스코프-function-level-scope--함수-자신과-하위-함수에서만-참조-가능">함수 스코프 (<code class="language-plaintext highlighter-rouge">Function-level Scope</code>) → 함수 자신과 하위 함수에서만 참조 가능</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(function () {
-  var local = 'local';
-  console.log(local);
-})();
-</code></pre></div></div>
-
-<h3 id="블록-스코프-block-level-scope--블록-내에서만-참조-가능">블록 스코프 (<code class="language-plaintext highlighter-rouge">Block-level Scope</code>) → 블록 내에서만 참조 가능</h3>
-
-<h3 id="모듈-스코프-module-level-scope-">모듈 스코프 (<code class="language-plaintext highlighter-rouge">Module-level Scope</code>) →</h3>
-
-<h3 id="렉시컬-스코프-lexical-level-scope">렉시컬 스코프 (<code class="language-plaintext highlighter-rouge">Lexical-level Scope</code>)</h3>
-
-<h3 id="암묵적-전역-implicit-global">암묵적 전역 (<code class="language-plaintext highlighter-rouge">Implicit Global</code>)</h3>
-
-<h2 id="실행-컨텍스트-execution-context--실행할-코드에-제공할-환경-정보들을-모아놓은-객체">실행 컨텍스트 (<code class="language-plaintext highlighter-rouge">Execution Context</code>) : 실행할 코드에 제공할 환경 정보들을 모아놓은 객체</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var gg = 1;  let bb = 2;
-
-function f1(x, y) {
-  var gg = 11;   let bb = 22;
-  console.log('f1&gt;', gg, bb, zz, f2, f2.length);
-  f2('first');
-  { 
-    const xx = 99;
-    let lll = 0;
-    f2('nest-first');
-    var zz = 88;
-    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
-  }
-  function f2(t, u) { console.log(t, 'inner', xx, zz); }
-  function f2(t, u, v) { console.log(t, 'inner2', xx, zz); }
-  var zz = 800;
-  f2('second');
-}
-
-function f2(g) {
-  console.log(g, 'global f2&gt;', gg, bb, xx, kk);
-}
-
-let xx = 9;
-if (gg &gt; 0) { var kk = 33; var yy = 9; }
-
-f1(1,2);   console.log(kk, yy);
-
-f2('third');
-</code></pre></div></div>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/40dca0b0-9e4b-44d6-a36c-83aee24fc2e3" /></p>
-
-<p><code class="language-plaintext highlighter-rouge">(1)</code> 전역 코드 평가 단계</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var gg;  let bb;
-function f1(x, y) { ... } // Function Object
-function f2(g) { ... }    // Function Object
-let xx;
-var kk;
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(2)</code> 전역 코드 실행 단계</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var gg = 1;  let bb = 2;
-let xx = 9;
-if (gg &gt; 0) { ... }
-f1(1,2);   console.log(kk, yy);
-f2('third');
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(3)</code> 전역 코드 실행 단계 (<code class="language-plaintext highlighter-rouge">if</code>문 코드 블록 실행 및 종료)</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (gg &gt; 0) { // var gg = 1;
-  var kk = 33; var yy = 9;
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(4)</code> 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 호출</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f1(1,2);
-
-function f1(x, y) {
-  var gg;   let bb;
-  { ... }
-  // function f2(t, u) { ... } // Function Object
-  function f2(t, u, v) { ... } // Function Object
-  var zz;
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(5)</code> 함수 코드 평가 단계 내부의 블록 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">{ ... }</code></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  { 
-    const xx;
-    let lll;
-    var zz;
-    function f2(t) { ... } // Function Object
-  }
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(6)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f1(1,2);
-
-function f1(x, y) {
-  gg = 11;   bb = 22;
-  console.log('f1&gt;', gg, bb, zz, f2, f2.length); // f1&gt; 11, 22, undefined, f2, 3
-  f2('first');
-  { ... }
-  zz = 800;
-  f2('second');
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(7)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('first')</code> 호출</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f1(1,2);
-
-function f1(x, y) {
-  f2('first');
-
-  function f2(t, u, v) { console.log(t, 'inner2', xx, zz); };
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(8)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f2('first')</code> 실행</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f1(1,2);
-
-function f1(x, y) {
-  gg = 11;   bb = 22;
-  f2('first'); // first inner2 9 undefined
-
-  function f2(t, u, v) { console.log(t, 'inner2', xx, zz); };
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(9)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('nest-first')</code> 호출</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f1(x, y) {
-  gg = 11; bb = 22;
-  { 
-    xx = 99;
-    lll = 0;
-    f2('nest-first');
-    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
-  }
-...
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(10)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f2('nest-first')</code> 실행</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f1(x, y) {
-  gg = 11; bb = 22;
-
-  { 
-    xx = 99;
-    lll = 0;
-    f2('nest-first'); // nest-first nested 99 undefined 0
-    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
-  }
-...
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(11)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('second')</code> 호출</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f1(x, y) {
-  gg = 11; bb = 22;
-  
-  {
-    const xx = 99;
-    lll = 0;
-    zz = 88;
-    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
-  }
-
-  f2('second');
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(12)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f2('second')</code> 실행</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f1(x, y) {
-  gg = 11; bb = 22;
-  
-  {
-    const xx = 99;
-    lll = 0;
-    zz = 88;
-    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
-  }
-  f2('second'); // second nested 99 800 0
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(13)</code> 전역 코드 실행 단계 (<code class="language-plaintext highlighter-rouge">console.log</code> 문 실행 및 종료)</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gg = 1;  bb = 2;
-
-console.log(kk, yy); // 33 9
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(14)</code> 전역 코드 실행 단계 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('third')</code> 평가</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gg = 1; bb = 2;
-
-function f2(g) {
-  console.log(g, 'global f2&gt;', gg, bb, xx, kk);
-}
-
-let xx = 9;
-if (gg &gt; 0) { var kk = 33; var yy = 9; }
-
-f2('third');
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(15)</code> 전역 코드 실행 단계 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('third')</code> 실행</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gg = 1; bb = 2;
-
-function f2(g) {
-  console.log(g, 'global f2&gt;', gg, bb, xx, kk);
-}
-
-let xx = 9;
-if (gg &gt; 0) { var kk = 33; var yy = 9; }
-
-f2('third'); // third global f2&gt; 1 2 9 33
-</code></pre></div></div>
-
-<blockquote>
-  <p><b>블록 코드 평가 및 실행</b></p>
-
-  <ol>
-    <li><code class="language-plaintext highlighter-rouge">Global</code>/<code class="language-plaintext highlighter-rouge">Function</code> 평가할 때 <code class="language-plaintext highlighter-rouge">Block scope</code>를 만나면, <code class="language-plaintext highlighter-rouge">Block Lexical Environment</code>를 생성한다.<br />(별도의 <code class="language-plaintext highlighter-rouge">ExecutionContext</code>를 생성하지 않고 독립적인 <code class="language-plaintext highlighter-rouge">Lexical Environment</code>만을 생성한다.)</li>
-    <li><code class="language-plaintext highlighter-rouge">Block code</code>를 평가하여 이 <code class="language-plaintext highlighter-rouge">Block</code>에 대한 <code class="language-plaintext highlighter-rouge">DeclarativeEnvironmentRecord</code>를 생성한다.</li>
-    <li><code class="language-plaintext highlighter-rouge">const</code>/<code class="language-plaintext highlighter-rouge">let</code>은 <code class="language-plaintext highlighter-rouge">notInitializedYet</code> 상태로 <code class="language-plaintext highlighter-rouge">DeclarativeEnvironmentRecord</code>에 등록되고, <code class="language-plaintext highlighter-rouge">var</code>/<code class="language-plaintext highlighter-rouge">function</code> 선언식 등은 부모 <code class="language-plaintext highlighter-rouge">Function scope</code>의 <code class="language-plaintext highlighter-rouge">EnvironmentRecord</code>에 <code class="language-plaintext highlighter-rouge">hoisting</code>한다.<br />(이때 <code class="language-plaintext highlighter-rouge">function</code>은 <code class="language-plaintext highlighter-rouge">&lt;function object&gt;</code>가 아니라 <code class="language-plaintext highlighter-rouge">var</code>와 같이 <code class="language-plaintext highlighter-rouge">undefined</code>로 초기화한다.)</li>
-    <li><code class="language-plaintext highlighter-rouge">Block</code>이 끝나면, 평가 종료 후 상위 <code class="language-plaintext highlighter-rouge">scope code</code>를 계속 평가한다.</li>
-    <li><code class="language-plaintext highlighter-rouge">Block</code>이 실행되면, <code class="language-plaintext highlighter-rouge">Block Lexical Environment</code>를 만들고, 부모 <code class="language-plaintext highlighter-rouge">ExecutionContext</code>의 제어를 가져온다.</li>
-    <li><code class="language-plaintext highlighter-rouge">Block</code> 내의 <code class="language-plaintext highlighter-rouge">Function</code> 선언식은 무조건 <code class="language-plaintext highlighter-rouge">Block</code> 최상단에 <code class="language-plaintext highlighter-rouge">hoisting</code>되어 있으므로 먼저 실행한다.<br />(이 시점에 상위 <code class="language-plaintext highlighter-rouge">function-scope</code>에 함수를 정의해, <code class="language-plaintext highlighter-rouge">&lt;function object&gt;</code>으로 인정된다!)</li>
-    <li>그 외의 코드 (할당문 및 다른 함수 호출)를 한 줄씩 실행된다.</li>
-    <li><code class="language-plaintext highlighter-rouge">Block</code>의 실행이 끝나면, <code class="language-plaintext highlighter-rouge">ExecutionContext</code>의 제어를 다시 부모로 돌려준다.</li>
-    <li><code class="language-plaintext highlighter-rouge">Block</code>은 조건에 따라 실행 여부가 결정된다. 평가 시 블럭 내의 <code class="language-plaintext highlighter-rouge">var</code>/<code class="language-plaintext highlighter-rouge">function</code>은 <code class="language-plaintext highlighter-rouge">undefined</code>로 <code class="language-plaintext highlighter-rouge">hoisting</code>되고, 조건이 만족하여 호출 및 실행될 때에만 <code class="language-plaintext highlighter-rouge">Block Lexical Environment</code>와 <code class="language-plaintext highlighter-rouge">EnvironmentRecord</code>를 만들고 <code class="language-plaintext highlighter-rouge">&lt;function object&gt;</code>로 정의된다.</li>
-  </ol>
-</blockquote>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a69498fb-6f39-413d-8a75-ef547e4ba4b5" /></p>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a1271743-b805-4040-9743-39e7b2cd5bda" /></p>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5272ac93-d18b-4112-a45f-46d657839a3d" /></p>
-
-<h2 id="엄격-모드-strict-mode--자바스크립트가-묵인한-에러를-발생시켜-엄격한-오류-검사를-적용">엄격 모드 (<code class="language-plaintext highlighter-rouge">Strict Mode</code>) : 자바스크립트가 묵인한 에러를 발생시켜 엄격한 오류 검사를 적용</h2>
-
-<ul>
-  <li>선언하지 않은 식별자는 접근할 수 없음</li>
-  <li>암묵적 전역 (<code class="language-plaintext highlighter-rouge">Implicit Global</code>)은 허용하지 않음</li>
-  <li><code class="language-plaintext highlighter-rouge">Delete</code>로 선언된 변수, 함수, 매개변수를 삭제할 수 없음</li>
-  <li>블록 내에서의 함수는 블록 스코프 (블록 내 함수는 볼록의 <code class="language-plaintext highlighter-rouge">DeclarativeEnvironmentRecord</code>에 존재)</li>
-  <li>함수 내에서 매개변수의 이름이 동일해선 안됨</li>
-  <li><code class="language-plaintext highlighter-rouge">NaN</code>, <code class="language-plaintext highlighter-rouge">Infinite</code> 등의 전역 프로퍼티에 값을 할당해선 안됨</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
-
-
-var gg = 1;
-let bb = 2;
-
-function f1(x, y) {
-  var gg = 11;
-  let bb = 22;
-  console.log('f1&gt;', gg, bb, zz, f2, f2.length);
-  f2('* first');
-  {
-    const xx = 99;
-    f2('* nest-first');
-    var zz = 88;
-    function f2(t) {
-      console.log(t, '`nested`', xx, zz);
-    }
-  }
-  function f2(t, u) {
-    console.log(t, '`inner`', xx, zz);
-  }
-  function f2(t, u, v) {
-    console.log(t, '`inner2`', xx, zz);
-  }
-  var zz = 800;
-  console.log('gg:', gg);
-  f2('* second');
-}
-
-function f2(g) {
-  console.log(g, 'global f2&gt;', gg, bb, xx, kk);
-}
-let xx = 9;
-if (gg &gt; 0) {
-  var kk = 33;
-  const yy = 9;
-}
-f1(1, 2); 
-console.log('kkkkk&gt;&gt;', kk);
-f2('* third');
-</code></pre></div></div>
-
-<h2 id="클로저-closure--함수가-특정-스코프에-접근할-수-있도록-의도적으로-그-스코프에서-정의한-것">클로저 (<code class="language-plaintext highlighter-rouge">Closure</code>) : 함수가 특정 스코프에 접근할 수 있도록 의도적으로 그 스코프에서 정의한 것</h2>
-
-<ul>
-  <li>상위 스코프의 식별자를 참조하는 하위 스코프 (함수, 메소드)가 외부에서 참조되어 상위 스코프보다 오래 살아있는 것</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let user;
-{
-  const private = {
-    id: 1,
-    name: 'John'
-  }
-  user = private;
-}
-
-user.age = 30;
-
-console.log(user); // { id: 1, name: 'John', age: 30 }
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function func(x) {
-  let clo = function (y) {
-    console.log(y);
-  }
-
-  return clo(x);
-}
-
-func('a'); // a
-</code></pre></div></div>
-
-<blockquote>
-  <p>클로저를 활용하여 외부변수로 인해 오염될 수 있는 비순수함수 (<code class="language-plaintext highlighter-rouge">Impure Function</code>)를, 함수 내부로 전달된 인수에게만 의존하여 반환값을 만드는 순수함수 (<code class="language-plaintext highlighter-rouge">Pure Function</code>)로 바꿀 수 있다.</p>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 비순수함수
-let cnt1 = 0;
-
-function func1(x) {
-  cnt1 += 1;
-  return cnt1;
-}
-
-console.log(func1()); // 1
-console.log(func1()); // 2
-console.log(func1()); // 3
-
-// → 순수함수
-function func2() {
-  let cnt2 = 0;
-  return function temp() {
-    cnt2 += 1;
-    return cnt2;
-  };
-}
-
-const counter1 = func2();
-const counter2 = func2();
-
-console.log(counter1()); // 1
-console.log(counter1()); // 2
-console.log(counter2()); // 1
-</code></pre></div>  </div>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[스코프 (Scope) : 변수에 접근할 수 있는 범위]]></summary></entry><entry><title type="html">고차 함수, 콜백 함수 (2024.01.31)</title><link href="http://localhost:4000/digital_hanaro_5.md/" rel="alternate" type="text/html" title="고차 함수, 콜백 함수 (2024.01.31)" /><published>2024-01-31T00:00:00+09:00</published><updated>2024-01-31T00:00:00+09:00</updated><id>http://localhost:4000/digital_hanaro_5.md</id><content type="html" xml:base="http://localhost:4000/digital_hanaro_5.md/"><![CDATA[<blockquote>
-  <p><a href="https://github.com/pocj8ur4in/finance-dev-study">디지털하나路 스터디</a> 5일차 내용을 정리한 글입니다.</p>
-</blockquote>
-
-<h2 id="공부한-내용">공부한 내용</h2>
-
-<p>고차함수, 콜백함수의 개념을 정리해보고 이 둘의 차이점에 대해 짚어보고자 하였다.</p>
-
-<h3 id="고차-함수-higher-order-function--다른-함수를-인자로-받거나-함수를-반환하는-함수">고차 함수 (<code class="language-plaintext highlighter-rouge">Higher-Order Function</code>) : 다른 함수를 인자로 받거나 함수를 반환하는 함수</h3>
-
-<blockquote>
-  <p>자바스크립트에서의 함수는 일급 객체 (<code class="language-plaintext highlighter-rouge">First-Class Citizen</code>)</p>
-
-  <ol>
-    <li>변수에 할당 (<code class="language-plaintext highlighter-rouge">Assignment</code>)할 수 있다.</li>
-    <li>다른 변수의 인자 (<code class="language-plaintext highlighter-rouge">Argument</code>)로 전달될 수 있다.</li>
-    <li>다른 함수의 결과로 반환 (<code class="language-plaintext highlighter-rouge">Return</code>)될 수 있다.</li>
-  </ol>
-
-  <p>→ 함수가 일급 객체이므로, 함수를 데이터와 유사하게 다룰 수 있어 ‘고차 함수’로서 활용될 수 있다.</p>
-</blockquote>
-
-<ul>
-  <li>함수의 형태로 반환되는 함수를 모두 고차 함수라 정의
-    <ul>
-      <li>함수는 일급 객체 → 일급 객체로서의 함수는 고차 함수로 활용 가능</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const double = (n) =&gt; { return n * 2; };
-console.log(double(4)); // 4 * 2 = 8
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const adder = added =&gt; num =&gt; num + added;
-console.log(adder(5)(3)); // 5 + 3 = 8
-</code></pre></div></div>
-
-<blockquote>
-  <p>함수를 리턴하는 함수를 커리 함수 (<code class="language-plaintext highlighter-rouge">Curry Function</code>)라고 부르던데…?</p>
-
-  <ul>
-    <li>커리 함수라는 용어로, 고차 함수를 ‘함수를 인자로 받는 함수’에만 한정해 사용할 수 있음
-      <ul>
-        <li>엄밀히 말하면, 고차 함수가 커리 함수를 포함하는 개념</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<h4 id="arraymap-함수--배열의-각-요소에-대해-주어진-함수를-호출한-다음-그-결과를-새로운-배열로-반환"><code class="language-plaintext highlighter-rouge">Array.map()</code> 함수 : 배열의 각 요소에 대해 주어진 함수를 호출한 다음, 그 결과를 새로운 배열로 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log([1, 2, 3, 4, 5].map((num) =&gt; { return num * num; })); // [ 1, 4, 9, 16, 25 ]
-</code></pre></div></div>
-
-<h4 id="arrayfilter-함수--배열의-요소-중에-주어진-조건을-만족하는-요소만을-추출하여-새로운-배열로-반환"><code class="language-plaintext highlighter-rouge">Array.filter()</code> 함수 : 배열의 요소 중에 주어진 조건을 만족하는 요소만을 추출하여 새로운 배열로 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log([1, 2, 3, 4, 5].filter((num) =&gt; { return num % 2 === 0 })); // [ 2, 4 ]
-</code></pre></div></div>
-
-<h4 id="arrayreduce-함수--배열의-각-요소에-대해-주어진-함수를-실행하고-그-결과를-누적하여-하나의-값으로-반환"><code class="language-plaintext highlighter-rouge">Array.reduce()</code> 함수 : 배열의 각 요소에 대해 주어진 함수를 실행하고, 그 결과를 누적하여 하나의 값으로 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log([1, 2, 3, 4, 5].reduce((accumulator, currentValue) =&gt; { return accumulator + currentValue;}, 0)); // 15
-</code></pre></div></div>
-
-<h4 id="arrayforeach-함수--배열의-각-요소에-대해-주어진-함수를-실행-반환값이-존재하지-않음"><code class="language-plaintext highlighter-rouge">Array.forEach()</code> 함수 : 배열의 각 요소에 대해 주어진 함수를 실행 (반환값이 존재하지 않음)</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 3, 4, 5].forEach((num) =&gt; { console.log(num); }); // 1부터 5까지 순서대로 출력
-</code></pre></div></div>
-
-<h3 id="콜백-함수-callback-function--매개변수를-통해-다른-함수의-내부로-전달되는-함수">콜백 함수 (<code class="language-plaintext highlighter-rouge">Callback Function</code>) : 매개변수를 통해 다른 함수의 내부로 전달되는 함수</h3>
-
-<ul>
-  <li>고차 함수의 인자로 전달되어, 특정 동작을 수행하거나 완료 시에 호출
-    <ul>
-      <li>콜백 함수를 전달받은 고차 함수는 함수 내부에서 이 콜백 함수르 호출 (<code class="language-plaintext highlighter-rouge">Invoke</code>)할 수 잇음</li>
-      <li>부르는 조건에 따라서 콜백 함수의 실행 조건을 결정할 수 있음</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>setTimeout(() =&gt; { console.log(`출력`); }, 1);
-</code></pre></div></div>
-
-<ul>
-  <li>매개변수를 통해 다른 함수의 내부로 전달되는 함수는 콜백 함수, 매개변수를 통해 콜백 함수를 전달받는 함수는 고차 함수</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// printString : 두개의 함수와 하나의 문장을 매개변수로 사용하는 고차함수
-const printString = (callbackHof, callback_only, str) =&gt; {
-    str +=' 반이고';
-    callbackHof( callback_only, str );
-}
-
-// concatFirst : printString의 매개변수로 활용되는 콜백함수이면서, 하나의 함수와 하나의 문장을 매개변수로 사용하는 고차함수
-const concatFirst = (callback_only, str) =&gt; {
-  callback_only(str);
-}
-
-// concatAgain : concatFirst의 매개변수로 활용되는 콜백함수
-const concatAgain = (str) =&gt; {
-  str += ' 가만히 있으면 반이라도 간다';
-  console.log(str);
-}
-
-printString(concatFirst, concatAgain, '시작은'); // 시작은 반이고 가만히 있으면 반이라도 간다
-</code></pre></div></div>
-
-<blockquote>
-  <p>콜백 함수를 언제 호출하는지에 따라, 자바스크립트 엔진이 콜백 함수의 호출 시점을 결정할 수 있다!</p>
-
-  <ul>
-    <li>함수가 실행되면, 콜 스택 (<code class="language-plaintext highlighter-rouge">Call Stack</code>)에 함수를 넣었다가 함수에서 반환이 일어날 때 가장 위쪽에서 해당 함수를 꺼낸다.</li>
-    <li>이벤트 루프 (<code class="language-plaintext highlighter-rouge">Event Loop</code>)는 콜 스택과 테스크 큐 (<code class="language-plaintext highlighter-rouge">Task Queue</code>)를 주시하고 있다가, 스택이 비어 있으면 큐의 첫번째 콜백을 스택에 쌓아 실행한다.</li>
-  </ul>
-</blockquote>
-
-<blockquote>
-  <p>참고</p>
-
-  <ul>
-    <li><a href="https://www.datoybi.com/callback-promise-async-await/">Steady-Dev, ‘Callback &amp; Promise &amp; async/await 톺아보기’</a></li>
-    <li><a href="https://soldonii.tistory.com/119">soldonii, ‘200106(월) : 비동기, 고차함수, 일급객체, V8 엔진 등’</a></li>
-  </ul>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Digital Hanaro Study" /><summary type="html"><![CDATA[디지털하나路 스터디 5일차 내용을 정리한 글입니다.]]></summary></entry><entry><title type="html">[JS] 7. 객체지향 프로그래밍 (OOP)</title><link href="http://localhost:4000/js7/" rel="alternate" type="text/html" title="[JS] 7. 객체지향 프로그래밍 (OOP)" /><published>2024-01-31T00:00:00+09:00</published><updated>2024-01-31T00:00:00+09:00</updated><id>http://localhost:4000/js7</id><content type="html" xml:base="http://localhost:4000/js7/"><![CDATA[<h2 id="객체지향-프로그래밍-object-oriented-programming--원시-타입을-제외한-모든-것이-객체">객체지향 프로그래밍 (<code class="language-plaintext highlighter-rouge">Object-Oriented Programming</code>) : 원시 타입을 제외한 모든 것이 객체</h2>
-
-<blockquote>
-  <p>자바스크립트는 프로토타입 (<code class="language-plaintext highlighter-rouge">Prototype</code>) 기반 객체지향 프로그래밍 언어 (<code class="language-plaintext highlighter-rouge">Lisp</code>  → <code class="language-plaintext highlighter-rouge">Scheme</code> → <code class="language-plaintext highlighter-rouge">JavaScript</code>)</p>
-</blockquote>
-
-<ul>
-  <li>객체 타입 (<code class="language-plaintext highlighter-rouge">Object Type</code>)과 클래스 (<code class="language-plaintext highlighter-rouge">Class</code>)를 통해 생성된 인스턴스 타입 (<code class="language-plaintext highlighter-rouge">Instance Type</code>) → <code class="language-plaintext highlighter-rouge">this</code></li>
-  <li>프로퍼티는 각 인스턴스의 <code class="language-plaintext highlighter-rouge">EnvRec</code>에 생성되고, 메소드는 프로토타입에 할당되어 모든 인스턴스가 동일
-    <ul>
-      <li>특정 인스턴스에 종속되지 않는 함수는 정적인 클래스 메소드 (<code class="language-plaintext highlighter-rouge">Class Method</code>)</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Animal {}
-class Dog extends Animal {}
-const lucy = new Dog();
-
-console.log(lucy instanceof Dog); // true
-console.log(lucy instanceof Animal); // true
-console.log(lucy instanceof Object); // true
-
-console.log(Object.getPrototypeOf(lucy)); // Animal {}
-console.log(Object.getPrototypeOf(Dog)); // [class Animal]
-console.log(Object.getPrototypeOf(Animal)); // {}
-</code></pre></div></div>
-
-<ul>
-  <li>프로토타입은 단방향 <code class="language-plaintext highlighter-rouge">LinkedList</code>으로 연결된 구조 → 프로토타입 체인 (<code class="language-plaintext highlighter-rouge">Prototype Chain</code>)
-    <ul>
-      <li>특정 프로퍼티에 접근할 때 해당 객체에 프로퍼티가 없으면, 내부 참조를 따라 상위 프로토타입을 순차적으로 검색</li>
-    </ul>
-  </li>
-</ul>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/eabe913e-8056-4309-bd18-ea12d555dfc5" width="50%" /></p>
-
-<h3 id="정적-필드--메소드-static-field--method--특정-인스턴스와-무관하게-클래스에-존재하는-메소드">정적 필드 &amp; 메소드 (<code class="language-plaintext highlighter-rouge">Static Field &amp; Method</code>) : 특정 인스턴스와 무관하게 클래스에 존재하는 메소드</h3>
-
-<ul>
-  <li>인스턴스 프로퍼티를 참조할 수 없음 → <code class="language-plaintext highlighter-rouge">Static</code>  영역에 생성</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Animal {
-  static ID = 1;
-  static isDog(ani) {
-    return ani.name === 'Dog';
-  }
-} 
-const dog = new Animal('Dog');
-dog.isDog(dog); // TypeError: dog.isDog is not a function
-Animal.isDog(dog); // OK
-</code></pre></div></div>
-
-<blockquote>
-  <p>싱글톤 패턴 (<code class="language-plaintext highlighter-rouge">Singleton Pattern</code>) : 어떤 클래스가 한 번만 인스턴스화되어, 그 인스턴스에 대한 전역 접근 제공</p>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Singleton {
-  static #_instance; // 관례상 protected
-  constructor() {
-    if (Singleton.#_instance) return Singleton;
-    this.name = 'Singleton';
-    Singleton.#_instance = this;
-  }
-
-  static getInstance() {
-    return this.#_instance || new this();
-  }
-}
-
-const s1 = new Singleton();
-const s2 = new Singleton();
-</code></pre></div>  </div>
-</blockquote>
-
-<h3 id="접근자-accessor-프로퍼티--특정-인스턴스와-무관하게-클래스에-존재하는-메소드">접근자 (<code class="language-plaintext highlighter-rouge">Accessor</code>) 프로퍼티 : 특정 인스턴스와 무관하게 클래스에 존재하는 메소드</h3>
-
-<ul>
-  <li>접근자 프로퍼티을 통해 함수를 프로퍼티처럼 활용할 수 있음</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Emp1 {
-  set fullName(name) { // set을 프로퍼티처럼 활용할 수 있음 → accessor
-    [this.firstName, this.lastName] = name.split(' ');
-  }
-  
-  get fullName() {  // get을 프로퍼티처럼 활용할 수 있음 → accessor
-    return `${this.firstName} ${this.lastName}`;
-  }
-}
-
-class Emp2 { // stackOverflow 발생!
-  set name(nm) { this.name = nm; }
-  get name() { return this.name; }
-}
-
-class Emp3 {
-  #name;
-
-  set name(#name) { this.#name = name; }
-  get name() { return this.name; }
-}
-
-const hong1 = new Emp1();
-hong1.fullName = 'Gil-Dong Hong';
-console.log(hong1.fullName);
-
-const hong2 = new Emp2();
-hong2.fullName = 'Gil-Dong Hong';
-console.log(hong2.fullName);
-
-const hong3 = new Emp3();
-hong3.fullName = 'Gil-Dong Hong';
-console.log(hong3.fullName);
-</code></pre></div></div>
-
-<h3 id="프록시-proxy-객체--객체의-특정-동작을-가로채서-hooking해서-추가-동작-수행">프록시 (<code class="language-plaintext highlighter-rouge">Proxy</code>) 객체 : 객체의 특정 동작을 가로채서 (<code class="language-plaintext highlighter-rouge">Hooking</code>)해서 추가 동작 수행</h3>
-
-<ul>
-  <li>객체의 작업에 대한 기록 → 로깅 (<code class="language-plaintext highlighter-rouge">Logging</code>)</li>
-  <li>잘못된 접근에 대한 오류 (<code class="language-plaintext highlighter-rouge">Validation Check</code>)</li>
-  <li>기능 제어 (읽기 전용 등) 및 객체 정보 숨기기</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const obj = {
-  id: 1,
-  name: 'Hong',
-  f() {
-    console.log('fffff')
-  },
-};
-
-export const objProxy = new Proxy(obj, {
-  set(target, prop, value){
-    console.log('proxy.set&gt;&gt;', prop, value);
-    target[prop] = value;
-  },
-  get(target, prop){
-    console.log('proxy.get &gt;&gt; ', prop);
-    return target[prop];
-  },
-});
-
-objProxy.id = 100;
-console.log('obj.id&gt;&gt;', objProxy.id, obj['id']);
-</code></pre></div></div>
-
-<h3 id="상속-inheritance--subclass가-프로토타입-체인으로-superclass의-모든-데이터와-기능을-상속">상속 (<code class="language-plaintext highlighter-rouge">Inheritance</code>) : <code class="language-plaintext highlighter-rouge">SubClass</code>가 프로토타입 체인으로 <code class="language-plaintext highlighter-rouge">Superclass</code>의 모든 데이터와 기능을 상속</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Dog extends Animal {
-  constructor(name) {
-    super(name); // 필수(for chaining) + 중복(overload) 불가!
-  }
-
-  bark() {
-    console.log('bowwow!');
-  }
-}
-</code></pre></div></div>
-
-<ul>
-  <li>모든 객체는 프로토타입 체인 (<code class="language-plaintext highlighter-rouge">__proto__</code>) 이라는 내부 속성을 가짐
-    <ul>
-      <li>객체를 생성하는 생성자 함수는 <code class="language-plaintext highlighter-rouge">prototype</code> 속성을 가짐 → 해당 프로토타입이 객체의 프로토타입가 됨</li>
-      <li>하위 객체는 상위 객체의 프로토타입을 따라 상위 객체의 속성 및 메소드를 탐색</li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <p>스택 (<code class="language-plaintext highlighter-rouge">Stack</code>) &amp; 큐 (<code class="language-plaintext highlighter-rouge">Queue</code>) : 데이터를 저장하고 관리하기 위한 자료구조</p>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Stack { // 스택 자료구조
-    collection = [];
-
-    push(value) {
-        this.collection.push(value);
-    }
-    pop() {
-        return this.collection.pop();
-    }
-}
-
-const stack = new Stack();
-stack.push(1); // 추가하기
-stack.push(2); // 추가하기
-stack.push(3); // 추가하기
-console.log(stack.pop()) // 마지막으로 추가된 하나 꺼내기
-
-class Queue { // 큐 자료구조
-    collection = [];
-
-    enqueue(value) {
-        this.collection.push(value);
-    }
-
-    dequeue() {
-        return this.collection.shift();
-    }
-}
-
-const queue = new Queue();
-queue.enqueue(1); // 추가하기
-queue.enqueue(2); // 추가하기
-queue.enqueue(3); // 추가하기
-console.log(queue.dequeue()) // 마지막으로 추가된 하나 꺼내기
-
-
-</code></pre></div>  </div>
-</blockquote>
-
-<h4 id="메소드-오버라이딩-method-overriding--자식-클래스가-부모-클래스의-메소드를-재정의">메소드 오버라이딩 (<code class="language-plaintext highlighter-rouge">Method Overriding</code>) : 자식 클래스가 부모 클래스의 메소드를 재정의</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Animal {
-  ...
-  id = 1;       // 멤버 프로퍼티
-  #age = 10;    // 멤버 프로퍼티 (protected)
-  
-  toString() {  // 객체의 toString() 오버라이딩 ([메소드] 다형성!)
-    return `This animal's name is ${this.name}.`;
-  }
-} 
-</code></pre></div></div>
-
-<h4 id="다중-상속-multiple-inheritance--한-클래스가-여러-클래스들을-상속">다중 상속 (<code class="language-plaintext highlighter-rouge">Multiple Inheritance</code>) : 한 클래스가 여러 클래스들을 상속</h4>
-
-<ul>
-  <li>자바스크립트는 단일 상속 언어 → <code class="language-plaintext highlighter-rouge">Mixin</code>을 통해 제한적으로 구현할 수 있음 (타입스크립트 : <code class="language-plaintext highlighter-rouge">Interface</code>)</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Mixin 정의
-const myMixin = {
-  sayHello() {
-    console.log("Hello!");
-  },
-  sayGoodbye() {
-    console.log("Goodbye!");
-  },
-};
-
-function MyClass() {
-  ... // 클래스의 생성자 로직
-}
-
-Object.assign(MyClass.prototype, myMixin); // Mixin 적용
-
-const obj = new MyClass(); // 객체 생성 및 Mixin 메서드 호출
-obj.sayHello();    // 출력: Hello!
-obj.sayGoodbye();  // 출력: Goodbye!
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[객체지향 프로그래밍 (Object-Oriented Programming) : 원시 타입을 제외한 모든 것이 객체]]></summary></entry><entry><title type="html">[TIL] 2024년 02월 TIL</title><link href="http://localhost:4000/til2/" rel="alternate" type="text/html" title="[TIL] 2024년 02월 TIL" /><published>2024-01-31T00:00:00+09:00</published><updated>2024-02-02T00:00:00+09:00</updated><id>http://localhost:4000/til2</id><content type="html" xml:base="http://localhost:4000/til2/"><![CDATA[<h2 id="february-2024--시간-관리의-중요성"><code class="language-plaintext highlighter-rouge">February, 2024</code> : 시간 관리의 중요성!</h2>
-
-<p>앞서 2023년이 다사다난한 해라고 말하였는데, 2024년 01월은 그것보다 더 폭풍 같은 한달이었던 것 같다. 다른 것보다도 디지털하나路 2기에 합격하여 9시부터 6시까지 수업을 듣고, 또 6시부터 8시까지 자습하는 생활을 2주간 하다보니 이전보다 내 실력이 증진되는 것 같다는 느낌을 많이 받고 있다. 그렇지만 한달을 회고해보면 아쉬운 점 또한 있다. 1월 1일에 신년을 맞이하면서 내가 해야할 일을 크게 7개의 항목으로 정리하였던 적이 있는데, 어떤 항목은 잘 진행되고 있는데 또다른 어떤 항목은 아직 손도 못댄 부분도 있기 때문이다. 지속적으로 개발 관련 도서를 챕터를 나누어 공부하거나 협업 프로젝트를 진행하고자 기획서를 작성하려고 노력하고 있는데, 아무래도 주중에 수업 및 스터디가 있어서 주말에 한정된 시간을 쓰다보니 생각만큼 진행이 되지 않는 부분이 있다. 그래서 결국 내게 지금 필요한 것은 <b>시간을 효율적으로 관리하여 이를 성과로 이끌어내는 것</b>이라고 생각이 든다. 당장 다음달 초에 정보처리기사와 <code class="language-plaintext highlighter-rouge">SQLD</code> 필기가 예정되어 있는 만큼, 이번 한 달 역시 모든 것에 열심히 임하고자 한다.</p>
-
-<h3 id="2024년-02월-01일-목">2024년 02월 01일 (목)</h3>
-
-<ul>
-  <li>디지털하나路 및 모던 자바스크립트 <code class="language-plaintext highlighter-rouge">Deep Dive</code>에서 배운 내용을 정리한 게시글을 작성하고 있다.
-    <ul>
-      <li>오늘은 자바스크립트의 객체지향 프로그래밍에 대해 공부하는 시간을 가졌다. 흔히 자바스크립트는 프로토타입 기반 객체지향 언어로 정의되는데, 각각의 프로퍼티들은 프로토타입 체인을 통해 내부 참조를 따라 상위 프로토타입을 순차적으로 검색하는 구조를 가진다. 아무래도 <code class="language-plaintext highlighter-rouge">C++</code>, <code class="language-plaintext highlighter-rouge">Java</code>에도 존재하는 개념이라 금방 이해가 되서 클래스, 오버라이딩, 상속을 자바스크립트에 적용할 수 있었던 것 같다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-02일-금">2024년 02월 02일 (금)</h3>
-
-<ul>
-  <li>디지털하나路 및 모던 자바스크립트 <code class="language-plaintext highlighter-rouge">Deep Dive</code>에서 배운 내용을 정리한 게시글을 작성하고 있다.
-    <ul>
-      <li>오늘은 자바스크립트의 배열에 대해 공부하는 시간을 가졌다. 어제처럼 배열도 다른 언어에 존재해서 금방 적용해 볼 수 있었는데, 배열과 유사 배열 객체의 차이점이 잘 이해가 되지 않아 코드를 작성하는 데에 애를 먹었다. 그렇지만 <code class="language-plaintext highlighter-rouge">length</code> 프로퍼티를 가지면서 <code class="language-plaintext highlighter-rouge">iterable</code>한 객체들의 구조가 배열과 유사해서 유사 배열 객체라 분류하지만, 배열과는 프로토타입이 달라 <code class="language-plaintext highlighter-rouge">Array</code>가 제공하는 메소드를 사용하지 못한다고 내 나름대로 정리해보니 이후에는 비교적 수월하게 코드를 작성할 수 있었다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-03일-토">2024년 02월 03일 (토)</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 기획서의 기능 명세서를 작성하고 있다.
-    <ul>
-      <li>이전에 협업하기로 한 분과 만나기로 한 날짜를 착각해서 (…) 하루가 생겼는데, <code class="language-plaintext highlighter-rouge">MSA</code>나 이벤트 드리븐으로 프로젝트를 진행하는 것은 처음이라 아직 설계 관련 내용에 미완성된 부분이 많아 우선 소개 및 기획에 해당하는 부분을 전달드리고 작성중인 설계에 해당하는 부분을 전반적으로 검토하는 방향으로 이야기가 진행되었다. 그래도 기능 명세를 최대한 할 수 있는 부분까지 작성하면서, 구현 과정에 들어가기 앞서 진행할 작업들을 진행하고자 한다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-04일-일">2024년 02월 04일 (일)</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 프로젝트를 위한 도커 레지스트리 서버 및 <code class="language-plaintext highlighter-rouge">UI</code> 컨테이너를 생성하였다.
-    <ul>
-      <li>그동안 <code class="language-plaintext highlighter-rouge">vocawik</code> 프로젝트에서 활용될 이미지를 정리하고 구현 과정에서 생성된 이미지를 관리할 수 있는 방안에 대해 고심하고 있었는데, 도커 교과서를 통해 도커 레지스트리 서버에 대해 알게 되었다. 그래서 우선 이를 로컬 환경에 구축해본 다음에, 어느 정도 프로젝트가 진행되면 외부 서버에 마이그레이션할 계획으로 도커 컴포즈를 통해 컨테이너들을 구현하였다. (이후에 작성된 도커 컴포즈 파일로 외부 서버에서도 적용하긴 하였는데, 외부에서 도커 레지스트리로 접속하는 것이 잘 작동하지 않아 보류하기로 하였다. 추가로 여러 기술 블로그에서 도커 레지스트리와 비슷한 기능을 지원하는 <code class="language-plaintext highlighter-rouge">Harbor</code>을 적용한 것을 알게 되었는데, 일단은 프로젝트의 빠른 진행을 위해서 도커 레지스트리를 이용하다가, 마이그레이션할 필요성이 있다고 느낄 때 이를 적용해볼까 한다.)</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 기획서와 관련한 내용을 바탕으로 <code class="language-plaintext highlighter-rouge">vocawik</code> <a href="https://pocj8ur4in.github.io/vocawik1/">프로젝트 소개</a> 및 <a href="https://pocj8ur4in.github.io/vocawik2/">프로젝트 설계</a>에 대한 포스트를 작성하였다.
-    <ul>
-      <li>오늘 프로젝트 기획 및 설계에 대해 검토받는 시간을 가졌는데, 기능 명세서만이 아닌 프로젝트 목표 정의나 아키텍처 구조도 등과 같은 다른 설계 자료 또한 작성할 필요성이 있다는 피드백을 받았다. 그래서 원래는 하나로 통합되어 있던 소개 및 기획과 설계에 관련된 부분을 나누고, 후자를 작성하는 데에 집중하기로 하였다. 추가로 도커 레지스트리 서버 말고도 프로젝트 구현에 필요한 사항들을 검토하는 시간을 가졌는데, 이전에 작성한 스프링 이니셜라이저와 관련된 스크립트를 보다 더 발전시켜서, 아예 템플릿 프로젝트를 만들면 어떨까 하는 생각을 하게 되었다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-05일-월">2024년 02월 05일 (월)</h3>
-
-<ul>
-  <li>디지털하나路 및 모던 자바스크립트 <code class="language-plaintext highlighter-rouge">Deep Dive</code>에서 배운 내용을 정리한 게시글을 작성하고 있다.
-    <ul>
-      <li>오늘은 자바스크립트의 꽃이라고 할 수 있는 비동기 처리에 대해 학습하였다. 나 같은 경우에는 <code class="language-plaintext highlighter-rouge">async</code>나 <code class="language-plaintext highlighter-rouge">await</code>를 활용하여 자바스크립트 함수를 구현해본 경험이 있었는데, 프로미스는 이번에 처음 접해서 이해하고 구현하는 데에 조금 애를 먹었다. (사실 프로미스를 쉽게 사용할 수 있도록 나온 것이 <code class="language-plaintext highlighter-rouge">async</code>나 <code class="language-plaintext highlighter-rouge">await</code>이므로, 나만 어려운 게 아니라는 데에 안도하긴 했는데… 과제로 나온 것이 이 세개를 골고루 활용해 구현하는 거라;;)</li>
-    </ul>
-  </li>
-  <li>디지털하나路 스터디 6일차 주제에 대해 스터디 팀원과 이야기를 나누고, 서로 자유롭게 의견을 교류하는 시간을 가졌다.
-    <ul>
-      <li>오늘은 자바스크립트에서 활용된 프록시에 대해 다루었다. 사실 프록시 자체보다는 프록시가 활용되는 부분에 관심이 있어서 프록시 패턴이나 프록시 객체는 간단히 정리한 다음에 프록시를 응용한 사례인 캐싱, 유효성 검사기, 로거를 직접 구현해보는 데에 중점을 두었다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-06일-화">2024년 02월 06일 (화)</h3>
-
-<ul>
-  <li>디지털하나路 및 모던 자바스크립트 <code class="language-plaintext highlighter-rouge">Deep Dive</code>에서 배운 내용을 정리한 게시글을 작성하고 있다.
-    <ul>
-      <li>오늘은 브라우저에 직접 <code class="language-plaintext highlighter-rouge">HTML</code>, <code class="language-plaintext highlighter-rouge">CSS</code>, 자바스크립트를 활용하여 구성 요소를 만들어 보는 시간을 가졌다. 아래의 내용은 해당 시간에서 테이블을 구현해본 연습 문제이다. 오늘을 끝으로 자바스크립트 수업은 마무리를 지었지만, 아직 자바스크립트 시리즈 내의 게시글들은 전반적인 틀만 잡혀있고 군데군데 부족한 부분들이 많다고 생각한다. 그래서 추후에 도서를 공부한 내용을 지속적으로 더해나가 더 완성도 있는 글을 작성할 계획이다.</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const users = [
-    { id: 1, name: '홍길동', tel: '01088889991', addr: '서울' },
-    { id: 2, name: '김길동', tel: '01088889992', addr: '부산' },
-    { id: 3, name: '이길동', tel: '01088889993', addr: '서울' },
-    { id: 4, name: '박길동', tel: '01088889994', addr: '서울' },
-    { id: 5, name: '오길동', tel: '01088889995', addr: '서울' },
-    { id: 6, name: '박길동', tel: '01088889996', addr: '부산' },
-    { id: 7, name: '윤길동', tel: '01088889997', addr: '대구' },
-    { id: 8, name: '송길동', tel: '01088889998', addr: '대전' },
-    { id: 9, name: '신길동', tel: '01088889999', addr: '광주' },
-  ];
-  
-const createTable =  (data) =&gt; {
-  let table = document.createElement('table');
-  table.style.textAlign = 'center';
-  table.style.textDecoration = 'underline';
-  table.style.padding = '1%';
-
-  let headerRow = table.insertRow();
-
-  for (let key in data[0]) {
-    let th = document.createElement('th');
-    th.textContent = key.toUpperCase();
-    headerRow.appendChild(th);
-  }
-
-  let th1 = document.createElement('th');
-  th1.textContent = 'RES';
-  headerRow.appendChild(th1);
-  let th2 = document.createElement('th');
-  th2.textContent = 'DEL';
-  headerRow.appendChild(th2);
-
-  data.forEach(user =&gt; {
-    let row = table.insertRow();
-    for (let key in user) {
-        let cell = row.insertCell();
-      cell.textContent = user[key];
-    }
-  
-    let restoreCell = row.insertCell();
-    let restoreButton = document.createElement('button');
-    restoreButton.textContent = '복구';
-    restoreButton.addEventListener('click', () =&gt; {
-      console.log(`복구: ${user.id}`);
-
-      Array.from(row.cells).forEach((cell, columnIndex) =&gt; {
-        if (columnIndex !== 0) cell.style.display = 'block';
-      });
-    })
-
-    let deleteCell = row.insertCell();
-    let deleteButton = document.createElement('button');
-    deleteButton.textContent = '삭제';
-    deleteButton.addEventListener('click', () =&gt; {
-      console.log(`삭제: ${user.id}`);
-      
-      Array.from(row.cells).forEach((cell, columnIndex) =&gt; {
-        if (columnIndex !== 0 &amp;&amp; columnIndex !== row.cells.length - 2) cell.style.display = 'none';
-      });
-    });
-
-    deleteCell.appendChild(deleteButton);
-    restoreCell.appendChild(restoreButton);
-  });
-
-  document.body.appendChild(table);
-}
-
-createTable(users);
-</code></pre></div></div>
-
-<h3 id="2024년-02월-07일-수">2024년 02월 07일 (수)</h3>
-
-<ul>
-  <li>디지털하나路 및 우아한 타입스크립트 <code class="language-plaintext highlighter-rouge">with</code> 리액트에서 배운 내용을 정리한 게시글을 작성하고 있다.
-    <ul>
-      <li>어제부로 드디어 자바스크립트를 마치고, 오늘부터 며칠간 타입스크립트에 대해 배우게 되었다. 처음 접했을 때의 인상은 자바스크립트에 정적 타입만 확장한 것뿐인데 왜 굳이 현업에서 자주 활용되는지 몰랐는데, 배우면 배울수록 타입을 도입한 것 자체가 안정적이고 가독성 있는 코드를 작성하는 데에 도움이 된다는 생각이 들었다. 다만 타입스크립트를 배우는 시간이 너무 짧아 (일주일도 안된다…), 추후에 따로 공부하는 시간을 가져야 할 것 같아 공부할 때 참고할만한 책을 더해 게시글을 작성하려고 한다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-08일-목">2024년 02월 08일 (목)</h3>
-
-<ul>
-  <li>디지털하나路 및 우아한 타입스크립트 <code class="language-plaintext highlighter-rouge">with</code> 리액트에서 배운 내용을 정리한 게시글을 작성하고 있다.
-    <ul>
-      <li>어제는 타입스크립트의 타입 시스템에 대해 전반적으로 배웠다면, 오늘은 타입스크립트의 함수 타입와 인터페이스에 대해 다루는 시간을 가졌다. 자바스크립트와 달리 타입을 쓰면서 제약 조건이 많아진 것 같으면서도, 오히려 확장성 측면에서는 무궁무진하다는 말에 맞게 다양한 개념들이 적용되었다고 생각한다. 특히 인터페이스를 타입으로 하는 객체 리터럴에서 인터페이스에 정의되지 않은 동적 타입이 할당되는 것을 금지하면서도, 객체의 새로운 추가 속성을 명시적으로 any 타입으로 설정하는 인덱스 시그니처를 통해서는 가능하게 하는 것은… 처음에 각 개념들을 바로바로 이해하는 것은 어렵지만 실제로 코드를 작성할 때 왜 타입을 통해 어떤 부분이 제약되었나, 그리고 제약된 부분을 확장하고자 어떤 시도가 있었는지를 생각하다보니 조금이나마 알게 되었던 것 같다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-09일-금">2024년 02월 09일 (금)</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 템플릿 프로젝트로 <code class="language-plaintext highlighter-rouge">vw-temp</code>에 대한 작업을 진행하고 있다.
-    <ul>
-      <li>4일에 구상하였던 템플릿 프로젝트를 시간 날 때 틈틈이 해보려고 한다. 일단 프레임워크는 내가 가장 빠르게 작업할 수 있는 자바 스프링부트로 진행하고, 내부 구조는 멀티 모듈로 구성하였다. 그러나 그동안 작업해본 토이 프로젝트와 달리, 모듈을 10개로 나누었는데 이는 책에서 배운 클린 마이크로서비스의 아키텍처를 최대한 반영해보려고 한 것이다. 그리고 커밋의 단위를 어떤 기능을 만들었는지, 가 아닌 어떤 기술을 적용하는지, 로 하고, 분류는 모두 <code class="language-plaintext highlighter-rouge">init:</code>로 하여 향후 <code class="language-plaintext highlighter-rouge">fork</code>하여 프로젝트를 분화시키기 쉽도록 하려고 한다. 원래대로라면 서비스에 특화된 아키텍처 구조를 가진 각각의 배포판이 나오는 것이 가장 이상적일 것 같지만… 너무 작업량이 많아 배보다 배꼽이 큰 상황이 되버리므로 올인원 (<code class="language-plaintext highlighter-rouge">All-in-one</code>)으로 하여 프로젝트에서 필요할 때 의존 관계나 모듈을 제외할 수 있도록 할 생각이다. 또 기술을 적용한 부분이 많아 코드처럼 바로바로 그것이 무엇인지 체크하기 어려우므로 주석을 굉장히 세세하게 달아서 향후 내가 작업할 때 최대한 참고할 수 있도록 할 것이다. 사실 그동안 <code class="language-plaintext highlighter-rouge">HTML</code>이랑 자바스크립트만 보다가 오랜만에 본 자바 &amp; 스프링부트라 좀 삽질이 많았는데, 연휴라고 놀지 말고 빠르게 작업하도록 해야겠다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-10일-토">2024년 02월 10일 (토)</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 템플릿 프로젝트로 <code class="language-plaintext highlighter-rouge">vw-temp</code>에 대한 작업을 진행하고 있다.
-    <ul>
-      <li>먼저 <code class="language-plaintext highlighter-rouge">vw-temp</code> 각 모듈들에 의존 관계를 하나씩 추가해보면서 바로 적용하는 데에 실패하면 오류를 찾아 해결하고, 성공하면 이게 이 모듈에 들어가는 것이 맞나? 혹은 더 나은 방향이 있나 생각해보고 있다. 그래도 딱히 많이 한 건 아니고 이제 웹이랑 데이터베이스 쪽의 의존 관계를 건드려보는 중이라 생각보다 더딘데, 아직까지 초반이라 그런지 좀 실행 과정에 오류가 잦아 최대한 해결해보려 하고 있다. (내일 외가에 내려갈 예정이라 좀 많이 다뤄보려고 했는데, 속도가 다소 아쉽긴 하다.)</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-11일-일">2024년 02월 11일 (일)</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 템플릿 프로젝트로 <code class="language-plaintext highlighter-rouge">vw-temp</code>에 대한 작업을 진행하고 있다.
-    <ul>
-      <li>이전부터 관심 있었던 커스텀 어노테이션을 적용해보았는데, 막상 설정하고 보니 할 수 있는 일이 없는 것 같아 커스텀 어노테이션에 대해 더 찾아보았다. 내가 생각한 것은 프록시 패턴처럼 해당 정보를 가져와 로그를 출력하는 로깅 (<code class="language-plaintext highlighter-rouge">Logging</code>)을 처리하는 것이었는데, 리플렉션 (<code class="language-plaintext highlighter-rouge">reflection</code>)을 이용해 내가 생각한 작업을 한다는 것을 알게 되어서 향후 그 부분을 <code class="language-plaintext highlighter-rouge">common</code>이나 <code class="language-plaintext highlighter-rouge">infra</code> 모듈에 추가할 생각이다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-12일-월">2024년 02월 12일 (월)</h3>
-
-<ul>
-  <li>디지털하나路 1차 과제를 해결하였다.
-    <ul>
-      <li>그동안 배웠던 프론트엔드 기초에 해당하는 영역에서 총 4문제들을 주어진 기한 내에 해결하는 것이었는데, 생각보다 자잘한 조건들이 많아서 시간이 오래 걸렸던 것 같다. 모레까지 제출이긴 하지만 내일 수업도 다시 진행될테니 미리 다 해결하려고 노력하였다.</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 템플릿 프로젝트로 <code class="language-plaintext highlighter-rouge">vw-temp</code>에 대한 작업을 진행하고 있다.
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">sonarqube</code>, <code class="language-plaintext highlighter-rouge">Feign</code>, <code class="language-plaintext highlighter-rouge">Redis</code>를 프로젝트에 적용하는 작업을 진행하였다. <code class="language-plaintext highlighter-rouge">sonarqube</code>는 일단 의존 관계와 설정만 추가하고, 이를 젠킨스와 같은 <code class="language-plaintext highlighter-rouge">CI/CD</code> 파이프라인 툴에 적용할 수 있도록 할 계획이고, <code class="language-plaintext highlighter-rouge">Feign</code>와 <code class="language-plaintext highlighter-rouge">Redis</code> 역시 추후 예시 클래스를 만들 때 쓸 수 있고자 도입하였다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-13일-화">2024년 02월 13일 (화)</h3>
-
-<ul>
-  <li>디지털하나路 및 우아한 타입스크립트 <code class="language-plaintext highlighter-rouge">with</code> 리액트에서 배운 내용을 정리한 게시글을 작성하고 있다.
-    <ul>
-      <li>오늘은 타입스크립트의 클래스에 대해 배우는 시간을 가졌다. 타입스크립트의 클래스 또한 타입스크립트에서 타입을 도입한 것과 맞물린다고 생각하였는데, 멤버 변수 및 매개 변수에 정적 타입을 지원하여 클래스의 멤버 변수 및 함수 매개변수에 대한 타입을 명시 가능하다는 것과 클래스 확장 (<code class="language-plaintext highlighter-rouge">extends</code>)를 통해 생성자를 재정의할 수 있다는 부분이 가장 큰 특징인 것 같았다. 특히 타입스크립트의 구조적 타이핑이 선언되는 방식이 아니라 객체의 형태만 고려하므로 타입스크립트의 클래스는 동일한 멤버를 모두 포함하는 모든 객체 타입을 클래스에 할 수 있는 것으로 간주된다는 것은 자바스크립트의 확장성을 최대한 보장하면서도 ‘타입’이라는 구조를 지키게 하는 타입스크립트의 철학과 맞닿는 부분이 있다고 생각하였다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-14일-수">2024년 02월 14일 (수)</h3>
-
-<ul>
-  <li>디지털하나路 1차 과제를 재검토 후 제출하였다.
-    <ul>
-      <li>문제와 코드를 번갈아보니 미처 신경쓰지 못한 부분이 몇몇 보였다. 기억에 나는 것들은 2번 문제에서 테이블 자체를 동적으로 생성하는 게 아니라 테이블 내의 열과 셀을 동적으로 생성하는 부분과, 내가 설정하는 값이 아니라 <code class="language-plaintext highlighter-rouge">JSON</code> 파일에서 <code class="language-plaintext highlighter-rouge">base_time</code>이라는 변수를 통해 작동하는 부분을 수정한 것이었다. 그 외에 코드의 결과를 그대로 유지하면서 최대한 코드를 간결하게 리펙토링한 뒤에 제출하였다.</li>
-    </ul>
-  </li>
-  <li>디지털하나路 및 우아한 타입스크립트 <code class="language-plaintext highlighter-rouge">with</code> 리액트에서 배운 내용을 정리한 게시글을 작성하고 있다.
-    <ul>
-      <li>오늘은 타입스크립트의 타입 제한자와 제너릭에 대해 배웠다. 타입 연산자 <code class="language-plaintext highlighter-rouge">typeof</code>나 <code class="language-plaintext highlighter-rouge">keyof</code>와 타입 어서션 <code class="language-plaintext highlighter-rouge">as</code>를 통해 제너릭 클래스인 유틸리티 클래스를 만드는 것이 오늘 실습이었는데, 솔직히 말하면 이전에 언급한 개념들에 대한 명확한 이해 없이 문제를 풀다가 이해가 된 것 같다. 나 혼자서 코드를 작성하면서 알아챌 수 있는 부분도 있겠지만, 강의나 다른 사람의 시선을 통해 알 수 있는 부분 또한 있을 것인데 그 부분은 놓치게 되었다는 반성을 하였다. 이제 내일을 끝으로 타입스크립트에 대한 내용은 끝이 나는데, 자바스크립트와 달리 타입스크립트에 대한 게시글 작성 또한 잘 진행되지 않은 것 같아서 아쉬운 부분이 있다. 향후 타입스크립트가 활용되는 리액트 파트에서 다시 점검하는 시간을 가져야할 것 같다…</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-15일-목">2024년 02월 15일 (목)</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 템플릿 프로젝트로 <code class="language-plaintext highlighter-rouge">vw-temp</code>에 대한 작업을 진행하고 있다.
-    <ul>
-      <li>화요일엔 레디스와 페인을 적용하고, 수요일엔 멀티모듈 구조를 수정하고 나니 멀티모듈의 테스트 환경이 눈에 들어왔다. 구체적으로는 인프라 모듈에서의 레디스와 레포 모듈에서의 데이터베이스들의 연결 설정이 되지 않아 테스트 환경에서는 정상적으로 구동되지 않았는데, <code class="language-plaintext highlighter-rouge">H2</code> 데이터베이스를 테스트 환경에서 쓴다면 각 데이터베이스의 특징을 제대로 담아내지 못할 것 같아 찾아보니 도커 컨테이너를 통해 테스트를 진행하는 테스트 컨테이너 기술이 스프링에 있어 이를 구현하였다. 다만, 컨테이너가 여러 개가 하나씩 열리게 되었는데 이를 도커 컴포즈로도 실행 가능한 것 같아 향후 의존 관게를 도입하는 부분이 일단락되면 리펙토링을 통해 도입할 계획이다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-16일-금">2024년 02월 16일 (금)</h3>
-
-<ul>
-  <li>디지털하나路 및 우아한 모던 리액트에서 배운 내용을 정리한 게시글을 작성하고 있다.
-    <ul>
-      <li>오늘은 리액트를 처음 다뤄보는 시간을 가졌다. 이전에 사용한 자바스크립트, 타입스크립트 모두 리액트에서 활용이 가능하여 실제로 바로 결과물을 구현해볼 수 있었는데 역시 계속 코드로만 보던 것을 직접 브라우저에 표현되는 것을 보니 감회가 남달랐다고 해야 하나… 그래도 가상 <code class="language-plaintext highlighter-rouge">DOM</code>이나 상태와 같이 이전에 경험해보지 못한 새로운 개념들 또한 존재하였고 그 부분을 위주로 공부하면서 리액트에 대해 처음 알아가는 시간을 가졌다.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-17일-토">2024년 02월 17일 (토)</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">vocawik</code> 템플릿 프로젝트로 <code class="language-plaintext highlighter-rouge">vw-temp</code>에 대한 작업을 진행하고 있다.
-    <ul>
-      <li>오늘은 엘라스틱서치를 적용하려고 계속 시행착오를 거듭한 하루였다. 이젠 도커 컨테이너로 엘라스틱서치나 키바나를 구동하고 이를 어플리케이션에 연결하는 작업은 손쉽게 할 수 있는 것 같은데, 바로 이전에 도입한 엘라스틱서치를 테스트 컨테이너로 구동하는 것이 말썽이었다. <code class="language-plaintext highlighter-rouge">MySQL</code>도 그랬듯이, 아마 테스트 컨테이너와 어플리케이션 사이에 연결되는 부분에서 문제가 발생하는 것 같은데, 실제 컨테이너에서 이를 확인해볼 수 없어 직접 하나씩 설정은 손봐야하는 것이 너무 많은 시간을 요하고 있다. (처음에는 안되나? 싶었는데, 실제로 이를 적용한 사례 또한 존재하고 애초에 테스트 컨테이너 중에 엘라스틱서치 전용 컨테이너가 있어서 그건 아닌 것 같다…)</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="2024년-02월-18일-일">2024년 02월 18일 (일)</h3>
-
-<h3 id="2024년-02월-19일-월">2024년 02월 19일 (월)</h3>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TIL" /><summary type="html"><![CDATA[February, 2024 : 시간 관리의 중요성!]]></summary></entry></feed>
+</ol>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[모듈 (Module) : 코드를 재사용 가능한 파일 단위의 조각으로 나눈 것]]></summary></entry></feed>

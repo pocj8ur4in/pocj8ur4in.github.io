@@ -1,0 +1,1342 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<script>
+document.addEventListener('mousedown', (event) => { // 클릭 금지
+  if (event.button === 1) {
+    event.preventDefault();
+  }
+
+  if (event.button === 2) {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener('dragstart', (event) => { // 드래그 금지
+  event.preventDefault();
+});
+
+document.addEventListener('contextmenu', (event) => { // 선택 금지
+  event.preventDefault();
+});
+
+document.addEventListener('selectstart', (event) => { // 텍스트 선택 금지
+  event.preventDefault();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  checkAndLoadPage(getAllImgs());
+});
+
+function getAllImgs() {
+  const images = document.querySelectorAll('img');
+  return Array.from(images);
+}
+
+function chkImgsLoaded(allImages) {
+    return allImages.every(image => image.complete);
+}
+
+function checkAndLoadPage(allImages) {
+    if (!chkImgsLoaded(allImages)) {
+      requestAnimationFrame(function() {
+      checkAndLoadPage(allImages);
+      });
+    }
+}
+
+</script>
+<html lang="ko" class="no-js" oncopy="return false;" oncut="return false;" onpaste="return false;">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[React] 3. 함수 컴포넌트 (Functional Component) - pocj8ur4in’s blog</title>
+<meta name="description" content="함수 컴포넌트 (Functional Component) : 리액트 훅을 통한 상태와 생명주기 관리">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[React] 3. 함수 컴포넌트 (Functional Component)">
+<meta property="og:url" content="http://localhost:4000/react3/">
+
+
+  <meta property="og:description" content="함수 컴포넌트 (Functional Component) : 리액트 훅을 통한 상태와 생명주기 관리">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-02-27T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2024-02-27T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/react3/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in's blog",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[React] 3. 함수 컴포넌트 (Functional Component)</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c175e6a8-9aa2-44bb-8359-abbb68d5fe1b" alt="pocj8ur4in" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">pocj8ur4in</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:pocj8ur4in@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="pocj8ur4in@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[React] 3. 함수 컴포넌트 (Functional Component)">
+    <meta itemprop="description" content="함수 컴포넌트 (Functional Component) : 리액트 훅을 통한 상태와 생명주기 관리">
+    <meta itemprop="datePublished" content="2024-02-27T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-02-27T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/react3/" class="u-url" itemprop="url">[React] 3. 함수 컴포넌트 (Functional Component)
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#함수-컴포넌트-functional-component--리액트-훅을-통한-상태와-생명주기-관리">함수 컴포넌트 (Functional Component) : 리액트 훅을 통한 상태와 생명주기 관리</a><ul><li><a href="#리액트-훅-react-hook--함수형-컴포넌트에서-상태와-생명주기-메서드를-사용할-때-사용">리액트 훅 (React Hook) : 함수형 컴포넌트에서 상태와 생명주기 메서드를 사용할 때 사용</a><ul><li><a href="#usestate--함수형-컴포넌트-내부에서-상태를-정의하고-관리할-때-사용">useState : 함수형 컴포넌트 내부에서 상태를 정의하고 관리할 때 사용</a></li><li><a href="#useeffect--어플리케이션-내-컴포넌트의-여러-값들을-통해-부수-효과를-만들-때-사용">useEffect : 어플리케이션 내 컴포넌트의 여러 값들을 통해 부수 효과를 만들 때 사용</a></li><li><a href="#usememo--큰-연산에-대한-결과를-메모이제이션-memoization할-때-사용">useMemo : 큰 연산에 대한 결과를 메모이제이션 (Memoization)할 때 사용</a></li><li><a href="#reactmemo--외부-상태나-컨텍스트에-의존하지-않고-순수-함수형-컴포넌트를-메모이제이션할-때-사용">React.Memo : 외부 상태나 컨텍스트에 의존하지 않고 순수 함수형 컴포넌트를 메모이제이션할 때 사용</a></li><li><a href="#usecallback--인수로-넘겨받은-콜백-자체를-저장해-재성성-대신-재사용할-때-사용">useCallback : 인수로 넘겨받은 콜백 자체를 저장해, 재성성 대신 재사용할 때 사용</a></li><li><a href="#useref--함수형-컴포넌트-내에서-참조를-생성하고-관리할-때-사용">useRef : 함수형 컴포넌트 내에서 참조를 생성하고 관리할 때 사용</a></li><li><a href="#usecontext--react-context를-통해-전역으로-상태를-공유하거나-전달할-때-사용">useContext : React Context를 통해 전역으로 상태를 공유하거나 전달할 때 사용</a></li><li><a href="#usereducer--복잡한-상태-로직을-다룰-때-사용">useReducer : 복잡한 상태 로직을 다룰 때 사용</a></li><li><a href="#forwardref--부모-컴포넌트에서-자식-컴포넌트로-ref를-전달할-수-있게-함">forwardRef : 부모 컴포넌트에서 자식 컴포넌트로 ref를 전달할 수 있게 함</a></li><li><a href="#useimperativehandle-with-forwardref--부모-컴포넌트가-자식-컴포넌트를-컨트롤할-수-있게-함">useImperativeHandle (with forwardRef) : 부모 컴포넌트가 자식 컴포넌트를 컨트롤할 수 있게 함</a></li><li><a href="#uselayouteffect--rendering-이후-mount-이전에-실행">useLayoutEffect : rendering 이후, mount 이전에 실행</a></li></ul></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="함수-컴포넌트-functional-component--리액트-훅을-통한-상태와-생명주기-관리">함수 컴포넌트 (<code class="language-plaintext highlighter-rouge">Functional Component</code>) : 리액트 훅을 통한 상태와 생명주기 관리</h2>
+
+<blockquote>
+  <p>클래스 컴포넌트의 한계?</p>
+
+  <ul>
+    <li>데이터의 흐름을 추적하기 어려움 : 서로 다른 여러 메소드에서, 작성 순서에 상관없이 상태의 업데이트 발생 가능</li>
+    <li>어플리케이션 내부 로직의 재사용이 어려움 : 공통 로직이 많아질수록 이를 감싸는 고차 컴포넌트나 속성이 많아짐</li>
+    <li>기능이 많아질수록 컴포넌트의 크기가 커짐 : 내부에서 처리하는 데이터 흐름이 복잡해짐</li>
+  </ul>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useState, useEffect } from 'react';
+
+const MyFunctionalComponent = () =&gt; {
+  // useState 훅을 사용하여 상태 정의
+  const [count, setCount] = useState(0);
+
+  // useEffect 훅을 사용하여 부수 효과(라이프사이클 작업 등) 처리
+  useEffect(() =&gt; {
+    console.log('Component mounted or count updated:', count);
+    // componentWillUnmount 역할을 하는 함수 (클린업 함수)
+    return () =&gt; {
+      console.log('Component will unmount');
+    };
+  }, [count]); // count가 업데이트될 때만 실행
+
+  const handleIncrement = () =&gt; {
+    // setCount를 사용하여 상태 업데이트
+    setCount(count + 1);
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Count: {count}&lt;/p&gt;
+      &lt;button onClick={handleIncrement}&gt;Increment&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default MyFunctionalComponent;
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">useState</code>, <code class="language-plaintext highlighter-rouge">useEffect</code>, <code class="language-plaintext highlighter-rouge">useContext</code>와 같은 리액트 훅을 사용하여 상태를 관리</li>
+  <li><code class="language-plaintext highlighter-rouge">useEffect</code> 훅을 통해 라이프사이클 메소드와 유사한 동작을 수행 가능</li>
+  <li><code class="language-plaintext highlighter-rouge">this</code> 키워드를 사용하지 않고, 클래스 컴포넌트보다 간결하고 명료하게 작성 가능</li>
+</ul>
+
+<h3 id="리액트-훅-react-hook--함수형-컴포넌트에서-상태와-생명주기-메서드를-사용할-때-사용">리액트 훅 (<code class="language-plaintext highlighter-rouge">React Hook</code>) : 함수형 컴포넌트에서 상태와 생명주기 메서드를 사용할 때 사용</h3>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c4f6fd02-e4fd-4f86-bd52-e4eed847cc3c" width="50%" /></p>
+
+<ul>
+  <li>상태 관리 훅 : <code class="language-plaintext highlighter-rouge">useState</code>, <code class="language-plaintext highlighter-rouge">userContext</code>, <code class="language-plaintext highlighter-rouge">useReducer</code></li>
+  <li>시점 훅 : <code class="language-plaintext highlighter-rouge">useLayoutEffect</code>, <code class="language-plaintext highlighter-rouge">useEffect</code></li>
+  <li>메모이제이션 (<code class="language-plaintext highlighter-rouge">Memo</code>) 훅 : <code class="language-plaintext highlighter-rouge">useMemo</code>, <code class="language-plaintext highlighter-rouge">useCallback</code>, <code class="language-plaintext highlighter-rouge">memo</code></li>
+</ul>
+
+<blockquote>
+  <p>리액트 훅의 3원칙?</p>
+
+  <ol>
+    <li>컴포넌트의 영역 안에서만 작동한다! : 컴포넌트 혹은 커스텀 훅 내부에서만 호출해야 함</li>
+    <li>기능을 여러 훅으로 나누면 가독성에 좋다! :  여러 훅으로 나눠져 있어도 컴포넌트에서 한번에 순차 호출</li>
+    <li>컴포넌트의 최상위 레이어(스코프)에서만 호출해야 한다! : 블록 내부에서는 호출할 수 없음</li>
+  </ol>
+</blockquote>
+
+<ul>
+  <li>훅의 규칙 (<code class="language-plaintext highlighter-rouge">Rules-of-Hooks</code>) : 관련 <code class="language-plaintext highlighter-rouge">ESLint</code> 규칙으로 <code class="language-plaintext highlighter-rouge">react-hooks/rules-of-hooks</code> 또한 존재
+    <ol>
+      <li>최상위에서만 훅을 호출해야 한다. 반복문이나 조건문, 중첩된 함수 내에서 훅을 실행할 수 없다. 그래야 컴포넌트가 렌더링될 때마다 항상 동일한 순서로 훅이 호출되는 것을 보장할 수 있다.</li>
+      <li>훅을 호출할 수 있는 것은 함수 컴포넌트, 혹은 커스텀 훅만 가능하다.</li>
+    </ol>
+  </li>
+</ul>
+
+<h4 id="usestate--함수형-컴포넌트-내부에서-상태를-정의하고-관리할-때-사용"><code class="language-plaintext highlighter-rouge">useState</code> : 함수형 컴포넌트 내부에서 상태를 정의하고 관리할 때 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useState } from 'react'
+const [state, setState] = useState(initState)
+</code></pre></div></div>
+
+<ul>
+  <li>인수로 사용할 상태의 초기값을 받음</li>
+  <li>첫번째 값에 현재 상태의 값, 두번째 값에 상태를 업데이트하는 함수가 담긴 배열을 반환</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const [state, setState] = useState(() =&gt; Number.praseInt(window.localStorage.getItem(cacheKey)));
+</code></pre></div></div>
+
+<ul>
+  <li>게으른 초기화 (<code class="language-plaintext highlighter-rouge">Lazy Initialization</code>) : <code class="language-plaintext highlighter-rouge">useState</code> 등 리액트 훅의 인자에 변수 대신 함수 자체를 넘기는 것
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">useState</code>의 초기값이 복잡하거나 무거운 연산을 포함하는 경우에 사용</li>
+      <li>오직 상태가 처음 만들어질 때만 사용 → 리렌더링이 발생하면 이 함수의 실행은 무시</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useState } from 'react';
+
+const Component = () =&gt; {
+  // useState를 사용하여 counter라는 상태를 정의하고 초기값을 0으로 설정
+  const [counter, setCounter] = useState(0)
+
+  const handleClick = () =&gt; {
+    setCounter((prev) =&gt; prev + 1)
+  }
+
+  return (
+    &lt;&gt;
+      &lt;h1&gt;{counter}&lt;/h1&gt;
+      &lt;button onClick={handleClick}&gt;+&lt;/button&gt;
+    &lt;/&gt;
+  )
+}
+</code></pre></div></div>
+
+<h4 id="useeffect--어플리케이션-내-컴포넌트의-여러-값들을-통해-부수-효과를-만들-때-사용"><code class="language-plaintext highlighter-rouge">useEffect</code> : 어플리케이션 내 컴포넌트의 여러 값들을 통해 부수 효과를 만들 때 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const Component = () =&gt; {
+  useEffect(
+    () =&gt; {},
+    [props, state]
+  )
+}
+</code></pre></div></div>
+
+<ul>
+  <li>첫번째 인수로 콜백 함수, 두번째 인수로 의존성 배열을 받음 : 의존성 배열의 값이 변경되면 콜백 실행
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">componentDidMount</code> 시점에 비동기로 실행 → <code class="language-plaintext highlighter-rouge">rendering</code> 이후, <code class="language-plaintext highlighter-rouge">mount</code> 이후</li>
+    </ul>
+  </li>
+  <li>클래스 컴포넌트의 생명주기와 비슷한 동작을 구현 가능 : 의존성 배열에 빈 배열을 넣으면 컴포넌트가 마운트될 때만 실행</li>
+  <li>렌더링이 실행될 때마다 의존성에 있는 값을 보면서 값 (<code class="language-plaintext highlighter-rouge">state</code>, <code class="language-plaintext highlighter-rouge">props</code>)이 변경되면 부수 효과를 실행</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const Component = () =&gt; {
+  const [counter, setCounter] = useState(0)
+
+  const handleClick = () =&gt; {
+    setCounter((prev) =&gt; prev + 1)
+  }
+
+  const counter = 1
+
+  useEffect(
+    () =&gt; {
+      console.log(count) // 1, 2, 3, 4...
+    }
+  )
+
+  return (
+    &lt;&gt;
+      &lt;h1&gt;{counter}&lt;/h1&gt;
+      &lt;button onClick={handleClick}&gt;+&lt;/button&gt;
+    &lt;/&gt;
+  )
+}
+</code></pre></div></div>
+
+<ul>
+  <li>클린업 함수를 반환 가능 : 컴포넌트가 언마운트될 때 실행 (<code class="language-plaintext highlighter-rouge">componentWillUnMount</code>)
+    <ul>
+      <li>함수 컴포넌트가 리렌더링되었을 때 의존성 변화가 있었을 당시의 값 기준으로 실행되어 이전 상태를 청소</li>
+      <li>함수 컴포넌트의 <code class="language-plaintext highlighter-rouge">useEffect</code>는 콜백이 실행될 때마다 이전 클린업 함수가 존재하면 그 클린업 함수를 실행한 뒤 콜백 실행
+        <ul>
+          <li>특정 이벤트 핸돌러가 무한히 생성되는 것을 방지</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useState, useEffect } from 'react'
+
+export default function App() {
+  const [counter, setCounter] = useState(0)
+
+  const handleClick = () =&gt; {
+    setCounter((prev) =&gt; prev + 1);
+  }
+
+  useEffect(() =&gt; {
+    const addMouseEffect = () =&gt; {
+      console.log(counter)
+    }
+
+    window.addEventListener('click', addMouseEffect);
+
+    return () =&gt; {
+      console.log('클린업 함수', counter);
+      window.removeEventListener('click', addMouseEffect);
+    }
+  }, [counter]);
+
+  return (
+    &lt;&gt;
+      &lt;h1&gt;{counter}&lt;/h1&gt;
+      &lt;button onclick={handleClick}&gt;+&lt;/button&gt;
+    &lt;/&gt;
+  )
+}
+
+// 클린업 함수 0
+// 1
+// 클린업 함수 1
+// 2
+// ...
+</code></pre></div></div>
+
+<ul>
+  <li>의존성 배열 (<code class="language-plaintext highlighter-rouge">dependency arra</code>) : 내부의 특정 값이 변경될 때에만 <code class="language-plaintext highlighter-rouge">useEffect</code> 콜백이 실행되도록 제어
+    <ul>
+      <li>의존성 배열에 사용자가 원하는 값을 넣는 경우 : 해당 값이 변경될 따마다 실행</li>
+      <li>의존성 배열에 빈 배열을 두는 경우 : 최초 렌더링 직후에 한번 실행하고 더 이상 실행하지 않음</li>
+      <li>의존성 배열에 아무런 값을 두지 않는 경우 : 렌더링이 발생할 때마다 매번 실행
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">vs</code> 직접 실행? : 클라이언트 사이드에서 실행 보장, 컴포넌트 렌더링 완료 이후에 실행</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>useEffect(() =&gt; {
+  // 실행될 코드
+}, [dependency1, dependency2, ...]); // 의존성 배열
+</code></pre></div></div>
+
+<h4 id="usememo--큰-연산에-대한-결과를-메모이제이션-memoization할-때-사용"><code class="language-plaintext highlighter-rouge">useMemo</code> : 큰 연산에 대한 결과를 메모이제이션 (<code class="language-plaintext highlighter-rouge">Memoization</code>)할 때 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useMemo, useState } from 'react'
+
+const ExpensiveComponent = ({ value }) =&gt; {
+  useEffect(() =&gt; {
+    console.log('rendering')
+  })
+
+  return &lt;span{value + 10000}&gt;&lt;/span&gt;
+}
+
+const App = () =&gt; {
+  const [value, setValue] = useState(10);
+  const [, triggerRendering] = useState(false);
+
+  const MemoizedComponent = useMemo(
+    () =&gt; &lt;ExpensiveComponent value={value}&gt;, [value]
+  )
+
+  const handleChange = (e) =&gt; {
+    setValue(Number(e.target.value))
+  }
+
+  const handleClick = () =&gt; {
+    setValue(Number(e.target.value))
+  }
+
+  return (
+    &lt;&gt;
+      &lt;input value={value} onChange={handleChange}&gt;&lt;/input&gt;
+      &lt;button = onClick={handleClick}&gt;렌더링 발생&lt;/button&gt;
+      {MemoizedComponent}
+    &lt;/&gt;
+  )
+}
+</code></pre></div></div>
+
+<ul>
+  <li>첫번째 인수로 생성 함수, 두번째 인수로 해당 함수가 의존하는 값의 배열을 전달
+    <ul>
+      <li>렌더링 발생 시 의존성 배열의 값이 변경되지 않았으면, 함수를 재실행하지 않고 이전의 값을 반환</li>
+      <li>렌더링 발생 시 의존성 배열의 값이 변경되었으면, 첫번째 인수의 함수를 실행한 후에 그 값을 반환 및 메모이제이션</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="reactmemo--외부-상태나-컨텍스트에-의존하지-않고-순수-함수형-컴포넌트를-메모이제이션할-때-사용"><code class="language-plaintext highlighter-rouge">React.Memo</code> : 외부 상태나 컨텍스트에 의존하지 않고 순수 함수형 컴포넌트를 메모이제이션할 때 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const CreateUser = React.memo(({ username, email, onChange, onCreate }) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;input
+        name="username"
+        placeholder="계정명"
+        onChange={onChange}
+        value={username}
+      /&gt;
+      &lt;input
+        name="email"
+        placeholder="이메일"
+        onChange={onChange}
+        value={email}
+      /&gt;
+      &lt;button onClick={onCreate}&gt;등록&lt;/button&gt;
+    &lt;/div&gt;
+  );
+});
+</code></pre></div></div>
+
+<ul>
+  <li>컴포넌트의 속성 (<code class="language-plaintext highlighter-rouge">props</code>)이 바뀔 때에만 리렌더링을 수행</li>
+</ul>
+
+<h4 id="usecallback--인수로-넘겨받은-콜백-자체를-저장해-재성성-대신-재사용할-때-사용"><code class="language-plaintext highlighter-rouge">useCallback</code> : 인수로 넘겨받은 콜백 자체를 저장해, 재성성 대신 재사용할 때 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const ChildComponent = memo(({name, value, onChange}) =&gt; {
+  useEffect(
+    () =&gt; {
+      console.log('rendering', name)
+    }
+  )
+
+  return(
+    &lt;&gt;
+      &lt;h1&gt;{name} (value ? '켜짐' : '꺼짐')&lt;/h1&gt;
+      &lt;button onClick={onChange}&gt;toggle&lt;/button&gt;
+    &lt;/&gt;
+  )
+})
+
+const App = () =&gt; {
+  const [status1, setStatus1] = useState(false)
+  const [status2, setStatus2] = useState(false)
+
+  const toggle1 = useCallback(
+    function toggle1() {
+      setStatus(!status1)
+    }, [status1],
+  )
+
+  const toggle2 = useCallback(
+    function toggle2() {
+      setStatus(!status2)
+    }, [status2],
+  )
+
+  return (
+    &lt;&gt;
+      &lt;ChildComponent name="1" value={status1} onChange={toggle1}&gt;&lt;/ChildComponent&gt;
+      &lt;ChildComponent name="2" value={status2} onChange={toggle2}&gt;&lt;/ChildComponent&gt;
+    &lt;/&gt;
+  )
+}
+</code></pre></div></div>
+
+<ul>
+  <li>첫번째 인수로 함수, 두번째 인수로 해당 함수가 의존하는 값의 배열을 전달</li>
+  <li>값의 메모이제이션을 위해 <code class="language-plaintext highlighter-rouge">useMemo</code>를 사용했다면, 함수의 메모이제이션을 위해 사용하는 것이 <code class="language-plaintext highlighter-rouge">useCallback</code>!
+    <ul>
+      <li>해당 의존성이 변경되었을 때만 함수가 재생성 : 불필요한 리소스 및 리렌더링 방지 가능</li>
+      <li><code class="language-plaintext highlighter-rouge">useMemo</code>을 통해 <code class="language-plaintext highlighter-rouge">useCallback</code>를 구현할 수 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="useref--함수형-컴포넌트-내에서-참조를-생성하고-관리할-때-사용"><code class="language-plaintext highlighter-rouge">useRef</code> : 함수형 컴포넌트 내에서 참조를 생성하고 관리할 때 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useRef, useEffect } from 'react';
+
+function MyComponent() {
+  const myInputRef = useRef(null);
+
+  useEffect(() =&gt; {
+    // 컴포넌트가 마운트된 후, input 요소에 포커스를 줌
+    myInputRef.current.focus();
+  }, []);
+
+  return &lt;input ref={myInputRef} /&gt;;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>반환값인 객체 내부에 있는 <code class="language-plaintext highlighter-rouge">.current</code>로 값에 접근 혹은 변경이 가능</li>
+  <li>컴포넌트의 렌더링과 관계없이 변수를 저장 가능 → <code class="language-plaintext highlighter-rouge">useState</code>와 달리, 매번 리렌더링이 일어나지 않음</li>
+  <li>주로 <code class="language-plaintext highlighter-rouge">DOM</code> 요소에 접근하거나 컴포넌트의 생명주기와 독립적으로 값을 유지하는 상황에서 활용</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useRef, useState, useEffect } from 'react';
+
+function MyComponent() {
+  const countRef = useRef(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() =&gt; {
+    // countRef는 렌더링과 무관하게 유지되는 변수
+    countRef.current = count;
+  }, [count]);
+
+  const handleClick = () =&gt; {
+    setCount(count + 1);
+    console.log(countRef.current); // 항상 가장 최근 값 출력
+  };
+
+  return &lt;button onClick={handleClick}&gt;증가&lt;/button&gt;;
+}
+</code></pre></div></div>
+
+<h4 id="usecontext--react-context를-통해-전역으로-상태를-공유하거나-전달할-때-사용"><code class="language-plaintext highlighter-rouge">useContext</code> : <code class="language-plaintext highlighter-rouge">React Context</code>를 통해 전역으로 상태를 공유하거나 전달할 때 사용</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">prop</code> 내려주기 : <code class="language-plaintext highlighter-rouge">A</code> 컴포넌트가 제공하는 데이터를 <code class="language-plaintext highlighter-rouge">D</code> 컴포넌트에서 사용하려면, …
+    <ul>
+      <li>하위 컴포넌트로 필요한 위치까지 계속해서 넘겨주어야 함 → 제공하는 쪽, 제공받는 쪽 모두 번거로운 작업!</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;A props={props}&gt;
+  &lt;B props={props}&gt;
+    &lt;C props={props}&gt;
+      &lt;D props={props}&gt;
+        ...
+      &lt;/D&gt;
+    &lt;/C&gt;
+  &lt;/B&gt;
+&lt;/A&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>리액트 컨텍스트 (<code class="language-plaintext highlighter-rouge">React Context</code>) : 컴포넌트 트리 안에서 전역적으로 데이터를 공유
+    <ul>
+      <li>중첩 컴포넌트 간에 데이터를 명시적으로 전달하지 않아도 되므로, <code class="language-plaintext highlighter-rouge">Props</code>를 여러 단계에 걸쳐 전달하지 않아도 됨</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 1. Context 객체 생성
+const MyContext = React.createContext(defaultValue);
+
+// 2. Context를 제공하는 컴포넌트 작성
+const MyContextProvider = ({ children }) =&gt; {
+  const contextValue = // ... (상태 값이나 함수 등)
+
+  return (
+    &lt;MyContext.Provider value={contextValue}&gt;
+      {children}
+    &lt;/MyContext.Provider&gt;
+  );
+};
+
+// 3. useContext를 사용하여 값에 접근
+import { useContext } from 'react';
+
+const MyComponent = () =&gt; {
+  const contextValue = useContext(MyContext); // 이때, 리액트가 아닌 자비스크립트가 반환된다.
+
+  // contextValue를 사용하여 렌더링 또는 다른 로직 수행
+};
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Context.Provider</code> : 컨텍스트 값을 하위 컴포넌트에 제공
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">value</code> 속성을 통해 전달할 값을 설정</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const MyContextProvider = ({ children }) =&gt; {
+  const contextValue = // ... (상태 값이나 함수 등)
+
+  return (
+    &lt;MyContext.Provider value={contextValue}&gt;
+      {children}
+    &lt;/MyContext.Provider&gt;
+  );
+};
+</code></pre></div></div>
+
+<h4 id="usereducer--복잡한-상태-로직을-다룰-때-사용"><code class="language-plaintext highlighter-rouge">useReducer</code> : 복잡한 상태 로직을 다룰 때 사용</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// useReducer가 사용할 State 정의
+type State = {
+  count: number
+}
+
+// State의 변화를 발생시킬 Action의 타입과 넘겨줄 payload 정의
+type Action = {
+  type: 'up' | 'down' | 'reset';
+  payload?: State;
+}
+
+// 무거운 연산이 포함된 게으른 초기화 함수 init 정의
+const init = (count: State) =&gt; {
+  return count
+}
+
+const initState: State = { count: 0 }
+
+const reducer = ((state: State, action: Action): State) =&gt; {
+  switch (action.type) {
+    case 'up':
+      return { count: state.count + 1 }
+    case 'down':
+      return { count: state.count - 1 &gt; 0 ? state.count - 1 : 0 }
+    case 'down':
+      return init(action.payload || { count: 0 })
+    default:
+      throw new Error(`Unexpected Action type: ${action.type}`)
+  }
+}
+
+const export default App = () =&gt; {
+  const [state, dispatcher] = useReducer(reducer, initialState, init)
+
+  const handleUpButtonClick = () =&gt; {
+    dispatcher({ type: 'up' })
+  }
+
+  const handleDownButtonClick = () =&gt; {
+    dispatcher({ type: 'down' })
+  }
+
+  const handleResetButtonClick = () =&gt; {
+    dispatcher({ type: 'reset', payload: { count: 1 } })
+  }
+
+  return {
+    &lt;div className="App"&gt;
+      &lt;button onclick={handleUpButtonClick}&gt;+&lt;/button&gt;
+      &lt;button onclick={handleDownButtonClick}&gt;-&lt;/button&gt;
+      &lt;button onclick={handleResetButtonClick}&gt;Reset&lt;/button&gt;
+    &lt;/div&gt;
+  }
+}
+</code></pre></div></div>
+
+<ul>
+  <li>반환값은 <code class="language-plaintext highlighter-rouge">useState</code>와 동일하게 길이가 <code class="language-plaintext highlighter-rouge">2</code>인 배열
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">state</code> : 현재 <code class="language-plaintext highlighter-rouge">useReducer</code>가 갖고 있는 값</li>
+      <li><code class="language-plaintext highlighter-rouge">dispatcher</code> : <code class="language-plaintext highlighter-rouge">state</code>를 업데이트하는 함수. 값만 넘겨주는 <code class="language-plaintext highlighter-rouge">setState</code>와 달리, <code class="language-plaintext highlighter-rouge">state</code>를 변경할 수 있는 액션 (<code class="language-plaintext highlighter-rouge">action</code>)을 반환</li>
+    </ul>
+  </li>
+  <li>인수는 <code class="language-plaintext highlighter-rouge">useState</code>와 달리 2~3개의 인수를 필요로 함
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">reducer</code> :</li>
+      <li><code class="language-plaintext highlighter-rouge">initialState</code> :</li>
+      <li><code class="language-plaintext highlighter-rouge">init</code> :</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="forwardref--부모-컴포넌트에서-자식-컴포넌트로-ref를-전달할-수-있게-함"><code class="language-plaintext highlighter-rouge">forwardRef</code> : 부모 컴포넌트에서 자식 컴포넌트로 <code class="language-plaintext highlighter-rouge">ref</code>를 전달할 수 있게 함</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { useRef, forwardRef } from 'react';
+
+// 자식 컴포넌트
+const ChildComponent = forwardRef((props, ref) =&gt; {
+  const internalState = useRef(null);
+
+  // 부모 컴포넌트에서 전달한 ref에 직접 접근
+  // ref.current를 통해 부모 컴포넌트의 ref를 참조할 수 있음
+  const handleButtonClick = () =&gt; {
+    console.log('자식 컴포넌트에서 버튼 클릭');
+    console.log('내부 상태:', internalState.current);
+  };
+
+  return (
+    // 여기에 컴포넌트 JSX를 작성
+    &lt;div&gt;
+      &lt;button onClick={handleButtonClick}&gt;자식 컴포넌트에서 클릭&lt;/button&gt;
+    &lt;/div&gt;
+  );
+});
+
+// 부모 컴포넌트
+const ParentComponent = () =&gt; {
+  // ref를 생성하여 자식 컴포넌트에 전달
+  const childRef = useRef();
+
+  // 부모 컴포넌트에서 ref를 자식 컴포넌트에 전달
+  return (
+    &lt;div&gt;
+      {/* forwardRef를 사용하여 자식 컴포넌트에 ref 전달 */}
+      &lt;ChildComponent ref={childRef} /&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default ParentComponent;
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">useRef</code>로 컴포넌트 외부 (자식)의 <code class="language-plaintext highlighter-rouge">DOM</code>에 접근
+    <ul>
+      <li>부모에서 선언 → 자식에게 전달 → 자식에서 참조 걸기 → 부모에서 컨트롤</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">But</code>, 외부 <code class="language-plaintext highlighter-rouge">DOM</code>을 참조하는 <code class="language-plaintext highlighter-rouge">ref</code>를 갖는 것은 <code class="language-plaintext highlighter-rouge">Coupling</code>이 강해지므로 좋지 않다!</p>
+</blockquote>
+
+<h4 id="useimperativehandle-with-forwardref--부모-컴포넌트가-자식-컴포넌트를-컨트롤할-수-있게-함"><code class="language-plaintext highlighter-rouge">useImperativeHandle (with forwardRef)</code> : 부모 컴포넌트가 자식 컴포넌트를 컨트롤할 수 있게 함</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { forwardRef, useRef, useImperativeHandle } from 'react';
+
+const ChildComponent = forwardRef((props, ref) =&gt; {
+  // useImperativeHandle을 사용하여 부모 컴포넌트에 특정 함수나 값들을 노출
+  useImperativeHandle(ref, () =&gt; ({
+    // 부모 컴포넌트에서 입력 엘리먼트에 포커스를 맞추기 위해 함수를 노출
+    focusInput: () =&gt; {
+      inputRef.current.focus();
+    }
+  }));
+
+  const inputRef = useRef(null);
+
+  return &lt;input ref={inputRef} /&gt;;
+});
+
+const ParentComponent = () =&gt; {
+  const childRef = useRef(null);
+
+  const handleClick = () =&gt; {
+    // 자식 컴포넌트에서 노출한 함수를 호출하여 입력 엘리먼트에 포커스를 맞춤
+    childRef.current.focusInput();
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;ChildComponent ref={childRef} /&gt;
+      &lt;button onClick={handleClick}&gt;입력에 포커스 맞추기&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default ParentComponent;
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">useImperativeHandle</code>을 통해 부모 컴포넌트에 함수 및 기능을 노출시킴
+    <ul>
+      <li>부모에게 참조값을 전달 → 자식은 객체를 반환</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="uselayouteffect--rendering-이후-mount-이전에-실행"><code class="language-plaintext highlighter-rouge">useLayoutEffect</code> : <code class="language-plaintext highlighter-rouge">rendering</code> 이후, <code class="language-plaintext highlighter-rouge">mount</code> 이전에 실행</h4>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/db687861-6983-4eac-8615-a144ef0efb3c" width="90%" /></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#react" class="page__taxonomy-item p-category" rel="tag">React</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-02-27">February 27, 2024</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BReact%5D+3.+%ED%95%A8%EC%88%98+%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8+%28Functional+Component%29%20http%3A%2F%2Flocalhost%3A4000%2Freact3%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Freact3%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/react2/" class="pagination--pager" title="[React] 2. 클래스 컴포넌트 (Class Component)
+">이전</a>
+    
+    
+      <a href="/react4/" class="pagination--pager" title="[React] 3. 리액트 컴포넌트 스타일링 (React Component Styling)
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/react5/" rel="permalink">[React] 3. 리액트 라우팅 (React Routing)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/react4/" rel="permalink">[React] 3. 리액트 컴포넌트 스타일링 (React Component Styling)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/react2/" rel="permalink">[React] 2. 클래스 컴포넌트 (Class Component)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">클래스 컴포넌트 (Class Component) : 생성자와 생명주기 메소드를 통한 상태와 생명주기 관리
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/react1/" rel="permalink">[React] 1. 리액트 (React)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">리액트 (React) : 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.pinterest.co.kr/pocj8ur4in/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-pinterest-square" aria-hidden="true"></i> Pinterest</a></li>
+        
+      
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 pocj8ur4in's blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
