@@ -378,7 +378,7 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#클래스-컴포넌트-class-component--생성자와-생명주기-메소드를-통한-상태와-생명주기-관리">클래스 컴포넌트 (Class Component) : 생성자와 생명주기 메소드를 통한 상태와 생명주기 관리</a><ul><li><a href="#생성자-constructor--메소드-내에서-컴포넌트-자체를-참조--this">생성자 (Constructor) : 메소드 내에서 컴포넌트 자체를 참조 → this</a></li><li><a href="#생명주기-메소드-lifecycle-methods--클래스-컴포넌트의-생명주기에-따라-메소드를-실행">생명주기 메소드 (Lifecycle Methods) : 클래스 컴포넌트의 생명주기에 따라 메소드를 실행</a><ul><li><a href="#render--컴포넌트가-ui를-렌더링하기-위해-사용-마운트-업데이트-과정에서-실행">render : 컴포넌트가 UI를 렌더링하기 위해 사용 (마운트, 업데이트 과정에서 실행)</a></li><li><a href="#getderivedstatefromprops--속성에-가져온-값을-상태에-넣을-때-속성이나-상태가-변화했을-때-실행">getDerivedStateFromProps : 속성에 가져온 값을 상태에 넣을 때, 속성이나 상태가 변화했을 때 실행</a></li><li><a href="#componentdidmount--클래스-컴포넌트가-마운트된-이후에-실행">componentDidMount : 클래스 컴포넌트가 마운트된 이후에 실행</a></li><li><a href="#shouldcomponentupdate--클래스-컴포넌트가-리렌더링을-할지-안할지-결정">shouldComponentUpdate : 클래스 컴포넌트가 리렌더링을 할지 안할지 결정</a></li><li><a href="#getsnapshotbeforeupdate--클래스-컴포넌트가-엄데이트되기-직전의-dom-내의-특정-값을-반환하면-그-다음의-componentdidupdate-반환">getSnapshotBeforeUpdate : 클래스 컴포넌트가 엄데이트되기 직전의 DOM 내의 특정 값을 반환하면, 그 다음의 componentDidUpdate 반환</a></li><li><a href="#componentdidupdate--컴포넌트-업데이트가-일어난-이후에-실행">componentDidUpdate : 컴포넌트 업데이트가 일어난 이후에 실행</a></li><li><a href="#componentwillunmount--컴포넌트가-언마운트되거나-더-이상-사용되지-않기-직전에-실행">componentWillUnmount : 컴포넌트가 언마운트되거나 더 이상 사용되지 않기 직전에 실행</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#클래스-컴포넌트-class-component--생성자와-생명주기-메소드를-통한-상태와-생명주기-관리">클래스 컴포넌트 (Class Component) : 생성자와 생명주기 메소드를 통한 상태와 생명주기 관리</a><ul><li><a href="#생성자-constructor--메소드-내에서-컴포넌트-자체를-참조--this">생성자 (Constructor) : 메소드 내에서 컴포넌트 자체를 참조 → this</a></li><li><a href="#생명주기-메소드-lifecycle-methods--클래스-컴포넌트의-생명주기에-따라-메소드를-실행">생명주기 메소드 (Lifecycle Methods) : 클래스 컴포넌트의 생명주기에 따라 메소드를 실행</a><ul><li><a href="#render--컴포넌트가-ui를-렌더링하기-위해-사용-마운트-업데이트-과정에서-실행">render : 컴포넌트가 UI를 렌더링하기 위해 사용 (마운트, 업데이트 과정에서 실행)</a></li><li><a href="#getderivedstatefromprops--props에-가져온-값을-상태에-넣을-때-상태나-props이-변화했을-때-실행">getDerivedStateFromProps : props에 가져온 값을 상태에 넣을 때, 상태나 props이 변화했을 때 실행</a></li><li><a href="#componentdidmount--클래스-컴포넌트가-마운트된-이후에-실행">componentDidMount : 클래스 컴포넌트가 마운트된 이후에 실행</a></li><li><a href="#shouldcomponentupdate--클래스-컴포넌트가-리렌더링을-할지-안할지-결정">shouldComponentUpdate : 클래스 컴포넌트가 리렌더링을 할지 안할지 결정</a></li><li><a href="#getsnapshotbeforeupdate--클래스-컴포넌트가-엄데이트되기-직전의-dom-내의-특정-값을-반환하면-그-다음의-componentdidupdate-반환">getSnapshotBeforeUpdate : 클래스 컴포넌트가 엄데이트되기 직전의 DOM 내의 특정 값을 반환하면, 그 다음의 componentDidUpdate 반환</a></li><li><a href="#componentdidupdate--컴포넌트-업데이트가-일어난-이후에-실행">componentDidUpdate : 컴포넌트 업데이트가 일어난 이후에 실행</a></li><li><a href="#componentwillunmount--컴포넌트가-언마운트되거나-더-이상-사용되지-않기-직전에-실행">componentWillUnmount : 컴포넌트가 언마운트되거나 더 이상 사용되지 않기 직전에 실행</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -475,7 +475,7 @@ export default MyClassComponent;
   <li>항상 순수해야 하며 부수 효과가 없어야 함 → <code class="language-plaintext highlighter-rouge">render</code> 내에서 <code class="language-plaintext highlighter-rouge">this.setState</code>를 호출하면 안됨</li>
 </ul>
 
-<h4 id="getderivedstatefromprops--속성에-가져온-값을-상태에-넣을-때-속성이나-상태가-변화했을-때-실행"><code class="language-plaintext highlighter-rouge">getDerivedStateFromProps</code> : 속성에 가져온 값을 상태에 넣을 때, 속성이나 상태가 변화했을 때 실행</h4>
+<h4 id="getderivedstatefromprops--props에-가져온-값을-상태에-넣을-때-상태나-props이-변화했을-때-실행"><code class="language-plaintext highlighter-rouge">getDerivedStateFromProps</code> : <code class="language-plaintext highlighter-rouge">props</code>에 가져온 값을 상태에 넣을 때, 상태나 <code class="language-plaintext highlighter-rouge">props</code>이 변화했을 때 실행</h4>
 
 <h4 id="componentdidmount--클래스-컴포넌트가-마운트된-이후에-실행"><code class="language-plaintext highlighter-rouge">componentDidMount</code> : 클래스 컴포넌트가 마운트된 이후에 실행</h4>
 
@@ -574,7 +574,7 @@ export default MyClassComponent;
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/react5/" rel="permalink">[React] 3. 리액트 라우팅 (React Routing)
+        <a href="/react4/" rel="permalink">[React] 4. 리액트 라우팅 (React Routing)
 </a>
       
     </h2>
@@ -599,47 +599,8 @@ export default MyClassComponent;
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
+    <p class="archive__item-excerpt" itemprop="description">React-Router-Dom : React로 생성된 SPA 내에서 페이지 이동이 가능하도록 라우팅
 
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/react4/" rel="permalink">[React] 3. 리액트 컴포넌트 스타일링 (React Component Styling)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
 </p>
   </article>
 </div>
@@ -672,7 +633,7 @@ export default MyClassComponent;
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          9 분 소요
+          11 분 소요
         
       </span>
     
@@ -713,7 +674,7 @@ export default MyClassComponent;
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          6 분 소요
+          7 분 소요
         
       </span>
     
@@ -721,6 +682,47 @@ export default MyClassComponent;
 
 
     <p class="archive__item-excerpt" itemprop="description">리액트 (React) : 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/ts1/" rel="permalink">[TS] 1. 타입스크립트 (TypeScript)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          8 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">타입스크립트 (TypeScript) : JavaScript을 확장하여 정적 타입을 지원하는 프로그래밍 언어
 
 </p>
   </article>
