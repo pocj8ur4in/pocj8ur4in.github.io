@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 분 소요
+          8 분 소요
         
       </span>
     
@@ -378,7 +378,7 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#데이터베이스의-개념">데이터베이스의 개념</a><ul><li><a href="#데이터베이스--dbms">데이터베이스 / DBMS</a></li><li><a href="#데이터-관리--빅데이터-관리">데이터 관리 / 빅데이터 관리</a></li><li><a href="#데이터베이스-스키마와-언어">데이터베이스 스키마와 언어</a></li></ul></li><li><a href="#데이터베이스-설계와-관계형-모델">데이터베이스 설계와 관계형 모델</a><ul><li><a href="#데이터베이스-설계">데이터베이스 설계</a></li><li><a href="#데이터-모델">데이터 모델</a></li><li><a href="#관계형-데이터베이스-모델">관계형 데이터베이스 모델</a></li><li><a href="#키와-무결성">키와 무결성</a></li></ul></li><li><a href="#데이터베이스-정규화">데이터베이스 정규화</a><ul><li><a href="#이상-현상과-함수적-종속">이상 현상과 함수적 종속</a></li><li><a href="#데이터베이스-정규화-1">데이터베이스 정규화</a></li><li><a href="#반정규화">반정규화</a></li></ul></li><li><a href="#sql">SQL</a><ul><li><a href="#관계-대수와-연산자">관계 대수와 연산자</a></li><li><a href="#sql-ddl">SQL, DDL</a></li><li><a href="#dcl-뷰-시스템-카탈로그">DCL, 뷰, 시스템 카탈로그</a></li><li><a href="#dml">DML</a></li></ul></li><li><a href="#데이터베이스-병행-제어와-보안">데이터베이스 병행 제어와 보안</a><ul><li><a href="#트랜잭션">트랜잭션</a></li><li><a href="#병행-제어">병행 제어</a></li><li><a href="#데이터베이스-보안과-권한-설정">데이터베이스 보안과 권한 설정</a></li><li><a href="#분산-데이터베이스">분산 데이터베이스</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#데이터베이스의-개념">데이터베이스의 개념</a><ul><li><a href="#데이터베이스--dbms">데이터베이스 / DBMS</a></li><li><a href="#데이터-관리--빅데이터-관리">데이터 관리 / 빅데이터 관리</a></li><li><a href="#데이터베이스-스키마와-언어">데이터베이스 스키마와 언어</a></li></ul></li><li><a href="#데이터베이스-설계와-관계형-모델">데이터베이스 설계와 관계형 모델</a><ul><li><a href="#데이터베이스-설계">데이터베이스 설계</a></li><li><a href="#데이터-모델--관계형-데이터베이스-모델">데이터 모델 / 관계형 데이터베이스 모델</a></li><li><a href="#키와-무결성">키와 무결성</a></li></ul></li><li><a href="#데이터베이스-정규화">데이터베이스 정규화</a><ul><li><a href="#이상-현상과-함수적-종속">이상 현상과 함수적 종속</a></li><li><a href="#데이터베이스-정규화--반정규화">데이터베이스 정규화 / 반정규화</a></li></ul></li><li><a href="#sql">SQL</a><ul><li><a href="#관계-대수와-연산자">관계 대수와 연산자</a></li><li><a href="#뷰-시스템-카탈로그">뷰, 시스템 카탈로그</a></li><li><a href="#ddl">DDL</a></li><li><a href="#dcl">DCL</a></li><li><a href="#dml">DML</a></li><li><a href="#nosql-절차형-sql">NoSQL, 절차형 SQL</a></li></ul></li><li><a href="#데이터베이스-병행-제어와-보안">데이터베이스 병행 제어와 보안</a><ul><li><a href="#트랜잭션">트랜잭션</a></li><li><a href="#병행-제어-회복">병행 제어, 회복</a></li><li><a href="#데이터베이스-보안과-권한-설정">데이터베이스 보안과 권한 설정</a></li><li><a href="#분산-데이터베이스">분산 데이터베이스</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -435,9 +435,7 @@ function checkAndLoadPage(allImages) {
   <li>스키마 간 독립성 : 논리적 독립성, 물리적 독립성</li>
   <li>데이터베이스 언어 : 데이터베이스 내에서 활용되는 언어
     <ul>
-      <li><b>데이터 정의어 (<code>DDL</code>) : 스키마 정의·변경 (<code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>)</b></li>
-      <li><b>데이터 조작어 (<code>DML</code>) : 데이터 검색·삽입·삭제·변경 (<code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>)</b></li>
-      <li><b>데이터 제어어 (<code>DCL</code>) : 데이터 무결성·제어</b></li>
+      <li><b><code>SQL</code> : 관계형 데이터베이스의 표준 질의어</b></li>
     </ul>
   </li>
 </ul>
@@ -460,7 +458,7 @@ function checkAndLoadPage(allImages) {
   </li>
 </ul>
 
-<h3 id="데이터-모델">데이터 모델</h3>
+<h3 id="데이터-모델--관계형-데이터베이스-모델">데이터 모델 / 관계형 데이터베이스 모델</h3>
 
 <ul>
   <li>데이터 모델 : 데이터베이스 설계 과정에서 데이터 구조를 표현하기 위해 사용되는 도구
@@ -470,7 +468,7 @@ function checkAndLoadPage(allImages) {
   </li>
   <li>개념 데이터 모델 : 속성들로 기술된 개체 타입과 개체 타입 간의 관계를 이용해 현실 세계를 표현
     <ul>
-      <li><b>개체-관계 모델 (<code>E-R</code> 모델): 개체 타입과 이들 간 관계 타입을 이용해 개념적 표현</b></li>
+      <li><b>개체-관계 모델 (<code>E-R</code> 모델): 개체 타입과 이들 간 관계 타입을 이용해 개념적 표현<br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/d4eb5c97-8ac9-4e94-ac67-49d51725340f" width="80%" /></b></li>
       <li>논리 데이터 모델 : 엔티티와 속성들의 관계를 구조적으로 정의
         <ul>
           <li><b>논리 데이터 모델 종류 : 계층적 데이터 모델, 네트워크형 데이터 모델, 관계형 데이터 모델</b>
@@ -482,40 +480,259 @@ function checkAndLoadPage(allImages) {
       </li>
     </ul>
   </li>
+  <li>관계형 데이터베이스 모델 : 관계형 데이터베이스를 구성하는 개체나 관계를 릴레이션으로 표현
+    <ul>
+      <li>릴레이션 스키마 : 개념 모델에 도출된 개체를 컴퓨터로 처리 가능한 단위로 매핑한 모델 (릴레이션 이름과 속성의 집합)</li>
+      <li>릴레이션 인스턴스 : 릴레이션 스키마에 따라 저장된 튜플 (테이블의 각 행)</li>
+      <li>릴레이션 속성 : 순서가 없는 데이터베이스의 가장 작은 논리적 단위로서의 릴레이션의 열</li>
+      <li><b>디그리 : 릴레이션이 가지는 속성의 개수 (디그리 값이 클수록 복잡한 구조 → 정규화 필요)</b></li>
+      <li><b>도메인 : 하나의 속성이 가질 수 있는 원자값들의 집합 (데이터 무결성·일관성 유지에 활용)</b></li>
+      <li><b>튜플 : 순서가 없는 릴레이션의 행 (카디널리티 : 튜픙의 수)</b></li>
+    </ul>
+  </li>
+  <li><b>릴레이션의 특징 : 튜플의 유일성, 튜플의 무순서성, 속성의 원자성, 속성의 무순서성</b></li>
+  <li><b><code>CRUD</code> 매트릭스 : 데이터베이스에 영향을 주는 <code>CRUD</code> 연산으로 프로세스·테이블 간 메트릭스를 만들어 트랜잭션 분석</b></li>
 </ul>
 
-<h3 id="관계형-데이터베이스-모델">관계형 데이터베이스 모델</h3>
-
 <h3 id="키와-무결성">키와 무결성</h3>
+
+<ul>
+  <li><b>슈퍼 키 : 튜플을 고유하게 식별하는 하나 이상의 속성 집합 (유일성<code>O</code>, 최소성<code>X</code>)</b></li>
+  <li><b>후보 키 : 튜플을 고유하게 식별하는 하나 이상의 속성 집합 (유일성<code>O</code>, 최소성<code>O</code>)</b></li>
+  <li><b>기본 키 : 후보 키 중 대표인 키 (<code>Null</code><code>X</code>, 중복<code>X</code>, 유일성<code>O</code>, 최소성<code>O</code>)</b></li>
+  <li><b>대체 키 : 후보 키 중 기본 키 외의 나머지 키</b></li>
+  <li><b>외래 키 : 릴레이션 간 연결을 위해 다른 테이블의 기본 키로 사용되는 키</b></li>
+  <li><b>무결성 : 데이터에 적용되는 연산에 제한을 두어 데이터의 정확성·일관성·유효성 유지</b>
+    <ul>
+      <li>개체 무결성 : 기본 키는 <code>Null</code><code>X</code>, 중복<code>X</code></li>
+      <li>참조 무결성 : 외래 키를 변경하려면, 외래 키가 참조하는 대상의 기본 키도 변경해야 함</li>
+      <li>도메인 무결성 : 각 속성은 해당 속성 도메인에 지정된 값이어야 함</li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="데이터베이스-정규화">데이터베이스 정규화</h2>
 
 <h3 id="이상-현상과-함수적-종속">이상 현상과 함수적 종속</h3>
 
-<h3 id="데이터베이스-정규화-1">데이터베이스 정규화</h3>
+<ul>
+  <li><b>이상 현상 : 릴레이션 조작 시 데이터들이 불필요하게 중복되어 예기치 않게 발생하는 현상</b>
+    <ul>
+      <li>삽입 이상 : 데이터를 삽입할 때 불필요한 데이터가 함께 삽입되는 현상</li>
+      <li>삭제 이상 : 릴레이션의 한 튜플을 삭제할 때 연쇄적으로 삭제되는 현상</li>
+      <li>갱신 이상 : 튜플 중에 일부 속성을 갱신해 정보의 모순성이 발생하는 현상</li>
+    </ul>
+  </li>
+  <li>함수적 종속 : 개체 내에 존재하는 속성 간의 관계를 종속적인 관계로 정리하는 방법
+    <ul>
+      <li><b>부분적 함수 종속 : 혼한 속상 기본키 <code>{A, B}</code>에 대해 <code>A → C</code>가 성립</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/72649301-5d4f-4bf0-97bc-788761c7d3ef" width="70%" /></li>
+      <li><b>이행 함수적 종속 : 속성 <code>X, Y, Z</code>가 주어졌을 때, <code>X → Y</code>, <code>Y → Z</code>하면 <code>X → Z</code></b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/4105e4d9-df0e-46fc-af34-e8b77a2f2952" width="70%" /></li>
+    </ul>
+  </li>
+</ul>
 
-<h3 id="반정규화">반정규화</h3>
+<h3 id="데이터베이스-정규화--반정규화">데이터베이스 정규화 / 반정규화</h3>
+
+<ul>
+  <li><b>정규화 : 논리적 설계 단계에서 발생할 수 있는 종속으로 인한 이상 현상의 문제를 해결하기 위해 여러 테이블로 분해</b>
+    <ul>
+      <li><b>정규화 목적 : 데이터 구조 안정성 확보, 중복 데이터·수정 및 삭제 시 이상·테이블 불일치 최소화</b></li>
+      <li><b>정규화 과정 : 비정규 릴레이션 → <code>1NF</code> → <code>2NF</code> → <code>3NF</code> → <code>BCNF</code> → <code>4NF</code> → <code>5NF</code></b></li>
+    </ul>
+  </li>
+  <li><b>1정규형 : 어떤 테이블에 속한 모든 도메인이 원자값만으로 되어 있는 테이블</b></li>
+  <li><b>2정규형 : 1정규형을 만족하면서, 테이블의 부분 함수적 종속을 제거해 완전 함수적 종속이 되도록 분해된 테이블</b></li>
+  <li><b>3정규형 : 1,2정규형을 만족하면서, 속성 간 이행 함수 종속을 만족하는 테이블</b></li>
+  <li><b><code>BCNF</code>정규형 : 1,2,3정규형을 만족하면서, 결정자가 후보키가 아닌 함수 종속이 제거된 테이블</b></li>
+  <li><b>4정규형 : 1,2,3정규형을 만족하면서, 다치 종속이 제거된 테이블</b></li>
+  <li><b>5정규형 : 1,2,3,4정규형을 만족하면서, 조인 종속이 제거된 테이블</b></li>
+  <li><b>반정규화 : 정규화된 결과를 시스템 성능 향상 및 개발·운영 단순화를 위해 중복·통합·분리를 수행</b>
+    <ul>
+      <li>반정규화 기법 : 테이블 반정규화 (테이블 병합, 테이블 분할, <b>테이블 추가</b>), 컬럼 반정규화, 관계 반정규화</li>
+      <li><b>파티셔닝 : 데이터베이스의 테이블을 분할하는 것</b>
+        <ul>
+          <li><b>파티셔닝 키 기준 유형 : 범위 분할, 목록 분할, 해시 분할, 합성 분할, 라운드로빈 분할</b></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="sql"><code class="language-plaintext highlighter-rouge">SQL</code></h2>
 
 <h3 id="관계-대수와-연산자">관계 대수와 연산자</h3>
 
-<h3 id="sql-ddl"><code class="language-plaintext highlighter-rouge">SQL</code>, <code class="language-plaintext highlighter-rouge">DDL</code></h3>
+<ul>
+  <li><b>관계 대수 : 원하는 정보 및 정보를 어떻게 유도하는지 기술하는 절차적 방법 (일반 집합 연산, 순수 관계 연산)</b></li>
+  <li><b>관계 해석 : 원하는 정보가 무엇이라는 것만 정의하는 비절차적인 방법 (도메인 관계 해석, 튜플 관계 해석)</b>
+    <ul>
+      <li>관계 해석 자유 변수 : 전칭 정량자 <code>∀</code> (<code>For All</code>), 존재 정량자 <code>∃</code>(<code>For Some</code>)</li>
+    </ul>
+  </li>
+  <li><b>순수 관계 연산자 : <code>Select</code> (튜플 집합 검색), <code>Project</code> (속성 집합 추출), <code>Join</code> (두 릴레이션 공통 속성 결합), <code>Division</code> (두 릴레이션에서 특정 속성를 제외한 속성으로 나눔)</b></li>
+  <li>집합 산자 : <b>합집합 (<code>Union</code>), 교집합 (<code>Intersection</code>), 차집합 (<code>Difference</code>), 교차곱 (<code>Cartesian Product</code>)</b></li>
+</ul>
 
-<h3 id="dcl-뷰-시스템-카탈로그"><code class="language-plaintext highlighter-rouge">DCL</code>, 뷰, 시스템 카탈로그</h3>
+<h3 id="뷰-시스템-카탈로그">뷰, 시스템 카탈로그</h3>
+
+<ul>
+  <li>뷰 : 사용자에 접근 허용된 자료만을 제한적으로 보여주기 위해 기본 테이블에서 유도되는 가상 테이블
+    <ul>
+      <li><b>뷰 생성 시 <code>CREATE</code>, 검색 시 <code>SELECT</code> 사용</b></li>
+      <li><b>뷰 정의 변경 시 <code>ALTER</code> 대신 <code>DROP</code> 사용</b></li>
+      <li><b>뷰를 이용한 또다른 뷰의 생성이 가능 (하나의 뷰 제거 시 기반한 뷰들도 함꼐 삭제)</b></li>
+      <li><b>뷰에 대한 조작에서 삽입·갱신·삭제는 제약</b></li>
+      <li><b>뷰가 정의된 기본 테이블이 제거되면 뷰도 자동 제거</b></li>
+    </ul>
+  </li>
+  <li><b>시스템 카탈로그 (데이터 사전) : 시스템 자신이 필요하는 여러 객체들에 대한 정보를 가진 시스템 데이터베이스</b>
+    <ul>
+      <li>메타 데이터 : 시스템 카탈로그에 저장되는 내용</li>
+      <li>시스템 카탈로그 기능 : 테이블·뷰·인덱스·사용자 계정 정보 조회</li>
+    </ul>
+  </li>
+  <li><b>인덱스 : 원하는 자료를 검색하기 위해, 인덱스 파일 및 인덱스 파일 (키, 주소)로 구성된, 독립적인 저장 공간</b></li>
+</ul>
+
+<h3 id="ddl"><code class="language-plaintext highlighter-rouge">DDL</code></h3>
+
+<ul>
+  <li><b>데이터 정의어 (<code>DDL</code>) : 스키마 정의·변경·삭제 (논리적 데이터 구조와 물리적 데이터 구조 간의 사상 정의)</b>
+    <ul>
+      <li><b><code>CREATE</code> : 스키마·도메인·테이블·뷰 정의</b>
+        <ul>
+          <li><b><code>CREATE TABLE</code> : 테이블 생성 </b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/11c90a08-572b-4ef0-ac4d-6752f5702308" width="80%" /></li>
+        </ul>
+      </li>
+      <li><b><code>ALTER</code> : 테이블 정의 변경 (필드 추가·삭제·갱신)</b>
+        <ul>
+          <li><b><code>ALTER TABLE</code> : 테이블 구조 변경</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/4b8fde9c-c9da-4232-bc19-79c19a66af46" width="80%" /></li>
+        </ul>
+      </li>
+      <li><b><code>DROP</code> : 스키마·도메인·테이블·뷰 삭제</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="dcl"><code class="language-plaintext highlighter-rouge">DCL</code></h3>
+
+<ul>
+  <li><b>데이터 제어어 (<code>DCL</code>) : 데이터 무결성·제어</b>
+    <ul>
+      <li><b><code>COMMIT</code></b> : 명령어로 수행된 실제 물리적 디스크에 저장한 뒤에 결과 반환</li>
+      <li><b><code>ROLLBACK</code> : 명령어로 수행에 실패했음을 알리고, 수행된 결과를 원상 복귀</b></li>
+      <li><b><code>GRANT</code> : 관리자가 사용자에 데이터베이스에 대한 권한을 부여</b></li>
+      <li><b><code>REVOKE</code> : 관리자가 사용자에 데이터베이스에 대한 권한을 취소</b></li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="dml"><code class="language-plaintext highlighter-rouge">DML</code></h3>
+
+<ul>
+  <li><b>데이터 조작어 (<code>DML</code>) : 데이터 검색·삽입·삭제·변경</b>
+    <ul>
+      <li><b><code>SELECT</code> : 튜플 검색</b>
+        <ul>
+          <li><b><code>BETWEEN ~ AND ~</code> : 튜플 검색 시 구간 값 조건식</b></li>
+          <li><b>그룹 함수 (<code>GROUP BY~</code>) : <code>COUNT</code> (행의 수), <code>SUM</code> (하나 이상의 열 합게), <code>AVG</code> (하나 이상의 열 평균), <code>MAX</code> (열의 최댓값), <code>MIN</code> (열의 최솟값)</b>
+            <ul>
+              <li><b><code>HAVING</code> : 튜플 검색 시 그룹 함수와 결합해 탐색 조건을 지정하는 조건식</b></li>
+            </ul>
+          </li>
+          <li><b><code>ORDER BY~</code> : 특정 항목 기준으로 검색 테이블의 행들을 오름차순·내림차순으로 정렬</b></li>
+          <li>하위 질의 = 서브 퀴리 : 하위 질의를 1차 수행한 다음, 반환값을 상위 릴레이션의 <code>WHERE</code>에서 사용</li>
+        </ul>
+      </li>
+      <li><b><code>INSERT</code> : 튜플 삽입</b></li>
+      <li><b><code>UPDATE</code> : 튜플 내용 변경</b></li>
+      <li><b><code>DELETE</code> : 튜플 삭제</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="nosql-절차형-sql"><code class="language-plaintext highlighter-rouge">NoSQL</code>, 절차형 <code class="language-plaintext highlighter-rouge">SQL</code></h3>
+
+<ul>
+  <li><b><code>NoSQL</code> : 스키마가 고정되지 않은 비관계형 데이터 모델로 데이터를 저장·검색하는 데이터베이스</b></li>
+  <li>절차형 <code>SQL</code> : <code>SQL</code>의 연속 실행, 조건에 따른 반복, 분기 등의 제어 가능
+    <ul>
+      <li>저장 프로시저 : 사용자가 자주 사용하는 명령문을 작성해 데이터베이스에 저장한 <code>PL/SQL</code> 명령문
+        <ul>
+          <li><b>트리거 : 데이터베이스에 특정 사건이 발생할 때마다 자동으로 수행되는 저장 프로시저</b></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="데이터베이스-병행-제어와-보안">데이터베이스 병행 제어와 보안</h2>
 
 <h3 id="트랜잭션">트랜잭션</h3>
 
-<h3 id="병행-제어">병행 제어</h3>
+<ul>
+  <li><b>트랜잭션 : 하나의 논리적 기능을 수행하기 위한 작업 단위</b>
+    <ul>
+      <li><b>트랜잭션의 특징 : 원자성 (완전 수행 안되면 수행 <code>X</code>), 일관성 (트랜잭션 실행 전후 상태가 일관성 유지)<br />고립성 (트랜잭션 실행 시 다른 트랜잭션에 독립적), 영속성 (트랜잭션 결과가 데이터베이스에 저장)</b></li>
+      <li><b>트랜잭션 상태 : 활동, 부분 완료 (실행 마치고 저장 직전), 완료, 실패, 철회</b></li>
+      <li><b>리커버리 연산 : 트랜잭션 수행 중에 장애로 손상된 데이터베이스를 정상 상태로 복구 (<code>Redo</code>, <code>Undo</code>)</b></li>
+      <li><b>즉각 갱신 : 데이터를 갱신하면 트랜잭션 완료 전에 실제 데이터베이스에 반영</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="병행-제어-회복">병행 제어, 회복</h3>
+
+<ul>
+  <li><b>병행 제어 : 동시에 수행되는 트랜잭션을 일관성 있게 처리하기 위해 제어</b>
+    <ul>
+      <li><b>병행 제어 목적 : 데이터베이스 공유·일관성·시스템 활용도 최대화, 사용자 응답 시간 최소화</b></li>
+      <li><b>병행 제어 종류 : 로킹, 타임스탬프, 최적 병행 수행, 다중 버전 기법</b></li>
+    </ul>
+  </li>
+  <li><b>로킹 : 하나의 트랜잭션이 데이터를 액세스하는 동안 다른 트랜잭션이 그 데이터 항목을 액세스 불가하게 함</b>
+    <ul>
+      <li><b>2단계 로킹 : 트랜잭션의 로크·해제 요청을 2단계로 실시 (직렬성은 보장하지만, 교착상태 예방은 불가능)</b>
+        <ul>
+          <li>2단계 로킹 단계 : 확장 단계 (트랜잭션 시작 시 모든 잠금 확보), 축소 단계 (트랜잭션 완료 시 잠금 해제)</li>
+          <li>2단계 로킹 잠금 상태 : 공유 잠금 (타 트랜잭션 읽기 가능), 배타적 잠금 (타 트랜잭션 읽기 불가능)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>타임스탬프 : 시간 허가 인증 도장을 부여받아 트랜잭션 간 순서를 미리 정함</li>
+  <li>회복 : 데이터 손실 및 손상이 발생했을 때 이를 복구
+    <ul>
+      <li><b>회복 기법 종류 : 즉시 갱신, 지연 갱신, <code>Redo</code>, <code>Undo</code></b></li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="데이터베이스-보안과-권한-설정">데이터베이스 보안과 권한 설정</h3>
 
+<ul>
+  <li><b>암호화 : 네트워를 통하거나 컴퓨터 내부에 자료를 저장할 때 권한을 가진 사람 외엔 데이터를 보지 못하도록 함</b>
+    <ul>
+      <li><b>암호화 기법 : 비밀 키 (대칭 키), 공개 키 (비대칭 키)</b></li>
+    </ul>
+  </li>
+  <li><b>데이터베이스 보안 적용 주의사항 : 접근 제어, 데이터 암호화, 취약점 관리, 백업과 복원, 감시와 모니터링</b></li>
+</ul>
+
 <h3 id="분산-데이터베이스">분산 데이터베이스</h3>
 
+<ul>
+  <li>분산 데이터베이스 : 네트워크를 통해 연결된 여러 컴퓨터에 데이터가 분산된 데이터베이스 → 분산 데이터베이스 투명성
+    <ul>
+      <li><b>위치 투명성 : 하드웨어와 소프트웨어의 물리적 위치를 사용자가 알 필요가 없다.</b></li>
+      <li><b>중복 투명성 : 사용자에 통지할 필요 없이 시스템 안에 자원들의 부가적인 복사를 자유롭게 할 수 있다.</b></li>
+      <li><b>병행 투명성 : 다중 사용자들이 자원을 자동으로 공유할 수 있다.</b></li>
+      <li><b>장애 투명성 : 사용자들은 어느 위치의 시스템에 장애가 발생했는지 알 필요가 없다.</b></li>
+    </ul>
+  </li>
+  <li>분산 데이터베이스 구성 요소 : 분산 처리기, 분산 데이터베이스, 틍신 네트워크</li>
+  <li>분산 데이터베이스 연결 모델 : 클라이언트·서버 모델, <code>Peer-to-Peer</code> 모델, 클러스터 모델</li>
+</ul>
 
         
       </section>
