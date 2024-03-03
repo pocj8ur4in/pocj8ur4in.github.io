@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          15 분 소요
+          21 분 소요
         
       </span>
     
@@ -788,7 +788,7 @@ function checkAndLoadPage(allImages) {
       <li><b>모듈화를 통해 얻을 수 있는 것 : 유지보수 용이성, 재사용성, 테스트 용이성, 확장성, 독립성</b></li>
       <li><b>결합도 : 서로 다른 모듈 간의 기능적인 연관 정도 (결합도를 낮게 하면 독립성이 향상)</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/7e0cc48a-3e81-42f4-be75-778d43d5106b" width="70%" /></li>
       <li><b>응집도 : 같은 모듈 내 요소들이 서로 관련된 정도 (응집도가 높으면 필요한 요소들로 구성됨을 의미)</b><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/52f3b489-9f22-4ab1-810a-983ffabe4bfc" width="70%" /></li>
-      <li><b> 모듈 설계 방법 : 출입구 하나, 유지보수 쉽게, 모듈 크기 작게, 예측 가능한 크기, 계층적 자료 조직, 복잡도·중복 최소화</b></li>
+      <li><b> 모듈 설계 방법 : 출입구 하나, 유지보수 쉽게, 모듈 크기 작게·예측 가능하게, 계층적 자료 조직, 복잡도·중복 최소</b></li>
       <li><b>모듈 (실질적인 구현 단위)<code>vs</code>컴포넌트 (실제 동작하는 엔티티 단위)</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/aa627e7c-90eb-4925-a549-d4230444e985" width="70%" /></li>
       <li>모듈 분할의 특징 : 추상화, 모듈화, 정보 은닉, 복잡도, 시스템 구조</li>
     </ul>
@@ -856,29 +856,202 @@ function checkAndLoadPage(allImages) {
   <li><b>파이프 필터 패턴 : 데이터 스트림을 생성 및 처리하기 위해 필터, 파이프로 구성된 패턴</b></li>
   <li><code>Peer to Peer</code> 패턴 : 클라이언트-서버에 대칭적 특징 추가, 한 컴포넌트에 대응되는 <code>Peer</code>로 클라이언트, 서버 수행</li>
   <li>브로커 패턴 : 컴포넌트가 컴퓨터와 사용자를 연결해주는 중앙 집중식 서버인 브로커 역할을 하며 분산 시스템에 사용</li>
-  <li>블랙보드 패턴 : 결정적 해결 전략이 없는 문제의 해결을 위해 블랙보드의 데이터를 컴포넌</li>
+  <li>블랙보드 패턴 : 결정적 해결 전략이 없는 문제의 해결을 위해 블랙보드의 데이터를 컴포넌트에서 검색</li>
+  <li>이벤트 버스 패턴 : 소스 이벤트가 메시지를 발행하면 해당 채널 구독자가 메시지 수신 후 해당 이벤트 처리</li>
+  <li>인터프리터 패턴 : 표현식으로 특정 언어로 작성된 프로그램을 해석하는 컴포넌트 설계에 사용</li>
 </ul>
 
 <h3 id="코드-설계">코드 설계</h3>
+
+<ul>
+  <li>코드 설계 : 데이터의 사용 목적에 따라 식별·분류·배열하기 위해 사용하는 숫자·문자·기호
+    <ul>
+      <li>코드 설계 순서 : 코드 대상 선정 → 코드화 목적 명확화 → 코드 부여 대상 수 확인 → 사용 범위 결정 → 사용 기간 결정 → 코드화 대상 특성 분석 → 코드 부여 방식 결정 → 코드 문서화</li>
+      <li>코드 설계 목적 : 고유성, 분류 편리성, 배열 효율성, 간결성, 유지보수 편리성, 코드 독립성, 코드 편의성</li>
+      <li>코드 설계 고려 사항 : 기계 처리 적합성, 사용 편리성, 코드 공통성, 코드 쳬계셩, 코드 유연성</li>
+    </ul>
+  </li>
+  <li><b>코드 기능 : 표준화, 간소화 + 분류, 식별, 배열 + 연상, 암호화, 오류 검출</b></li>
+  <li>코드 분류 : 식별 코드, 분류 코드, <b>순차 코드</b>, 블록 코드, 그룹 분류식 코드, 10진 분류 코드, <b>표의 숫자 코드</b>, 연상 코드</li>
+  <li><b>코드 오류 종류 : 필사 오류, 전위 오류, 이중 오류, 생략 오류, 추가 오류, 임의 오류</b></li>
+</ul>
 
 <h2 id="객체지향-설계와-디자인-패턴">객체지향 설계와 디자인 패턴</h2>
 
 <h3 id="소프트웨어-설계-기법과-객체지향-프로그래밍">소프트웨어 설계 기법과 객체지향 프로그래밍</h3>
 
+<ul>
+  <li>구조적 프로그래밍 : 한개의 입력과 한개의 출력 구조를 갖게 하여 프로그램 이해 및 디버깅 작업이 쉬움</li>
+  <li>절차적 프로그래밍 : 순서대로 일련의 명령어를 나열하는 함수 기반 프로그래밍</li>
+  <li>객체지향 프로그래밍 : 컴퓨터 소프트웨어를 객체 단위로 구분하고, 객체 간의 모음으로 설계하는 것
+    <ul>
+      <li><b>객체지향 : 개체 (<code>Entity</code>)를 속성과 메소드로 결합해 객체로 표현</b></li>
+      <li><b>객채지향 프로그래밍 구성 요소 : 클래스 (<code>Class</code>), 객체 (<code>Object</code>), 속성 (<code>Attribute</code>), 메소드 (<code>Method</code>), 메시지 (<code>Message</code>)</b></li>
+      <li><b>객체지향 특징 : 캡슐화, 정보은닉, 추상화, 상속성, 다형성</b></li>
+      <li><b>객체지향에서의 관계성 : (<code>is member of</code>) 연관성, (<code>is instance of</code>) 분류화, (<code>is part of</code>) 집단화, (<code>is a</code>) 일반화·특수화</b></li>
+      <li><b>오버로딩 : 한 클래스 내에서 같은 이름의 메소드를 사용하는 것 (매개 변수의 유형 및 개수가 달라지게 함)</b></li>
+      <li>오버라이딩 : 상속 관계의 두 클래스의 상위 클래스에서 정의한 메소드를 하위 클래스에서 재정의하는 것</li>
+    </ul>
+  </li>
+</ul>
+
 <h3 id="객체지향-설계-원칙">객체지향 설계 원칙</h3>
+
+<ul>
+  <li><b>객체지향 설계 원칙 : <code>SOLID</code></b>
+    <ul>
+      <li><b>단일 책임의 원칙 (<code>SRP</code>) : 객체가 단 하나의 책임만을 가져야 함</b>
+        <ul>
+          <li>객체는 단 하나의 기능만을 수행하고, 이 기능에 대한 변경 사항이 있으면 해댱 객체만 수정되어야 함</li>
+        </ul>
+      </li>
+      <li><b>개방-폐쇄의 원칙 (<code>OCP</code>) : 소프트웨어 구성 요소는 확장에 대해선 개방적, 수정에 대해선 폐쇄적이여야 함</b>
+        <ul>
+          <li>기능이 추가되면 기존 코드를 수정하지 않고, 기존 코드를 확장하도록 설계해야 함</li>
+        </ul>
+      </li>
+      <li><b>리스코프 치환 원칙 (<code>LSP</code>) : 부모 클래스가 들어갈 자리를 자식 클래스로 대체해도 계획대로 작동되어야 함</b>
+        <ul>
+          <li>어떤 클래스가 상속 관계에 있을 때, 자식 클래스는 부모 클래스의 역할을 수행할 수 있어야 함</li>
+        </ul>
+      </li>
+      <li><b>인터페이스 분리 원칙 (<code>ISP</code>) : 클라이언트는 자신이 사용하지 않는 메소드와 의존 관계를 맺으면 안됨</b>
+        <ul>
+          <li>클라이언트가 사용하지 않는 인터페이스에 영향받지 않게 해, 불필요한 의존성을 줄이고 코드 유연성을 높임</li>
+        </ul>
+      </li>
+      <li><b>의존 역전 원칙 (<code>DIP</code>) : 구현이 아닌 추상화에 의존해야 함 (상위 모듈은 하위 모듈에 의존하면 안됨)</b>
+        <ul>
+          <li>추상화된 인터페이스나 추상 클래스에 의존해야 하며, 의존성 주입을 통해 런타임 시 의존 관계 설정 가능</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>객체지향 개발 방법론 종류 : <code class="language-plaintext highlighter-rouge">Booch</code> (다이어그램 기반), <code class="language-plaintext highlighter-rouge">OOSE</code> (유스케이스 활용), <code class="language-plaintext highlighter-rouge">OMT</code> (모델링 기반)
+    <ul>
+      <li><b><code>Coad &amp; Yourdon</code> : <code>E-R</code> 다이어그램으로 객체의 행위를 데이터 모델링 (→ <code>UML</code>)</b></li>
+    </ul>
+  </li>
+  <li>클래스 설계 : 분석 단계 중 아직 확정되지 않은 클래스 내부 부분 중에 구현에 필요한 중요 사항을 결정
+    <ul>
+      <li>클래스 인터페이스 : 클래스 구현, 클래스 사용, 클래스 확장</li>
+      <li><b>협업에 의한 설계 : 선행 조건, 결과 조건, 불변 조건</b></li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="디자인-패턴">디자인 패턴</h3>
 
+<ul>
+  <li><b>디자인 패턴 : 자주 사용하는 설계 형태를 정형화하여, 유형별로 설계 템플릿을 만들고 소프트웨어 개발 중의 과제 해결</b>
+    <ul>
+      <li><b>디자인 패턴 장점 : 검증된 해결책 → 높은 생산성, 시간·비용 절감, 구조 파악 쉬움, 원활한 의사소통</b></li>
+      <li><b>디자인 패턴 단점 : 객체지향 위조, 초기 비용 부담, 패턴 이해 선행, 코드 복잡성 증가</b></li>
+      <li><b>디자인 패턴 구성 : 문제, 해결책, 결과, 이름, 컨텍스트, 구성 요소, 상호 작용, 문서화, 유연성, 일반성, 적용 예시, 품질 향상, 적용 가능성, 개발 방법론, 팀원 협업 + 알려진 사례, 샘플 코드</b></li>
+    </ul>
+  </li>
+  <li>디자인 패턴 활용 : 새로운 소프트웨어 개발, 기존 소프트웨어 리펙토링 및 기능 추가</li>
+</ul>
+
 <h3 id="gof-패턴"><code class="language-plaintext highlighter-rouge">GOF</code> 패턴</h3>
+
+<ul>
+  <li><b><code>GoF</code> 패턴 : 객체 지향 설계 단계 중에 재사용에 유용한 설계들을 디자인 패턴으로 분류</b>
+    <ul>
+      <li><b>생성 패턴 : 객체 생성 패턴 (객체 생성·변경이 시스템에 미치는 영향 최소화, 객체 생성·참조 과정 추상화)</b>
+        <ul>
+          <li>팩토리 메소드 : 상위 클래스에서 객체를 생성하는 인터페이스를 정의하고, 하위 클래스에서 인스턴스를 생성</li>
+          <li><b>싱글톤 : 전역 변수를 사용하지 않고, 객체를 하나만 생성하여 생성된 객체를 어디에서든 참조하도록 함</b></li>
+          <li>프로토타입 : 프로토타입을 먼저 생성하고 인스턴스를 복제하여 사용</li>
+          <li>빌더 : 객체를 생성하는 방식을 분리하여, 복잡한 객체를 생성하기 위해 다양한 객체들을 조합</li>
+          <li><b>추상 팩토리 : 구체적인 클래스에 의존하지 않고 서로 연관된 객체들의 조합을 인터페이스로 제공</b></li>
+        </ul>
+      </li>
+      <li><b>구조 패턴 : 클래스·객체 조합 패턴 (복잡한 구조를 개발하기 쉽게, 새로운 기능의 복합 객체 생성에 효과적)</b>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">Adapter</code> : 클래스 인터페이스를 다른 인터페이스롤 변환하여 다른 클래스가 이용 가능하게 함</li>
+          <li><code class="language-plaintext highlighter-rouge">Bridge</code> : 구현부에서 추상층을 분리해 각자 독립적으로 확장</li>
+          <li><code class="language-plaintext highlighter-rouge">Composite</code> : 객체들의 관계를 트리 구조로 작성해 복합 객체와 단일 객체를 구분 없이 다름</li>
+          <li><code class="language-plaintext highlighter-rouge">Decorator</code> : 주어진 상황·용도에 맞게 어떤 객체에 다른 객체를 덧붙임</li>
+          <li><code class="language-plaintext highlighter-rouge">Facade</code> : 서브 시스템의 인터페이스 집합에 대해 통합된 인터페이스 <code class="language-plaintext highlighter-rouge">Wrapper</code> 제공</li>
+          <li><code class="language-plaintext highlighter-rouge">Flyweight</code> : 크기가 작은 여러 객체를 매번 생성하는 대신 가능한 한 공유하여 메모리 절약</li>
+          <li><code class="language-plaintext highlighter-rouge">Proxy</code> : 접근이 어려운 객체에 접근 가능한 프록시 객체 및 그에 대한 인터페이스 제공</li>
+        </ul>
+      </li>
+      <li><b>행위 패턴 : 객체 상호 작용 패턴 (클래스·객체들이 상호 작용하는 방법 및 책임 분산, 메시지 교환과 관련)</b>
+        <ul>
+          <li>책임 연쇄 : 요청을 처리할 객체가 둘 이상 존재하여, 한 객체가 처리 못하면 다음 객체롤 넘어가도록 함</li>
+          <li><code class="language-plaintext highlighter-rouge">Iterator</code> : 접근이 잦은 객체는 동일한 인터페이스를 활용하도록 함</li>
+          <li><code class="language-plaintext highlighter-rouge">Command</code> : 명렁어를 캡슐화하여 재사용 및 취소할 수 있도록 필요한 정보를 로그에 남김</li>
+          <li><code class="language-plaintext highlighter-rouge">Interpreter</code> : 언어에 문법 표현을 정의</li>
+          <li><code class="language-plaintext highlighter-rouge">Memento</code> : 특정 시점의 객체 내부 상태를 객체화하여, 이후 요청에 따른 객체를 해당 시점으로 돌릴 수 있게 함</li>
+          <li><code class="language-plaintext highlighter-rouge">Memento</code> : 이벤트 발행·구독, 객체 상태 변화 및 전달에 따라, 객체에 상속된 객체들에 변화 상태 전달</li>
+          <li><code class="language-plaintext highlighter-rouge">State</code> : 객체 상태에 따라 이벤트를 다르게 처리하도록 함</li>
+          <li><code class="language-plaintext highlighter-rouge">Strategy</code> : 동일 계열 알고리즘을 개별적으로 캡슐화하여, 상호 교환 및 독립적으로 원하는 알고리즘 사용</li>
+          <li><code class="language-plaintext highlighter-rouge">Visitor</code> : 처리 기능을 별도의 클래스로 구성하고, 분리된 처리 기능은 각 클래스를 방문하여 수행</li>
+          <li><code class="language-plaintext highlighter-rouge">Template</code> : 상위에서 인터페이스를 정의하고, 하위에서 이를 구체화</li>
+          <li><code class="language-plaintext highlighter-rouge">Mediator</code> : 상호 작용을 캡슙화하여 결합도를 낮추도록 함</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="시스템-인터페이스-설계">시스템 인터페이스 설계</h2>
 
 <h3 id="시스템-인터페이스-요구사항-확인">시스템 인터페이스 요구사항 확인</h3>
 
+<ul>
+  <li>시스템 인터페이스 내·외부 요구사항 : 개발 대상 조직 내·외부 시스템 연동을 통하여 상호 작용을 하기 위한 접속 방법</li>
+  <li>시스템 인터페이스 요구사항 : 요구사항 구성, 내·외부 인터페이스 이름, 연계 대상 시스템, 연계 범위·내용·방식, 송신 데이터, 인터페이스 주기</li>
+  <li><b>시스템 인터페이스 요구사항 분류 : 기능적 요구사항, 비기능적 요구사항</b></li>
+  <li><b>시스템 인터페이스 요구사항 분석 절차 : 명세 작성 → 자료 준비 → 기능적·비기능적 요구사항 구분 → 비교 분석 → 문서 공유</b></li>
+  <li>시스템 인터페이스 요구사항 검증 : 인터페이스 설계·구현 이전에 사용자 요구사항을 명세하고, 개발 범위를 설정
+    <ul>
+      <li>시스템 인터페이스 요구사항 검증 절차 : 검토 계획 수립 → 검토 및 오류 수정 → 베이스라인 설정</li>
+      <li><b>시스템 인터페이스 요구사항 검증 방법 : 프로토타이핑, 테스트 설계, <code>CASE</code>, 동료 검토, <code>Walk Through</code>, <code>Inspection</code></b></li>
+    </ul>
+  </li>
+</ul>
+
 <h3 id="시스템-인터페이스-대상-식별">시스템 인터페이스 대상 식별</h3>
+
+<ul>
+  <li>시스템 인터페이스 대상 식별 : 개발 대상 시스템과 연계 시스템 사이의 인터페이스를 식별
+    <ul>
+      <li><b>시스템 인터페이스 구성 : 송신 시스템, 수신 시스템, 중계 시스템</b></li>
+      <li>시스템 인터페이스 데이터 표준 : 시스템 간에 상호 교환되는 데이터의 표준 형식을 정의해 사용</li>
+    </ul>
+  </li>
+  <li>시스템 인터페이스 상세 설계 : 직접 연계<code>vs</code>간접 연계</li>
+  <li>시스템 인터페이스 연계 기술 : <code class="language-plaintext highlighter-rouge">DB Link</code>, <code class="language-plaintext highlighter-rouge">DB Connection</code>, <code class="language-plaintext highlighter-rouge">API/OpenAPI</code>, <code class="language-plaintext highlighter-rouge">JDBC</code>, <code class="language-plaintext highlighter-rouge">HyperLink</code>, <code class="language-plaintext highlighter-rouge">Socket</code>, <code class="language-plaintext highlighter-rouge">WebService</code></li>
+  <li>시스템 인터페이스 송·수신 통신 유형 : 단방향, 동기·비동기 + 자연어 처리, 배치 처리, 실시간 처리</li>
+  <li>시스템 인터페이스 데이터 명세화 : 개체 정의서, 테이블 정의서, 코드 정의서</li>
+  <li>시스템 인터페이스 설계 : 시스템 구조와 서브 시스템 사이의 관계 표현
+    <ul>
+      <li>시스템 인터페이스 설계 단계 : 요구사항 분석 → 인터페이스 디자인 → 인터페이스 구현 → 인터페이스 테스트 및 유지보수</li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="미들웨어-솔루션">미들웨어 솔루션</h3>
 
+<ul>
+  <li><b>미들웨어 솔루션 : 클라이언트·서버 간 통신을 담당하는 시스템 소프트웨어 (표준화된 인터페이스로 일관성 제공)</b>
+    <ul>
+      <li><code>DB</code> 미들웨어 : <code>DB</code> 벤더에서 제공하는 소프트웨어 (클라이언트에서 원격 <code>DB</code>와 연결)</li>
+      <li>통신 미들웨어 : 분산 시스템에서 서로 다른 어플리케이션 간의 통신을 가능하게 함
+        <ul>
+          <li><code>RPC</code> : 분산 처리 시스템에서 응용 프로그램의 프로시저를 통해 원격 프로시저를 로컬 프로시저처럼 호출</li>
+          <li><b><code>MOM</code> : 메시지 기반 비동기식 메시지 전달 미들웨어, 이기종 분산 <code>DB</code> 데이터 동기화에 사용</b></li>
+          <li><code>ORB</code> : 로컬·원격지의 객체 간의 통신을 담당하는 객체지향 미들웨어 (<code>IDL</code> 사용)</li>
+          <li><code>TP-Monitor</code> : 여러 소프트웨어 상호 간 혼합된 환경에서 세션, 시스템, <code>DB</code> 간 트랜잭션 감시</li>
+          <li><b><code>WAS</code> : 서버 단에서 어플리케이션을 동작 가능하게 하여 동적 서버 컨텐츠 수행에 활용</b></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
         
       </section>
