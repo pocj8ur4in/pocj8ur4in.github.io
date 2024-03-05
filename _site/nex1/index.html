@@ -54,8 +54,8 @@ function checkAndLoadPage(allImages) {
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[MicroService] 5. MicroService Design - pocj8ur4in’s blog</title>
-<meta name="description" content="마이크로서비스 설계 : 응집성 높게 (High Cohesion), 의존도 낮게 (Low Coupling)">
+<!-- begin _includes/seo.html --><title>[Next.js] 1. Next.js - pocj8ur4in’s blog</title>
+<meta name="description" content="Next.js : 웹 애플리케이션 구축에 활용되는 오픈 소스 React 프레임워크">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -67,32 +67,32 @@ function checkAndLoadPage(allImages) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[MicroService] 5. MicroService Design">
-<meta property="og:url" content="http://localhost:4000/microservice5/">
+<meta property="og:title" content="[Next.js] 1. Next.js">
+<meta property="og:url" content="http://localhost:4000/nex1/">
 
 
-  <meta property="og:description" content="마이크로서비스 설계 : 응집성 높게 (High Cohesion), 의존도 낮게 (Low Coupling)">
-
-
-
+  <meta property="og:description" content="Next.js : 웹 애플리케이션 구축에 활용되는 오픈 소스 React 프레임워크">
 
 
 
 
-  <meta property="article:published_time" content="2024-01-16T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2024-01-16T00:00:00+09:00">
+  <meta property="article:published_time" content="2024-02-27T00:00:00+09:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2024-02-27T00:00:00+09:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/microservice5/">
+
+<link rel="canonical" href="http://localhost:4000/nex1/">
 
 
 
@@ -211,7 +211,7 @@ function checkAndLoadPage(allImages) {
         <span class="sep">/</span>
       
       
-        <li class="current">[MicroService] 5. MicroService Design</li>
+        <li class="current">[Next.js] 1. Next.js</li>
       
     
   </ol>
@@ -337,16 +337,16 @@ function checkAndLoadPage(allImages) {
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[MicroService] 5. MicroService Design">
-    <meta itemprop="description" content="마이크로서비스 설계 : 응집성 높게 (High Cohesion), 의존도 낮게 (Low Coupling)">
-    <meta itemprop="datePublished" content="2024-01-16T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2024-01-16T00:00:00+09:00">
+    <meta itemprop="headline" content="[Next.js] 1. Next.js">
+    <meta itemprop="description" content="Next.js : 웹 애플리케이션 구축에 활용되는 오픈 소스 React 프레임워크">
+    <meta itemprop="datePublished" content="2024-02-27T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-02-27T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/microservice5/" class="u-url" itemprop="url">[MicroService] 5. MicroService Design
+            <a href="http://localhost:4000/nex1/" class="u-url" itemprop="url">[Next.js] 1. Next.js
 </a>
           </h1>
           
@@ -378,37 +378,22 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#마이크로서비스-설계--응집성-높게-high-cohesion-의존도-낮게-low-coupling">마이크로서비스 설계 : 응집성 높게 (High Cohesion), 의존도 낮게 (Low Coupling)</a><ul><li><a href="#마이크로서비스를-도출하는-방법">마이크로서비스를 도출하는 방법</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#nextjs--웹-애플리케이션-구축에-활용되는-오픈-소스-react-프레임워크">Next.js : 웹 애플리케이션 구축에 활용되는 오픈 소스 React 프레임워크</a></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="마이크로서비스-설계--응집성-높게-high-cohesion-의존도-낮게-low-coupling">마이크로서비스 설계 : 응집성 높게 (<code class="language-plaintext highlighter-rouge">High Cohesion</code>), 의존도 낮게 (<code class="language-plaintext highlighter-rouge">Low Coupling</code>)</h2>
+        <h2 id="nextjs--웹-애플리케이션-구축에-활용되는-오픈-소스-react-프레임워크"><a href="https://nextjs.org"><code>Next.js</code></a> : 웹 애플리케이션 구축에 활용되는 오픈 소스 <code class="language-plaintext highlighter-rouge">React</code> 프레임워크</h2>
 
 <ul>
-  <li>마이크로서비스의 내부 구조를 구성하는 각 요소들은 역할별로 모듈화 (<code class="language-plaintext highlighter-rouge">Modulation</code>)되어야 함
-    <ol>
-      <li>자체적인 응집도가 높고, 서로 간의 의존성이 낮은 모듈들이 모여 하나의 마이크로서비스를 이룸</li>
-      <li>하나의 마이크로서비스는 다른 마이크로서비스와 의존성이 낮아야 함</li>
-    </ol>
-  </li>
+  <li><code class="language-plaintext highlighter-rouge">React</code> 기반 : 리액트 위에서 구축되어 구성 기반 아키텍처를 활용하여 사용자 인터페이스 구축</li>
+  <li>서버 측 렌더링 (<code class="language-plaintext highlighter-rouge">SSR</code>), 정적 사이트 생성 (<code class="language-plaintext highlighter-rouge">SSG</code>) 모두 지원</li>
+  <li>파일 시스템 기반 라우팅 (<code class="language-plaintext highlighter-rouge">File System Routing</code>) 지원 : <code class="language-plaintext highlighter-rouge">URL</code> 경로와 프로젝트 디렉터 구조가 직접 연결</li>
+  <li><code class="language-plaintext highlighter-rouge">API</code> 라우트 생성 지원 : 서버 사이드 로직을 처리할 수 있는 엔드포인트를 만들어 이를 클라이언트가 호출<br />→ 서버리스 함수의 간단한 구현 및 활용 가능</li>
+  <li>자동 코드 분할 : 자바스크리트 코드를 자동으로 작은 정크로 분할해, 각 페이지에 필요한 코드만 로드</li>
+  <li><code class="language-plaintext highlighter-rouge">CSS-in-JS</code> 지원 : 스타일링 솔루션에 대한 내장 지원</li>
 </ul>
 
-<p>→ 마이크로서비스를 구성하는 각각의 요소들을 모두 유연해야 한다.</p>
-
-<h3 id="마이크로서비스를-도출하는-방법">마이크로서비스를 도출하는 방법</h3>
-
-<ul>
-  <li></li>
-</ul>
-
-<blockquote>
-  <p>Reference</p>
-
-  <ul>
-    <li><a href="https://www.aladin.co.kr/m/mproduct.aspx?ItemId=285280054">도메인 주도 설계로 시작하는 마이크로서비스 개발</a></li>
-  </ul>
-</blockquote>
 
         
       </section>
@@ -425,7 +410,7 @@ function checkAndLoadPage(allImages) {
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#microservice" class="page__taxonomy-item p-category" rel="tag">MicroService</a>
+      <a href="/tags/#next-js" class="page__taxonomy-item p-category" rel="tag">Next.js</a>
     
     </span>
   </p>
@@ -435,7 +420,7 @@ function checkAndLoadPage(allImages) {
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-01-16">January 16, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-02-27">February 27, 2024</time></p>
 
       </footer>
       
@@ -458,9 +443,9 @@ function checkAndLoadPage(allImages) {
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BMicroService%5D+5.+MicroService+Design%20http%3A%2F%2Flocalhost%3A4000%2Fmicroservice5%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BNext.js%5D+1.+Next.js%20http%3A%2F%2Flocalhost%3A4000%2Fnex1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fmicroservice5%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fnex1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
 </section>
 
@@ -468,12 +453,11 @@ function checkAndLoadPage(allImages) {
       
   <nav class="pagination">
     
-      <a href="/microservice4/" class="pagination--pager" title="[MicroService] 4. Agile Development Process
+      <a href="/react4/" class="pagination--pager" title="[React] 4. 리액트 라우팅 (React Routing)
 ">이전</a>
     
     
-      <a href="/springboot1/" class="pagination--pager" title="[SpringBoot] 1. SpringBoot
-">다음</a>
+      <a href="#" class="pagination--pager disabled">다음</a>
     
   </nav>
 
@@ -487,47 +471,6 @@ function checkAndLoadPage(allImages) {
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/nex1/" rel="permalink">[Next.js] 1. Next.js
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Next.js : 웹 애플리케이션 구축에 활용되는 오픈 소스 React 프레임워크
-
-</p>
-  </article>
-</div>
-
         
           
 
@@ -638,7 +581,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          6 분 소요
+          5 분 소요
         
       </span>
     
@@ -646,6 +589,47 @@ function checkAndLoadPage(allImages) {
 
 
     <p class="archive__item-excerpt" itemprop="description">소프트웨어 개발 생명 주기
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/engineer_information_processing4/" rel="permalink">[Engineer Information Processing] 4. 프로그래밍 언어 활용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">C
 
 </p>
   </article>

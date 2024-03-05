@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-04T02:51:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[React] 4. 리액트 라우팅 (React Routing)</title><link href="http://localhost:4000/react4/" rel="alternate" type="text/html" title="[React] 4. 리액트 라우팅 (React Routing)" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/react4</id><content type="html" xml:base="http://localhost:4000/react4/"><![CDATA[<h2 id="react-router-dom--react로-생성된-spa-내에서-페이지-이동이-가능하도록-라우팅"><code class="language-plaintext highlighter-rouge">React-Router-Dom</code> : <code class="language-plaintext highlighter-rouge">React</code>로 생성된 <code class="language-plaintext highlighter-rouge">SPA</code> 내에서 페이지 이동이 가능하도록 라우팅</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-05T20:36:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Next.js] 1. Next.js</title><link href="http://localhost:4000/nex1/" rel="alternate" type="text/html" title="[Next.js] 1. Next.js" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/nex1</id><content type="html" xml:base="http://localhost:4000/nex1/"><![CDATA[<h2 id="nextjs--웹-애플리케이션-구축에-활용되는-오픈-소스-react-프레임워크"><a href="https://nextjs.org"><code>Next.js</code></a> : 웹 애플리케이션 구축에 활용되는 오픈 소스 <code class="language-plaintext highlighter-rouge">React</code> 프레임워크</h2>
 
 <ul>
-  <li>라우팅 (<code class="language-plaintext highlighter-rouge">Routing</code>) : 네트워크에서 경로를 선택하는 프로세스
-    <ul>
-      <li>다양한 주소의 요청이 들어왔을 때 각각 맞는 컨텐츠로 이동</li>
-      <li>페이지 전체가 새로 로딩되는 대신, 라우팅을 통해 부드럽게 화면을 전환</li>
-      <li><code class="language-plaintext highlighter-rouge">SPA</code> 안에서 모든 페이지를 렌더링하지 않는 이유? : 고정된 <code class="language-plaintext highlighter-rouge">URL</code>로 즐겨찾기·뒤로가기·새로고침 불가, <code class="language-plaintext highlighter-rouge">SEO</code> 문제</li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[React-Router-Dom : React로 생성된 SPA 내에서 페이지 이동이 가능하도록 라우팅]]></summary></entry><entry><title type="html">[React] 3. 함수 컴포넌트 (Functional Component)</title><link href="http://localhost:4000/react3/" rel="alternate" type="text/html" title="[React] 3. 함수 컴포넌트 (Functional Component)" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/react3</id><content type="html" xml:base="http://localhost:4000/react3/"><![CDATA[<h2 id="함수-컴포넌트-functional-component--리액트-훅을-통한-상태와-생명주기-관리">함수 컴포넌트 (<code class="language-plaintext highlighter-rouge">Functional Component</code>) : 리액트 훅을 통한 상태와 생명주기 관리</h2>
+  <li><code class="language-plaintext highlighter-rouge">React</code> 기반 : 리액트 위에서 구축되어 구성 기반 아키텍처를 활용하여 사용자 인터페이스 구축</li>
+  <li>서버 측 렌더링 (<code class="language-plaintext highlighter-rouge">SSR</code>), 정적 사이트 생성 (<code class="language-plaintext highlighter-rouge">SSG</code>) 모두 지원</li>
+  <li>파일 시스템 기반 라우팅 (<code class="language-plaintext highlighter-rouge">File System Routing</code>) 지원 : <code class="language-plaintext highlighter-rouge">URL</code> 경로와 프로젝트 디렉터 구조가 직접 연결</li>
+  <li><code class="language-plaintext highlighter-rouge">API</code> 라우트 생성 지원 : 서버 사이드 로직을 처리할 수 있는 엔드포인트를 만들어 이를 클라이언트가 호출<br />→ 서버리스 함수의 간단한 구현 및 활용 가능</li>
+  <li>자동 코드 분할 : 자바스크리트 코드를 자동으로 작은 정크로 분할해, 각 페이지에 필요한 코드만 로드</li>
+  <li><code class="language-plaintext highlighter-rouge">CSS-in-JS</code> 지원 : 스타일링 솔루션에 대한 내장 지원</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Next.js" /><summary type="html"><![CDATA[Next.js : 웹 애플리케이션 구축에 활용되는 오픈 소스 React 프레임워크]]></summary></entry><entry><title type="html">[React] 3. 함수 컴포넌트 (Functional Component)</title><link href="http://localhost:4000/react3/" rel="alternate" type="text/html" title="[React] 3. 함수 컴포넌트 (Functional Component)" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/react3</id><content type="html" xml:base="http://localhost:4000/react3/"><![CDATA[<h2 id="함수-컴포넌트-functional-component--리액트-훅을-통한-상태와-생명주기-관리">함수 컴포넌트 (<code class="language-plaintext highlighter-rouge">Functional Component</code>) : 리액트 훅을 통한 상태와 생명주기 관리</h2>
 
 <blockquote>
   <p>클래스 컴포넌트의 한계?</p>
@@ -706,7 +705,1595 @@ export default MyComponent;
 
 <h4 id="usetimeout--일정-시간이-지난-후에-콜백-함수를-실행하는-작업을-추상화"><code class="language-plaintext highlighter-rouge">useTimeout</code> : 일정 시간이 지난 후에 콜백 함수를 실행하는 작업을 추상화</h4>
 
-<h4 id="usetoggle--불리언-상태를-토글하는-작업을-추상화"><code class="language-plaintext highlighter-rouge">useToggle</code> : 불리언 상태를 토글하는 작업을 추상화</h4>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[함수 컴포넌트 (Functional Component) : 리액트 훅을 통한 상태와 생명주기 관리]]></summary></entry><entry><title type="html">[React] 2. 클래스 컴포넌트 (Class Component)</title><link href="http://localhost:4000/react2/" rel="alternate" type="text/html" title="[React] 2. 클래스 컴포넌트 (Class Component)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react2</id><content type="html" xml:base="http://localhost:4000/react2/"><![CDATA[<h2 id="클래스-컴포넌트-class-component--생성자와-생명주기-메소드를-통한-상태와-생명주기-관리">클래스 컴포넌트 (<code class="language-plaintext highlighter-rouge">Class Component</code>) : 생성자와 생명주기 메소드를 통한 상태와 생명주기 관리</h2>
+<h4 id="usetoggle--불리언-상태를-토글하는-작업을-추상화"><code class="language-plaintext highlighter-rouge">useToggle</code> : 불리언 상태를 토글하는 작업을 추상화</h4>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[함수 컴포넌트 (Functional Component) : 리액트 훅을 통한 상태와 생명주기 관리]]></summary></entry><entry><title type="html">[React] 4. 리액트 라우팅 (React Routing)</title><link href="http://localhost:4000/react4/" rel="alternate" type="text/html" title="[React] 4. 리액트 라우팅 (React Routing)" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/react4</id><content type="html" xml:base="http://localhost:4000/react4/"><![CDATA[<h2 id="react-router-dom--react로-생성된-spa-내에서-페이지-이동이-가능하도록-라우팅"><code class="language-plaintext highlighter-rouge">React-Router-Dom</code> : <code class="language-plaintext highlighter-rouge">React</code>로 생성된 <code class="language-plaintext highlighter-rouge">SPA</code> 내에서 페이지 이동이 가능하도록 라우팅</h2>
+
+<ul>
+  <li>라우팅 (<code class="language-plaintext highlighter-rouge">Routing</code>) : 네트워크에서 경로를 선택하는 프로세스
+    <ul>
+      <li>다양한 주소의 요청이 들어왔을 때 각각 맞는 컨텐츠로 이동</li>
+      <li>페이지 전체가 새로 로딩되는 대신, 라우팅을 통해 부드럽게 화면을 전환</li>
+      <li><code class="language-plaintext highlighter-rouge">SPA</code> 안에서 모든 페이지를 렌더링하지 않는 이유? : 고정된 <code class="language-plaintext highlighter-rouge">URL</code>로 즐겨찾기·뒤로가기·새로고침 불가, <code class="language-plaintext highlighter-rouge">SEO</code> 문제</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[React-Router-Dom : React로 생성된 SPA 내에서 페이지 이동이 가능하도록 라우팅]]></summary></entry><entry><title type="html">[Engineer Information Processing] 5. 정보 시스템 구축 관리</title><link href="http://localhost:4000/engineer_information_processing5/" rel="alternate" type="text/html" title="[Engineer Information Processing] 5. 정보 시스템 구축 관리" /><published>2024-02-22T00:00:00+09:00</published><updated>2024-03-04T00:00:00+09:00</updated><id>http://localhost:4000/engineer_information_processing5</id><content type="html" xml:base="http://localhost:4000/engineer_information_processing5/"><![CDATA[<h2 id="소프트웨어-개발-생명-주기">소프트웨어 개발 생명 주기</h2>
+
+<h3 id="프로젝트-관리-도구">프로젝트 관리 도구</h3>
+
+<ul>
+  <li><b><code>CPM</code> (임계 경로법) : 프로젝트 완성에 필요한 작업을 나열해 작업 소요 기간 예측</b>
+    <ul>
+      <li>작업을 표시하는 노드와 전후 의존 관계를 표시하는 간선으로 구성</li>
+      <li>프로젝트 중간 점검을 뜻하는 박스 노드에 예상 완료 시간 표시</li>
+      <li>박스 노드 도달 이전 작업이 완료되야 다음 작업 진행</li>
+    </ul>
+  </li>
+  <li><b>간트 차트 : 각 작업들의 일정을 막대로 표시하는 시간선 차트</b></li>
+  <li><b><code>WBS</code> (작업 분해) : 프로젝트 작업을 계층적으로 분해 및 구조화</b></li>
+</ul>
+
+<h3 id="소프트웨어-개발-방법론">소프트웨어 개발 방법론</h3>
+
+<ul>
+  <li>소프트웨어 개발 방법론 : 소프트웨어 개발 생명주기에 소프트웨어 공학 원리를 적용
+    <ul>
+      <li><b>구조적 방법론 : 정형화된 분석 절차에 따라 구조적으로 사용자 요구 파악</b></li>
+      <li><b>정보 공학 방법론 : 정보 시스템 개발의 관리 절차 체계화 (구조적 방법론의 거시적 관점 부재에 등장)</b></li>
+      <li><b>컴포넌트 기반 개발 방법론 (<code>CBD</code>) : 재사용 가능한 컴포넌트를 조합해 어플리케이션을 개발</b>
+        <ul>
+          <li><b><code>CBD</code> 특징 : 점진적 개발, 컴포넌트 설계서 사용, 재사용 가능, 높은 확장성</b></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><b>소프트웨어 재사용 : 소프트웨어의 전체 혹은 일부분을 다른 소프트웨어 개발 및 유지에 사용</b>
+    <ul>
+      <li>소프트웨어 재사용 접근 : <b>합성 중심 (블록 구성)</b>, 생성 중심 (템플릿·프레임워크 등 패턴 사용)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="비용-산정-모델">비용 산정 모델</h3>
+
+<ul>
+  <li><b>비용 산정 모델 : 프로젝트 특성 및 요구사항을 고려해 소프트웨어 개발 비용 산정</b>
+    <ul>
+      <li><b>델파이 기법 : 산정 요원 및 조정에 의해 단계별로 전문가들의 견해를 조정자가 조정해 최종 결정</b></li>
+      <li><b><code>LOC</code> 기법 : 소프트웨어 각 기능 구현 시 작성될 원시 코드 라인 수로 예측치 추정</b></li>
+      <li><b><code>COCOMO</code> 기법 : 소스 코드 규모에 따른 비용을 예측해 <code>Man-Month</code>로 나타냄</b>
+        <ul>
+          <li><b><code>COCOMO</code> 모형 종류 : <code>Basic COCOMO</code> (프로젝트 크기를 코드 라인 수로 측정), <code>Intermediate COCOMO</code> (개발자 경험 수준, 신뢰성 요구사항을 고려해 보정 계수 적용), <code>Detailed COCOMO</code> </b></li>
+          <li><b><code>COCOMO</code> 개발 유형 : 단순형 (5만 라인 이하), 중간형 (30만 라인 이하), 임배디드형 (30만 라인 이상)</b></li>
+        </ul>
+      </li>
+      <li><b><code>Putnam</code> 모델 : 소프트웨어 개발 생명 주기 내 노력 분포 예측 (크기, 생산성, 기술 요소)</b></li>
+      <li><b>기능 점수 : 시스템 구현 기술에 의존적이고 개발자에 식별된 기능 기반해 시스템 크기 측정</b>
+        <ul>
+          <li><b>기능 점수 비용 산정 요소 : 코드 라인 수, 데이터 파일 수, 문서 수, 입력 유형 수, 보고서 수</b></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="소프트웨어-개발-표준">소프트웨어 개발 표준</h3>
+
+<ul>
+  <li><b><code>ISO/IEC 25000</code> : 소프트웨어 품질 평가 및 절차 모델</b>
+    <ul>
+      <li><code>ISO/IEC 9126</code>과 <code>ISO/IEC 14598</code> 통합</li>
+      <li><code>2501n</code> : 품질 모형, <code>2503n</code> : 품질 측정</li>
+    </ul>
+  </li>
+  <li><b><code>SPICE</code>, <code>ISO/IEC 15504</code> : 소프트웨어 프로세스 평가 및 개선</b>
+    <ul>
+      <li><code>ISO/IEC 12207</code> 개선</li>
+      <li><code>SPICE</code> 모델 범주 : 고객-공급자 프로세스, 공학 프로세스, 지원 프로세스, 관리 프로세스, 조직 프로세스</li>
+      <li><b><code>SPICE</code> 모델 레벨 : 레벨5, 최적 / 레벨4, 예측 / 레벨3, 확립 / 레벨2, 관리 / 레벨1, 수행 / 레벨0, 불완전</b></li>
+    </ul>
+  </li>
+  <li><b><code>CMM</code> : 조직 업무 능력 평가 기준을 세우기 위한 능력 성숙도 모델</b>
+    <ul>
+      <li><b><code>CMM</code> 모델 레벨 : 레벨5, 최적 / 레벨4, 관리 / 레벨3, 정의 / 레벨2, 반복 / 레벨1, 초보</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="테일러링과-프레임워크">테일러링과 프레임워크</h3>
+
+<ul>
+  <li><b>테일러링 : 기존 개발 방법론을 프로젝트 상황 (요구사항 및 조건)에 맞게 수정해 개발 프로세스 최적화</b>
+    <ul>
+      <li>테일러링 절차 : 프로젝트 특정 정의 → 표준 프로세스 선정·검증 → 상위 레벨 커스터마이징 → 세부 커스터마이징 → 문서화</li>
+    </ul>
+  </li>
+  <li><b>소프트웨어 프레임워크 : 비슷한 유형의 응용 프로그램을 위해 아키턱처, 산출물의 통합된 집합</b></li>
+  <li>라이브러리 : 단순 활용될 수 있는 도구들의 집합 (<b>차이점? : 프레임워크는 전체적인 흐름을 자체적으로 가짐</b>)</li>
+  <li><b>소프트웨어 개발 프레임워크 : 소프트웨어 개발을 돕는 재사용 가능한 클래스·패턴의 집합</b>
+    <ul>
+      <li><b>소프트웨어 개발 프레임워크 장점 : 개발 용이, 시스템 복잡도의 감소, 이식성, 품질 보증, 운영 용이, 개발 코드 간소화, 변경 용이성, 설계 및 코드의 재사용성 증가</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="신기술-용어">신기술 용어</h2>
+
+<h3 id="네트워크-소프트웨어-하드웨어-관련-신기술">네트워크, 소프트웨어, 하드웨어 관련 신기술</h3>
+
+<blockquote>
+  <p>중복 출제된 내용만 정리</p>
+</blockquote>
+
+<ul>
+  <li>프로토콜 관련
+    <ul>
+      <li><b><code>RIP</code> : 최단 경로 탐색, <code>Bellman-Ford</code>, 벡터 라우팅 프로토콜</b></li>
+      <li><b><code>MQTT</code> : <code>IBM</code>, 대역폭 제한, <code>TCP/IP</code>, <code>IoT</code></b></li>
+    </ul>
+  </li>
+  <li>모바일 관련
+    <ul>
+      <li><b><code>Mesh</code> : 무선 랜 한계, 대규모 디바이스 네트워크 생성 최적화, 차세대 이동 통신</b></li>
+    </ul>
+  </li>
+  <li>하드웨어 관련
+    <ul>
+      <li><b>고가용성 솔루션 (<code>HACMP</code>) : 공유 디스크, 클러스터링</b></li>
+      <li><b>직접 연결 저장 장치 (<code>DAS</code>) : 호스트 버스 어댑터, 네트워크 디바이스 없이 직접 연결 </b></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="소프트웨어-개발-보안">소프트웨어 개발 보안</h2>
+
+<h3 id="소프트웨어-개발-보안-개요">소프트웨어 개발 보안 개요</h3>
+
+<ul>
+  <li><b>시큐어 <code>OS</code> : 컴퓨터 운영체제에 보안 기능을 추가</b>
+    <ul>
+      <li><b>시큐어 <code>OS</code> 접근 통제 종류 : 강제적, 임의적, 역할 기반</b></li>
+    </ul>
+  </li>
+  <li><b>스택 가드 : 메모리 상에 프로그램 복귀 주소와 변수 사이에 특정 값 (카나리)를 저장했다가, 그 값이 변경되면 오버플로우 상태로 가정해 프로그램 실행 중단</b></li>
+</ul>
+
+<h3 id="소프트웨어-개발-보안-구축-및-방법론">소프트웨어 개발 보안 구축 및 방법론</h3>
+
+<ul>
+  <li><b>정보 보안 3대 요소 : 기밀성 (인가 사용자만 접근), 무결성 (인가 방법으로만 수정), 기용성 (인가 사용자 업무 수행 유지)</b></li>
+</ul>
+
+<h3 id="시큐어-코딩-가이드">시큐어 코딩 가이드</h3>
+
+<ul>
+  <li><b>입력 데이터 검증 및 표현의 보안 약점 종류 : <code>SQL Injection</code>, 자원 삽입, 크로스 사이트 스크립트 (<code>XSS</code>)</b></li>
+  <li><b>보안 기능의 보안 약점 종류 : 하드 코드된 비밀번호</b></li>
+</ul>
+
+<h3 id="암호화-알고리즘">암호화 알고리즘</h3>
+
+<ul>
+  <li><b>암호 알고리즘 : 평문을 암호문으로 (암호화), 암호문을 평문으로 (복호화) 바꿀 때 암호 키를 통해 사용되는 알고리즘</b></li>
+  <li><b>공개 키 : 암호 키와 해독 키가 다름 (비대칭 키 암호화), 쉬운 키 분배, 느린 속도, 복잡한 알고리즘, <code>RSA</code></b></li>
+  <li><b>비밀 키 : 암호 키와 해독 키가 같음 (대칭 키 암호화), 어려운 키 분배, 빠른 속도, 쉬운 알고리즘, <code>DES/AES</code></b></li>
+  <li><b>해시 암호화 : 임의 길이의 메시지를 입력하면 고정 길이의 출력값으로 변환 (디지털 서명에 활용 → 데이터 무결성 제공)</b>
+    <ul>
+      <li>해시 3저항성 : 역상 저항성, 제2 역상 저항성, 충돌 저항성</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="서버-인증과-접근-통제">서버 인증과 접근 통제</h2>
+
+<h3 id="서버-인증-및-서버-통제-개요">서버 인증 및 서버 통제 개요</h3>
+
+<ul>
+  <li><b>사용자 인증 : 지식 기반 인증 (<code>ID/PW</code>), 소유 기반 인증 (토큰), 생체 기반 인증, 다중 인증</b></li>
+  <li><b>접근 통제 : 시스템 자원 이용에 대한 불법적인 접근 방지</b>
+    <ul>
+      <li>접근 통제 요소 → <b><code>AAA</code> (인증 권한 검증 계정 관리)</b></li>
+      <li><b>강제적 접근 통제 : 중앙에서 정보 수집 및 분류하여 보안 레벨 결정</b></li>
+      <li><b>임의적 접근 통제 : 정보 소유자가 보안 레벨 및 접근 제어 설정</b></li>
+      <li><b>역할 기반 접근 통제 : 사람이 아닌 직책에 대해 권한을 부여</b></li>
+    </ul>
+  </li>
+  <li><b>벨 라파둘라 모델 (<code>BLP</code>) : 정보의 기밀성에 따라 상하 관계가 구분된 정보의 보호를 위해 자신의 권한보다 낮은 수분의 문서만을 읽을 수 있게 함 (다중 마스터 복제 방식 기반, 데이터 복제·분산 처리에 효과적)</b></li>
+</ul>
+
+<h3 id="보안-솔루션과-보안-아키텍처">보안 솔루션과 보안 아키텍처</h3>
+
+<ul>
+  <li><b><code>IDS</code> (침입 탐지 시스템) : 외부 침입 공격에 대해 탐지하는 네트워크 보안 시스템</b>
+    <ul>
+      <li><b>침입 탐지 기법 : 오용 탐지, 이상 탐지, </b></li>
+    </ul>
+  </li>
+  <li><b><code>IPSec</code> (<code>IP Security</code>) : 통신 세션의 각 <code>IP</code> 패킷을 암호화하고 인증하는 인터넷 프로토콜</b></li>
+  <li><b>가상 사설망 : 이용자가 공중망에 사설망을 구축해 전용망을 사용하는 듯한 효과를 가짐</b></li>
+</ul>
+
+<h2 id="공격-유형">공격 유형</h2>
+
+<h3 id="서비스-공격-유형">서비스 공격 유형</h3>
+
+<ul>
+  <li><b>스머프 공격 : 공격 대상 주소에 근원지로 대량의 <code>ICMP</code> 응답 패킷을 전송해 서비스 거부 유발</b></li>
+  <li><b><code>Ping of Death</code> : 비정상적인 <code>ICMP</code> 패킷으로 시스템 성능 저하</b></li>
+  <li><b><code>Ping</code> 플러딩 : <code>Ping</code> 테스트로 공격자가 공격 대상 컴퓨터 확인</b></li>
+  <li><b><code>DDos</code> : 여러 대의 공격자를 분산 배치 및 동시에 서비스 거부 공격</b></li>
+  <li><b><code>TCP</code> 세션 하이재킹 : 서버와 클라이언트가 <code>TCP</code>로 통신할 때, <code>RST</code> 패킷을 보내 세션을 끊고 세션을 탈취</b></li>
+  <li><b>피싱 : 가짜 웹사이트로 개인 정보를 탈취</b></li>
+  <li><b>랜섬웨어 : 시스템을 잠그거나 데이터를 암호화해 이를 인질로 금전 요구</b></li>
+  <li><b>키 로거 : 키보드 움직임을 탐지해 개인정보 탈취</b></li>
+  <li><b><code>APT</code> (지능적 지속 위협) : 다양한 보안 위협을 만드렁 정보 유츌</b></li>
+  <li><b>백도어 : 프로그램이나 손상된 시스템에 허가되지 않은 접근을 가능하게 정상적인 보안 절차를 우회</b>
+    <ul>
+      <li><b><code>Tripwire</code> : 크래커가 백도어를 만들거나, 설정 파일을 변경했을 때 분석하는 도구</b></li>
+    </ul>
+  </li>
+  <li><b><code>Switch Jamming</code>  스위치 허브의 기능을 방해해 스위치를 더미 허브처럼 작동시킴</b></li>
+</ul>
+
+<h3 id="공격-탐지-및-방지">공격 탐지 및 방지</h3>
+
+<ul>
+  <li><b><code>Honeypot</code> : 침입자를 속여 실제 공격당하는 것처럼 보여주어 크래커 추적 및 공격 기법 정보 수집</b></li>
+  <li><b><code>DPI</code> : 전 계층 프로토콜과 패킷 내부 컨텐츠를 파악하는 패킷 분석 기술</b></li>
+  <li><b><code>HSM</code> : 암호화 키를 생성 및 저장하는 전용 하드웨어 장치</b></li>
+  <li><b><code>TCP Wrapper</code> : 외부 컴퓨터가 접속되면 접속 인가 여불를 점검해 접속 허용</b></li>
+  <li><b><code>HSM</code> : 네트워크를 제어부, 데이터 전달부로 분리해 네트워크를 제어 및 관리</b></li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Engineer Information Processing" /><summary type="html"><![CDATA[소프트웨어 개발 생명 주기]]></summary></entry><entry><title type="html">[Engineer Information Processing] 3. 데이터베이스 구축</title><link href="http://localhost:4000/engineer_information_processing3/" rel="alternate" type="text/html" title="[Engineer Information Processing] 3. 데이터베이스 구축" /><published>2024-02-22T00:00:00+09:00</published><updated>2024-03-04T00:00:00+09:00</updated><id>http://localhost:4000/engineer_information_processing3</id><content type="html" xml:base="http://localhost:4000/engineer_information_processing3/"><![CDATA[<h2 id="데이터베이스의-개념">데이터베이스의 개념</h2>
+
+<h3 id="데이터베이스--dbms">데이터베이스 : <code>DBMS</code></h3>
+
+<ul>
+  <li>지료 : 단순한 데이터, 정보 : 의미 있는 데이터, 지식 : 가공되어 의미 있는 데이터</li>
+  <li>정보 시스템 : 조직체의 데이터를 바탕으로 정보를 추출 및 생성하는 시스템
+    <ul>
+      <li>정보 시스템 종류 : 일괄 처리 시스템, 온라인 실시간 처리 시스템, 분산 처리 시스템</li>
+    </ul>
+  </li>
+  <li><code>DB</code>정의 : <b>통합 데이터</b>, 저장 데이터, 운영 데이터, 공용 데이터</li>
+  <li><code>DB</code> 특성 : 실시간 접근성, 내용에 의한 참조, 동시 공유, 계속적 변화</li>
+  <li><code>DB</code> 시스템 구성 : <code>DB</code>, <code>DBMS</code>, <code>DB</code> 관리자, <code>DB</code> 언어</li>
+</ul>
+
+<h3 id="데이터-관리--빅데이터-관리">데이터 관리 / 빅데이터 관리</h3>
+
+<ul>
+  <li><b>데이터 마이닝 : 데이터 웨어하우징에서 수집·분석된 자료를 사용자에 제공하기 위해 분류·가공하는 요소 기술</b>
+    <ul>
+      <li>분류 : 데이터를 여러 그룹으로 분류</li>
+      <li>연관 규칙 분석 : 특정 규칙 탐색</li>
+      <li>연속 : 순서 정보를 갖는 데이터에서 순서 관련 패턴 탐색</li>
+      <li>군집화 : 데이터를 비슷한 특성의 그룹으로 나눔</li>
+      <li>예측 : 과거 데이터를 분석해 미래 예측</li>
+      <li>이상 탐지 : 데이터에섯 비정상적인 패턴 탐색</li>
+      <li>회귀 분석 : 데이터 간의 관계를 분석</li>
+      <li>차원 축소 : 데이터 차원을 줄여서 분석</li>
+    </ul>
+  </li>
+  <li><b>하둡 : 빅데이터 세트를 병렬로 처리하기 위한 데이터 분산 처리를 돕는 자바 기반 소프트웨어 오픈소스 프레임워크</b>
+    <ul>
+      <li>맴리듀스 : 대용량 데이터를 분산 처리하기 위한 프로그래밍 모델 (<code>Map</code>, <code>Reduce</code> 함수로 구성)</li>
+      <li><code>Sqoop</code> : <code>RDBMS</code>과 하둡 간의 데이터 전송을 지원하는 도구</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="데이터베이스-스키마와-언어">데이터베이스 스키마와 언어</h3>
+
+<ul>
+  <li>스키마 : 데이터베이스 구조 (개체, 속성, 관계) 정의 (데이터베이스의 논리적 구조를 기술해 데이터 일관성·무결성 보장)
+    <ul>
+      <li>외부 스키마 : 데이터베이스 사용자, 응용 프로그램의 관점에서 데이터베이스 정의</li>
+      <li><b>개념 스키마 : 데이터베이스 전체를 정의한 것으로, 데이터 개체·관계·제약 조건·접근 권한·무결성 규칙을 명세</b></li>
+      <li><b>내부 스키마 : 내부 물리적 저장 구조를 정의해 데이터의 실제 저장 방법을 기술</b></li>
+    </ul>
+  </li>
+  <li>스키마 간 독립성 : 논리적 독립성, 물리적 독립성</li>
+  <li>데이터베이스 언어 : 데이터베이스 내에서 활용되는 언어
+    <ul>
+      <li><b><code>SQL</code> : 관계형 데이터베이스의 표준 질의어</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="데이터베이스-설계와-관계형-모델">데이터베이스 설계와 관계형 모델</h2>
+
+<h3 id="데이터베이스-설계">데이터베이스 설계</h3>
+
+<ul>
+  <li>데이터베이스 설계 단계 : 요구사항 분석 → 개념적 설계 → 논리적 설계 → 물리적 설계 → 구현<br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/0afa4247-f3c7-4848-b2c0-09820caddc61" width="80%" />
+    <ul>
+      <li><b>개념적 설계 : 목표 <code>DBMS</code>에 독립적인 개념 스키마 설계 (기념 스키마 모델링, 트랜잭션 모델링)</b></li>
+      <li><b>논리적 설계 : 목표 <code>DBMS</code>에 종속적인 논리 스키마 설계 (스키마 평가 및 정제, 트랜잭션 인터페이스 설계)</b></li>
+      <li><b>물리적 설계 : 목표 <code>DBMS</code>에 종속적인 물리적 구조 설계 (저장 레코드 양식 설계, 레코드 클러스터링)</b>
+        <ul>
+          <li><b>물리적 설계 고려사항 : 인덱스 구조, 레코드 크기·개수, 트랜잭션 갱신·참조 성향, 개념 스키마 변경 여부</b></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="데이터-모델--관계형-데이터베이스-모델">데이터 모델 / 관계형 데이터베이스 모델</h3>
+
+<ul>
+  <li>데이터 모델 : 데이터베이스 설계 과정에서 데이터 구조를 표현하기 위해 사용되는 도구
+    <ul>
+      <li>데이텉 모델 구성 요소 : 데이터 구조, 연산, 제약 조건</li>
+    </ul>
+  </li>
+  <li>개념 데이터 모델 : 속성들로 기술된 개체 타입과 개체 타입 간의 관계를 이용해 현실 세계를 표현
+    <ul>
+      <li><b>개체-관계 모델 (<code>E-R</code> 모델): 개체 타입과 이들 간 관계 타입을 이용해 개념적 표현<br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/d4eb5c97-8ac9-4e94-ac67-49d51725340f" width="80%" /></b></li>
+      <li>논리 데이터 모델 : 엔티티와 속성들의 관계를 구조적으로 정의
+        <ul>
+          <li><b>논리 데이터 모델 종류 : 계층적 데이터 모델, 네트워크형 데이터 모델, 관계형 데이터 모델</b>
+            <ul>
+              <li>논리 데이터 모델 구성 요소 : 개체, 속성, 관계</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>관계형 데이터베이스 모델 : 관계형 데이터베이스를 구성하는 개체나 관계를 릴레이션으로 표현
+    <ul>
+      <li>릴레이션 스키마 : 개념 모델에 도출된 개체를 컴퓨터로 처리 가능한 단위로 매핑한 모델<b>(릴레이션 이름과 속성의 집합)</b></li>
+      <li>릴레이션 인스턴스 : 릴레이션 스키마에 따라 저장된 튜플 (테이블의 각 행)</li>
+      <li>릴레이션 속성 : 순서가 없는 데이터베이스의 가장 작은 논리적 단위로서의 릴레이션의 열</li>
+      <li><b>디그리 : 릴레이션이 가지는 속성의 개수 (디그리 값이 클수록 복잡한 구조 → 정규화 필요)</b></li>
+      <li><b>도메인 : 하나의 속성이 가질 수 있는 원자값들의 집합 (데이터 무결성·일관성 유지에 활용)</b></li>
+      <li><b>튜플 : 순서가 없는 릴레이션의 행 (카디널리티 : 튜픙의 수)</b></li>
+    </ul>
+  </li>
+  <li><b>릴레이션의 특징 : 튜플의 유일성, 튜플의 무순서성, 속성의 원자성, 속성의 무순서성</b></li>
+  <li><b><code>CRUD</code> 매트릭스 : 데이터베이스에 영향 주는 <code>CRUD</code> 연산으로 프로세스·테이블 간 메트릭스를 만들어 트랜잭션 분석</b></li>
+</ul>
+
+<h3 id="키와-무결성">키와 무결성</h3>
+
+<ul>
+  <li><b>슈퍼 키 : 튜플을 고유하게 식별하는 하나 이상의 속성 집합 (유일성<code>O</code>, 최소성<code>X</code>)</b></li>
+  <li><b>후보 키 : 튜플을 고유하게 식별하는 하나 이상의 속성 집합 (유일성<code>O</code>, 최소성<code>O</code>)</b></li>
+  <li><b>기본 키 : 후보 키 중 대표인 키 (<code>Null</code><code>X</code>, 중복<code>X</code>, 유일성<code>O</code>, 최소성<code>O</code>)</b></li>
+  <li><b>대체 키 : 후보 키 중 기본 키 외의 나머지 키</b></li>
+  <li><b>외래 키 : 릴레이션 간 연결을 위해 다른 테이블의 기본 키로 사용되는 키</b></li>
+  <li><b>무결성 : 데이터에 적용되는 연산에 제한을 두어 데이터의 정확성·일관성·유효성 유지</b>
+    <ul>
+      <li>개체 무결성 : 기본 키는 <code>Null</code><code>X</code>, 중복<code>X</code></li>
+      <li>참조 무결성 : 외래 키를 변경하려면, 외래 키가 참조하는 대상의 기본 키도 변경해야 함</li>
+      <li>도메인 무결성 : 각 속성은 해당 속성 도메인에 지정된 값이어야 함</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="데이터베이스-정규화">데이터베이스 정규화</h2>
+
+<h3 id="이상-현상과-함수적-종속">이상 현상과 함수적 종속</h3>
+
+<ul>
+  <li><b>이상 현상 : 릴레이션 조작 시 데이터들이 불필요하게 중복되어 예기치 않게 발생하는 현상</b>
+    <ul>
+      <li>삽입 이상 : 데이터를 삽입할 때 불필요한 데이터가 함께 삽입되는 현상</li>
+      <li>삭제 이상 : 릴레이션의 한 튜플을 삭제할 때 연쇄적으로 삭제되는 현상</li>
+      <li>갱신 이상 : 튜플 중에 일부 속성을 갱신해 정보의 모순성이 발생하는 현상</li>
+    </ul>
+  </li>
+  <li>함수적 종속 : 개체 내에 존재하는 속성 간의 관계를 종속적인 관계로 정리하는 방법
+    <ul>
+      <li><b>부분적 함수 종속 : 혼한 속상 기본키 <code>{A, B}</code>에 대해 <code>A → C</code>가 성립</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/72649301-5d4f-4bf0-97bc-788761c7d3ef" width="70%" /></li>
+      <li><b>이행 함수적 종속 : 속성 <code>X, Y, Z</code>가 주어졌을 때, <code>X → Y</code>, <code>Y → Z</code>하면 <code>X → Z</code></b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/4105e4d9-df0e-46fc-af34-e8b77a2f2952" width="70%" /></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="데이터베이스-정규화--반정규화">데이터베이스 정규화 / 반정규화</h3>
+
+<ul>
+  <li><b>정규화 : 논리적 설계 단계에서 발생할 수 있는 종속으로 인한 이상 현상의 문제를 해결하기 위해 여러 테이블로 분해</b>
+    <ul>
+      <li><b>정규화 목적 : 데이터 구조 안정성 확보, 중복 데이터·수정 및 삭제 시 이상·테이블 불일치 최소화</b></li>
+      <li><b>정규화 과정 : 비정규 릴레이션 → <code>1NF</code> → <code>2NF</code> → <code>3NF</code> → <code>BCNF</code> → <code>4NF</code> → <code>5NF</code></b></li>
+    </ul>
+  </li>
+  <li><b>1정규형 : 어떤 테이블에 속한 모든 도메인이 원자값만으로 되어 있는 테이블</b></li>
+  <li><b>2정규형 : 1정규형을 만족하면서, 테이블의 부분 함수적 종속을 제거해 완전 함수적 종속이 되도록 분해된 테이블</b></li>
+  <li><b>3정규형 : 1,2정규형을 만족하면서, 속성 간 이행 함수 종속을 만족하는 테이블</b></li>
+  <li><b><code>BCNF</code>정규형 : 1,2,3정규형을 만족하면서, 결정자가 후보키가 아닌 함수 종속이 제거된 테이블</b></li>
+  <li><b>4정규형 : 1,2,3정규형을 만족하면서, 다치 종속이 제거된 테이블</b></li>
+  <li><b>5정규형 : 1,2,3,4정규형을 만족하면서, 조인 종속이 제거된 테이블</b></li>
+  <li><b>반정규화 : 정규화된 결과를 시스템 성능 향상 및 개발·운영 단순화를 위해 중복·통합·분리를 수행</b>
+    <ul>
+      <li>반정규화 기법 : 테이블 반정규화 (테이블 병합, 테이블 분할, <b>테이블 추가</b>), 컬럼 반정규화, 관계 반정규화</li>
+      <li><b>파티셔닝 : 데이터베이스의 테이블을 분할하는 것</b>
+        <ul>
+          <li><b>파티셔닝 키 기준 유형 : 범위 분할, 목록 분할, 해시 분할, 합성 분할, 라운드로빈 분할</b></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="sql"><code class="language-plaintext highlighter-rouge">SQL</code></h2>
+
+<h3 id="관계-대수와-연산자">관계 대수와 연산자</h3>
+
+<ul>
+  <li><b>관계 대수 : 원하는 정보 및 정보를 어떻게 유도하는지 기술하는 절차적 방법 (일반 집합 연산, 순수 관계 연산)</b></li>
+  <li><b>관계 해석 : 원하는 정보가 무엇이라는 것만 정의하는 비절차적인 방법 (도메인 관계 해석, 튜플 관계 해석)</b>
+    <ul>
+      <li>관계 해석 자유 변수 : 전칭 정량자 <code>∀</code> (<code>For All</code>), 존재 정량자 <code>∃</code>(<code>For Some</code>)</li>
+    </ul>
+  </li>
+  <li><b>순수 관계 연산자 : <code>Select</code> (튜플 집합 검색), <code>Project</code> (속성 집합 추출), <code>Join</code> (두 릴레이션 공통 속성 결합), <code>Division</code> (두 릴레이션에서 특정 속성를 제외한 속성으로 나눔)</b></li>
+  <li>집합 산자 : <b>합집합 (<code>Union</code>), 교집합 (<code>Intersection</code>), 차집합 (<code>Difference</code>), 교차곱 (<code>Cartesian Product</code>)</b></li>
+</ul>
+
+<h3 id="뷰-시스템-카탈로그">뷰, 시스템 카탈로그</h3>
+
+<ul>
+  <li>뷰 : 사용자에 접근 허용된 자료만을 제한적으로 보여주기 위해 기본 테이블에서 유도되는 가상 테이블
+    <ul>
+      <li><b>뷰 생성 시 <code>CREATE</code>, 검색 시 <code>SELECT</code> 사용</b></li>
+      <li><b>뷰 정의 변경 시 <code>ALTER</code> 대신 <code>DROP</code> 사용</b></li>
+      <li><b>뷰를 이용한 또다른 뷰의 생성이 가능 (하나의 뷰 제거 시 기반한 뷰들도 함꼐 삭제)</b></li>
+      <li><b>뷰에 대한 조작에서 삽입·갱신·삭제는 제약</b></li>
+      <li><b>뷰가 정의된 기본 테이블이 제거되면 뷰도 자동 제거</b></li>
+    </ul>
+  </li>
+  <li><b>시스템 카탈로그 (데이터 사전) : 시스템 자신이 필요하는 여러 객체들에 대한 정보를 가진 시스템 데이터베이스</b>
+    <ul>
+      <li>메타 데이터 : 시스템 카탈로그에 저장되는 내용</li>
+      <li>시스템 카탈로그 기능 : 테이블·뷰·인덱스·사용자 계정 정보 조회</li>
+    </ul>
+  </li>
+  <li><b>인덱스 : 원하는 자료를 검색하기 위해, 인덱스 파일 및 인덱스 파일 (키, 주소)로 구성된, 독립적인 저장 공간</b></li>
+</ul>
+
+<h3 id="ddl"><code class="language-plaintext highlighter-rouge">DDL</code></h3>
+
+<ul>
+  <li><b>데이터 정의어 (<code>DDL</code>) : 스키마 정의·변경·삭제 (논리적 데이터 구조와 물리적 데이터 구조 간의 사상 정의)</b>
+    <ul>
+      <li><b><code>CREATE</code> : 스키마·도메인·테이블·뷰 정의</b>
+        <ul>
+          <li><b><code>CREATE TABLE</code> : 테이블 생성 </b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/11c90a08-572b-4ef0-ac4d-6752f5702308" width="80%" /></li>
+        </ul>
+      </li>
+      <li><b><code>ALTER</code> : 테이블 정의 변경 (필드 추가·삭제·갱신)</b>
+        <ul>
+          <li><b><code>ALTER TABLE</code> : 테이블 구조 변경</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/4b8fde9c-c9da-4232-bc19-79c19a66af46" width="80%" /></li>
+        </ul>
+      </li>
+      <li><b><code>DROP</code> : 스키마·도메인·테이블·뷰 삭제</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="dcl"><code class="language-plaintext highlighter-rouge">DCL</code></h3>
+
+<ul>
+  <li><b>데이터 제어어 (<code>DCL</code>) : 데이터 무결성·제어</b>
+    <ul>
+      <li><b><code>COMMIT</code></b> : 명령어로 수행된 실제 물리적 디스크에 저장한 뒤에 결과 반환</li>
+      <li><b><code>ROLLBACK</code> : 명령어로 수행에 실패했음을 알리고, 수행된 결과를 원상 복귀</b></li>
+      <li><b><code>GRANT</code> : 관리자가 사용자에 데이터베이스에 대한 권한을 부여</b></li>
+      <li><b><code>REVOKE</code> : 관리자가 사용자에 데이터베이스에 대한 권한을 취소</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="dml"><code class="language-plaintext highlighter-rouge">DML</code></h3>
+
+<ul>
+  <li><b>데이터 조작어 (<code>DML</code>) : 데이터 검색·삽입·삭제·변경</b>
+    <ul>
+      <li><b><code>SELECT</code> : 튜플 검색</b>
+        <ul>
+          <li><b><code>BETWEEN ~ AND ~</code> : 튜플 검색 시 구간 값 조건식</b></li>
+          <li><b>그룹 함수 (<code>GROUP BY~</code>) : <code>COUNT</code> (행의 수), <code>SUM</code> (하나 이상의 열 합게),<br /><code>AVG</code> (하나 이상의 열 평균), <code>MAX</code> (열의 최댓값), <code>MIN</code> (열의 최솟값)&lt;/br&gt;
+</b>            <ul>
+              <li><b><code>HAVING</code> : 튜플 검색 시 그룹 함수와 결합해 탐색 조건을 지정하는 조건식</b></li>
+            </ul>
+          </li>
+          <li><b><code>ORDER BY~</code> : 특정 항목 기준으로 검색 테이블의 행들을 오름차순·내림차순으로 정렬</b></li>
+          <li>하위 질의 = 서브 퀴리 : 하위 질의를 1차 수행한 다음, 반환값을 상위 릴레이션의 <code>WHERE</code>에서 사용</li>
+        </ul>
+      </li>
+      <li><b><code>INSERT</code> : 튜플 삽입</b></li>
+      <li><b><code>UPDATE</code> : 튜플 내용 변경</b></li>
+      <li><b><code>DELETE</code> : 튜플 삭제</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="nosql-절차형-sql"><code class="language-plaintext highlighter-rouge">NoSQL</code>, 절차형 <code class="language-plaintext highlighter-rouge">SQL</code></h3>
+
+<ul>
+  <li><b><code>NoSQL</code> : 스키마가 고정되지 않은 비관계형 데이터 모델로 데이터를 저장·검색하는 데이터베이스</b></li>
+  <li>절차형 <code>SQL</code> : <code>SQL</code>의 연속 실행, 조건에 따른 반복, 분기 등의 제어 가능
+    <ul>
+      <li>저장 프로시저 : 사용자가 자주 사용하는 명령문을 작성해 데이터베이스에 저장한 <code>PL/SQL</code> 명령문
+        <ul>
+          <li><b>트리거 : 데이터베이스에 특정 사건이 발생할 때마다 자동으로 수행되는 저장 프로시저</b></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="데이터베이스-병행-제어와-보안">데이터베이스 병행 제어와 보안</h2>
+
+<h3 id="트랜잭션">트랜잭션</h3>
+
+<ul>
+  <li><b>트랜잭션 : 하나의 논리적 기능을 수행하기 위한 작업 단위</b>
+    <ul>
+      <li><b>트랜잭션의 특징 : 원자성 (완전 수행 안되면 수행 <code>X</code>), 일관성 (트랜잭션 실행 전후 상태가 일관성 유지)<br />고립성 (트랜잭션 실행 시 다른 트랜잭션에 독립적), 영속성 (트랜잭션 결과가 데이터베이스에 저장)</b></li>
+      <li><b>트랜잭션 상태 : 활동, 부분 완료 (실행 마치고 저장 직전), 완료, 실패, 철회</b></li>
+      <li><b>리커버리 연산 : 트랜잭션 수행 중에 장애로 손상된 데이터베이스를 정상 상태로 복구 (<code>Redo</code>, <code>Undo</code>)</b></li>
+      <li><b>즉각 갱신 : 데이터를 갱신하면 트랜잭션 완료 전에 실제 데이터베이스에 반영</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="병행-제어-회복">병행 제어, 회복</h3>
+
+<ul>
+  <li><b>병행 제어 : 동시에 수행되는 트랜잭션을 일관성 있게 처리하기 위해 제어</b>
+    <ul>
+      <li><b>병행 제어 목적 : 데이터베이스 공유·일관성·시스템 활용도 최대화, 사용자 응답 시간 최소화</b></li>
+      <li><b>병행 제어 종류 : 로킹, 타임스탬프, 최적 병행 수행, 다중 버전 기법</b></li>
+    </ul>
+  </li>
+  <li><b>로킹 : 하나의 트랜잭션이 데이터를 액세스하는 동안 다른 트랜잭션이 그 데이터 항목을 액세스 불가하게 함</b>
+    <ul>
+      <li><b>2단계 로킹 : 트랜잭션의 로크·해제 요청을 2단계로 실시 (직렬성은 보장하지만, 교착상태 예방은 불가능)</b>
+        <ul>
+          <li>2단계 로킹 단계 : 확장 단계 (트랜잭션 시작 시 모든 잠금 확보), 축소 단계 (트랜잭션 완료 시 잠금 해제)</li>
+          <li>2단계 로킹 잠금 상태 : 공유 잠금 (타 트랜잭션 읽기 가능), 배타적 잠금 (타 트랜잭션 읽기 불가능)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>타임스탬프 : 시간 허가 인증 도장을 부여받아 트랜잭션 간 순서를 미리 정함</li>
+  <li>회복 : 데이터 손실 및 손상이 발생했을 때 이를 복구
+    <ul>
+      <li><b>회복 기법 종류 : 즉시 갱신, 지연 갱신, <code>Redo</code>, <code>Undo</code></b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="데이터베이스-보안과-권한-설정">데이터베이스 보안과 권한 설정</h3>
+
+<ul>
+  <li><b>암호화 : 네트워를 통하거나 컴퓨터 내부에 자료를 저장할 때 권한을 가진 사람 외엔 데이터를 보지 못하도록 함</b>
+    <ul>
+      <li><b>암호화 기법 : 비밀 키 (대칭 키), 공개 키 (비대칭 키)</b></li>
+    </ul>
+  </li>
+  <li><b>데이터베이스 보안 적용 주의사항 : 접근 제어, 데이터 암호화, 취약점 관리, 백업과 복원, 감시와 모니터링</b></li>
+</ul>
+
+<h3 id="분산-데이터베이스">분산 데이터베이스</h3>
+
+<ul>
+  <li>분산 데이터베이스 : 네트워크를 통해 연결된 여러 컴퓨터에 데이터가 분산된 데이터베이스 → 분산 데이터베이스 투명성
+    <ul>
+      <li><b>위치 투명성 : 하드웨어와 소프트웨어의 물리적 위치를 사용자가 알 필요가 없다.</b></li>
+      <li><b>중복 투명성 : 사용자에 통지할 필요 없이 시스템 안에 자원들의 부가적인 복사를 자유롭게 할 수 있다.</b></li>
+      <li><b>병행 투명성 : 다중 사용자들이 자원을 자동으로 공유할 수 있다.</b></li>
+      <li><b>장애 투명성 : 사용자들은 어느 위치의 시스템에 장애가 발생했는지 알 필요가 없다.</b></li>
+    </ul>
+  </li>
+  <li>분산 데이터베이스 구성 요소 : 분산 처리기, 분산 데이터베이스, 틍신 네트워크</li>
+  <li>분산 데이터베이스 연결 모델 : 클라이언트·서버 모델, <code>Peer-to-Peer</code> 모델, 클러스터 모델</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Engineer Information Processing" /><summary type="html"><![CDATA[데이터베이스의 개념]]></summary></entry><entry><title type="html">[Engineer Information Processing] 2. 소프트웨어 개발</title><link href="http://localhost:4000/engineer_information_processing2/" rel="alternate" type="text/html" title="[Engineer Information Processing] 2. 소프트웨어 개발" /><published>2024-02-22T00:00:00+09:00</published><updated>2024-03-04T00:00:00+09:00</updated><id>http://localhost:4000/engineer_information_processing2</id><content type="html" xml:base="http://localhost:4000/engineer_information_processing2/"><![CDATA[<h2 id="통합-구현">통합 구현</h2>
+
+<h3 id="통합-구현-1">통합 구현</h3>
+
+<ul>
+  <li>단위 모듈 : 소프트웨어 구현에 필요한 다양한 동작 중에 하나의 동작을 수행하는 기능을 모듈료 구현
+    <ul>
+      <li>단위 기능 명세서 : 큰 규모의 시스템을 분해아여 단위 기능별로 계층적 구조화·단순화하여 추상화한 문서</li>
+    </ul>
+  </li>
+  <li><b>모듈화 : 소프트웨어 개발에 있어 기능을 나누고 추상화하여, 소프트웨어 성능을 향상 및 효과적인 유지보수 구현</b>
+    <ul>
+      <li>분할 정복법 : 복잡한 문제를 분해하여, 모듈 단위로 문제 해결</li>
+      <li>정보 은닉 : 어렵거나 변경 가능성이 있는 모듈을 타 모듈로부터 은폐</li>
+      <li>자료 추상화 : 함수 내에 자료 구조의 표현 명세를 은폐하고, 자료 및 오퍼레이션을 함께 정의</li>
+      <li>모듈 독립성 : 낮은 결합도, 높은 응집도를 갖도록 함</li>
+      <li>단위 모듈 테스트 : 프로그램의 단위 기능을 구현하는 모듈이 정해진 기능을 정확히 수행하는지 검증
+        <ul>
+          <li>단위 모듈 테스트 기법 : 화이트박스 테스트, 블랙박스 테스트</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><b>구현 단계의 작업 절차 : 코딩 계획 → 코딩 → 컴파일 → 코드 테스트</b></li>
+  <li><b><code>IDE</code> : 소프트웨어 개발 단계에서 필요한 도구들을 하나의 인터페이스로 통합 제공</b>
+    <ul>
+      <li><code>IDE</code> 종류 : 이클립스, 비주얼 스튜디오, <code>Xcode</code>, 안드로이드 스튜디오, <code>IntelliJ</code>, <code>PyCharm</code></li>
+      <li><b><code>IDE</code> 구성 요소 : 소스 코드 편집기, 컴파일러, 디버거</b></li>
+      <li><b><code>IDB</code> 기능 : 개발 환경 지원, 컴파일, 디버깅, 외부 연계, <code>DB</code> 연동, 배포</b></li>
+    </ul>
+  </li>
+  <li><b>빌드 자동화 도구 : 소스 코드 컴파일 후 다수의 연관된 모듈을 묶어 실행 파일로 만듬 (<code>Gradle</code>)</b>
+    <ul>
+      <li>빌드 자동화 도구 기능 : 컴파일, 컴포넌트 패키징, 파일 조작, 버전 관리 도구 통합, 문서 생성, 테스트, 품질 분석, 배포</li>
+      <li>빌드 자동화 도구 프로세스 : 컴파일 → 패키징 → 단위 테스트 → 정적 분석 → 리포팅 → 배포 → 최종 빌드</li>
+      <li><b><code>Ant</code>, <code>Maven</code>, <code>Gradle</code>, <code>Jenkins</code>, <code>Makefile</code>, <code>Travis CI</code>, <code>TeamCity</code></b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="형상-관리">형상 관리</h3>
+
+<ul>
+  <li><b>형상 관리 : 개발 단계에 생성되는 모든 문서·코드 등 소프트웨어 변경 사항을 체계젹으로 관리하기 위해 추적·통제</b>
+    <ul>
+      <li><b>형상 관리 항목 : 프로젝트 요구 분석서, 운영·설치 지침, 요구사항 명세서, 설계·인터페이스 명세서, 테스트 설계서, 소프트웨어 품질보증, 형상관리 계획서, 코드 모듈, 소스·테스트 코드</b></li>
+      <li><b>형상 관리 도구 : 소프트웨어 개발 생명주기 전반에 걸쳐 산출물의 종합 및 변경 과정을 체계적으로 관리</b></li>
+      <li><b>형상 관리 절차 : 형상 식별 → 형상 식별자 선정 → 형상 통제 → 형상 기록·보고 → 형상 검사</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="버전-관리">버전 관리</h3>
+
+<ul>
+  <li>버전 관리 : 요구사항 변화에 따른 다양한 형상 항목에 버전을 부여해 이력을 관리
+    <ul>
+      <li>변경 관리 : 변경된 요구사항에 대해, 비용·기간을 고려해 타당성 평가 (변경 관리 ⊂ 버전 관리 ⊂ 형상 관리)</li>
+      <li>버전 관리 도구 구분 : 공유 폴더 방식, 클라이언트·서버 방식, <b>분산 저장소 방식</b></li>
+      <li><b>버전 관리 도구 종류 : <code>CVS</code>, <code>RCS</code>, <code>SVN</code>, <code>BitKeeper</code>, <code>Git</code>, <code>Clear Case</code></b></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="시스템-인터페이스-구현">시스템 인터페이스 구현</h2>
+
+<h3 id="모듈-연계">모듈 연계</h3>
+
+<ul>
+  <li>모듈 연계 : 시스템 인터페이스를 목적으로 내부-외부 혹은 내부-내부 모듈 간 인터페이스를 설정하는 것
+    <ul>
+      <li><b><code>EAI</code> : 기업 내부에서 운영되는 각종 플랫폼 및 어플리케이션 간의 정보 전달·연계·통합 솔루션</b>
+        <ul>
+          <li><b><code>Point-to-Point</code> : 어플리케이션을 미들웨어 없이 점 대 점을 연결하는 방식</b></li>
+        </ul>
+      </li>
+      <li><b><code>Hun &amp; Spoke</code> : 단일 접점인 허브 시스템을 통해 데이터를 전송하는 중앙 집중형 방식</b></li>
+      <li><b><code>Message Bus</code> : 어플리케이션 간에 미들웨어를 배치해 처리하는 방식</b></li>
+      <li><b><code>Hybrid</code> : <code>Hun &amp; Spoke</code>와 <code>Message Bus</code>를 혼합</b></li>
+      <li><code>EAI</code> 구성 요소 : <code>EAI</code> 플랫폼, 어댑터, 브로커, 메시지 큐, 비즈니스 워크플로우</li>
+    </ul>
+  </li>
+  <li><code>ESB</code> : 어플리케이션 간의 데이터 변환 및 연계 지원을 제공하는 인터페이스 제공 솔루션</li>
+  <li><code>Web Service</code> : 네트워크 정보를 표준화된 서비스의 형태로 만들어 공유하는 기술 (<code>SOA</code> 실천)</li>
+  <li><code>IPC</code> : <code>OS</code>에서 프로세스 간 데이터에 대한 통신 기술
+    <ul>
+      <li><code>IPC</code> 기술 : 파이프, 소켓, 메시지 큐, 공유 메모리</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="인터페이스-구현">인터페이스 구현</h3>
+
+<ul>
+  <li>인터페이스 기능 정의 : 인터페이스를 실제 구현하기 위해 인터페이스 기능에 대한 구현 방법을 기능별로 기술하는 과정
+    <ul>
+      <li>인터페이스 기능 정의 순서 : 컴포넌트 명세서 확인 → 인터페이스 명세서 확인 → 인터페이스 기능 구현 정의서 → 인터페이스 기능 구현 정형화</li>
+    </ul>
+  </li>
+  <li>모듈 세부 설계서 : 컴포넌트 설계서, 인터페이스 명세서</li>
+  <li><b>인터페이스 구현 : 송·수신 시스템 간의 데이터 교환 및 처리를 실현하는 작업</b>
+    <ul>
+      <li><b><code>AJAX</code> : <code>JS</code> 기반의 비동기 통신 기술 (클라이언트·서버 간 <code>XML</code>으로 통신)</b></li>
+      <li><b><code>JSON</code> : <code>JS</code> 기반의 데이터 통신을 이용한 인터페이스 구현</b></li>
+    </ul>
+  </li>
+  <li>인터페이스 구현 검증 : 구현된 인터페이스의 동작 상태 검증·감시 (<code>Watir</code>, <code>FitNesse</code>, <code>NTAF Naver</code>, <code>Selenum</code>, <code>Appium</code>)
+    <ul>
+      <li><b><code>xUnit</code> : <code>Assertion</code>, <code>Fixture</code>, <code>Test Runner</code>를 지원하는 단위 테스트 프레임워크</b></li>
+      <li><b><code>STAF</code> : 서비스 호출, 컴포넌트 재사용을 데몬 기반 테스트 분산 환경에서 테스트 수행</b></li>
+    </ul>
+  </li>
+  <li>인터페이스 구현 감시 도구 : <code>APM</code>을 통한 동작 상태 감시 (트랜잭션·변수값·호출 함수·로그·시스템 부하 조회·분석)</li>
+</ul>
+
+<h3 id="인터페이스-보안">인터페이스 보안</h3>
+
+<ul>
+  <li>인터페이스 보안 : 모듈 컴포넌트 간 데이터 교환 시 데이터 변조·탈취 및 인터페이스 모듈 자체의 보안 취약점
+    <ul>
+      <li><b>데이터 통신 시 데이터 탈취 위협 : 스니핑 (네트워크 패킷을 엿봐 계정·비밀번호 탈취), 스푸핑 (사용자가 크래커의 사이트로 통신해 비밀번호 탈취)</b></li>
+    </ul>
+  </li>
+  <li>네트워크 보안 적용 : 송·수신 중간자의 데이터 탈취·위변조를 방지하기 위한 네트워크 트래픽 암호화
+    <ul>
+      <li>네트워크 구간 보안 기능 적용 시 고려사항 : 상대방 인증 적용, 데이터 기밀성의 보장, <code>End-to-End</code> 보안의 적용, 인증 키를 통한 통신, 연결 단위 외에 메시지 단위 인증 및 암호화</li>
+      <li><code>SSL</code> : 웹 브라우저·서버 간 통신에서 데이터 암호화 및 인증</li>
+      <li><code>S-HTTP</code> : 웹 서버·클라이언트 간 통신에서 전송 데이터 암호화</li>
+    </ul>
+  </li>
+  <li>데이터베이스 보안 적용 : 데이터베이스의 기밀성 유지를 위해 중요하고 민감한 데이터는 암호화
+    <ul>
+      <li>데이터베이스 암호화 기법 : <code>API</code>, <code>Filter (Plug-in)</code>, <code>Hybrid</code></li>
+      <li>데이터베이스 암호화 알고리즘 : 대칭키 알고리즘 (<code>ARIA 256</code>), 해시 알고리즘 (<code>SHA-512</code>), 비대칭키 알고리즘 (<code>RSA</code>)</li>
+    </ul>
+  </li>
+  <li>인터페이스 연계 테스트 : 송·수신 시스템 간 구성 요소가 정상적으로 동작하는지 테스트
+    <ul>
+      <li>인터페이스 연계 태스트 순서 : 테스트 케이스 작성 → 테스트 환경 구축 → 테스트 수행 → 테스트 수행 결과 검증</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="제품-소프트웨어-패키징">제품 소프트웨어 패키징</h2>
+
+<h3 id="제품-소프트웨어-패키징-1">제품 소프트웨어 패키징</h3>
+
+<ul>
+  <li><b>제품 소프트웨어 패키징 : 개발 완료된 소프트웨어를 고객에 인도하기 위해 패키징하고, 배포 설치 파일을 만드는 작업</b>
+    <ul>
+      <li>제품 소프트웨어 패키징 프로세스 : 기능 식별 → 모듈화 → 빌드 → 사용자 환경 분석 → 적용 시험 → 변경 개선</li>
+    </ul>
+  </li>
+  <li>제품 소프트웨어 패키징 도구 : 소프트웨어 배포 목적으로 패키징 시에 지식재산권 보호·관리 기능을 제공하는 도구
+    <ul>
+      <li><b>제품 소프트웨어 패키징 도구 고려 사항 : 내부의 컨텐츠 암호화·보안, 암호화 알고리즘 적합한지, 이기종 컨텐츠 및 단말기 간 <code>DRM</code> 연동 고려, 사용자 편의성을 위한 복잡성·비효율성 문제 고려</b></li>
+      <li><code>REL</code> : <code>XML</code> 기반 디지털 컨텐츠의 권한 관리를 위한 언어</li>
+      <li><code>ODRL</code> : <code>XML</code> 기반 디지털 컨텐츠의 저작권 관리 위한 권한 표현 언어</li>
+      <li><code>SSO</code> : 사용자가 하나의 로그인으로 여러 시스템에 접근할 수 있는 인증 방식</li>
+      <li>디지털 인증서 : 디지털 컨텐츠나 서비스의 보안을 강화하기 위한 전자 문서</li>
+    </ul>
+  </li>
+  <li>어플리케이션 모니터링 도구 (<code>APM</code>) : 응용 소프트웨어 성능 및 서비스 이용성을 감시하고 관리하는 도구
+    <ul>
+      <li><code>APM</code> 제공 기능 : 어플리케이션 모니터링, 사용자 모니터링, 성능 최적화, 장애 대응</li>
+    </ul>
+  </li>
+  <li>협업 도구 : 소프트웨어 개발 과정에서 이해관계자 간 이견 조율을 수행하기 위한 도구
+    <ul>
+      <li>협업 도구 종류 : 버전 관리 시스템, 이슈 트래커, 채팅 도구, 코드 리뷰 도구, <code>CI·CD</code> 도구</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="제품-소프트웨어-저작권">제품 소프트웨어 저작권</h3>
+
+<ul>
+  <li><b><code>DRM</code> : 디지털 컨텐츠의 유통 과정에서 컨텐츠를 안전한 관리·보호를 위해 허가된 사용자만 접근 제한</b>
+    <ul>
+      <li><code>DRM</code> 기술적 요구사항 : 지속적 보호, 이용 편리성, 유연성, 통합 용이성</li>
+      <li><b><code>DRM</code> 기술 요소</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/ea806705-3295-4cf9-b929-44b93563fb58" width="80%" /></li>
+      <li><b><code>DRM</code> 유통 과정</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c363604b-b7e3-4113-97c9-66c239d10d27" width="80%" /></li>
+      <li><b><code>DRM</code> 유통 구성</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/81ec6d7b-97b2-4e67-9496-e9e7290456c6" width="80%" /></li>
+      <li><code>DRM</code> 정책 : <code>Render Permission</code>, <code>Transport Permission</code>, <code>Derivative Permission</code></li>
+      <li><code>DRM</code> 사용 조건 : <code>Period</code>, <code>Count</code>, <code>Domain</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="제품-소프트웨어-메뉴얼-작성">제품 소프트웨어 메뉴얼 작성</h3>
+
+<ul>
+  <li>소프트웨어 메뉴얼 : 제품 소프트웨어 개발 단계부터 적용된 기준, 패키징 이후 설치 및 사용자 측면의 내용을 기록
+    <ul>
+      <li><b>소프트웨어 설치 메뉴얼 : 소프트웨어 실사용자가 제품을 최초 설치 시 참조하는 메뉴얼</b>
+        <ul>
+          <li><b>소프트웨어 설치 메뉴얼 기본 사항 : 개요, 관련 파일, 아이콘, 설치 환경 체크 항목</b></li>
+        </ul>
+      </li>
+      <li>소프트웨어 사용자 메뉴얼 : 소프트웨어 설치와 사용에 필요한 제반 절차·환경을 포함하는 메뉴얼
+        <ul>
+          <li><b>사용자 메뉴얼 작성 순서 : 작성 지침 정의 → 사용 설명서 구성 요소 정의 → 구성 요소별 내용 작성 → 사용자 메뉴얼 검토 → 메뉴얼 배포</b></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>릴리즈 노트 : 어플리케이션 최종 사용자인 고객에 제공하는 배포 정보 문서
+    <ul>
+      <li><b>릴리즈 노트 항목 : 헤더, 개요, 목적, 이슈 요약, 재현 항목, 수정·개선 내용, 최종 사용자 영향도, 노트, 면책 조항, 연락 정보</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="제품-소프트웨어-품질-관리">제품 소프트웨어 품질 관리</h3>
+
+<ul>
+  <li>소프트웨어 품질 관리 : 소프트웨어 개발 과정에서 발생할 수 있는 다양한 문제점들을 사전에 파악해 품질 향상
+    <ul>
+      <li>소프트웨어 품질 국제 표준 : <code><b>ISO/IEC 9126</b></code>, <code><b>ISO/IEC 12119</b></code>, <code><b>ISO/IEC 25000</b></code>, <code><b>ISO/IEC 15504 (SPICE)</b></code></li>
+      <li><b>소프트웨어 품질 목표 : <code>Software Quality and Goals</code></b>
+        <ul>
+          <li><b>운영 측면 : 정확성, 신뢰성, 사용 용이성, 효율성, 무결성</b></li>
+          <li><b>변경 수용 특성 : 이식성, 상호운용성, 재사용성, 유지보수성, 유연성, 시험 역량</b></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="어플리케이션-테스트">어플리케이션 테스트</h2>
+
+<h3 id="테스트-관리">테스트 관리</h3>
+
+<ul>
+  <li><b>소프트웨어 테스트 : 소프트웨어 개발 단계에서 소프트웨어 결함을 찾아내는 활동</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/cab6acf2-9601-452f-9219-f03c397435ce" width="80%" />
+    <ul>
+      <li>소프트웨어 테스트 프로세스 : 계획·제어 → 분석·설계 → 구현·실행 → 평가·보고</li>
+      <li>소프트웨어 테스트 원리 : 결함 존재 증명, <b>완벽한 테스트는 불가능</b>, 개발 초기에 수행되어야 함, <b>특정 모듈에 결함 대부분이 존재</b>, 테스트는 컨텍스트에 의존
+        <ul>
+          <li><b>파레토의 법칙 : 전체 결과의 <code>80%</code>가 전체 원인의 <code>20%</code></b></li>
+          <li><b>살충제 패러독스 : 동일한 테스트 케이스로 테스트하면 어느 시점부터 결함 발견 불가능</b></li>
+          <li>오류-부재의 궤변 : 요구사항을 만족하지 못하는 오류를 발견해 제거해도, 해당 어플리케이션 품질이 높다고 할 수 없음</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="테스트-케이스와-테스트-오라클">테스트 케이스와 테스트 오라클</h3>
+
+<ul>
+  <li><b>테스트 케이스 : 구현된 소프트웨어가 사용자 요구사항을 준수하는지 확인하기 위한 테스트 항목에 대한 명세서</b>
+    <ul>
+      <li><b>표준 테스트 케이스 형식 : <code>ID</code>, 시나리오, 단계, 데이터, 예상 결과, 실제 결과, 통과 실패</b></li>
+      <li><b>테스트 케이스 자동 생성 : 자료 흐름도 → 테스트 경로 관리·입력 도메인 분석 → 테스트 데이터 산출·랜덤 테스트 → 무작위 값 입력·신뢰성 검사</b></li>
+      <li>테스트 케이스 구성 요소 (<code>ISO/IEC/IEEE 29119-3</code>)<br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1d53b65b-aeef-4253-8748-60accb3d844a" width="80%" /></li>
+    </ul>
+  </li>
+  <li><b>테스트 오라클 : 테스트 결과가 참인지 거짓인지 판단하기 위해 사전에 정의된 <code>True</code>를 입력해 비교</b>
+    <ul>
+      <li>테스트 오라클 종류 : 참 오라클, 일관성 검사 오라클, 샘플링 오라클, 휴리스틱 오라클</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="v-모델과-테스트-레벨"><code class="language-plaintext highlighter-rouge">V</code>-모델과 테스트 레벨</h3>
+
+<ul>
+  <li><b>시각에 따른 테스트 : 검증 (<code>Verification</code>)<code>vs</code>확인 (<code>Validation</code>)</b></li>
+  <li><code>Test Bases</code> 테스트 : 소프트웨 내부 구조에 따른 테스트 케이스 작성 및 확인
+    <ul>
+      <li><code>Test Bases</code> 종류 : 구문 기반, 결정 기반, 조건 기반, 데이트 흐름 기반, 명세 기반, 경험 기반</li>
+    </ul>
+  </li>
+  <li>동적 테스트 : 어플리케이션을 직접 실행 (<code>vs</code>정적 테스트)<br />→ <b>블랙박스 테스팅 (명세 기반), 화이트박스 테스팅 (구조 기반)</b></li>
+  <li>알파 테스트 (개발자 관점에서 사용자가 테스트)<code>vs</code>베타 테스트 (사용자 관점에서 사용자가 테스트)</li>
+  <li>테스트 분류 : 회복 테스트, 안전 테스트, 성능 테스트, 구조 테스트, <b>회귀 테스트</b>, 병행 테스트</li>
+  <li>성능 테스트 유형 : 부하 테스트, 강도 테스트, 스파이크 테스트, 내구성 테스트</li>
+  <li><code class="language-plaintext highlighter-rouge">V</code>-모델 : 어플리케이션 개발 단계에 따라 어플리케이션르 총체적을 관리하기 위한 테스트 활동의 묶음<br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/0d419760-7be8-40fc-b4df-d40adc5a5fa8" width="80%" />
+    <ul>
+      <li><b>단위 테스트 : 개발자가 원시 코드를 대상으로 각 단위를 다른 부분과 연계되는 부분을 고려치 않고 테스트</b></li>
+      <li>통합 테스트 : 단위 테스트를 통과한 개발 소프트웨어·하드웨어 컴포넌트 간 인터페이스 및 연동 기능을 테스트</li>
+      <li>시스템 테스트 : 단위·통합 테스트 이후 실제 환경과 유사한 환경에서 시스템 성능과 관련된 요구사항을 테스트</li>
+      <li><b>인수 테스트 : 소프트웨어 제품에 대한 요구사항을 제대로 이행되었는지 확인</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="테스트-시나리오와-테스트-기법">테스트 시나리오와 테스트 기법</h3>
+
+<ul>
+  <li>테스트 시나리오 : 테스트를 위한 테스트 케이스의 집합 (테스트 케이스의 동작 순서 기술)</li>
+  <li>테스트 환경 구축 : 실제 운영 시스템에 정상적으로 작동하는지 테스트하기 위한 실제 운영 환경과 동일한 시설 구축</li>
+  <li><b>화이트박스 테스트 : 모듈의 원시 코드를 오픈한 상태에서 코드의 모든 논리적 경로 테스트</b>
+    <ul>
+      <li><b>화이트박스 테스트 종류 : 기초 경로 검사, 제어 구조 검사 (조건 검사, 루프 검사, 데이터 흐름 검사)</b></li>
+    </ul>
+  </li>
+  <li><b>블랙박스 테스트 : 소프트웨어가 수행할 특정 기능을 알기 위해 각 기능이 정상 작동되는지 입증 (기능 테스트)</b>
+    <ul>
+      <li><b>블랙박스 테스트 종류 : 동치 분할 검사, 원인-효과 그래프 검사, 오류 예측 검사, 비교 검사, 경계값 분석</b>
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/f06ef31a-a382-4d07-bee6-cf9db10df171" width="70%" /></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="테스트-커버리지">테스트 커버리지</h3>
+
+<ul>
+  <li><b>테스트 커버리지 : 주어진 테스트 케이스에 의해 수해오디는 소프트웨어 테스트 범위를 측정하는 테스트 품질 측정 기준</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/042d81b0-8871-4949-af3c-c18e59e0fe13" width="50%" /></li>
+</ul>
+
+<h3 id="통합-테스트">통합 테스트</h3>
+
+<ul>
+  <li><b>단위 테스트 : 하나의 모듈을 기준으로 독립적으로 진행되는 가장 작은 단위의 테스트</b>
+    <ul>
+      <li><b>단위 테스트 지원 도구 (<code>xUnit</code>) : <code>JUnit</code>, <code>Mocha</code>, <code>Mockito</code>, <code>Karma</code>, <code>Selenium</code><b></b></b></li>
+    </ul>
+  </li>
+  <li>통합 테스트 : 각 모듈을 결합해 시스템을 완성할 때, 모듈 간 인터페이스나 통합 컴포넌트 간 오류 탐색<br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5463b8f8-85ba-4a02-9e24-ece7cdd50502" width="80%" />
+    <ul>
+      <li>비 점진적 통합 방식 (빅뱅 통합) : 모든 모듈이 결합된 프로그램 전체 대상으로 테스트</li>
+      <li>점진적 통합 방식 (상향식·하향식) : 단계적으로 통합하면서 테스트</li>
+    </ul>
+  </li>
+  <li><b>하향식 통합 테스트 : 상위 컴포넌트 → 하위 컴포넌트</b>
+    <ul>
+      <li>시스템 테스트 기능, 개발 일정 예측 가능, 통합 오류 발견 어려움, 테스트 스텁 사용 가능, 협력 필요</li>
+    </ul>
+  </li>
+  <li><b>상향식 통합 테스트 : 하위 컴포넌트 → 상위 컴포넌트</b>
+    <ul>
+      <li>하위 모듈 결함 전파 방지, 드라이버 통한 테스트 가능, 개바 속도 빠름, 조기 결함 발견 가능</li>
+    </ul>
+  </li>
+  <li>테스트 자동화 도구 : 어플리케이션 개발 중에 반복되는 테스트 과정을 자동화하는 도구
+    <ul>
+      <li><b>테스트 자동화 도구 유형 : 정적 분석 도구, 테스트 실행 도구, 성능 테스트 도구, 테스트 통제 도구</b>
+        <ul>
+          <li>테스트 하네스 도구 : 소프트웨어 컴포넌트 테스트, 프로그램 입력, 결과 비교, 컴포넌트 기능 대행 목적
+            <ul>
+              <li><b>테스트 드라이버 : 상향식 테스트에서 테스트 대상을 제어·동작하기 위한 도구</b></li>
+              <li><b>테스트 스탑 : 하향식 테스트에서 시스템 컴포넌트가 개발되지 않은 상황의 가상 더미 컴포넌트</b></li>
+              <li>테스트 슈트 : 일정 순서에 의해 수행될 계별 테스트 집합 및 패키지</li>
+              <li>테스트 케이스 : 요구사항에 맞게 개발되었는지 확인할 테스트 입력 및 예상 결과</li>
+              <li>테스트 스크립트 : 테스트 케이스르 수행해 결과를 보고할 목적으로 작성된 명령어·이벤트 중심 파일</li>
+              <li>목 오브젝트 : 사용자 행위를 미리 조건부로 입력해 그 상황에 맞는 행위를 수행하는 객체</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="어플리케이션-성능-개선">어플리케이션 성능 개선</h2>
+
+<h3 id="결함-관리">결함 관리</h3>
+
+<ul>
+  <li>결함 : 소프트웨어의 에러, 결함, 결점, 버그, 실패
+    <ul>
+      <li>결함 심각도별 분류 : 치명적, 주요, 보통, 경미한 단순</li>
+      <li>결함 우선순위 : 결정적, 높음, 보통, 낮거나 즉시 해결, 주의 요망, 대기, 개선 권고</li>
+      <li>결함 위치별 분류 : 시스템 결함, 기능 결함, <code class="language-plaintext highlighter-rouge">GUI</code> 결함, 문서 결함</li>
+      <li>결함 관리 프로세스 : 결합 관리 계획 → 결함 기록 → 결함 검토 → 결함 수정 → 결함 재확인 → 결함 상태 추적 → 보고서 작성</li>
+    </ul>
+  </li>
+  <li>에러 : 소프트웨어 개발 또는 유지보수 수행 중에 발생한 부정확한 결과</li>
+  <li><b>오류 : 소프트웨어 구현이나 설계상의 오류로 인해 시스템의 고장을 일으킴</b></li>
+  <li>고장 : 정상적인 프로그램과 비정상적인 프로그램의 실행 결과 차이</li>
+  <li>결함 : 버그, 에러, 오류, 실패를 모두 포괄</li>
+</ul>
+
+<h3 id="어플리케이션-성능-개선-1">어플리케이션 성능 개선</h3>
+
+<ul>
+  <li>성능 처리 지표 : 처리량, 응답 시간, 경과 시간, 갸용성, 확장성, 안정성</li>
+  <li>성능 분석 도구 : 성능·부하·스트레스 점검 도구, 머니터링 도구</li>
+  <li><b>위험 감시 : 위험 요수 징후들에 대해 계속해서 인지하는 것</b>
+    <ul>
+      <li>위험 감시 절차 : 위험 식별 → 위험 평가 → 위험 대응 계획 수립 → 위험 모니터링</li>
+    </ul>
+  </li>
+  <li>어플리케이션 성능 저하 원인 : <code>DB Lock</code>, 불필요한 <code>DB Fetch</code>, 연결 누수, 부적절한 <code>Connection Pool Size</code></li>
+  <li>알고리즘 : 주어진 과제를 해결하는 방법 및 절차 (자연여, 의사코드, 순서도, 프로그래밍 언어로 표현)
+    <ul>
+      <li>분할 정복법 : 제시된 문제를 분할이 불가능할 때까지 나누고, 각 과제를 해결하면서 다시 결합 (<code>Top-Down</code>)
+        <ul>
+          <li>분할 정복법 예시 : 퀵 정렬, 병합 정렬</li>
+        </ul>
+      </li>
+      <li>동적 계획법 : 주어진 문제를 해결하기 위해 부분 문제에 대한 답을 계속적으로 활용 (<code>Bottom-Up</code>)
+        <ul>
+          <li>동적 계획법 예시 : 플로이드 알고리즘, 피보니치 수열 알고리즘 → 최적 부분 구조, 중복 부분 문제에 적합</li>
+        </ul>
+      </li>
+      <li>탐욕법 : 각 부분에 대한 최적해를 구해 이를 결합하여, 국소적인 관점에서 최적의 해결 방법을 구함
+        <ul>
+          <li>탐욕법 예시 : 크루스칼 알고리즘, 다익스트라 알고리즘</li>
+        </ul>
+      </li>
+      <li>퇴각 검색법 : 어떤 문제의 최적해를 구하기 위해 모든 가능성을 탐색
+        <ul>
+          <li>퇴각 검색법 예시 : <code>N-Queen</code></li>
+        </ul>
+      </li>
+      <li>분기 한정법 : 정해진 범위를 벗어나는 값들은 가지치기하면서 결과값을 추적
+        <ul>
+          <li>분기 한정법 예시 : 최적 우선 탐색 알고리즘, <code>A*</code> 알고리즘</li>
+        </ul>
+      </li>
+      <li>근사 해법 : 복잡도가 매우 높은 문제에 대해 가장 근사치의 값을 구하는 결정성 구현
+        <ul>
+          <li>근사 해법 예시 : 근사 알고리즘</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>알고리즘 시간 복잡도 : 알고리즘을 수행하기 위해 프로세스가 수행하는 연산 횟수를 수치화한 것
+    <ul>
+      <li><b>빅오 표기법 : 알고리즘 실행 시간이 최악일 때를 표기하는 방법</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/3b1bdb74-3483-4178-b2c8-c7f5cb09a42b" width="80%" /></li>
+    </ul>
+  </li>
+  <li><b>순환 복잡도 : 프로그램의 이해 난이도는 제어 흐름 그래프의 복잡도에 따라 결정 → 복잡도를 싸이클로메틱 개수로 산정</b>
+    <ul>
+      <li>최대 10이 넘지 않도록 하며, 넘으면 이를 분해하도록 함</li>
+      <li>복잡도 = 화살표 수 - 노드 수 + 2 = 영역 수 + 1 = 의사 결정 수 + 조건 수 + 1<br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/7c67d819-c188-4cee-9528-332bdfc2c6ed" width="90%" /></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="소스-코드-최적화">소스 코드 최적화</h3>
+
+<ul>
+  <li>소스 코드 최적화 : 읽기 쉽고 변경·추가가 쉬운 클린 코드를 위해 기본적으로 지킬 윈칙 및 기준 정의
+    <ul>
+      <li>스파게티 코드 : 처리 로직의 제어가 체계화되어 있지 않고 서로 얽혀있는 코드</li>
+      <li>외계인 코드 : 오래되거나 참고 문서·개발자가 없어 유지보수가 어려운 프로그램</li>
+      <li><b>클린 코드 : 깔끔하게 잘 정리된 코드 (중복 코드 제거, 높은 가독성·프로그래밍 속도·버그 탐색 속도)</b>
+        <ul>
+          <li><b>클린 코드 작성 원칙 : 가독성, 단순성, 의존성 배제, 중복성 최소화, 추상화</b></li>
+          <li><b>클린 코드 유형 : 좋은 배치, 작은 함수, 분석 가능한 제어 흐름, 간결한 주석, 의미 있는 이름</b></li>
+        </ul>
+      </li>
+      <li><b>코드 간결성 유지 지침 : 공백으로 실행문·주석 구분, 복잡한 논리식·산술식 들여쓰기, 빈 줄로 선언부·구현부 구별, 한줄에 적은 문장</b></li>
+      <li>소스 코드 최적화 유형 : 클래스 분할 배치, 좋은 이름 사용, 코딩 형식 준수, 느슨한 결합, 적절한 주석</li>
+    </ul>
+  </li>
+  <li><b>소스 코드 품질 분석 도구 : 코딩 스타일, 코드 표준, 코드 복잡도, 메모리 누수, 스레드 결함을 발견하기 위해 사용</b>
+    <ul>
+      <li><b>정적 분석 도구 : 소스 코드 검증, 코드 리뷰, 정적 리버스 엔지니어링</b>
+        <ul>
+          <li><b>정적 분석 도구 종류 : <code>PMD</code>, <code>CPPCheck</code>, <code>SonarQube</code>, <code>CheckStyle</code>, <code>CCM</code>, <code>Coberfura</code></b></li>
+        </ul>
+      </li>
+      <li>동적 분석 도구 : 디버깅, 스트레스 테스트, 모의 해킹, 동적 리버스 엔지니어링<br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/17507c69-6c8a-4049-b5ee-f7d5a064f820" width="80%" /></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="데이터-입출력-구현">데이터 입출력 구현</h2>
+
+<h3 id="자료-구조">자료 구조</h3>
+
+<ul>
+  <li>자료 구조의 분류 : 선형 구조, 비선형 구조, 파일 구조로 대분류<br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/27fa958b-8c44-4516-ac0d-cfe496f748fa" width="80%" />
+    <ul>
+      <li>자료구조의 활용 : 정렬, 검색, <b>인덱스</b>, 레코드</li>
+    </ul>
+  </li>
+  <li>선형 자료 구조 : 데이터를 일렬로 늘어놓은 자료 구조, 데이터를 순서대로 저장하고 순차적으로 처리
+    <ul>
+      <li><b>스택 : 후입선출 (<code>LIFO</code>), 큐 : 선입선출 (<code>FIFO</code>), 데크 : 리스트 양끝에 포인터 2개 사용</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1d7edc16-6e1e-4887-a157-e7d8b9fb4172" width="80%" /></li>
+    </ul>
+  </li>
+  <li>비선형 구조 : 데이터를 한줄로 연결하지 않는 구조, 자료 간 선후관계가 <code>1:N</code>, <code>N:1</code>으로 표현
+    <ul>
+      <li><b>트리 : 노드와 브랜치로 사이클을 이루지 않는 그래프</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5c562017-31a9-41c5-b4d8-d120f5d5022d" width="70%" /></li>
+      <li>이진 트리 : 차수가 2 이하인 노드들로 구성된 트리 (이진 트리 레벨 <code>K</code>의 최대 노드 수는 <code>2^K-1</code>)<br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c4de5709-b5a5-49f0-815a-0cc54e547092" width="80%" />
+        <ul>
+          <li><b>이진 트리의 운행법 : 전위 운행 (<code>Root → Left → Right</code>), 중위 운행 (<code>Left → Root → Right</code>), 후위 운행 (<code>Left → Right → Root</code>)</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/7d5170ec-dcac-45af-970f-40b809c469b1" width="80%" /></li>
+          <li><b>이진 트리의 수식 표기법 : 전위 표기법 (연산자 → 피연산자 → 피연산자), 중위 표기법 (피연산자 → 연산자 → 피연산자), 후위 표기법 (피연산자 → 피연산자 → 연산자)</b><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/eb9e452d-3156-4e9e-baeb-b310b52eaf71" width="80%" /></li>
+        </ul>
+      </li>
+      <li><b>그래프 : 정점과 간선의 집합으로 이루어진 자료 구조 (인접 행렬로 표현)</b>
+        <ul>
+          <li>그래프 종류 : 방향 그래프, 무방향 그래프, 완전 그래프, 부 그래프</li>
+          <li><code>N</code>개의 노드로 구성된 무방향 그래프의 최대 간선 수 : <code>N(N-1)/2</code></li>
+          <li><b>제어 흐름 그래프의 순환 복잡도 : <code>V(G) = (화살표 수) - (노드 수) + 2</code></b></li>
+        </ul>
+      </li>
+      <li><b>인접 행렬 : 방향 그래프에서 정점 <code>Vi</code>과 <code>Vj</code>의 관계를 나타내는 행렬의 원소를 <code>Aij</code>라 할 때,<br />정점 <code>Vi</code>에서 <code>Vj</code>로 향하는 방향 간선이 있으면 행렬의 <code>Aij = 1</code>,<br />방향 간선이 없으면 행렬의 <code>Aij = 0</code>,<br />정점 <code>Vi</code>와 <code>Vj</code>가 서로 인접하면 <code>Aij = 1</code><br />정점 <code>Vi</code>와 <code>Vj</code>가 서로 인접하지 않으면 <code>Aij = 0</code></b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="정렬">정렬</h3>
+
+<ul>
+  <li>정렬 : 자료를 특정 기준에 따라 다시 나열 하는 것<br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/dd0af678-cbe9-467b-8075-70adbdf6ca1c" width="80%" />
+    <ul>
+      <li><b>삽입 정렬 : 정렬된 파일에 새로운 하나의 레코드를 순서에 따라 삽입해 정렬</b></li>
+      <li><b>버블 정렬 : 인접한 데이터와 비교하면서 그 크기에 따라 데이터 위치를 바꾸어 정렬</b></li>
+      <li><b>선택 정렬 :<code>N</code>개의 레코드 중 최소값(최대값)을 찾아 배열의 <code>N</code>번째로 놓는 것을 반복해 정렬</b></li>
+      <li><b>병합 정렬 : 배열을 최대로 나눈 뒤, 나뉜 각 키 한 쌍을 순서를 정하며 병합해 정렬</b></li>
+      <li><b>퀵 정렬 : 피벗을 기분으로 작은 값은 왼쪽에, 큰 값은 오른쪽에 모이도록 서로 교환해 정렬</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="검색-해싱">검색, 해싱</h3>
+
+<ul>
+  <li>검색 : 기억 공간 내에서 주어진 조건 을만족하는 자료 탐색
+    <ul>
+      <li>이분 검색 : 정렬된 배열의 가운데 인덱스 값을 선택 → 크면 작은 값 쪽으로, 작으면 큰 값 쪽으로 이동 반복</li>
+      <li><b>선형 검색 : 주어진 자료에서 원소를 첫번째 레코드부터 순차 비교해 탐색</b></li>
+      <li>이진 트리 검색 : 전체 레코드를 이진 트리로 구성해 검색</li>
+      <li>블록 검색 : 전체 레코드를 블록으로 분리해 순서대로 비교해 검색</li>
+    </ul>
+  </li>
+  <li>해싱 함수 : 레코드 키에 대한 해시 테이블 내의 홈 주소를 계산해 주어진 레코드에 접근할 때 활용되는 함수
+    <ul>
+      <li><b>해싱 함수 종류 : 제산 방법, 중간 제곱 방법, 중첩 방법, 기수 변환 방법</b></li>
+      <li>해싱 오버플로우 해결 : 선형 개방 주소법, 폐쇄 주소 방법, 재해싱</li>
+      <li>해싱 관련 용어 : 동의어, 슬롯, 충돌</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="인덱스-구조와-파일-편성">인덱스 구조와 파일 편성</h3>
+
+<ul>
+  <li>인덱스 : <code>DB</code> 테이블 내의 원하는 레코드를 빠르게 탐색하는 데이터 구조
+    <ul>
+      <li>인덱스 구성 방법 : <code>B</code> 트리, <code>B+</code> 트리, 트라이 색인</li>
+      <li>정적 인덱싱 (색인 순차 파일 방식)<code>vs</code>동적 인덱싱 (가상 기억 접근 방식)</li>
+    </ul>
+  </li>
+  <li><b>파일 편성 기법 : 순차 파일, 색인 순차 파일, <code>VSAM</code> 파일, 직접 파일, 역파일</b></li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Engineer Information Processing" /><summary type="html"><![CDATA[통합 구현]]></summary></entry><entry><title type="html">[Engineer Information Processing] 4. 프로그래밍 언어 활용</title><link href="http://localhost:4000/engineer_information_processing4/" rel="alternate" type="text/html" title="[Engineer Information Processing] 4. 프로그래밍 언어 활용" /><published>2024-02-22T00:00:00+09:00</published><updated>2024-03-04T00:00:00+09:00</updated><id>http://localhost:4000/engineer_information_processing4</id><content type="html" xml:base="http://localhost:4000/engineer_information_processing4/"><![CDATA[<h2 id="c"><code class="language-plaintext highlighter-rouge">C</code></h2>
+
+<h3 id="c-개요"><code class="language-plaintext highlighter-rouge">C</code> 개요</h3>
+
+<ul>
+  <li><b><code>C</code> 기본 자료형 : <code>short</code>, <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>char</code></b></li>
+  <li><b><code>C</code> 변수명 작성 규칙 : 영문 대소문자, 숫자, <code>_</code> 혼용 (첫글자 숫자<code>X</code>, 예약어<code>X</code>)</b></li>
+</ul>
+
+<h3 id="c-라이브러리"><code class="language-plaintext highlighter-rouge">C</code> 라이브러리</h3>
+
+<ul>
+  <li><b>라이브러리 : 필요할 때 찾아 쓸 수 있도록 모듈화되어 모듈, 패키지의 형태로 제공되는 프로그램</b></li>
+  <li><b>헤더 파일 (<code>.h</code>)가 필요한 이유? : 라이브러리를 사용하기 위해</b></li>
+  <li><b>표준 라이브러리 : <code>string.h</code>, <code>stdio.h</code>, <code>stdlib.h</code>, <code>ctype.h</code></b>
+    <ul>
+      <li><b><code>stdlib.h</code> 함수 : <code>malloc</code>, <code>calloc</code>, <code>realloc</code>, <code>free</code>, <code>rand</code>, <code>abs</code></b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="c-연산자"><code class="language-plaintext highlighter-rouge">C</code> 연산자</h3>
+
+<ul>
+  <li><b><code>C</code> 연산자 종류·우선순위 : 단항 연산자 → 산술 연산자 → 시프트 연산자 → 관계 연산자 → 비트 연산자 → 논리 연산자 → 조건 연산자 → 대입 연산자 → 콤마 연산자<b>
+</b></b>    <ul>
+      <li><b>논리 연산자의 우선순위 : <code>NOT</code>→<code>AND</code>→<code>OR</code></b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="c-포인터"><code class="language-plaintext highlighter-rouge">C</code> 포인터</h3>
+
+<ul>
+  <li><b><code>C</code> 포인터 : 객체에 대한 참조를 하는 다른 객체를 가리키는 자료형</b>
+    <ul>
+      <li><b>주소 연산자 <code>&amp;</code> : 모든 변수에 대한 주소값을 구하는 연산자</b></li>
+      <li><b>간접 연산자 <code>*</code> : 포인터 변수의 자료를 구하는 연산자</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="c-배열--c-구조체"><code class="language-plaintext highlighter-rouge">C</code> 배열 / <code class="language-plaintext highlighter-rouge">C</code> 구조체</h3>
+
+<ul>
+  <li><b><code>C</code> 배열 : 배열, 구조체, 공용체</b>
+    <ul>
+      <li><b>구조체 : 서로 연관된 데이터를 모아놓은 것</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="java"><code class="language-plaintext highlighter-rouge">Java</code></h2>
+
+<h3 id="java-개요"><code class="language-plaintext highlighter-rouge">Java</code> 개요</h3>
+
+<ul>
+  <li><code>Java</code> : 객체지향 프로그래밍 언어
+    <ul>
+      <li><b>객체지향 구성 요소 : 클래스, 객체, 속성, 메소드, 메시지</b></li>
+      <li><b>객체지향 특징 : 캡슐화, 정보은닉, 추상화, 상속성, 다형성</b></li>
+    </ul>
+  </li>
+  <li><b>가비지 컬렉션 : <code>JVM</code>에서 불필요한 메모리 정리</b></li>
+  <li><b><code>Java</code> 기본 자료형 : <code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>char</code>, <code>boolean</code></b></li>
+  <li><code>Java</code> 출력 메소드 : <code>System.out.print()</code> (줄바꿈 <code>X</code>), <code>System.out.printIn()</code> (줄바꿈 <code>O</code>), <code>System.out.printf()</code> (변환 문자 사용해 출력)</li>
+  <li><b><code>Java</code> 변수명 작성 규칙 : 영문 대소문자, 숫자, <code>_</code>, <code>$</code> 혼용 (첫글자 숫자<code>X</code>, 예약어<code>X</code>)</b></li>
+  <li><b><code>Java</code> 연산자 종류·우선순위 : 단항 연산자 → 산술 연산자 → 비트 이동 연산자 → 관계 연산자 → 비트 논리 연산자 → 논리 연산자 → 조건 연산자 → 대입 연산자<b></b></b></li>
+</ul>
+
+<h3 id="java-자료형"><code class="language-plaintext highlighter-rouge">Java</code> 자료형</h3>
+
+<ul>
+  <li><b><code>Java</code> 기본 자료형 : 논리형, 문자형, 정수형, 실수형</b></li>
+  <li><b><code>Java</code> 참조 자료형 : 문자열, 배열, 클래스, 인터페이스, 열거형</b></li>
+</ul>
+
+<h3 id="java-클래스"><code class="language-plaintext highlighter-rouge">Java</code> 클래스</h3>
+
+<ul>
+  <li><b>클래스 : 객체를 정의하기 위한 틀</b>
+    <ul>
+      <li>클래스 선언 후 <code>new</code>로 객체 생성, 래퍼런스 변수를 선언해 객체 활용</li>
+      <li>클래스 이름은 하나 이상의 문자로 (반드시 대문자로 시작해야 함)</li>
+      <li>소스 파일에는 하나의 <code>public</code> 클래스만 가능</li>
+      <li><code>main</code>은 실행의 시작을 위해 반드시 필요</li>
+    </ul>
+  </li>
+  <li>추상 클래스 : 실행 코드가 없는 추상 메소드를 하나 이상 포함하는 클래스
+    <ul>
+      <li>추상 메소드 : 자식 클래스에서 재정의해 사용하는 메소드</li>
+      <li>클래스의 형변환 : 재정의한 메소들르 부모 클래스의 객체 변수를 통해 사용하려면 부모 클래스의 객체 변수를 선언할 때 자식 클래스의 생성자를 이용해야 함 → 클래스의 다형성</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="java-상속"><code class="language-plaintext highlighter-rouge">Java</code> 상속</h3>
+
+<ul>
+  <li><b>상속 : 자식 클래스가 부모 클래스의 속성과 메소드를 상속받는 것</b></li>
+  <li><b>메소드 오버라이딩 : 클래스 상속 상황에섯 부모 클래스의 멤버를 자식 클래스에서 상속해 내용을 수정해 사용</b></li>
+</ul>
+
+<h3 id="java-예외-처리"><code class="language-plaintext highlighter-rouge">Java</code> 예외 처리</h3>
+
+<ul>
+  <li><b>예외 처리 : 오동작이나 실행 시간 동안 발생해 결과에 악영향을 미치는 오류</b>
+    <ul>
+      <li><b>예외 처리 특징 : 예외 클래스 계총 구조, <code>Checked &amp; UnChecked</code>예외, <code>try-catch-finally</code>, 다중 <code>catch</code> 블록, <code>throws &amp; throw</code>, <code>CustomException</code></b></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="python"><code class="language-plaintext highlighter-rouge">Python</code></h2>
+
+<h3 id="스크립트-언어와-python">스크립트 언어와 <code class="language-plaintext highlighter-rouge">Python</code></h3>
+
+<ul>
+  <li>스크립트 언어 : 소스 코드를 컴파일 과정 없이 실행할 수 있는 프로그래밍 언어
+    <ul>
+      <li><b>서버 측 스크립트 언어 : <code>ASP</code>, <code>JSP</code>, <code>PHP</code>, <code>Python</code></b></li>
+      <li>클라이언트 측 스크립트 언어 : <code>JS</code></li>
+    </ul>
+  </li>
+  <li><b><code>Python</code> : 플랫폼 독립적, 인터프리터, 객체지향적, 동적 타이핑 대화형 언어</b></li>
+  <li><b><code>Python</code> 변수명 작성 규칙 : 영문 대소문자, 숫자, <code>_</code> 혼용 (첫글자 숫자<code>X</code>, 예약어<code>X</code>)</b></li>
+  <li><b><code>Scrapy</code> : <code>Python</code> 웹 크롤러 프레임워크</b></li>
+</ul>
+
+<h3 id="python-자료형"><code class="language-plaintext highlighter-rouge">Python</code> 자료형</h3>
+
+<ul>
+  <li><b><code>Python</code> 숫자 자료형 : 정수형, 실수형, 복소수형</b></li>
+  <li><b><code>Python</code> 시퀀스 자료형 : 문자열, 리스트, 튜플</b></li>
+  <li><b><code>Python</code> 매핑 자료형 : 딕셔너리</b></li>
+  <li><b><code>Python</code> 집합 자료형 : 집합</b></li>
+  <li><b><code>Python</code> 부울 자료형 : 불리언</b></li>
+  <li><b><code>Python</code> <code>None</code> 자료형 : <code>None</code></b></li>
+</ul>
+
+<h3 id="python-연산"><code class="language-plaintext highlighter-rouge">Python</code> 연산</h3>
+
+<ul>
+  <li><b>인덱싱 : 문자열의 각 문자에 인덱스 할당 (첫번째는 0)</b></li>
+  <li><b>클래스 메소드 : 클래스에 속한 메소드 (<code>@classmethod</code> 데코레이터로 정의)</b></li>
+</ul>
+
+<h3 id="python-함수"><code class="language-plaintext highlighter-rouge">Python</code> 함수</h3>
+
+<ul>
+  <li><b><code>Python</code> 함수 : 재사용 가능한 코드 블록</b>
+    <ul>
+      <li><b><code>range()</code> : 0~주어진 인수 미만의 연속된 정수를 리스트 객체로 반환</b></li>
+      <li><b><code>map()</code> : 주어진 함수를 순회 가능한 객체의 모든 요소에 적용해 새로운 이터레이터 반환</b></li>
+      <li><b><code>split()</code> : 구분자 기준으로 분리해 분리된 각 부분을 원소로 가지는 리스틑 반환</b></li>
+    </ul>
+  </li>
+  <li><b><code>Python</code> 조건문 : <code>if ~ elif ~ else</code></b></li>
+  <li><b>지역 변수 : 함수 내에서 정의된 변수</b></li>
+</ul>
+
+<h2 id="운영체제-개론">운영체제 개론</h2>
+
+<h3 id="운영체제-개요">운영체제 개요</h3>
+
+<ul>
+  <li>운영체제 : 컴퓨터 사용자와 컴퓨터 하드웨어 간의 인터페이스로 동작하는 시스템 소프트웨어
+    <ul>
+      <li>시스템 소프트웨어 : 컴퓨터의 전반적인 운영에 필요한 가장 기본적인 프로그램</li>
+      <li>운영체제 평가 기준 : 처리 능력 향상, 응답 시간 단축, 신뢰도 향상, 사용 기능도 향상</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="운영체제의-운영-방식">운영체제의 운영 방식</h3>
+
+<ul>
+  <li>일괄 처리 시스템 : 사용자 개입 없이 일정량 혹은 일정 시간 동안 데이터를 모아 처리</li>
+  <li>다중 프로그래밍 시스템 : 2개 이상의 프로그램을 주기억장치에 기억시켜 <code>CPU</code>를 번갈아 사용
+    <ul>
+      <li>다중 프로그래밍 시스템 특징 : 멀티태스킹, 가상 메모리, <code>CPU</code> 리소스 사용 효율화</li>
+    </ul>
+  </li>
+  <li>실시간 처리 시스템 : 데이터 발생 즉시 처리하여 결과 산출</li>
+  <li><b>시분할 시스템 :<code>CPU</code> 전체 사용 시간을 작업 시간량으로 나눠 <code>CPU</code>를 시간량 동안만 사용</b>
+    <ul>
+      <li>시분할 시스템 특징 : 다중 사용자 지원, 시분할 방식, 대화식 환경</li>
+    </ul>
+  </li>
+  <li>다중 처리 시스템 : <code>CPU</code>를 두 개 이상 두어 그 업무를 분담해 처리
+    <ul>
+      <li>다중 처리 시스템 특징 : 병렬 처리, 자원 분산, 확장성</li>
+    </ul>
+  </li>
+  <li>분산 처리 시스템 : 여러 대의 컴퓨터로 작업을 나누어 처리</li>
+  <li>가상화 시스템 : 하나의 물리적 시스템에서 여러 개의 가상 시스템을 구동</li>
+  <li>클라우드 컴퓨팅 시스템 : 인터넷을 통해 자원을 공유받고 서비스를 제공</li>
+</ul>
+
+<h3 id="운영체제의-프로그램-구성">운영체제의 프로그램 구성</h3>
+
+<ul>
+  <li>제어 프로그램 : 컴퓨터 시스템의 하드웨어와 소프트웨어를 제어
+    <ul>
+      <li>제어 프로그램 기능 : 프로세스·메모리·입출력·장치·자원·보안 관리</li>
+      <li><b>제어 프로그램 종류 : 감시 프로그램, 작업 제어 프로그램, 데이터 관리 프로그램</b></li>
+    </ul>
+  </li>
+  <li>처리 프로그램 : 사용자의 응용 프로그램이나 그 작업을 실행
+    <ul>
+      <li>처리 프로그램 역할 : 응용 프로그램 실행, 작업 처리, 자원 관리, 결과 제공</li>
+      <li>처리 프로그램 기능 : 파일·메모리·디스크·네트워크 관리, 사용자 인터페이스</li>
+      <li><b>처리 프로그램 종류 : 언어 번역 프로그램, 서비스 프로그램, 문제 프로그램</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="프로세스-관리">프로세스 관리</h3>
+
+<ul>
+  <li>프로세스 : 실행 중인 프로그램
+    <ul>
+      <li>프로세스 제어 블록 (<code>PCB</code>) : 운영체제가 프로세스를 관리하기 위해 프로세스에 대한 중요 정보 저장</li>
+      <li><b>프로세스 상탵 전이 : 프로세스가 다양한 상태를 거치면서 실해오디는 과정 (운영체제의 스케줄러로 관리)</b>
+        <ul>
+          <li>프로세스 상태 전이 절차 : 생성 → 준비 상태 → 실행 상태 (디스패치, 할당 시간 종료) → 대기 상태 (블록, 웨이크 업) → 종료</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><b>스레드 : 프로세스 내 작업 단위 (시스템의 여러 자원을 할당받아 실행하는 프로그램 단위)</b></li>
+  <li>병행 프로세스 : 두 개 이상의 프로세스들이 동시에 실행 상태에 있는 것 → 병행 프롯세스 오류 방지
+    <ul>
+      <li><b>임계 영역 : 어느 시점에서 하나의 프로세스가 자원을 사용하도록 지정된 공유 영역</b></li>
+      <li><b>상호 배제 : 공유 변수에 접근하고 있는 한 프로세스 외엔 모두 공유 변수를 접근하지 못하게 함</b></li>
+      <li><b>세마포어 : 프로세스 간 동기를 유지하고 상호 배제의 원리 보장</b></li>
+      <li><b>모니터 : 모니터의 경계에서 상호배제 시행, 모니터 외부에선 모니터 내부에 직접 액세스 불가능</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="교착-상태">교착 상태</h3>
+
+<ul>
+  <li><b>교착 상태 : 둘 이상의 프로세스들이 서로 다른 프로세스가 차지한 자원을 요구하며 무한정 대기</b>
+    <ul>
+      <li>교착 상태 발생 조건 : 상호 배제, <b>점유 및 대기</b>, 비선점, 환형 대기</li>
+      <li>교착 상태 해결 방법 : 예방, 회피, 발견, 회복</li>
+    </ul>
+  </li>
+  <li>인터럽트 : 어떤 특수 상태 발생 시 현재 실행 중인 프로그램을 일시 중단하고, 그 특수 상태를 처리하는 프로그램</li>
+</ul>
+
+<h3 id="프로세스-스케줄링">프로세스 스케줄링</h3>
+
+<ul>
+  <li>프로세스 스케줄링 : 프로세스 생성 및 실행에 필요한 시스템 자원을 해당 프로세스에 할당
+    <ul>
+      <li>비선점 : 한 프로세스가 <code>CPU</code>를 할당받으면 다른 프로세스가 <code>CPU</code> 사용 완료까지 대기
+        <ul>
+          <li><b><code>FIFO</code> : 준비 상태 큐에 도착한 순서대로 <code>CPU</code> 할당</b></li>
+          <li><b><code>SJF</code> : 준비 상태 큐에 기다리는 프로세스 중 가장 짧은 프로세스에 먼저 <code>CPU</code> 할당</b></li>
+          <li><b><code>HRN</code> : 서비스 시간, 서비스 대기 시간으로 결정된 우선순위에 따라 <code>CPU</code> 할당</b>
+            <ul>
+              <li><code>HRM</code> 우선순위 계산식 = (대기 시간 + 서비스 시간) / 서비스 시간</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>선점 : 한 프로세스가 <code>CPU</code>를 할당받아도 다른 프로세스가 우선순위가 높으면 <code>CPU</code> 점유</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="기억-장치-관리">기억 장치 관리</h3>
+
+<ul>
+  <li>반입 전략 : 보조 기억 장치에 보관된 프로그램이나 데이터를 주기억 장치에 언제 가져올지 결정하는 전략
+    <ul>
+      <li>요구 반입 : 프로세스가 실제 필요한 때만</li>
+      <li>예상 반입 : 프로세스의 실행 특성 및 예측을 기반하여 미리</li>
+    </ul>
+  </li>
+  <li>배치 전략 : 보조 기억 장치에 보관된 프로그램이나 데이터를 주기억 장치의 어디로 가져올지 결정하는 전략
+    <ul>
+      <li><b>최초 적합 : 주기억 장치 내에 적재 가능한 공간에 첫번째 분할 영역에 배치</b></li>
+      <li><b>최적 적합 : 주기억 장치 내에 적재 가능한 공간에 가장 작은 공백이 남는 부분에 배치</b></li>
+      <li><b>최악 적합 : 주기억 장치 내에 적재 가능한 공간에 가장 큰 공백이 남는 부분에 배치</b></li>
+      <li><b>단편화 : 주기억 장치 내에 빈번히 기억 장소가 할당되고 반납되면서 기억 장소들이 조각들로 나뉘는 현상</b>
+        <ul>
+          <li>내부 단편화 : 프로세스가 필요한 크기보다 메모리가 더 커서 메모리 공간 낭비</li>
+          <li>외부 단편화 : 메모리 할당 및 해제가 반복되면서 중간에 남는 메모리를 사용하지 못해 메모리 공간 낭비</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="가상-기억-장치">가상 기억 장치</h3>
+
+<ul>
+  <li><b>가상 기억 장치 할당 방식 : 주기억 장치의 부족한 용량을 해결하기 위해 보조 기억 장치를 주 기억 장치처럼 활용</b>
+    <ul>
+      <li>세그멘테이션 : 가상 장치에 보관된 프로그램을 다양한 크기로 나눠 적재</li>
+      <li><b>페이징 : 가상 기억 장치에 보관된 프로그램과 주기억 장치의 영역을 동일하게 나눠 적재</b></li>
+    </ul>
+  </li>
+  <li><b>페이징 부재 : 참조할 페이지가 주기억 장치에 없는 현상</b>
+    <ul>
+      <li><b>페이징 부재 처리 과정 : 페이지 부재 예외 처리 → 페이지 스와핑 (디스크에서 페이지 가져옴)<br />→ 페이지 테이블 가져옴 → 프로세스 재시작&lt;/br&gt;</b></li>
+    </ul>
+  </li>
+  <li><b>워킹 셋 : 가상 기억 장치 관리에서 프로세스가 일정 시간 동안 자주 참조하는 페이지들의 집합</b></li>
+  <li><b>스래싱 : 한 프로세스가 작업 과정에 수행하는 기억 장치 접근에서 지나친페이지 부재가 발생해,<br />프로세스 수행 시간보다 페이지 이동에 걸리는 시간이 더 커지는 현상&lt;/br&gt;</b></li>
+  <li><b>기억 장치 교체 전략 : <code>OPT</code>, <code>FIFO</code>, <code>LRU</code>, <code>NUR</code>, <code>SCR</code></b></li>
+</ul>
+
+<h3 id="디스크-스케줄링">디스크 스케줄링</h3>
+
+<ul>
+  <li>디스크 스케줄링 : 사용 데이터가 디스크 곳곳에 저장되어 있을 때, 데이터 액세스를 위해 디스크 헤드의 이동 경로 결정
+    <ul>
+      <li><code>FCFS</code> : <code>FIFO</code></li>
+      <li><b><code>SSFT</code> : 탐색 거리가 가까운 순서대로</b></li>
+      <li><code>SCAN</code> : 진행 방향 끝까지, 그리고 반대로</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="정보-관리">정보 관리</h3>
+
+<ul>
+  <li>파일 시스템 : 연관된 데이터의 집합인 파일을 관리하는 시스템
+    <ul>
+      <li><b>파일 디스크립터 (<code>FCB</code>) : 파일 관리에 필요한 정보를 가진 제어 블록</b></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="분산-운영체제">분산 운영체제</h3>
+
+<ul>
+  <li>분산 처리 시스템 : 여러 대의 컴퓨터들에 의 해 작업한 결과를 통신망으로 상호 교환할 수 있도록 연결된 시스템</li>
+  <li>투명성 : 분산 처리 운영체제에서 구제적인 시스템 환경을 사용자가 알수 없도록 하는 것
+    <ul>
+      <li>투명성 종류 : 위치 투명성, 이주 투명성, 복제 투명성, 병행 투명성, 접근 투명성</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="unix-linux"><code class="language-plaintext highlighter-rouge">UNIX</code>, <code class="language-plaintext highlighter-rouge">Linux</code></h3>
+
+<ul>
+  <li><b><code>UNIX</code> : 시분할 시스템을 위해 설계된 대화식 운영체제</b>
+    <ul>
+      <li><b>쉘 : 사용자가 지정한 명령들을 해석해 커널로 전달하는 명령어 해석기 (인터페이스 담당)</b></li>
+    </ul>
+  </li>
+  <li><code>Linux</code> : <code>UNIX</code>와 호환, 멀티태스킹 및 멀티 유저 지원
+    <ul>
+      <li><b><code>umask</code> : 파일, 디렉터리 생성 시 초기 접근 권한 설정</b></li>
+    </ul>
+  </li>
+  <li><b>리눅스 로그 파일 : <code>utmp</code>, <code>wtmp</code>, <code>btmp</code></b></li>
+</ul>
+
+<h2 id="네트워크-개론">네트워크 개론</h2>
+
+<h3 id="데이터-통신-개요">데이터 통신 개요</h3>
+
+<ul>
+  <li>네트워크 : 원하는 정보를 원하는 수신자에 정확히 전송하기 위한 기반 인프라
+    <ul>
+      <li>네트워크 분류 : <code>LAN</code>, <code>MAN</code>, <code>WAN</code></li>
+      <li>네트워크 관련 장비 : <b>리피터</b>, 허브, 스위치 (<b><code>L1</code>, <code>L2</code>, <code>L3</code>, <code>L4</code>, <code>L5</code></b>), 브리지, <b>라우터</b>, <b>게이트웨이</b></li>
+    </ul>
+  </li>
+  <li><code>LAN</code> : 근거리 통신 네트워크
+    <ul>
+      <li><code>LAN</code> 토폴로지 : 성형, 링형, 버스형, 계층형, 망형</li>
+      <li><code>LAN</code> 분류 : 베이스밴드, 광대역</li>
+      <li>전송 매체 접근 제어 (<code>MAC</code>) : 하나의 통신 회선에 여러 컴퓨터 연결</li>
+      <li><code>LAN</code> 표준 : 이더넷</li>
+    </ul>
+  </li>
+  <li>데이터 회선망 : 전용 회선, 교환 회선
+    <ul>
+      <li>회선 구성 방식 : 점 대 점 방식, 다중 점 방식, 회선 다중 방식</li>
+      <li>회선 교환 방식, 축적 교환 빙식 (메시지 교환 방식, 패킷 교환 방식 (가상 회선, 데이터그램))</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="osi-7계층과-오류-제어-방식"><code class="language-plaintext highlighter-rouge">OSI</code> 7계층과 오류 제어 방식</h3>
+
+<ul>
+  <li><code>OSI</code> 참조 모델 : 컴퓨터 네트워크에서 여러 시스템이 데이터를 통신하도록 표준화·계층화된 인터페이스
+    <ul>
+      <li><b><code>DPI</code> : 전 계층의 패킷 내부 컨텐츠를 파악해 트래픽을 조장하는 패킷 분석 기술</b></li>
+    </ul>
+  </li>
+  <li><code>OSI</code> 7계층 구조 : <code>OSI</code> 참조 모델을 구체화한 것
+    <ol>
+      <li><b>물리 계층 : 물리적, 기계적 통신 (<code>RS-232C</code>)</b></li>
+      <li><b>데이터 링크 계층 : 두 통신 시스템 간의 링크로 전송 (<code>HDLC</code>, <code>LLC</code>)</b></li>
+      <li><b>네트워크 계층 : 통신망을 통해 패킷을 목적지까지 전달 (<code>IP</code>)</b></li>
+      <li><b>전송 계층 : 통신 종단 간 데이터 전송 (<code>TCP</code>, <code>UDP</code>)</b></li>
+      <li><b>세션 계층 : 프로세스 간 연결 관리</b></li>
+      <li><b>표현 계층 : 응용 및 세션 사이의 대화 제어 및 데이터 변환</b></li>
+      <li><b>응용 계층 : 응용 서비스 제공 (<code>HTTP</code>, <code>FTP</code>, <code>DNS</code>, <code></code>SMTP)</b></li>
+    </ol>
+  </li>
+  <li><b>자동 반복 요청 (<code>ARQ</code>) : 통신 경로에 오류가 발생하면 수신자가 오류 발생을 송신자에 통보하고, 송신자는 오류가 발생한 프레임을 재전송하는 오류 제어 방식</b>
+    <ul>
+      <li><code>ARQ</code> 종류 : 정지-대기 <code>ARQ</code>, 연속 <code>ARQ</code>, 선택적 재전송 <code>ARQ</code>, 적응적 <code>ARQ</code></li>
+    </ul>
+  </li>
+  <li>패리티 검사 : 데이터 블록에 1비트의 패리티 비트를 추가해 오류 검출 (홀수 패리티, 짝수 패리티)</li>
+  <li>순환 중복 검사 : 다항식 코드를 통한 에러 검사 (해밍 코드 방식)</li>
+</ul>
+
+<h3 id="tcpip-프로토콜-패킷-교환"><code class="language-plaintext highlighter-rouge">TCP/IP</code> 프로토콜, 패킷 교환</h3>
+
+<ul>
+  <li><b><code>TCP/IP</code> : 인터넷에 연결된 서로 다른 기종의 컴퓨터 간에 데이터 송수신을 돕는 표준 프로토콜</b>
+    <ul>
+      <li><b><code>TCP</code> : 전송 계층 (<code>L4</code>) 역할 수행 (순서·에러·흐름 제어, 전이중·스트림 데이터 서비스, 메시지 캡슐화·역캡슐화, 다중화·역다중화)</b></li>
+      <li><b><code>UDP</code> : 전송 계층 (<code>L4</code>) 역할 수행 (비연결성·비신뢰성, 복구 <code>X</code>)</b></li>
+      <li><b><code>IP</code> : 네트워크 계층 (<code>L3</code>) 역할 수행 (라우팅·데이터그램)</b>
+        <ul>
+          <li><b><code>ICMP</code> : <code>IP</code> 오류 보고 및 수정 메커니즘</b></li>
+          <li><b><code>IGMP</code> : 시작지에서 여러 목적지로 전송될 때 사용</b></li>
+          <li><b><code>ARP</code> : 논리 주소를 물리 주소로 변환</b></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><b><code>IP</code> 프로토콜 필드 : 헤더 길이 (<code>4bit</code>), 토탈 패킷 길이 (<code>16bit</code>), <code>Time-To-Live</code> (<code>8bit</code>)</b></li>
+</ul>
+
+<h3 id="ip-주소와-경로-제어"><code class="language-plaintext highlighter-rouge">IP</code> 주소와 경로 제어</h3>
+
+<ul>
+  <li><b><code>IPv4</code> : 32비트 <code>IP</code> 주소 (네트워크 주소 + 호스트 주소)</b>
+    <ul>
+      <li><b><code>IPV4</code> 특징 : 주소 고갈, 서브넷팅·<code>CIDR</code></b></li>
+      <li><b><code>IPv4</code> 주소 체계 : 클래스 <code>A ~ E</code></b></li>
+      <li><b>서브넷 마스크 : 네트워크를 작은 내부 네트워크로 분리해 이진 형태로 관리</b></li>
+    </ul>
+  </li>
+  <li><b><code>IPv6</code> : 128비트 <code>IP</code> 주소 (16비트씩 8개 필드로 분리 표기)</b>
+    <ul>
+      <li><b><code>IPV6</code> 장점 : 보안성 강화, 확장 용이, 패킷 크기 제한 없음, 실시간 처리·자동 네트워크 구성 가능</b></li>
+      <li><b><code>IPV6</code> 통신 방식 : 유니캐스트, 애니캐스트, 멀티캐스트</b></li>
+    </ul>
+  </li>
+  <li>경로 제어 : 각 메시지에서 목적지까지 갈 수 있는 여러 경로 중에 한 경로를 설정
+    <ul>
+      <li><b>경로 제어 프로토콜 : <code>IGP</code>, <code>EGP</code>, <code>BGP</code></b></li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Engineer Information Processing" /><summary type="html"><![CDATA[C]]></summary></entry><entry><title type="html">[React] 2. 클래스 컴포넌트 (Class Component)</title><link href="http://localhost:4000/react2/" rel="alternate" type="text/html" title="[React] 2. 클래스 컴포넌트 (Class Component)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react2</id><content type="html" xml:base="http://localhost:4000/react2/"><![CDATA[<h2 id="클래스-컴포넌트-class-component--생성자와-생명주기-메소드를-통한-상태와-생명주기-관리">클래스 컴포넌트 (<code class="language-plaintext highlighter-rouge">Class Component</code>) : 생성자와 생명주기 메소드를 통한 상태와 생명주기 관리</h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { Component } from 'react';
 
@@ -1702,1829 +3289,4 @@ const typedCallSignature: CallSignature = (input) =&gt; input.length;
 }
 //Greeted 클래스의 생성자는 message:string으로 매개변수가 제공되어야 함
 new Greeted("Practice makes perfect.");
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TS" /><summary type="html"><![CDATA[타입스크립트 (TypeScript) : JavaScript을 확장하여 정적 타입을 지원하는 프로그래밍 언어]]></summary></entry><entry><title type="html">[JS] 9. 비동기 처리 (Asynchronous Processing)</title><link href="http://localhost:4000/js9/" rel="alternate" type="text/html" title="[JS] 9. 비동기 처리 (Asynchronous Processing)" /><published>2024-02-05T00:00:00+09:00</published><updated>2024-02-05T00:00:00+09:00</updated><id>http://localhost:4000/js9</id><content type="html" xml:base="http://localhost:4000/js9/"><![CDATA[<h2 id="비동기-처리-asynchronous-processing--프로세스의-완료를-기다리지-않고-다른-작업을-진행">비동기 처리 (<code class="language-plaintext highlighter-rouge">Asynchronous Processing</code>) : 프로세스의 완료를 기다리지 않고 다른 작업을 진행</h2>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a3f7aa41-e708-45b7-8397-068980fc6f3c" width="70%" /></p>
-
-<ul>
-  <li>싱글 쓰레드 (<code class="language-plaintext highlighter-rouge">Single Thread</code>) : 한번에 하나의 함수만 실행 → 동기 처리 (<code class="language-plaintext highlighter-rouge">Synchronous Processing</code>)과 동일
-    <ul>
-      <li>자바스크립트는 콜 스택이 하나 → 콜 스택에 쌓인 함수나 코드를 위에서 아래로 차례대로 실행</li>
-    </ul>
-  </li>
-  <li>논블로킹 (<code class="language-plaintext highlighter-rouge">Non-Blocking</code>) : <code class="language-plaintext highlighter-rouge">I/O</code>를 수행하는 비동기 함수는 백그라운드에 넘김</li>
-  <li>멀티 프로세스 (<code class="language-plaintext highlighter-rouge">Multi Processes</code>) : 백그라운드는 <code class="language-plaintext highlighter-rouge">OS</code> 프로세스에 의존</li>
-</ul>
-
-<blockquote>
-  <p>비동기 처리의 순서?</p>
-
-  <ol>
-    <li>런타임 (<code class="language-plaintext highlighter-rouge">Runtime</code>) → 실행 컨텍스트 (<code class="language-plaintext highlighter-rouge">Execution Context</code>) → 콜 스택 (<code class="language-plaintext highlighter-rouge">CallStack</code>)</li>
-    <li>백그라운드 (<code class="language-plaintext highlighter-rouge">Background</code>) → 운영체제 (<code class="language-plaintext highlighter-rouge">OS</code>)</li>
-    <li>테스크 큐 (<code class="language-plaintext highlighter-rouge">Task Queue</code>) → 콜 스택 (<code class="language-plaintext highlighter-rouge">Call Stack</code>)</li>
-  </ol>
-</blockquote>
-
-<h3 id="자바스크립트-런타임-javascript-runtime--자바스크립트가-실행되는-환경">자바스크립트 런타임 (<code class="language-plaintext highlighter-rouge">JavaScript Runtime</code>) : 자바스크립트가 실행되는 환경</h3>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/f0c9726e-4743-4b62-aa15-5a5cde2cdef9" width="80%" /></p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Web API</code> : 브라우저에서 제공하는 <code class="language-plaintext highlighter-rouge">API</code> (<code class="language-plaintext highlighter-rouge">setTimeout</code>, <code class="language-plaintext highlighter-rouge">HTTP</code> 요청 메소드, <code class="language-plaintext highlighter-rouge">DOM</code> 이벤트)</li>
-  <li>테스트 큐 (<code class="language-plaintext highlighter-rouge">Task Queue</code>) : 이벤트가 발생한 뒤에 호출되어야 할 콜백 함수들이 대기하는 공간</li>
-  <li>이벤트 루프 (<code class="language-plaintext highlighter-rouge">Event Loop</code>) : 이벤트 발생 시 콜백 함수들을 관리, 호출된 콜백 함수의 실행 순서 결정</li>
-</ul>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1ebeb0a1-a9fc-4234-ab64-f4b720b9cc43" width="80%" /></p>
-
-<h3 id="비동기-콜백-패턴-asynchronous-callback-pattern--비동기-작업의-완료를-다루는-전통적인-방식">비동기 콜백 패턴 (<code class="language-plaintext highlighter-rouge">Asynchronous Callback Pattern</code>) : 비동기 작업의 완료를 다루는 전통적인 방식</h3>
-
-<ul>
-  <li>현재 실행되고 있는 함수가 끝난 뒤에 실행되는 콜백 함수를 통해 실행 순서를 지정</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>setTimeout(function() {
-  console.log('task1', new Date());
-  setTimeout(function() {
-    console.log('task2', new Date());
-    setTimeout(function() {
-      console.log('task3', new Date());
-      console.log('END&gt;&gt;', new Date());
-    }, 1000 );
-  }, 2000);
-}, 3000);
-console.log('START', new Date());
-</code></pre></div></div>
-
-<blockquote>
-  <p>콜백 함수를 여러 개 중첩하면, 코드의 가독성이 떨어지는 콜백 지옥 (<code class="language-plaintext highlighter-rouge">Callback Hell</code>)이 발생!</p>
-</blockquote>
-
-<h2 id="프로미스-promise--비동기-작업의-성공-및-실패에-대한-완료-결과를-처리하는-객체">프로미스 (<code class="language-plaintext highlighter-rouge">Promise</code>) : 비동기 작업의 성공 및 실패에 대한 완료 결과를 처리하는 객체</h2>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/6acaa363-7157-4636-9f62-1da04e7a6a9c" width="90%" /></p>
-
-<ul>
-  <li>콜백 지옥을 피하고 비동기 처리를 쉽게 처리할 수 있도록 <code class="language-plaintext highlighter-rouge">ES6</code>부터 <code class="language-plaintext highlighter-rouge">then</code> 도입</li>
-  <li>프로미스를 호출하면 프로미스 인스턴스 (<code class="language-plaintext highlighter-rouge">Promise Instance</code>)를 반환한 후 <code class="language-plaintext highlighter-rouge">Resolve</code> &amp; <code class="language-plaintext highlighter-rouge">Reject</code></li>
-</ul>
-
-<blockquote>
-  <p>프로미스의 3가지 상태 (<code class="language-plaintext highlighter-rouge">Status</code>)</p>
-
-  <ul>
-    <li>대기 (<code class="language-plaintext highlighter-rouge">Pending</code>) : 비동기 처리 로직이 미완료된 초기 상태, 성공 또는 실패할 때까지 대기</li>
-    <li>이행 (<code class="language-plaintext highlighter-rouge">Fulfilled</code> ): 비동기 처리가 완료되어, 프로미스가 결과 값을 반환한 상태</li>
-    <li>거부 (<code class="language-plaintext highlighter-rouge">Rejected</code>) : 비동기 처리가 실패하거나 오류가 발생한 상태</li>
-  </ul>
-</blockquote>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const promise = new Promise((resolve, reject) =&gt; {
-    setTimeout(() =&gt; {
-        const now = Date.now();
-        
-        if (now % 2 === 0) {
-            resolve(console.log('[Fulfilled]'), now);    
-        } else reject('Rejected');
-    }, 1000);
-
-    setTimeout(() =&gt; {
-        reject(new Error('[TimeExceeded]'),);
-    }, 1001);
-});
-
-promise.then(
-    success =&gt; console.log('[Resolved]'),
-    fail =&gt; console.log('[Rejected]')
-)
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 프로미스를 클래스로 표현한다면?
-class Promise {
-  constructor(callback) {
-    console.log('[Promise 생성자]')
-    callback (this.resolve.bind(this), this.reject.bind(this));
-}
-
-  then(resolve) {
-    console.log('[then 메소드 실행]')
-    this.success = callback;
-  }
-
-  catch(x) {
-    console.log('[catch 메소드 실행]')
-    this.failure = callback;
-  }
-
-  success(x) {
-    console.log('[success 메소드 실행] ' + x)
-  }
-
-  failure(x) {
-    console.log('[failure 메소드 실행] ' + x)
-  }
-
-  resolve(x) { 
-    console.log('[resolve 메소드 실행]')
-    return this.success(x);
-  }
-
-  reject(x) {
-    console.log('[reject 메소드 실행]')
-    return this.failure(x);
-  }
-
-  callback(resolve, reject) {
-    console.log('[callback 메소드 실행]')
-  }
-};
-
-let promise = new Promise((resolve, reject) =&gt; {
-        setTimeout(() =&gt; {
-            const now = Date.now();
-            console.log('이행 :', now)
-
-            if (now % 2 === 0)
-                resolve(now)
-            else
-                reject(new Error("실패"))
-
-            console.log("[setTimeout 메소드 실행]")
-        }, 1000)
-    }
-);
-</code></pre></div></div>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/71628456-0e58-4bbb-b1f7-45cff3e5b96a" width="90%" /></p>
-
-<h3 id="프로미스-클래스-메소드-promise-class-method--프로미스에서-비동기-작업을-다루기-위해-제공">프로미스 클래스 메소드 (<code class="language-plaintext highlighter-rouge">Promise Class Method</code>) : 프로미스에서 비동기 작업을 다루기 위해 제공</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Promise.resolve</code> : 주어진 값을 성공 상태의 프로미스로 반환
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Promise.resolve(x).then(val =&gt; console.log(val));</code></li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">Promise.reject</code> : 주어진 값을 실패 상태의 프로미스로 반환
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Promise.reject(new Error('...')).catch(console.error);</code></li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">Promise.all</code> : 여러 프로미스가 모두 성공 시 <b>시간과 무관하게 순서를 보장하여</b> 프로미스들을 모두 반환, 하나라도 실패하면 첫번째로 실패한 프로미스 반환
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Promise.all(iterables).then().catch(...)</code></li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">Promise.race</code> : 여러 프로미스 중에서 가장 빠른 것을 반환, 하나라도 실패하면 첫번째로 실패한 프로미스 반환
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Promise.race(iterables).then().catch(...)</code></li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">Promise.any</code> : 여러 프로미스 중에서 제일 빨리 성공한 것을 반환
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Promise.any(iterables).then().catch(...)</code></li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">Node.js</code> 모듈의 <code class="language-plaintext highlighter-rouge">util.promisify</code> : 콜백 함수 기반의 비동기 함수를 프로미스 기반으로 변환</p>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function promisify(fn) {
-  return new Promise( (resolve, reject) =&gt; {
-    try {
-      const ret = fn();
-      resolve(ret);
-    } catch(err) {
-      reject(err);
-    }
-  })
-}
-
-const exec = util.promisify(execute);
-exec.then(...).catch(...)
-</code></pre></div>  </div>
-</blockquote>
-
-<h2 id="async-await--프로미스를-생성하고-소비하기-위한-문법적-설탕"><code class="language-plaintext highlighter-rouge">async</code>, <code class="language-plaintext highlighter-rouge">await</code> : 프로미스를 생성하고 소비하기 위한 문법적 설탕</h2>
-
-<blockquote>
-  <p>문법적 설탕 (<code class="language-plaintext highlighter-rouge">Syntax Sugar</code>) : 문법적 기능은 그대로인데, 사람이 직관적으로 읽을 수 있게끔 만드는 것</p>
-</blockquote>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/4297057d-9df5-4864-aaf9-1fa77598e056" width="40%" /></p>
-
-<ul>
-  <li>비동기 함수에서 콜백을 사용하는 대신에, 단순한 논리적 흐름을 작성
-    <ul>
-      <li>프로미스의 <code class="language-plaintext highlighter-rouge">then</code>, <code class="language-plaintext highlighter-rouge">catch</code>, <code class="language-plaintext highlighter-rouge">finally</code>를 사용할 필요 없음</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">async</code>는 프로미스를 반환하고, <code class="language-plaintext highlighter-rouge">await</code>는 <code class="language-plaintext highlighter-rouge">resolve</code> 및 <code class="language-plaintext highlighter-rouge">reject</code>와 매핑
-    <ul>
-      <li>성공 : <code class="language-plaintext highlighter-rouge">return</code> → <code class="language-plaintext highlighter-rouge">resolve</code> → <code class="language-plaintext highlighter-rouge">result</code></li>
-      <li>실패 : <code class="language-plaintext highlighter-rouge">error</code> → <code class="language-plaintext highlighter-rouge">reject</code> → <code class="language-plaintext highlighter-rouge">throw</code></li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// const fn = async() =&gt; {...}
-async function fn() {   // Promise 반환
-  ...
-  result = await fetch(url);  // fetch.then().catch()
-}
-console.log(await fn());
-</code></pre></div></div>
-
-<blockquote>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">Promise</code> &amp; <code class="language-plaintext highlighter-rouge">then</code> : 각각이 별도의 쓰레드로 실행되므로 <b>병렬</b></li>
-    <li><code class="language-plaintext highlighter-rouge">async</code>, <code class="language-plaintext highlighter-rouge">await</code> : 단일 쓰레드를 차례로 실행하므로 <b>직렬</b></li>
-  </ul>
-
-  <p>→ 연관이 없는 비동기 함수 실행에 <code class="language-plaintext highlighter-rouge">async</code>, <code class="language-plaintext highlighter-rouge">await</code>을 남발하지 말자!</p>
-
-</blockquote>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// promise, async, await을 활용하여 페치한 뒤에 2초간 sleep 구현
-const f = async () =&gt; {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users/1");  
-  if (!res.ok) throw new Error("Fail to Fetch!!");
-  console.log(Date.now())
-  await new Promise((resolve) =&gt; {setTimeout(resolve, 2000)});
-  const data = await res.json();
-  return data.name;
-};
-
-console.log(await f());
-console.log(Date.now())
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// promise, async, await을 활용하여 1초 간격으로 3번 출력하는 depthTimer 구현
-let depthTimer = async (str) =&gt; {
-  console.log(str, new Date());
-  await new Promise((resolve) =&gt; setTimeout(resolve, 1000));
-};
-  
-(async function () {
-  await depthTimer('START!');
-  await depthTimer('depth1');
-  await depthTimer('depth2');
-  await depthTimer('depth3');
-  console.log('Already 3-depth!!');
-})();
-</code></pre></div></div>
-
-<h3 id="for-await-of--비동기적으로-이터레이터-iterator를-반복하는-문법"><code class="language-plaintext highlighter-rouge">for-await-of</code> : 비동기적으로 이터레이터 (<code class="language-plaintext highlighter-rouge">Iterator</code>)를 반복하는 문법</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">async</code> 함수에서 비동기적으로 값을 가져와 처리할 때 활용</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const afterTime = sec =&gt; new Promise(
-    resolve =&gt; setTimeout(resolve, sec * 1000, sec
-  ));
-  console.time('for-await-of ');
-  const arr = [afterTime(1), afterTime(2)];
-  
-  for (const fo of arr.values()) {
-    console.log('fo =', fo);
-  }
-  
-  for await (const fao of arr.values()) {
-    console.log('fao =', fao);
-  }
-  
-  console.timeEnd('for-await-of ');
-
-// &gt; fo = Promise { &lt;pending&gt; }
-// &gt; fo = Promise { &lt;pending&gt; }
-// &gt; fao = 1
-// &gt; fao = 2
-// &gt; for-await-of : 2.003s
-</code></pre></div></div>
-<hr />]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[비동기 처리 (Asynchronous Processing) : 프로세스의 완료를 기다리지 않고 다른 작업을 진행]]></summary></entry><entry><title type="html">자바스크립트 프록시 (2024.02.04)</title><link href="http://localhost:4000/digital_hanaro_6/" rel="alternate" type="text/html" title="자바스크립트 프록시 (2024.02.04)" /><published>2024-02-04T00:00:00+09:00</published><updated>2024-02-05T00:00:00+09:00</updated><id>http://localhost:4000/digital_hanaro_6</id><content type="html" xml:base="http://localhost:4000/digital_hanaro_6/"><![CDATA[<blockquote>
-  <p><a href="https://github.com/pocj8ur4in/finance-dev-study">디지털하나路 스터디</a> 6일차 내용을 정리한 글입니다.</p>
-</blockquote>
-
-<h2 id="공부한-이유">공부한 이유</h2>
-
-<p>프록시 (<code class="language-plaintext highlighter-rouge">Proxy</code>)를 번역하면 어떤 일을 대신 수행하는 대리자, 대변인의 의미를 갖고 있다. 디자인패턴에서도 어떤 객체를 사용하고자 할 때, 객체를 직접 참조하는 것이 아니라 해댱 객체를 대행할 수 있는 프록시 객체를 통해 대상하고자 하는 객체에 접근하는 방식을 프록시 패턴 (<code class="language-plaintext highlighter-rouge">Proxy Pattern</code>)이라고 부른다. 자바스크립트에서도 프록시 객체가 있다는 것을 이번 수업을 통해 알게 되어 이에 대해 정리하고자 하였다.</p>
-
-<h2 id="공부한-내용">공부한 내용</h2>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/9a0c5c88-3e49-43f9-a2e1-55ae60429d27" width="60%" /></p>
-
-<ul>
-  <li>프록시 객체 (<code class="language-plaintext highlighter-rouge">Proxy Object</code>) : 원본 객체의 어떤 작업을 가로채 대신 처리하는 객체
-    <ul>
-      <li>타겟 (<code class="language-plaintext highlighter-rouge">target</code>) : 프록시 객체가 감쌀 (<code class="language-plaintext highlighter-rouge">wrapping</code>) 원본 객체</li>
-      <li>핸들러 (<code class="language-plaintext highlighter-rouge">handler</code>) : 동작을 가로채는 ‘트랩 (<code class="language-plaintext highlighter-rouge">trap</code>)’이 담겨 타겟의 동작을 제어하는 메소드를 정의한 객체</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let target = {};
-let proxy = new Proxy(target, handler)
-
-proxy.test = 5;
-alert(proxy.test); // 5
-</code></pre></div></div>
-
-<blockquote>
-  <p>특정 객체를 감싸 해당 객체에 작업이 가해지고, 핸들러에 상응하는 트랩이 있다면 중간에서 작업을 트랩</p>
-</blockquote>
-
-<ul>
-  <li>프록시는 일반 객체와 달리 프로퍼티가 없는 ‘특수 객체’
-    <ul>
-      <li>핸들러가 비어 있으면 프록시에 가해지는 작업은 원본 객체인 타겟으로 바로 전달</li>
-    </ul>
-  </li>
-  <li>프록시의 트랩은 원본 객체에 수행하는 동작을 수행하는 내부 메소드의 호출을 가로챔</li>
-</ul>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/4c6317c5-a2b0-4643-994f-ba45f073239b" /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let numbers = [0, 1, 2];
-
-numbers = new Proxy(numbers, {
-  get(target, prop) {
-    if (prop in target) return target[prop];
-    return 0;
-  }
-});
-
-alert( numbers[1] ); // 1
-alert( numbers[123] ); // 0
-</code></pre></div></div>
-
-<blockquote>
-  <p>프록시가 <code class="language-plaintext highlighter-rouge">Reflect</code>와 다른 점?</p>
-
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">Reflect</code>는 타겟 객체의 상태를 <code class="language-plaintext highlighter-rouge">Boolean</code>으로 반환하는 여러 메소드를 가진 자바스크립트 기본 객체
-      <ul>
-        <li><code class="language-plaintext highlighter-rouge">Reflect</code>의 메소드가 프록시와 연동하여, <code class="language-plaintext highlighter-rouge">Reflect</code>의 메소드를 통해 검증하는 값을 프록시에도 핸들러에 할당해 처리 가능</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<ul>
-  <li>프록시 응용 <code class="language-plaintext highlighter-rouge">#1</code>. 프록시는 비싼 함수 호출을 캐싱 (<code class="language-plaintext highlighter-rouge">Caching</code>)할 수 있음</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function calculateCost(price, taxRate) {
-  console.log('계산 : ');
-  return price * (1 + taxRate);
-}
-
-const cache = new Map();
-
-const proxy = new Proxy(calculateCost, {
-  apply(target, thisArg, args) {
-    const key = args.join('-');
-    if (cache.has(key)) {
-      console.log('캐시된 결과 반환 : ');
-      return cache.get(key);
-    } else {
-      const result = Reflect.apply(target, thisArg, args);
-      cache.set(key, result);
-      return result;
-    }
-  },
-});
-
-console.log(proxy(10, 0.2)); // 계산 : 12
-console.log(proxy(10, 0.2)); // 캐시된 결과 반환 : 12
-console.log(proxy(20, 0.2)); // 계산 : 24
-console.log(proxy(20, 0.3)); // 계산 : 26
-console.log(proxy(20, 0.3)); // 캐시된 결과 반환 : 26
-</code></pre></div></div>
-
-<ul>
-  <li>프록시 응용 <code class="language-plaintext highlighter-rouge">#2</code>. 프록시는 데이터 검증에 활용하는 유효성 검사기 (<code class="language-plaintext highlighter-rouge">Validator</code>)로 활용될 수 있음</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const user = {
-  name: 'John',
-  password: '',
-};
-
-const proxy = new Proxy(user, {
-  set(target, prop, value) {
-    if (prop === 'password' &amp;&amp; value.length &lt; 8) {
-      throw new Error('Password must be at least 8 characters long');
-    }
-    target[prop] = value;
-    return true;
-  },
-});
-
-console.log(proxy.name); // John
-console.log(proxy.password); // 
-
-proxy.password = '12345678';
-console.log(proxy.password); // 12345678
-
-proxy.password = '123'; // 'Password must be at least 8 characters long' 에러 반환
-</code></pre></div></div>
-
-<ul>
-  <li>프록시 응용 <code class="language-plaintext highlighter-rouge">#3</code>. 프록시는 데이터 변화를 감지하는 로거 (<code class="language-plaintext highlighter-rouge">logger</code>)로 활용될 수 있음</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const user = {
-  name: 'John',
-  email: 'john@example.com',
-};
-
-const proxy = new Proxy(user, {
-  get(target, prop) {
-    console.log(`Getting ${prop} property`);
-    return target[prop];
-  },
-  set(target, prop, value) {
-    console.log(`Setting ${prop} property to ${value}`);
-    target[prop] = value;
-    return true;
-  },
-});
-
-console.log(proxy.name); // Getting name property -&gt; John
-proxy.email = 'bob@example.com'; // Setting email property to bob@example.com
-console.log(proxy.email); // Getting email property -&gt; bob@example.com
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Digital Hanaro Study" /><summary type="html"><![CDATA[디지털하나路 스터디 6일차 내용을 정리한 글입니다.]]></summary></entry><entry><title type="html">[vocawik] 2. vocawik 프로젝트 설계</title><link href="http://localhost:4000/vocawik2/" rel="alternate" type="text/html" title="[vocawik] 2. vocawik 프로젝트 설계" /><published>2024-02-03T00:00:00+09:00</published><updated>2024-02-03T00:00:00+09:00</updated><id>http://localhost:4000/vocawik2</id><content type="html" xml:base="http://localhost:4000/vocawik2/"><![CDATA[<h2 id="프로젝트-목표-project-goal--프로젝트-진행-과정에서-이루고자-하는-사항들을-정리">프로젝트 목표 (<code class="language-plaintext highlighter-rouge">Project Goal</code>) : 프로젝트 진행 과정에서 이루고자 하는 사항들을 정리</h2>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">ver-0.0.1</code> (<code class="language-plaintext highlighter-rouge">2024-02-03</code>) : 최초 작성</p>
-</blockquote>
-
-<div style="text-align: center;">
-  <table>
-    <thead>
-      <tr>
-        <td nowrap="">목표</td>
-        <td nowrap="">설명</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td nowrap="">도메인 정의<br />(<code>Domain Definition</code>)</td>
-        <td><ul>
-          <li>사이트에서 제공하고자 하는 기능 및 책임들이 도메인별로 명확히 분리되어야 한다.</li>
-        </ul></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<h2 id="아키텍처-구조도-architecture-structure--사이트의-아키텍처를-설계">아키텍처 구조도 (<code class="language-plaintext highlighter-rouge">Architecture Structure</code>) : 사이트의 아키텍처를 설계</h2>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">ver-0.0.1</code> (<code class="language-plaintext highlighter-rouge">2024-02-03</code>) : 최초 작성</p>
-</blockquote>
-
-<h2 id="유저-프로필-user-profile--사이트의-이용자들을-정의하여-분류">유저 프로필 (<code class="language-plaintext highlighter-rouge">User Profile</code>) : 사이트의 이용자들을 정의하여 분류</h2>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">ver-0.0.1</code> (<code class="language-plaintext highlighter-rouge">2024-02-03</code>) : 최초 작성</p>
-</blockquote>
-
-<div style="text-align: center;">
-  <table>
-    <thead>
-      <tr>
-        <td nowrap="">이름</td>
-        <td nowrap="">설명</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td nowrap="">관리자<br />(<code>Manager; MA</code>)</td>
-        <td>사이트 및 사이트 내부 기능들의 기획, 설계, 개발, 운영, 관리를 담당하는 사람들을 총칭한다.</td>
-      </tr>
-      <tr>
-        <td nowrap="">회원<br />(<code>Member; ME</code>)</td>
-        <td>사이트 이용자들 중에 회원 데이터베이스에 등록된 사람들을 총칭한다.</td>
-      </tr>
-      <tr>
-        <td nowrap="">비회원<br />(<code>NonMember; NE</code>)</td>
-        <td>사이트 이용자들 중에 회원 데이터베이스에 등록되지 않은 사람들을 총칭한다.</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<h2 id="기능-명세서-functional-specification--사이트에서-구현할-기능들을-정리">기능 명세서 (<code class="language-plaintext highlighter-rouge">Functional Specification</code>) : 사이트에서 구현할 기능들을 정리</h2>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">ver-0.0.1</code> (<code class="language-plaintext highlighter-rouge">2024-02-03</code>) : 최초 작성</p>
-</blockquote>
-
-<div style="text-align: center;">
-  <table>
-    <thead>
-      <tr>
-        <td nowrap="">분류</td>
-        <td nowrap="">ID</td>
-        <td nowrap="">이름</td>
-        <td nowrap="">설명</td>
-        <td nowrap="">상태</td>
-        <td nowrap="">우선<br />순위</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td rowspan="32">회원<br />(<code>Member</code>)</td>
-        <td nowrap=""><code>ME-001</code></td>
-        <td nowrap="">회원 <code>ID</code> 로그인<br />(<code>MemberIdLogin</code>)</td>
-        <td>'비회원'이 '회원 로그인 화면'에서 '아이디' 또는 '이메일'과 '비밀번호'를 입력하고 '로그인 버튼'을 눌렀을 때, '유효성 검사' 및 회원에 대한 '인증'이 정상적으로 수행되면 '회원'에 대한 '인가'를 수행한다.</td>
-        <td nowrap="">비회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-002</code></td>
-        <td nowrap="">회원 <code>OAuth</code> 로그인<br />(<code>MemberOAuthLogin</code>)</td>
-        <td>'비회원'이 '회원 로그인 화면'에서 '특정 외부 사이트 (<code>Google</code>, <code>Kakao</code>, <code>Naver</code>, <code>Apple</code>, <code>X</code>)로 로그인 버튼'을 눌렀을 때, 해당 외부 사이트에서 '인증'을 진행하도록 한다. 해당 외부 사이트에서 '인증'이 정상적으로 수행됨을 알린다면, '회원'에 대한 '인가'를 수행한다.</td>
-        <td nowrap="">비회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-003</code></td>
-        <td nowrap="">회원 <code>OTP</code> 로그인<br />(<code>MemberLoginCertifyByOTP</code>)</td>
-        <td>'회원'인 상태에서 '2단계 로그인 (<code>OTP</code>) 옵션'을 활성화시켰다면, '비회원'이 '유효성 검사' 및 회원에 대한 '인증'이 정상적으로 수행할 경우에 (즉 로그인이 정상적으로 수행되었다면), '일회용 비밀번호'를 확인할 수 있는 '<code>OTP</code> 키'를 발급하고, '인증 화면'을 제공한다. 만약 '인증 화면'에서 입력받은 값이 '일회용 비밀번호'과 일치하면, '회원'에 대한 '인가'를 수행한다.</td>
-        <td nowrap="">비회원 (인증)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-004</code></td>
-        <td nowrap="">회원 로그인 이메일 인증<br />(<code>MemberLoginCertifyByEmail</code>)</td>
-        <td>'회원'인 상태에서 '2단계 로그인 (이메일 인증) 옵션'을 활성화시켰다면, '비회원'이 '유효성 검사' 및 회원에 대한 '인증'이 정상적으로 수행되는 경우에 (즉 로그인이 정상적으로 수행되었다면), '일회용 비밀번호'를 확인할 수 있는 '인증 이메일'을 생성 및 전송하고, '인증 화면'을 제공한다. 만약 '인증 화면'에서 입력받은 값이 '일회용 비밀번호'과 일치하면, '회원'에 대한 '인가'를 수행한다.</td>
-        <td nowrap="">비회원 (인증)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-005</code></td>
-        <td nowrap="">회원 자동 로그인 방지<br />(<code>MemberLoginCAPTCHA</code>)</td>
-        <td>'비회원'이 '회원 로그인 화면'에서 5회 이상 '로그인'에 실패할 경우, <code>google reCAPTCHA</code>를 통해 보안 문자를 입력한 다음에 로그인을 시도할 수 있도록 한다.</td>
-        <td nowrap="">비회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-006</code></td>
-        <td nowrap="">회원 로그인 유지<br />(<code>MemberCreateRememberMe</code>)</td>
-        <td>'비회원'이 '회원 로그인 화면'에서 '로그인 유지 옵션'을 활성화한 상태로 로그인을 성공하였을 때, '회원'이 브라우저를 끄고 다시 접속하더라도 로그인 상태를 2주간 유지한다.</td>
-        <td nowrap="">비회원<br />↓<br />회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-007</code></td>
-        <td nowrap="">회원 비밀번호 재설정 이메일 인증<br />(<code>MemberResetPasswordCertifyByEmail</code>)</td>
-        <td>'비회원'이 '회원 로그인 화면'에서 '비밀번호 재설정' 버튼을 누르면, '비밀번호 재설정 아이디/이메일 입력 화면'으로 이동한다. 입력받은 값과 일치하는 회원 정보가 존재한다면, '임시 비밀번호'를 생성하여 30분간 유효한 '임시 비밀번호'를 포함한 '비밀번호 재설정 이메일'을 생성 및 전송한다.</td>
-        <td nowrap="">비회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-008</code></td>
-        <td nowrap="">회원 비밀번호 재설정<br />(<code>MemberResetPassword</code>)</td>
-        <td>'비회원'이 '회원 로그인 화면'에서 '로그인'을 시도할 때 '비밀번호 재설정'에서 생성된 '임시 비밀번호'를 입력받았거나, '회원'이 '회원정보 갱신 화면'에서 '비밀번호 재설정' 버튼을 누른 경우, '비밀번호 재설정' 화면으로 이동한다. 입력받은 '비밀번호' 및 '비밀번호 확인'이 이전에 사용된 적이 있는 '중복된 비밀번호'가 아니면서 유효성 검사가 정상적으로 이루어지고, <code>google reCAPTCHA</code>를 통과하였다면, 입력한 값을 포함하여 회원 정보를 갱신한다. 그리고 이전에 이루어진 '회원 로그인 유지'를 모두 해제한 다음에 '회원'에 대한 인가를 비활성화하고 '홈 화면'으로 이동한다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-009</code></td>
-        <td nowrap="">회원 로그아웃<br />(<code>MemberLogout</code>)</td>
-        <td>'회원'이 어떤 화면에서 '로그아웃 버튼'을 누르면, (만약 '회원 로그인 유지'가 이루어지고 있다면 이를 해제한 다음에) '회원'에 대한 인가를 비활성화하고 '홈 화면'으로 이동한다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-010</code></td>
-        <td nowrap="">회원가입<br />(<code>MemberRegister</code>)</td>
-        <td>'비회원'이 '회원가입 화면'에서 '회원가입' 버튼을 눌렀을 때, 필수 정보 ('아이디', '비밀번호', '비밀번호 확인', '이메일' 등)이 입력되어 '유효성 검사'가 정상적으로 이루어지고, <code>google reCAPTCHA</code>를 통과하였으며, '이메일 인증'이 정상적으로 수행되었다면, 입력한 값들을 포함한 '회원 정보'를 바탕으로 서버 내 데이터베이스에 '회원'을 생성한 다음 '홈 화면'으로 이동한다.</td>
-        <td nowrap="">비회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-011</code></td>
-        <td nowrap=""><code>OAuth</code> 회원가입<br />(<code>MemberOAuthRegister</code>)</td>
-        <td>'비회원'이 '회원가입 화면'에서 '특정 외부 사이트 (<code>Google</code>, <code>Kakao</code>, <code>Naver</code>, <code>Apple</code>, <code>X</code>)로 회원가입 버튼'을 눌렀을 때, 해당 외부 사이트에서 '인증'을 진행하도록 한다. 해당 외부 사이트에서 '인증'이 정상적으로 수행됨을 알린다면, '회원가입 화면'으로 이동한다. '회원가입' 화면에서 '회원가입' 버튼을 눌렀을 때, 필수 정보 ('아이디', '비밀번호', '비밀번호 확인', '이메일' 등)이 입력되어 '유효성 검사'가 정상적으로 이루어지고, <code>google reCAPTCHA</code>를 통과하였으며, '이메일 인증'이 정상적으로 수행되었다면, 입력한 값들을 포함한 '회원 정보'를 바탕으로 데이터베이스에 '회원'을 생성한 다음 '홈 화면'으로 이동한다.</td>
-        <td nowrap="">비회원<br />↓<br />비회원 (인증)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-012</code></td>
-        <td nowrap="">회원가입 이메일 인증<br />(<code>MemberRegisterCertifyByEmail</code>)</td>
-        <td>'비회원'이 '회원가입 화면'에서 '이메일'을 입력하고 '이메일 인증 버튼'을 눌렀을 때, '유효성 검사'가 정상적으로 이루어진다면, '인증 문자열'를 확인할 수 있는 '인증 이메일'을 생성 및 전송하고 '인증 화면'을 제공한다. 만약 '인증 화면'에서 입력받은 값이 '인증 문자열'과 일치한다면, 인증에 성공하였다는 것을 알린다.</td>
-        <td nowrap="">비회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-013</code></td>
-        <td nowrap="">회원 개인정보 조회<br />(<code>MemberReadMyInfo</code>)</td>
-        <td>'회원'이 어떤 화면에 존재하는 '회원 개인정보 조회' 버튼을 눌렀을 때, '회원'에 대한 인가가 정상적으로 수행될 경우에 '비밀번호 확인 화면'으로 이동한다. 입력한 값이 해당 회원의 '비밀번호'와 일치하고 '회원'에 대한 인가가 정상적으로 수행될 경우에 해당 회원에 대한 '개인정보 조회 화면'을 제공한다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-014</code></td>
-        <td nowrap="">회원 개인정보 갱신<br />(<code>MemberUpdateMyInfo</code>)</td>
-        <td>'회원'이 해당 회원에 대한 '개인정보 조회 화면'에서 개인정보를 수정하고 '개인정보 갱신 버튼'을 눌렀을 때, 각각의 '개인정보'에 대한 유효성 검사가 정상적으로 이루어지고 '회원'에 대한 인가가 정상적으로 수행될 경우에 '회원'의 '개인정보'에 해당하는 값들을 데이터베이스에 갱신한다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-015</code></td>
-        <td nowrap="">회원 개인정보 갱신 이메일 인증<br />(<code>MemberUpdateMyInfoCertifyByEmail</code>)</td>
-        <td>'회원'이 해당 회원에 대한 '개인정보 조회 화면'에서 개인정보 중에 '이메일'을 수정하고 '이메일 인증' 버튼을 눌렀을 때, '이메일'에 대한 유효성 검사가 정상적으로 이루어지고 '회원'에 대한 인가가 정상적으로 수행될 경우에 '인증 주소'를 생성하여 30분간 유효한 '인증 주소'를 포함한 '인증 이메일'을 생성 및 전송한다. 만약 해당 '인증 주소'을 열람한다면, 인증이 성공하였다는 것을 알린다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-016</code></td>
-        <td nowrap="">회원 <code>OAuth</code> 연동<br />(<code>MemberUpdateMyOAuth</code>)</td>
-        <td>'회원'이 해당 회원에 대한 '개인정보 조회 화면'에서 개인 정보 중에 '특정 외부 사이트 (<code>Google</code>, <code>Kakao</code>, <code>Naver</code>, <code>Apple</code>, <code>X</code>)로 연동 버튼'을 눌렀을 때 '회원'에 대한 인가가 정상적으로 수행될 경우에 해당 외부 사이트에서 '인증'을 진행하도록 한다. 해당 외부 사이트에서 '인증'이 정상적으로 수행됨을 알린다면, '회원'에 대한 인가가 정상적으로 수행될 경우에 해당 회원에 해당하는 '<code>OAuth</code>'에 대한 정보를 갱신한다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-017</code></td>
-        <td nowrap="">회원 <code>OAuth</code> 연동 해제<br />(<code>MemberDeleteMyOAuth</code>)</td>
-        <td>'회원'이 해당 회원에 대한 '개인정보 조회 화면'에서 개인 정보 중에 '특정 외부 사이트 (<code>Google</code>, <code>Kakao</code>, <code>Naver</code>, <code>Apple</code>, <code>X</code>)로 연동 해제 버튼'을 눌렀을 때 '회원'에 대한 인가가 정상적으로 수행될 경우에 해당 회원에 해당하는 '<code>OAuth</code>'에 대한 정보를 삭제한다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-018</code></td>
-        <td nowrap="">회원 탈퇴 (회원 개인정보 삭제)<br />(<code>MemberDeleteMyAccount</code>)</td>
-        <td>'회원'이 해당 회원에 대한 '개인정보 조회 화면'에서 '회원 탈퇴 버튼'을 눌렀을 때, '회원'에 대한 인가가 정상적으로 수행될 경우에 '비밀번호 재확인 화면'을 제공한다. 입력한 값이 해당 회원의 '비밀번호'와 일치하고 '회원'에 대한 인가가 정상적으로 수행될 경우에 '회원 탈퇴 안내 화면'을 제공한다. 만약 '회원 탈퇴 안내 화면'에서 '회원 탈퇴 버튼'을 눌렀을 때, '회원'에 대한 인가가 정상적으로 수행될 경우에 해당 회원에 해당하는 '개인정보'를 삭제한다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-019</code></td>
-        <td nowrap="">회원 로그인 기록 조회<br />(<code>MemberReadLoginHistory</code>)</td>
-        <td>'회원'이 해당 회원에 대한 '개인정보 조회 화면'에서 '로그인 기록 조회 버튼'을 눌렀을 때, '회원'에 대한 인가가 정상적으로 수행될 경우에 해당 회원에 대한 '로그인 기록' ('로그인 일시', '로그인 <code>IP</code>', '로그인 국가', '로그인 기기')을 제공하는 '로그인 기록 화면'으로 이동한다. (이때 '로그인 기록'은 최근 3개월까지의 기록을 한정해 제공하며, 최대 1,000건까지 한정해 제공한다.)</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-020</code></td>
-        <td nowrap="">회원 비밀번호 재설정 기록 조회<br />(<code>MemberReadResetPasswordHistory</code>)</td>
-        <td>'회원'이 해당 회원에 대한 '개인정보 조회 화면'에서 '비밀번호 재설정 기록 조회 버튼'을 눌렀을 때, '회원'에 대한 인가가 정상적으로 수행될 경우에 해당 회원에 대한 '비밀번호 재설정 기록' ('비밀번호 재설정 일시', '비밀번호 재설정 <code>IP</code>', '비밀번호 재설정 국가')을 제공하는 '비밀번호 재설정 기록 화면'으로 이동한다. (이때 '비밀번호 재설정 기록'은 최근 6개월까지의 기록을 한정해 제공하며, 최대 1,000건까지 한정해 제공한다.)</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-021</code></td>
-        <td nowrap="">회원 중복 로그인 설정<br />(<code>MemberSetDuplicateLogin</code>)</td>
-        <td>'회원'이 해당 회원에 대한 '개인정보 조회 화면'에서 '회원 중복 로그인 설정 옵션'을 비활성화할 때, 팝업 창을 통해 비활성화가 이루어질 때 수행될 작업에 대해 안내한다. 만약 팝업 창에 참인 값이 반환되었다면, '회원'에 대한 인가가 정상적으로 수행될 경우에 회원이 로그인을 유지하고 있는 기기가 모두 해제되고, 회원이 앞으로 로그인 유지를 활성화한 상태로 로그인을 시도하더라도 로그인 유지가 이루어지지 않는다. '회원 중복 로그인 설정 옵션'을 활성화하면, 활성화가 이루어질 때 수행될 작업에 대해 안내한다. 만약 팝업 창에 참인 값이 반환되었다면, '회원'에 대한 인가가 정상적으로 수행될 경우에 회원이 앞으로 로그인 유지를 활성화한 상태로 로그인을 시도한다면 로그인 유지가 이루어진다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-022</code></td>
-        <td nowrap="">회원 로그인 유지 기기 조회<br />(<code>MemberReadRememberMeHistory</code>)</td>
-        <td>'회원'이 해당 회원에 대한 '개인정보 조회 화면'에서 '회원 로그인 유지 기기 조회 버튼'을 눌렀을 때, '회원'에 대한 인가가 정상적으로 수행될 경우에 '회원 로그인 유지 기기 기록' ('운영체제', '브라우저', '로그인 <code>IP</code>', '최근 접속 일시', '최초 로그인 일시')를 제공하는 '로그인 유지 기기 화면'으로 이동한다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-023</code></td>
-        <td nowrap="">회원 로그인 유지 기기 해제<br />(<code>MemberDeleteRememberMe</code>)</td>
-        <td>'회원'이 '로그인 유지 기기 화면'에서 특정 기기에 대한 '로그아웃 버튼'을 눌렀을 때, '회원'에 대한 인가가 정상적으로 수행될 경우에 특정 기기에 대한 로그인 유지 기록을 삭제한다. (이때, 현재 접속 중인 기기는 삭제할 수 없도록 한다.)</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-024</code></td>
-        <td nowrap="">회원 프로필 조회<br />(<code>MemberReadMyProfile</code>)</td>
-        <td>어떤 화면에서 특정 회원에 대한 '프로필'을 조회해야 할 때, 해당 '회원'에 대한 프로필 정보를 제공하는 '프로필 화면'을 제공한다.</td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-025</code></td>
-        <td nowrap="">회원 프로필 갱신<br />(<code>MemberUpdateMyProfile</code>)</td>
-        <td>'회원'이 해당 회원에 대한 '프로필 화면'에서 '프로필 갱신' 버튼을 눌렀을 때, 해당 '회원'에 대한 인가가 정상적으로 수행될 경우에 프로필 정보를 갱신할 수 있는 '프로필 갱신 화면'을 제공한다. 만약 '프로필 갱신 화면'에서 '프로필 갱신 버튼'을 누른다면 '회원'에 대한 인가가 정상적으로 수행될 경우에 해당 회원에 대한 프로필 정보를 갱신한다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-026</code></td>
-        <td nowrap="">회원 인터페이스 설정 조회<br />(<code>MemberReadMyInterface</code>)</td>
-        <td>'회원'이 어떤 화면에 존재하는 특정 회원에 대한 '인터페이스 설정 조회' 버튼을 눌렀을 때, '회원'에 대한 인가가 정상적으로 수행될 경우에 해당 '회원'에 대한 인터페이스 정보를 제공하는 '인터페이스 설정 화면'을 제공한다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-027</code></td>
-        <td nowrap="">회원 인터페이스 설정 갱신<br />(<code>MemberUpdateMyInterface</code>)</td>
-        <td>'회원'이 '인터페이스 설정 화면'에 존재하는 특정 정보를 갱신한다면, '회원'에 대한 인가가 정상적으로 수행될 경우에 이를 반영한 화면을 즉각적으로 표현한다. 만약 '인터페이스 화면'에 존재하는 '인터페이스 설정 저장 버튼'을 누른다면, '회원'에 대한 인가가 정상적으로 수행될 경우에 해당 회원에 대한 인터페이스 설정 정보를 갱신한다. 또한 '인터페이스 화면'에 존재하는 '인터페이스 설정 초기화' 버튼을 누르거나 '인터페이스 설정 저장 버튼'을 누르지 않고 다른 화면을 이동한다면, 기존 값을 반영한 화면을 표현한다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-028</code></td>
-        <td nowrap="">회원 상태 조회<br />(<code>MemberReadMyStatus</code>)</td>
-        <td>어떤 화면에서 특정 회원에 대한 '상태'를 조회해야 할 때, 해당 '회원'에 대한 상태 정보를 제공하는 '상태 화면'을 제공한다.</td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-029</code></td>
-        <td nowrap="">회원 상태 갱신<br />(<code>MemberUpdateMyStatus</code>)</td>
-        <td>특정 '회원'이 사이트 내에서 어떤 작업을 실행할 때, 해당 '회원'에 대한 상태 정보가 '오프라인'이라면, 이를 '오프라인'에서 '온라인'으로 갱신한다. 만약 '회원'이 어떤 화면에서 '방해 금지 활성화 버튼'을 눌렀다면, '회원'에 대한 인가가 정상적으로 수행될 경우에 회원의 상태 정보를 '방해 금지'으로 갱신한다. ('방해 금지'가 활성화된 상태에서는 중요한 알림을 제외한 모든 알림들을 전달받지 않늗다.) 만약 '회원'이 어떤 화면에서 '방해 금지 비활성화 버튼'을 눌렀다면, '회원'에 대한 인가가 정상적으로 수행될 경우에 회원의 상태 정보를 '온라인'으로 갱신한다. 만약 로그인 유지 기기가 하나일 때 로그아웃을 실행하거나 1시간 이상 사이트 내에서 작업이 이루어지지 않는다면, 해당 '회원'에 대한 상태 정보가 '온라인'에서 '오프라인'으로 갱신한다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-030</code></td>
-        <td nowrap="">회원 권한 조회<br />(<code>MemberReadAuth</code>)</td>
-        <td>'회원'이 어떤 화면으로 이동할 때, 특정 작업에 대한 '권한'을 갖고 있다면 '회원'에 대한 인가가 정상적으로 수행될 경우에 특정 작업의 실행을 위해 이를 다른 도메인 서비스에 요청할 수 있는 '권한 버튼'을 표시한다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-031</code></td>
-        <td nowrap="">회원 권한 요청<br />(<code>MemberPublishAuth</code>)</td>
-        <td>'회원'이 어떤 화면에서 특정 작업에 대한 '권한 버튼'을 눌렀을 때, 특정 작업의 실행을 위해 이를 다른 도메인 서비스에 요청하여 요청에 대한 응답을 반환한다.</td>
-        <td nowrap="">회원</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>ME-032</code></td>
-        <td nowrap="">회원 권한 기록 조회<br />(<code>MemberReadAuthHistory</code>)</td>
-        <td>어떤 화면에서 특정 회원에 대한 '권한 기록 버튼'을 눌렀을 때, 해당 회원이 다른 도메인에 권한을 요청하여 응답받은 '권한 기록' ('권한 요청 일시', '권한 응답 일시', '권한 이름', '권한 내용', '권한 응답 결과', '권한 요청자', '권한 실행자')를 제공하는 '권한 기록 화면'으로 이동한다.</td>
-        <td nowrap="">-</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td rowspan="7">관리자<br />(<code>Manager</code>)</td>
-        <td nowrap=""><code>MA-001</code></td>
-        <td nowrap="">관리자 보안 로그인<br />(<code>ManagerSecureLogin</code>)</td>
-        <td>지정된 <code>IP</code>에서 접속한 '비회원'이 '관리자 로그인 화면'에서 '아이디'와 '비밀번호'를 입력하고 '로그인 버튼'을 눌렀을 대, '유효성 검사' 및 관리자에 대한 '인증'이 정상적으로 수행되면 '관리자'에 대한 '인가'를 수행한다.</td>
-        <td nowrap="">비회원 (보안)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>MA-002</code></td>
-        <td nowrap="">관리자 보안 로그아웃<br />(<code>ManagerSecureLogout</code>)</td>
-        <td>'관리자'가 어떤 화면에서 '로그아웃 버튼'을 누를 때, 관리자에 대한 '인증'이 정상적으로 수행되면 '관리자'에 대한 '인가'를 비활성화하고 '관리자 로그인 화면'으로 이동한다.</td>
-        <td nowrap="">관리자</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>MA-003</code></td>
-        <td nowrap="">관리자 과도한 로그인 시도 제한<br />(<code>ManagerLimitExcessiveLogin</code>)</td>
-        <td>지정된 <code>IP</code>에서 접속한 '비회원'이 '관리자 로그인 화면'에서 5회 이상 '로그인'에 실패할 경우에 해당 <code>IP</code>에서 접속하는 것을 30분간 금지한다.</td>
-        <td nowrap="">비회원 (보안)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>MA-004</code></td>
-        <td nowrap="">관리자 회원 권한 갱신<br />(<code>ManagerUpdateAuthOnUser</code>)</td>
-        <td>'관리자'가 '관리자 콘솔 화면'에서 '회원 권한 갱신 버튼'을 누르면, 관리자에 대한 '인증'이 정상적으로 수행되면 회원 <code>ID</code>를 검색할 수 있는 '(관리자) 회원 검색 화면'을 제공한다. 입력한 값과 일치하는 회원 <code>ID</code>이 존재할 때, 관리자에 대한 '인증'이 정상적으로 수행되면 회원 프로필 정보를 제공하고 회원 권한을 갱신할 수 있는 '(관리자) 회원 권한 갱신 화면'을 제공한다. '회원 권한 갱신 버튼'을 눌렀을 때, 관리자에 대한 '인증'이 정상적으로 수행되면 '회원 서비스'에 존재하는 해당 회원의 권한 정보를 갱신한다. (이 기능은 해당 권한을 가진 회원 또한 '회원 권한 요청'을 통해 실행 가능하다.)</td>
-        <td nowrap="">관리자,<br />회원 (권한)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>MA-005</code></td>
-        <td nowrap="">관리자 권한 실행 기록 조회<br />(<code>ManagerReadAuthRequestHistory</code>)</td>
-        <td>'관리자'가 '관리자 콘솔 화면'에서 '권한 실행 기록 조회 버튼'을 누르면, 관리자에 대한 '인증'이 정상적으로 수행되면 모든 '회원'이 '관리자 서비스'에 권한을 요청하여 응답받은 '권한 기록' ('권한 요청 일시', '권한 응답 일시', '권한 이름', '권한 내용', '권한 응답 결과', '권한 요청자', '관한 실행자') (이 기능은 해당 권한을 가진 회원 또한 '회원 권한 요청'을 통해 실행 가능하다.)</td>
-        <td nowrap="">관리자,<br />회원 (권한)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>MA-006</code></td>
-        <td nowrap="">관리자 IP 차단<br />(<code>ManagerBlockIP</code>)</td>
-        <td> (이 기능은 해당 권한을 가진 회원 또한 '회원 권한 요청'을 통해 실행 가능하다.)</td>
-        <td nowrap="">관리자,<br />회원 (권한)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>MA-007</code></td>
-        <td nowrap="">관리자 회원 제재<br />(<code>ManagerPenaltyMember</code>)</td>
-        <td> (이 기능은 해당 권한을 가진 회원 또한 '회원 권한 요청'을 통해 실행 가능하다.)</td>
-        <td nowrap="">관리자,<br />회원 (권한)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td rowspan="19">위키<br />(<code>Wiki</code>)</td>
-        <td nowrap=""><code>WI-001</code></td>
-        <td nowrap="">카테고리 생성<br />(<code>~CreateCategory</code>)</td>
-        <td>'관리자'나 해당 권한을 가진 회원이 '위키 메인 화면'에서 '카테고리 생성 버튼'을 누를 때, 각각의 '인증'이 정상적으로 수행되면 카테고리의 구성 요소들을 입력할 수 있는 '카테고리 생성 화면'으로 이동한다. '카테고리 생성 화면'에서 '카테고리 생성 버튼'을 눌렀다면, 카테고리의 구성 요소들 중에 필수 항목들이 모두 입력되고 입력한 값들에 대한 '유효성 검사'가 정상적으로 수행되었을 때, 각각의 '인증'이 정상적으로 수행되면 데이터베이스에 '카테고리'를 생성한 다음 '위키 메인 화면'으로 이동한다.</td>
-        <td nowrap="">관리자,<br />회원 (권한)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-002</code></td>
-        <td nowrap="">카테고리 갱신<br />(<code>~UpdateCategory</code>)</td>
-        <td>'관리자'나 해당 권한을 가진 회원이 특정한 '카테고리 메인 화면'에서 '카테고리 갱신 버튼'을 누를 때, 각각의 '인증'이 정상적으로 수행되면 해당 카테고리의 구성 요소들을 수정할 수 있는 '카테고리 수정 화면'으로 이동한다. '카테고리 갱신 화면'에서 '카테고리 갱신 버튼'을 눌렀다면, 카테고리의 구성 요소들 중에 필수 항목들이 모두 입력되고 입력한 값들에 대한 '유효성 검사'가 정상적으로 수행되었을 때, 각각의 '인증'이 정상적으로 수행되면 데이터베이스에 해당 '카테고리'를 생성한 다음에 생성된 '카테고리 메인 화면'으로 이동한다.</td>
-        <td nowrap="">관리자,<br />회원 (권한)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-003</code></td>
-        <td nowrap="">카테고리 읽기<br />(<code>~ReadCategory</code>)</td>
-        <td>어떤 화면에서 특정한 '카테고리 이동 버튼'을 누르면, 해당 카테고리의 정보와 하위 문서들을 볼 수 있는 '카테고리 메인 화면'으로 이동한다.</td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-004</code></td>
-        <td nowrap="">카테고리 삭제<br />(<code>~DeleteCategory</code>)</td>
-        <td>'관리자'나 해당 권한을 가진 회원이 특정한 '카테고리 메인 화면'에서 '카테고리 삭제 버튼'을 누를 때, 각각의 '인증'이 정상적으로 수행되면 해당 카테고리를 삭제할 수 있는 '카테고리 삭제 화면'으로 이동한다. '카테고리 삭제 화면'에서 '카테고리 삭제 버튼'을 눌렀다면, 각각의 '인증'이 정상적으로 수행되면 데이터베이스에 '카테고리'를 생성한 다음 '위키 메인 화면'으로 이동한다.</td>
-        <td nowrap="">관리자,<br />회원 (권한)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-005</code></td>
-        <td nowrap="">문서 생성<br />(<code>~CreateDocument</code>)</td>
-        <td>어떤 화면에서 '문서 생성 버튼'을 누르면, 문서의 구성 요소들을 작성할 수 있는 '문서 생성 화면'으로 이동한다. '문서 생성 화면'에서 '문서 생성 버튼'을 눌렀다면, 문서의 구성 요소들 중에 필수 항목들이 모두 입력되고 입력한 값들에 대한 '유효성 검사'가 정상적으로 수행되었을 때, 데이터베이스에 해당 '문서' </td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-006</code></td>
-        <td nowrap="">문서 갱신<br />(<code>~UpdateDocument</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-007</code></td>
-        <td nowrap="">문서 읽기<br />(<code>~ReadDocument</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-008</code></td>
-        <td nowrap="">문서 삭제<br />(<code>~DeleteDocument</code>)</td>
-        <td></td>
-        <td nowrap="">관리자,<br />회원 (권한)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-009</code></td>
-        <td nowrap="">특정 카테고리에서 문서 검색<br />(<code>~SearchDocumentOnCategory</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-010</code></td>
-        <td nowrap="">모든 카테고리에서 문서 검색<br />(<code>~SearchDocument</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-011</code></td>
-        <td nowrap="">카테고리 검색<br />(<code>~SearchCategory</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>DO-012</code></td>
-        <td nowrap="">특정 카테고리 기록 조회<br />(<code>~ReadCategoryHistory</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-013</code></td>
-        <td nowrap="">특정 문서 기록 조회<br />(<code>~ReadDocumentHistory</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-014</code></td>
-        <td nowrap="">템플릿 생성<br />(<code>~CreateTemplate</code>)</td>
-        <td></td>
-        <td nowrap="">관리자,<br />회원 (권한)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-015</code></td>
-        <td nowrap="">템플릿 갱신<br />(<code>~UpdateTemplate</code>)</td>
-        <td></td>
-        <td nowrap="">관리자,<br />회원 (권한)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-016</code></td>
-        <td nowrap="">템플릿 읽기<br />(<code>~ReadTemplate</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-017</code></td>
-        <td nowrap="">템플릿 삭제<br />(<code>~DeleteTemplate</code>)</td>
-        <td></td>
-        <td nowrap="">관리자,<br />회원 (권한)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-018</code></td>
-        <td nowrap="">템플릿 검색<br />(<code>~SearchTemplate</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>WI-019</code></td>
-        <td nowrap="">문서에 템플릿 가져오기<br />(<code>~AddTemplateOnDocument</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td rowspan="5">토론<br />(<code>Debate</code>)</td>
-        <td nowrap=""><code>DE-001</code></td>
-        <td nowrap="">문서에 토론 생성<br />(<code>CreateDebateOnDocument</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>DE-002</code></td>
-        <td nowrap=""><br />(<code>Debate</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>DE-003</code></td>
-        <td nowrap=""><br />(<code>Debate</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>DE-004</code></td>
-        <td nowrap=""><br />(<code>Debate</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>DE-005</code></td>
-        <td nowrap=""><br />(<code>Debate</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td rowspan="15">게시판<br />(<code>Board</code>)</td>
-        <td nowrap=""><code>BO-001</code></td>
-        <td nowrap="">게시판 생성<br />(<code>~CreateBoard</code>)</td>
-        <td></td>
-        <td nowrap="">관리자,<br />회원 (권한)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>BO-002</code></td>
-        <td nowrap="">게시판 조회<br />(<code>~ReadBoard</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>BO-003</code></td>
-        <td nowrap="">게시판 갱신<br />(<code>~UpdateBoard</code>)</td>
-        <td></td>
-        <td nowrap="">관리자,<br />회원 (권한)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>BO-004</code></td>
-        <td nowrap="">게시판 삭제<br />(<code>~DeleteBoard</code>)</td>
-        <td></td>
-        <td nowrap="">관리자,<br />회원 (권한)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>BO-005</code></td>
-        <td nowrap="">특정 게시판에서 게시글 조회<br />(<code>~ReadPostOnBoard</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>BO-006</code></td>
-        <td nowrap="">특정 게시판에서 게시글 갱신<br />(<code>~UpdatePostOnBoard</code>)</td>
-        <td></td>
-        <td nowrap="">관리자,<br />회원 (권한),<br />작성자 (게시글)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>BO-007</code></td>
-        <td nowrap="">특정 게시판에서 게시글 삭제<br />(<code>~DeletePostOnBoard</code>)</td>
-        <td></td>
-        <td nowrap="">관리자,<br />회원 (권한),<br />작성자 (게시글)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>BO-008</code></td>
-        <td nowrap="">특정 게시판에서 게시글 목록 조회<br />(<code>~ReadPostHistoryOnBoard</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>BO-009</code></td>
-        <td nowrap="">게시판 검색<br />(<code>~SearchBoard</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>BO-010</code></td>
-        <td nowrap="">특정 게시판에서 게시글 검색<br />(<code>~SearchPostOnBoard</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>BO-011</code></td>
-        <td nowrap="">모든 게시판에서 게시글 검색<br />(<code>~SearchPost</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>BO-012</code></td>
-        <td nowrap="">회원이 작성한 게시글 기록 조회<br />(<code>~ReadUserPostHistory</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>BO-013</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>BO-014</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>BO-015</code></td>
-        <td nowrap=""><br />(<code></code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td rowspan="6">댓글<br />(<code>Comment</code>)</td>
-        <td nowrap=""><code>CO-001</code></td>
-        <td nowrap="">댓글 생성<br />(<code>~CreateComment</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>CO-002</code></td>
-        <td nowrap="">댓글 조회<br />(<code>~ReadComment</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>CO-003</code></td>
-        <td nowrap="">댓글 갱신<br />(<code>~UpdateComment</code>)</td>
-        <td></td>
-        <td nowrap="">작성자 (댓글)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>CO-004</code></td>
-        <td nowrap="">댓글 삭제<br />(<code>~DeleteComment</code>)</td>
-        <td></td>
-        <td nowrap="">관리자,<br />회원 (권한),<br />작성자 (댓글)</td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>CO-005</code></td>
-        <td nowrap="">회원이 작성한 댓글 기록 조회<br />(<code>~ReadUserCommentHistory</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>CO-006</code></td>
-        <td nowrap="">최근에 등록된 댓글 기록 조회<br />(<code>~ReadCreateCommentHistory</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td rowspan="5">알림<br />(<code>Notice</code>)</td>
-        <td nowrap=""><code>NO-001</code></td>
-        <td nowrap=""><br />(<code>Notice</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>NO-002</code></td>
-        <td nowrap=""><br />(<code>Notice</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>NO-003</code></td>
-        <td nowrap=""><br />(<code>Notice</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>NO-004</code></td>
-        <td nowrap=""><br />(<code>Notice</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>NO-005</code></td>
-        <td nowrap=""><br />(<code>Notice</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td rowspan="5">채팅<br />(<code>Chat</code>)</td>
-        <td nowrap=""><code>CH-001</code></td>
-        <td nowrap=""><br />(<code>Chat</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>CH-002</code></td>
-        <td nowrap=""><br />(<code>Chat</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>CH-003</code></td>
-        <td nowrap=""><br />(<code>Chat</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>CH-004</code></td>
-        <td nowrap=""><br />(<code>Chat</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-      <tr>
-        <td nowrap=""><code>CH-005</code></td>
-        <td nowrap=""><br />(<code>Chat</code>)</td>
-        <td></td>
-        <td nowrap=""><code>-</code></td>
-        <td nowrap=""><code></code></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<h2 id="래퍼런스-references--프로젝트-설계-과정에-참고한-자료">래퍼런스 (<code class="language-plaintext highlighter-rouge">References</code>) : 프로젝트 설계 과정에 참고한 자료</h2>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">ver-0.0.1</code> (<code class="language-plaintext highlighter-rouge">2024-02-03</code>) : 최초 작성</p>
-</blockquote>
-
-<div style="text-align: center;">
-  <table>
-    <thead>
-      <tr>
-        <td nowrap="" style="padding-left: 4%; padding-right: 4%;">분류</td>
-        <td nowrap="">이름</td>
-        <td nowrap="">저자</td>
-        <td nowrap="">주소</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td nowrap="" rowspan="2">논문</td>
-        <td>보컬로이드 가상캐릭터의 특성 분석 연구. 일러스트레이션 포럼 (2018)</td>
-        <td nowrap="">김도희</td>
-        <td nowrap=""></td>
-      </tr>
-      <tr>
-        <td>보컬로이드 2차 창작의 변형구조 연구. 이화여자대학교 대학원 석사학위논문. (2012)</td>
-        <td nowrap="">임현정</td>
-        <td nowrap=""></td>
-      </tr>
-      <tr>
-        <td nowrap="" rowspan="1">기사</td>
-        <td>한국 보컬로이드는 어떻게 나아가야할까?</td>
-        <td nowrap="">안태춘</td>
-        <td nowrap=""><a href="https://www.newslight.kr/news/655301">더뉴스라이트</a></td>
-      </tr>
-      <tr>
-        <td nowrap="" rowspan="3">도서</td>
-        <td>서비스를 성공시키는 기획자의 비법 노트</td>
-        <td nowrap="">조이</td>
-        <td nowrap=""><a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=295601741">알라딘 전자책</a></td>
-      </tr>
-      <tr>
-        <td>사례로 배우는 언어 전환 프로젝트 관리</td>
-        <td nowrap="">남경호</td>
-        <td nowrap=""><a href="https://www.aladin.co.kr/m/mproduct.aspx?ItemId=315185582">알라딘 전자책</a></td>
-      </tr>
-      <tr>
-        <td>도메인 주도 설계로 시작하는 마이크로서비스 개발</td>
-        <td nowrap="">한정헌, 유해식, 최은정, 이주영</td>
-        <td nowrap=""><a href="https://www.aladin.co.kr/m/mproduct.aspx?ItemId=285280054">알라딘 전자책</a></td>
-      </tr>
-      <tr>
-        <td nowrap="" rowspan="3">문서</td>
-        <td nowrap="">나무위키</td>
-        <td>나무위키:문법 도움말</td>
-        <td nowrap=""><a href="https://namu.wiki/w/나무위키:문법%20도움말">문서</a></td>
-      </tr>
-      <tr>
-        <td nowrap="">나무위키</td>
-        <td>나무위키:문법 도움말/심화</td>
-        <td nowrap=""><a href="https://namu.wiki/w/나무위키:문법%20도움말/심화">문서</a></td>
-      </tr>
-      <tr>
-        <td>공공기관 웹사이트 구축·운영 가이드</td>
-        <td nowrap="">행정안전부</td>
-        <td nowrap=""><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwj204K9zoKEAxWtLUQIHQsyB4AQFnoECA0QAQ&amp;url=https%3A%2F%2Fwww.mois.go.kr%2Fcmm%2Ffms%2FFileDown.do%3FatchFileId%3DFILE_00084689_1WeMtZ%26fileSn%3D1&amp;usg=AOvVaw1TqMgiQXNjFgQfouwTtQh2&amp;opi=89978449">문서</a></td>
-      </tr>
-            <tr>
-        <td nowrap="" rowspan="2">사이트</td>
-        <td nowrap="" colspan="2">나무위키</td>
-        <td nowrap=""><a href="https://namu.wiki/w/나무위키:대문">홈페이지</a></td>
-      </tr>
-      <tr>
-        <td nowrap="" colspan="2">openNAMU</td>
-        <td nowrap=""><a href="https://github.com/openNAMU/openNAMU">깃허브 저장소</a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="vocawik" /><summary type="html"><![CDATA[프로젝트 목표 (Project Goal) : 프로젝트 진행 과정에서 이루고자 하는 사항들을 정리]]></summary></entry><entry><title type="html">[JS] 8. 모듈 (Module)</title><link href="http://localhost:4000/js8/" rel="alternate" type="text/html" title="[JS] 8. 모듈 (Module)" /><published>2024-02-02T00:00:00+09:00</published><updated>2024-02-02T00:00:00+09:00</updated><id>http://localhost:4000/js8</id><content type="html" xml:base="http://localhost:4000/js8/"><![CDATA[<h2 id="모듈-module--코드를-재사용-가능한-파일-단위의-조각으로-나눈-것">모듈 (<code class="language-plaintext highlighter-rouge">Module</code>) : 코드를 재사용 가능한 파일 단위의 조각으로 나눈 것</h2>
-
-<ul>
-  <li>자신만의 모듈 스코프를 갖고, 어플리케이션과 독립적으로 자체 컴파일한 단위</li>
-  <li>코드의 변수, 상수, 함수, 클래스 등을  선택적으로 공개 (<code class="language-plaintext highlighter-rouge">Export</code>)</li>
-  <li>이름 충돌, 종속성 등 문제 해결 및 엄격 모드 자동 적용</li>
-  <li><code class="language-plaintext highlighter-rouge">Read-Only</code>로 로드되며 동일 영역에 중복 <code class="language-plaintext highlighter-rouge">import</code> 가능</li>
-</ul>
-
-<h3 id="모듈-시스템-module-system--현재는-esm-ecmascript-module이-표준">모듈 시스템 (<code class="language-plaintext highlighter-rouge">Module System</code>) → 현재는 <code class="language-plaintext highlighter-rouge">ESM</code> (<code class="language-plaintext highlighter-rouge">ECMAScript Module</code>)이 표준!</h3>
-
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">package.json</code>에 <code class="language-plaintext highlighter-rouge">"type": "module",</code> 추가</li>
-  <li>모든 파일의 확장자를 <code class="language-plaintext highlighter-rouge">mjs</code></li>
-  <li><code class="language-plaintext highlighter-rouge">npm i esm → $&gt; node -r esm mod.js</code></li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
-  "name": "js",
-  "version": "1.0.0",
-  "description": "package.json for test",
-  "main": "npm.js",
-  "author": "pocj8ur4in",
-  "type": "module", 
-  "license": "ISC"
-}
-</code></pre></div></div>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/76d1a998-c16d-4823-8f8b-18e7c9399904" width="50%" /></p>
-
-<h3 id="임포트-import--익스포트-export--특정-모듈에서-export한-것을-import">임포트 (<code class="language-plaintext highlighter-rouge">Import</code>) &amp; 익스포트 (<code class="language-plaintext highlighter-rouge">Export</code>) : 특정 모듈에서 <code class="language-plaintext highlighter-rouge">Export</code>한 것을 <code class="language-plaintext highlighter-rouge">Import</code></h3>
-
-<ul>
-  <li>모듈을 찾을 위치를 문자열로 지정하는 모듈 지정자 (<code class="language-plaintext highlighter-rouge">Module Specifier</code>) 사용</li>
-  <li>중복으로 임포트하더라도 실행 컨텍스트 단위 하나당 한번만 로드 (<code class="language-plaintext highlighter-rouge">Module Map</code>/<code class="language-plaintext highlighter-rouge">Tree</code>)</li>
-  <li>임포트 및 익스포트 선언은 최상위 스코프에서만 가능, 표현식이 아니라 선언이므로 호이스팅</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export function fn() { ... }
-export const value = 1;
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import {} from './mod.js';
-import '.mod.js'; // side-effect only! → 임포트로 실행만 할 경우에 선언
-</code></pre></div></div>
-
-<h4 id="간접-익스포트-indirect-export--aggregating--다른-모듈의-일부-혹은-전체를-받아-다시-익스포트">간접 익스포트 (<code class="language-plaintext highlighter-rouge">Indirect Export &amp; Aggregating</code>) : 다른 모듈의 일부 혹은 전체를 받아 다시 익스포트</h4>
-
-<ul>
-  <li>필요한 모듈만 모아놓은 또 다른 모듈을 만들 때에 활용</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export { xxx } from './mod1.js';
-export { yyy } from './mod2.js';
-export { zzz } from './mod3.js'; // 사용하려면 명시적으로 import한 후 export해야 함
-
-→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
-
-// import 후 export
-import { xxx } from './mod3.js';
-export { xxx };
-
-→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→→
-
-// 개선된 방법 with Aggregating
-import { xxx, yyy, zzz } from './agg.js';
-
-export * from './mod1.js';
-export * from './mod2.js';
-export * from './mod3.js';
-
-import * as agg from './agg.js';
-</code></pre></div></div>
-
-<h3 id="동적-임포트-dynamic-import--코드-실행-중에-모듈을-비동기적으로-불러옴">동적 임포트 (<code class="language-plaintext highlighter-rouge">Dynamic Import</code>) : 코드 실행 중에 모듈을 비동기적으로 불러옴</h3>
-
-<ul>
-  <li>어플리케이션 초기 로딩 시 모든 모듈을 불러오지 않고, 필요한 모듈만 필요한 시점에 불러와서 성능을 최적화</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 동적 임포트
-import('./path/to/module')
-  .then((module) =&gt; {
-    // 모듈을 사용
-    console.log(module);
-  })
-  .catch((error) =&gt; {
-    // 에러 처리
-    console.error('모듈을 불러오는 동안 에러 발생:', error);
-  });
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 조건에 따라 모듈 동적으로 로드
-const condition = true;
-
-if (condition) {
-  import('./path/to/someModule')
-    .then((someModule) =&gt; {
-      someModule.doSomething();
-    })
-    .catch((error) =&gt; {
-      console.error('모듈을 불러오는 동안 에러 발생:', error);
-    });
-}
-</code></pre></div></div>
-
-<h3 id="모듈-로더-module-loader--내부에서-임포트-및-익스포트를-관리">모듈 로더 (<code class="language-plaintext highlighter-rouge">Module Loader</code>) : 내부에서 임포트 및 익스포트를 관리</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">[ImportEntries]</code>와 <code class="language-plaintext highlighter-rouge">[ExportEntries]</code>라는 내장 슬롯으로 관리
-    <ol>
-      <li>임포트 &amp; 파싱 (구문 분석) : 모듈 레코드, 모듈 맵을 생성</li>
-      <li>인스턴스화 : 모듈의 바인딩 및 환경 레코드를 생성</li>
-      <li>모듈 실행 : 모듈 코드를 실행, 모듈이 ‘평가됨’으로 표시</li>
-    </ol>
-  </li>
-</ul>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/fbced0dc-3bf5-4cd8-83f1-c98863730512" /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { a } from './A.js'
-
-Name: 'a'
-Type: identifier
-Value: 100
-Mutable: false
-</code></pre></div></div>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/d48c71cd-d17e-4267-93f8-41aff403005f" /></p>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/19645c89-cbc7-4c04-a114-99a01716f725" /></p>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/07c4ee10-d19f-44d9-8170-9df928164a5b" /></p>
-
-<h3 id="npm-모듈-생성-및-업로드-httpswwwnpmjscom"><code class="language-plaintext highlighter-rouge">npm</code> 모듈 생성 및 업로드 (<a href="https://www.npmjs.com"><code class="language-plaintext highlighter-rouge">https://www.npmjs.com</code></a>)</h3>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">npm</code> : <code class="language-plaintext highlighter-rouge">Node.js</code>의 패키지를 관리할 수 있는 도구</p>
-
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">Node.js</code>에서 사용할 모듈을 패키지화해 모아둔 저장소 및 패키지 설치 및 관리를 위한 <code class="language-plaintext highlighter-rouge">CLI</code> 제공</li>
-    <li><code class="language-plaintext highlighter-rouge">npx</code> (<code class="language-plaintext highlighter-rouge">node package execute</code>)을 통해 패키지를 설치 및 실행</li>
-    <li>국내에서는 패키지 중복 문제를 링크 방식으로 해결한 <code class="language-plaintext highlighter-rouge">yarn</code>을 많이 사용하는 추세</li>
-  </ul>
-</blockquote>
-
-<ol>
-  <li>패키지 이름 정하기 (<code class="language-plaintext highlighter-rouge">npm info &lt;pkg&gt;</code>)</li>
-  <li><code class="language-plaintext highlighter-rouge">npm init</code>으로 <code class="language-plaintext highlighter-rouge">package.json</code> 작성</li>
-  <li>의존 관계가 있으면 <code class="language-plaintext highlighter-rouge">npm install</code></li>
-  <li><code class="language-plaintext highlighter-rouge">npm login</code> 후 배포 <code class="language-plaintext highlighter-rouge">npm publish --access public</code></li>
-</ol>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[모듈 (Module) : 코드를 재사용 가능한 파일 단위의 조각으로 나눈 것]]></summary></entry><entry><title type="html">[JS] 4. 스코프 (Scope) &amp;amp; 실행 컨텍스트 (Execution Context)</title><link href="http://localhost:4000/js4/" rel="alternate" type="text/html" title="[JS] 4. 스코프 (Scope) &amp;amp; 실행 컨텍스트 (Execution Context)" /><published>2024-01-31T00:00:00+09:00</published><updated>2024-01-31T00:00:00+09:00</updated><id>http://localhost:4000/js4</id><content type="html" xml:base="http://localhost:4000/js4/"><![CDATA[<h2 id="스코프-scope--변수에-접근할-수-있는-범위">스코프 (<code class="language-plaintext highlighter-rouge">Scope</code>) : 변수에 접근할 수 있는 범위</h2>
-
-<ul>
-  <li>변수가 선언되었을 때, 선언 위치에 의해 해당 변수에 접근할 수 있는 코드의 영역이 결정
-    <ul>
-      <li>자바스크립트 엔진은 스코프를 통해 참조 대상 식별자를 찾아 변수를 식별</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="전역-스코프-global-level-scope--코드-어디에서나-참조-가능">전역 스코프 (<code class="language-plaintext highlighter-rouge">Global-level Scope</code>) → 코드 어디에서나 참조 가능</h3>
-
-<ul>
-  <li>전역에 선언된 전역 변수 (<code class="language-plaintext highlighter-rouge">Global variable</code>) 는 전역 객체 (<code class="language-plaintext highlighter-rouge">Global Object</code>)의 프로퍼티</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var global = 'global';
-
-function main() {
-  var local = 'local';
-  console.log(global);
-  console.log(local);
-}
-
-console.log(global);
-console.log(local); // Uncaught ReferenceError: local is not defined
-</code></pre></div></div>
-
-<h3 id="함수-스코프-function-level-scope--함수-자신과-하위-함수에서만-참조-가능">함수 스코프 (<code class="language-plaintext highlighter-rouge">Function-level Scope</code>) → 함수 자신과 하위 함수에서만 참조 가능</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(function () {
-  var local = 'local';
-  console.log(local);
-})();
-</code></pre></div></div>
-
-<h3 id="블록-스코프-block-level-scope--블록-내에서만-참조-가능">블록 스코프 (<code class="language-plaintext highlighter-rouge">Block-level Scope</code>) → 블록 내에서만 참조 가능</h3>
-
-<h3 id="모듈-스코프-module-level-scope-">모듈 스코프 (<code class="language-plaintext highlighter-rouge">Module-level Scope</code>) →</h3>
-
-<h3 id="렉시컬-스코프-lexical-level-scope">렉시컬 스코프 (<code class="language-plaintext highlighter-rouge">Lexical-level Scope</code>)</h3>
-
-<h3 id="암묵적-전역-implicit-global">암묵적 전역 (<code class="language-plaintext highlighter-rouge">Implicit Global</code>)</h3>
-
-<h2 id="실행-컨텍스트-execution-context--실행할-코드에-제공할-환경-정보들을-모아놓은-객체">실행 컨텍스트 (<code class="language-plaintext highlighter-rouge">Execution Context</code>) : 실행할 코드에 제공할 환경 정보들을 모아놓은 객체</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var gg = 1;  let bb = 2;
-
-function f1(x, y) {
-  var gg = 11;   let bb = 22;
-  console.log('f1&gt;', gg, bb, zz, f2, f2.length);
-  f2('first');
-  { 
-    const xx = 99;
-    let lll = 0;
-    f2('nest-first');
-    var zz = 88;
-    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
-  }
-  function f2(t, u) { console.log(t, 'inner', xx, zz); }
-  function f2(t, u, v) { console.log(t, 'inner2', xx, zz); }
-  var zz = 800;
-  f2('second');
-}
-
-function f2(g) {
-  console.log(g, 'global f2&gt;', gg, bb, xx, kk);
-}
-
-let xx = 9;
-if (gg &gt; 0) { var kk = 33; var yy = 9; }
-
-f1(1,2);   console.log(kk, yy);
-
-f2('third');
-</code></pre></div></div>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/40dca0b0-9e4b-44d6-a36c-83aee24fc2e3" /></p>
-
-<p><code class="language-plaintext highlighter-rouge">(1)</code> 전역 코드 평가 단계</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var gg;  let bb;
-function f1(x, y) { ... } // Function Object
-function f2(g) { ... }    // Function Object
-let xx;
-var kk;
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(2)</code> 전역 코드 실행 단계</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var gg = 1;  let bb = 2;
-let xx = 9;
-if (gg &gt; 0) { ... }
-f1(1,2);   console.log(kk, yy);
-f2('third');
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(3)</code> 전역 코드 실행 단계 (<code class="language-plaintext highlighter-rouge">if</code>문 코드 블록 실행 및 종료)</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (gg &gt; 0) { // var gg = 1;
-  var kk = 33; var yy = 9;
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(4)</code> 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 호출</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f1(1,2);
-
-function f1(x, y) {
-  var gg;   let bb;
-  { ... }
-  // function f2(t, u) { ... } // Function Object
-  function f2(t, u, v) { ... } // Function Object
-  var zz;
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(5)</code> 함수 코드 평가 단계 내부의 블록 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">{ ... }</code></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  { 
-    const xx;
-    let lll;
-    var zz;
-    function f2(t) { ... } // Function Object
-  }
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(6)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f1(1,2);
-
-function f1(x, y) {
-  gg = 11;   bb = 22;
-  console.log('f1&gt;', gg, bb, zz, f2, f2.length); // f1&gt; 11, 22, undefined, f2, 3
-  f2('first');
-  { ... }
-  zz = 800;
-  f2('second');
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(7)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('first')</code> 호출</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f1(1,2);
-
-function f1(x, y) {
-  f2('first');
-
-  function f2(t, u, v) { console.log(t, 'inner2', xx, zz); };
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(8)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f2('first')</code> 실행</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f1(1,2);
-
-function f1(x, y) {
-  gg = 11;   bb = 22;
-  f2('first'); // first inner2 9 undefined
-
-  function f2(t, u, v) { console.log(t, 'inner2', xx, zz); };
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(9)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('nest-first')</code> 호출</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f1(x, y) {
-  gg = 11; bb = 22;
-  { 
-    xx = 99;
-    lll = 0;
-    f2('nest-first');
-    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
-  }
-...
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(10)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f2('nest-first')</code> 실행</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f1(x, y) {
-  gg = 11; bb = 22;
-
-  { 
-    xx = 99;
-    lll = 0;
-    f2('nest-first'); // nest-first nested 99 undefined 0
-    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
-  }
-...
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(11)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('second')</code> 호출</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f1(x, y) {
-  gg = 11; bb = 22;
-  
-  {
-    const xx = 99;
-    lll = 0;
-    zz = 88;
-    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
-  }
-
-  f2('second');
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(12)</code> 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f1(1,2)</code> 실행 → 함수 코드 실행 단계 : <code class="language-plaintext highlighter-rouge">f2('second')</code> 실행</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f1(x, y) {
-  gg = 11; bb = 22;
-  
-  {
-    const xx = 99;
-    lll = 0;
-    zz = 88;
-    function f2(t) { console.log(t, 'nested', xx, zz, lll); }
-  }
-  f2('second'); // second nested 99 800 0
-}
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(13)</code> 전역 코드 실행 단계 (<code class="language-plaintext highlighter-rouge">console.log</code> 문 실행 및 종료)</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gg = 1;  bb = 2;
-
-console.log(kk, yy); // 33 9
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(14)</code> 전역 코드 실행 단계 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('third')</code> 평가</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gg = 1; bb = 2;
-
-function f2(g) {
-  console.log(g, 'global f2&gt;', gg, bb, xx, kk);
-}
-
-let xx = 9;
-if (gg &gt; 0) { var kk = 33; var yy = 9; }
-
-f2('third');
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">(15)</code> 전역 코드 실행 단계 → 함수 코드 평가 단계 : <code class="language-plaintext highlighter-rouge">f2('third')</code> 실행</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gg = 1; bb = 2;
-
-function f2(g) {
-  console.log(g, 'global f2&gt;', gg, bb, xx, kk);
-}
-
-let xx = 9;
-if (gg &gt; 0) { var kk = 33; var yy = 9; }
-
-f2('third'); // third global f2&gt; 1 2 9 33
-</code></pre></div></div>
-
-<blockquote>
-  <p><b>블록 코드 평가 및 실행</b></p>
-
-  <ol>
-    <li><code class="language-plaintext highlighter-rouge">Global</code>/<code class="language-plaintext highlighter-rouge">Function</code> 평가할 때 <code class="language-plaintext highlighter-rouge">Block scope</code>를 만나면, <code class="language-plaintext highlighter-rouge">Block Lexical Environment</code>를 생성한다.<br />(별도의 <code class="language-plaintext highlighter-rouge">ExecutionContext</code>를 생성하지 않고 독립적인 <code class="language-plaintext highlighter-rouge">Lexical Environment</code>만을 생성한다.)</li>
-    <li><code class="language-plaintext highlighter-rouge">Block code</code>를 평가하여 이 <code class="language-plaintext highlighter-rouge">Block</code>에 대한 <code class="language-plaintext highlighter-rouge">DeclarativeEnvironmentRecord</code>를 생성한다.</li>
-    <li><code class="language-plaintext highlighter-rouge">const</code>/<code class="language-plaintext highlighter-rouge">let</code>은 <code class="language-plaintext highlighter-rouge">notInitializedYet</code> 상태로 <code class="language-plaintext highlighter-rouge">DeclarativeEnvironmentRecord</code>에 등록되고, <code class="language-plaintext highlighter-rouge">var</code>/<code class="language-plaintext highlighter-rouge">function</code> 선언식 등은 부모 <code class="language-plaintext highlighter-rouge">Function scope</code>의 <code class="language-plaintext highlighter-rouge">EnvironmentRecord</code>에 <code class="language-plaintext highlighter-rouge">hoisting</code>한다.<br />(이때 <code class="language-plaintext highlighter-rouge">function</code>은 <code class="language-plaintext highlighter-rouge">&lt;function object&gt;</code>가 아니라 <code class="language-plaintext highlighter-rouge">var</code>와 같이 <code class="language-plaintext highlighter-rouge">undefined</code>로 초기화한다.)</li>
-    <li><code class="language-plaintext highlighter-rouge">Block</code>이 끝나면, 평가 종료 후 상위 <code class="language-plaintext highlighter-rouge">scope code</code>를 계속 평가한다.</li>
-    <li><code class="language-plaintext highlighter-rouge">Block</code>이 실행되면, <code class="language-plaintext highlighter-rouge">Block Lexical Environment</code>를 만들고, 부모 <code class="language-plaintext highlighter-rouge">ExecutionContext</code>의 제어를 가져온다.</li>
-    <li><code class="language-plaintext highlighter-rouge">Block</code> 내의 <code class="language-plaintext highlighter-rouge">Function</code> 선언식은 무조건 <code class="language-plaintext highlighter-rouge">Block</code> 최상단에 <code class="language-plaintext highlighter-rouge">hoisting</code>되어 있으므로 먼저 실행한다.<br />(이 시점에 상위 <code class="language-plaintext highlighter-rouge">function-scope</code>에 함수를 정의해, <code class="language-plaintext highlighter-rouge">&lt;function object&gt;</code>으로 인정된다!)</li>
-    <li>그 외의 코드 (할당문 및 다른 함수 호출)를 한 줄씩 실행된다.</li>
-    <li><code class="language-plaintext highlighter-rouge">Block</code>의 실행이 끝나면, <code class="language-plaintext highlighter-rouge">ExecutionContext</code>의 제어를 다시 부모로 돌려준다.</li>
-    <li><code class="language-plaintext highlighter-rouge">Block</code>은 조건에 따라 실행 여부가 결정된다. 평가 시 블럭 내의 <code class="language-plaintext highlighter-rouge">var</code>/<code class="language-plaintext highlighter-rouge">function</code>은 <code class="language-plaintext highlighter-rouge">undefined</code>로 <code class="language-plaintext highlighter-rouge">hoisting</code>되고, 조건이 만족하여 호출 및 실행될 때에만 <code class="language-plaintext highlighter-rouge">Block Lexical Environment</code>와 <code class="language-plaintext highlighter-rouge">EnvironmentRecord</code>를 만들고 <code class="language-plaintext highlighter-rouge">&lt;function object&gt;</code>로 정의된다.</li>
-  </ol>
-</blockquote>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a69498fb-6f39-413d-8a75-ef547e4ba4b5" /></p>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a1271743-b805-4040-9743-39e7b2cd5bda" /></p>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5272ac93-d18b-4112-a45f-46d657839a3d" /></p>
-
-<h2 id="엄격-모드-strict-mode--자바스크립트가-묵인한-에러를-발생시켜-엄격한-오류-검사를-적용">엄격 모드 (<code class="language-plaintext highlighter-rouge">Strict Mode</code>) : 자바스크립트가 묵인한 에러를 발생시켜 엄격한 오류 검사를 적용</h2>
-
-<ul>
-  <li>선언하지 않은 식별자는 접근할 수 없음</li>
-  <li>암묵적 전역 (<code class="language-plaintext highlighter-rouge">Implicit Global</code>)은 허용하지 않음</li>
-  <li><code class="language-plaintext highlighter-rouge">Delete</code>로 선언된 변수, 함수, 매개변수를 삭제할 수 없음</li>
-  <li>블록 내에서의 함수는 블록 스코프 (블록 내 함수는 볼록의 <code class="language-plaintext highlighter-rouge">DeclarativeEnvironmentRecord</code>에 존재)</li>
-  <li>함수 내에서 매개변수의 이름이 동일해선 안됨</li>
-  <li><code class="language-plaintext highlighter-rouge">NaN</code>, <code class="language-plaintext highlighter-rouge">Infinite</code> 등의 전역 프로퍼티에 값을 할당해선 안됨</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
-
-
-var gg = 1;
-let bb = 2;
-
-function f1(x, y) {
-  var gg = 11;
-  let bb = 22;
-  console.log('f1&gt;', gg, bb, zz, f2, f2.length);
-  f2('* first');
-  {
-    const xx = 99;
-    f2('* nest-first');
-    var zz = 88;
-    function f2(t) {
-      console.log(t, '`nested`', xx, zz);
-    }
-  }
-  function f2(t, u) {
-    console.log(t, '`inner`', xx, zz);
-  }
-  function f2(t, u, v) {
-    console.log(t, '`inner2`', xx, zz);
-  }
-  var zz = 800;
-  console.log('gg:', gg);
-  f2('* second');
-}
-
-function f2(g) {
-  console.log(g, 'global f2&gt;', gg, bb, xx, kk);
-}
-let xx = 9;
-if (gg &gt; 0) {
-  var kk = 33;
-  const yy = 9;
-}
-f1(1, 2); 
-console.log('kkkkk&gt;&gt;', kk);
-f2('* third');
-</code></pre></div></div>
-
-<h2 id="클로저-closure--함수가-특정-스코프에-접근할-수-있도록-의도적으로-그-스코프에서-정의한-것">클로저 (<code class="language-plaintext highlighter-rouge">Closure</code>) : 함수가 특정 스코프에 접근할 수 있도록 의도적으로 그 스코프에서 정의한 것</h2>
-
-<ul>
-  <li>상위 스코프의 식별자를 참조하는 하위 스코프 (함수, 메소드)가 외부에서 참조되어 상위 스코프보다 오래 살아있는 것</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let user;
-{
-  const private = {
-    id: 1,
-    name: 'John'
-  }
-  user = private;
-}
-
-user.age = 30;
-
-console.log(user); // { id: 1, name: 'John', age: 30 }
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function func(x) {
-  let clo = function (y) {
-    console.log(y);
-  }
-
-  return clo(x);
-}
-
-func('a'); // a
-</code></pre></div></div>
-
-<blockquote>
-  <p>클로저를 활용하여 외부변수로 인해 오염될 수 있는 비순수함수 (<code class="language-plaintext highlighter-rouge">Impure Function</code>)를, 함수 내부로 전달된 인수에게만 의존하여 반환값을 만드는 순수함수 (<code class="language-plaintext highlighter-rouge">Pure Function</code>)로 바꿀 수 있다.</p>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 비순수함수
-let cnt1 = 0;
-
-function func1(x) {
-  cnt1 += 1;
-  return cnt1;
-}
-
-console.log(func1()); // 1
-console.log(func1()); // 2
-console.log(func1()); // 3
-
-// → 순수함수
-function func2() {
-  let cnt2 = 0;
-  return function temp() {
-    cnt2 += 1;
-    return cnt2;
-  };
-}
-
-const counter1 = func2();
-const counter2 = func2();
-
-console.log(counter1()); // 1
-console.log(counter1()); // 2
-console.log(counter2()); // 1
-</code></pre></div>  </div>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="JS" /><summary type="html"><![CDATA[스코프 (Scope) : 변수에 접근할 수 있는 범위]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TS" /><summary type="html"><![CDATA[타입스크립트 (TypeScript) : JavaScript을 확장하여 정적 타입을 지원하는 프로그래밍 언어]]></summary></entry></feed>
