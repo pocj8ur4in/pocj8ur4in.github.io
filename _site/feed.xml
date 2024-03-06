@@ -1,13 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-05T20:36:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Next.js] 1. Next.js</title><link href="http://localhost:4000/nex1/" rel="alternate" type="text/html" title="[Next.js] 1. Next.js" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/nex1</id><content type="html" xml:base="http://localhost:4000/nex1/"><![CDATA[<h2 id="nextjs--웹-애플리케이션-구축에-활용되는-오픈-소스-react-프레임워크"><a href="https://nextjs.org"><code>Next.js</code></a> : 웹 애플리케이션 구축에 활용되는 오픈 소스 <code class="language-plaintext highlighter-rouge">React</code> 프레임워크</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-06T22:31:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[SQLD] 1. 데이터 모델링의 이해</title><link href="http://localhost:4000/sqld1/" rel="alternate" type="text/html" title="[SQLD] 1. 데이터 모델링의 이해" /><published>2024-03-06T00:00:00+09:00</published><updated>2024-03-06T00:00:00+09:00</updated><id>http://localhost:4000/sqld1</id><content type="html" xml:base="http://localhost:4000/sqld1/"><![CDATA[<h2 id="데이터-모델링의-이해">데이터 모델링의 이해</h2>
+
+<h3 id="데이터-모델의-이해">데이터 모델의 이해</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">React</code> 기반 : 리액트 위에서 구축되어 구성 기반 아키텍처를 활용하여 사용자 인터페이스 구축</li>
-  <li>서버 측 렌더링 (<code class="language-plaintext highlighter-rouge">SSR</code>), 정적 사이트 생성 (<code class="language-plaintext highlighter-rouge">SSG</code>) 모두 지원</li>
-  <li>파일 시스템 기반 라우팅 (<code class="language-plaintext highlighter-rouge">File System Routing</code>) 지원 : <code class="language-plaintext highlighter-rouge">URL</code> 경로와 프로젝트 디렉터 구조가 직접 연결</li>
-  <li><code class="language-plaintext highlighter-rouge">API</code> 라우트 생성 지원 : 서버 사이드 로직을 처리할 수 있는 엔드포인트를 만들어 이를 클라이언트가 호출<br />→ 서버리스 함수의 간단한 구현 및 활용 가능</li>
-  <li>자동 코드 분할 : 자바스크리트 코드를 자동으로 작은 정크로 분할해, 각 페이지에 필요한 코드만 로드</li>
-  <li><code class="language-plaintext highlighter-rouge">CSS-in-JS</code> 지원 : 스타일링 솔루션에 대한 내장 지원</li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Next.js" /><summary type="html"><![CDATA[Next.js : 웹 애플리케이션 구축에 활용되는 오픈 소스 React 프레임워크]]></summary></entry><entry><title type="html">[React] 3. 함수 컴포넌트 (Functional Component)</title><link href="http://localhost:4000/react3/" rel="alternate" type="text/html" title="[React] 3. 함수 컴포넌트 (Functional Component)" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/react3</id><content type="html" xml:base="http://localhost:4000/react3/"><![CDATA[<h2 id="함수-컴포넌트-functional-component--리액트-훅을-통한-상태와-생명주기-관리">함수 컴포넌트 (<code class="language-plaintext highlighter-rouge">Functional Component</code>) : 리액트 훅을 통한 상태와 생명주기 관리</h2>
+  <li>모델링 (<code class="language-plaintext highlighter-rouge">Modeling</code>) : 현실에서 반영할 데이터를 저장할 데이터베이스를 구축하기 위한 분석·설계의 과정
+    <ul>
+      <li>모델링 조건 : 현실 세계를 반영해야 함, 단순화하여 표현해야 함, 관리하고자 하는 데이터를 모델로 설계</li>
+      <li>모델링 특징 : ‘현실 세계를 추상화, 단순화, 명확화하기 위해 일정한 표기법에 의해 표현하는 기법’
+        <ul>
+          <li>추상화 (<code class="language-plaintext highlighter-rouge">Abstraction</code>) : 현실 세계의 아이디어나 개념을 일정한 형식으로 간략하게 표현하는 것</li>
+          <li>단순화 (<code class="language-plaintext highlighter-rouge">Simplification</code>) : 복잡한 현실 세계를 정해진 표기법으로 단순하고 쉽게 표현하는 것</li>
+          <li>명확화 (<code class="language-plaintext highlighter-rouge">Clarify</code>) : 불분명함을 제거하고 명확하게 해석할 수 있도록 기술하는 것</li>
+        </ul>
+      </li>
+      <li>모델링의 3가지 관점 : 데이터 관점 , 프로세스 관점, 데이터·프로세스의 상관 관점</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="엔티티">엔티티</h3>
+
+<h3 id="속성">속성</h3>
+
+<h3 id="관계">관계</h3>
+
+<h3 id="식별자">식별자</h3>
+
+<h2 id="데이터-모델과-sql">데이터 모델과 <code class="language-plaintext highlighter-rouge">SQL</code></h2>
+
+<h3 id="정규화">정규화</h3>
+
+<h3 id="반정규화">반정규화</h3>
+
+<h3 id="트랜잭션">트랜잭션</h3>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="SQLD" /><summary type="html"><![CDATA[데이터 모델링의 이해]]></summary></entry><entry><title type="html">[React] 4. 리액트 라우팅 (React Routing)</title><link href="http://localhost:4000/react4/" rel="alternate" type="text/html" title="[React] 4. 리액트 라우팅 (React Routing)" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/react4</id><content type="html" xml:base="http://localhost:4000/react4/"><![CDATA[<h2 id="react-router-dom--react로-생성된-spa-내에서-페이지-이동이-가능하도록-라우팅"><code class="language-plaintext highlighter-rouge">React-Router-Dom</code> : <code class="language-plaintext highlighter-rouge">React</code>로 생성된 <code class="language-plaintext highlighter-rouge">SPA</code> 내에서 페이지 이동이 가능하도록 라우팅</h2>
+
+<ul>
+  <li>라우팅 (<code class="language-plaintext highlighter-rouge">Routing</code>) : 네트워크에서 경로를 선택하는 프로세스
+    <ul>
+      <li>다양한 주소의 요청이 들어왔을 때 각각 맞는 컨텐츠로 이동</li>
+      <li>페이지 전체가 새로 로딩되는 대신, 라우팅을 통해 부드럽게 화면을 전환</li>
+      <li><code class="language-plaintext highlighter-rouge">SPA</code> 안에서 모든 페이지를 렌더링하지 않는 이유? : 고정된 <code class="language-plaintext highlighter-rouge">URL</code>로 즐겨찾기·뒤로가기·새로고침 불가, <code class="language-plaintext highlighter-rouge">SEO</code> 문제</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[React-Router-Dom : React로 생성된 SPA 내에서 페이지 이동이 가능하도록 라우팅]]></summary></entry><entry><title type="html">[React] 3. 함수 컴포넌트 (Functional Component)</title><link href="http://localhost:4000/react3/" rel="alternate" type="text/html" title="[React] 3. 함수 컴포넌트 (Functional Component)" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/react3</id><content type="html" xml:base="http://localhost:4000/react3/"><![CDATA[<h2 id="함수-컴포넌트-functional-component--리액트-훅을-통한-상태와-생명주기-관리">함수 컴포넌트 (<code class="language-plaintext highlighter-rouge">Functional Component</code>) : 리액트 훅을 통한 상태와 생명주기 관리</h2>
 
 <blockquote>
   <p>클래스 컴포넌트의 한계?</p>
@@ -705,17 +740,16 @@ export default MyComponent;
 
 <h4 id="usetimeout--일정-시간이-지난-후에-콜백-함수를-실행하는-작업을-추상화"><code class="language-plaintext highlighter-rouge">useTimeout</code> : 일정 시간이 지난 후에 콜백 함수를 실행하는 작업을 추상화</h4>
 
-<h4 id="usetoggle--불리언-상태를-토글하는-작업을-추상화"><code class="language-plaintext highlighter-rouge">useToggle</code> : 불리언 상태를 토글하는 작업을 추상화</h4>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[함수 컴포넌트 (Functional Component) : 리액트 훅을 통한 상태와 생명주기 관리]]></summary></entry><entry><title type="html">[React] 4. 리액트 라우팅 (React Routing)</title><link href="http://localhost:4000/react4/" rel="alternate" type="text/html" title="[React] 4. 리액트 라우팅 (React Routing)" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/react4</id><content type="html" xml:base="http://localhost:4000/react4/"><![CDATA[<h2 id="react-router-dom--react로-생성된-spa-내에서-페이지-이동이-가능하도록-라우팅"><code class="language-plaintext highlighter-rouge">React-Router-Dom</code> : <code class="language-plaintext highlighter-rouge">React</code>로 생성된 <code class="language-plaintext highlighter-rouge">SPA</code> 내에서 페이지 이동이 가능하도록 라우팅</h2>
+<h4 id="usetoggle--불리언-상태를-토글하는-작업을-추상화"><code class="language-plaintext highlighter-rouge">useToggle</code> : 불리언 상태를 토글하는 작업을 추상화</h4>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[함수 컴포넌트 (Functional Component) : 리액트 훅을 통한 상태와 생명주기 관리]]></summary></entry><entry><title type="html">[Next.js] 1. Next.js</title><link href="http://localhost:4000/nex1/" rel="alternate" type="text/html" title="[Next.js] 1. Next.js" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/nex1</id><content type="html" xml:base="http://localhost:4000/nex1/"><![CDATA[<h2 id="nextjs--웹-애플리케이션-구축에-활용되는-오픈-소스-react-프레임워크"><a href="https://nextjs.org"><code>Next.js</code></a> : 웹 애플리케이션 구축에 활용되는 오픈 소스 <code class="language-plaintext highlighter-rouge">React</code> 프레임워크</h2>
 
 <ul>
-  <li>라우팅 (<code class="language-plaintext highlighter-rouge">Routing</code>) : 네트워크에서 경로를 선택하는 프로세스
-    <ul>
-      <li>다양한 주소의 요청이 들어왔을 때 각각 맞는 컨텐츠로 이동</li>
-      <li>페이지 전체가 새로 로딩되는 대신, 라우팅을 통해 부드럽게 화면을 전환</li>
-      <li><code class="language-plaintext highlighter-rouge">SPA</code> 안에서 모든 페이지를 렌더링하지 않는 이유? : 고정된 <code class="language-plaintext highlighter-rouge">URL</code>로 즐겨찾기·뒤로가기·새로고침 불가, <code class="language-plaintext highlighter-rouge">SEO</code> 문제</li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[React-Router-Dom : React로 생성된 SPA 내에서 페이지 이동이 가능하도록 라우팅]]></summary></entry><entry><title type="html">[Engineer Information Processing] 5. 정보 시스템 구축 관리</title><link href="http://localhost:4000/engineer_information_processing5/" rel="alternate" type="text/html" title="[Engineer Information Processing] 5. 정보 시스템 구축 관리" /><published>2024-02-22T00:00:00+09:00</published><updated>2024-03-04T00:00:00+09:00</updated><id>http://localhost:4000/engineer_information_processing5</id><content type="html" xml:base="http://localhost:4000/engineer_information_processing5/"><![CDATA[<h2 id="소프트웨어-개발-생명-주기">소프트웨어 개발 생명 주기</h2>
+  <li><code class="language-plaintext highlighter-rouge">React</code> 기반 : 리액트 위에서 구축되어 구성 기반 아키텍처를 활용하여 사용자 인터페이스 구축</li>
+  <li>서버 측 렌더링 (<code class="language-plaintext highlighter-rouge">SSR</code>), 정적 사이트 생성 (<code class="language-plaintext highlighter-rouge">SSG</code>) 모두 지원</li>
+  <li>파일 시스템 기반 라우팅 (<code class="language-plaintext highlighter-rouge">File System Routing</code>) 지원 : <code class="language-plaintext highlighter-rouge">URL</code> 경로와 프로젝트 디렉터 구조가 직접 연결</li>
+  <li><code class="language-plaintext highlighter-rouge">API</code> 라우트 생성 지원 : 서버 사이드 로직을 처리할 수 있는 엔드포인트를 만들어 이를 클라이언트가 호출<br />→ 서버리스 함수의 간단한 구현 및 활용 가능</li>
+  <li>자동 코드 분할 : 자바스크리트 코드를 자동으로 작은 정크로 분할해, 각 페이지에 필요한 코드만 로드</li>
+  <li><code class="language-plaintext highlighter-rouge">CSS-in-JS</code> 지원 : 스타일링 솔루션에 대한 내장 지원</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Next.js" /><summary type="html"><![CDATA[Next.js : 웹 애플리케이션 구축에 활용되는 오픈 소스 React 프레임워크]]></summary></entry><entry><title type="html">[Engineer Information Processing] 5. 정보 시스템 구축 관리</title><link href="http://localhost:4000/engineer_information_processing5/" rel="alternate" type="text/html" title="[Engineer Information Processing] 5. 정보 시스템 구축 관리" /><published>2024-02-22T00:00:00+09:00</published><updated>2024-03-04T00:00:00+09:00</updated><id>http://localhost:4000/engineer_information_processing5</id><content type="html" xml:base="http://localhost:4000/engineer_information_processing5/"><![CDATA[<h2 id="소프트웨어-개발-생명-주기">소프트웨어 개발 생명 주기</h2>
 
 <h3 id="프로젝트-관리-도구">프로젝트 관리 도구</h3>
 
@@ -2789,504 +2823,4 @@ function D() {
     <li><code class="language-plaintext highlighter-rouge">C</code> 컴포넌트가 <code class="language-plaintext highlighter-rouge">D</code> 컴포넌트를 반환</li>
     <li><code class="language-plaintext highlighter-rouge">D</code> 컴포넌트의 부모인 <code class="language-plaintext highlighter-rouge">C</code> 컴포넌트가 리렌더링이 필요한 컴포넌트로 표시되어 있으므로, <code class="language-plaintext highlighter-rouge">D</code>를 리렌더링</li>
   </ol>
-</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[리액트 (React) : 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리]]></summary></entry><entry><title type="html">[TS] 1. 타입스크립트 (TypeScript)</title><link href="http://localhost:4000/ts1/" rel="alternate" type="text/html" title="[TS] 1. 타입스크립트 (TypeScript)" /><published>2024-02-07T00:00:00+09:00</published><updated>2024-02-07T00:00:00+09:00</updated><id>http://localhost:4000/ts1</id><content type="html" xml:base="http://localhost:4000/ts1/"><![CDATA[<h2 id="타입스크립트-typescript--javascript을-확장하여-정적-타입을-지원하는-프로그래밍-언어">타입스크립트 (<code class="language-plaintext highlighter-rouge">TypeScript</code>) : <code class="language-plaintext highlighter-rouge">JavaScript</code>을 확장하여 정적 타입을 지원하는 프로그래밍 언어</h2>
-
-<ul>
-  <li>정적 타입 (<code class="language-plaintext highlighter-rouge">Static Type</code>) : 변수, 매개변수, 함수 반환 값 등에 대한 타입을 명시적으로 지정 가능</li>
-  <li>컴파일 언어 (<code class="language-plaintext highlighter-rouge">Compile Language</code>) : <code class="language-plaintext highlighter-rouge">TypeScript</code> 컴파일러는 <code class="language-plaintext highlighter-rouge">TypeScript</code> 코드를 <code class="language-plaintext highlighter-rouge">JavaScript</code> 코드로 변환</li>
-  <li>타입 검사 (<code class="language-plaintext highlighter-rouge">Type Checking</code>) : 타입을 명시하지 않아도 코드에서 사용된 패턴과 값에 기반해 타입을 추론</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm init -y
-npm install -g typescript ts-node
-tsc -v
-tsc --init
-cat tsconfig.json
-ts-node temp.ts
-</code></pre></div></div>
-
-<h3 id="타입스크립트-컴파일러-tsc--typescript-코드를-javascript-코드로-변환하는-도구">타입스크립트 컴파일러 (<code class="language-plaintext highlighter-rouge">TSC</code>) : <code class="language-plaintext highlighter-rouge">TypeScript</code> 코드를 <code class="language-plaintext highlighter-rouge">JavaScript</code> 코드로 변환하는 도구</h3>
-
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">tsconfig.json</code> 조회 : 프로그램 설정 및 파일 실행</li>
-  <li>사용 가능한 모든 파일들을 임포트 (<code class="language-plaintext highlighter-rouge">import</code>) (→ 파일들을 하나의 모듈 내에 있는 것처럼 관리)</li>
-  <li>추상 구문 트리 (<code class="language-plaintext highlighter-rouge">AST; Abstract Syntax Tree</code>)를 토큰화 (<code class="language-plaintext highlighter-rouge">Tokenize</code>) 및 파싱 (<code class="language-plaintext highlighter-rouge">Parse</code>)</li>
-  <li>바인더 (<code class="language-plaintext highlighter-rouge">Binder</code>)가 추상 구문 트리의 식별자를 <code class="language-plaintext highlighter-rouge">Symbol</code>로 변환</li>
-  <li>바인더와 추상 구문 트리로 타입 검사를 실행</li>
-  <li>프로그램에 설정한 옵션에 기반하여 추상 구문 트리를 <code class="language-plaintext highlighter-rouge">*.js</code>, <code class="language-plaintext highlighter-rouge">*.d.ts</code>의 형태로 변환</li>
-</ol>
-
-<h2 id="타입-시스템-type-system--프로그램에서-가질-수-있는-타입을-이해하는-방법에-대한-규칙-집합">타입 시스템 (<code class="language-plaintext highlighter-rouge">Type system</code>) : 프로그램에서 가질 수 있는 타입을 이해하는 방법에 대한 규칙 집합</h2>
-
-<ol>
-  <li>코드를 읽고 존재하는 모든 타입과 값을 이해한다.</li>
-  <li>각 값이 초기 선언에서 가질 수 있는 타입을 확인하고, 각 값이 추후 코드에서 어떻게 사용될 수 있는지 확인한다.</li>
-  <li>모든 방법을 확인했을 때, 값의 사용법이 타입과 일치하지 않으면 사용자에게 타입 오류로 표시한다.</li>
-</ol>
-
-<blockquote>
-  <p>타입 오류 vs 구문 오류?</p>
-
-  <ul>
-    <li>타입 오류 (<code class="language-plaintext highlighter-rouge">Type Error</code>) : 타입 검사기에 따라 일치하지 않는 것이 감지된 경우
-      <ul>
-        <li>타입스크립트의 타입 검사기가 프로그램의 타입에서 오류를 감지했을 때 발생</li>
-      </ul>
-    </li>
-    <li>구문 오류 (<code class="language-plaintext highlighter-rouge">Syntax Error</code>) : 타입스크립트가 자바스크립트로 변환되는 것을 차단한 경우
-      <ul>
-        <li>타입스크립트가 코드로 이해할 수 없는 잘못된 구문을 감지할 때 발생</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<h3 id="할당-가능성-assignability--함수-호출이나-변수에-값을-제공할-수-있는지-여부를-확인-가능">할당 가능성 (<code class="language-plaintext highlighter-rouge">Assignability</code>) : 함수 호출이나 변수에 값을 제공할 수 있는지 여부를 확인 가능</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">TypeScript</code>에선 변수나 속성에 값을 할당할 때 해당 값의 타입이 변수나 속성의 타입과 호환 가능해야함</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let firstName = "Noah";
-firstName = "Tom";
-</code></pre></div></div>
-
-<h3 id="타입-어노테이션-type-annotation--초기값을-할당하지-않고도-타입을-명시적으로-지정-가능">타입 어노테이션 (<code class="language-plaintext highlighter-rouge">Type Annotation</code>) : 초기값을 할당하지 않고도 타입을 명시적으로 지정 가능</h3>
-
-<blockquote>
-  <p>메모리 사이즈가 변하지 않는 변수는 타입 어노테이션을 추가하지 않는 것이 좋으나, 코드를 명확하게 문서화하거나 실수로 변수 타입이 변경되지 않도록 타입스크립트를 보호하기 위해 변수에 명시적으로 타입 어노테이션을 포함하는 것이 경우에 따라서는 유용할 수 있다.</p>
-</blockquote>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let variable: Type; // 변수의 이름 : 값의 타입
-</code></pre></div></div>
-
-<h3 id="타입-형태-type-shape--타입을-정의할-때-객체의-형태를-명시적으로-지정-가능">타입 형태 (<code class="language-plaintext highlighter-rouge">Type Shape</code>) : 타입을 정의할 때 객체의 형태를 명시적으로 지정 가능</h3>
-
-<ul>
-  <li>인터페이스 (<code class="language-plaintext highlighter-rouge">Interface</code>) : 객체의 구조를 정의</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>interface Person {
-    name: string;
-    age: number;
-}
-
-let person: Person = {
-    name: "John",
-    age: 25
-};
-</code></pre></div></div>
-
-<ul>
-  <li>타입 (<code class="language-plaintext highlighter-rouge">Type</code>) : 객체의 타입을 정의</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type Point = {
-    x: number;
-    y: number;
-};
-
-let point: Point = {
-    x: 10,
-    y: 20
-};
-</code></pre></div></div>
-
-<h2 id="타입-별칭-alias--자주-사용할-타입에-이름을-붙이는-것">타입 별칭 (<code class="language-plaintext highlighter-rouge">Alias</code>) : 자주 사용할 타입에 이름을 붙이는 것</h2>
-
-<blockquote>
-  <p>타입 별칭은 타입 어노테이션과 마찬가지로 자바스크립트로 컴파일되지 않으므로, 런타임 코드에서는 참조할 수 없다.</p>
-</blockquote>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type Age = number;
-type Name = string;
-
-type Person = {
-    name: Name;
-    age: Age;
-};
-
-
-let person: Person = { name: "John", age: 25 };
-</code></pre></div></div>
-
-<h3 id="리터럴-타입-literal-type--원시-타입보다-더-구체적인-원시-값-자체를-타입으로-활용하는-것">리터럴 타입 (<code class="language-plaintext highlighter-rouge">Literal Type</code>) : 원시 타입보다 더 구체적인 원시 값 자체를 타입으로 활용하는 것</h3>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c9e566fc-2985-4d75-aba6-0f42082c8ab1" width="80%" /></p>
-
-<ul>
-  <li>특정 값들을 타입으로 정의하고, 해당 값들만이 유효한 값으로 간주
-    <ul>
-      <li>리터럴 할당 가능성 : 서로 다른 리터럴 타입은 서로 할당될 수 없음</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let isString = '문자열';
-let isLiteral: 'LITERAL';
-
-isLiteral = isString;
-// Error type 'string' is not assignable to type '"LITERAL"'.
-</code></pre></div></div>
-
-<h3 id="유니언-타입-union-type--값에-허용되는-타입을-두-개-이상의-가능한-타입으로-확장하는-것">유니언 타입 (<code class="language-plaintext highlighter-rouge">Union Type</code>) : 값에 허용되는 타입을 두 개 이상의 가능한 타입으로 확장하는 것</h3>
-
-<ul>
-  <li>둘 이상의 타입으로 확장된 타입에서, 일부 속성들의 조합이 하나의 타입에 할당 가능하면 유니온 타입으로 사용 가능
-    <ul>
-      <li>유니언으로 선언한 모든 타입에 존재하는 속성에만 접근 가능!</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type Person = {
-   name: string;
-   age: number;
-   phone: number | string; // number 또는 string 타입을 가질 수 있음
-   addr?: string; // 선택적으로 사용할 수 있음
-};
-</code></pre></div></div>
-
-<h3 id="내로잉-narrowing--값이-더-구체적인-타입임을-코드에서-유추하는-것">내로잉 (<code class="language-plaintext highlighter-rouge">narrowing</code>) : 값이 더 구체적인 타입임을 코드에서 유추하는 것</h3>
-
-<ul>
-  <li>타입스크립트에서 변수의 타입을 조건문을 통해 줄여나가는 것
-    <ul>
-      <li>값 할당 <code class="language-plaintext highlighter-rouge">ex) x = 1</code></li>
-      <li><code class="language-plaintext highlighter-rouge">typeof</code> 검사 <code class="language-plaintext highlighter-rouge">ex) typeof(value)</code></li>
-      <li>조건 검사 : <code class="language-plaintext highlighter-rouge">ex) if x === 'stringValue'</code></li>
-      <li><code class="language-plaintext highlighter-rouge">in</code>, <code class="language-plaintext highlighter-rouge">instanceof</code>, <code class="language-plaintext highlighter-rouge">Array.isArray</code>를 활용</li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <p>내로잉을 수행하는 함수 또는 구문을 타입 가드 (<code class="language-plaintext highlighter-rouge">Type guard</code>)라 한다.</p>
-</blockquote>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type Member = {
-  name: string;
-  address: string;
-}
-
-function inFunc (user: Member) {
-  if ('name' in user) // cf. user.hasOwnProperty('name')로는 불가능
-    console.log('user.name); 
-}
-</code></pre></div></div>
-
-<h3 id="strictnullchecks--엄격한-null-검사-활성화-옵션"><code class="language-plaintext highlighter-rouge">strictNullChecks</code> : 엄격한 <code class="language-plaintext highlighter-rouge">null</code> 검사 활성화 옵션</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">null</code> 혹은 <code class="language-plaintext highlighter-rouge">undefined</code> 값을 참조 및 할당 했을 때, 타입 에러를 발생시킬지 여부</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// tsconfig.json 
-//  {
-//    "compilerOptions": {
-//      "strictNullChecks": true
-//    }
-//  }
-
-let un: string | undefined;
-un.toLowerCase(); // Type 'undefined' is not assigned to type 'string'
-un?.toLowerCase();
-</code></pre></div></div>
-
-<h2 id="객체-타입-object-type--객체의-형태를-정의하고-객체의-할당-가능성을-확인">객체 타입 (<code class="language-plaintext highlighter-rouge">Object Type</code>) : 객체의 형태를 정의하고, 객체의 할당 가능성을 확인</h2>
-
-<ul>
-  <li>타입스크립트의 타입 시스템은 타입을 구조화하여 정의하고 있음 → <code class="language-plaintext highlighter-rouge">Structured Type Definition</code>
-    <ul>
-      <li>타입 체크 시스템 (<code class="language-plaintext highlighter-rouge">Type Check System</code>) 을 통해 구조화된 형식을 검사</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let x_user: {id: number, name: string};
-x_user = {id: 1, name: 'xx'}; // OK
-x_user = {id: 1}; // Error (Property 'name' missing in type)
-x_user = {id: 1, name: 'xx', age: 30}; // Error ({id, name, age} is not assignable to type {id,name} )
-
-// 타입 별칭(type alias)
-type T_User = {
-  id: number;
-  name: string;
-};
-
-let hong: T_User;
-hong = {id: 1, name: 'Hong'}; // OK
-hong = {id: 1}; // Error (name property missing)
-hong = {id: 1, name: 'Hong', addr: 'Pusan'}; // Error(not assignable) 
-hong = {id: 1, name: 'Hong', addr: 'Pusan'} as T_User;
-</code></pre></div></div>
-
-<h3 id="타입스트립트는-covariance--contravariance를-원칙으로-하는-언어">타입스트립트는 <code class="language-plaintext highlighter-rouge">CoVariance | ContraVariance</code>를 원칙으로 하는 언어?</h3>
-
-<ul>
-  <li>공변성 (<code class="language-plaintext highlighter-rouge">CoVariance</code>) : 원래 지정된 것보다 더 파생된 형식을 사용 가능한 것<br />→ 타입 간의 계층 구조가 유지되면 변환을 허용 <code class="language-plaintext highlighter-rouge">ex)</code> 배열</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let baseArray: Animal[] = [];
-let derivedArray: Dog[] = [];
-
-// Covariant: 하위 타입인 Dog[]가 상위 타입인 Animal[]로 할당 가능
-baseArray = derivedArray;
-</code></pre></div></div>
-
-<ul>
-  <li>반변성 (<code class="language-plaintext highlighter-rouge">ContraVariance</code>) : 원래 지정된 것보다 덜 파생적인 형식을 사용 가능한 것<br />→ 하위 타입이 하위 타입으로 할당될 수 있음 <code class="language-plaintext highlighter-rouge">ex)</code> 함수의 매개변수</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type AnimalHandler = (animal: Animal) =&gt; void;
-type DogHandler = (dog: Dog) =&gt; void;
-
-// Contravariant: 상위 타입인 AnimalHandler가 하위 타입인 DogHandler로 할당 가능
-let animalHandler: AnimalHandler = (animal: Animal) =&gt; { /*...*/ };
-let dogHandler: DogHandler = animalHandler;
-</code></pre></div></div>
-
-<blockquote>
-  <p>타입스크립트는 <code class="language-plaintext highlighter-rouge">CoVariance</code>를 원칙이나, 함수의 매개변수처럼 <code class="language-plaintext highlighter-rouge">ContraVariance</code>가 적용되는 경우 또한 존재한다.</p>
-</blockquote>
-
-<h3 id="신선도-freshness--구조적으로-타입-호환성이-있는-객체-리터럴의-타입-검사">신선도 (<code class="language-plaintext highlighter-rouge">Freshness</code>) : 구조적으로 타입 호환성이 있는 객체 리터럴의 타입 검사</h3>
-
-<ul>
-  <li>신선도로 인한 오류는 ‘객체 리터럴을 사용한 경우에만’ 발생한다.</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function logName(something: { name: string }) {
-    console.log(something.name);
-}
-
-var person = { name: 'John', job: 'cowboy' };
-var animal = { name: 'cow', description: 'element who hate John' };
-var event = { note: `random` };
-
-logName(person);
-logName(animal);
-logName(event); // 오류: 속성 `name` 누락 (신선도로 인한 오류 O)
-
-function logName(something: { name: string }) {
-  console.log(something.name);
-}
-
-logName({ name: 'John' });
-logName({ name: 'John', job: 'cowboy' }); // 오류: 객체 리터럴은 정의된 속성만 지정해야 함. (신선도로 인한 오류 X)
-</code></pre></div></div>
-
-<blockquote>
-  <p>신선도를 끄는 방법?</p>
-
-  <ol>
-    <li>변수에 할당한다.</li>
-    <li>강제로 타입 캐스팅 (<code class="language-plaintext highlighter-rouge">type casting</code>)을 한다.</li>
-    <li><code class="language-plaintext highlighter-rouge">union</code> 타입으로 제외시킨다.</li>
-    <li><code class="language-plaintext highlighter-rouge">suppressExcessPropertyError</code>를 활성화한다.</li>
-  </ol>
-</blockquote>
-
-<h2 id="함수-타입-function-type--함수가-가져야-하는-매개변수와-반환-타입을-명시">함수 타입 (<code class="language-plaintext highlighter-rouge">Function Type</code>) : 함수가 가져야 하는 매개변수와 반환 타입을 명시</h2>
-
-<ul>
-  <li>변수에 할당되거나 매개변수로 전달되는 함수의 타입을 정의
-    <ul>
-      <li>필수 매개변수 : 함수에 선언된 모든 매개변수를 필수라고 가정 → 타입 안정성이 강화</li>
-      <li>선택 매개변수 : 타입 애너테이션의 : 앞에 <code class="language-plaintext highlighter-rouge">?</code>를 추가하여, 매개변수가 선택적이란 것을 표시</li>
-      <li>기본 매개변수 : 기본적으로 값을 제공되므로, 함수 내부에 암묵적으로 <code class="language-plaintext highlighter-rouge">| undefined union type</code>이 추가<br />→ 타입스크립트는 함수의 매개변수에 대해 인수를 누락하거나 <code class="language-plaintext highlighter-rouge">undefined</code> 인수를 사용한 호출을 허용</li>
-      <li>나머지 매개변수 : 함수 선언의 마지막 매개 변수에 위치한 <code class="language-plaintext highlighter-rouge">...</code> 스프레드 연산자로 표현<br />→ 해당 매개변수에서 시작해 함수에 전달된 나머지 인수가 모두 단일 배열에 저장<br />(인수 배열을 나타내기 위해 끝에 <code class="language-plaintext highlighter-rouge">[]</code> 구문이 추가)</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function add(a: number, b: number) {
-   return a + b;
-}
-
-type ANY = any;
-function addY (a: ANY, b: ANY) {
-  return a + b;
-}
-
-function addZ (a: ANY, b?: ANY) {
-  return a + (b ?? 0);
-}
-
-addX(1, 0); addY(1, 0); addZ(1, 0);
-addZ(1); // addX(1); addY(1);
-
-const getSum = (...rest:number[]) =&gt;{
- let sum = 0;
- rest.forEach((el) =&gt; sum += el);
- return console.log(sum);
-}
-</code></pre></div></div>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">?</code>으로 표시된 선택 매개변수가 아닌 필수 매개변수는 값이 명시적으로 <code class="language-plaintext highlighter-rouge">undefined</code>이라도 항상 제공되어야 한다.</p>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const introduce2 = (name:string, 
-
-height : number|undefined ) =&gt; {
-   console.log(`이름 : ${name}`);
-
-if(typeof height === 'number'){
-   	console.log(`키 : ${height + 10}`)   
- 	}
-}
-
-introduce2("김군"); // Error : Expected 2 arguments, but got 1.
-introduce2("김군", undefined);
-introduce2("김군", 170);
-</code></pre></div>  </div>
-</blockquote>
-
-<ul>
-  <li>함수의 반환 타입 : 함수가 반환할 수 있는 가능한 모든 값을 이해하면 함수가 반환하는 타입을 알 수 있음
-    <ul>
-      <li>그러나, 함수에서 반환 타입을 명시적으로 선언하는 방식이 유용할 때가 종종 있음</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function singSongRecursive(songs : string[], count = 0) : number {
-    return songs.length ? singSongRecursive(songs.slice(1), count + 1) : count;
-}
-
-const singSongsRecursive = (songs : string[], count=0) : number =&gt;
- songs.length ? singSongsRecursive(songs.slice(1), 
-count + 1) : count;
-</code></pre></div></div>
-
-<ul>
-  <li>함수 매개변수 타입 : 함수를 가지기 위한 매개변수 또는 변수의 타입을 선언하는 방법
-    <ul>
-      <li>함수 타입 구문은 화살표 함수와 유사하지만 함수 본문 대신 타입이 존재</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let nothingGivesString : () =&gt; string;
-
-let inputAndOutput : (songs: string[], count?: number) =&gt; number;
-</code></pre></div></div>
-
-<ul>
-  <li>함수 타입 괄호 : 함수 타입은 다른 타입이 사용되는 모든 곳에 배치할 수 있음 (유니온 타입 포함)
-    <ul>
-      <li>유니언 타입의 애너테이션에서 함수 반환 위치를 나타내거나 타입을 감싸는 부분을 표시할 때 괄호 사용</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 타입은 string | undefined 유니언을 반환하는 함수
-let returnsStringOrUndefined : () =&gt; string | undefined;
-
-// 타입은 undefined나 string 을 반환하는 함수
-let maybeReturnsString : (() =&gt; string) | undefined;
-</code></pre></div></div>
-
-<ul>
-  <li>매개변수 타입 추론 : 선언된 타입의 위치에 제공된 함수의 매개변수 타입을 유추할 수 있음
-    <ul>
-      <li>또한, 함수를 매개변수로 갖는 함수에 인수로 전달된 함수는 해당 매개변수 타입도 유추할 수 있음</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let singer : (song : string) =&gt; string;
-
-singer = function(song){
-    // song : string의 타입
-    return `Singing : ${song.toUpperCase()}!`; // OK
-}
-
-const songs = ["One More Time", "I AM", "Cry"];
-
-// song : string
-// index : number
-
-songs.forEach((song, index) =&gt; {
-    console.log(`${song} is at index ${index}`);
-});
-</code></pre></div></div>
-
-<h3 id="함수-오버로딩-function-overloading--동일한-이름에-매개-변수만-다른-함수를-여러-개-만드는-것">함수 오버로딩 (<code class="language-plaintext highlighter-rouge">Function Overloading</code>) : 동일한 이름에 매개 변수만 다른 함수를 여러 개 만드는 것</h3>
-
-<ul>
-  <li>매개변수의 형태가 다양한 여러 케이스에 대응하는 같은 이름의 함수를 만드는 것</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 서로 다른 버전의 함수들 -&gt; `오버로드 시그니처`
-function func(a : number): void;
-function func(a : number, b : number, c : number) : void;
-
-// 실제 구현부 -&gt; `구현 시그니처`
-function func(a:number, b?: number, c?:number) {
-  if(typeof b === 'number' &amp;&amp; typeof c === 'number') {
-    console.log(a + b + c);
-  } else {
-    console.log(a + b + c);
-  }
-}
-
-func(1); func(1, 2, 3);
-</code></pre></div></div>
-
-<h2 id="인터페이스-interface--타입을-정의할-때-객체의-구조를-명시적으로-지정-가능">인터페이스 (<code class="language-plaintext highlighter-rouge">Interface</code>) : 타입을 정의할 때 객체의 구조를 명시적으로 지정 가능</h2>
-
-<h3 id="호출-시그니처-call-signature--함수-호출-방법에-대한-타입-시스템을-설명">호출 시그니처 (<code class="language-plaintext highlighter-rouge">Call Signature</code>) : 함수 호출 방법에 대한 타입 시스템을 설명</h3>
-
-<ul>
-  <li>매개변수의 목록 (<code class="language-plaintext highlighter-rouge">with type</code>)과 반환 타입을 포함</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type FunctionAlias = (input: string) =&gt; number;
-
-interface CallSignature {
-    (input: string): number;
-}
-
-const typedFunctionAlias: FunctionAlias = (input) =&gt; input.length;
-
-const typedCallSignature: CallSignature = (input) =&gt; input.length;
-</code></pre></div></div>
-
-<blockquote>
-  <p>호출 시그니처는 사용자 정의 속성을 추가로 갖는 함수를 설명하는 데에도 사용할 수 있다.</p>
-</blockquote>
-
-<h3 id="인덱스-시그니처-index-signature--임의의-키를-받고-해당-키에-대한-값의-타입을-지정">인덱스 시그니처 (<code class="language-plaintext highlighter-rouge">Index Signature</code>) : 임의의 키를 받고, 해당 키에 대한 값의 타입을 지정</h3>
-
-<blockquote>
-  <p>인덱스 시그니처를 사용하면, 프로퍼티의 존재 유무를 알 수 없다!</p>
-</blockquote>
-
-<h3 id="중첩-시그니처-nested-interface--속성의-타입이-다른-인터페이스나-객체-타입을-가질-수-있음">중첩 시그니처 (<code class="language-plaintext highlighter-rouge">Nested Interface</code>) : 속성의 타입이 다른 인터페이스나 객체 타입을 가질 수 있음</h3>
-
-<h2 id="클래스-속성-class-attribute--클래스의-속성을-읽거나-쓰려면-명시적으로-선언해야-함">클래스 속성 (<code class="language-plaintext highlighter-rouge">Class Attribute</code>) : 클래스의 속성을 읽거나 쓰려면 명시적으로 선언해야 함</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class FieldTrip{
-    destination  : string; // 불필요
-
-    constructor(destination : string){
-        this.destination = destination;
-        console.log(`We're going to ${destination}!`);
-
-    this.nonexistent = destination;
-    //Error: Property 'nonexistent' does not exist on type 'FieldTrip'
-    }
-}
-</code></pre></div></div>
-
-<h3 id="클래스-메소드-class-method">클래스 메소드 (<code class="language-plaintext highlighter-rouge">Class Method</code>)</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Greeted {
-    constructor(message : string){
-        console.log(`As I always say : ${message}!`);
-    }
-}
-//Greeted 클래스의 생성자는 message:string으로 매개변수가 제공되어야 함
-new Greeted("Practice makes perfect.");
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="TS" /><summary type="html"><![CDATA[타입스크립트 (TypeScript) : JavaScript을 확장하여 정적 타입을 지원하는 프로그래밍 언어]]></summary></entry></feed>
+</blockquote>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[리액트 (React) : 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리]]></summary></entry></feed>
