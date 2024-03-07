@@ -113,10 +113,6 @@
 <lastmod>2024-01-29T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/til1/</loc>
-<lastmod>2024-01-26T00:00:00+09:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/tmux1/</loc>
 <lastmod>2024-01-09T00:00:00+09:00</lastmod>
 </url>
@@ -217,10 +213,6 @@
 <lastmod>2024-01-31T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/til2/</loc>
-<lastmod>2024-02-02T00:00:00+09:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/js8/</loc>
 <lastmod>2024-02-02T00:00:00+09:00</lastmod>
 </url>
@@ -279,6 +271,10 @@
 <url>
 <loc>http://localhost:4000/sqld1/</loc>
 <lastmod>2024-03-06T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/sqld2/</loc>
+<lastmod>2024-03-07T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>

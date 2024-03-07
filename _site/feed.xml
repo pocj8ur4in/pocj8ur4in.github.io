@@ -1,4 +1,245 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-06T22:31:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[SQLD] 1. 데이터 모델링의 이해</title><link href="http://localhost:4000/sqld1/" rel="alternate" type="text/html" title="[SQLD] 1. 데이터 모델링의 이해" /><published>2024-03-06T00:00:00+09:00</published><updated>2024-03-06T00:00:00+09:00</updated><id>http://localhost:4000/sqld1</id><content type="html" xml:base="http://localhost:4000/sqld1/"><![CDATA[<h2 id="데이터-모델링의-이해">데이터 모델링의 이해</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-07T20:34:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[SQLD] 2. SQL 기본 및 활용</title><link href="http://localhost:4000/sqld2/" rel="alternate" type="text/html" title="[SQLD] 2. SQL 기본 및 활용" /><published>2024-03-07T00:00:00+09:00</published><updated>2024-03-07T00:00:00+09:00</updated><id>http://localhost:4000/sqld2</id><content type="html" xml:base="http://localhost:4000/sqld2/"><![CDATA[<h2 id="구문">구문</h2>
+
+<h3 id="select문--저장된-데이터-조회"><code class="language-plaintext highlighter-rouge">SELECT</code>문 : 저장된 데이터 조회</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT 컬럼1, 컬럼2, ... FROM 테이블 WHERE 컬럼1 = '컬럼1';
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">*</code> : 컬럼을 명시하지 않고 <code class="language-plaintext highlighter-rouge">*</code>`를 쓰면, 테이블 내 전체 컬럼 조회</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM 테이블;
+</code></pre></div></div>
+
+<ul>
+  <li>산술 연산자 : <code class="language-plaintext highlighter-rouge">NUMBER DATA</code> 유형의 데이터와 함꼐 사용하는 연산자</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1b2fdf5c-c60d-479d-86ba-3c57f0e15ee0" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT 10+5, 10-5, 10*5, 10/5, 10%5 FROM DUAL; // 15, 5, 2, 0
+</code></pre></div></div>
+
+<ul>
+  <li>합성 연산자 <code class="language-plaintext highlighter-rouge">||</code> : 문자와 문자를 연결할 때 사용하는 연산자</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT '1'||'0'||'+'||'5' AS RESULT FROM DUAL; // 10+5
+</code></pre></div></div>
+
+<h4 id="문자-함수">문자 함수</h4>
+
+<h5 id="chr아스키-코드--입력된-아스키-코드에-매핑되는-문자-변환"><code class="language-plaintext highlighter-rouge">CHR(아스키 코드)</code> : 입력된 아스키 코드에 매핑되는 문자 변환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT CHR(65) FROM DUAL; // A
+</code></pre></div></div>
+
+<h5 id="lower문자열--입력된-문자열을-대문자로-변환"><code class="language-plaintext highlighter-rouge">LOWER(문자열)</code> : 입력된 문자열을 대문자로 변환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LOWER('SQLD') FROM DUAL; // sqld
+</code></pre></div></div>
+
+<h5 id="upper문자열---입력된-문자열을-소문자로-변환"><code class="language-plaintext highlighter-rouge">UPPER(문자열)</code> :  입력된 문자열을 소문자로 변환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LOWER('sqld') FROM DUAL; // SQLD
+</code></pre></div></div>
+
+<h5 id="ltrim문자열특정문자열--문자열-왼쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거"><code class="language-plaintext highlighter-rouge">LTRIM(문자열[,{특정문자(열)}])</code> : 문자열 왼쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LTRIM('      SQLD') FROM DUAL; // SQLD
+</code></pre></div></div>
+
+<h5 id="rtrim문자열특정문자열--문자열-오른쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거"><code class="language-plaintext highlighter-rouge">RTRIM(문자열[,{특정문자(열)}])</code> : 문자열 오른쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT RTRIM('SQLD      ') FROM DUAL; // SQLD
+</code></pre></div></div>
+
+<h5 id="trim위치특정문자from문자열--문자열-왼쪽오른쪽-공백-혹은-옵션-지정-장소부터-제거"><code class="language-plaintext highlighter-rouge">TRIM([{위치}{특정문자}FROM]문자열)</code> : 문자열 왼쪽·오른쪽 공백 혹은 옵션 지정 장소부터 제거</h5>
+
+<ul>
+  <li>옵션 : <code class="language-plaintext highlighter-rouge">LEADING</code>, <code class="language-plaintext highlighter-rouge">TRAILING</code>, <code class="language-plaintext highlighter-rouge">BOTH</code></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TRIM('      SQLD      ') FROM DUAL; // SQLD
+SELECT TRIM(LEADING 'S' FROM 'SQLD') FROM DUAL; // QLD
+SELECT TRIM(TRAILING 'Q' FROM 'SQLD') FROM DUAL; // SQL
+</code></pre></div></div>
+
+<h5 id="substr문자열시작점길이--문자열의-원하는-부분만-잘라-반환"><code class="language-plaintext highlighter-rouge">SUBSTR(문자열,시작점[,{길이}])</code> : 문자열의 원하는 부분만 잘라 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT SUBSTR('SQLD', 1, 2) FROM DUAL; // QL
+</code></pre></div></div>
+
+<h5 id="length문자열--문자열의-길이-반환"><code class="language-plaintext highlighter-rouge">LENGTH(문자열)</code> : 문자열의 길이 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LENGTH('SQLD') FROM DUAL; // 4
+</code></pre></div></div>
+
+<h5 id="replace문자열변경전-문자열변경-후-문자열--문자열에서-변경-전-문자열을-찾아-변경-후-문자열로-변환"><code class="language-plaintext highlighter-rouge">REPLACE(문자열,변경전 문자열,[{변경 후 문자열}])</code> : 문자열에서 변경 전 문자열을 찾아 변경 후 문자열로 변환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT REPLACE('SQLD', 'D', 'P') FROM DUAL; // SQLP
+</code></pre></div></div>
+
+<h4 id="숫자-함수">숫자 함수</h4>
+
+<h5 id="abs수--수의-절댓값-반환"><code class="language-plaintext highlighter-rouge">ABS({수})</code> : 수의 절댓값 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ABS(-1) FROM DUAL; // 1
+</code></pre></div></div>
+
+<h5 id="sign수--수의-부호-반환-1-0--1"><code class="language-plaintext highlighter-rouge">SIGN({수})</code> : 수의 부호 반환 (1, 0, -1)</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT SIGN(5) FROM DUAL; // 1
+SELECT SIGN(0) FROM DUAL; // 0
+SELECT SIGN(-4) FROM DUAL; // -1
+</code></pre></div></div>
+
+<h5 id="round수-자릿수--수를-지정된-소수점-자릿수까지-반올림해-반환"><code class="language-plaintext highlighter-rouge">ROUND({수} [,{자릿수}])</code> : 수를 지정된 소수점 자릿수까지 반올림해 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ROUND(127.000000001, 0) FROM DUAL; // 127
+</code></pre></div></div>
+
+<h5 id="trunc수-자릿수--수를-지정된-소수점-자릿수까지-버림해-반환"><code class="language-plaintext highlighter-rouge">TRUNC({수}, [,{자릿수}])</code> : 수를 지정된 소수점 자릿수까지 버림해 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ROUND(127.000000001, 9) FROM DUAL; // 127
+</code></pre></div></div>
+
+<h5 id="ceil수--소수점-이하의-수를-올림한-정수로-반환"><code class="language-plaintext highlighter-rouge">CEIL({수})</code> : 소수점 이하의 수를 올림한 정수로 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT CEIL(127.000000001) FROM DUAL; // 128
+</code></pre></div></div>
+
+<h5 id="floor수--소수점-이하의-수를-버림한-정수로-반환"><code class="language-plaintext highlighter-rouge">FLOOR({수})</code> : 소수점 이하의 수를 버림한 정수로 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT FLOOR(127.000000001) FROM DUAL; // 127
+</code></pre></div></div>
+
+<h5 id="mod수1-수2--수1을-수2로-나눈-나머지를-반환"><code class="language-plaintext highlighter-rouge">MOD({수1}, {수2})</code> : 수1을 수2로 나눈 나머지를 반환</h5>
+
+<ul>
+  <li>수2가 0이면 수1 그대로 반환</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MOD(15, 4) FROM DUAL; // 3
+SELECT MOD(15, 0) FROM DUAL; // 15
+</code></pre></div></div>
+
+<h4 id="날짜-함수">날짜 함수</h4>
+
+<h5 id="sysdate--현재의-연월일시분초-반환"><code class="language-plaintext highlighter-rouge">SYSDATE</code> : 현재의 연,월,일,시,분,초 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT SYSDATE FROM DUAL;
+</code></pre></div></div>
+
+<h5 id="extract특정-단위-from-데이터--날짜-데이터에서-연월일시분초-등-단위-지정해-출력"><code class="language-plaintext highlighter-rouge">EXTRACT({특정 단위} FROM {데이터})</code> : 날짜 데이터에서 연,월,일,시,분,초 등 단위 지정해 출력</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT EXTRACT(YEAR FROM SYSDATE) AS YEAR FROM DUAL; // 2024
+</code></pre></div></div>
+
+<h5 id="add_mount날짜-데이터-특정-개월-수--날짜-데이터에-특정-개월-수를-더한-날짜-반환"><code class="language-plaintext highlighter-rouge">ADD_MOUNT({날짜 데이터}, {특정 개월 수})</code> : 날짜 데이터에 특정 개월 수를 더한 날짜 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ADD_MOUNT('2024-03-07', 'YYYY-MM-DD', 2) // 2024-03-09
+</code></pre></div></div>
+
+<h4 id="변환-함수">변환 함수</h4>
+
+<ul>
+  <li>명시적 형변환 : 변환 함수로 데이터 유형 변환을 명시적으로 나타냄</li>
+  <li>암시적 형변환 : 데이터베이스에서 내부적으로 데이터 유형을 변환함</li>
+</ul>
+
+<h5 id="to_number문자열--문자열을-숫자형으로-변환"><code class="language-plaintext highlighter-rouge">TO_NUMBER({문자열})</code> : 문자열을 숫자형으로 변환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TO_NUMBER('123') FROM DUAL; // 123
+</code></pre></div></div>
+
+<h5 id="to_char수날짜포맷--수나-날짜를-포맷-형식의-문자형으로-변환"><code class="language-plaintext highlighter-rouge">TO_CHAR({수|날짜[,{포맷}]})</code> : 수나 날짜를 (포맷 형식의) 문자형으로 변환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TO_CHAR(123) FROM DUAL; // '123'
+</code></pre></div></div>
+
+<h5 id="to_date문자열포맷--포맷-형식의-문자형-데이터를-날짜형으로-변환"><code class="language-plaintext highlighter-rouge">TO_DATE({문자열},{포맷})</code> : 포맷 형식의 문자형 데이터를 날짜형으로 변환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TO_DATE('2024-03-07', 'YYYYMMDD') FROM DUAL; // '2024-03-07'
+</code></pre></div></div>
+
+<h4 id="null-관련-함수"><code class="language-plaintext highlighter-rouge">NULL</code> 관련 함수</h4>
+
+<h5 id="nvl인수1-인수2--인수1의-값이-null이면-인수2-아니면-인수1-반환"><code class="language-plaintext highlighter-rouge">NVL({인수1}, {인수2})</code> : 인수1의 값이 <code class="language-plaintext highlighter-rouge">NULL</code>이면 인수2, 아니면 인수1 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, NVL(SCORE, 0) AS MEMBER_SCORE FROM REVIEW;
+</code></pre></div></div>
+
+<h5 id="nullif인수1-인수2--인수1의-값이-같으면-null-아니면-인수1-반환"><code class="language-plaintext highlighter-rouge">NULLIF({인수1}, {인수2})</code> : 인수1의 값이 같으면 <code class="language-plaintext highlighter-rouge">NULL</code>, 아니면 인수1 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, NULLIF(SCORE, 0) AS MEMBER_SCORE FROM REVIEW;
+</code></pre></div></div>
+
+<h5 id="coalesce인수1-인수2---null이-아닌-최초의-인수-반환"><code class="language-plaintext highlighter-rouge">COALESCE({인수1}, {인수2}, ...)</code> : <code class="language-plaintext highlighter-rouge">NULL</code>이 아닌 최초의 인수 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, COALESCE(PHONE, EMAIL, FAX) AS  CONTACT FROM REVIEW;
+</code></pre></div></div>
+
+<h5 id="nvl인수1-인수2-인수3--인수1의-값이-null이-아니면-인수2-null이면-인수3-반환"><code class="language-plaintext highlighter-rouge">NVL({인수1}, {인수2}, {인수3})</code> : 인수1의 값이 <code class="language-plaintext highlighter-rouge">NULL</code>이 아니면 인수2, <code class="language-plaintext highlighter-rouge">NULL</code>이면 인수3 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, NVL(SCORE, '리뷰 O', '리뷰 X') AS MEMBER_SCORE FROM REVIEW;
+</code></pre></div></div>
+
+<h5 id="case--이면-이고-이면-이다-식으로-표현되는-구문"><code class="language-plaintext highlighter-rouge">CASE</code> : ‘~이면 ~이고, ~이면 ~이다’ 식으로 표현되는 구문</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER,
+    CASE WHEN SCORE = '5' THEN '만점'
+    END AS REVIEW_DATA
+FROM REVIEW;
+</code></pre></div></div>
+
+<h3 id="where절--dml문을-수행할-때-원하는-데이터만-선택"><code class="language-plaintext highlighter-rouge">WHERE</code>절 : <code class="language-plaintext highlighter-rouge">DML</code>문을 수행할 때 원하는 데이터만 선택</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT 컬럼1, 컬럼2, ... FROM 테이블 WHERE (조건절);
+</code></pre></div></div>
+
+<ul>
+  <li>비교 연산자 : 조건절 내에서 비교하기 위해 사용되는 연산자</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/e770be4a-d9a5-425d-8d01-d9106d794854" width="80%" /></p>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/8ae99f0d-ea21-4e0c-b2cf-f5b886993c8d" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER FROM REVIEW WHERE MEMBER &lt; 10; // 10보다 작은 값 출력
+SELECT MEMBER FROM REVIEW WHERE MEMBER = 10; // 10인 값 출력
+SELECT MEMBER FROM REVIEW WHERE MEMBER &lt;= 10; // 10보다 작거나 같은 값 출력
+SELECT MEMBER FROM REVIEW WHERE MEMBER &lt;&gt; 0; // 10과 같지 않은 값 출력
+SELECT MEMBER FROM REVIEW WHERE MEMBER not col = 10; // 칼럼이 1이 아닌 값 출력
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">SQL</code> 연산자 : 조건절 내에서 <code class="language-plaintext highlighter-rouge">SQL</code>이 지원하는 연산자</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1567d7de-05b2-43f3-947f-53bfaaafe555" width="80%" /></p>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5895f223-e540-4d49-bba6-abdb7938b900" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER FROM REVIEW WHERE MEMBER BETWEEN 1 AND 10; // 1 ~ 10인 값 출력
+</code></pre></div></div>
+
+<ul>
+  <li>논리 연산자 : 조건절 내에서 논리 연산을 위해 사용되는 연산자</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/950b6035-99b0-4654-af32-ad33db4eddaf" width="80%" /></p>
+
+<h3 id="group-by절--데이터를-그룹별로-묶음"><code class="language-plaintext highlighter-rouge">GROUP BY</code>절 : 데이터를 그룹별로 묶음</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">BY</code> 뒤에 그룹핑의 기준이 되는 하나 이상의 컬럼이 위치</li>
+</ul>
+
+<h4 id="집계-함수--데이터를-그룹핑한-뒤에-그룹별로-집계-데이터를-도출">집계 함수 : 데이터를 그룹핑한 뒤에 그룹별로 집계 데이터를 도출</h4>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/0b0bfff1-003b-493e-bf4d-afed82b901fa" width="80%" /></p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="SQLD" /><summary type="html"><![CDATA[구문]]></summary></entry><entry><title type="html">[SQLD] 1. 데이터 모델링의 이해</title><link href="http://localhost:4000/sqld1/" rel="alternate" type="text/html" title="[SQLD] 1. 데이터 모델링의 이해" /><published>2024-03-06T00:00:00+09:00</published><updated>2024-03-06T00:00:00+09:00</updated><id>http://localhost:4000/sqld1</id><content type="html" xml:base="http://localhost:4000/sqld1/"><![CDATA[<h2 id="데이터-모델링의-이해">데이터 모델링의 이해</h2>
 
 <h3 id="데이터-모델의-이해">데이터 모델의 이해</h3>
 
@@ -6,33 +247,133 @@
   <li>모델링 (<code class="language-plaintext highlighter-rouge">Modeling</code>) : 현실에서 반영할 데이터를 저장할 데이터베이스를 구축하기 위한 분석·설계의 과정
     <ul>
       <li>모델링 조건 : 현실 세계를 반영해야 함, 단순화하여 표현해야 함, 관리하고자 하는 데이터를 모델로 설계</li>
-      <li>모델링 특징 : ‘현실 세계를 추상화, 단순화, 명확화하기 위해 일정한 표기법에 의해 표현하는 기법’
-        <ul>
-          <li>추상화 (<code class="language-plaintext highlighter-rouge">Abstraction</code>) : 현실 세계의 아이디어나 개념을 일정한 형식으로 간략하게 표현하는 것</li>
-          <li>단순화 (<code class="language-plaintext highlighter-rouge">Simplification</code>) : 복잡한 현실 세계를 정해진 표기법으로 단순하고 쉽게 표현하는 것</li>
-          <li>명확화 (<code class="language-plaintext highlighter-rouge">Clarify</code>) : 불분명함을 제거하고 명확하게 해석할 수 있도록 기술하는 것</li>
-        </ul>
-      </li>
-      <li>모델링의 3가지 관점 : 데이터 관점 , 프로세스 관점, 데이터·프로세스의 상관 관점</li>
     </ul>
   </li>
+  <li>모델링 특징 : ‘현실 세계를 추상화, 단순화, 명확화하기 위해 일정한 표기법에 의해 표현하는 기법’
+    <ul>
+      <li>추상화 (<code class="language-plaintext highlighter-rouge">Abstraction</code>) : 현실 세계의 아이디어나 개념을 일정한 형식으로 간략하게 표현하는 것</li>
+      <li>단순화 (<code class="language-plaintext highlighter-rouge">Simplification</code>) : 복잡한 현실 세계를 정해진 표기법으로 단순하고 쉽게 표현하는 것</li>
+      <li>명확화 (<code class="language-plaintext highlighter-rouge">Clarify</code>) : 불분명함을 제거하고 명확하게 해석할 수 있도록 기술하는 것</li>
+    </ul>
+  </li>
+  <li>모델링의 3가지 관점 : 데이터 관점 , 프로세스 관점, 데이터·프로세스의 상관 관점</li>
+  <li>데이터 모델링 유의점 : 중복 (같은 데이터가 여러 엔티티에 중복으로 저장되는 것은 지양되어야), 비유연성 (데이터 모델은 수시로 변경되므로, 데이터 모델과 프로세스를 분리해야), 비일관성 (데이터 간 연관 관계에 대해 명확히 정의해야)</li>
+  <li>모델링 3단계 : 개념적 데이터 모델링, 논리적 데이터 모델링, 물리적 데이터 모델링</li>
+  <li>데이터 독립성 : 데이터베이스에 대한 사용자들의 관점과 실제 표현되는 물리적인 방식 분리</li>
+  <li>3단계 스키마 구조 : 논리적 독립성, 개념적 독립성이 보장
+    <ul>
+      <li>외부 스키마 (<code class="language-plaintext highlighter-rouge">External Schema</code>) : 각 사용자가 보는 데이터베이스의 스키마 정의 → 사용자 관점</li>
+      <li>개념 스키마 (<code class="language-plaintext highlighter-rouge">Conceptual Schema</code>) : 모든 사용자가 보는 데이터베이스의 스키마 통합 → 통합 관점</li>
+      <li>내부 스키마 (<code class="language-plaintext highlighter-rouge">Internal Schema</code>) : 물리적 저장 구조를 표현 → 물리적 관점</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">ERD</code> (<code class="language-plaintext highlighter-rouge">Entity Relation Diagram</code>) : 시스템에 어떤 엔티티가 존재하고, 그들 간 어떤 관계를 표현하는 다이어그램<br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/4824dc44-0a8e-46ad-bb7f-e3ab51287b3b" width="80%" /><br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/2e42ecb5-6caa-4870-92c1-c71b13af3799" width="80%" /></li>
 </ul>
 
 <h3 id="엔티티">엔티티</h3>
 
+<ul>
+  <li>엔티티 (<code class="language-plaintext highlighter-rouge">Entity</code>) : 데이터베이스에서 식별 가능한 객체
+    <ul>
+      <li>엔티티 특징 : 업무에서 쓰이는 정보이여야 함, 유니크함을 보장할 수 있는 식별자가 있어야 함, 2개 이상의 인스턴스를 가지고 있어아 함, 반드시 속성을 가지고 있어야 함, 다른 에티티와 1개 이상의 관계를 가지고 있어야 함</li>
+    </ul>
+  </li>
+  <li>엔티티 분류 : 유형 엔티티 (물리적 형태 존재, 안정적, 지속적), 개념 엔티티 (물리적 형태 없음, 개념적), 사건 엔티티 (행위를 함으로 발생, 빈번함, 통계 자료로 이용 가능)</li>
+  <li>엔티티 발생 시점 : 기본 엔티티 (업무에 원래 존재하는 정보), 중심 엔티티 (기본 엔티티에서 파새오디어 행위 엔티티 생성), 행위 엔티티 (2개 이상의 엔티티로부터 파생)</li>
+</ul>
+
 <h3 id="속성">속성</h3>
+
+<ul>
+  <li>속성 (<code class="language-plaintext highlighter-rouge">Attribute</code>) : 사람·사물을 정의할 때 사물이나 개념의 특징을 설명해줄 수 있는 항목
+    <ul>
+      <li>속성 특징 : 더 이상 쪼개지지 않는 레벨, 프로세스에 필요한 항목이여야 함</li>
+      <li>속성값 : 엔티티에 속한 하나의 인스턴스를 구체적으로 나타내주는 데이터</li>
+    </ul>
+  </li>
+  <li>엔티티, 인스턴스, 속성, 속성값의 관계 : 속성 ⊂ 인스턴스 ⊂ 엔티티
+    <ol>
+      <li>1개의 엔티티는 2개 이상의 인스턴스를 갖는다.</li>
+      <li>1개의 인스턴스는 2개 이상의 속성을 갖는다.</li>
+      <li>1개의 속성은 하나의 속성값을 갖는다.</li>
+    </ol>
+  </li>
+  <li>특성에 따른 속성 분류 : 기본 속성 (업무 프로세스 분석을 통해 바로 정의 가능한 속성), 설계 속성 (업무에 존재하지 않지만 설계할 때 도출된 속성), 파생 속성 (다른 속성의 속성값을 계산하거나 특정 규칙으로 변현되어 생성한 속성)</li>
+  <li>구성 방식에 따른 속성 분류 : <code class="language-plaintext highlighter-rouge">PK</code> (엔티티의 인스턴스를 식별할 수 있는 속성), <code class="language-plaintext highlighter-rouge">FK</code> (다른 엔티티의 속성에서 가져온 속성), 일반 속성 (<code class="language-plaintext highlighter-rouge">PK</code>, <code class="language-plaintext highlighter-rouge">FK</code>를 제외한 나머지 속성)</li>
+  <li>도메인 (<code class="language-plaintext highlighter-rouge">Domain</code>) : 속성이 가질 수 있는 속성값의 범위</li>
+  <li>용어사전 : 속성의 이름을 직관적으로 부여하기 위한 업무사전</li>
+  <li>시스템 카탈로그 : 시스템 자체에 관련이 있는 데이터를 담고 있는 데이터베이스 (읽기 연산만 가능)</li>
+</ul>
 
 <h3 id="관계">관계</h3>
 
+<ul>
+  <li>관계 (<code class="language-plaintext highlighter-rouge">Relation</code>) : 엔티티와 엔티티와의 관계
+    <ul>
+      <li>존재 관계 : 존재 자체로 연관성이 있는 관계</li>
+      <li>행위 관계 : 특정한 행위를 함으로써 연관성이 생기는 관계</li>
+    </ul>
+  </li>
+  <li>관계 표기법 : 관계명 (엔티티와 엔티티가 어떤 관계를 맺고 있는지 나타내는 문장),  관계차수 (<code class="language-plaintext highlighter-rouge">1:1</code>, <code class="language-plaintext highlighter-rouge">1:N</code>, <code class="language-plaintext highlighter-rouge">N:N</code>와 같이 각 엔티티에서 관계에 참여하는 수), 관계선택사양 (이 관계가 필수요소인지 선택사항인지 나타내는 말)</li>
+</ul>
+
 <h3 id="식별자">식별자</h3>
+
+<ul>
+  <li>식빌자 (<code class="language-plaintext highlighter-rouge">Identifier</code>) : 속성 중에 각각의 인스턴스를 구분 가능하게 하는 속성</li>
+  <li>
+    <p>식별자 분류 : 대표성 여부 (주식별자<code class="language-plaintext highlighter-rouge">vs</code>보조 식별자), 소스로 생성되었는지 여부 (내부식별자<code class="language-plaintext highlighter-rouge">vs</code>외부식별자), 단일 속성 여부 (단일식별자<code class="language-plaintext highlighter-rouge">vs</code>복합식별자), 대체 여부 (원조식별자<code class="language-plaintext highlighter-rouge">vs</code>대리식별자)</p>
+  </li>
+  <li>주식별자 : <code class="language-plaintext highlighter-rouge">PK</code> → 하나의 속성이 주식별자가 될 수 있고, 여러 개의 속성이 주식별자가 될 수 있음</li>
+  <li>주식별자 특징 : 유일성 (각 인스턴스에 유니크함을 부여하여 식별이 가능하도록 함), 최소성 (유일성을 보장하는 최소 개수의 속성이여아 함),  불변성 (속성값이 되도록 변하지 않아아 함), 존재성 (속성값이 <code class="language-plaintext highlighter-rouge">NULL</code>일 수 없음)</li>
+</ul>
 
 <h2 id="데이터-모델과-sql">데이터 모델과 <code class="language-plaintext highlighter-rouge">SQL</code></h2>
 
 <h3 id="정규화">정규화</h3>
 
+<ul>
+  <li>정규화 (<code class="language-plaintext highlighter-rouge">Normalization</code>) : 데이터 정합성을 위해 엔티티를 작은 단위로 분리하는 과정
+    <ul>
+      <li>제1정규형 : 모든 속성은 반드시 하나의 값만 가져야 함</li>
+      <li>제2정규형 : 엔티티의 모든 일반속성은 반드시 모든 주식별자에 종속되어야 함</li>
+      <li>제3졍규형 : 주식별자가 아닌 모든 속성 간에는 서로 종속될 수 없음</li>
+    </ul>
+  </li>
+</ul>
+
 <h3 id="반정규화">반정규화</h3>
 
-<h3 id="트랜잭션">트랜잭션</h3>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="SQLD" /><summary type="html"><![CDATA[데이터 모델링의 이해]]></summary></entry><entry><title type="html">[React] 4. 리액트 라우팅 (React Routing)</title><link href="http://localhost:4000/react4/" rel="alternate" type="text/html" title="[React] 4. 리액트 라우팅 (React Routing)" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/react4</id><content type="html" xml:base="http://localhost:4000/react4/"><![CDATA[<h2 id="react-router-dom--react로-생성된-spa-내에서-페이지-이동이-가능하도록-라우팅"><code class="language-plaintext highlighter-rouge">React-Router-Dom</code> : <code class="language-plaintext highlighter-rouge">React</code>로 생성된 <code class="language-plaintext highlighter-rouge">SPA</code> 내에서 페이지 이동이 가능하도록 라우팅</h2>
+<ul>
+  <li>반정규화 (<code class="language-plaintext highlighter-rouge">De-Normalization</code>) : 데이터의 조회 성능 향상을 위해 데이터 중복을 허용하거나 데이터를 그룹핑
+    <ul>
+      <li>테이블 반졍규화 : 테이블 병합 (<code class="language-plaintext highlighter-rouge">JOIN</code>이 많아 테이블 통합, <code class="language-plaintext highlighter-rouge">1:M</code>은 지양해야), 테이블 분할 (엔티티 일부 속성을 <code class="language-plaintext highlighter-rouge">1:1</code>의 엔티티로 만드는 테이블 수직 분할, 엔티티 인스턴스를 특정 기준으로 파티셔닝하는 테이블 수평 분할), 테이블 추가 (별도의 중복된 엔티티를 추가하는 중복 테이블 추가, 통계 테이블·이력 테이블·부분 테이블 추가)</li>
+      <li>컬럼 반정규화 : 중복 칼럼 추가 (<code class="language-plaintext highlighter-rouge">JOIN</code>이 많아 컬럼 통합), 파생 칼럼 추가 (계산값을 미리 컬럼으로 보관), 이력 테이블 컬럼 추가 (조회 기준이 될 컬럼을 미리 추가)</li>
+      <li>관계 반정규화 : <code class="language-plaintext highlighter-rouge">JOIN</code>이 많아 중복 관계 추가</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="트랜잭션">트랜잭션</h3>
+
+<ul>
+  <li>트랜잭션 (<code class="language-plaintext highlighter-rouge">Transaction</code>) : 데이터를 조작하기 위한 하나의 논리 작업 다위</li>
+  <li>널 (<code class="language-plaintext highlighter-rouge">NULL</code>) : 존재하지 않음, 값이 없음</li>
+</ul>
+
+<h2 id="데이터베이스">데이터베이스</h2>
+
+<h3 id="관계형-테이터베이스">관계형 테이터베이스</h3>
+
+<ul>
+  <li>데이터베이스 (<code class="language-plaintext highlighter-rouge">Database</code>) : 데이터를 저장하는 공간
+    <ul>
+      <li>관계형 데이터베이스 (<code class="language-plaintext highlighter-rouge">RDB; Relational Database</code>) : 관계형 데이터 모델에 기초한 데이터베이스 (모든 데이터를 2차원 테이블 형태로 표현한 뒤 각 테이블 간의 관계를 정의)</li>
+      <li>테이블 (<code class="language-plaintext highlighter-rouge">Table</code>) : 세로 열인 컬럼 (<code class="language-plaintext highlighter-rouge">Column</code>)과 가로 행인 로우 (<code class="language-plaintext highlighter-rouge">Row</code>)로 구성</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">SQL</code> : 관계형 데이터베이스에서 데이터를 다루기 위해 사용하는 언어</li>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="SQLD" /><summary type="html"><![CDATA[데이터 모델링의 이해]]></summary></entry><entry><title type="html">[React] 4. 리액트 라우팅 (React Routing)</title><link href="http://localhost:4000/react4/" rel="alternate" type="text/html" title="[React] 4. 리액트 라우팅 (React Routing)" /><published>2024-02-27T00:00:00+09:00</published><updated>2024-02-27T00:00:00+09:00</updated><id>http://localhost:4000/react4</id><content type="html" xml:base="http://localhost:4000/react4/"><![CDATA[<h2 id="react-router-dom--react로-생성된-spa-내에서-페이지-이동이-가능하도록-라우팅"><code class="language-plaintext highlighter-rouge">React-Router-Dom</code> : <code class="language-plaintext highlighter-rouge">React</code>로 생성된 <code class="language-plaintext highlighter-rouge">SPA</code> 내에서 페이지 이동이 가능하도록 라우팅</h2>
 
 <ul>
   <li>라우팅 (<code class="language-plaintext highlighter-rouge">Routing</code>) : 네트워크에서 경로를 선택하는 프로세스
@@ -2327,109 +2668,7 @@ export default MyComponent;
       <li><b>경로 제어 프로토콜 : <code>IGP</code>, <code>EGP</code>, <code>BGP</code></b></li>
     </ul>
   </li>
-</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Engineer Information Processing" /><summary type="html"><![CDATA[C]]></summary></entry><entry><title type="html">[React] 2. 클래스 컴포넌트 (Class Component)</title><link href="http://localhost:4000/react2/" rel="alternate" type="text/html" title="[React] 2. 클래스 컴포넌트 (Class Component)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react2</id><content type="html" xml:base="http://localhost:4000/react2/"><![CDATA[<h2 id="클래스-컴포넌트-class-component--생성자와-생명주기-메소드를-통한-상태와-생명주기-관리">클래스 컴포넌트 (<code class="language-plaintext highlighter-rouge">Class Component</code>) : 생성자와 생명주기 메소드를 통한 상태와 생명주기 관리</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { Component } from 'react';
-
-class MyClassComponent extends Component {
-  constructor(props) {
-    super(props);
-    // 초기 상태 설정
-    this.state = {
-      count: 0
-    };
-  }
-
-  componentDidMount() {
-    // 컴포넌트가 마운트된 후 실행되는 코드
-    console.log('Component mounted');
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    // 상태 또는 속성이 업데이트된 후 실행되는 코드
-    console.log('Component updated', prevState.count, '-&gt;', this.state.count);
-  }
-
-  componentWillUnmount() {
-    // 컴포넌트가 언마운트되기 전 실행되는 코드
-    console.log('Component will unmount');
-  }
-
-  handleIncrement = () =&gt; {
-    // 상태 업데이트 예시
-    this.setState({ count: this.state.count + 1 });
-  };
-
-  render() {
-    return (
-      &lt;div&gt;
-        &lt;p&gt;Count: {this.state.count}&lt;/p&gt;
-        &lt;button onClick={this.handleIncrement}&gt;Increment&lt;/button&gt;
-      &lt;/div&gt;
-    );
-  }
-}
-
-export default MyClassComponent;
-</code></pre></div></div>
-
-<h3 id="생성자-constructor--메소드-내에서-컴포넌트-자체를-참조--this">생성자 (<code class="language-plaintext highlighter-rouge">Constructor</code>) : 메소드 내에서 컴포넌트 자체를 참조 → <code class="language-plaintext highlighter-rouge">this</code></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>constructor(props) {
-  super(props);
-  console.log("constructor");
-}
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">this.state</code> : 컴포넌트의 상태를 저장 (<code class="language-plaintext highlighter-rouge">setState</code> 메소드를 사용하여 업데이트)</li>
-  <li><code class="language-plaintext highlighter-rouge">this.props</code> : 컴포넌트에서 사용되는 속성에 접근</li>
-</ul>
-
-<h3 id="생명주기-메소드-lifecycle-methods--클래스-컴포넌트의-생명주기에-따라-메소드를-실행">생명주기 메소드 (<code class="language-plaintext highlighter-rouge">Lifecycle Methods</code>) : 클래스 컴포넌트의 생명주기에 따라 메소드를 실행</h3>
-
-<blockquote>
-  <p>클래스 컴포넌트의 생명주기 메소드가 실행되는 시점?</p>
-
-  <ul>
-    <li>마운트 (<code class="language-plaintext highlighter-rouge">Mount</code>) : 컴포넌트가 생성되는 시점
-      <ul>
-        <li><code class="language-plaintext highlighter-rouge">Constructor</code>, <code class="language-plaintext highlighter-rouge">getDerivedStateFromProps</code>, <code class="language-plaintext highlighter-rouge">render</code>, <code class="language-plaintext highlighter-rouge">componentDidMount</code></li>
-      </ul>
-    </li>
-    <li>업데이트 (<code class="language-plaintext highlighter-rouge">Update</code>) : 이미 생성된 컴포넌트의 내용이 변경되는 시점
-      <ul>
-        <li><code class="language-plaintext highlighter-rouge">getDerivedStateFromProps</code>, <code class="language-plaintext highlighter-rouge">shouldComponentUpdate</code>, <code class="language-plaintext highlighter-rouge">render</code>, <code class="language-plaintext highlighter-rouge">getSnapshotBeforeUpdate</code>, <code class="language-plaintext highlighter-rouge">componentDidUpdate</code></li>
-      </ul>
-    </li>
-    <li>언마운트 (<code class="language-plaintext highlighter-rouge">Unmount</code>) : 컴포넌트가 더 이상 존재하지 않는 시점
-      <ul>
-        <li><code class="language-plaintext highlighter-rouge">componentWillUnmount</code></li>
-      </ul>
-    </li>
-  </ul>
-
-  <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/aec795ea-ff51-4f9d-ada3-ebca3616178f" width="80%" /></p>
-</blockquote>
-
-<h4 id="render--컴포넌트가-ui를-렌더링하기-위해-사용-마운트-업데이트-과정에서-실행"><code class="language-plaintext highlighter-rouge">render</code> : 컴포넌트가 <code class="language-plaintext highlighter-rouge">UI</code>를 렌더링하기 위해 사용 (마운트, 업데이트 과정에서 실행)</h4>
-
-<ul>
-  <li>리액트 클래스 컴포넌트의 유일한 필수 값으로 사용</li>
-  <li>항상 순수해야 하며 부수 효과가 없어야 함 → <code class="language-plaintext highlighter-rouge">render</code> 내에서 <code class="language-plaintext highlighter-rouge">this.setState</code>를 호출하면 안됨</li>
-</ul>
-
-<h4 id="getderivedstatefromprops--props에-가져온-값을-상태에-넣을-때-상태나-props이-변화했을-때-실행"><code class="language-plaintext highlighter-rouge">getDerivedStateFromProps</code> : <code class="language-plaintext highlighter-rouge">props</code>에 가져온 값을 상태에 넣을 때, 상태나 <code class="language-plaintext highlighter-rouge">props</code>이 변화했을 때 실행</h4>
-
-<h4 id="componentdidmount--클래스-컴포넌트가-마운트된-이후에-실행"><code class="language-plaintext highlighter-rouge">componentDidMount</code> : 클래스 컴포넌트가 마운트된 이후에 실행</h4>
-
-<h4 id="shouldcomponentupdate--클래스-컴포넌트가-리렌더링을-할지-안할지-결정"><code class="language-plaintext highlighter-rouge">shouldComponentUpdate</code> : 클래스 컴포넌트가 리렌더링을 할지 안할지 결정</h4>
-
-<h4 id="getsnapshotbeforeupdate--클래스-컴포넌트가-엄데이트되기-직전의-dom-내의-특정-값을-반환하면-그-다음의-componentdidupdate-반환"><code class="language-plaintext highlighter-rouge">getSnapshotBeforeUpdate</code> : 클래스 컴포넌트가 엄데이트되기 직전의 <code class="language-plaintext highlighter-rouge">DOM</code> 내의 특정 값을 반환하면, 그 다음의 <code class="language-plaintext highlighter-rouge">componentDidUpdate</code> 반환</h4>
-
-<h4 id="componentdidupdate--컴포넌트-업데이트가-일어난-이후에-실행"><code class="language-plaintext highlighter-rouge">componentDidUpdate</code> : 컴포넌트 업데이트가 일어난 이후에 실행</h4>
-
-<h4 id="componentwillunmount--컴포넌트가-언마운트되거나-더-이상-사용되지-않기-직전에-실행"><code class="language-plaintext highlighter-rouge">componentWillUnmount</code> : 컴포넌트가 언마운트되거나 더 이상 사용되지 않기 직전에 실행</h4>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="React" /><summary type="html"><![CDATA[클래스 컴포넌트 (Class Component) : 생성자와 생명주기 메소드를 통한 상태와 생명주기 관리]]></summary></entry><entry><title type="html">[React] 1. 리액트 (React)</title><link href="http://localhost:4000/react1/" rel="alternate" type="text/html" title="[React] 1. 리액트 (React)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react1</id><content type="html" xml:base="http://localhost:4000/react1/"><![CDATA[<h2 id="리액트-react--사용자-인터페이스를-만들기-위한-javascript-라이브러리">리액트 (<code class="language-plaintext highlighter-rouge">React</code>) : 사용자 인터페이스를 만들기 위한 <code class="language-plaintext highlighter-rouge">JavaScript</code> 라이브러리</h2>
+</ul>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Engineer Information Processing" /><summary type="html"><![CDATA[C]]></summary></entry><entry><title type="html">[React] 1. 리액트 (React)</title><link href="http://localhost:4000/react1/" rel="alternate" type="text/html" title="[React] 1. 리액트 (React)" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-16T00:00:00+09:00</updated><id>http://localhost:4000/react1</id><content type="html" xml:base="http://localhost:4000/react1/"><![CDATA[<h2 id="리액트-react--사용자-인터페이스를-만들기-위한-javascript-라이브러리">리액트 (<code class="language-plaintext highlighter-rouge">React</code>) : 사용자 인터페이스를 만들기 위한 <code class="language-plaintext highlighter-rouge">JavaScript</code> 라이브러리</h2>
 
 <ul>
   <li>가상 <code class="language-plaintext highlighter-rouge">DOM</code> : 실제 <code class="language-plaintext highlighter-rouge">DOM</code>가 상호 작용하면서 웹 어플리케이션의 빠른 렌더링이 가능</li>

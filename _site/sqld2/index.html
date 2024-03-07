@@ -1,0 +1,938 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<script>
+document.addEventListener('mousedown', (event) => { // 클릭 금지
+  if (event.button === 1) {
+    event.preventDefault();
+  }
+
+  if (event.button === 2) {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener('dragstart', (event) => { // 드래그 금지
+  event.preventDefault();
+});
+
+document.addEventListener('contextmenu', (event) => { // 선택 금지
+  event.preventDefault();
+});
+
+document.addEventListener('selectstart', (event) => { // 텍스트 선택 금지
+  event.preventDefault();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  checkAndLoadPage(getAllImgs());
+});
+
+function getAllImgs() {
+  const images = document.querySelectorAll('img');
+  return Array.from(images);
+}
+
+function chkImgsLoaded(allImages) {
+    return allImages.every(image => image.complete);
+}
+
+function checkAndLoadPage(allImages) {
+    if (!chkImgsLoaded(allImages)) {
+      requestAnimationFrame(function() {
+      checkAndLoadPage(allImages);
+      });
+    }
+}
+
+</script>
+<html lang="ko" class="no-js" oncopy="return false;" oncut="return false;" onpaste="return false;">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[SQLD] 2. SQL 기본 및 활용 - pocj8ur4in’s blog</title>
+<meta name="description" content="구문">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[SQLD] 2. SQL 기본 및 활용">
+<meta property="og:url" content="http://localhost:4000/sqld2/">
+
+
+  <meta property="og:description" content="구문">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-03-07T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2024-03-07T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/sqld2/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in's blog",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[SQLD] 2. SQL 기본 및 활용</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c175e6a8-9aa2-44bb-8359-abbb68d5fe1b" alt="pocj8ur4in" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">pocj8ur4in</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:pocj8ur4in@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="pocj8ur4in@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[SQLD] 2. SQL 기본 및 활용">
+    <meta itemprop="description" content="구문">
+    <meta itemprop="datePublished" content="2024-03-07T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-03-07T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/sqld2/" class="u-url" itemprop="url">[SQLD] 2. SQL 기본 및 활용
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#구문">구문</a><ul><li><a href="#select문--저장된-데이터-조회">SELECT문 : 저장된 데이터 조회</a><ul><li><a href="#문자-함수">문자 함수</a><ul><li><a href="#chr아스키-코드--입력된-아스키-코드에-매핑되는-문자-변환">CHR(아스키 코드) : 입력된 아스키 코드에 매핑되는 문자 변환</a></li><li><a href="#lower문자열--입력된-문자열을-대문자로-변환">LOWER(문자열) : 입력된 문자열을 대문자로 변환</a></li><li><a href="#upper문자열---입력된-문자열을-소문자로-변환">UPPER(문자열) :  입력된 문자열을 소문자로 변환</a></li><li><a href="#ltrim문자열특정문자열--문자열-왼쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거">LTRIM(문자열[,{특정문자(열)}]) : 문자열 왼쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</a></li><li><a href="#rtrim문자열특정문자열--문자열-오른쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거">RTRIM(문자열[,{특정문자(열)}]) : 문자열 오른쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</a></li><li><a href="#trim위치특정문자from문자열--문자열-왼쪽오른쪽-공백-혹은-옵션-지정-장소부터-제거">TRIM([{위치}{특정문자}FROM]문자열) : 문자열 왼쪽·오른쪽 공백 혹은 옵션 지정 장소부터 제거</a></li><li><a href="#substr문자열시작점길이--문자열의-원하는-부분만-잘라-반환">SUBSTR(문자열,시작점[,{길이}]) : 문자열의 원하는 부분만 잘라 반환</a></li><li><a href="#length문자열--문자열의-길이-반환">LENGTH(문자열) : 문자열의 길이 반환</a></li><li><a href="#replace문자열변경전-문자열변경-후-문자열--문자열에서-변경-전-문자열을-찾아-변경-후-문자열로-변환">REPLACE(문자열,변경전 문자열,[{변경 후 문자열}]) : 문자열에서 변경 전 문자열을 찾아 변경 후 문자열로 변환</a></li></ul></li><li><a href="#숫자-함수">숫자 함수</a><ul><li><a href="#abs수--수의-절댓값-반환">ABS({수}) : 수의 절댓값 반환</a></li><li><a href="#sign수--수의-부호-반환-1-0--1">SIGN({수}) : 수의 부호 반환 (1, 0, -1)</a></li><li><a href="#round수-자릿수--수를-지정된-소수점-자릿수까지-반올림해-반환">ROUND({수} [,{자릿수}]) : 수를 지정된 소수점 자릿수까지 반올림해 반환</a></li><li><a href="#trunc수-자릿수--수를-지정된-소수점-자릿수까지-버림해-반환">TRUNC({수}, [,{자릿수}]) : 수를 지정된 소수점 자릿수까지 버림해 반환</a></li><li><a href="#ceil수--소수점-이하의-수를-올림한-정수로-반환">CEIL({수}) : 소수점 이하의 수를 올림한 정수로 반환</a></li><li><a href="#floor수--소수점-이하의-수를-버림한-정수로-반환">FLOOR({수}) : 소수점 이하의 수를 버림한 정수로 반환</a></li><li><a href="#mod수1-수2--수1을-수2로-나눈-나머지를-반환">MOD({수1}, {수2}) : 수1을 수2로 나눈 나머지를 반환</a></li></ul></li><li><a href="#날짜-함수">날짜 함수</a><ul><li><a href="#sysdate--현재의-연월일시분초-반환">SYSDATE : 현재의 연,월,일,시,분,초 반환</a></li><li><a href="#extract특정-단위-from-데이터--날짜-데이터에서-연월일시분초-등-단위-지정해-출력">EXTRACT({특정 단위} FROM {데이터}) : 날짜 데이터에서 연,월,일,시,분,초 등 단위 지정해 출력</a></li><li><a href="#add_mount날짜-데이터-특정-개월-수--날짜-데이터에-특정-개월-수를-더한-날짜-반환">ADD_MOUNT({날짜 데이터}, {특정 개월 수}) : 날짜 데이터에 특정 개월 수를 더한 날짜 반환</a></li></ul></li><li><a href="#변환-함수">변환 함수</a><ul><li><a href="#to_number문자열--문자열을-숫자형으로-변환">TO_NUMBER({문자열}) : 문자열을 숫자형으로 변환</a></li><li><a href="#to_char수날짜포맷--수나-날짜를-포맷-형식의-문자형으로-변환">TO_CHAR({수|날짜[,{포맷}]}) : 수나 날짜를 (포맷 형식의) 문자형으로 변환</a></li><li><a href="#to_date문자열포맷--포맷-형식의-문자형-데이터를-날짜형으로-변환">TO_DATE({문자열},{포맷}) : 포맷 형식의 문자형 데이터를 날짜형으로 변환</a></li></ul></li><li><a href="#null-관련-함수">NULL 관련 함수</a><ul><li><a href="#nvl인수1-인수2--인수1의-값이-null이면-인수2-아니면-인수1-반환">NVL({인수1}, {인수2}) : 인수1의 값이 NULL이면 인수2, 아니면 인수1 반환</a></li><li><a href="#nullif인수1-인수2--인수1의-값이-같으면-null-아니면-인수1-반환">NULLIF({인수1}, {인수2}) : 인수1의 값이 같으면 NULL, 아니면 인수1 반환</a></li><li><a href="#coalesce인수1-인수2---null이-아닌-최초의-인수-반환">COALESCE({인수1}, {인수2}, ...) : NULL이 아닌 최초의 인수 반환</a></li><li><a href="#nvl인수1-인수2-인수3--인수1의-값이-null이-아니면-인수2-null이면-인수3-반환">NVL({인수1}, {인수2}, {인수3}) : 인수1의 값이 NULL이 아니면 인수2, NULL이면 인수3 반환</a></li><li><a href="#case--이면-이고-이면-이다-식으로-표현되는-구문">CASE : ‘~이면 ~이고, ~이면 ~이다’ 식으로 표현되는 구문</a></li></ul></li></ul></li><li><a href="#where절--dml문을-수행할-때-원하는-데이터만-선택">WHERE절 : DML문을 수행할 때 원하는 데이터만 선택</a></li><li><a href="#group-by절--데이터를-그룹별로-묶음">GROUP BY절 : 데이터를 그룹별로 묶음</a><ul><li><a href="#집계-함수--데이터를-그룹핑한-뒤에-그룹별로-집계-데이터를-도출">집계 함수 : 데이터를 그룹핑한 뒤에 그룹별로 집계 데이터를 도출</a></li></ul></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="구문">구문</h2>
+
+<h3 id="select문--저장된-데이터-조회"><code class="language-plaintext highlighter-rouge">SELECT</code>문 : 저장된 데이터 조회</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT 컬럼1, 컬럼2, ... FROM 테이블 WHERE 컬럼1 = '컬럼1';
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">*</code> : 컬럼을 명시하지 않고 <code class="language-plaintext highlighter-rouge">*</code>`를 쓰면, 테이블 내 전체 컬럼 조회</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM 테이블;
+</code></pre></div></div>
+
+<ul>
+  <li>산술 연산자 : <code class="language-plaintext highlighter-rouge">NUMBER DATA</code> 유형의 데이터와 함꼐 사용하는 연산자</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1b2fdf5c-c60d-479d-86ba-3c57f0e15ee0" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT 10+5, 10-5, 10*5, 10/5, 10%5 FROM DUAL; // 15, 5, 2, 0
+</code></pre></div></div>
+
+<ul>
+  <li>합성 연산자 <code class="language-plaintext highlighter-rouge">||</code> : 문자와 문자를 연결할 때 사용하는 연산자</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT '1'||'0'||'+'||'5' AS RESULT FROM DUAL; // 10+5
+</code></pre></div></div>
+
+<h4 id="문자-함수">문자 함수</h4>
+
+<h5 id="chr아스키-코드--입력된-아스키-코드에-매핑되는-문자-변환"><code class="language-plaintext highlighter-rouge">CHR(아스키 코드)</code> : 입력된 아스키 코드에 매핑되는 문자 변환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT CHR(65) FROM DUAL; // A
+</code></pre></div></div>
+
+<h5 id="lower문자열--입력된-문자열을-대문자로-변환"><code class="language-plaintext highlighter-rouge">LOWER(문자열)</code> : 입력된 문자열을 대문자로 변환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LOWER('SQLD') FROM DUAL; // sqld
+</code></pre></div></div>
+
+<h5 id="upper문자열---입력된-문자열을-소문자로-변환"><code class="language-plaintext highlighter-rouge">UPPER(문자열)</code> :  입력된 문자열을 소문자로 변환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LOWER('sqld') FROM DUAL; // SQLD
+</code></pre></div></div>
+
+<h5 id="ltrim문자열특정문자열--문자열-왼쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거"><code class="language-plaintext highlighter-rouge">LTRIM(문자열[,{특정문자(열)}])</code> : 문자열 왼쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LTRIM('      SQLD') FROM DUAL; // SQLD
+</code></pre></div></div>
+
+<h5 id="rtrim문자열특정문자열--문자열-오른쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거"><code class="language-plaintext highlighter-rouge">RTRIM(문자열[,{특정문자(열)}])</code> : 문자열 오른쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT RTRIM('SQLD      ') FROM DUAL; // SQLD
+</code></pre></div></div>
+
+<h5 id="trim위치특정문자from문자열--문자열-왼쪽오른쪽-공백-혹은-옵션-지정-장소부터-제거"><code class="language-plaintext highlighter-rouge">TRIM([{위치}{특정문자}FROM]문자열)</code> : 문자열 왼쪽·오른쪽 공백 혹은 옵션 지정 장소부터 제거</h5>
+
+<ul>
+  <li>옵션 : <code class="language-plaintext highlighter-rouge">LEADING</code>, <code class="language-plaintext highlighter-rouge">TRAILING</code>, <code class="language-plaintext highlighter-rouge">BOTH</code></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TRIM('      SQLD      ') FROM DUAL; // SQLD
+SELECT TRIM(LEADING 'S' FROM 'SQLD') FROM DUAL; // QLD
+SELECT TRIM(TRAILING 'Q' FROM 'SQLD') FROM DUAL; // SQL
+</code></pre></div></div>
+
+<h5 id="substr문자열시작점길이--문자열의-원하는-부분만-잘라-반환"><code class="language-plaintext highlighter-rouge">SUBSTR(문자열,시작점[,{길이}])</code> : 문자열의 원하는 부분만 잘라 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT SUBSTR('SQLD', 1, 2) FROM DUAL; // QL
+</code></pre></div></div>
+
+<h5 id="length문자열--문자열의-길이-반환"><code class="language-plaintext highlighter-rouge">LENGTH(문자열)</code> : 문자열의 길이 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LENGTH('SQLD') FROM DUAL; // 4
+</code></pre></div></div>
+
+<h5 id="replace문자열변경전-문자열변경-후-문자열--문자열에서-변경-전-문자열을-찾아-변경-후-문자열로-변환"><code class="language-plaintext highlighter-rouge">REPLACE(문자열,변경전 문자열,[{변경 후 문자열}])</code> : 문자열에서 변경 전 문자열을 찾아 변경 후 문자열로 변환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT REPLACE('SQLD', 'D', 'P') FROM DUAL; // SQLP
+</code></pre></div></div>
+
+<h4 id="숫자-함수">숫자 함수</h4>
+
+<h5 id="abs수--수의-절댓값-반환"><code class="language-plaintext highlighter-rouge">ABS({수})</code> : 수의 절댓값 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ABS(-1) FROM DUAL; // 1
+</code></pre></div></div>
+
+<h5 id="sign수--수의-부호-반환-1-0--1"><code class="language-plaintext highlighter-rouge">SIGN({수})</code> : 수의 부호 반환 (1, 0, -1)</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT SIGN(5) FROM DUAL; // 1
+SELECT SIGN(0) FROM DUAL; // 0
+SELECT SIGN(-4) FROM DUAL; // -1
+</code></pre></div></div>
+
+<h5 id="round수-자릿수--수를-지정된-소수점-자릿수까지-반올림해-반환"><code class="language-plaintext highlighter-rouge">ROUND({수} [,{자릿수}])</code> : 수를 지정된 소수점 자릿수까지 반올림해 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ROUND(127.000000001, 0) FROM DUAL; // 127
+</code></pre></div></div>
+
+<h5 id="trunc수-자릿수--수를-지정된-소수점-자릿수까지-버림해-반환"><code class="language-plaintext highlighter-rouge">TRUNC({수}, [,{자릿수}])</code> : 수를 지정된 소수점 자릿수까지 버림해 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ROUND(127.000000001, 9) FROM DUAL; // 127
+</code></pre></div></div>
+
+<h5 id="ceil수--소수점-이하의-수를-올림한-정수로-반환"><code class="language-plaintext highlighter-rouge">CEIL({수})</code> : 소수점 이하의 수를 올림한 정수로 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT CEIL(127.000000001) FROM DUAL; // 128
+</code></pre></div></div>
+
+<h5 id="floor수--소수점-이하의-수를-버림한-정수로-반환"><code class="language-plaintext highlighter-rouge">FLOOR({수})</code> : 소수점 이하의 수를 버림한 정수로 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT FLOOR(127.000000001) FROM DUAL; // 127
+</code></pre></div></div>
+
+<h5 id="mod수1-수2--수1을-수2로-나눈-나머지를-반환"><code class="language-plaintext highlighter-rouge">MOD({수1}, {수2})</code> : 수1을 수2로 나눈 나머지를 반환</h5>
+
+<ul>
+  <li>수2가 0이면 수1 그대로 반환</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MOD(15, 4) FROM DUAL; // 3
+SELECT MOD(15, 0) FROM DUAL; // 15
+</code></pre></div></div>
+
+<h4 id="날짜-함수">날짜 함수</h4>
+
+<h5 id="sysdate--현재의-연월일시분초-반환"><code class="language-plaintext highlighter-rouge">SYSDATE</code> : 현재의 연,월,일,시,분,초 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT SYSDATE FROM DUAL;
+</code></pre></div></div>
+
+<h5 id="extract특정-단위-from-데이터--날짜-데이터에서-연월일시분초-등-단위-지정해-출력"><code class="language-plaintext highlighter-rouge">EXTRACT({특정 단위} FROM {데이터})</code> : 날짜 데이터에서 연,월,일,시,분,초 등 단위 지정해 출력</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT EXTRACT(YEAR FROM SYSDATE) AS YEAR FROM DUAL; // 2024
+</code></pre></div></div>
+
+<h5 id="add_mount날짜-데이터-특정-개월-수--날짜-데이터에-특정-개월-수를-더한-날짜-반환"><code class="language-plaintext highlighter-rouge">ADD_MOUNT({날짜 데이터}, {특정 개월 수})</code> : 날짜 데이터에 특정 개월 수를 더한 날짜 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ADD_MOUNT('2024-03-07', 'YYYY-MM-DD', 2) // 2024-03-09
+</code></pre></div></div>
+
+<h4 id="변환-함수">변환 함수</h4>
+
+<ul>
+  <li>명시적 형변환 : 변환 함수로 데이터 유형 변환을 명시적으로 나타냄</li>
+  <li>암시적 형변환 : 데이터베이스에서 내부적으로 데이터 유형을 변환함</li>
+</ul>
+
+<h5 id="to_number문자열--문자열을-숫자형으로-변환"><code class="language-plaintext highlighter-rouge">TO_NUMBER({문자열})</code> : 문자열을 숫자형으로 변환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TO_NUMBER('123') FROM DUAL; // 123
+</code></pre></div></div>
+
+<h5 id="to_char수날짜포맷--수나-날짜를-포맷-형식의-문자형으로-변환"><code class="language-plaintext highlighter-rouge">TO_CHAR({수|날짜[,{포맷}]})</code> : 수나 날짜를 (포맷 형식의) 문자형으로 변환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TO_CHAR(123) FROM DUAL; // '123'
+</code></pre></div></div>
+
+<h5 id="to_date문자열포맷--포맷-형식의-문자형-데이터를-날짜형으로-변환"><code class="language-plaintext highlighter-rouge">TO_DATE({문자열},{포맷})</code> : 포맷 형식의 문자형 데이터를 날짜형으로 변환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TO_DATE('2024-03-07', 'YYYYMMDD') FROM DUAL; // '2024-03-07'
+</code></pre></div></div>
+
+<h4 id="null-관련-함수"><code class="language-plaintext highlighter-rouge">NULL</code> 관련 함수</h4>
+
+<h5 id="nvl인수1-인수2--인수1의-값이-null이면-인수2-아니면-인수1-반환"><code class="language-plaintext highlighter-rouge">NVL({인수1}, {인수2})</code> : 인수1의 값이 <code class="language-plaintext highlighter-rouge">NULL</code>이면 인수2, 아니면 인수1 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, NVL(SCORE, 0) AS MEMBER_SCORE FROM REVIEW;
+</code></pre></div></div>
+
+<h5 id="nullif인수1-인수2--인수1의-값이-같으면-null-아니면-인수1-반환"><code class="language-plaintext highlighter-rouge">NULLIF({인수1}, {인수2})</code> : 인수1의 값이 같으면 <code class="language-plaintext highlighter-rouge">NULL</code>, 아니면 인수1 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, NULLIF(SCORE, 0) AS MEMBER_SCORE FROM REVIEW;
+</code></pre></div></div>
+
+<h5 id="coalesce인수1-인수2---null이-아닌-최초의-인수-반환"><code class="language-plaintext highlighter-rouge">COALESCE({인수1}, {인수2}, ...)</code> : <code class="language-plaintext highlighter-rouge">NULL</code>이 아닌 최초의 인수 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, COALESCE(PHONE, EMAIL, FAX) AS  CONTACT FROM REVIEW;
+</code></pre></div></div>
+
+<h5 id="nvl인수1-인수2-인수3--인수1의-값이-null이-아니면-인수2-null이면-인수3-반환"><code class="language-plaintext highlighter-rouge">NVL({인수1}, {인수2}, {인수3})</code> : 인수1의 값이 <code class="language-plaintext highlighter-rouge">NULL</code>이 아니면 인수2, <code class="language-plaintext highlighter-rouge">NULL</code>이면 인수3 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, NVL(SCORE, '리뷰 O', '리뷰 X') AS MEMBER_SCORE FROM REVIEW;
+</code></pre></div></div>
+
+<h5 id="case--이면-이고-이면-이다-식으로-표현되는-구문"><code class="language-plaintext highlighter-rouge">CASE</code> : ‘~이면 ~이고, ~이면 ~이다’ 식으로 표현되는 구문</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER,
+    CASE WHEN SCORE = '5' THEN '만점'
+    END AS REVIEW_DATA
+FROM REVIEW;
+</code></pre></div></div>
+
+<h3 id="where절--dml문을-수행할-때-원하는-데이터만-선택"><code class="language-plaintext highlighter-rouge">WHERE</code>절 : <code class="language-plaintext highlighter-rouge">DML</code>문을 수행할 때 원하는 데이터만 선택</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT 컬럼1, 컬럼2, ... FROM 테이블 WHERE (조건절);
+</code></pre></div></div>
+
+<ul>
+  <li>비교 연산자 : 조건절 내에서 비교하기 위해 사용되는 연산자</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/e770be4a-d9a5-425d-8d01-d9106d794854" width="80%" /></p>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/8ae99f0d-ea21-4e0c-b2cf-f5b886993c8d" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER FROM REVIEW WHERE MEMBER &lt; 10; // 10보다 작은 값 출력
+SELECT MEMBER FROM REVIEW WHERE MEMBER = 10; // 10인 값 출력
+SELECT MEMBER FROM REVIEW WHERE MEMBER &lt;= 10; // 10보다 작거나 같은 값 출력
+SELECT MEMBER FROM REVIEW WHERE MEMBER &lt;&gt; 0; // 10과 같지 않은 값 출력
+SELECT MEMBER FROM REVIEW WHERE MEMBER not col = 10; // 칼럼이 1이 아닌 값 출력
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">SQL</code> 연산자 : 조건절 내에서 <code class="language-plaintext highlighter-rouge">SQL</code>이 지원하는 연산자</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1567d7de-05b2-43f3-947f-53bfaaafe555" width="80%" /></p>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5895f223-e540-4d49-bba6-abdb7938b900" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER FROM REVIEW WHERE MEMBER BETWEEN 1 AND 10; // 1 ~ 10인 값 출력
+</code></pre></div></div>
+
+<ul>
+  <li>논리 연산자 : 조건절 내에서 논리 연산을 위해 사용되는 연산자</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/950b6035-99b0-4654-af32-ad33db4eddaf" width="80%" /></p>
+
+<h3 id="group-by절--데이터를-그룹별로-묶음"><code class="language-plaintext highlighter-rouge">GROUP BY</code>절 : 데이터를 그룹별로 묶음</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">BY</code> 뒤에 그룹핑의 기준이 되는 하나 이상의 컬럼이 위치</li>
+</ul>
+
+<h4 id="집계-함수--데이터를-그룹핑한-뒤에-그룹별로-집계-데이터를-도출">집계 함수 : 데이터를 그룹핑한 뒤에 그룹별로 집계 데이터를 도출</h4>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/0b0bfff1-003b-493e-bf4d-afed82b901fa" width="80%" /></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#sqld" class="page__taxonomy-item p-category" rel="tag">SQLD</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-03-07">March 7, 2024</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BSQLD%5D+2.+SQL+%EA%B8%B0%EB%B3%B8+%EB%B0%8F+%ED%99%9C%EC%9A%A9%20http%3A%2F%2Flocalhost%3A4000%2Fsqld2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fsqld2%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/sqld1/" class="pagination--pager" title="[SQLD] 1. 데이터 모델링의 이해
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/sqld1/" rel="permalink">[SQLD] 1. 데이터 모델링의 이해
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">데이터 모델링의 이해
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/nex1/" rel="permalink">[Next.js] 1. Next.js
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Next.js : 웹 애플리케이션 구축에 활용되는 오픈 소스 React 프레임워크
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/react4/" rel="permalink">[React] 4. 리액트 라우팅 (React Routing)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">React-Router-Dom : React로 생성된 SPA 내에서 페이지 이동이 가능하도록 라우팅
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/react3/" rel="permalink">[React] 3. 함수 컴포넌트 (Functional Component)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          11 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">함수 컴포넌트 (Functional Component) : 리액트 훅을 통한 상태와 생명주기 관리
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.pinterest.co.kr/pocj8ur4in/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-pinterest-square" aria-hidden="true"></i> Pinterest</a></li>
+        
+      
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 pocj8ur4in's blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
