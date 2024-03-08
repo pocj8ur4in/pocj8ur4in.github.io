@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          4 분 소요
+          5 분 소요
         
       </span>
     
@@ -378,7 +378,7 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#서브-쿼리-subquery--하나의-쿼리-내에-존재하는-또다른-쿼리">서브 쿼리 (SubQuery) : 하나의 쿼리 내에 존재하는 또다른 쿼리</a><ul><li><a href="#스칼라-서브-쿼리-scalar-subquery--주로-select에-위치하는-서브-쿼리">스칼라 서브 쿼리 (Scalar SubQuery) : 주로 SELECT에 위치하는 서브 쿼리</a></li><li><a href="#인라인-뷰-inline-view--from처럼-테이블명이-오는-위치에-위치하는-서브-쿼리">인라인 뷰 (Inline View) : FROM처럼 테이블명이 오는 위치에 위치하는 서브 쿼리</a></li><li><a href="#중첩-서브쿼리-nested-subquery--where과-having에-위치하는-쿼리">중첩 서브쿼리 (Nested SubQuery) : WHERE과 HAVING에 위치하는 쿼리</a><ul><li><a href="#비연관-서브쿼리-un-correlated-subquery--서브쿼리-내에-메인-쿼리의-컬럼이-존재하지-않음">비연관 서브쿼리 (Un-Correlated SubQuery) : 서브쿼리 내에 메인 쿼리의 컬럼이 존재하지 않음</a></li><li><a href="#연관-서브쿼리-correlated-subquery--서브쿼리-내에-메인-쿼리의-컬럼이-존재함">연관 서브쿼리 (Correlated SubQuery) : 서브쿼리 내에 메인 쿼리의 컬럼이 존재함</a><ul><li><a href="#단일-행-서브쿼리-single-row-subquery--서브쿼리가-1건-이하의-데이터-반환">단일 행 서브쿼리 (Single Row SubQuery) : 서브쿼리가 1건 이하의 데이터 반환</a></li><li><a href="#다중-행-서브쿼리-multi-row-subquery--서브쿼리가-여러-건의-데이터-반환">다중 행 서브쿼리 (Multi Row SubQuery) : 서브쿼리가 여러 건의 데이터 반환</a></li><li><a href="#다중-칼럼-서브쿼리-multi-col-subquery--서브쿼리가-여러-칼럼의-데이터-반환">다중 칼럼 서브쿼리 (Multi Col SubQuery) : 서브쿼리가 여러 칼럼의 데이터 반환</a></li></ul></li></ul></li></ul></li><li><a href="#뷰-view--특정-select에-이름을-붙어-재사용-가능하도록-저장한-오브젝트">뷰 (View) : 특정 SELECT에 이름을 붙어 재사용 가능하도록 저장한 오브젝트</a></li><li><a href="#집합-연산자--각-쿼리의-결과-집합을-가지고-연산하는-명령어">집합 연산자 : 각 쿼리의 결과 집합을 가지고 연산하는 명령어</a></li><li><a href="#그룹-함수--데이터를-group-by하여-나타낼-수-있는-데이터를-구하는-함수">그룹 함수 : 데이터를 GROUP BY하여 나타낼 수 있는 데이터를 구하는 함수</a><ul><li><a href="#rollup--소그룹-간의-소계-및-총계를-계산하는-함수">ROLLUP : 소그룹 간의 소계 및 총계를 계산하는 함수</a></li><li><a href="#cube--소그룹-간의-소계-및-총계를-다차원적으로-계산하는-함수">CUBE : 소그룹 간의 소계 및 총계를 다차원적으로 계산하는 함수</a></li><li><a href="#grouping-sets--특정-항목에-대한-소계를-계산하는-함수">GROUPING SETS : 특정 항목에 대한 소계를 계산하는 함수</a></li><li><a href="#grouping--소계를-나타내는-row를-구분하는-기준">GROUPING : 소계를 나타내는 ROW를 구분하는 기준</a></li></ul></li><li><a href="#윈도우-함수--over-키워드와-함께-사용되는-함수">윈도우 함수 : OVER 키워드와 함께 사용되는 함수</a><ul><li><a href="#순위-함수--윈도우-함수-중-순위를-매기는-함수">순위 함수 : 윈도우 함수 중 순위를 매기는 함수</a><ul><li><a href="#rank--순위를-매길-때-같은-순위가-존재하면-존재하는-수만큼-건너뜀">RANK : 순위를 매길 때 같은 순위가 존재하면 존재하는 수만큼 건너뜀</a></li><li><a href="#dense_rank--순위를-매길-때-같은-순위가-존재하더라도-건너뛰지-않고-이어서-매김">DENSE_RANK : 순위를 매길 때 같은 순위가 존재하더라도 건너뛰지 않고 이어서 매김</a></li><li><a href="#row_number--순위를-매길-때-동일한-값이알도-각기-다른-순위를-부여">ROW_NUMBER : 순위를 매길 때 동일한 값이알도 각기 다른 순위를 부여</a></li></ul></li><li><a href="#집계-함수--윈도우-함수-중-값을-집계하는-함수">집계 함수 : 윈도우 함수 중 값을 집계하는 함수</a><ul><li><a href="#sum--데이터의-합계를-구하는-함수">SUM : 데이터의 합계를 구하는 함수</a></li><li><a href="#max--데이터의-최댓값를-구하는-함수">MAX : 데이터의 최댓값를 구하는 함수</a></li><li><a href="#min--데이터의-최솟값을-구하는-함수">MIN : 데이터의 최솟값을 구하는 함수</a></li><li><a href="#avg--데이터의-평균값을-구하는-함수">AVG : 데이터의 평균값을 구하는 함수</a></li><li><a href="#count--데이터의-건수를-구하는-함수">COUNT : 데이터의 건수를 구하는 함수</a></li></ul></li><li><a href="#행-순서-함수">행 순서 함수</a><ul><li><a href="#first_value--파티션별-가장-선두에-위치한-데이터를-구하는-함수">FIRST_VALUE : 파티션별 가장 선두에 위치한 데이터를 구하는 함수</a></li><li><a href="#last_value--파티션별-가장-끝에-위치한-데이터를-구하는-함수">LAST_VALUE : 파티션별 가장 끝에 위치한 데이터를 구하는 함수</a></li><li><a href="#lag--파티션별로-특정-수만큼-앞선-데이터를-구하는-함수">LAG : 파티션별로 특정 수만큼 앞선 데이터를 구하는 함수</a></li><li><a href="#lead--파티션별로-특정-수만큼-뒤에-있는-데이터를-구하는-함수">LEAD : 파티션별로 특정 수만큼 뒤에 있는 데이터를 구하는 함수</a></li></ul></li><li><a href="#비율-함수">비율 함수</a><ul><li><a href="#ratio_to_report--파티션별-합계에서-차지하는-비율을-구하는-함수">RATIO_TO_REPORT : 파티션별 합계에서 차지하는 비율을 구하는 함수</a></li><li><a href="#percent_rank--해당-파티션의-맨-위-끝-행을-0-맨-아래-끝-행을-1로-놓고-현재-행이-위치하는-백-분위-순위-값을-구하는-함수">PERCENT_RANK : 해당 파티션의 맨 위 끝 행을 0, 맨 아래 끝 행을 1로 놓고 현재 행이 위치하는 백 분위 순위 값을 구하는 함수</a></li><li><a href="#cume_dist--해당-파티션에서의-누적-백분율을-구하는-함수-결과값--01">CUME_DIST : 해당 파티션에서의 누적 백분율을 구하는 함수 (결과값 : 0~1)</a></li><li><a href="#nitile--주어진-수만큼-행들을-n등분한-후-현재-행에-해당하는-등급을-구하는-함수">NITILE : 주어진 수만큼 행들을 N등분한 후 현재 행에 해당하는 등급을 구하는 함수</a></li></ul></li></ul></li><li><a href="#top-n-쿼리--시작-지점부터-n까지의-범위를-추출하는-쿼리">Top-N 쿼리 : 시작 지점부터 N까지의 범위를 추출하는 쿼리</a><ul><li><a href="#rownum--실제론-존재하지-않는-수도-컮럼-pseudo-column-행이-반환될-때마다-순번이-1씩-증가">ROWNUM : 실제론 존재하지 않는 수도 컮럼 (Pseudo Column), 행이 반환될 때마다 순번이 1씩 증가</a></li></ul></li><li><a href="#셀프-조인-self-join--나-자신과의-join-alias를-통한-별칭-부여는-필수">셀프 조인 (Self Join) : 나 자신과의 Join (ALIAS를 통한 별칭 부여는 필수!)</a></li></ul>
+              <ul class="toc__menu"><li><a href="#서브-쿼리-subquery--하나의-쿼리-내에-존재하는-또다른-쿼리">서브 쿼리 (SubQuery) : 하나의 쿼리 내에 존재하는 또다른 쿼리</a><ul><li><a href="#스칼라-서브-쿼리-scalar-subquery--주로-select에-위치하는-서브-쿼리">스칼라 서브 쿼리 (Scalar SubQuery) : 주로 SELECT에 위치하는 서브 쿼리</a></li><li><a href="#인라인-뷰-inline-view--from처럼-테이블명이-오는-위치에-위치하는-서브-쿼리">인라인 뷰 (Inline View) : FROM처럼 테이블명이 오는 위치에 위치하는 서브 쿼리</a></li><li><a href="#중첩-서브쿼리-nested-subquery--where과-having에-위치하는-쿼리">중첩 서브쿼리 (Nested SubQuery) : WHERE과 HAVING에 위치하는 쿼리</a><ul><li><a href="#비연관-서브쿼리-un-correlated-subquery--서브쿼리-내에-메인-쿼리의-컬럼이-존재하지-않음">비연관 서브쿼리 (Un-Correlated SubQuery) : 서브쿼리 내에 메인 쿼리의 컬럼이 존재하지 않음</a></li><li><a href="#연관-서브쿼리-correlated-subquery--서브쿼리-내에-메인-쿼리의-컬럼이-존재함">연관 서브쿼리 (Correlated SubQuery) : 서브쿼리 내에 메인 쿼리의 컬럼이 존재함</a><ul><li><a href="#단일-행-서브쿼리-single-row-subquery--서브쿼리가-1건-이하의-데이터-반환">단일 행 서브쿼리 (Single Row SubQuery) : 서브쿼리가 1건 이하의 데이터 반환</a></li><li><a href="#다중-행-서브쿼리-multi-row-subquery--서브쿼리가-여러-건의-데이터-반환">다중 행 서브쿼리 (Multi Row SubQuery) : 서브쿼리가 여러 건의 데이터 반환</a></li><li><a href="#다중-칼럼-서브쿼리-multi-col-subquery--서브쿼리가-여러-칼럼의-데이터-반환">다중 칼럼 서브쿼리 (Multi Col SubQuery) : 서브쿼리가 여러 칼럼의 데이터 반환</a></li></ul></li></ul></li></ul></li><li><a href="#뷰-view--특정-select에-이름을-붙어-재사용-가능하도록-저장한-오브젝트">뷰 (View) : 특정 SELECT에 이름을 붙어 재사용 가능하도록 저장한 오브젝트</a></li><li><a href="#집합-연산자--각-쿼리의-결과-집합을-가지고-연산하는-명령어">집합 연산자 : 각 쿼리의 결과 집합을 가지고 연산하는 명령어</a></li><li><a href="#그룹-함수--데이터를-group-by하여-나타낼-수-있는-데이터를-구하는-함수">그룹 함수 : 데이터를 GROUP BY하여 나타낼 수 있는 데이터를 구하는 함수</a><ul><li><a href="#rollup--소그룹-간의-소계-및-총계를-계산하는-함수">ROLLUP : 소그룹 간의 소계 및 총계를 계산하는 함수</a></li><li><a href="#cube--소그룹-간의-소계-및-총계를-다차원적으로-계산하는-함수">CUBE : 소그룹 간의 소계 및 총계를 다차원적으로 계산하는 함수</a></li><li><a href="#grouping-sets--특정-항목에-대한-소계를-계산하는-함수">GROUPING SETS : 특정 항목에 대한 소계를 계산하는 함수</a></li><li><a href="#grouping--소계를-나타내는-row를-구분하는-기준">GROUPING : 소계를 나타내는 ROW를 구분하는 기준</a></li></ul></li><li><a href="#윈도우-함수--over-키워드와-함께-사용되는-함수">윈도우 함수 : OVER 키워드와 함께 사용되는 함수</a><ul><li><a href="#순위-함수--윈도우-함수-중-순위를-매기는-함수">순위 함수 : 윈도우 함수 중 순위를 매기는 함수</a><ul><li><a href="#rank--순위를-매길-때-같은-순위가-존재하면-존재하는-수만큼-건너뜀">RANK : 순위를 매길 때 같은 순위가 존재하면 존재하는 수만큼 건너뜀</a></li><li><a href="#dense_rank--순위를-매길-때-같은-순위가-존재하더라도-건너뛰지-않고-이어서-매김">DENSE_RANK : 순위를 매길 때 같은 순위가 존재하더라도 건너뛰지 않고 이어서 매김</a></li><li><a href="#row_number--순위를-매길-때-동일한-값이알도-각기-다른-순위를-부여">ROW_NUMBER : 순위를 매길 때 동일한 값이알도 각기 다른 순위를 부여</a></li></ul></li><li><a href="#집계-함수--윈도우-함수-중-값을-집계하는-함수">집계 함수 : 윈도우 함수 중 값을 집계하는 함수</a><ul><li><a href="#sum--데이터의-합계를-구하는-함수">SUM : 데이터의 합계를 구하는 함수</a></li><li><a href="#max--데이터의-최댓값를-구하는-함수">MAX : 데이터의 최댓값를 구하는 함수</a></li><li><a href="#min--데이터의-최솟값을-구하는-함수">MIN : 데이터의 최솟값을 구하는 함수</a></li><li><a href="#avg--데이터의-평균값을-구하는-함수">AVG : 데이터의 평균값을 구하는 함수</a></li><li><a href="#count--데이터의-건수를-구하는-함수">COUNT : 데이터의 건수를 구하는 함수</a></li></ul></li><li><a href="#행-순서-함수">행 순서 함수</a><ul><li><a href="#first_value--파티션별-가장-선두에-위치한-데이터를-구하는-함수">FIRST_VALUE : 파티션별 가장 선두에 위치한 데이터를 구하는 함수</a></li><li><a href="#last_value--파티션별-가장-끝에-위치한-데이터를-구하는-함수">LAST_VALUE : 파티션별 가장 끝에 위치한 데이터를 구하는 함수</a></li><li><a href="#lag--파티션별로-특정-수만큼-앞선-데이터를-구하는-함수">LAG : 파티션별로 특정 수만큼 앞선 데이터를 구하는 함수</a></li><li><a href="#lead--파티션별로-특정-수만큼-뒤에-있는-데이터를-구하는-함수">LEAD : 파티션별로 특정 수만큼 뒤에 있는 데이터를 구하는 함수</a></li></ul></li><li><a href="#비율-함수">비율 함수</a><ul><li><a href="#ratio_to_report--파티션별-합계에서-차지하는-비율을-구하는-함수">RATIO_TO_REPORT : 파티션별 합계에서 차지하는 비율을 구하는 함수</a></li><li><a href="#percent_rank--해당-파티션의-맨-위-끝-행을-0-맨-아래-끝-행을-1로-놓고-현재-행이-위치하는-백-분위-순위-값을-구하는-함수">PERCENT_RANK : 해당 파티션의 맨 위 끝 행을 0, 맨 아래 끝 행을 1로 놓고 현재 행이 위치하는 백 분위 순위 값을 구하는 함수</a></li><li><a href="#cume_dist--해당-파티션에서의-누적-백분율을-구하는-함수-결과값--01">CUME_DIST : 해당 파티션에서의 누적 백분율을 구하는 함수 (결과값 : 0~1)</a></li><li><a href="#nitile--주어진-수만큼-행들을-n등분한-후-현재-행에-해당하는-등급을-구하는-함수">NITILE : 주어진 수만큼 행들을 N등분한 후 현재 행에 해당하는 등급을 구하는 함수</a></li></ul></li></ul></li><li><a href="#top-n-쿼리--시작-지점부터-n까지의-범위를-추출하는-쿼리">Top-N 쿼리 : 시작 지점부터 N까지의 범위를 추출하는 쿼리</a><ul><li><a href="#rownum--실제론-존재하지-않는-수도-컮럼-pseudo-column-행이-반환될-때마다-순번이-1씩-증가">ROWNUM : 실제론 존재하지 않는 수도 컮럼 (Pseudo Column), 행이 반환될 때마다 순번이 1씩 증가</a></li></ul></li><li><a href="#셀프-조인-self-join--나-자신과의-join-alias를-통한-별칭-부여는-필수">셀프 조인 (Self Join) : 나 자신과의 Join (ALIAS를 통한 별칭 부여는 필수!)</a></li><li><a href="#계층-쿼리--테이블에-계층-구조를-이루는-컬럼이-존재할-때-데이터-출력">계층 쿼리 : 테이블에 계층 구조를 이루는 컬럼이 존재할 때 데이터 출력</a></li></ul>
 
             </nav>
           </aside>
@@ -531,7 +531,7 @@ SELECT * FROM STUDENT MINUS SELECT * FROM TEACHER; // 쿼리1에서 쿼리2 결�
 
 <h3 id="순위-함수--윈도우-함수-중-순위를-매기는-함수">순위 함수 : 윈도우 함수 중 순위를 매기는 함수</h3>
 
-<p>&lt;img src=”https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1300c402-ee17-414c-9726-1cab28b97c1b” width=”80%&gt;</p>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1300c402-ee17-414c-9726-1cab28b97c1b" width="80%" /></p>
 
 <h4 id="rank--순위를-매길-때-같은-순위가-존재하면-존재하는-수만큼-건너뜀"><code class="language-plaintext highlighter-rouge">RANK</code> : 순위를 매길 때 같은 순위가 존재하면 존재하는 수만큼 건너뜀</h4>
 
@@ -661,6 +661,23 @@ FROM SQLD;
     WHERE A.CATEGORY_NAME = B.PARENT_CATEGORY;
 </code></pre></div></div>
 
+<h2 id="계층-쿼리--테이블에-계층-구조를-이루는-컬럼이-존재할-때-데이터-출력">계층 쿼리 : 테이블에 계층 구조를 이루는 컬럼이 존재할 때 데이터 출력</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">LEVEL</code> : 현재의 <code class="language-plaintext highlighter-rouge">DEPTH</code> 반환, 루트 노드는 1</li>
+  <li><code class="language-plaintext highlighter-rouge">SYS_CONNECT_BY_PATH (컬럼,구분자)</code> : 루트 노드부터 현재 노드까지의 경로 출력</li>
+  <li><code class="language-plaintext highlighter-rouge">START WITH</code> : 경로가 시작되는 루트 노드 생성</li>
+  <li><code class="language-plaintext highlighter-rouge">CONNECT BY</code> : 조건을 만족하는 데이터가 없을 때까지 루트로부터 자식 노드 생성</li>
+  <li><code class="language-plaintext highlighter-rouge">PRIOR</code> : 바로 앞에 있는 부모 노드의 값 반환</li>
+  <li><code class="language-plaintext highlighter-rouge">CONNECTED_BY_ROOT (컬럼)</code> : 루트 노드의 주어진 컬럼 값 반환</li>
+  <li><code class="language-plaintext highlighter-rouge">CONNECT_BY_ISLEAF</code>  : 가장 하위 노드인 경우 1을 반환, 그 외에는 0 반환</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LEVEL, SYS_CONNECT_BY_PATH('['||TYPE||']' || TYPE, '-') AS PATH FROM CATEGORY
+START WITH PARENT_CATEGORY IS NULL
+CONNECT BY PRIOR NAME = PARENT_CATEGORY;
+</code></pre></div></div>
+
         
       </section>
 
@@ -723,7 +740,8 @@ FROM SQLD;
 ">이전</a>
     
     
-      <a href="#" class="pagination--pager disabled">다음</a>
+      <a href="/sqld4/" class="pagination--pager" title="[SQLD] 4. 관리 구문
+">다음</a>
     
   </nav>
 
@@ -737,6 +755,47 @@ FROM SQLD;
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/sqld4/" rel="permalink">[SQLD] 4. 관리 구문
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">DML (Data Manipulation Language) : 데이터를 입력·수정·삭제·조회하는 명령어
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -855,47 +914,6 @@ FROM SQLD;
 
 
     <p class="archive__item-excerpt" itemprop="description">Next.js : 웹 애플리케이션 구축에 활용되는 오픈 소스 React 프레임워크
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/react4/" rel="permalink">[React] 4. 리액트 라우팅 (React Routing)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">React-Router-Dom : React로 생성된 SPA 내에서 페이지 이동이 가능하도록 라우팅
 
 </p>
   </article>

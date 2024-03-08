@@ -1,0 +1,895 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<script>
+document.addEventListener('mousedown', (event) => { // 클릭 금지
+  if (event.button === 1) {
+    event.preventDefault();
+  }
+
+  if (event.button === 2) {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener('dragstart', (event) => { // 드래그 금지
+  event.preventDefault();
+});
+
+document.addEventListener('contextmenu', (event) => { // 선택 금지
+  event.preventDefault();
+});
+
+document.addEventListener('selectstart', (event) => { // 텍스트 선택 금지
+  event.preventDefault();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  checkAndLoadPage(getAllImgs());
+});
+
+function getAllImgs() {
+  const images = document.querySelectorAll('img');
+  return Array.from(images);
+}
+
+function chkImgsLoaded(allImages) {
+    return allImages.every(image => image.complete);
+}
+
+function checkAndLoadPage(allImages) {
+    if (!chkImgsLoaded(allImages)) {
+      requestAnimationFrame(function() {
+      checkAndLoadPage(allImages);
+      });
+    }
+}
+
+</script>
+<html lang="ko" class="no-js" oncopy="return false;" oncut="return false;" onpaste="return false;">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[SQLD] 4. 관리 구문 - pocj8ur4in’s blog</title>
+<meta name="description" content="DML (Data Manipulation Language) : 데이터를 입력·수정·삭제·조회하는 명령어">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[SQLD] 4. 관리 구문">
+<meta property="og:url" content="http://localhost:4000/sqld4/">
+
+
+  <meta property="og:description" content="DML (Data Manipulation Language) : 데이터를 입력·수정·삭제·조회하는 명령어">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-03-08T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2024-03-08T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/sqld4/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in's blog",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[SQLD] 4. 관리 구문</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c175e6a8-9aa2-44bb-8359-abbb68d5fe1b" alt="pocj8ur4in" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">pocj8ur4in</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:pocj8ur4in@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="pocj8ur4in@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[SQLD] 4. 관리 구문">
+    <meta itemprop="description" content="DML (Data Manipulation Language) : 데이터를 입력·수정·삭제·조회하는 명령어">
+    <meta itemprop="datePublished" content="2024-03-08T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-03-08T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/sqld4/" class="u-url" itemprop="url">[SQLD] 4. 관리 구문
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#dml-data-manipulation-language--데이터를-입력수정삭제조회하는-명령어">DML (Data Manipulation Language) : 데이터를 입력·수정·삭제·조회하는 명령어</a><ul><li><a href="#insert--테이블에-데이터를-입력하는-명령어">INSERT : 테이블에 데이터를 입력하는 명령어</a></li><li><a href="#update--테이블에-이미-저장된-데이터를-수정하는-명령어">UPDATE : 테이블에 이미 저장된 데이터를 수정하는 명령어</a></li><li><a href="#delete--테이블에-이미-저장된-데이터를-삭제하는-명령어">DELETE : 테이블에 이미 저장된 데이터를 삭제하는 명령어</a></li><li><a href="#merge--테이블에-새로운-데이터를-입력하거나-이미-저장된-데이터에-대한-변경-작업을-한번에-처리하는-명령어">MERGE : 테이블에 새로운 데이터를 입력하거나, 이미 저장된 데이터에 대한 변경 작업을 한번에 처리하는 명령어</a></li></ul></li><li><a href="#tcl-transaction-control-language--트랜잭션을-제어하는-명령어">TCL (Transaction Control Language) : 트랜잭션을 제어하는 명령어</a><ul><li><a href="#트랜잭션-transaction--쪼개질-수-없는-업무-처리의-논리적인-단위">트랜잭션 (Transaction) : 쪼개질 수 없는 업무 처리의 논리적인 단위</a></li><li><a href="#commit--insert-delete-update-후-변경된-내용을-확정반영하는-명령어">COMMIT : INSERT, DELETE, UPDATE 후 변경된 내용을 확정·반영하는 명령어</a></li><li><a href="#rollback--insert-delete-update-후-변경된-내용을-취소하는-명령어">ROLLBACK : INSERT, DELETE, UPDATE 후 변경된 내용을 취소하는 명령어</a></li><li><a href="#savepoint--rollback을-수행할-때-전체-작업을-되돌리는-대신-일부만-되돌리는-명령어">SAVEPOINT : ROLLBACK을 수행할 때 전체 작업을 되돌리는 대신 일부만 되돌리는 명령어</a></li></ul></li><li><a href="#ddl-data-definition-language--데이터를-정의하는-명령어">DDL (Data Definition Language) : 데이터를 정의하는 명령어</a><ul><li><a href="#create--테이블을-생성하는-명령어">CREATE : 테이블을 생성하는 명령어</a></li><li><a href="#제약조건-constraint--테이블에-저장될-데이터의-무결성-정확성일관성을-유지하고-데이터의-결함이-없음을-보증">제약조건 (CONSTRAINT) : 테이블에 저장될 데이터의 무결성 (정확성·일관성)을 유지하고, 데이터의 결함이 없음을 보증</a><ul><li><a href="#기본-키-primary-key--테이블에-저장된-각각의-row에-대한-고유성-보장-null-값-불가">기본 키 (PRIMARY KEY) : 테이블에 저장된 각각의 ROW에 대한 고유성 보장 (NULL 값 불가)</a></li><li><a href="#고유-키-unique-key--테이블에-저장된-각각의-row에-대한-고유성-보장-null-값-허용">고유 키 (UNIQUE KEY) : 테이블에 저장된 각각의 ROW에 대한 고유성 보장 (NULL 값 허용)</a></li><li><a href="#not-null--해당-컬럼에-null-값이-입력되는-것을-금지">NOT NULL : 해당 컬럼에 NULL 값이 입력되는 것을 금지</a></li><li><a href="#check--컬럼에-저장될-수-있는-값의-범위를-제한">CHECK : 컬럼에 저장될 수 있는 값의 범위를 제한</a></li><li><a href="#외래-키-foreign-key--하나의-테이블이-다른-테이블ㅇ르-참조할-때-정의">외래 키 (FOREIGN KEY) : 하나의 테이블이 다른 테이블ㅇ르 참조할 때 정의</a></li></ul></li><li><a href="#alter--테이블의-구조를-변경하는-명령어">ALTER : 테이블의 구조를 변경하는 명령어</a><ul><li><a href="#add-column--새로운-컬럼을-추가하는-명령어">ADD COLUMN : 새로운 컬럼을 추가하는 명령어</a></li><li><a href="#drop-column--기존에-있는-컬럼을-삭제하는-명령어">DROP COLUMN : 기존에 있는 컬럼을 삭제하는 명령어</a></li><li><a href="#modify-column--기존에-있는-컬럼을-변경하는-명령어">MODIFY COLUMN : 기존에 있는 컬럼을 변경하는 명령어</a></li><li><a href="#rename-column--기존에-있는-컬럼의-이름을-변경하는-명령어">RENAME COLUMN : 기존에 있는 컬럼의 이름을 변경하는 명령어</a></li><li><a href="#add-constraint--제약조건을-추가하는-명령어">ADD CONSTRAINT : 제약조건을 추가하는 명령어</a></li></ul></li><li><a href="#drop-table--테이블을-삭제하는-명령어">DROP TABLE : 테이블을 삭제하는 명령어</a></li><li><a href="#rename-table--테이블을-변경하는-명령어">RENAME TABLE : 테이블을 변경하는 명령어</a></li><li><a href="#truncate-table--테이블에-저장된-데이터를-모두-제거하는-명령어">TRUNCATE TABLE : 테이블에 저장된 데이터를 모두 제거하는 명령어</a></li></ul></li><li><a href="#dcl-data-control-language--사용자-user를-생성하고-권한-및-역할을-부여하는-명령어">DCL (Data Control Language) : 사용자 (USER)를 생성하고 권한 및 역할을 부여하는 명령어</a><ul><li><a href="#사용자-관련-명령어">사용자 관련 명령어</a><ul><li><a href="#create-user--사용자를-생성하는-명령어">CREATE USER : 사용자를 생성하는 명령어</a></li><li><a href="#alter-user--사용자를-변경하는-명령어">ALTER USER : 사용자를 변경하는 명령어</a></li><li><a href="#drop-user--사용자를-삭제하는-명령어">DROP USER : 사용자를 삭제하는 명령어</a></li></ul></li><li><a href="#권한-관련-명령어">권한 관련 명령어</a><ul><li><a href="#grant--사용자에-권한을-부여하는-명렁어">GRANT : 사용자에 권한을 부여하는 명렁어</a></li><li><a href="#revoke--사용자에-권한을-회수하는-명렁어">REVOKE : 사용자에 권한을 회수하는 명렁어</a></li></ul></li><li><a href="#역할-관련-명령어">역할 관련 명령어</a><ul><li><a href="#role을-이용한-권한-부여">ROLE을 이용한 권한 부여</a></li></ul></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="dml-data-manipulation-language--데이터를-입력수정삭제조회하는-명령어"><code class="language-plaintext highlighter-rouge">DML</code> (<code class="language-plaintext highlighter-rouge">Data Manipulation Language</code>) : 데이터를 입력·수정·삭제·조회하는 명령어</h2>
+
+<h3 id="insert--테이블에-데이터를-입력하는-명령어"><code class="language-plaintext highlighter-rouge">INSERT</code> : 테이블에 데이터를 입력하는 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INSERT INTO 테이블명 (컬럼명1, 컬럼명2, ...) VALUES (데이터1, 데이터2, ...);
+INSERT INTO 테이블명 VALUES (전체 컬럼에 입력될 데이터 리스트);
+</code></pre></div></div>
+
+<h3 id="update--테이블에-이미-저장된-데이터를-수정하는-명령어"><code class="language-plaintext highlighter-rouge">UPDATE</code> : 테이블에 이미 저장된 데이터를 수정하는 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UPDATE 테이블명 SET 컬럼명 = 새로운 데이터 (WHERE 수정할 데이터에 대한 조건);
+</code></pre></div></div>
+
+<h3 id="delete--테이블에-이미-저장된-데이터를-삭제하는-명령어"><code class="language-plaintext highlighter-rouge">DELETE</code> : 테이블에 이미 저장된 데이터를 삭제하는 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE FROM 테이블명 (WHERE 삭제할 데이터에 대한 조건);
+</code></pre></div></div>
+
+<h3 id="merge--테이블에-새로운-데이터를-입력하거나-이미-저장된-데이터에-대한-변경-작업을-한번에-처리하는-명령어"><code class="language-plaintext highlighter-rouge">MERGE</code> : 테이블에 새로운 데이터를 입력하거나, 이미 저장된 데이터에 대한 변경 작업을 한번에 처리하는 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MERGE
+    INTO 타겟테이블명
+    USING 비교테이블명
+    ON 조건
+    WHEN MATCHED THEN
+        UPDATE
+            SET 컬럼명 = 새로운 데이터 [, 컬럼명 = 새로운 데이터...]
+    WHEN NOT MATCHED THEN
+        INSERT [(컬럼명1, 컬럼명2...)]
+        VALUES [(데이터1, 데이터2...)]
+</code></pre></div></div>
+
+<h2 id="tcl-transaction-control-language--트랜잭션을-제어하는-명령어"><code class="language-plaintext highlighter-rouge">TCL</code> (<code class="language-plaintext highlighter-rouge">Transaction Control Language</code>) : 트랜잭션을 제어하는 명령어</h2>
+
+<h3 id="트랜잭션-transaction--쪼개질-수-없는-업무-처리의-논리적인-단위">트랜잭션 (<code class="language-plaintext highlighter-rouge">Transaction</code>) : 쪼개질 수 없는 업무 처리의 논리적인 단위</h3>
+
+<ul>
+  <li>원자성 (<code class="language-plaintext highlighter-rouge">Atomicity</code>) : 트랜잭션으로 묶인 일련의 동작들은 모두 성공하거나 모두 실패해야 한다.</li>
+  <li>일관성 (<code class="language-plaintext highlighter-rouge">Consistency</code>) : 트랜잭션이 완료된 후에도 데이터베이스가 가진 데이터에 일관성이 있어야 한다.</li>
+  <li>고립성 (<code class="language-plaintext highlighter-rouge">Isolation</code>) : 하나의 트랜잭션은 고립된어 수행되어야 한다.</li>
+  <li>지속성 (<code class="language-plaintext highlighter-rouge">Durability</code>) : 트랜잭션이 성공적일때 트랜잭션이 변경한 데이터가 영구적으로 저장되어야 함을 의미한다.</li>
+</ul>
+
+<h3 id="commit--insert-delete-update-후-변경된-내용을-확정반영하는-명령어"><code class="language-plaintext highlighter-rouge">COMMIT</code> : <code class="language-plaintext highlighter-rouge">INSERT</code>, <code class="language-plaintext highlighter-rouge">DELETE</code>, <code class="language-plaintext highlighter-rouge">UPDATE</code> 후 변경된 내용을 확정·반영하는 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>COMMIT;
+</code></pre></div></div>
+
+<h3 id="rollback--insert-delete-update-후-변경된-내용을-취소하는-명령어"><code class="language-plaintext highlighter-rouge">ROLLBACK</code> : <code class="language-plaintext highlighter-rouge">INSERT</code>, <code class="language-plaintext highlighter-rouge">DELETE</code>, <code class="language-plaintext highlighter-rouge">UPDATE</code> 후 변경된 내용을 취소하는 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ROLLBACK TO A;
+</code></pre></div></div>
+
+<h3 id="savepoint--rollback을-수행할-때-전체-작업을-되돌리는-대신-일부만-되돌리는-명령어"><code class="language-plaintext highlighter-rouge">SAVEPOINT</code> : <code class="language-plaintext highlighter-rouge">ROLLBACK</code>을 수행할 때 전체 작업을 되돌리는 대신 일부만 되돌리는 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SAVEPOINT A;
+</code></pre></div></div>
+
+<h2 id="ddl-data-definition-language--데이터를-정의하는-명령어"><code class="language-plaintext highlighter-rouge">DDL</code> (<code class="language-plaintext highlighter-rouge">Data Definition Language</code>) : 데이터를 정의하는 명령어</h2>
+
+<ul>
+  <li>문자 : <code class="language-plaintext highlighter-rouge">CHAR</code>, <code class="language-plaintext highlighter-rouge">VARCHAR</code>, <code class="language-plaintext highlighter-rouge">CLOB</code></li>
+  <li>숫자 : <code class="language-plaintext highlighter-rouge">NUMBER</code></li>
+  <li>날짜 : <code class="language-plaintext highlighter-rouge">DATE</code></li>
+</ul>
+
+<h3 id="create--테이블을-생성하는-명령어"><code class="language-plaintext highlighter-rouge">CREATE</code> : 테이블을 생성하는 명령어</h3>
+
+<ul>
+  <li>테이블 생성 시 반드시 지켜야 하는 규칙 : 지키지 않으면, 에러 발생!
+    <ul>
+      <li>테이블명은 고유해야 함</li>
+      <li>한 테이블 내에서 컬럼명은 고유해야 함</li>
+      <li>컬럼명 뒤에 데이터 유형과 데이터 크기가 명시되어야 함</li>
+      <li>컬럼에 대한 정의는 괄호 <code class="language-plaintext highlighter-rouge">()</code> 안에 기술되어야 함</li>
+      <li>각 컬럼들은 콤마 <code class="language-plaintext highlighter-rouge">,</code>로 구분됨</li>
+      <li>테이블명과 컬럼명은 숫자로 시작될 수 없음</li>
+      <li>마지막은 세미콜론 <code class="language-plaintext highlighter-rouge">;</code>으로 끝남</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE 테이블명 (
+    컬럼1 데이터타입 (NULL|DEFAULT 옵션)
+    ...
+)
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE 테이블명 AS SELECT * FROM 복사대상테이블명;
+</code></pre></div></div>
+
+<h3 id="제약조건-constraint--테이블에-저장될-데이터의-무결성-정확성일관성을-유지하고-데이터의-결함이-없음을-보증">제약조건 (<code class="language-plaintext highlighter-rouge">CONSTRAINT</code>) : 테이블에 저장될 데이터의 무결성 (정확성·일관성)을 유지하고, 데이터의 결함이 없음을 보증</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CREATE</code>로 테이블을 생성할 때, 향후 테이블에 저장될 데이터에 대해 일정 제한을 걸 수 있음</li>
+</ul>
+
+<h4 id="기본-키-primary-key--테이블에-저장된-각각의-row에-대한-고유성-보장-null-값-불가">기본 키 (<code class="language-plaintext highlighter-rouge">PRIMARY KEY</code>) : 테이블에 저장된 각각의 <code class="language-plaintext highlighter-rouge">ROW</code>에 대한 고유성 보장 (<code class="language-plaintext highlighter-rouge">NULL</code> 값 불가)</h4>
+
+<h4 id="고유-키-unique-key--테이블에-저장된-각각의-row에-대한-고유성-보장-null-값-허용">고유 키 (<code class="language-plaintext highlighter-rouge">UNIQUE KEY</code>) : 테이블에 저장된 각각의 <code class="language-plaintext highlighter-rouge">ROW</code>에 대한 고유성 보장 (<code class="language-plaintext highlighter-rouge">NULL</code> 값 허용)</h4>
+
+<h4 id="not-null--해당-컬럼에-null-값이-입력되는-것을-금지"><code class="language-plaintext highlighter-rouge">NOT NULL</code> : 해당 컬럼에 <code class="language-plaintext highlighter-rouge">NULL</code> 값이 입력되는 것을 금지</h4>
+
+<h4 id="check--컬럼에-저장될-수-있는-값의-범위를-제한"><code class="language-plaintext highlighter-rouge">CHECK</code> : 컬럼에 저장될 수 있는 값의 범위를 제한</h4>
+
+<h4 id="외래-키-foreign-key--하나의-테이블이-다른-테이블ㅇ르-참조할-때-정의">외래 키 (<code class="language-plaintext highlighter-rouge">FOREIGN KEY</code>) : 하나의 테이블이 다른 테이블ㅇ르 참조할 때 정의</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CASCADE</code> : 부모 값을 삭제할 때, 자식 값도 같이 삭제</li>
+  <li><code class="language-plaintext highlighter-rouge">SET NULL</code> : 부모 값을 삭제할 때, 자식의 컬럼을 <code class="language-plaintext highlighter-rouge">NULL</code>로 처리</li>
+  <li><code class="language-plaintext highlighter-rouge">SET DEFAULT</code> : 부모 값을 삭제할 때, 자식의 해당 컬럼을 <code class="language-plaintext highlighter-rouge">DEFAULT</code> 값으로 변경</li>
+  <li><code class="language-plaintext highlighter-rouge">RESTRICT</code> : 자식 테이블에 해당 데이터가 <code class="language-plaintext highlighter-rouge">PK</code>로 존재하지 않는 경우에만 부모 값 삭제·수정 가능</li>
+  <li><code class="language-plaintext highlighter-rouge">NO ACTION</code> : 참조 무결성 제악이 걸린 경우 삭제·수정 불가</li>
+</ul>
+
+<h3 id="alter--테이블의-구조를-변경하는-명령어"><code class="language-plaintext highlighter-rouge">ALTER</code> : 테이블의 구조를 변경하는 명령어</h3>
+
+<h4 id="add-column--새로운-컬럼을-추가하는-명령어"><code class="language-plaintext highlighter-rouge">ADD COLUMN</code> : 새로운 컬럼을 추가하는 명령어</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALTER TABLE 테이블명 ADD 컬럼명 데이터유형;
+</code></pre></div></div>
+
+<h4 id="drop-column--기존에-있는-컬럼을-삭제하는-명령어"><code class="language-plaintext highlighter-rouge">DROP COLUMN</code> : 기존에 있는 컬럼을 삭제하는 명령어</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALTER TABLE 테이블명 DROP COLUMN 컬럼명;
+</code></pre></div></div>
+
+<h4 id="modify-column--기존에-있는-컬럼을-변경하는-명령어"><code class="language-plaintext highlighter-rouge">MODIFY COLUMN</code> : 기존에 있는 컬럼을 변경하는 명령어</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALTER TABLE 테이블명 MODIFY (컬럼명1 데이터유형 [DEFAULT 옵션] [NOT NULL 옵션]...);
+</code></pre></div></div>
+
+<h4 id="rename-column--기존에-있는-컬럼의-이름을-변경하는-명령어"><code class="language-plaintext highlighter-rouge">RENAME COLUMN</code> : 기존에 있는 컬럼의 이름을 변경하는 명령어</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALTER TABLE 테이블명 RENAME COLUMN 기존컬럼명 TO 변경컬럼명;
+</code></pre></div></div>
+
+<h4 id="add-constraint--제약조건을-추가하는-명령어"><code class="language-plaintext highlighter-rouge">ADD CONSTRAINT</code> : 제약조건을 추가하는 명령어</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ADD TABLE 테이블명 ADD CONSTRAINT 제약조건명 제약조건 (컬럼명); 
+</code></pre></div></div>
+
+<h3 id="drop-table--테이블을-삭제하는-명령어"><code class="language-plaintext highlighter-rouge">DROP TABLE</code> : 테이블을 삭제하는 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DROP TABLE 테이블명 [CASCADE CONSTRAINT];
+</code></pre></div></div>
+
+<h3 id="rename-table--테이블을-변경하는-명령어"><code class="language-plaintext highlighter-rouge">RENAME TABLE</code> : 테이블을 변경하는 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RENAME 기존테이블명 TO 변경테이블명;
+</code></pre></div></div>
+
+<h3 id="truncate-table--테이블에-저장된-데이터를-모두-제거하는-명령어"><code class="language-plaintext highlighter-rouge">TRUNCATE TABLE</code> : 테이블에 저장된 데이터를 모두 제거하는 명령어</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TRUNCATE TABLE 테이블명;
+</code></pre></div></div>
+
+<h2 id="dcl-data-control-language--사용자-user를-생성하고-권한-및-역할을-부여하는-명령어"><code class="language-plaintext highlighter-rouge">DCL</code> (<code class="language-plaintext highlighter-rouge">Data Control Language</code>) : 사용자 (<code class="language-plaintext highlighter-rouge">USER</code>)를 생성하고 권한 및 역할을 부여하는 명령어</h2>
+
+<ul>
+  <li>하나의 데이터베이스는 여러 사용자들을 가질 수 있음</li>
+</ul>
+
+<h3 id="사용자-관련-명령어">사용자 관련 명령어</h3>
+
+<h4 id="create-user--사용자를-생성하는-명령어"><code class="language-plaintext highlighter-rouge">CREATE USER</code> : 사용자를 생성하는 명령어</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE USER 사용자명 IDENTIFIED BY 패스워드;
+</code></pre></div></div>
+
+<h4 id="alter-user--사용자를-변경하는-명령어"><code class="language-plaintext highlighter-rouge">ALTER USER</code> : 사용자를 변경하는 명령어</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALTER USER 사용자명 IDENTIFIED BY 패스워드;
+</code></pre></div></div>
+
+<h4 id="drop-user--사용자를-삭제하는-명령어"><code class="language-plaintext highlighter-rouge">DROP USER</code> : 사용자를 삭제하는 명령어</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DROP USER 사용자명;
+</code></pre></div></div>
+
+<h3 id="권한-관련-명령어">권한 관련 명령어</h3>
+
+<h4 id="grant--사용자에-권한을-부여하는-명렁어"><code class="language-plaintext highlighter-rouge">GRANT</code> : 사용자에 권한을 부여하는 명렁어</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GRANT 권한 TO 사용자명;
+</code></pre></div></div>
+
+<h4 id="revoke--사용자에-권한을-회수하는-명렁어"><code class="language-plaintext highlighter-rouge">REVOKE</code> : 사용자에 권한을 회수하는 명렁어</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>REVOKE 권한 FROM 사용자명;
+</code></pre></div></div>
+
+<h3 id="역할-관련-명령어">역할 관련 명령어</h3>
+
+<h4 id="role을-이용한-권한-부여"><code class="language-plaintext highlighter-rouge">ROLE</code>을 이용한 권한 부여</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE ROLE 역할명;
+GRANT 권한 TO 역할명;
+GRANT 역할명 TO 사용자명;
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#sqld" class="page__taxonomy-item p-category" rel="tag">SQLD</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-03-08">March 8, 2024</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BSQLD%5D+4.+%EA%B4%80%EB%A6%AC+%EA%B5%AC%EB%AC%B8%20http%3A%2F%2Flocalhost%3A4000%2Fsqld4%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fsqld4%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/sqld3/" class="pagination--pager" title="[SQLD] 3. SQL 활용
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/sqld3/" rel="permalink">[SQLD] 3. SQL 활용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">서브 쿼리 (SubQuery) : 하나의 쿼리 내에 존재하는 또다른 쿼리
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/sqld2/" rel="permalink">[SQLD] 2. SQL 기본
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">SELECT문 : 저장된 데이터 조회
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/sqld1/" rel="permalink">[SQLD] 1. 데이터 모델링의 이해
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">데이터 모델링의 이해
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/nex1/" rel="permalink">[Next.js] 1. Next.js
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Next.js : 웹 애플리케이션 구축에 활용되는 오픈 소스 React 프레임워크
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.pinterest.co.kr/pocj8ur4in/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-pinterest-square" aria-hidden="true"></i> Pinterest</a></li>
+        
+      
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 pocj8ur4in's blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
