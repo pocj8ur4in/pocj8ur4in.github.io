@@ -270,11 +270,15 @@
 </url>
 <url>
 <loc>http://localhost:4000/sqld1/</loc>
-<lastmod>2024-03-06T00:00:00+09:00</lastmod>
+<lastmod>2024-03-08T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/sqld2/</loc>
-<lastmod>2024-03-07T00:00:00+09:00</lastmod>
+<lastmod>2024-03-08T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/sqld3/</loc>
+<lastmod>2024-03-08T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>

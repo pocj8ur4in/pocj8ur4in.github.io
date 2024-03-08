@@ -54,8 +54,8 @@ function checkAndLoadPage(allImages) {
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[SQLD] 2. SQL 기본 및 활용 - pocj8ur4in’s blog</title>
-<meta name="description" content="구문">
+<!-- begin _includes/seo.html --><title>[SQLD] 2. SQL 기본 - pocj8ur4in’s blog</title>
+<meta name="description" content="SELECT문 : 저장된 데이터 조회">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -67,11 +67,11 @@ function checkAndLoadPage(allImages) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[SQLD] 2. SQL 기본 및 활용">
+<meta property="og:title" content="[SQLD] 2. SQL 기본">
 <meta property="og:url" content="http://localhost:4000/sqld2/">
 
 
-  <meta property="og:description" content="구문">
+  <meta property="og:description" content="SELECT문 : 저장된 데이터 조회">
 
 
 
@@ -83,7 +83,7 @@ function checkAndLoadPage(allImages) {
 
 
 
-  <meta property="article:modified_time" content="2024-03-07T00:00:00+09:00">
+  <meta property="article:modified_time" content="2024-03-08T00:00:00+09:00">
 
 
 
@@ -211,7 +211,7 @@ function checkAndLoadPage(allImages) {
         <span class="sep">/</span>
       
       
-        <li class="current">[SQLD] 2. SQL 기본 및 활용</li>
+        <li class="current">[SQLD] 2. SQL 기본</li>
       
     
   </ol>
@@ -337,16 +337,16 @@ function checkAndLoadPage(allImages) {
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[SQLD] 2. SQL 기본 및 활용">
-    <meta itemprop="description" content="구문">
+    <meta itemprop="headline" content="[SQLD] 2. SQL 기본">
+    <meta itemprop="description" content="SELECT문 : 저장된 데이터 조회">
     <meta itemprop="datePublished" content="2024-03-07T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2024-03-07T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-03-08T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/sqld2/" class="u-url" itemprop="url">[SQLD] 2. SQL 기본 및 활용
+            <a href="http://localhost:4000/sqld2/" class="u-url" itemprop="url">[SQLD] 2. SQL 기본
 </a>
           </h1>
           
@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 분 소요
+          5 분 소요
         
       </span>
     
@@ -378,14 +378,20 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#구문">구문</a><ul><li><a href="#select문--저장된-데이터-조회">SELECT문 : 저장된 데이터 조회</a><ul><li><a href="#문자-함수">문자 함수</a><ul><li><a href="#chr아스키-코드--입력된-아스키-코드에-매핑되는-문자-변환">CHR(아스키 코드) : 입력된 아스키 코드에 매핑되는 문자 변환</a></li><li><a href="#lower문자열--입력된-문자열을-대문자로-변환">LOWER(문자열) : 입력된 문자열을 대문자로 변환</a></li><li><a href="#upper문자열---입력된-문자열을-소문자로-변환">UPPER(문자열) :  입력된 문자열을 소문자로 변환</a></li><li><a href="#ltrim문자열특정문자열--문자열-왼쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거">LTRIM(문자열[,{특정문자(열)}]) : 문자열 왼쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</a></li><li><a href="#rtrim문자열특정문자열--문자열-오른쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거">RTRIM(문자열[,{특정문자(열)}]) : 문자열 오른쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</a></li><li><a href="#trim위치특정문자from문자열--문자열-왼쪽오른쪽-공백-혹은-옵션-지정-장소부터-제거">TRIM([{위치}{특정문자}FROM]문자열) : 문자열 왼쪽·오른쪽 공백 혹은 옵션 지정 장소부터 제거</a></li><li><a href="#substr문자열시작점길이--문자열의-원하는-부분만-잘라-반환">SUBSTR(문자열,시작점[,{길이}]) : 문자열의 원하는 부분만 잘라 반환</a></li><li><a href="#length문자열--문자열의-길이-반환">LENGTH(문자열) : 문자열의 길이 반환</a></li><li><a href="#replace문자열변경전-문자열변경-후-문자열--문자열에서-변경-전-문자열을-찾아-변경-후-문자열로-변환">REPLACE(문자열,변경전 문자열,[{변경 후 문자열}]) : 문자열에서 변경 전 문자열을 찾아 변경 후 문자열로 변환</a></li></ul></li><li><a href="#숫자-함수">숫자 함수</a><ul><li><a href="#abs수--수의-절댓값-반환">ABS({수}) : 수의 절댓값 반환</a></li><li><a href="#sign수--수의-부호-반환-1-0--1">SIGN({수}) : 수의 부호 반환 (1, 0, -1)</a></li><li><a href="#round수-자릿수--수를-지정된-소수점-자릿수까지-반올림해-반환">ROUND({수} [,{자릿수}]) : 수를 지정된 소수점 자릿수까지 반올림해 반환</a></li><li><a href="#trunc수-자릿수--수를-지정된-소수점-자릿수까지-버림해-반환">TRUNC({수}, [,{자릿수}]) : 수를 지정된 소수점 자릿수까지 버림해 반환</a></li><li><a href="#ceil수--소수점-이하의-수를-올림한-정수로-반환">CEIL({수}) : 소수점 이하의 수를 올림한 정수로 반환</a></li><li><a href="#floor수--소수점-이하의-수를-버림한-정수로-반환">FLOOR({수}) : 소수점 이하의 수를 버림한 정수로 반환</a></li><li><a href="#mod수1-수2--수1을-수2로-나눈-나머지를-반환">MOD({수1}, {수2}) : 수1을 수2로 나눈 나머지를 반환</a></li></ul></li><li><a href="#날짜-함수">날짜 함수</a><ul><li><a href="#sysdate--현재의-연월일시분초-반환">SYSDATE : 현재의 연,월,일,시,분,초 반환</a></li><li><a href="#extract특정-단위-from-데이터--날짜-데이터에서-연월일시분초-등-단위-지정해-출력">EXTRACT({특정 단위} FROM {데이터}) : 날짜 데이터에서 연,월,일,시,분,초 등 단위 지정해 출력</a></li><li><a href="#add_mount날짜-데이터-특정-개월-수--날짜-데이터에-특정-개월-수를-더한-날짜-반환">ADD_MOUNT({날짜 데이터}, {특정 개월 수}) : 날짜 데이터에 특정 개월 수를 더한 날짜 반환</a></li></ul></li><li><a href="#변환-함수">변환 함수</a><ul><li><a href="#to_number문자열--문자열을-숫자형으로-변환">TO_NUMBER({문자열}) : 문자열을 숫자형으로 변환</a></li><li><a href="#to_char수날짜포맷--수나-날짜를-포맷-형식의-문자형으로-변환">TO_CHAR({수|날짜[,{포맷}]}) : 수나 날짜를 (포맷 형식의) 문자형으로 변환</a></li><li><a href="#to_date문자열포맷--포맷-형식의-문자형-데이터를-날짜형으로-변환">TO_DATE({문자열},{포맷}) : 포맷 형식의 문자형 데이터를 날짜형으로 변환</a></li></ul></li><li><a href="#null-관련-함수">NULL 관련 함수</a><ul><li><a href="#nvl인수1-인수2--인수1의-값이-null이면-인수2-아니면-인수1-반환">NVL({인수1}, {인수2}) : 인수1의 값이 NULL이면 인수2, 아니면 인수1 반환</a></li><li><a href="#nullif인수1-인수2--인수1의-값이-같으면-null-아니면-인수1-반환">NULLIF({인수1}, {인수2}) : 인수1의 값이 같으면 NULL, 아니면 인수1 반환</a></li><li><a href="#coalesce인수1-인수2---null이-아닌-최초의-인수-반환">COALESCE({인수1}, {인수2}, ...) : NULL이 아닌 최초의 인수 반환</a></li><li><a href="#nvl인수1-인수2-인수3--인수1의-값이-null이-아니면-인수2-null이면-인수3-반환">NVL({인수1}, {인수2}, {인수3}) : 인수1의 값이 NULL이 아니면 인수2, NULL이면 인수3 반환</a></li><li><a href="#case--이면-이고-이면-이다-식으로-표현되는-구문">CASE : ‘~이면 ~이고, ~이면 ~이다’ 식으로 표현되는 구문</a></li></ul></li></ul></li><li><a href="#where절--dml문을-수행할-때-원하는-데이터만-선택">WHERE절 : DML문을 수행할 때 원하는 데이터만 선택</a></li><li><a href="#group-by절--데이터를-그룹별로-묶음">GROUP BY절 : 데이터를 그룹별로 묶음</a><ul><li><a href="#집계-함수--데이터를-그룹핑한-뒤에-그룹별로-집계-데이터를-도출">집계 함수 : 데이터를 그룹핑한 뒤에 그룹별로 집계 데이터를 도출</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#select문--저장된-데이터-조회">SELECT문 : 저장된 데이터 조회</a><ul><li><a href="#문자-함수">문자 함수</a><ul><li><a href="#chr아스키-코드--입력된-아스키-코드에-매핑되는-문자-변환">CHR(아스키 코드) : 입력된 아스키 코드에 매핑되는 문자 변환</a></li><li><a href="#lower문자열--입력된-문자열을-대문자로-변환">LOWER(문자열) : 입력된 문자열을 대문자로 변환</a></li><li><a href="#upper문자열---입력된-문자열을-소문자로-변환">UPPER(문자열) :  입력된 문자열을 소문자로 변환</a></li><li><a href="#ltrim문자열특정문자열--문자열-왼쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거">LTRIM(문자열[,{특정문자(열)}]) : 문자열 왼쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</a></li><li><a href="#rtrim문자열특정문자열--문자열-오른쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거">RTRIM(문자열[,{특정문자(열)}]) : 문자열 오른쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</a></li><li><a href="#trim위치특정문자from문자열--문자열-왼쪽오른쪽-공백-혹은-옵션-지정-장소부터-제거">TRIM([{위치}{특정문자}FROM]문자열) : 문자열 왼쪽·오른쪽 공백 혹은 옵션 지정 장소부터 제거</a></li><li><a href="#substr문자열시작점길이--문자열의-원하는-부분만-잘라-반환">SUBSTR(문자열,시작점[,{길이}]) : 문자열의 원하는 부분만 잘라 반환</a></li><li><a href="#length문자열--문자열의-길이-반환">LENGTH(문자열) : 문자열의 길이 반환</a></li><li><a href="#replace문자열변경전-문자열변경-후-문자열--문자열에서-변경-전-문자열을-찾아-변경-후-문자열로-변환">REPLACE(문자열,변경전 문자열,[{변경 후 문자열}]) : 문자열에서 변경 전 문자열을 찾아 변경 후 문자열로 변환</a></li></ul></li><li><a href="#숫자-함수">숫자 함수</a><ul><li><a href="#abs수--수의-절댓값-반환">ABS({수}) : 수의 절댓값 반환</a></li><li><a href="#sign수--수의-부호-반환-1-0--1">SIGN({수}) : 수의 부호 반환 (1, 0, -1)</a></li><li><a href="#round수-자릿수--수를-지정된-소수점-자릿수까지-반올림해-반환">ROUND({수} [,{자릿수}]) : 수를 지정된 소수점 자릿수까지 반올림해 반환</a></li><li><a href="#trunc수-자릿수--수를-지정된-소수점-자릿수까지-버림해-반환">TRUNC({수}, [,{자릿수}]) : 수를 지정된 소수점 자릿수까지 버림해 반환</a></li><li><a href="#ceil수--소수점-이하의-수를-올림한-정수로-반환">CEIL({수}) : 소수점 이하의 수를 올림한 정수로 반환</a></li><li><a href="#floor수--소수점-이하의-수를-버림한-정수로-반환">FLOOR({수}) : 소수점 이하의 수를 버림한 정수로 반환</a></li><li><a href="#mod수1-수2--수1을-수2로-나눈-나머지를-반환">MOD({수1}, {수2}) : 수1을 수2로 나눈 나머지를 반환</a></li></ul></li><li><a href="#날짜-함수">날짜 함수</a><ul><li><a href="#sysdate--현재의-연월일시분초-반환">SYSDATE : 현재의 연,월,일,시,분,초 반환</a></li><li><a href="#extract특정-단위-from-데이터--날짜-데이터에서-연월일시분초-등-단위-지정해-출력">EXTRACT({특정 단위} FROM {데이터}) : 날짜 데이터에서 연,월,일,시,분,초 등 단위 지정해 출력</a></li><li><a href="#add_mount날짜-데이터-특정-개월-수--날짜-데이터에-특정-개월-수를-더한-날짜-반환">ADD_MOUNT({날짜 데이터}, {특정 개월 수}) : 날짜 데이터에 특정 개월 수를 더한 날짜 반환</a></li></ul></li><li><a href="#변환-함수">변환 함수</a><ul><li><a href="#to_number문자열--문자열을-숫자형으로-변환">TO_NUMBER({문자열}) : 문자열을 숫자형으로 변환</a></li><li><a href="#to_char수날짜포맷--수나-날짜를-포맷-형식의-문자형으로-변환">TO_CHAR({수|날짜[,{포맷}]}) : 수나 날짜를 (포맷 형식의) 문자형으로 변환</a></li><li><a href="#to_date문자열포맷--포맷-형식의-문자형-데이터를-날짜형으로-변환">TO_DATE({문자열},{포맷}) : 포맷 형식의 문자형 데이터를 날짜형으로 변환</a></li></ul></li><li><a href="#null-관련-함수">NULL 관련 함수</a><ul><li><a href="#nvl인수1-인수2--인수1의-값이-null이면-인수2-아니면-인수1-반환">NVL({인수1}, {인수2}) : 인수1의 값이 NULL이면 인수2, 아니면 인수1 반환</a></li><li><a href="#nullif인수1-인수2--인수1의-값이-같으면-null-아니면-인수1-반환">NULLIF({인수1}, {인수2}) : 인수1의 값이 같으면 NULL, 아니면 인수1 반환</a></li><li><a href="#coalesce인수1-인수2---null이-아닌-최초의-인수-반환">COALESCE({인수1}, {인수2}, ...) : NULL이 아닌 최초의 인수 반환</a></li><li><a href="#nvl인수1-인수2-인수3--인수1의-값이-null이-아니면-인수2-null이면-인수3-반환">NVL({인수1}, {인수2}, {인수3}) : 인수1의 값이 NULL이 아니면 인수2, NULL이면 인수3 반환</a></li><li><a href="#case--이면-이고-이면-이다-식으로-표현되는-구문">CASE : ‘~이면 ~이고, ~이면 ~이다’ 식으로 표현되는 구문</a></li></ul></li><li><a href="#where절--dml문을-수행할-때-원하는-데이터만-선택">WHERE절 : DML문을 수행할 때 원하는 데이터만 선택</a><ul><li><a href="#비교-연산자--조건절-내에서-비교하기-위해-사용되는-연산자">비교 연산자 : 조건절 내에서 비교하기 위해 사용되는 연산자</a></li><li><a href="#sql-연산자--조건절-내에서-sql이-지원하는-연산자">SQL 연산자 : 조건절 내에서 SQL이 지원하는 연산자</a></li><li><a href="#논리-연산자--조건절-내에서-논리-연산을-위해-사용되는-연산자">논리 연산자 : 조건절 내에서 논리 연산을 위해 사용되는 연산자</a></li></ul></li><li><a href="#group-by절--데이터를-그룹별로-묶음">GROUP BY절 : 데이터를 그룹별로 묶음</a><ul><li><a href="#집계-함수--데이터를-그룹핑한-뒤에-그룹별로-집계-데이터를-도출">집계 함수 : 데이터를 그룹핑한 뒤에 그룹별로 집계 데이터를 도출</a></li></ul></li><li><a href="#having--group-by절을-수행할-때-원하는-데이터만-선택-데이터-그룹핑에-사용">HAVING : GROUP BY절을 수행할 때 원하는 데이터만 선택 (데이터 그룹핑에 사용)</a></li><li><a href="#order-by절--select한-데이터-정렬">ORDER BY절 : SELECT한 데이터 정렬</a></li><li><a href="#join--다른-테이블을-한번에-결합하여-표현">JOIN : 다른 테이블을 한번에 결합하여 표현</a><ul><li><a href="#equi-join---조건으로-join">EQUI JOIN : = 조건으로 JOIN</a></li><li><a href="#non-equi-join--이-아닌-between-----조건으로-join">Non EQUI JOIN : =이 아닌 BETWEEN, &gt;, &gt;=, &lt;, &lt;= 조건으로 JOIN</a></li><li><a href="#outer-join--테이블-옆에-을-붙어-join-조건에-만족하지-않는-행들도-출력">OUTER JOIN : 테이블 옆에 (+)을 붙어 JOIN 조건에 만족하지 않는 행들도 출력</a></li></ul></li><li><a href="#standard-join--여러-데이터베이스에서-표준으로-활용되는-join">STANDARD JOIN : 여러 데이터베이스에서 표준으로 활용되는 JOIN</a><ul><li><a href="#inner-standard-join--on으로-작성된-join-조건에-충족하는-데이터만-출력">INNER STANDARD JOIN : ON으로 작성된 JOIN 조건에 충족하는 데이터만 출력</a></li><li><a href="#outer-standard-join--join-조건에-만족하지-않는-행들도-출력">OUTER STANDARD JOIN : JOIN 조건에 만족하지 않는 행들도 출력</a><ul><li><a href="#left-outer-join--왼쪽에-표기된-테이블들은-무조건-출력">LEFT OUTER JOIN : 왼쪽에 표기된 테이블들은 무조건 출력</a></li><li><a href="#right-outer-join--오른쪽에-표기된-테이블들은-무조건-출력">RIGHT OUTER JOIN : 오른쪽에 표기된 테이블들은 무조건 출력</a></li><li><a href="#full-outer-join--왼쪽-오른쪽에-표기된-테이블을-모두-출력">FULL OUTER JOIN : 왼쪽, 오른쪽에 표기된 테이블을 모두 출력</a></li><li><a href="#nature-join--테이블에-같은-이름을-가진-컬럼들이-모두-동일한-데이터를-가지면-join">NATURE JOIN : 테이블에 같은 이름을 가진 컬럼들이 모두 동일한 데이터를 가지면 JOIN</a></li><li><a href="#cross-join--테이블-사이에-join-족ㄴ이-없으면-조합할-수-있는-모든-경우-출력">CROSS JOIN : 테이블 사이에 JOIN 족ㄴ이 없으면, 조합할 수 있는 모든 경우 출력</a></li></ul></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="구문">구문</h2>
+        <h2 id="select문--저장된-데이터-조회"><code class="language-plaintext highlighter-rouge">SELECT</code>문 : 저장된 데이터 조회</h2>
 
-<h3 id="select문--저장된-데이터-조회"><code class="language-plaintext highlighter-rouge">SELECT</code>문 : 저장된 데이터 조회</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT  PRODUCT_CODE,
+        COUNT (ORDER_CNT) AS ORDER_CNT
+FROM ORDER_PRODUCT
+WHERE ORDER_DATE BETWEEN '20240308' AND '20240309'
+GROUP BY PRODUCT_CODE
+HAVING COUNT(ORDER_CNT) &gt;= 1000;
+</code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT 컬럼1, 컬럼2, ... FROM 테이블 WHERE 컬럼1 = '컬럼1';
 </code></pre></div></div>
@@ -413,34 +419,34 @@ function checkAndLoadPage(allImages) {
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT '1'||'0'||'+'||'5' AS RESULT FROM DUAL; // 10+5
 </code></pre></div></div>
 
-<h4 id="문자-함수">문자 함수</h4>
+<h3 id="문자-함수">문자 함수</h3>
 
-<h5 id="chr아스키-코드--입력된-아스키-코드에-매핑되는-문자-변환"><code class="language-plaintext highlighter-rouge">CHR(아스키 코드)</code> : 입력된 아스키 코드에 매핑되는 문자 변환</h5>
+<h4 id="chr아스키-코드--입력된-아스키-코드에-매핑되는-문자-변환"><code class="language-plaintext highlighter-rouge">CHR(아스키 코드)</code> : 입력된 아스키 코드에 매핑되는 문자 변환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT CHR(65) FROM DUAL; // A
 </code></pre></div></div>
 
-<h5 id="lower문자열--입력된-문자열을-대문자로-변환"><code class="language-plaintext highlighter-rouge">LOWER(문자열)</code> : 입력된 문자열을 대문자로 변환</h5>
+<h4 id="lower문자열--입력된-문자열을-대문자로-변환"><code class="language-plaintext highlighter-rouge">LOWER(문자열)</code> : 입력된 문자열을 대문자로 변환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LOWER('SQLD') FROM DUAL; // sqld
 </code></pre></div></div>
 
-<h5 id="upper문자열---입력된-문자열을-소문자로-변환"><code class="language-plaintext highlighter-rouge">UPPER(문자열)</code> :  입력된 문자열을 소문자로 변환</h5>
+<h4 id="upper문자열---입력된-문자열을-소문자로-변환"><code class="language-plaintext highlighter-rouge">UPPER(문자열)</code> :  입력된 문자열을 소문자로 변환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LOWER('sqld') FROM DUAL; // SQLD
 </code></pre></div></div>
 
-<h5 id="ltrim문자열특정문자열--문자열-왼쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거"><code class="language-plaintext highlighter-rouge">LTRIM(문자열[,{특정문자(열)}])</code> : 문자열 왼쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</h5>
+<h4 id="ltrim문자열특정문자열--문자열-왼쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거"><code class="language-plaintext highlighter-rouge">LTRIM(문자열[,{특정문자(열)}])</code> : 문자열 왼쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LTRIM('      SQLD') FROM DUAL; // SQLD
 </code></pre></div></div>
 
-<h5 id="rtrim문자열특정문자열--문자열-오른쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거"><code class="language-plaintext highlighter-rouge">RTRIM(문자열[,{특정문자(열)}])</code> : 문자열 오른쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</h5>
+<h4 id="rtrim문자열특정문자열--문자열-오른쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거"><code class="language-plaintext highlighter-rouge">RTRIM(문자열[,{특정문자(열)}])</code> : 문자열 오른쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT RTRIM('SQLD      ') FROM DUAL; // SQLD
 </code></pre></div></div>
 
-<h5 id="trim위치특정문자from문자열--문자열-왼쪽오른쪽-공백-혹은-옵션-지정-장소부터-제거"><code class="language-plaintext highlighter-rouge">TRIM([{위치}{특정문자}FROM]문자열)</code> : 문자열 왼쪽·오른쪽 공백 혹은 옵션 지정 장소부터 제거</h5>
+<h4 id="trim위치특정문자from문자열--문자열-왼쪽오른쪽-공백-혹은-옵션-지정-장소부터-제거"><code class="language-plaintext highlighter-rouge">TRIM([{위치}{특정문자}FROM]문자열)</code> : 문자열 왼쪽·오른쪽 공백 혹은 옵션 지정 장소부터 제거</h4>
 
 <ul>
   <li>옵션 : <code class="language-plaintext highlighter-rouge">LEADING</code>, <code class="language-plaintext highlighter-rouge">TRAILING</code>, <code class="language-plaintext highlighter-rouge">BOTH</code></li>
@@ -451,56 +457,56 @@ SELECT TRIM(LEADING 'S' FROM 'SQLD') FROM DUAL; // QLD
 SELECT TRIM(TRAILING 'Q' FROM 'SQLD') FROM DUAL; // SQL
 </code></pre></div></div>
 
-<h5 id="substr문자열시작점길이--문자열의-원하는-부분만-잘라-반환"><code class="language-plaintext highlighter-rouge">SUBSTR(문자열,시작점[,{길이}])</code> : 문자열의 원하는 부분만 잘라 반환</h5>
+<h4 id="substr문자열시작점길이--문자열의-원하는-부분만-잘라-반환"><code class="language-plaintext highlighter-rouge">SUBSTR(문자열,시작점[,{길이}])</code> : 문자열의 원하는 부분만 잘라 반환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT SUBSTR('SQLD', 1, 2) FROM DUAL; // QL
 </code></pre></div></div>
 
-<h5 id="length문자열--문자열의-길이-반환"><code class="language-plaintext highlighter-rouge">LENGTH(문자열)</code> : 문자열의 길이 반환</h5>
+<h4 id="length문자열--문자열의-길이-반환"><code class="language-plaintext highlighter-rouge">LENGTH(문자열)</code> : 문자열의 길이 반환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LENGTH('SQLD') FROM DUAL; // 4
 </code></pre></div></div>
 
-<h5 id="replace문자열변경전-문자열변경-후-문자열--문자열에서-변경-전-문자열을-찾아-변경-후-문자열로-변환"><code class="language-plaintext highlighter-rouge">REPLACE(문자열,변경전 문자열,[{변경 후 문자열}])</code> : 문자열에서 변경 전 문자열을 찾아 변경 후 문자열로 변환</h5>
+<h4 id="replace문자열변경전-문자열변경-후-문자열--문자열에서-변경-전-문자열을-찾아-변경-후-문자열로-변환"><code class="language-plaintext highlighter-rouge">REPLACE(문자열,변경전 문자열,[{변경 후 문자열}])</code> : 문자열에서 변경 전 문자열을 찾아 변경 후 문자열로 변환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT REPLACE('SQLD', 'D', 'P') FROM DUAL; // SQLP
 </code></pre></div></div>
 
-<h4 id="숫자-함수">숫자 함수</h4>
+<h3 id="숫자-함수">숫자 함수</h3>
 
-<h5 id="abs수--수의-절댓값-반환"><code class="language-plaintext highlighter-rouge">ABS({수})</code> : 수의 절댓값 반환</h5>
+<h4 id="abs수--수의-절댓값-반환"><code class="language-plaintext highlighter-rouge">ABS({수})</code> : 수의 절댓값 반환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ABS(-1) FROM DUAL; // 1
 </code></pre></div></div>
 
-<h5 id="sign수--수의-부호-반환-1-0--1"><code class="language-plaintext highlighter-rouge">SIGN({수})</code> : 수의 부호 반환 (1, 0, -1)</h5>
+<h4 id="sign수--수의-부호-반환-1-0--1"><code class="language-plaintext highlighter-rouge">SIGN({수})</code> : 수의 부호 반환 (1, 0, -1)</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT SIGN(5) FROM DUAL; // 1
 SELECT SIGN(0) FROM DUAL; // 0
 SELECT SIGN(-4) FROM DUAL; // -1
 </code></pre></div></div>
 
-<h5 id="round수-자릿수--수를-지정된-소수점-자릿수까지-반올림해-반환"><code class="language-plaintext highlighter-rouge">ROUND({수} [,{자릿수}])</code> : 수를 지정된 소수점 자릿수까지 반올림해 반환</h5>
+<h4 id="round수-자릿수--수를-지정된-소수점-자릿수까지-반올림해-반환"><code class="language-plaintext highlighter-rouge">ROUND({수} [,{자릿수}])</code> : 수를 지정된 소수점 자릿수까지 반올림해 반환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ROUND(127.000000001, 0) FROM DUAL; // 127
 </code></pre></div></div>
 
-<h5 id="trunc수-자릿수--수를-지정된-소수점-자릿수까지-버림해-반환"><code class="language-plaintext highlighter-rouge">TRUNC({수}, [,{자릿수}])</code> : 수를 지정된 소수점 자릿수까지 버림해 반환</h5>
+<h4 id="trunc수-자릿수--수를-지정된-소수점-자릿수까지-버림해-반환"><code class="language-plaintext highlighter-rouge">TRUNC({수}, [,{자릿수}])</code> : 수를 지정된 소수점 자릿수까지 버림해 반환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ROUND(127.000000001, 9) FROM DUAL; // 127
 </code></pre></div></div>
 
-<h5 id="ceil수--소수점-이하의-수를-올림한-정수로-반환"><code class="language-plaintext highlighter-rouge">CEIL({수})</code> : 소수점 이하의 수를 올림한 정수로 반환</h5>
+<h4 id="ceil수--소수점-이하의-수를-올림한-정수로-반환"><code class="language-plaintext highlighter-rouge">CEIL({수})</code> : 소수점 이하의 수를 올림한 정수로 반환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT CEIL(127.000000001) FROM DUAL; // 128
 </code></pre></div></div>
 
-<h5 id="floor수--소수점-이하의-수를-버림한-정수로-반환"><code class="language-plaintext highlighter-rouge">FLOOR({수})</code> : 소수점 이하의 수를 버림한 정수로 반환</h5>
+<h4 id="floor수--소수점-이하의-수를-버림한-정수로-반환"><code class="language-plaintext highlighter-rouge">FLOOR({수})</code> : 소수점 이하의 수를 버림한 정수로 반환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT FLOOR(127.000000001) FROM DUAL; // 127
 </code></pre></div></div>
 
-<h5 id="mod수1-수2--수1을-수2로-나눈-나머지를-반환"><code class="language-plaintext highlighter-rouge">MOD({수1}, {수2})</code> : 수1을 수2로 나눈 나머지를 반환</h5>
+<h4 id="mod수1-수2--수1을-수2로-나눈-나머지를-반환"><code class="language-plaintext highlighter-rouge">MOD({수1}, {수2})</code> : 수1을 수2로 나눈 나머지를 반환</h4>
 
 <ul>
   <li>수2가 0이면 수1 그대로 반환</li>
@@ -510,68 +516,68 @@ SELECT SIGN(-4) FROM DUAL; // -1
 SELECT MOD(15, 0) FROM DUAL; // 15
 </code></pre></div></div>
 
-<h4 id="날짜-함수">날짜 함수</h4>
+<h3 id="날짜-함수">날짜 함수</h3>
 
-<h5 id="sysdate--현재의-연월일시분초-반환"><code class="language-plaintext highlighter-rouge">SYSDATE</code> : 현재의 연,월,일,시,분,초 반환</h5>
+<h4 id="sysdate--현재의-연월일시분초-반환"><code class="language-plaintext highlighter-rouge">SYSDATE</code> : 현재의 연,월,일,시,분,초 반환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT SYSDATE FROM DUAL;
 </code></pre></div></div>
 
-<h5 id="extract특정-단위-from-데이터--날짜-데이터에서-연월일시분초-등-단위-지정해-출력"><code class="language-plaintext highlighter-rouge">EXTRACT({특정 단위} FROM {데이터})</code> : 날짜 데이터에서 연,월,일,시,분,초 등 단위 지정해 출력</h5>
+<h4 id="extract특정-단위-from-데이터--날짜-데이터에서-연월일시분초-등-단위-지정해-출력"><code class="language-plaintext highlighter-rouge">EXTRACT({특정 단위} FROM {데이터})</code> : 날짜 데이터에서 연,월,일,시,분,초 등 단위 지정해 출력</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT EXTRACT(YEAR FROM SYSDATE) AS YEAR FROM DUAL; // 2024
 </code></pre></div></div>
 
-<h5 id="add_mount날짜-데이터-특정-개월-수--날짜-데이터에-특정-개월-수를-더한-날짜-반환"><code class="language-plaintext highlighter-rouge">ADD_MOUNT({날짜 데이터}, {특정 개월 수})</code> : 날짜 데이터에 특정 개월 수를 더한 날짜 반환</h5>
+<h4 id="add_mount날짜-데이터-특정-개월-수--날짜-데이터에-특정-개월-수를-더한-날짜-반환"><code class="language-plaintext highlighter-rouge">ADD_MOUNT({날짜 데이터}, {특정 개월 수})</code> : 날짜 데이터에 특정 개월 수를 더한 날짜 반환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ADD_MOUNT('2024-03-07', 'YYYY-MM-DD', 2) // 2024-03-09
 </code></pre></div></div>
 
-<h4 id="변환-함수">변환 함수</h4>
+<h3 id="변환-함수">변환 함수</h3>
 
 <ul>
   <li>명시적 형변환 : 변환 함수로 데이터 유형 변환을 명시적으로 나타냄</li>
   <li>암시적 형변환 : 데이터베이스에서 내부적으로 데이터 유형을 변환함</li>
 </ul>
 
-<h5 id="to_number문자열--문자열을-숫자형으로-변환"><code class="language-plaintext highlighter-rouge">TO_NUMBER({문자열})</code> : 문자열을 숫자형으로 변환</h5>
+<h4 id="to_number문자열--문자열을-숫자형으로-변환"><code class="language-plaintext highlighter-rouge">TO_NUMBER({문자열})</code> : 문자열을 숫자형으로 변환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TO_NUMBER('123') FROM DUAL; // 123
 </code></pre></div></div>
 
-<h5 id="to_char수날짜포맷--수나-날짜를-포맷-형식의-문자형으로-변환"><code class="language-plaintext highlighter-rouge">TO_CHAR({수|날짜[,{포맷}]})</code> : 수나 날짜를 (포맷 형식의) 문자형으로 변환</h5>
+<h4 id="to_char수날짜포맷--수나-날짜를-포맷-형식의-문자형으로-변환"><code class="language-plaintext highlighter-rouge">TO_CHAR({수|날짜[,{포맷}]})</code> : 수나 날짜를 (포맷 형식의) 문자형으로 변환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TO_CHAR(123) FROM DUAL; // '123'
 </code></pre></div></div>
 
-<h5 id="to_date문자열포맷--포맷-형식의-문자형-데이터를-날짜형으로-변환"><code class="language-plaintext highlighter-rouge">TO_DATE({문자열},{포맷})</code> : 포맷 형식의 문자형 데이터를 날짜형으로 변환</h5>
+<h4 id="to_date문자열포맷--포맷-형식의-문자형-데이터를-날짜형으로-변환"><code class="language-plaintext highlighter-rouge">TO_DATE({문자열},{포맷})</code> : 포맷 형식의 문자형 데이터를 날짜형으로 변환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TO_DATE('2024-03-07', 'YYYYMMDD') FROM DUAL; // '2024-03-07'
 </code></pre></div></div>
 
-<h4 id="null-관련-함수"><code class="language-plaintext highlighter-rouge">NULL</code> 관련 함수</h4>
+<h3 id="null-관련-함수"><code class="language-plaintext highlighter-rouge">NULL</code> 관련 함수</h3>
 
-<h5 id="nvl인수1-인수2--인수1의-값이-null이면-인수2-아니면-인수1-반환"><code class="language-plaintext highlighter-rouge">NVL({인수1}, {인수2})</code> : 인수1의 값이 <code class="language-plaintext highlighter-rouge">NULL</code>이면 인수2, 아니면 인수1 반환</h5>
+<h4 id="nvl인수1-인수2--인수1의-값이-null이면-인수2-아니면-인수1-반환"><code class="language-plaintext highlighter-rouge">NVL({인수1}, {인수2})</code> : 인수1의 값이 <code class="language-plaintext highlighter-rouge">NULL</code>이면 인수2, 아니면 인수1 반환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, NVL(SCORE, 0) AS MEMBER_SCORE FROM REVIEW;
 </code></pre></div></div>
 
-<h5 id="nullif인수1-인수2--인수1의-값이-같으면-null-아니면-인수1-반환"><code class="language-plaintext highlighter-rouge">NULLIF({인수1}, {인수2})</code> : 인수1의 값이 같으면 <code class="language-plaintext highlighter-rouge">NULL</code>, 아니면 인수1 반환</h5>
+<h4 id="nullif인수1-인수2--인수1의-값이-같으면-null-아니면-인수1-반환"><code class="language-plaintext highlighter-rouge">NULLIF({인수1}, {인수2})</code> : 인수1의 값이 같으면 <code class="language-plaintext highlighter-rouge">NULL</code>, 아니면 인수1 반환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, NULLIF(SCORE, 0) AS MEMBER_SCORE FROM REVIEW;
 </code></pre></div></div>
 
-<h5 id="coalesce인수1-인수2---null이-아닌-최초의-인수-반환"><code class="language-plaintext highlighter-rouge">COALESCE({인수1}, {인수2}, ...)</code> : <code class="language-plaintext highlighter-rouge">NULL</code>이 아닌 최초의 인수 반환</h5>
+<h4 id="coalesce인수1-인수2---null이-아닌-최초의-인수-반환"><code class="language-plaintext highlighter-rouge">COALESCE({인수1}, {인수2}, ...)</code> : <code class="language-plaintext highlighter-rouge">NULL</code>이 아닌 최초의 인수 반환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, COALESCE(PHONE, EMAIL, FAX) AS  CONTACT FROM REVIEW;
 </code></pre></div></div>
 
-<h5 id="nvl인수1-인수2-인수3--인수1의-값이-null이-아니면-인수2-null이면-인수3-반환"><code class="language-plaintext highlighter-rouge">NVL({인수1}, {인수2}, {인수3})</code> : 인수1의 값이 <code class="language-plaintext highlighter-rouge">NULL</code>이 아니면 인수2, <code class="language-plaintext highlighter-rouge">NULL</code>이면 인수3 반환</h5>
+<h4 id="nvl인수1-인수2-인수3--인수1의-값이-null이-아니면-인수2-null이면-인수3-반환"><code class="language-plaintext highlighter-rouge">NVL({인수1}, {인수2}, {인수3})</code> : 인수1의 값이 <code class="language-plaintext highlighter-rouge">NULL</code>이 아니면 인수2, <code class="language-plaintext highlighter-rouge">NULL</code>이면 인수3 반환</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, NVL(SCORE, '리뷰 O', '리뷰 X') AS MEMBER_SCORE FROM REVIEW;
 </code></pre></div></div>
 
-<h5 id="case--이면-이고-이면-이다-식으로-표현되는-구문"><code class="language-plaintext highlighter-rouge">CASE</code> : ‘~이면 ~이고, ~이면 ~이다’ 식으로 표현되는 구문</h5>
+<h4 id="case--이면-이고-이면-이다-식으로-표현되는-구문"><code class="language-plaintext highlighter-rouge">CASE</code> : ‘~이면 ~이고, ~이면 ~이다’ 식으로 표현되는 구문</h4>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER,
     CASE WHEN SCORE = '5' THEN '만점'
@@ -584,9 +590,7 @@ FROM REVIEW;
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT 컬럼1, 컬럼2, ... FROM 테이블 WHERE (조건절);
 </code></pre></div></div>
 
-<ul>
-  <li>비교 연산자 : 조건절 내에서 비교하기 위해 사용되는 연산자</li>
-</ul>
+<h4 id="비교-연산자--조건절-내에서-비교하기-위해-사용되는-연산자">비교 연산자 : 조건절 내에서 비교하기 위해 사용되는 연산자</h4>
 
 <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/e770be4a-d9a5-425d-8d01-d9106d794854" width="80%" /></p>
 
@@ -599,9 +603,7 @@ SELECT MEMBER FROM REVIEW WHERE MEMBER &lt;&gt; 0; // 10과 같지 않은 값 �
 SELECT MEMBER FROM REVIEW WHERE MEMBER not col = 10; // 칼럼이 1이 아닌 값 출력
 </code></pre></div></div>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">SQL</code> 연산자 : 조건절 내에서 <code class="language-plaintext highlighter-rouge">SQL</code>이 지원하는 연산자</li>
-</ul>
+<h4 id="sql-연산자--조건절-내에서-sql이-지원하는-연산자"><code class="language-plaintext highlighter-rouge">SQL</code> 연산자 : 조건절 내에서 <code class="language-plaintext highlighter-rouge">SQL</code>이 지원하는 연산자</h4>
 
 <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1567d7de-05b2-43f3-947f-53bfaaafe555" width="80%" /></p>
 
@@ -610,9 +612,7 @@ SELECT MEMBER FROM REVIEW WHERE MEMBER not col = 10; // 칼럼이 1이 아닌 �
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER FROM REVIEW WHERE MEMBER BETWEEN 1 AND 10; // 1 ~ 10인 값 출력
 </code></pre></div></div>
 
-<ul>
-  <li>논리 연산자 : 조건절 내에서 논리 연산을 위해 사용되는 연산자</li>
-</ul>
+<h4 id="논리-연산자--조건절-내에서-논리-연산을-위해-사용되는-연산자">논리 연산자 : 조건절 내에서 논리 연산을 위해 사용되는 연산자</h4>
 
 <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/950b6035-99b0-4654-af32-ad33db4eddaf" width="80%" /></p>
 
@@ -625,6 +625,109 @@ SELECT MEMBER FROM REVIEW WHERE MEMBER not col = 10; // 칼럼이 1이 아닌 �
 <h4 id="집계-함수--데이터를-그룹핑한-뒤에-그룹별로-집계-데이터를-도출">집계 함수 : 데이터를 그룹핑한 뒤에 그룹별로 집계 데이터를 도출</h4>
 
 <p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/0b0bfff1-003b-493e-bf4d-afed82b901fa" width="80%" /></p>
+
+<h3 id="having--group-by절을-수행할-때-원하는-데이터만-선택-데이터-그룹핑에-사용"><code class="language-plaintext highlighter-rouge">HAVING</code> : <code class="language-plaintext highlighter-rouge">GROUP BY</code>절을 수행할 때 원하는 데이터만 선택 (데이터 그룹핑에 사용)</h3>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/b60b2263-1015-4c38-a5c0-4b0961836f30" width="80%" /></p>
+
+<h3 id="order-by절--select한-데이터-정렬"><code class="language-plaintext highlighter-rouge">ORDER BY</code>절 : <code class="language-plaintext highlighter-rouge">SELECT</code>한 데이터 정렬</h3>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/6d2c9476-fb99-4797-862a-32bf2f57ff56" width="80%" /></p>
+
+<blockquote>
+  <p>정렬의 기준이 되는 컬럼이 <code class="language-plaintext highlighter-rouge">NULL</code>이 포함되는 경우 : 오라클은 <code class="language-plaintext highlighter-rouge">NULL</code>을 최대로 보아 맨 뒤에 위치</p>
+</blockquote>
+
+<h3 id="join--다른-테이블을-한번에-결합하여-표현"><code class="language-plaintext highlighter-rouge">JOIN</code> : 다른 테이블을 한번에 결합하여 표현</h3>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/8cccf773-6e26-445f-b8c6-98baedfac236" width="80%" /></p>
+
+<h4 id="equi-join---조건으로-join"><code class="language-plaintext highlighter-rouge">EQUI JOIN</code> : <code class="language-plaintext highlighter-rouge">=</code> 조건으로 <code class="language-plaintext highlighter-rouge">JOIN</code></h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT A.CODE, A.NAME, B.ID, B.CONTENT
+FROM PRODUCT A, PRODUCT_REVIEW B
+WHERE A.PRODUCT_CODE = B.PRODUCT_CODE;
+</code></pre></div></div>
+
+<h4 id="non-equi-join--이-아닌-between-----조건으로-join"><code class="language-plaintext highlighter-rouge">Non EQUI JOIN</code> : <code class="language-plaintext highlighter-rouge">=</code>이 아닌 <code class="language-plaintext highlighter-rouge">BETWEEN</code>, <code class="language-plaintext highlighter-rouge">&gt;</code>, <code class="language-plaintext highlighter-rouge">&gt;=</code>, <code class="language-plaintext highlighter-rouge">&lt;</code>, <code class="language-plaintext highlighter-rouge">&lt;=</code> 조건으로 <code class="language-plaintext highlighter-rouge">JOIN</code></h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT A.CODE, A.NAME, B.ID, B.CONTENT
+FROM PRODUCT A, PRODUCT_REVIEW B
+WHERE B.DATE BETWEEN A.START_DATE AND A.END_DATE;
+</code></pre></div></div>
+
+<h4 id="outer-join--테이블-옆에-을-붙어-join-조건에-만족하지-않는-행들도-출력"><code class="language-plaintext highlighter-rouge">OUTER JOIN</code> : 테이블 옆에 <code class="language-plaintext highlighter-rouge">(+)</code>을 붙어 <code class="language-plaintext highlighter-rouge">JOIN</code> 조건에 만족하지 않는 행들도 출력</h4>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/7e5708df-e66c-4f8e-ad9a-84e931a86af6" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT A.CODE, A.NAME, B.ID, B.CONTENT
+FROM PRODUCT A, PRODUCT_REVIEW B
+WHERE A.PRODUCT_CODE = B.PRODUCT_CODE(+);
+</code></pre></div></div>
+
+<h3 id="standard-join--여러-데이터베이스에서-표준으로-활용되는-join"><code class="language-plaintext highlighter-rouge">STANDARD JOIN</code> : 여러 데이터베이스에서 표준으로 활용되는 <code class="language-plaintext highlighter-rouge">JOIN</code></h3>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">DB</code> 벤더마다 <code class="language-plaintext highlighter-rouge">SQL</code> 문법 차이가 너무 크면 호환성·효율성에 문제가 발생하므로 <code class="language-plaintext highlighter-rouge">ANSI SQL</code> 지정</p>
+</blockquote>
+
+<h4 id="inner-standard-join--on으로-작성된-join-조건에-충족하는-데이터만-출력"><code class="language-plaintext highlighter-rouge">INNER STANDARD JOIN</code> : <code class="language-plaintext highlighter-rouge">ON</code>으로 작성된 <code class="language-plaintext highlighter-rouge">JOIN</code> 조건에 충족하는 데이터만 출력</h4>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/53ba83bc-ee24-4fac-a062-5edc69aa838f" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM PRODUCT A INNER JOIN PRODUCT_REVIEW B
+    ON A.PRODUCT_ID = B.PRODUCT_ID;
+</code></pre></div></div>
+
+<h4 id="outer-standard-join--join-조건에-만족하지-않는-행들도-출력"><code class="language-plaintext highlighter-rouge">OUTER STANDARD JOIN</code> : <code class="language-plaintext highlighter-rouge">JOIN</code> 조건에 만족하지 않는 행들도 출력</h4>
+
+<h5 id="left-outer-join--왼쪽에-표기된-테이블들은-무조건-출력"><code class="language-plaintext highlighter-rouge">LEFT OUTER JOIN</code> : 왼쪽에 표기된 테이블들은 무조건 출력</h5>
+
+<ul>
+  <li>오른쪽에 <code class="language-plaintext highlighter-rouge">JOIN</code>되는 데이터가 없는 <code class="language-plaintext highlighter-rouge">ROW</code>는 오른쪽 컬럼의 값이 <code class="language-plaintext highlighter-rouge">NULL</code></li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/fdecf4bf-52de-4f48-a596-2f6543dc62ca" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT A.CODE, A.NAME, B.ID, B.CONTENT
+FROM PRODUCT A LEFT OUTER JOIN PRODUCT_REVIEW B
+    ON A.PRODUCT_ID = B.PRODUCT_ID;
+</code></pre></div></div>
+
+<h5 id="right-outer-join--오른쪽에-표기된-테이블들은-무조건-출력"><code class="language-plaintext highlighter-rouge">RIGHT OUTER JOIN</code> : 오른쪽에 표기된 테이블들은 무조건 출력</h5>
+
+<ul>
+  <li>왼쪽에 <code class="language-plaintext highlighter-rouge">JOIN</code>되는 데이터가 없는 <code class="language-plaintext highlighter-rouge">ROW</code>는 왼쪽 컬럼의 값이 <code class="language-plaintext highlighter-rouge">NULL</code></li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/60319867-65e2-4056-b64d-af3d7e3f5f2e" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT A.CODE, A.NAME, B.ID, B.CONTENT
+FROM PRODUCT A RIGHT OUTER JOIN PRODUCT_REVIEW B
+    ON A.PRODUCT_ID = B.PRODUCT_ID;
+</code></pre></div></div>
+
+<h5 id="full-outer-join--왼쪽-오른쪽에-표기된-테이블을-모두-출력"><code class="language-plaintext highlighter-rouge">FULL OUTER JOIN</code> : 왼쪽, 오른쪽에 표기된 테이블을 모두 출력</h5>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">LEFT OUTER JOIN</code>와 <code class="language-plaintext highlighter-rouge">RIGHT OUTER JOIN</code>의 합집합 (단, 중복값은 제거)</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/b2467251-eacb-426c-b4b7-1168e0ba19b2" width="80%" /></p>
+
+<h5 id="nature-join--테이블에-같은-이름을-가진-컬럼들이-모두-동일한-데이터를-가지면-join"><code class="language-plaintext highlighter-rouge">NATURE JOIN</code> : 테이블에 같은 이름을 가진 컬럼들이 모두 동일한 데이터를 가지면 <code class="language-plaintext highlighter-rouge">JOIN</code></h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT *
+FROM RUNNING_MAN A NATURAL JOIN INFINITE_CHALLENGE B;
+</code></pre></div></div>
+
+<h5 id="cross-join--테이블-사이에-join-족ㄴ이-없으면-조합할-수-있는-모든-경우-출력"><code class="language-plaintext highlighter-rouge">CROSS JOIN</code> : 테이블 사이에 <code class="language-plaintext highlighter-rouge">JOIN</code> 족ㄴ이 없으면, 조합할 수 있는 모든 경우 출력</h5>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/34eb0299-568e-4a6e-8737-00ce194ae55c" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT A.CODE, A.NAME, B.ID, B.CONTENT
+FROM ENTERTAINER A CROSS JOIN DRINK B;
+</code></pre></div></div>
 
         
       </section>
@@ -651,7 +754,7 @@ SELECT MEMBER FROM REVIEW WHERE MEMBER not col = 10; // 칼럼이 1이 아닌 �
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-03-07">March 7, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-03-08">March 8, 2024</time></p>
 
       </footer>
       
@@ -674,7 +777,7 @@ SELECT MEMBER FROM REVIEW WHERE MEMBER not col = 10; // 칼럼이 1이 아닌 �
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BSQLD%5D+2.+SQL+%EA%B8%B0%EB%B3%B8+%EB%B0%8F+%ED%99%9C%EC%9A%A9%20http%3A%2F%2Flocalhost%3A4000%2Fsqld2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BSQLD%5D+2.+SQL+%EA%B8%B0%EB%B3%B8%20http%3A%2F%2Flocalhost%3A4000%2Fsqld2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fsqld2%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
@@ -688,7 +791,8 @@ SELECT MEMBER FROM REVIEW WHERE MEMBER not col = 10; // 칼럼이 1이 아닌 �
 ">이전</a>
     
     
-      <a href="#" class="pagination--pager disabled">다음</a>
+      <a href="/sqld3/" class="pagination--pager" title="[SQLD] 3. SQL 활용
+">다음</a>
     
   </nav>
 
@@ -702,6 +806,47 @@ SELECT MEMBER FROM REVIEW WHERE MEMBER not col = 10; // 칼럼이 1이 아닌 �
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/sqld3/" rel="permalink">[SQLD] 3. SQL 활용
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">서브 쿼리 (SubQuery) : 하나의 쿼리 내에 존재하는 또다른 쿼리
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -730,7 +875,7 @@ SELECT MEMBER FROM REVIEW WHERE MEMBER not col = 10; // 칼럼이 1이 아닌 �
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 분 소요
+          4 분 소요
         
       </span>
     
@@ -820,47 +965,6 @@ SELECT MEMBER FROM REVIEW WHERE MEMBER not col = 10; // 칼럼이 1이 아닌 �
 
 
     <p class="archive__item-excerpt" itemprop="description">React-Router-Dom : React로 생성된 SPA 내에서 페이지 이동이 가능하도록 라우팅
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/react3/" rel="permalink">[React] 3. 함수 컴포넌트 (Functional Component)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          11 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">함수 컴포넌트 (Functional Component) : 리액트 훅을 통한 상태와 생명주기 관리
 
 </p>
   </article>

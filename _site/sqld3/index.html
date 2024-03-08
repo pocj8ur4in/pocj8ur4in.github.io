@@ -1,0 +1,973 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<script>
+document.addEventListener('mousedown', (event) => { // 클릭 금지
+  if (event.button === 1) {
+    event.preventDefault();
+  }
+
+  if (event.button === 2) {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener('dragstart', (event) => { // 드래그 금지
+  event.preventDefault();
+});
+
+document.addEventListener('contextmenu', (event) => { // 선택 금지
+  event.preventDefault();
+});
+
+document.addEventListener('selectstart', (event) => { // 텍스트 선택 금지
+  event.preventDefault();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  checkAndLoadPage(getAllImgs());
+});
+
+function getAllImgs() {
+  const images = document.querySelectorAll('img');
+  return Array.from(images);
+}
+
+function chkImgsLoaded(allImages) {
+    return allImages.every(image => image.complete);
+}
+
+function checkAndLoadPage(allImages) {
+    if (!chkImgsLoaded(allImages)) {
+      requestAnimationFrame(function() {
+      checkAndLoadPage(allImages);
+      });
+    }
+}
+
+</script>
+<html lang="ko" class="no-js" oncopy="return false;" oncut="return false;" onpaste="return false;">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[SQLD] 3. SQL 활용 - pocj8ur4in’s blog</title>
+<meta name="description" content="서브 쿼리 (SubQuery) : 하나의 쿼리 내에 존재하는 또다른 쿼리">
+
+
+  <meta name="author" content="pocj8ur4in">
+  
+  <meta property="article:author" content="pocj8ur4in">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="pocj8ur4in's blog">
+<meta property="og:title" content="[SQLD] 3. SQL 활용">
+<meta property="og:url" content="http://localhost:4000/sqld3/">
+
+
+  <meta property="og:description" content="서브 쿼리 (SubQuery) : 하나의 쿼리 내에 존재하는 또다른 쿼리">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-03-08T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2024-03-08T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/sqld3/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "pocj8ur4in's blog",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="pocj8ur4in's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
+
+<!-- end custom head snippets -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5003376222895357"
+     crossorigin="anonymous"></script>
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          pocj8ur4in
+          <span class="site-subtitle">since 2022.09.01.</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/tags/">모아보기</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">[SQLD] 3. SQL 활용</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c175e6a8-9aa2-44bb-8359-abbb68d5fe1b" alt="pocj8ur4in" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">pocj8ur4in</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/pocj8ur4in" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:pocj8ur4in@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="pocj8ur4in@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[SQLD] 3. SQL 활용">
+    <meta itemprop="description" content="서브 쿼리 (SubQuery) : 하나의 쿼리 내에 존재하는 또다른 쿼리">
+    <meta itemprop="datePublished" content="2024-03-08T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-03-08T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/sqld3/" class="u-url" itemprop="url">[SQLD] 3. SQL 활용
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#서브-쿼리-subquery--하나의-쿼리-내에-존재하는-또다른-쿼리">서브 쿼리 (SubQuery) : 하나의 쿼리 내에 존재하는 또다른 쿼리</a><ul><li><a href="#스칼라-서브-쿼리-scalar-subquery--주로-select에-위치하는-서브-쿼리">스칼라 서브 쿼리 (Scalar SubQuery) : 주로 SELECT에 위치하는 서브 쿼리</a></li><li><a href="#인라인-뷰-inline-view--from처럼-테이블명이-오는-위치에-위치하는-서브-쿼리">인라인 뷰 (Inline View) : FROM처럼 테이블명이 오는 위치에 위치하는 서브 쿼리</a></li><li><a href="#중첩-서브쿼리-nested-subquery--where과-having에-위치하는-쿼리">중첩 서브쿼리 (Nested SubQuery) : WHERE과 HAVING에 위치하는 쿼리</a><ul><li><a href="#비연관-서브쿼리-un-correlated-subquery--서브쿼리-내에-메인-쿼리의-컬럼이-존재하지-않음">비연관 서브쿼리 (Un-Correlated SubQuery) : 서브쿼리 내에 메인 쿼리의 컬럼이 존재하지 않음</a></li><li><a href="#연관-서브쿼리-correlated-subquery--서브쿼리-내에-메인-쿼리의-컬럼이-존재함">연관 서브쿼리 (Correlated SubQuery) : 서브쿼리 내에 메인 쿼리의 컬럼이 존재함</a><ul><li><a href="#단일-행-서브쿼리-single-row-subquery--서브쿼리가-1건-이하의-데이터-반환">단일 행 서브쿼리 (Single Row SubQuery) : 서브쿼리가 1건 이하의 데이터 반환</a></li><li><a href="#다중-행-서브쿼리-multi-row-subquery--서브쿼리가-여러-건의-데이터-반환">다중 행 서브쿼리 (Multi Row SubQuery) : 서브쿼리가 여러 건의 데이터 반환</a></li><li><a href="#다중-칼럼-서브쿼리-multi-col-subquery--서브쿼리가-여러-칼럼의-데이터-반환">다중 칼럼 서브쿼리 (Multi Col SubQuery) : 서브쿼리가 여러 칼럼의 데이터 반환</a></li></ul></li></ul></li></ul></li><li><a href="#뷰-view--특정-select에-이름을-붙어-재사용-가능하도록-저장한-오브젝트">뷰 (View) : 특정 SELECT에 이름을 붙어 재사용 가능하도록 저장한 오브젝트</a></li><li><a href="#집합-연산자--각-쿼리의-결과-집합을-가지고-연산하는-명령어">집합 연산자 : 각 쿼리의 결과 집합을 가지고 연산하는 명령어</a></li><li><a href="#그룹-함수--데이터를-group-by하여-나타낼-수-있는-데이터를-구하는-함수">그룹 함수 : 데이터를 GROUP BY하여 나타낼 수 있는 데이터를 구하는 함수</a><ul><li><a href="#rollup--소그룹-간의-소계-및-총계를-계산하는-함수">ROLLUP : 소그룹 간의 소계 및 총계를 계산하는 함수</a></li><li><a href="#cube--소그룹-간의-소계-및-총계를-다차원적으로-계산하는-함수">CUBE : 소그룹 간의 소계 및 총계를 다차원적으로 계산하는 함수</a></li><li><a href="#grouping-sets--특정-항목에-대한-소계를-계산하는-함수">GROUPING SETS : 특정 항목에 대한 소계를 계산하는 함수</a></li><li><a href="#grouping--소계를-나타내는-row를-구분하는-기준">GROUPING : 소계를 나타내는 ROW를 구분하는 기준</a></li></ul></li><li><a href="#윈도우-함수--over-키워드와-함께-사용되는-함수">윈도우 함수 : OVER 키워드와 함께 사용되는 함수</a><ul><li><a href="#순위-함수--윈도우-함수-중-순위를-매기는-함수">순위 함수 : 윈도우 함수 중 순위를 매기는 함수</a><ul><li><a href="#rank--순위를-매길-때-같은-순위가-존재하면-존재하는-수만큼-건너뜀">RANK : 순위를 매길 때 같은 순위가 존재하면 존재하는 수만큼 건너뜀</a></li><li><a href="#dense_rank--순위를-매길-때-같은-순위가-존재하더라도-건너뛰지-않고-이어서-매김">DENSE_RANK : 순위를 매길 때 같은 순위가 존재하더라도 건너뛰지 않고 이어서 매김</a></li><li><a href="#row_number--순위를-매길-때-동일한-값이알도-각기-다른-순위를-부여">ROW_NUMBER : 순위를 매길 때 동일한 값이알도 각기 다른 순위를 부여</a></li></ul></li><li><a href="#집계-함수--윈도우-함수-중-값을-집계하는-함수">집계 함수 : 윈도우 함수 중 값을 집계하는 함수</a><ul><li><a href="#sum--데이터의-합계를-구하는-함수">SUM : 데이터의 합계를 구하는 함수</a></li><li><a href="#max--데이터의-최댓값를-구하는-함수">MAX : 데이터의 최댓값를 구하는 함수</a></li><li><a href="#min--데이터의-최솟값을-구하는-함수">MIN : 데이터의 최솟값을 구하는 함수</a></li><li><a href="#avg--데이터의-평균값을-구하는-함수">AVG : 데이터의 평균값을 구하는 함수</a></li><li><a href="#count--데이터의-건수를-구하는-함수">COUNT : 데이터의 건수를 구하는 함수</a></li></ul></li><li><a href="#행-순서-함수">행 순서 함수</a><ul><li><a href="#first_value--파티션별-가장-선두에-위치한-데이터를-구하는-함수">FIRST_VALUE : 파티션별 가장 선두에 위치한 데이터를 구하는 함수</a></li><li><a href="#last_value--파티션별-가장-끝에-위치한-데이터를-구하는-함수">LAST_VALUE : 파티션별 가장 끝에 위치한 데이터를 구하는 함수</a></li><li><a href="#lag--파티션별로-특정-수만큼-앞선-데이터를-구하는-함수">LAG : 파티션별로 특정 수만큼 앞선 데이터를 구하는 함수</a></li><li><a href="#lead--파티션별로-특정-수만큼-뒤에-있는-데이터를-구하는-함수">LEAD : 파티션별로 특정 수만큼 뒤에 있는 데이터를 구하는 함수</a></li></ul></li><li><a href="#비율-함수">비율 함수</a><ul><li><a href="#ratio_to_report--파티션별-합계에서-차지하는-비율을-구하는-함수">RATIO_TO_REPORT : 파티션별 합계에서 차지하는 비율을 구하는 함수</a></li><li><a href="#percent_rank--해당-파티션의-맨-위-끝-행을-0-맨-아래-끝-행을-1로-놓고-현재-행이-위치하는-백-분위-순위-값을-구하는-함수">PERCENT_RANK : 해당 파티션의 맨 위 끝 행을 0, 맨 아래 끝 행을 1로 놓고 현재 행이 위치하는 백 분위 순위 값을 구하는 함수</a></li><li><a href="#cume_dist--해당-파티션에서의-누적-백분율을-구하는-함수-결과값--01">CUME_DIST : 해당 파티션에서의 누적 백분율을 구하는 함수 (결과값 : 0~1)</a></li><li><a href="#nitile--주어진-수만큼-행들을-n등분한-후-현재-행에-해당하는-등급을-구하는-함수">NITILE : 주어진 수만큼 행들을 N등분한 후 현재 행에 해당하는 등급을 구하는 함수</a></li></ul></li></ul></li><li><a href="#top-n-쿼리--시작-지점부터-n까지의-범위를-추출하는-쿼리">Top-N 쿼리 : 시작 지점부터 N까지의 범위를 추출하는 쿼리</a><ul><li><a href="#rownum--실제론-존재하지-않는-수도-컮럼-pseudo-column-행이-반환될-때마다-순번이-1씩-증가">ROWNUM : 실제론 존재하지 않는 수도 컮럼 (Pseudo Column), 행이 반환될 때마다 순번이 1씩 증가</a></li></ul></li><li><a href="#셀프-조인-self-join--나-자신과의-join-alias를-통한-별칭-부여는-필수">셀프 조인 (Self Join) : 나 자신과의 Join (ALIAS를 통한 별칭 부여는 필수!)</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="서브-쿼리-subquery--하나의-쿼리-내에-존재하는-또다른-쿼리">서브 쿼리 (<code class="language-plaintext highlighter-rouge">SubQuery</code>) : 하나의 쿼리 내에 존재하는 또다른 쿼리</h2>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1760ee26-6607-4398-8329-cc136d3c3017" width="80%" /></p>
+
+<h3 id="스칼라-서브-쿼리-scalar-subquery--주로-select에-위치하는-서브-쿼리">스칼라 서브 쿼리 (<code class="language-plaintext highlighter-rouge">Scalar SubQuery</code>) : 주로 <code class="language-plaintext highlighter-rouge">SELECT</code>에 위치하는 서브 쿼리</h3>
+
+<ul>
+  <li>컬럼 대신 사용되므로 하나의 값만을 반환, 그렇지 않으면 에러 발생</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT M.PRODUCT_CODE,
+    (SELECT S.PRODUCT_NAME
+        FROM PRODUCT S
+        WHERE S.PRODUCT_CODE = M.PRODUCT_CODE) AS PRODUCT_NAME,
+    M.MEMBER_ID,
+    M.CONTENT
+FROM PRODUCT_REVIEW M;
+</code></pre></div></div>
+
+<h3 id="인라인-뷰-inline-view--from처럼-테이블명이-오는-위치에-위치하는-서브-쿼리">인라인 뷰 (<code class="language-plaintext highlighter-rouge">Inline View</code>) : <code class="language-plaintext highlighter-rouge">FROM</code>처럼 테이블명이 오는 위치에 위치하는 서브 쿼리</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT M.PRODUCT_CODE, S.PRODUCT_NAME, S.PRICE, M.MEMBER_ID, M.CONTENT
+FROM PRODUCT_REVIEW M,
+    (SELECT PRODUCT_CODE, PRODUCT_NAME, PRICE FROM PRODUCT) S
+WHERE M.PRODUCT_CODE = S.PRODUCT_CODE;
+</code></pre></div></div>
+
+<h3 id="중첩-서브쿼리-nested-subquery--where과-having에-위치하는-쿼리">중첩 서브쿼리 (<code class="language-plaintext highlighter-rouge">Nested SubQuery</code>) : <code class="language-plaintext highlighter-rouge">WHERE</code>과 <code class="language-plaintext highlighter-rouge">HAVING</code>에 위치하는 쿼리</h3>
+
+<h4 id="비연관-서브쿼리-un-correlated-subquery--서브쿼리-내에-메인-쿼리의-컬럼이-존재하지-않음">비연관 서브쿼리 (<code class="language-plaintext highlighter-rouge">Un-Correlated SubQuery</code>) : 서브쿼리 내에 메인 쿼리의 컬럼이 존재하지 않음</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT NAME, AGE, BIRTHDAY
+    FROM STUDENT
+    WHERE CODE = (SELECT CODE
+        FROM SCHOOL
+        WHERE SCHOOL_NAME = 'EIA');
+</code></pre></div></div>
+
+<h4 id="연관-서브쿼리-correlated-subquery--서브쿼리-내에-메인-쿼리의-컬럼이-존재함">연관 서브쿼리 (<code class="language-plaintext highlighter-rouge">Correlated SubQuery</code>) : 서브쿼리 내에 메인 쿼리의 컬럼이 존재함</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_NO, DRINK_CODE, ORDER_CNT
+    FROM CAFE_ORDER A
+    WHERE ORDER_CNT = (SELECT MAX(ORDER_CNT)
+        FROM CAFE_ORDER B
+        WHERE B.DRINK_CODE = A.DRINK_CODE);
+</code></pre></div></div>
+
+<h5 id="단일-행-서브쿼리-single-row-subquery--서브쿼리가-1건-이하의-데이터-반환">단일 행 서브쿼리 (<code class="language-plaintext highlighter-rouge">Single Row SubQuery</code>) : 서브쿼리가 1건 이하의 데이터 반환</h5>
+
+<ul>
+  <li>단일 행 연산자와 함께 사용 : <code class="language-plaintext highlighter-rouge">=</code>, <code class="language-plaintext highlighter-rouge">&lt;</code>, <code class="language-plaintext highlighter-rouge">&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;=</code>, <code class="language-plaintext highlighter-rouge">&gt;=</code>, <code class="language-plaintext highlighter-rouge">&lt;&gt;</code></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FORM PRODUCT
+    WHERE PRICE = (SELECT MAX(PRICE) FROM PRODUCT);
+</code></pre></div></div>
+
+<h5 id="다중-행-서브쿼리-multi-row-subquery--서브쿼리가-여러-건의-데이터-반환">다중 행 서브쿼리 (<code class="language-plaintext highlighter-rouge">Multi Row SubQuery</code>) : 서브쿼리가 여러 건의 데이터 반환</h5>
+
+<ul>
+  <li>다중 행 연산자와 함께 사용 : <code class="language-plaintext highlighter-rouge">IN</code>, <code class="language-plaintext highlighter-rouge">ALL</code>, <code class="language-plaintext highlighter-rouge">ANY</code>, <code class="language-plaintext highlighter-rouge">SOME</code>, <code class="language-plaintext highlighter-rouge">EXISTS</code></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM PRODUCT
+    WHERE PRODUCT_ID IN (SELECT PRODUCT_CODE FROM PRODUCT_REVIEW);
+</code></pre></div></div>
+
+<h5 id="다중-칼럼-서브쿼리-multi-col-subquery--서브쿼리가-여러-칼럼의-데이터-반환">다중 칼럼 서브쿼리 (<code class="language-plaintext highlighter-rouge">Multi Col SubQuery</code>) : 서브쿼리가 여러 칼럼의 데이터 반환</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM EMPLOYEES
+    WHERE (JOB_ID, SALARY) IN (SELECT JOB_ID, MAX_SALARY
+    FROM JOBS
+    WHERE MAX_SALARY = 10000);
+</code></pre></div></div>
+
+<h2 id="뷰-view--특정-select에-이름을-붙어-재사용-가능하도록-저장한-오브젝트">뷰 (<code class="language-plaintext highlighter-rouge">View</code>) : 특정 <code class="language-plaintext highlighter-rouge">SELECT</code>에 이름을 붙어 재사용 가능하도록 저장한 오브젝트</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">SQL</code>에서 테이블처럼 사용 가능한 가상의 테이블 : 실제 데이터 대신 <code class="language-plaintext highlighter-rouge">SELECT</code>만 가짐</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE OR REPLACE VIEW DEPT_MEMBERS AS
+    SELECT A.DEPARTMENT_ID, A.DEPARTMENT_NAME, B.FULL_NAME
+        FROM DEPARTMENT A
+        LEFT OUTER JOIN EMPLOYEE B
+            ON A.DEPARTMENT_ID = B.DEPARTMENT_ID; // 뷰 생성
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DROP VIEW DEPT_TABLE; // 뷰 삭제
+</code></pre></div></div>
+
+<h2 id="집합-연산자--각-쿼리의-결과-집합을-가지고-연산하는-명령어">집합 연산자 : 각 쿼리의 결과 집합을 가지고 연산하는 명령어</h2>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/4feed2f3-d35c-4ccf-b322-0456236667a0" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM STUDENT UNION ALL SELECT * FROM TEACHER; // 쿼리1, 쿼리2 결과의 합집합 (중복 포함)
+SELECT * FROM STUDENT UNION SELECT * FROM TEACHER; // 쿼리1, 쿼리2 결과의 합집합 (중복 제거)
+SELECT * FROM STUDENT INTERSECT SELECT * FROM TEACHER; // 쿼리1, 쿼리2 결과의 교집합 (중복 제거)
+SELECT * FROM STUDENT MINUS SELECT * FROM TEACHER; // 쿼리1에서 쿼리2 결과 제거해 출력
+</code></pre></div></div>
+
+<h2 id="그룹-함수--데이터를-group-by하여-나타낼-수-있는-데이터를-구하는-함수">그룹 함수 : 데이터를 <code class="language-plaintext highlighter-rouge">GROUP BY</code>하여 나타낼 수 있는 데이터를 구하는 함수</h2>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5d6edb1a-9724-458f-aba9-41c94e88b012" width="80%" /></p>
+
+<h3 id="rollup--소그룹-간의-소계-및-총계를-계산하는-함수"><code class="language-plaintext highlighter-rouge">ROLLUP</code> : 소그룹 간의 소계 및 총계를 계산하는 함수</h3>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5d943091-01f0-411d-9a43-908e516ced2c" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_DT, COUNT(*)
+    FROM MY_ORDER
+    GROUP BY ROLLUP(ORDER_DT, (ORDER_ITEM, ORDER_ITEM_NAME))
+    ORDER BY ORDER_DT;
+</code></pre></div></div>
+
+<h3 id="cube--소그룹-간의-소계-및-총계를-다차원적으로-계산하는-함수"><code class="language-plaintext highlighter-rouge">CUBE</code> : 소그룹 간의 소계 및 총계를 다차원적으로 계산하는 함수</h3>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/ae2850c7-250d-48b6-85dd-a896628496e3" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_DT, COUNT(*)
+    FROM MY_ORDER
+    GROUP BY ORDER_DT
+    ORDER BY ORDER_DT;
+</code></pre></div></div>
+
+<h3 id="grouping-sets--특정-항목에-대한-소계를-계산하는-함수"><code class="language-plaintext highlighter-rouge">GROUPING SETS</code> : 특정 항목에 대한 소계를 계산하는 함수</h3>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/fc039246-e84d-44ba-96e1-d484aa109901" width="80%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_DT, COUNT(*)
+    FROM MY_ORDER
+    GROUP BY GROUPING SETS(ORDER_DT, ORDER_ITEM)
+    ORDER BY ORDER_DT;
+</code></pre></div></div>
+
+<h3 id="grouping--소계를-나타내는-row를-구분하는-기준"><code class="language-plaintext highlighter-rouge">GROUPING</code> : 소계를 나타내는 <code class="language-plaintext highlighter-rouge">ROW</code>를 구분하는 기준</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_DT, GROUPING(ORDER_DT), COUNT(*)
+    FROM MY_ORDER
+    GROUP BY ROLLUP(ORDER_DT)
+    ORDER BY ORDER_DT;
+</code></pre></div></div>
+
+<h2 id="윈도우-함수--over-키워드와-함께-사용되는-함수">윈도우 함수 : <code class="language-plaintext highlighter-rouge">OVER</code> 키워드와 함께 사용되는 함수</h2>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/26594129-2933-4c9e-9412-a9e8a937517f" width="80%" /></p>
+
+<h3 id="순위-함수--윈도우-함수-중-순위를-매기는-함수">순위 함수 : 윈도우 함수 중 순위를 매기는 함수</h3>
+
+<p>&lt;img src=”https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1300c402-ee17-414c-9726-1cab28b97c1b” width=”80%&gt;</p>
+
+<h4 id="rank--순위를-매길-때-같은-순위가-존재하면-존재하는-수만큼-건너뜀"><code class="language-plaintext highlighter-rouge">RANK</code> : 순위를 매길 때 같은 순위가 존재하면 존재하는 수만큼 건너뜀</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_DT, COUNT(*) RANK() OVER(ORDER BY COUNT(*) DESC) AS RANK
+    FROM MY_ORDER
+    GROUP BY ORDER_DT;
+</code></pre></div></div>
+
+<h4 id="dense_rank--순위를-매길-때-같은-순위가-존재하더라도-건너뛰지-않고-이어서-매김"><code class="language-plaintext highlighter-rouge">DENSE_RANK</code> : 순위를 매길 때 같은 순위가 존재하더라도 건너뛰지 않고 이어서 매김</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_DT, COUNT(*) DENSE_RANK() OVER(ORDER BY COUNT(*) DESC) AS RANK
+    FROM MY_ORDER
+    GROUP BY ORDER_DT;
+</code></pre></div></div>
+
+<h4 id="row_number--순위를-매길-때-동일한-값이알도-각기-다른-순위를-부여"><code class="language-plaintext highlighter-rouge">ROW_NUMBER</code> : 순위를 매길 때 동일한 값이알도 각기 다른 순위를 부여</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_DT, COUNT(*) ROW_NUMBER() OVER(ORDER BY COUNT(*) DESC) AS RANK
+    FROM MY_ORDER
+    GROUP BY ORDER_DT;
+</code></pre></div></div>
+
+<h3 id="집계-함수--윈도우-함수-중-값을-집계하는-함수">집계 함수 : 윈도우 함수 중 값을 집계하는 함수</h3>
+
+<h4 id="sum--데이터의-합계를-구하는-함수"><code class="language-plaintext highlighter-rouge">SUM</code> : 데이터의 합계를 구하는 함수</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT SUM(SCORE) AS TOTAL_SCORE FROM SQLD;
+</code></pre></div></div>
+
+<h4 id="max--데이터의-최댓값를-구하는-함수"><code class="language-plaintext highlighter-rouge">MAX</code> : 데이터의 최댓값를 구하는 함수</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MAX(SCORE) AS TOTAL_SCORE FROM SQLD;
+</code></pre></div></div>
+
+<h4 id="min--데이터의-최솟값을-구하는-함수"><code class="language-plaintext highlighter-rouge">MIN</code> : 데이터의 최솟값을 구하는 함수</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MIN(SCORE) AS TOTAL_SCORE FROM SQLD;
+</code></pre></div></div>
+
+<h4 id="avg--데이터의-평균값을-구하는-함수"><code class="language-plaintext highlighter-rouge">AVG</code> : 데이터의 평균값을 구하는 함수</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT AVG(SCORE) AS TOTAL_SCORE FROM SQLD;
+</code></pre></div></div>
+
+<h4 id="count--데이터의-건수를-구하는-함수"><code class="language-plaintext highlighter-rouge">COUNT</code> : 데이터의 건수를 구하는 함수</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT COUNT(*) OVER(
+    PARTITION BY SUBJECT,
+    ORDER BY SCORE DESC
+    RANGE UNBOUNDED PRECEDING) AS HIGHER_COUNT
+</code></pre></div></div>
+
+<h3 id="행-순서-함수">행 순서 함수</h3>
+
+<h4 id="first_value--파티션별-가장-선두에-위치한-데이터를-구하는-함수"><code class="language-plaintext highlighter-rouge">FIRST_VALUE</code> : 파티션별 가장 선두에 위치한 데이터를 구하는 함수</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE,
+    FIRST_VALUE(SCORE) OVER (ORDER BY SCORE) AS FIRST_VALUE
+FROM SQLD;
+</code></pre></div></div>
+
+<h4 id="last_value--파티션별-가장-끝에-위치한-데이터를-구하는-함수"><code class="language-plaintext highlighter-rouge">LAST_VALUE</code> : 파티션별 가장 끝에 위치한 데이터를 구하는 함수</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE,
+    LAST_VALUE(SCORE) OVER (ORDER BY SCORE) AS LAST_VALUE
+FROM SQLD;
+</code></pre></div></div>
+
+<h4 id="lag--파티션별로-특정-수만큼-앞선-데이터를-구하는-함수"><code class="language-plaintext highlighter-rouge">LAG</code> : 파티션별로 특정 수만큼 앞선 데이터를 구하는 함수</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE,
+    LAG(SCORE, 3) OVER (ORDER BY SCORE) AS LAG
+FROM SQLD;
+</code></pre></div></div>
+
+<h4 id="lead--파티션별로-특정-수만큼-뒤에-있는-데이터를-구하는-함수"><code class="language-plaintext highlighter-rouge">LEAD</code> : 파티션별로 특정 수만큼 뒤에 있는 데이터를 구하는 함수</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE,
+    LEAD(SCORE, 3) OVER (ORDER BY SCORE) AS LAG
+FROM SQLD;
+</code></pre></div></div>
+
+<h3 id="비율-함수">비율 함수</h3>
+
+<h4 id="ratio_to_report--파티션별-합계에서-차지하는-비율을-구하는-함수"><code class="language-plaintext highlighter-rouge">RATIO_TO_REPORT</code> : 파티션별 합계에서 차지하는 비율을 구하는 함수</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE, SUM(SCORE) AS SUM, 
+    RATIO_TO_REPORT(SCORE) OVER() AS RATIO_TO_REPORT
+FROM SQLD;
+</code></pre></div></div>
+
+<h4 id="percent_rank--해당-파티션의-맨-위-끝-행을-0-맨-아래-끝-행을-1로-놓고-현재-행이-위치하는-백-분위-순위-값을-구하는-함수"><code class="language-plaintext highlighter-rouge">PERCENT_RANK</code> : 해당 파티션의 맨 위 끝 행을 0, 맨 아래 끝 행을 1로 놓고 현재 행이 위치하는 백 분위 순위 값을 구하는 함수</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE, SUM(SCORE) AS SUM, 
+    PERCENT_RANK OVER(ORDER BY SCORE) AS PERCENT_RANK
+FROM SQLD;
+</code></pre></div></div>
+
+<h4 id="cume_dist--해당-파티션에서의-누적-백분율을-구하는-함수-결과값--01"><code class="language-plaintext highlighter-rouge">CUME_DIST</code> : 해당 파티션에서의 누적 백분율을 구하는 함수 (결과값 : <code class="language-plaintext highlighter-rouge">0~1</code>)</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE, SUM(SCORE) AS SUM, 
+    CUME_DIST OVER(ORDER BY SCORE)/COUNT(*) OVER() AS CUME_DIST
+FROM SQLD;
+</code></pre></div></div>
+
+<h4 id="nitile--주어진-수만큼-행들을-n등분한-후-현재-행에-해당하는-등급을-구하는-함수"><code class="language-plaintext highlighter-rouge">NITILE</code> : 주어진 수만큼 행들을 <code class="language-plaintext highlighter-rouge">N</code>등분한 후 현재 행에 해당하는 등급을 구하는 함수</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE, SUM(SCORE) AS SUM, 
+    NITILE(1) OVER(ORDER BY SCORE DESC) AS NITILE
+FROM SQLD;
+</code></pre></div></div>
+
+<h2 id="top-n-쿼리--시작-지점부터-n까지의-범위를-추출하는-쿼리"><code class="language-plaintext highlighter-rouge">Top-N</code> 쿼리 : 시작 지점부터 <code class="language-plaintext highlighter-rouge">N</code>까지의 범위를 추출하는 쿼리</h2>
+
+<h3 id="rownum--실제론-존재하지-않는-수도-컮럼-pseudo-column-행이-반환될-때마다-순번이-1씩-증가"><code class="language-plaintext highlighter-rouge">ROWNUM</code> : 실제론 존재하지 않는 수도 컮럼 (<code class="language-plaintext highlighter-rouge">Pseudo Column</code>), 행이 반환될 때마다 순번이 1씩 증가</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ROWNUM,
+    NAME,
+    SCORE
+    FROM EXAM;
+</code></pre></div></div>
+
+<h2 id="셀프-조인-self-join--나-자신과의-join-alias를-통한-별칭-부여는-필수">셀프 조인 (<code class="language-plaintext highlighter-rouge">Self Join</code>) : 나 자신과의 <code class="language-plaintext highlighter-rouge">Join</code> (<code class="language-plaintext highlighter-rouge">ALIAS</code>를 통한 별칭 부여는 필수!)</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT A.TYPE, A.NAME, B.TYPE, B.NAME
+    FROM CATEGORY A, CATEGORY B
+    WHERE A.CATEGORY_NAME = B.PARENT_CATEGORY;
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#sqld" class="page__taxonomy-item p-category" rel="tag">SQLD</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-03-08">March 8, 2024</time></p>
+
+      </footer>
+      
+      <section class="page__share">
+  <script src="https://giscus.app/client.js"
+    data-repo="pocj8ur4in/pocj8ur4in.github.io"
+    data-repo-id="R_kgDOICGarA"
+    data-category="Q&A"
+    data-category-id="DIC_kwDOICGarM4CZ65L"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="0"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+
+  <div style="padding-top: 1%;">
+    <a href="https://twitter.com/intent/tweet?text=%5BSQLD%5D+3.+SQL+%ED%99%9C%EC%9A%A9%20http%3A%2F%2Flocalhost%3A4000%2Fsqld3%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fsqld3%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  </div>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/sqld2/" class="pagination--pager" title="[SQLD] 2. SQL 기본
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/sqld2/" rel="permalink">[SQLD] 2. SQL 기본
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">SELECT문 : 저장된 데이터 조회
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/sqld1/" rel="permalink">[SQLD] 1. 데이터 모델링의 이해
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">데이터 모델링의 이해
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/nex1/" rel="permalink">[Next.js] 1. Next.js
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Next.js : 웹 애플리케이션 구축에 활용되는 오픈 소스 React 프레임워크
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/react4/" rel="permalink">[React] 4. 리액트 라우팅 (React Routing)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">React-Router-Dom : React로 생성된 SPA 내에서 페이지 이동이 가능하도록 라우팅
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/pocj8ur4in" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://www.pinterest.co.kr/pocj8ur4in/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-pinterest-square" aria-hidden="true"></i> Pinterest</a></li>
+        
+      
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 pocj8ur4in's blog. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

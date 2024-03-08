@@ -83,7 +83,7 @@ function checkAndLoadPage(allImages) {
 
 
 
-  <meta property="article:modified_time" content="2024-03-06T00:00:00+09:00">
+  <meta property="article:modified_time" content="2024-03-08T00:00:00+09:00">
 
 
 
@@ -340,7 +340,7 @@ function checkAndLoadPage(allImages) {
     <meta itemprop="headline" content="[SQLD] 1. 데이터 모델링의 이해">
     <meta itemprop="description" content="데이터 모델링의 이해">
     <meta itemprop="datePublished" content="2024-03-06T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2024-03-06T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-03-08T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 분 소요
+          4 분 소요
         
       </span>
     
@@ -419,7 +419,7 @@ function checkAndLoadPage(allImages) {
 <ul>
   <li>엔티티 (<code class="language-plaintext highlighter-rouge">Entity</code>) : 데이터베이스에서 식별 가능한 객체
     <ul>
-      <li>엔티티 특징 : 업무에서 쓰이는 정보이여야 함, 유니크함을 보장할 수 있는 식별자가 있어야 함, 2개 이상의 인스턴스를 가지고 있어아 함, 반드시 속성을 가지고 있어야 함, 다른 에티티와 1개 이상의 관계를 가지고 있어야 함</li>
+      <li>엔티티 특징 : 업무에서 쓰이는 정보이면서 업무 프로세스에 의해 이용되어야 함, 유니크함을 보장할 수 있는 식별자가 있어야 함, 영속적으로 존재하는 2개 이상의 인스턴스의 집합이여야 함, 반드시 속성을 가져야 함, 다른 엔티티와 1개 이상의 관계를 가지고 있어야 함</li>
     </ul>
   </li>
   <li>엔티티 분류 : 유형 엔티티 (물리적 형태 존재, 안정적, 지속적), 개념 엔티티 (물리적 형태 없음, 개념적), 사건 엔티티 (행위를 함으로 발생, 빈번함, 통계 자료로 이용 가능)</li>
@@ -439,10 +439,10 @@ function checkAndLoadPage(allImages) {
     <ol>
       <li>1개의 엔티티는 2개 이상의 인스턴스를 갖는다.</li>
       <li>1개의 인스턴스는 2개 이상의 속성을 갖는다.</li>
-      <li>1개의 속성은 하나의 속성값을 갖는다.</li>
+      <li>1개의 속성은 1개의 속성값을 갖는다.</li>
     </ol>
   </li>
-  <li>특성에 따른 속성 분류 : 기본 속성 (업무 프로세스 분석을 통해 바로 정의 가능한 속성), 설계 속성 (업무에 존재하지 않지만 설계할 때 도출된 속성), 파생 속성 (다른 속성의 속성값을 계산하거나 특정 규칙으로 변현되어 생성한 속성)</li>
+  <li>특성에 따른 속성 분류 : 기본 속성 (업무 프로세스 분석을 통해 바로 정의 가능한 속성), 설계 속성 (업무에 존재하지 않지만 설계할 때 도출된 속성), 파생 속성 (다른 속성의 속성값을 계산하거나 특정 규칙으로 변환되어 생성한 속성)</li>
   <li>구성 방식에 따른 속성 분류 : <code class="language-plaintext highlighter-rouge">PK</code> (엔티티의 인스턴스를 식별할 수 있는 속성), <code class="language-plaintext highlighter-rouge">FK</code> (다른 엔티티의 속성에서 가져온 속성), 일반 속성 (<code class="language-plaintext highlighter-rouge">PK</code>, <code class="language-plaintext highlighter-rouge">FK</code>를 제외한 나머지 속성)</li>
   <li>도메인 (<code class="language-plaintext highlighter-rouge">Domain</code>) : 속성이 가질 수 있는 속성값의 범위</li>
   <li>용어사전 : 속성의 이름을 직관적으로 부여하기 위한 업무사전</li>
@@ -464,7 +464,7 @@ function checkAndLoadPage(allImages) {
 <h3 id="식별자">식별자</h3>
 
 <ul>
-  <li>식빌자 (<code class="language-plaintext highlighter-rouge">Identifier</code>) : 속성 중에 각각의 인스턴스를 구분 가능하게 하는 속성</li>
+  <li>식별자 (<code class="language-plaintext highlighter-rouge">Identifier</code>) : 속성 중에 각각의 인스턴스를 구분 가능하게 하는 속성</li>
   <li>
     <p>식별자 분류 : 대표성 여부 (주식별자<code class="language-plaintext highlighter-rouge">vs</code>보조 식별자), 소스로 생성되었는지 여부 (내부식별자<code class="language-plaintext highlighter-rouge">vs</code>외부식별자), 단일 속성 여부 (단일식별자<code class="language-plaintext highlighter-rouge">vs</code>복합식별자), 대체 여부 (원조식별자<code class="language-plaintext highlighter-rouge">vs</code>대리식별자)</p>
   </li>
@@ -544,7 +544,7 @@ function checkAndLoadPage(allImages) {
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-03-06">March 6, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-03-08">March 8, 2024</time></p>
 
       </footer>
       
@@ -581,7 +581,7 @@ function checkAndLoadPage(allImages) {
 ">이전</a>
     
     
-      <a href="/sqld2/" class="pagination--pager" title="[SQLD] 2. SQL 기본 및 활용
+      <a href="/sqld2/" class="pagination--pager" title="[SQLD] 2. SQL 기본
 ">다음</a>
     
   </nav>
@@ -606,7 +606,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/sqld2/" rel="permalink">[SQLD] 2. SQL 기본 및 활용
+        <a href="/sqld3/" rel="permalink">[SQLD] 3. SQL 활용
 </a>
       
     </h2>
@@ -624,14 +624,55 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          4 분 소요
+          5 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">구문
+    <p class="archive__item-excerpt" itemprop="description">서브 쿼리 (SubQuery) : 하나의 쿼리 내에 존재하는 또다른 쿼리
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/sqld2/" rel="permalink">[SQLD] 2. SQL 기본
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">SELECT문 : 저장된 데이터 조회
 
 </p>
   </article>
@@ -714,47 +755,6 @@ function checkAndLoadPage(allImages) {
 
 
     <p class="archive__item-excerpt" itemprop="description">React-Router-Dom : React로 생성된 SPA 내에서 페이지 이동이 가능하도록 라우팅
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/react3/" rel="permalink">[React] 3. 함수 컴포넌트 (Functional Component)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          11 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">함수 컴포넌트 (Functional Component) : 리액트 훅을 통한 상태와 생명주기 관리
 
 </p>
   </article>
