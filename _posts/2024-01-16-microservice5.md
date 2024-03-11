@@ -11,6 +11,8 @@ date: 2024-01-16
 last_modified_at: 2024-01-16
 ---
 
+<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br>미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>
+
 ## 마이크로서비스 설계 : 응집성 높게 (```High Cohesion```), 의존도 낮게 (```Low Coupling```)
 
 - 마이크로서비스의 내부 구조를 구성하는 각 요소들은 역할별로 모듈화 (```Modulation```)되어야 함

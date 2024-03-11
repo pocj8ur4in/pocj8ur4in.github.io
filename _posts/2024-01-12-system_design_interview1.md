@@ -11,6 +11,8 @@ date: 2024-01-12
 last_modified_at: 2024-01-15
 ---
 
+<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br>미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>
+
 ## 시스템 디자인 면접 (```System Design Interview```) : 시스템 아키텍처를 설계하는 면접
 
 - 질문 범위도 매우 크고 모호하며, 답변 절차 또한 정형화되어 있지 않음

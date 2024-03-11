@@ -55,7 +55,7 @@ function checkAndLoadPage(allImages) {
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[vocawik] 2. vocawik 프로젝트 설계 - pocj8ur4in’s blog</title>
-<meta name="description" content="프로젝트 목표 (Project Goal) : 프로젝트 진행 과정에서 이루고자 하는 사항들을 정리">
+<meta name="description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -71,7 +71,7 @@ function checkAndLoadPage(allImages) {
 <meta property="og:url" content="http://localhost:4000/vocawik2/">
 
 
-  <meta property="og:description" content="프로젝트 목표 (Project Goal) : 프로젝트 진행 과정에서 이루고자 하는 사항들을 정리">
+  <meta property="og:description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
 
 
 
@@ -338,7 +338,7 @@ function checkAndLoadPage(allImages) {
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[vocawik] 2. vocawik 프로젝트 설계">
-    <meta itemprop="description" content="프로젝트 목표 (Project Goal) : 프로젝트 진행 과정에서 이루고자 하는 사항들을 정리">
+    <meta itemprop="description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
     <meta itemprop="datePublished" content="2024-02-03T00:00:00+09:00">
     <meta itemprop="dateModified" content="2024-02-03T00:00:00+09:00">
 
@@ -383,7 +383,9 @@ function checkAndLoadPage(allImages) {
             </nav>
           </aside>
         
-        <h2 id="프로젝트-목표-project-goal--프로젝트-진행-과정에서-이루고자-하는-사항들을-정리">프로젝트 목표 (<code>Project Goal</code>) : 프로젝트 진행 과정에서 이루고자 하는 사항들을 정리</h2>
+        <p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>
+
+<h2 id="프로젝트-목표-project-goal--프로젝트-진행-과정에서-이루고자-하는-사항들을-정리">프로젝트 목표 (<code>Project Goal</code>) : 프로젝트 진행 과정에서 이루고자 하는 사항들을 정리</h2>
 
 <blockquote>
   <p><code>ver-0.0.1</code> (<code>2024-02-03</code>) : 최초 작성</p>
@@ -417,7 +419,8 @@ function checkAndLoadPage(allImages) {
 <h2 id="유저-프로필-user-profile--사이트의-이용자들을-정의하여-분류">유저 프로필 (<code>User Profile</code>) : 사이트의 이용자들을 정의하여 분류</h2>
 
 <blockquote>
-  <p><code>ver-0.0.1</code> (<code>2024-02-03</code>) : 최초 작성</p>
+  <p><code>ver-0.0.1</code> (<code>2024-02-03</code>) : 최초 작성<br />
+<code>ver-0.0.2</code> (<code>2024-03-11</code>) : ‘이름’을 ‘대분류’와 ‘소분류’로 세분화</p>
 </blockquote>
 
 <div style="text-align: center;">
@@ -1156,8 +1159,32 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><code></code></td>
       </tr>
       <tr>
+        <td rowspan="1">플레이리스트<br />(<code>Playlist</code>)</td>
+        <td nowrap=""><code>PL-001</code></td>
+        <td nowrap=""><br />(<code>~</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td rowspan="1">통계<br />(<code>Statistics</code>)</td>
+        <td nowrap=""><code>ST-001</code></td>
+        <td nowrap=""><br />(<code>~</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
         <td rowspan="1">알림<br />(<code>Notice</code>)</td>
         <td nowrap=""><code>NO-001</code></td>
+        <td nowrap=""><br />(<code>~</code>)</td>
+        <td></td>
+        <td nowrap=""><code>-</code></td>
+        <td nowrap=""><code></code></td>
+      </tr>
+      <tr>
+        <td rowspan="1">추천<br />(<code>Featured</code>)</td>
+        <td nowrap=""><code>FE-001</code></td>
         <td nowrap=""><br />(<code>~</code>)</td>
         <td></td>
         <td nowrap=""><code>-</code></td>
@@ -1193,15 +1220,25 @@ function checkAndLoadPage(allImages) {
     </thead>
     <tbody>
       <tr>
-        <td nowrap="" rowspan="2">논문</td>
-        <td>보컬로이드 가상캐릭터의 특성 분석 연구. 일러스트레이션 포럼 (2018)</td>
+        <td nowrap="" rowspan="4">논문</td>
+        <td>보컬로이드 가상캐릭터의 특성 분석 연구.<br />일러스트레이션 포럼.<br />(2018)</td>
         <td nowrap="">김도희</td>
-        <td nowrap=""></td>
+        <td nowrap=""><a href="http://www.illustkorea.or.kr/data/file/IL_PDS/1949101453_Rx2etHuv_9c4401f51d192259f4040accbd35db41cb3935d5.pdf">한국일러스트레이션학회</a></td>
       </tr>
       <tr>
-        <td>보컬로이드 2차 창작의 변형구조 연구. 이화여자대학교 대학원 석사학위논문. (2012)</td>
+        <td>보컬로이드(Vocaloid) 2차 창작의 변형 구조 연구.<br />이화여자대학교 대학원 석사학위논문.<br />(2012)</td>
         <td nowrap="">임현정</td>
-        <td nowrap=""></td>
+        <td nowrap=""><a href="https://dcollection.ewha.ac.kr/public_resource/pdf/000000079938_20240311000733.pdf">이화여자대학교 도서관</a></td>
+      </tr>
+      <tr>
+        <td>보컬로이드(VOCALOID)에 나타난 오타쿠 문화의 변화 - 프로슈머로서의 활동을 중심으로-.<br />일어일문학연구.<br />(2012)</td>
+        <td nowrap="">임찬수, 이윤지</td>
+        <td nowrap=""><a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001688258"><code>KCI</code></a></td>
+      </tr>
+      <tr>
+        <td>무대 위의 또 다른 배우 연구 - 인형에서 가상의 배우까지 -.<br />인문과학연구.<br />(2020)</td>
+        <td nowrap="">김영아</td>
+        <td nowrap=""><a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002619004"><code>KCI</code></a></td>
       </tr>
       <tr>
         <td nowrap="" rowspan="1">기사</td>
@@ -1226,29 +1263,23 @@ function checkAndLoadPage(allImages) {
         <td nowrap=""><a href="https://www.aladin.co.kr/m/mproduct.aspx?ItemId=285280054">알라딘 전자책</a></td>
       </tr>
       <tr>
-        <td nowrap="" rowspan="3">문서</td>
-        <td nowrap="">나무위키</td>
-        <td>나무위키:문법 도움말</td>
-        <td nowrap=""><a href="https://namu.wiki/w/나무위키:문법%20도움말">문서</a></td>
-      </tr>
-      <tr>
-        <td nowrap="">나무위키</td>
-        <td>나무위키:문법 도움말/심화</td>
-        <td nowrap=""><a href="https://namu.wiki/w/나무위키:문법%20도움말/심화">문서</a></td>
-      </tr>
-      <tr>
+        <td nowrap="" rowspan="1">문서</td>
         <td>공공기관 웹사이트 구축·운영 가이드</td>
         <td nowrap="">행정안전부</td>
         <td nowrap=""><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwj204K9zoKEAxWtLUQIHQsyB4AQFnoECA0QAQ&amp;url=https%3A%2F%2Fwww.mois.go.kr%2Fcmm%2Ffms%2FFileDown.do%3FatchFileId%3DFILE_00084689_1WeMtZ%26fileSn%3D1&amp;usg=AOvVaw1TqMgiQXNjFgQfouwTtQh2&amp;opi=89978449">문서</a></td>
       </tr>
-            <tr>
-        <td nowrap="" rowspan="2">사이트</td>
+      <tr>
+        <td nowrap="" rowspan="3">사이트</td>
         <td nowrap="" colspan="2">나무위키</td>
         <td nowrap=""><a href="https://namu.wiki/w/나무위키:대문">홈페이지</a></td>
       </tr>
       <tr>
-        <td nowrap="" colspan="2">openNAMU</td>
+        <td nowrap="" colspan="2"><code>openNAMU</code></td>
         <td nowrap=""><a href="https://github.com/openNAMU/openNAMU">깃허브 저장소</a></td>
+      </tr>
+      <tr>
+        <td nowrap="" colspan="2">위키백과</td>
+        <td nowrap=""><a href="https://ko.wikipedia.org/wiki">홈페이지</a></td>
       </tr>
     </tbody>
   </table>
@@ -1342,7 +1373,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/sqld4/" rel="permalink">[SQLD] 4. 관리 구문
+        <a href="/algorithm9/" rel="permalink">[Algorithm] 8.
 </a>
       
     </h2>
@@ -1360,15 +1391,14 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 분 소요
+          최대 1 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">DML (Data Manipulation Language) : 데이터를 입력·수정·삭제·조회하는 명령어
-
+    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
 </p>
   </article>
 </div>
@@ -1383,7 +1413,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/sqld3/" rel="permalink">[SQLD] 3. SQL 활용
+        <a href="/algorithm8/" rel="permalink">[Algorithm] 8.
 </a>
       
     </h2>
@@ -1401,15 +1431,14 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          5 분 소요
+          최대 1 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">서브 쿼리 (SubQuery) : 하나의 쿼리 내에 존재하는 또다른 쿼리
-
+    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
 </p>
   </article>
 </div>
@@ -1424,7 +1453,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/sqld2/" rel="permalink">[SQLD] 2. SQL 기본
+        <a href="/algorithm7/" rel="permalink">[Algorithm] 7.
 </a>
       
     </h2>
@@ -1442,15 +1471,14 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          5 분 소요
+          최대 1 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">SELECT문 : 저장된 데이터 조회
-
+    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
 </p>
   </article>
 </div>
@@ -1465,7 +1493,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/sqld1/" rel="permalink">[SQLD] 1. 데이터 모델링의 이해
+        <a href="/algorithm6/" rel="permalink">[Algorithm] 6.
 </a>
       
     </h2>
@@ -1483,15 +1511,14 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          4 분 소요
+          최대 1 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">데이터 모델링의 이해
-
+    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
 </p>
   </article>
 </div>
