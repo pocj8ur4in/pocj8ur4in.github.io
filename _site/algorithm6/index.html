@@ -54,8 +54,8 @@ function checkAndLoadPage(allImages) {
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Algorithm] 6. - pocj8ur4in’s blog</title>
-<meta name="description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
+<!-- begin _includes/seo.html --><title>[Algorithm] 6. 브루트 포스 - pocj8ur4in’s blog</title>
+<meta name="description" content="브루트 포스 (Brute-Force) : 가능한 모든 경우의 수를 ‘완전탐색’해 충족되는 결과를 가져오는 알고리즘">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -67,11 +67,11 @@ function checkAndLoadPage(allImages) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[Algorithm] 6.">
+<meta property="og:title" content="[Algorithm] 6. 브루트 포스">
 <meta property="og:url" content="http://localhost:4000/algorithm6/">
 
 
-  <meta property="og:description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
+  <meta property="og:description" content="브루트 포스 (Brute-Force) : 가능한 모든 경우의 수를 ‘완전탐색’해 충족되는 결과를 가져오는 알고리즘">
 
 
 
@@ -211,7 +211,7 @@ function checkAndLoadPage(allImages) {
         <span class="sep">/</span>
       
       
-        <li class="current">[Algorithm] 6.</li>
+        <li class="current">[Algorithm] 6. 브루트 포스</li>
       
     
   </ol>
@@ -337,8 +337,8 @@ function checkAndLoadPage(allImages) {
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Algorithm] 6.">
-    <meta itemprop="description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
+    <meta itemprop="headline" content="[Algorithm] 6. 브루트 포스">
+    <meta itemprop="description" content="브루트 포스 (Brute-Force) : 가능한 모든 경우의 수를 ‘완전탐색’해 충족되는 결과를 가져오는 알고리즘">
     <meta itemprop="datePublished" content="2024-03-11T00:00:00+09:00">
     <meta itemprop="dateModified" content="2024-03-11T00:00:00+09:00">
 
@@ -346,7 +346,7 @@ function checkAndLoadPage(allImages) {
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/algorithm6/" class="u-url" itemprop="url">[Algorithm] 6.
+            <a href="http://localhost:4000/algorithm6/" class="u-url" itemprop="url">[Algorithm] 6. 브루트 포스
 </a>
           </h1>
           
@@ -378,12 +378,85 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              
+              <ul class="toc__menu"><li><a href="#브루트-포스-brute-force--가능한-모든-경우의-수를-완전탐색해-충족되는-결과를-가져오는-알고리즘">브루트 포스 (Brute-Force) : 가능한 모든 경우의 수를 ‘완전탐색’해 충족되는 결과를 가져오는 알고리즘</a></li><li><a href="#boj-1018번-체스판-다시-칠하기-s4">BOJ 1018번. 체스판 다시 칠하기 (S4)</a></li><li><a href="#boj-1065번-한수-s4">BOJ 1065번. 한수 (S4)</a></li><li><a href="#boj-1436번-영화감독-숌-s5">BOJ 1436번. 영화감독 숌 (S5)</a></li></ul>
 
             </nav>
           </aside>
         
-        <p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>
+        <h2 id="브루트-포스-brute-force--가능한-모든-경우의-수를-완전탐색해-충족되는-결과를-가져오는-알고리즘">브루트 포스 (<code class="language-plaintext highlighter-rouge">Brute-Force</code>) : 가능한 모든 경우의 수를 ‘완전탐색’해 충족되는 결과를 가져오는 알고리즘</h2>
+
+<ul>
+  <li>브루트 포스 설계의 기본적인 접근 방법 : 해가 존재할 것으로 예상되는 모든 영역을 전체 탐색
+    <ol>
+      <li>주어진 문제를 선형 구조로 구조화한다.</li>
+      <li>구조화된 문제 공간을 적절한 방법으로 해를 구성할 때까지 탐색한다.</li>
+      <li>구성된 해를 정리한다.</li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="boj-1018번-체스판-다시-칠하기-s4"><a href="https://www.acmicpc.net/problem/1018">BOJ 1018번. 체스판 다시 칠하기 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+N = int(read())
+li = [list(map(int, read().split())) for i in range(N)]
+
+li.sort(key=lambda x: [x[1], x[0]])
+
+R = 1
+C = li[0][1]
+
+for i in range(N - 1):
+    if C &lt;= li[i + 1][0]:
+        C = li[i + 1][1]
+        R += 1
+
+print(R)
+</code></pre></div></div>
+
+<h2 id="boj-1065번-한수-s4"><a href="https://www.acmicpc.net/problem/1065">BOJ 1065번. 한수 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+N = int(read())
+ans = 0
+
+for i in range(1, N + 1):
+    if i &lt; 100:
+        ans += 1
+    elif 100 &lt;= i &lt; 1000:
+        a = i // 100
+        b = (i % 100) // 10
+        c = i % 10
+
+        if c - b == b - a:
+            ans += 1
+
+print(ans)
+</code></pre></div></div>
+
+<h2 id="boj-1436번-영화감독-숌-s5"><a href="https://www.acmicpc.net/problem/1436">BOJ 1436번. 영화감독 숌 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+N = int(read())
+S = 0
+
+for i in range(N):
+    S += 1
+
+    while True:
+        if "666" in str(S):
+            break
+        else:
+            S += 1
+
+print(S)
+</code></pre></div></div>
 
         
       </section>
@@ -433,7 +506,7 @@ function checkAndLoadPage(allImages) {
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BAlgorithm%5D+6.%20http%3A%2F%2Flocalhost%3A4000%2Falgorithm6%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BAlgorithm%5D+6.+%EB%B8%8C%EB%A3%A8%ED%8A%B8+%ED%8F%AC%EC%8A%A4%20http%3A%2F%2Flocalhost%3A4000%2Falgorithm6%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm6%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
@@ -443,11 +516,11 @@ function checkAndLoadPage(allImages) {
       
   <nav class="pagination">
     
-      <a href="/algorithm5/" class="pagination--pager" title="[Algorithm] 5. 그리디
+      <a href="/algorithm5/" class="pagination--pager" title="[Algorithm] 5. 큐
 ">이전</a>
     
     
-      <a href="/algorithm7/" class="pagination--pager" title="[Algorithm] 7.
+      <a href="/algorithm7/" class="pagination--pager" title="[Algorithm] 7. 그래프와 순회
 ">다음</a>
     
   </nav>
@@ -472,127 +545,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm9/" rel="permalink">[Algorithm] 8.
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/algorithm8/" rel="permalink">[Algorithm] 8.
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/algorithm7/" rel="permalink">[Algorithm] 7.
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/algorithm5/" rel="permalink">[Algorithm] 5. 그리디
+        <a href="/algorithm22/" rel="permalink">[Algorithm] 22. 계산 기하
 </a>
       
     </h2>
@@ -617,8 +570,128 @@ function checkAndLoadPage(allImages) {
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">그리디 (Greedy) : 매 순간 가장 좋은 것을 선택 (현재 선택이 나중에 미칠 영향은 고려하지 않음)
+    <p class="archive__item-excerpt" itemprop="description">계산 기하 (Computational Geometry) : 점·선·다각형·원 등 기하학적 도형을 다루는 알고리즘
 
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/algorithm21/" rel="permalink">[Algorithm] 21. 최소 신장 트리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/algorithm20/" rel="permalink">[Algorithm] 20. 유니온 파인드
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/algorithm19/" rel="permalink">[Algorithm] 19. 트리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
 </p>
   </article>
 </div>

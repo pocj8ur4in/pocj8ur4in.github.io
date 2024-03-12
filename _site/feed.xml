@@ -1,942 +1,141 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-11T09:51:16+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Algorithm] 8.</title><link href="http://localhost:4000/algorithm9/" rel="alternate" type="text/html" title="[Algorithm] 8." /><published>2024-03-11T00:00:00+09:00</published><updated>2024-03-11T00:00:00+09:00</updated><id>http://localhost:4000/algorithm9</id><content type="html" xml:base="http://localhost:4000/algorithm9/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 7.</title><link href="http://localhost:4000/algorithm7/" rel="alternate" type="text/html" title="[Algorithm] 7." /><published>2024-03-11T00:00:00+09:00</published><updated>2024-03-11T00:00:00+09:00</updated><id>http://localhost:4000/algorithm7</id><content type="html" xml:base="http://localhost:4000/algorithm7/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 6.</title><link href="http://localhost:4000/algorithm6/" rel="alternate" type="text/html" title="[Algorithm] 6." /><published>2024-03-11T00:00:00+09:00</published><updated>2024-03-11T00:00:00+09:00</updated><id>http://localhost:4000/algorithm6</id><content type="html" xml:base="http://localhost:4000/algorithm6/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 5. 그리디</title><link href="http://localhost:4000/algorithm5/" rel="alternate" type="text/html" title="[Algorithm] 5. 그리디" /><published>2024-03-11T00:00:00+09:00</published><updated>2024-03-11T00:00:00+09:00</updated><id>http://localhost:4000/algorithm5</id><content type="html" xml:base="http://localhost:4000/algorithm5/"><![CDATA[<h2 id="그리디-greedy--매-순간-가장-좋은-것을-선택-현재-선택이-나중에-미칠-영향은-고려하지-않음">그리디 (<code class="language-plaintext highlighter-rouge">Greedy</code>) : 매 순간 가장 좋은 것을 선택 (현재 선택이 나중에 미칠 영향은 고려하지 않음)</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-12T17:48:33+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Algorithm] 18. 투 포인터</title><link href="http://localhost:4000/algorithm18/" rel="alternate" type="text/html" title="[Algorithm] 18. 투 포인터" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm18</id><content type="html" xml:base="http://localhost:4000/algorithm18/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 17. 최단 경로</title><link href="http://localhost:4000/algorithm17/" rel="alternate" type="text/html" title="[Algorithm] 17. 최단 경로" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm17</id><content type="html" xml:base="http://localhost:4000/algorithm17/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 16. 우선순위 큐</title><link href="http://localhost:4000/algorithm16/" rel="alternate" type="text/html" title="[Algorithm] 16. 우선순위 큐" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm16</id><content type="html" xml:base="http://localhost:4000/algorithm16/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 15. 이분 탐색</title><link href="http://localhost:4000/algorithm15/" rel="alternate" type="text/html" title="[Algorithm] 15. 이분 탐색" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm15</id><content type="html" xml:base="http://localhost:4000/algorithm15/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 14. 누적 합</title><link href="http://localhost:4000/algorithm14/" rel="alternate" type="text/html" title="[Algorithm] 14. 누적 합" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm14</id><content type="html" xml:base="http://localhost:4000/algorithm14/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 13. 동적 계획법</title><link href="http://localhost:4000/algorithm13/" rel="alternate" type="text/html" title="[Algorithm] 13. 동적 계획법" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm13</id><content type="html" xml:base="http://localhost:4000/algorithm13/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 12. 백트래킹</title><link href="http://localhost:4000/algorithm12/" rel="alternate" type="text/html" title="[Algorithm] 12. 백트래킹" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm12</id><content type="html" xml:base="http://localhost:4000/algorithm12/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 11. 정렬</title><link href="http://localhost:4000/algorithm11/" rel="alternate" type="text/html" title="[Algorithm] 11. 정렬" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm11</id><content type="html" xml:base="http://localhost:4000/algorithm11/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>
 
-<ul>
-  <li>사전에 외우고 있지 않아도, 풀 수 있을 가능성이 높음</li>
-  <li>특정 문제를 만났을 때, 그리디 알고리즘을 적용해 문제를 풀 수 있을지 파악할 수 있어야 함</li>
-  <li>‘가장 큰 순서대로’, ‘가장 작은 크기부터’와 같은 기준이 제시됨</li>
-  <li>(1) 문제 풀이를 위한 최소한의 아이디어를 떠올리고, (2) 그것이 정당한지 검토해야 답을 도출할 수 있음</li>
-</ul>
-
-<h2 id="boj-11047번-동전-0-s4"><a href="https://www.acmicpc.net/problem/11047">BOJ 11047번. 동전 0 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
+<h2 id="boj-1181번-단어-정렬-s5"><a href="https://www.acmicpc.net/problem/1181">BOJ 1181번. 단어 정렬 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+
 read = sys.stdin.readline
 
-N, K = map(int, read().split())
-O = 0
-C = list([read() for i in range(N)])
+N = int(read())
+words = []
 
-for i in range(N):
-    if (K &lt; int(C[N - 1 - i])):
-        continue
-    else:
-        while (K &gt;= int(C[N - 1 - i])):
-            K -= int(C[N - 1 - i])
-            O += 1
+for n in range(N):
+    words.append(read().rstrip())
 
-    print(O)
+for k in range(0, 51):
+    chks = set()
+
+    for word in range(len(words)):
+        if len(words[word]) == k:
+            chks.add(words[word])
+
+    chks = list(chks)
+    chks.sort()
+
+    for chk in chks:
+        print(chk)
 </code></pre></div></div>
 
-<h2 id="boj-1931번-회의실-배정-s1"><a href="https://www.acmicpc.net/problem/1931">BOJ 1931번. 회의실 배정 (<code class="language-plaintext highlighter-rouge">S1</code>)</a></h2>
+<h2 id="boj-1427번-소트인사이드-s5"><a href="https://www.acmicpc.net/problem/1427">BOJ 1427번. 소트인사이드 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+
+read = sys.stdin.readline
+
+N = int(read())
+words = []
+
+for n in range(N):
+    words.append(read().rstrip())
+
+for k in range(0, 51):
+    chks = set()
+
+    for word in range(len(words)):
+        if len(words[word]) == k:
+            chks.add(words[word])
+
+    chks = list(chks)
+    chks.sort()
+
+    for chk in chks:
+        print(chk)
+</code></pre></div></div>
+
+<h2 id="boj-2751번-수-정렬하기-2-s5"><a href="https://www.acmicpc.net/problem/2751">BOJ 2751번. 수 정렬하기 2 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
 read = sys.stdin.readline
 
 N = int(read())
-li = [list(map(int, read().split())) for i in range(N)]
+L = list()
 
-li.sort(key=lambda x: [x[1], x[0]])
+for n in range(N):
+    L.append(int(read()))
 
-R = 1
-C = li[0][1]
+L.sort()
 
-for i in range(N - 1):
-    if C &lt;= li[i + 1][0]:
-        C = li[i + 1][1]
-        R += 1
-
-print(R)
+for n in range(N):
+    print(L[n])
 </code></pre></div></div>
 
-<h2 id="boj-11399번-atm-s4"><a href="https://www.acmicpc.net/problem/11399">BOJ 11399번. ATM (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
+<h2 id="boj-10814번-나이순-정렬-s5"><a href="https://www.acmicpc.net/problem/10814">BOJ 10814번. 나이순 정렬 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+
 read = sys.stdin.readline
 
 N = int(read())
-li = list(map(int, read().split()))
-li.sort()
+words = []
 
-s = 0
+for n in range(N):
+    age, name = map(str, read().rstrip().split())
+    words.append([n, int(age), name])
 
-for i in range(N):
-    s += li[i] * (N - i)
+for i in range(1, 201):
+    chks = []
 
-print(s)
+    for word in words:
+        if word[1] == i:
+            chks.append(word[0])
+
+    chks.sort()
+
+    for chk in chks:
+        print(words[chk][1], end=" ")
+        print(words[chk][2])
 </code></pre></div></div>
 
-<h2 id="boj-1541번-잃어버린-괄호-s2"><a href="https://www.acmicpc.net/problem/1541">BOJ 1541번. 잃어버린 괄호 (<code class="language-plaintext highlighter-rouge">S2</code>)</a></h2>
+<h2 id="boj-11650번-좌표-정렬하기-s5"><a href="https://www.acmicpc.net/problem/11650">BOJ 11650번. 좌표 정렬하기 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
-read = sys.stdin.readline
 
-li = read().split('-')
-r = 0
-
-for i in range(len(li)):
-    s = li[i]
-    s = s.split('+')
-    s = list(map(int, s))
-    s = sum(s)
-    if i == 0:
-        r = s
-    else:
-        r -= s
-
-print(r)
-</code></pre></div></div>
-
-<h2 id="boj-13305번-주유소-s3"><a href="https://www.acmicpc.net/problem/13305">BOJ 13305번. 주유소 (<code class="language-plaintext highlighter-rouge">S3</code>)</a></h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
 read = sys.stdin.readline
 
 N = int(read())
-L = list(map(int, read().split()))
-P = list(map(int, read().split()))
+D = []
 
-C = 0
-S = L[C] * P[C]
+for n in range(N):
+    x, y = map(int, read().split())
 
-for i in range(1, N - 1):
-    if L[i] * P [C] &gt; L[i] * P[i]:
-        C = i
-    S += L[i] * P [C]
+    D.append([x, y])
 
-print(S)
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[그리디 (Greedy) : 매 순간 가장 좋은 것을 선택 (현재 선택이 나중에 미칠 영향은 고려하지 않음)]]></summary></entry><entry><title type="html">[Algorithm] 4. 브루트 포스</title><link href="http://localhost:4000/algorithm4/" rel="alternate" type="text/html" title="[Algorithm] 4. 브루트 포스" /><published>2024-03-11T00:00:00+09:00</published><updated>2024-03-11T00:00:00+09:00</updated><id>http://localhost:4000/algorithm4</id><content type="html" xml:base="http://localhost:4000/algorithm4/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 8.</title><link href="http://localhost:4000/algorithm10/" rel="alternate" type="text/html" title="[Algorithm] 8." /><published>2024-03-11T00:00:00+09:00</published><updated>2024-03-11T00:00:00+09:00</updated><id>http://localhost:4000/algorithm10</id><content type="html" xml:base="http://localhost:4000/algorithm10/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 8.</title><link href="http://localhost:4000/algorithm8/" rel="alternate" type="text/html" title="[Algorithm] 8." /><published>2024-03-11T00:00:00+09:00</published><updated>2024-03-11T00:00:00+09:00</updated><id>http://localhost:4000/algorithm8</id><content type="html" xml:base="http://localhost:4000/algorithm8/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[SQLD] 4. 관리 구문</title><link href="http://localhost:4000/sqld4/" rel="alternate" type="text/html" title="[SQLD] 4. 관리 구문" /><published>2024-03-08T00:00:00+09:00</published><updated>2024-03-08T00:00:00+09:00</updated><id>http://localhost:4000/sqld4</id><content type="html" xml:base="http://localhost:4000/sqld4/"><![CDATA[<h2 id="dml-data-manipulation-language--데이터를-입력수정삭제조회하는-명령어"><code class="language-plaintext highlighter-rouge">DML</code> (<code class="language-plaintext highlighter-rouge">Data Manipulation Language</code>) : 데이터를 입력·수정·삭제·조회하는 명령어</h2>
+D.sort()
 
-<h3 id="insert--테이블에-데이터를-입력하는-명령어"><code class="language-plaintext highlighter-rouge">INSERT</code> : 테이블에 데이터를 입력하는 명령어</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>INSERT INTO 테이블명 (컬럼명1, 컬럼명2, ...) VALUES (데이터1, 데이터2, ...);
-INSERT INTO 테이블명 VALUES (전체 컬럼에 입력될 데이터 리스트);
-</code></pre></div></div>
-
-<h3 id="update--테이블에-이미-저장된-데이터를-수정하는-명령어"><code class="language-plaintext highlighter-rouge">UPDATE</code> : 테이블에 이미 저장된 데이터를 수정하는 명령어</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UPDATE 테이블명 SET 컬럼명 = 새로운 데이터 (WHERE 수정할 데이터에 대한 조건);
-</code></pre></div></div>
-
-<h3 id="delete--테이블에-이미-저장된-데이터를-삭제하는-명령어"><code class="language-plaintext highlighter-rouge">DELETE</code> : 테이블에 이미 저장된 데이터를 삭제하는 명령어</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE FROM 테이블명 (WHERE 삭제할 데이터에 대한 조건);
-</code></pre></div></div>
-
-<h3 id="merge--테이블에-새로운-데이터를-입력하거나-이미-저장된-데이터에-대한-변경-작업을-한번에-처리하는-명령어"><code class="language-plaintext highlighter-rouge">MERGE</code> : 테이블에 새로운 데이터를 입력하거나, 이미 저장된 데이터에 대한 변경 작업을 한번에 처리하는 명령어</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MERGE
-    INTO 타겟테이블명
-    USING 비교테이블명
-    ON 조건
-    WHEN MATCHED THEN
-        UPDATE
-            SET 컬럼명 = 새로운 데이터 [, 컬럼명 = 새로운 데이터...]
-    WHEN NOT MATCHED THEN
-        INSERT [(컬럼명1, 컬럼명2...)]
-        VALUES [(데이터1, 데이터2...)]
-</code></pre></div></div>
-
-<h2 id="tcl-transaction-control-language--트랜잭션을-제어하는-명령어"><code class="language-plaintext highlighter-rouge">TCL</code> (<code class="language-plaintext highlighter-rouge">Transaction Control Language</code>) : 트랜잭션을 제어하는 명령어</h2>
-
-<h3 id="트랜잭션-transaction--쪼개질-수-없는-업무-처리의-논리적인-단위">트랜잭션 (<code class="language-plaintext highlighter-rouge">Transaction</code>) : 쪼개질 수 없는 업무 처리의 논리적인 단위</h3>
-
-<ul>
-  <li>원자성 (<code class="language-plaintext highlighter-rouge">Atomicity</code>) : 트랜잭션으로 묶인 일련의 동작들은 모두 성공하거나 모두 실패해야 한다.</li>
-  <li>일관성 (<code class="language-plaintext highlighter-rouge">Consistency</code>) : 트랜잭션이 완료된 후에도 데이터베이스가 가진 데이터에 일관성이 있어야 한다.</li>
-  <li>고립성 (<code class="language-plaintext highlighter-rouge">Isolation</code>) : 하나의 트랜잭션은 고립된어 수행되어야 한다.</li>
-  <li>지속성 (<code class="language-plaintext highlighter-rouge">Durability</code>) : 트랜잭션이 성공적일때 트랜잭션이 변경한 데이터가 영구적으로 저장되어야 함을 의미한다.</li>
-</ul>
-
-<h3 id="commit--insert-delete-update-후-변경된-내용을-확정반영하는-명령어"><code class="language-plaintext highlighter-rouge">COMMIT</code> : <code class="language-plaintext highlighter-rouge">INSERT</code>, <code class="language-plaintext highlighter-rouge">DELETE</code>, <code class="language-plaintext highlighter-rouge">UPDATE</code> 후 변경된 내용을 확정·반영하는 명령어</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>COMMIT;
-</code></pre></div></div>
-
-<h3 id="rollback--insert-delete-update-후-변경된-내용을-취소하는-명령어"><code class="language-plaintext highlighter-rouge">ROLLBACK</code> : <code class="language-plaintext highlighter-rouge">INSERT</code>, <code class="language-plaintext highlighter-rouge">DELETE</code>, <code class="language-plaintext highlighter-rouge">UPDATE</code> 후 변경된 내용을 취소하는 명령어</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ROLLBACK TO A;
-</code></pre></div></div>
-
-<h3 id="savepoint--rollback을-수행할-때-전체-작업을-되돌리는-대신-일부만-되돌리는-명령어"><code class="language-plaintext highlighter-rouge">SAVEPOINT</code> : <code class="language-plaintext highlighter-rouge">ROLLBACK</code>을 수행할 때 전체 작업을 되돌리는 대신 일부만 되돌리는 명령어</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SAVEPOINT A;
-</code></pre></div></div>
-
-<h2 id="ddl-data-definition-language--데이터를-정의하는-명령어"><code class="language-plaintext highlighter-rouge">DDL</code> (<code class="language-plaintext highlighter-rouge">Data Definition Language</code>) : 데이터를 정의하는 명령어</h2>
-
-<ul>
-  <li>문자 : <code class="language-plaintext highlighter-rouge">CHAR</code>, <code class="language-plaintext highlighter-rouge">VARCHAR</code>, <code class="language-plaintext highlighter-rouge">CLOB</code></li>
-  <li>숫자 : <code class="language-plaintext highlighter-rouge">NUMBER</code></li>
-  <li>날짜 : <code class="language-plaintext highlighter-rouge">DATE</code></li>
-</ul>
-
-<h3 id="create--테이블을-생성하는-명령어"><code class="language-plaintext highlighter-rouge">CREATE</code> : 테이블을 생성하는 명령어</h3>
-
-<ul>
-  <li>테이블 생성 시 반드시 지켜야 하는 규칙 : 지키지 않으면, 에러 발생!
-    <ul>
-      <li>테이블명은 고유해야 함</li>
-      <li>한 테이블 내에서 컬럼명은 고유해야 함</li>
-      <li>컬럼명 뒤에 데이터 유형과 데이터 크기가 명시되어야 함</li>
-      <li>컬럼에 대한 정의는 괄호 <code class="language-plaintext highlighter-rouge">()</code> 안에 기술되어야 함</li>
-      <li>각 컬럼들은 콤마 <code class="language-plaintext highlighter-rouge">,</code>로 구분됨</li>
-      <li>테이블명과 컬럼명은 숫자로 시작될 수 없음</li>
-      <li>마지막은 세미콜론 <code class="language-plaintext highlighter-rouge">;</code>으로 끝남</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE 테이블명 (
-    컬럼1 데이터타입 (NULL|DEFAULT 옵션)
-    ...
-)
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE 테이블명 AS SELECT * FROM 복사대상테이블명;
-</code></pre></div></div>
-
-<h3 id="제약조건-constraint--테이블에-저장될-데이터의-무결성-정확성일관성을-유지하고-데이터의-결함이-없음을-보증">제약조건 (<code class="language-plaintext highlighter-rouge">CONSTRAINT</code>) : 테이블에 저장될 데이터의 무결성 (정확성·일관성)을 유지하고, 데이터의 결함이 없음을 보증</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">CREATE</code>로 테이블을 생성할 때, 향후 테이블에 저장될 데이터에 대해 일정 제한을 걸 수 있음</li>
-</ul>
-
-<h4 id="기본-키-primary-key--테이블에-저장된-각각의-row에-대한-고유성-보장-null-값-불가">기본 키 (<code class="language-plaintext highlighter-rouge">PRIMARY KEY</code>) : 테이블에 저장된 각각의 <code class="language-plaintext highlighter-rouge">ROW</code>에 대한 고유성 보장 (<code class="language-plaintext highlighter-rouge">NULL</code> 값 불가)</h4>
-
-<h4 id="고유-키-unique-key--테이블에-저장된-각각의-row에-대한-고유성-보장-null-값-허용">고유 키 (<code class="language-plaintext highlighter-rouge">UNIQUE KEY</code>) : 테이블에 저장된 각각의 <code class="language-plaintext highlighter-rouge">ROW</code>에 대한 고유성 보장 (<code class="language-plaintext highlighter-rouge">NULL</code> 값 허용)</h4>
-
-<h4 id="not-null--해당-컬럼에-null-값이-입력되는-것을-금지"><code class="language-plaintext highlighter-rouge">NOT NULL</code> : 해당 컬럼에 <code class="language-plaintext highlighter-rouge">NULL</code> 값이 입력되는 것을 금지</h4>
-
-<h4 id="check--컬럼에-저장될-수-있는-값의-범위를-제한"><code class="language-plaintext highlighter-rouge">CHECK</code> : 컬럼에 저장될 수 있는 값의 범위를 제한</h4>
-
-<h4 id="외래-키-foreign-key--하나의-테이블이-다른-테이블ㅇ르-참조할-때-정의">외래 키 (<code class="language-plaintext highlighter-rouge">FOREIGN KEY</code>) : 하나의 테이블이 다른 테이블ㅇ르 참조할 때 정의</h4>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">CASCADE</code> : 부모 값을 삭제할 때, 자식 값도 같이 삭제</li>
-  <li><code class="language-plaintext highlighter-rouge">SET NULL</code> : 부모 값을 삭제할 때, 자식의 컬럼을 <code class="language-plaintext highlighter-rouge">NULL</code>로 처리</li>
-  <li><code class="language-plaintext highlighter-rouge">SET DEFAULT</code> : 부모 값을 삭제할 때, 자식의 해당 컬럼을 <code class="language-plaintext highlighter-rouge">DEFAULT</code> 값으로 변경</li>
-  <li><code class="language-plaintext highlighter-rouge">RESTRICT</code> : 자식 테이블에 해당 데이터가 <code class="language-plaintext highlighter-rouge">PK</code>로 존재하지 않는 경우에만 부모 값 삭제·수정 가능</li>
-  <li><code class="language-plaintext highlighter-rouge">NO ACTION</code> : 참조 무결성 제악이 걸린 경우 삭제·수정 불가</li>
-</ul>
-
-<h3 id="alter--테이블의-구조를-변경하는-명령어"><code class="language-plaintext highlighter-rouge">ALTER</code> : 테이블의 구조를 변경하는 명령어</h3>
-
-<h4 id="add-column--새로운-컬럼을-추가하는-명령어"><code class="language-plaintext highlighter-rouge">ADD COLUMN</code> : 새로운 컬럼을 추가하는 명령어</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALTER TABLE 테이블명 ADD 컬럼명 데이터유형;
-</code></pre></div></div>
-
-<h4 id="drop-column--기존에-있는-컬럼을-삭제하는-명령어"><code class="language-plaintext highlighter-rouge">DROP COLUMN</code> : 기존에 있는 컬럼을 삭제하는 명령어</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALTER TABLE 테이블명 DROP COLUMN 컬럼명;
-</code></pre></div></div>
-
-<h4 id="modify-column--기존에-있는-컬럼을-변경하는-명령어"><code class="language-plaintext highlighter-rouge">MODIFY COLUMN</code> : 기존에 있는 컬럼을 변경하는 명령어</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALTER TABLE 테이블명 MODIFY (컬럼명1 데이터유형 [DEFAULT 옵션] [NOT NULL 옵션]...);
-</code></pre></div></div>
-
-<h4 id="rename-column--기존에-있는-컬럼의-이름을-변경하는-명령어"><code class="language-plaintext highlighter-rouge">RENAME COLUMN</code> : 기존에 있는 컬럼의 이름을 변경하는 명령어</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALTER TABLE 테이블명 RENAME COLUMN 기존컬럼명 TO 변경컬럼명;
-</code></pre></div></div>
-
-<h4 id="add-constraint--제약조건을-추가하는-명령어"><code class="language-plaintext highlighter-rouge">ADD CONSTRAINT</code> : 제약조건을 추가하는 명령어</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ADD TABLE 테이블명 ADD CONSTRAINT 제약조건명 제약조건 (컬럼명); 
-</code></pre></div></div>
-
-<h3 id="drop-table--테이블을-삭제하는-명령어"><code class="language-plaintext highlighter-rouge">DROP TABLE</code> : 테이블을 삭제하는 명령어</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DROP TABLE 테이블명 [CASCADE CONSTRAINT];
-</code></pre></div></div>
-
-<h3 id="rename-table--테이블을-변경하는-명령어"><code class="language-plaintext highlighter-rouge">RENAME TABLE</code> : 테이블을 변경하는 명령어</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RENAME 기존테이블명 TO 변경테이블명;
-</code></pre></div></div>
-
-<h3 id="truncate-table--테이블에-저장된-데이터를-모두-제거하는-명령어"><code class="language-plaintext highlighter-rouge">TRUNCATE TABLE</code> : 테이블에 저장된 데이터를 모두 제거하는 명령어</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TRUNCATE TABLE 테이블명;
-</code></pre></div></div>
-
-<h2 id="dcl-data-control-language--사용자-user를-생성하고-권한-및-역할을-부여하는-명령어"><code class="language-plaintext highlighter-rouge">DCL</code> (<code class="language-plaintext highlighter-rouge">Data Control Language</code>) : 사용자 (<code class="language-plaintext highlighter-rouge">USER</code>)를 생성하고 권한 및 역할을 부여하는 명령어</h2>
-
-<ul>
-  <li>하나의 데이터베이스는 여러 사용자들을 가질 수 있음</li>
-</ul>
-
-<h3 id="사용자-관련-명령어">사용자 관련 명령어</h3>
-
-<h4 id="create-user--사용자를-생성하는-명령어"><code class="language-plaintext highlighter-rouge">CREATE USER</code> : 사용자를 생성하는 명령어</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE USER 사용자명 IDENTIFIED BY 패스워드;
-</code></pre></div></div>
-
-<h4 id="alter-user--사용자를-변경하는-명령어"><code class="language-plaintext highlighter-rouge">ALTER USER</code> : 사용자를 변경하는 명령어</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ALTER USER 사용자명 IDENTIFIED BY 패스워드;
-</code></pre></div></div>
-
-<h4 id="drop-user--사용자를-삭제하는-명령어"><code class="language-plaintext highlighter-rouge">DROP USER</code> : 사용자를 삭제하는 명령어</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DROP USER 사용자명;
-</code></pre></div></div>
-
-<h3 id="권한-관련-명령어">권한 관련 명령어</h3>
-
-<h4 id="grant--사용자에-권한을-부여하는-명렁어"><code class="language-plaintext highlighter-rouge">GRANT</code> : 사용자에 권한을 부여하는 명렁어</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GRANT 권한 TO 사용자명;
-</code></pre></div></div>
-
-<h4 id="revoke--사용자에-권한을-회수하는-명렁어"><code class="language-plaintext highlighter-rouge">REVOKE</code> : 사용자에 권한을 회수하는 명렁어</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>REVOKE 권한 FROM 사용자명;
-</code></pre></div></div>
-
-<h3 id="역할-관련-명령어">역할 관련 명령어</h3>
-
-<h4 id="role을-이용한-권한-부여"><code class="language-plaintext highlighter-rouge">ROLE</code>을 이용한 권한 부여</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE ROLE 역할명;
-GRANT 권한 TO 역할명;
-GRANT 역할명 TO 사용자명;
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="SQLD" /><summary type="html"><![CDATA[DML (Data Manipulation Language) : 데이터를 입력·수정·삭제·조회하는 명령어]]></summary></entry><entry><title type="html">[SQLD] 3. SQL 활용</title><link href="http://localhost:4000/sqld3/" rel="alternate" type="text/html" title="[SQLD] 3. SQL 활용" /><published>2024-03-08T00:00:00+09:00</published><updated>2024-03-08T00:00:00+09:00</updated><id>http://localhost:4000/sqld3</id><content type="html" xml:base="http://localhost:4000/sqld3/"><![CDATA[<h2 id="서브-쿼리-subquery--하나의-쿼리-내에-존재하는-또다른-쿼리">서브 쿼리 (<code class="language-plaintext highlighter-rouge">SubQuery</code>) : 하나의 쿼리 내에 존재하는 또다른 쿼리</h2>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1760ee26-6607-4398-8329-cc136d3c3017" width="80%" /></p>
-
-<h3 id="스칼라-서브-쿼리-scalar-subquery--주로-select에-위치하는-서브-쿼리">스칼라 서브 쿼리 (<code class="language-plaintext highlighter-rouge">Scalar SubQuery</code>) : 주로 <code class="language-plaintext highlighter-rouge">SELECT</code>에 위치하는 서브 쿼리</h3>
-
-<ul>
-  <li>컬럼 대신 사용되므로 하나의 값만을 반환, 그렇지 않으면 에러 발생</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT M.PRODUCT_CODE,
-    (SELECT S.PRODUCT_NAME
-        FROM PRODUCT S
-        WHERE S.PRODUCT_CODE = M.PRODUCT_CODE) AS PRODUCT_NAME,
-    M.MEMBER_ID,
-    M.CONTENT
-FROM PRODUCT_REVIEW M;
-</code></pre></div></div>
-
-<h3 id="인라인-뷰-inline-view--from처럼-테이블명이-오는-위치에-위치하는-서브-쿼리">인라인 뷰 (<code class="language-plaintext highlighter-rouge">Inline View</code>) : <code class="language-plaintext highlighter-rouge">FROM</code>처럼 테이블명이 오는 위치에 위치하는 서브 쿼리</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT M.PRODUCT_CODE, S.PRODUCT_NAME, S.PRICE, M.MEMBER_ID, M.CONTENT
-FROM PRODUCT_REVIEW M,
-    (SELECT PRODUCT_CODE, PRODUCT_NAME, PRICE FROM PRODUCT) S
-WHERE M.PRODUCT_CODE = S.PRODUCT_CODE;
-</code></pre></div></div>
-
-<h3 id="중첩-서브쿼리-nested-subquery--where과-having에-위치하는-쿼리">중첩 서브쿼리 (<code class="language-plaintext highlighter-rouge">Nested SubQuery</code>) : <code class="language-plaintext highlighter-rouge">WHERE</code>과 <code class="language-plaintext highlighter-rouge">HAVING</code>에 위치하는 쿼리</h3>
-
-<h4 id="비연관-서브쿼리-un-correlated-subquery--서브쿼리-내에-메인-쿼리의-컬럼이-존재하지-않음">비연관 서브쿼리 (<code class="language-plaintext highlighter-rouge">Un-Correlated SubQuery</code>) : 서브쿼리 내에 메인 쿼리의 컬럼이 존재하지 않음</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT NAME, AGE, BIRTHDAY
-    FROM STUDENT
-    WHERE CODE = (SELECT CODE
-        FROM SCHOOL
-        WHERE SCHOOL_NAME = 'EIA');
-</code></pre></div></div>
-
-<h4 id="연관-서브쿼리-correlated-subquery--서브쿼리-내에-메인-쿼리의-컬럼이-존재함">연관 서브쿼리 (<code class="language-plaintext highlighter-rouge">Correlated SubQuery</code>) : 서브쿼리 내에 메인 쿼리의 컬럼이 존재함</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_NO, DRINK_CODE, ORDER_CNT
-    FROM CAFE_ORDER A
-    WHERE ORDER_CNT = (SELECT MAX(ORDER_CNT)
-        FROM CAFE_ORDER B
-        WHERE B.DRINK_CODE = A.DRINK_CODE);
-</code></pre></div></div>
-
-<h5 id="단일-행-서브쿼리-single-row-subquery--서브쿼리가-1건-이하의-데이터-반환">단일 행 서브쿼리 (<code class="language-plaintext highlighter-rouge">Single Row SubQuery</code>) : 서브쿼리가 1건 이하의 데이터 반환</h5>
-
-<ul>
-  <li>단일 행 연산자와 함께 사용 : <code class="language-plaintext highlighter-rouge">=</code>, <code class="language-plaintext highlighter-rouge">&lt;</code>, <code class="language-plaintext highlighter-rouge">&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;=</code>, <code class="language-plaintext highlighter-rouge">&gt;=</code>, <code class="language-plaintext highlighter-rouge">&lt;&gt;</code></li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FORM PRODUCT
-    WHERE PRICE = (SELECT MAX(PRICE) FROM PRODUCT);
-</code></pre></div></div>
-
-<h5 id="다중-행-서브쿼리-multi-row-subquery--서브쿼리가-여러-건의-데이터-반환">다중 행 서브쿼리 (<code class="language-plaintext highlighter-rouge">Multi Row SubQuery</code>) : 서브쿼리가 여러 건의 데이터 반환</h5>
-
-<ul>
-  <li>다중 행 연산자와 함께 사용 : <code class="language-plaintext highlighter-rouge">IN</code>, <code class="language-plaintext highlighter-rouge">ALL</code>, <code class="language-plaintext highlighter-rouge">ANY</code>, <code class="language-plaintext highlighter-rouge">SOME</code>, <code class="language-plaintext highlighter-rouge">EXISTS</code></li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM PRODUCT
-    WHERE PRODUCT_ID IN (SELECT PRODUCT_CODE FROM PRODUCT_REVIEW);
-</code></pre></div></div>
-
-<h5 id="다중-칼럼-서브쿼리-multi-col-subquery--서브쿼리가-여러-칼럼의-데이터-반환">다중 칼럼 서브쿼리 (<code class="language-plaintext highlighter-rouge">Multi Col SubQuery</code>) : 서브쿼리가 여러 칼럼의 데이터 반환</h5>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM EMPLOYEES
-    WHERE (JOB_ID, SALARY) IN (SELECT JOB_ID, MAX_SALARY
-    FROM JOBS
-    WHERE MAX_SALARY = 10000);
-</code></pre></div></div>
-
-<h2 id="뷰-view--특정-select에-이름을-붙어-재사용-가능하도록-저장한-오브젝트">뷰 (<code class="language-plaintext highlighter-rouge">View</code>) : 특정 <code class="language-plaintext highlighter-rouge">SELECT</code>에 이름을 붙어 재사용 가능하도록 저장한 오브젝트</h2>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">SQL</code>에서 테이블처럼 사용 가능한 가상의 테이블 : 실제 데이터 대신 <code class="language-plaintext highlighter-rouge">SELECT</code>만 가짐</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE OR REPLACE VIEW DEPT_MEMBERS AS
-    SELECT A.DEPARTMENT_ID, A.DEPARTMENT_NAME, B.FULL_NAME
-        FROM DEPARTMENT A
-        LEFT OUTER JOIN EMPLOYEE B
-            ON A.DEPARTMENT_ID = B.DEPARTMENT_ID; // 뷰 생성
-</code></pre></div></div>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DROP VIEW DEPT_TABLE; // 뷰 삭제
-</code></pre></div></div>
-
-<h2 id="집합-연산자--각-쿼리의-결과-집합을-가지고-연산하는-명령어">집합 연산자 : 각 쿼리의 결과 집합을 가지고 연산하는 명령어</h2>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/4feed2f3-d35c-4ccf-b322-0456236667a0" width="80%" /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM STUDENT UNION ALL SELECT * FROM TEACHER; // 쿼리1, 쿼리2 결과의 합집합 (중복 포함)
-SELECT * FROM STUDENT UNION SELECT * FROM TEACHER; // 쿼리1, 쿼리2 결과의 합집합 (중복 제거)
-SELECT * FROM STUDENT INTERSECT SELECT * FROM TEACHER; // 쿼리1, 쿼리2 결과의 교집합 (중복 제거)
-SELECT * FROM STUDENT MINUS SELECT * FROM TEACHER; // 쿼리1에서 쿼리2 결과 제거해 출력
-</code></pre></div></div>
-
-<h2 id="그룹-함수--데이터를-group-by하여-나타낼-수-있는-데이터를-구하는-함수">그룹 함수 : 데이터를 <code class="language-plaintext highlighter-rouge">GROUP BY</code>하여 나타낼 수 있는 데이터를 구하는 함수</h2>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5d6edb1a-9724-458f-aba9-41c94e88b012" width="80%" /></p>
-
-<h3 id="rollup--소그룹-간의-소계-및-총계를-계산하는-함수"><code class="language-plaintext highlighter-rouge">ROLLUP</code> : 소그룹 간의 소계 및 총계를 계산하는 함수</h3>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5d943091-01f0-411d-9a43-908e516ced2c" width="80%" /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_DT, COUNT(*)
-    FROM MY_ORDER
-    GROUP BY ROLLUP(ORDER_DT, (ORDER_ITEM, ORDER_ITEM_NAME))
-    ORDER BY ORDER_DT;
-</code></pre></div></div>
-
-<h3 id="cube--소그룹-간의-소계-및-총계를-다차원적으로-계산하는-함수"><code class="language-plaintext highlighter-rouge">CUBE</code> : 소그룹 간의 소계 및 총계를 다차원적으로 계산하는 함수</h3>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/ae2850c7-250d-48b6-85dd-a896628496e3" width="80%" /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_DT, COUNT(*)
-    FROM MY_ORDER
-    GROUP BY ORDER_DT
-    ORDER BY ORDER_DT;
-</code></pre></div></div>
-
-<h3 id="grouping-sets--특정-항목에-대한-소계를-계산하는-함수"><code class="language-plaintext highlighter-rouge">GROUPING SETS</code> : 특정 항목에 대한 소계를 계산하는 함수</h3>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/fc039246-e84d-44ba-96e1-d484aa109901" width="80%" /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_DT, COUNT(*)
-    FROM MY_ORDER
-    GROUP BY GROUPING SETS(ORDER_DT, ORDER_ITEM)
-    ORDER BY ORDER_DT;
-</code></pre></div></div>
-
-<h3 id="grouping--소계를-나타내는-row를-구분하는-기준"><code class="language-plaintext highlighter-rouge">GROUPING</code> : 소계를 나타내는 <code class="language-plaintext highlighter-rouge">ROW</code>를 구분하는 기준</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_DT, GROUPING(ORDER_DT), COUNT(*)
-    FROM MY_ORDER
-    GROUP BY ROLLUP(ORDER_DT)
-    ORDER BY ORDER_DT;
-</code></pre></div></div>
-
-<h2 id="윈도우-함수--over-키워드와-함께-사용되는-함수">윈도우 함수 : <code class="language-plaintext highlighter-rouge">OVER</code> 키워드와 함께 사용되는 함수</h2>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/26594129-2933-4c9e-9412-a9e8a937517f" width="80%" /></p>
-
-<h3 id="순위-함수--윈도우-함수-중-순위를-매기는-함수">순위 함수 : 윈도우 함수 중 순위를 매기는 함수</h3>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1300c402-ee17-414c-9726-1cab28b97c1b" width="80%" /></p>
-
-<h4 id="rank--순위를-매길-때-같은-순위가-존재하면-존재하는-수만큼-건너뜀"><code class="language-plaintext highlighter-rouge">RANK</code> : 순위를 매길 때 같은 순위가 존재하면 존재하는 수만큼 건너뜀</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_DT, COUNT(*) RANK() OVER(ORDER BY COUNT(*) DESC) AS RANK
-    FROM MY_ORDER
-    GROUP BY ORDER_DT;
-</code></pre></div></div>
-
-<h4 id="dense_rank--순위를-매길-때-같은-순위가-존재하더라도-건너뛰지-않고-이어서-매김"><code class="language-plaintext highlighter-rouge">DENSE_RANK</code> : 순위를 매길 때 같은 순위가 존재하더라도 건너뛰지 않고 이어서 매김</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_DT, COUNT(*) DENSE_RANK() OVER(ORDER BY COUNT(*) DESC) AS RANK
-    FROM MY_ORDER
-    GROUP BY ORDER_DT;
-</code></pre></div></div>
-
-<h4 id="row_number--순위를-매길-때-동일한-값이알도-각기-다른-순위를-부여"><code class="language-plaintext highlighter-rouge">ROW_NUMBER</code> : 순위를 매길 때 동일한 값이알도 각기 다른 순위를 부여</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ORDER_DT, COUNT(*) ROW_NUMBER() OVER(ORDER BY COUNT(*) DESC) AS RANK
-    FROM MY_ORDER
-    GROUP BY ORDER_DT;
-</code></pre></div></div>
-
-<h3 id="집계-함수--윈도우-함수-중-값을-집계하는-함수">집계 함수 : 윈도우 함수 중 값을 집계하는 함수</h3>
-
-<h4 id="sum--데이터의-합계를-구하는-함수"><code class="language-plaintext highlighter-rouge">SUM</code> : 데이터의 합계를 구하는 함수</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT SUM(SCORE) AS TOTAL_SCORE FROM SQLD;
-</code></pre></div></div>
-
-<h4 id="max--데이터의-최댓값를-구하는-함수"><code class="language-plaintext highlighter-rouge">MAX</code> : 데이터의 최댓값를 구하는 함수</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MAX(SCORE) AS TOTAL_SCORE FROM SQLD;
-</code></pre></div></div>
-
-<h4 id="min--데이터의-최솟값을-구하는-함수"><code class="language-plaintext highlighter-rouge">MIN</code> : 데이터의 최솟값을 구하는 함수</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MIN(SCORE) AS TOTAL_SCORE FROM SQLD;
-</code></pre></div></div>
-
-<h4 id="avg--데이터의-평균값을-구하는-함수"><code class="language-plaintext highlighter-rouge">AVG</code> : 데이터의 평균값을 구하는 함수</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT AVG(SCORE) AS TOTAL_SCORE FROM SQLD;
-</code></pre></div></div>
-
-<h4 id="count--데이터의-건수를-구하는-함수"><code class="language-plaintext highlighter-rouge">COUNT</code> : 데이터의 건수를 구하는 함수</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT COUNT(*) OVER(
-    PARTITION BY SUBJECT,
-    ORDER BY SCORE DESC
-    RANGE UNBOUNDED PRECEDING) AS HIGHER_COUNT
-</code></pre></div></div>
-
-<h3 id="행-순서-함수">행 순서 함수</h3>
-
-<h4 id="first_value--파티션별-가장-선두에-위치한-데이터를-구하는-함수"><code class="language-plaintext highlighter-rouge">FIRST_VALUE</code> : 파티션별 가장 선두에 위치한 데이터를 구하는 함수</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE,
-    FIRST_VALUE(SCORE) OVER (ORDER BY SCORE) AS FIRST_VALUE
-FROM SQLD;
-</code></pre></div></div>
-
-<h4 id="last_value--파티션별-가장-끝에-위치한-데이터를-구하는-함수"><code class="language-plaintext highlighter-rouge">LAST_VALUE</code> : 파티션별 가장 끝에 위치한 데이터를 구하는 함수</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE,
-    LAST_VALUE(SCORE) OVER (ORDER BY SCORE) AS LAST_VALUE
-FROM SQLD;
-</code></pre></div></div>
-
-<h4 id="lag--파티션별로-특정-수만큼-앞선-데이터를-구하는-함수"><code class="language-plaintext highlighter-rouge">LAG</code> : 파티션별로 특정 수만큼 앞선 데이터를 구하는 함수</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE,
-    LAG(SCORE, 3) OVER (ORDER BY SCORE) AS LAG
-FROM SQLD;
-</code></pre></div></div>
-
-<h4 id="lead--파티션별로-특정-수만큼-뒤에-있는-데이터를-구하는-함수"><code class="language-plaintext highlighter-rouge">LEAD</code> : 파티션별로 특정 수만큼 뒤에 있는 데이터를 구하는 함수</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE,
-    LEAD(SCORE, 3) OVER (ORDER BY SCORE) AS LAG
-FROM SQLD;
-</code></pre></div></div>
-
-<h3 id="비율-함수">비율 함수</h3>
-
-<h4 id="ratio_to_report--파티션별-합계에서-차지하는-비율을-구하는-함수"><code class="language-plaintext highlighter-rouge">RATIO_TO_REPORT</code> : 파티션별 합계에서 차지하는 비율을 구하는 함수</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE, SUM(SCORE) AS SUM, 
-    RATIO_TO_REPORT(SCORE) OVER() AS RATIO_TO_REPORT
-FROM SQLD;
-</code></pre></div></div>
-
-<h4 id="percent_rank--해당-파티션의-맨-위-끝-행을-0-맨-아래-끝-행을-1로-놓고-현재-행이-위치하는-백-분위-순위-값을-구하는-함수"><code class="language-plaintext highlighter-rouge">PERCENT_RANK</code> : 해당 파티션의 맨 위 끝 행을 0, 맨 아래 끝 행을 1로 놓고 현재 행이 위치하는 백 분위 순위 값을 구하는 함수</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE, SUM(SCORE) AS SUM, 
-    PERCENT_RANK OVER(ORDER BY SCORE) AS PERCENT_RANK
-FROM SQLD;
-</code></pre></div></div>
-
-<h4 id="cume_dist--해당-파티션에서의-누적-백분율을-구하는-함수-결과값--01"><code class="language-plaintext highlighter-rouge">CUME_DIST</code> : 해당 파티션에서의 누적 백분율을 구하는 함수 (결과값 : <code class="language-plaintext highlighter-rouge">0~1</code>)</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE, SUM(SCORE) AS SUM, 
-    CUME_DIST OVER(ORDER BY SCORE)/COUNT(*) OVER() AS CUME_DIST
-FROM SQLD;
-</code></pre></div></div>
-
-<h4 id="nitile--주어진-수만큼-행들을-n등분한-후-현재-행에-해당하는-등급을-구하는-함수"><code class="language-plaintext highlighter-rouge">NITILE</code> : 주어진 수만큼 행들을 <code class="language-plaintext highlighter-rouge">N</code>등분한 후 현재 행에 해당하는 등급을 구하는 함수</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT STUDENT_NAME, SUBJECT, SCORE, SUM(SCORE) AS SUM, 
-    NITILE(1) OVER(ORDER BY SCORE DESC) AS NITILE
-FROM SQLD;
-</code></pre></div></div>
-
-<h2 id="top-n-쿼리--시작-지점부터-n까지의-범위를-추출하는-쿼리"><code class="language-plaintext highlighter-rouge">Top-N</code> 쿼리 : 시작 지점부터 <code class="language-plaintext highlighter-rouge">N</code>까지의 범위를 추출하는 쿼리</h2>
-
-<h3 id="rownum--실제론-존재하지-않는-수도-컮럼-pseudo-column-행이-반환될-때마다-순번이-1씩-증가"><code class="language-plaintext highlighter-rouge">ROWNUM</code> : 실제론 존재하지 않는 수도 컮럼 (<code class="language-plaintext highlighter-rouge">Pseudo Column</code>), 행이 반환될 때마다 순번이 1씩 증가</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ROWNUM,
-    NAME,
-    SCORE
-    FROM EXAM;
-</code></pre></div></div>
-
-<h2 id="셀프-조인-self-join--나-자신과의-join-alias를-통한-별칭-부여는-필수">셀프 조인 (<code class="language-plaintext highlighter-rouge">Self Join</code>) : 나 자신과의 <code class="language-plaintext highlighter-rouge">Join</code> (<code class="language-plaintext highlighter-rouge">ALIAS</code>를 통한 별칭 부여는 필수!)</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT A.TYPE, A.NAME, B.TYPE, B.NAME
-    FROM CATEGORY A, CATEGORY B
-    WHERE A.CATEGORY_NAME = B.PARENT_CATEGORY;
-</code></pre></div></div>
-
-<h2 id="계층-쿼리--테이블에-계층-구조를-이루는-컬럼이-존재할-때-데이터-출력">계층 쿼리 : 테이블에 계층 구조를 이루는 컬럼이 존재할 때 데이터 출력</h2>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">LEVEL</code> : 현재의 <code class="language-plaintext highlighter-rouge">DEPTH</code> 반환, 루트 노드는 1</li>
-  <li><code class="language-plaintext highlighter-rouge">SYS_CONNECT_BY_PATH (컬럼,구분자)</code> : 루트 노드부터 현재 노드까지의 경로 출력</li>
-  <li><code class="language-plaintext highlighter-rouge">START WITH</code> : 경로가 시작되는 루트 노드 생성</li>
-  <li><code class="language-plaintext highlighter-rouge">CONNECT BY</code> : 조건을 만족하는 데이터가 없을 때까지 루트로부터 자식 노드 생성</li>
-  <li><code class="language-plaintext highlighter-rouge">PRIOR</code> : 바로 앞에 있는 부모 노드의 값 반환</li>
-  <li><code class="language-plaintext highlighter-rouge">CONNECTED_BY_ROOT (컬럼)</code> : 루트 노드의 주어진 컬럼 값 반환</li>
-  <li><code class="language-plaintext highlighter-rouge">CONNECT_BY_ISLEAF</code>  : 가장 하위 노드인 경우 1을 반환, 그 외에는 0 반환</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LEVEL, SYS_CONNECT_BY_PATH('['||TYPE||']' || TYPE, '-') AS PATH FROM CATEGORY
-START WITH PARENT_CATEGORY IS NULL
-CONNECT BY PRIOR NAME = PARENT_CATEGORY;
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="SQLD" /><summary type="html"><![CDATA[서브 쿼리 (SubQuery) : 하나의 쿼리 내에 존재하는 또다른 쿼리]]></summary></entry><entry><title type="html">[SQLD] 2. SQL 기본</title><link href="http://localhost:4000/sqld2/" rel="alternate" type="text/html" title="[SQLD] 2. SQL 기본" /><published>2024-03-07T00:00:00+09:00</published><updated>2024-03-08T00:00:00+09:00</updated><id>http://localhost:4000/sqld2</id><content type="html" xml:base="http://localhost:4000/sqld2/"><![CDATA[<h2 id="select문--저장된-데이터-조회"><code class="language-plaintext highlighter-rouge">SELECT</code>문 : 저장된 데이터 조회</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT  PRODUCT_CODE,
-        COUNT (ORDER_CNT) AS ORDER_CNT
-FROM ORDER_PRODUCT
-WHERE ORDER_DATE BETWEEN '20240308' AND '20240309'
-GROUP BY PRODUCT_CODE
-HAVING COUNT(ORDER_CNT) &gt;= 1000;
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT 컬럼1, 컬럼2, ... FROM 테이블 WHERE 컬럼1 = '컬럼1';
-</code></pre></div></div>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">*</code> : 컬럼을 명시하지 않고 <code class="language-plaintext highlighter-rouge">*</code>`를 쓰면, 테이블 내 전체 컬럼 조회</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT * FROM 테이블;
-</code></pre></div></div>
-
-<ul>
-  <li>산술 연산자 : <code class="language-plaintext highlighter-rouge">NUMBER DATA</code> 유형의 데이터와 함꼐 사용하는 연산자</li>
-</ul>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1b2fdf5c-c60d-479d-86ba-3c57f0e15ee0" width="80%" /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT 10+5, 10-5, 10*5, 10/5, 10%5 FROM DUAL; // 15, 5, 2, 0
-</code></pre></div></div>
-
-<ul>
-  <li>합성 연산자 <code class="language-plaintext highlighter-rouge">||</code> : 문자와 문자를 연결할 때 사용하는 연산자</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT '1'||'0'||'+'||'5' AS RESULT FROM DUAL; // 10+5
-</code></pre></div></div>
-
-<h3 id="문자-함수">문자 함수</h3>
-
-<h4 id="chr아스키-코드--입력된-아스키-코드에-매핑되는-문자-변환"><code class="language-plaintext highlighter-rouge">CHR(아스키 코드)</code> : 입력된 아스키 코드에 매핑되는 문자 변환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT CHR(65) FROM DUAL; // A
-</code></pre></div></div>
-
-<h4 id="lower문자열--입력된-문자열을-대문자로-변환"><code class="language-plaintext highlighter-rouge">LOWER(문자열)</code> : 입력된 문자열을 대문자로 변환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LOWER('SQLD') FROM DUAL; // sqld
-</code></pre></div></div>
-
-<h4 id="upper문자열---입력된-문자열을-소문자로-변환"><code class="language-plaintext highlighter-rouge">UPPER(문자열)</code> :  입력된 문자열을 소문자로 변환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LOWER('sqld') FROM DUAL; // SQLD
-</code></pre></div></div>
-
-<h4 id="ltrim문자열특정문자열--문자열-왼쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거"><code class="language-plaintext highlighter-rouge">LTRIM(문자열[,{특정문자(열)}])</code> : 문자열 왼쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LTRIM('      SQLD') FROM DUAL; // SQLD
-</code></pre></div></div>
-
-<h4 id="rtrim문자열특정문자열--문자열-오른쪽부터-비교하여-공백-혹은-명시된-특정-문자-제거"><code class="language-plaintext highlighter-rouge">RTRIM(문자열[,{특정문자(열)}])</code> : 문자열 오른쪽부터 비교하여 공백 혹은 명시된 특정 문자 제거</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT RTRIM('SQLD      ') FROM DUAL; // SQLD
-</code></pre></div></div>
-
-<h4 id="trim위치특정문자from문자열--문자열-왼쪽오른쪽-공백-혹은-옵션-지정-장소부터-제거"><code class="language-plaintext highlighter-rouge">TRIM([{위치}{특정문자}FROM]문자열)</code> : 문자열 왼쪽·오른쪽 공백 혹은 옵션 지정 장소부터 제거</h4>
-
-<ul>
-  <li>옵션 : <code class="language-plaintext highlighter-rouge">LEADING</code>, <code class="language-plaintext highlighter-rouge">TRAILING</code>, <code class="language-plaintext highlighter-rouge">BOTH</code></li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TRIM('      SQLD      ') FROM DUAL; // SQLD
-SELECT TRIM(LEADING 'S' FROM 'SQLD') FROM DUAL; // QLD
-SELECT TRIM(TRAILING 'Q' FROM 'SQLD') FROM DUAL; // SQL
-</code></pre></div></div>
-
-<h4 id="substr문자열시작점길이--문자열의-원하는-부분만-잘라-반환"><code class="language-plaintext highlighter-rouge">SUBSTR(문자열,시작점[,{길이}])</code> : 문자열의 원하는 부분만 잘라 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT SUBSTR('SQLD', 1, 2) FROM DUAL; // QL
-</code></pre></div></div>
-
-<h4 id="length문자열--문자열의-길이-반환"><code class="language-plaintext highlighter-rouge">LENGTH(문자열)</code> : 문자열의 길이 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT LENGTH('SQLD') FROM DUAL; // 4
-</code></pre></div></div>
-
-<h4 id="replace문자열변경전-문자열변경-후-문자열--문자열에서-변경-전-문자열을-찾아-변경-후-문자열로-변환"><code class="language-plaintext highlighter-rouge">REPLACE(문자열,변경전 문자열,[{변경 후 문자열}])</code> : 문자열에서 변경 전 문자열을 찾아 변경 후 문자열로 변환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT REPLACE('SQLD', 'D', 'P') FROM DUAL; // SQLP
-</code></pre></div></div>
-
-<h3 id="숫자-함수">숫자 함수</h3>
-
-<h4 id="abs수--수의-절댓값-반환"><code class="language-plaintext highlighter-rouge">ABS({수})</code> : 수의 절댓값 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ABS(-1) FROM DUAL; // 1
-</code></pre></div></div>
-
-<h4 id="sign수--수의-부호-반환-1-0--1"><code class="language-plaintext highlighter-rouge">SIGN({수})</code> : 수의 부호 반환 (1, 0, -1)</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT SIGN(5) FROM DUAL; // 1
-SELECT SIGN(0) FROM DUAL; // 0
-SELECT SIGN(-4) FROM DUAL; // -1
-</code></pre></div></div>
-
-<h4 id="round수-자릿수--수를-지정된-소수점-자릿수까지-반올림해-반환"><code class="language-plaintext highlighter-rouge">ROUND({수} [,{자릿수}])</code> : 수를 지정된 소수점 자릿수까지 반올림해 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ROUND(127.000000001, 0) FROM DUAL; // 127
-</code></pre></div></div>
-
-<h4 id="trunc수-자릿수--수를-지정된-소수점-자릿수까지-버림해-반환"><code class="language-plaintext highlighter-rouge">TRUNC({수}, [,{자릿수}])</code> : 수를 지정된 소수점 자릿수까지 버림해 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ROUND(127.000000001, 9) FROM DUAL; // 127
-</code></pre></div></div>
-
-<h4 id="ceil수--소수점-이하의-수를-올림한-정수로-반환"><code class="language-plaintext highlighter-rouge">CEIL({수})</code> : 소수점 이하의 수를 올림한 정수로 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT CEIL(127.000000001) FROM DUAL; // 128
-</code></pre></div></div>
-
-<h4 id="floor수--소수점-이하의-수를-버림한-정수로-반환"><code class="language-plaintext highlighter-rouge">FLOOR({수})</code> : 소수점 이하의 수를 버림한 정수로 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT FLOOR(127.000000001) FROM DUAL; // 127
-</code></pre></div></div>
-
-<h4 id="mod수1-수2--수1을-수2로-나눈-나머지를-반환"><code class="language-plaintext highlighter-rouge">MOD({수1}, {수2})</code> : 수1을 수2로 나눈 나머지를 반환</h4>
-
-<ul>
-  <li>수2가 0이면 수1 그대로 반환</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MOD(15, 4) FROM DUAL; // 3
-SELECT MOD(15, 0) FROM DUAL; // 15
-</code></pre></div></div>
-
-<h3 id="날짜-함수">날짜 함수</h3>
-
-<h4 id="sysdate--현재의-연월일시분초-반환"><code class="language-plaintext highlighter-rouge">SYSDATE</code> : 현재의 연,월,일,시,분,초 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT SYSDATE FROM DUAL;
-</code></pre></div></div>
-
-<h4 id="extract특정-단위-from-데이터--날짜-데이터에서-연월일시분초-등-단위-지정해-출력"><code class="language-plaintext highlighter-rouge">EXTRACT({특정 단위} FROM {데이터})</code> : 날짜 데이터에서 연,월,일,시,분,초 등 단위 지정해 출력</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT EXTRACT(YEAR FROM SYSDATE) AS YEAR FROM DUAL; // 2024
-</code></pre></div></div>
-
-<h4 id="add_mount날짜-데이터-특정-개월-수--날짜-데이터에-특정-개월-수를-더한-날짜-반환"><code class="language-plaintext highlighter-rouge">ADD_MOUNT({날짜 데이터}, {특정 개월 수})</code> : 날짜 데이터에 특정 개월 수를 더한 날짜 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT ADD_MOUNT('2024-03-07', 'YYYY-MM-DD', 2) // 2024-03-09
-</code></pre></div></div>
-
-<h3 id="변환-함수">변환 함수</h3>
-
-<ul>
-  <li>명시적 형변환 : 변환 함수로 데이터 유형 변환을 명시적으로 나타냄</li>
-  <li>암시적 형변환 : 데이터베이스에서 내부적으로 데이터 유형을 변환함</li>
-</ul>
-
-<h4 id="to_number문자열--문자열을-숫자형으로-변환"><code class="language-plaintext highlighter-rouge">TO_NUMBER({문자열})</code> : 문자열을 숫자형으로 변환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TO_NUMBER('123') FROM DUAL; // 123
-</code></pre></div></div>
-
-<h4 id="to_char수날짜포맷--수나-날짜를-포맷-형식의-문자형으로-변환"><code class="language-plaintext highlighter-rouge">TO_CHAR({수|날짜[,{포맷}]})</code> : 수나 날짜를 (포맷 형식의) 문자형으로 변환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TO_CHAR(123) FROM DUAL; // '123'
-</code></pre></div></div>
-
-<h4 id="to_date문자열포맷--포맷-형식의-문자형-데이터를-날짜형으로-변환"><code class="language-plaintext highlighter-rouge">TO_DATE({문자열},{포맷})</code> : 포맷 형식의 문자형 데이터를 날짜형으로 변환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT TO_DATE('2024-03-07', 'YYYYMMDD') FROM DUAL; // '2024-03-07'
-</code></pre></div></div>
-
-<h3 id="null-관련-함수"><code class="language-plaintext highlighter-rouge">NULL</code> 관련 함수</h3>
-
-<h4 id="nvl인수1-인수2--인수1의-값이-null이면-인수2-아니면-인수1-반환"><code class="language-plaintext highlighter-rouge">NVL({인수1}, {인수2})</code> : 인수1의 값이 <code class="language-plaintext highlighter-rouge">NULL</code>이면 인수2, 아니면 인수1 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, NVL(SCORE, 0) AS MEMBER_SCORE FROM REVIEW;
-</code></pre></div></div>
-
-<h4 id="nullif인수1-인수2--인수1의-값이-같으면-null-아니면-인수1-반환"><code class="language-plaintext highlighter-rouge">NULLIF({인수1}, {인수2})</code> : 인수1의 값이 같으면 <code class="language-plaintext highlighter-rouge">NULL</code>, 아니면 인수1 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, NULLIF(SCORE, 0) AS MEMBER_SCORE FROM REVIEW;
-</code></pre></div></div>
-
-<h4 id="coalesce인수1-인수2---null이-아닌-최초의-인수-반환"><code class="language-plaintext highlighter-rouge">COALESCE({인수1}, {인수2}, ...)</code> : <code class="language-plaintext highlighter-rouge">NULL</code>이 아닌 최초의 인수 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, COALESCE(PHONE, EMAIL, FAX) AS  CONTACT FROM REVIEW;
-</code></pre></div></div>
-
-<h4 id="nvl인수1-인수2-인수3--인수1의-값이-null이-아니면-인수2-null이면-인수3-반환"><code class="language-plaintext highlighter-rouge">NVL({인수1}, {인수2}, {인수3})</code> : 인수1의 값이 <code class="language-plaintext highlighter-rouge">NULL</code>이 아니면 인수2, <code class="language-plaintext highlighter-rouge">NULL</code>이면 인수3 반환</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER, NVL(SCORE, '리뷰 O', '리뷰 X') AS MEMBER_SCORE FROM REVIEW;
-</code></pre></div></div>
-
-<h4 id="case--이면-이고-이면-이다-식으로-표현되는-구문"><code class="language-plaintext highlighter-rouge">CASE</code> : ‘~이면 ~이고, ~이면 ~이다’ 식으로 표현되는 구문</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER,
-    CASE WHEN SCORE = '5' THEN '만점'
-    END AS REVIEW_DATA
-FROM REVIEW;
-</code></pre></div></div>
-
-<h3 id="where절--dml문을-수행할-때-원하는-데이터만-선택"><code class="language-plaintext highlighter-rouge">WHERE</code>절 : <code class="language-plaintext highlighter-rouge">DML</code>문을 수행할 때 원하는 데이터만 선택</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT 컬럼1, 컬럼2, ... FROM 테이블 WHERE (조건절);
-</code></pre></div></div>
-
-<h4 id="비교-연산자--조건절-내에서-비교하기-위해-사용되는-연산자">비교 연산자 : 조건절 내에서 비교하기 위해 사용되는 연산자</h4>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/e770be4a-d9a5-425d-8d01-d9106d794854" width="80%" /></p>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/8ae99f0d-ea21-4e0c-b2cf-f5b886993c8d" width="80%" /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER FROM REVIEW WHERE MEMBER &lt; 10; // 10보다 작은 값 출력
-SELECT MEMBER FROM REVIEW WHERE MEMBER = 10; // 10인 값 출력
-SELECT MEMBER FROM REVIEW WHERE MEMBER &lt;= 10; // 10보다 작거나 같은 값 출력
-SELECT MEMBER FROM REVIEW WHERE MEMBER &lt;&gt; 0; // 10과 같지 않은 값 출력
-SELECT MEMBER FROM REVIEW WHERE MEMBER not col = 10; // 칼럼이 1이 아닌 값 출력
-</code></pre></div></div>
-
-<h4 id="sql-연산자--조건절-내에서-sql이-지원하는-연산자"><code class="language-plaintext highlighter-rouge">SQL</code> 연산자 : 조건절 내에서 <code class="language-plaintext highlighter-rouge">SQL</code>이 지원하는 연산자</h4>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1567d7de-05b2-43f3-947f-53bfaaafe555" width="80%" /></p>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/5895f223-e540-4d49-bba6-abdb7938b900" width="80%" /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT MEMBER FROM REVIEW WHERE MEMBER BETWEEN 1 AND 10; // 1 ~ 10인 값 출력
-</code></pre></div></div>
-
-<h4 id="논리-연산자--조건절-내에서-논리-연산을-위해-사용되는-연산자">논리 연산자 : 조건절 내에서 논리 연산을 위해 사용되는 연산자</h4>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/950b6035-99b0-4654-af32-ad33db4eddaf" width="80%" /></p>
-
-<h3 id="group-by절--데이터를-그룹별로-묶음"><code class="language-plaintext highlighter-rouge">GROUP BY</code>절 : 데이터를 그룹별로 묶음</h3>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">BY</code> 뒤에 그룹핑의 기준이 되는 하나 이상의 컬럼이 위치</li>
-</ul>
-
-<h4 id="집계-함수--데이터를-그룹핑한-뒤에-그룹별로-집계-데이터를-도출">집계 함수 : 데이터를 그룹핑한 뒤에 그룹별로 집계 데이터를 도출</h4>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/0b0bfff1-003b-493e-bf4d-afed82b901fa" width="80%" /></p>
-
-<h3 id="having--group-by절을-수행할-때-원하는-데이터만-선택-데이터-그룹핑에-사용"><code class="language-plaintext highlighter-rouge">HAVING</code> : <code class="language-plaintext highlighter-rouge">GROUP BY</code>절을 수행할 때 원하는 데이터만 선택 (데이터 그룹핑에 사용)</h3>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/b60b2263-1015-4c38-a5c0-4b0961836f30" width="80%" /></p>
-
-<h3 id="order-by절--select한-데이터-정렬"><code class="language-plaintext highlighter-rouge">ORDER BY</code>절 : <code class="language-plaintext highlighter-rouge">SELECT</code>한 데이터 정렬</h3>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/6d2c9476-fb99-4797-862a-32bf2f57ff56" width="80%" /></p>
-
-<blockquote>
-  <p>정렬의 기준이 되는 컬럼이 <code class="language-plaintext highlighter-rouge">NULL</code>이 포함되는 경우 : 오라클은 <code class="language-plaintext highlighter-rouge">NULL</code>을 최대로 보아 맨 뒤에 위치</p>
-</blockquote>
-
-<h3 id="join--다른-테이블을-한번에-결합하여-표현"><code class="language-plaintext highlighter-rouge">JOIN</code> : 다른 테이블을 한번에 결합하여 표현</h3>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/8cccf773-6e26-445f-b8c6-98baedfac236" width="80%" /></p>
-
-<h4 id="equi-join---조건으로-join"><code class="language-plaintext highlighter-rouge">EQUI JOIN</code> : <code class="language-plaintext highlighter-rouge">=</code> 조건으로 <code class="language-plaintext highlighter-rouge">JOIN</code></h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT A.CODE, A.NAME, B.ID, B.CONTENT
-FROM PRODUCT A, PRODUCT_REVIEW B
-WHERE A.PRODUCT_CODE = B.PRODUCT_CODE;
-</code></pre></div></div>
-
-<h4 id="non-equi-join--이-아닌-between-----조건으로-join"><code class="language-plaintext highlighter-rouge">Non EQUI JOIN</code> : <code class="language-plaintext highlighter-rouge">=</code>이 아닌 <code class="language-plaintext highlighter-rouge">BETWEEN</code>, <code class="language-plaintext highlighter-rouge">&gt;</code>, <code class="language-plaintext highlighter-rouge">&gt;=</code>, <code class="language-plaintext highlighter-rouge">&lt;</code>, <code class="language-plaintext highlighter-rouge">&lt;=</code> 조건으로 <code class="language-plaintext highlighter-rouge">JOIN</code></h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT A.CODE, A.NAME, B.ID, B.CONTENT
-FROM PRODUCT A, PRODUCT_REVIEW B
-WHERE B.DATE BETWEEN A.START_DATE AND A.END_DATE;
-</code></pre></div></div>
-
-<h4 id="outer-join--테이블-옆에-을-붙어-join-조건에-만족하지-않는-행들도-출력"><code class="language-plaintext highlighter-rouge">OUTER JOIN</code> : 테이블 옆에 <code class="language-plaintext highlighter-rouge">(+)</code>을 붙어 <code class="language-plaintext highlighter-rouge">JOIN</code> 조건에 만족하지 않는 행들도 출력</h4>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/7e5708df-e66c-4f8e-ad9a-84e931a86af6" width="80%" /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT A.CODE, A.NAME, B.ID, B.CONTENT
-FROM PRODUCT A, PRODUCT_REVIEW B
-WHERE A.PRODUCT_CODE = B.PRODUCT_CODE(+);
-</code></pre></div></div>
-
-<h3 id="standard-join--여러-데이터베이스에서-표준으로-활용되는-join"><code class="language-plaintext highlighter-rouge">STANDARD JOIN</code> : 여러 데이터베이스에서 표준으로 활용되는 <code class="language-plaintext highlighter-rouge">JOIN</code></h3>
-
-<blockquote>
-  <p><code class="language-plaintext highlighter-rouge">DB</code> 벤더마다 <code class="language-plaintext highlighter-rouge">SQL</code> 문법 차이가 너무 크면 호환성·효율성에 문제가 발생하므로 <code class="language-plaintext highlighter-rouge">ANSI SQL</code> 지정</p>
-</blockquote>
-
-<h4 id="inner-standard-join--on으로-작성된-join-조건에-충족하는-데이터만-출력"><code class="language-plaintext highlighter-rouge">INNER STANDARD JOIN</code> : <code class="language-plaintext highlighter-rouge">ON</code>으로 작성된 <code class="language-plaintext highlighter-rouge">JOIN</code> 조건에 충족하는 데이터만 출력</h4>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/53ba83bc-ee24-4fac-a062-5edc69aa838f" width="80%" /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM PRODUCT A INNER JOIN PRODUCT_REVIEW B
-    ON A.PRODUCT_ID = B.PRODUCT_ID;
+for n in range(len(D)):
+    for m in range(len(D[n])):
+        print(D[n][m], end=" ")
+    print()
 </code></pre></div></div>
 
-<h4 id="outer-standard-join--join-조건에-만족하지-않는-행들도-출력"><code class="language-plaintext highlighter-rouge">OUTER STANDARD JOIN</code> : <code class="language-plaintext highlighter-rouge">JOIN</code> 조건에 만족하지 않는 행들도 출력</h4>
+<h2 id="boj-11651번-좌표-정렬하기-2-s5"><a href="https://www.acmicpc.net/problem/11651">BOJ 11651번. 좌표 정렬하기 2 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h2>
 
-<h5 id="left-outer-join--왼쪽에-표기된-테이블들은-무조건-출력"><code class="language-plaintext highlighter-rouge">LEFT OUTER JOIN</code> : 왼쪽에 표기된 테이블들은 무조건 출력</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
 
-<ul>
-  <li>오른쪽에 <code class="language-plaintext highlighter-rouge">JOIN</code>되는 데이터가 없는 <code class="language-plaintext highlighter-rouge">ROW</code>는 오른쪽 컬럼의 값이 <code class="language-plaintext highlighter-rouge">NULL</code></li>
-</ul>
+read = sys.stdin.readline
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/fdecf4bf-52de-4f48-a596-2f6543dc62ca" width="80%" /></p>
+N = int(read())
+D = []
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT A.CODE, A.NAME, B.ID, B.CONTENT
-FROM PRODUCT A LEFT OUTER JOIN PRODUCT_REVIEW B
-    ON A.PRODUCT_ID = B.PRODUCT_ID;
-</code></pre></div></div>
-
-<h5 id="right-outer-join--오른쪽에-표기된-테이블들은-무조건-출력"><code class="language-plaintext highlighter-rouge">RIGHT OUTER JOIN</code> : 오른쪽에 표기된 테이블들은 무조건 출력</h5>
-
-<ul>
-  <li>왼쪽에 <code class="language-plaintext highlighter-rouge">JOIN</code>되는 데이터가 없는 <code class="language-plaintext highlighter-rouge">ROW</code>는 왼쪽 컬럼의 값이 <code class="language-plaintext highlighter-rouge">NULL</code></li>
-</ul>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/60319867-65e2-4056-b64d-af3d7e3f5f2e" width="80%" /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT A.CODE, A.NAME, B.ID, B.CONTENT
-FROM PRODUCT A RIGHT OUTER JOIN PRODUCT_REVIEW B
-    ON A.PRODUCT_ID = B.PRODUCT_ID;
-</code></pre></div></div>
-
-<h5 id="full-outer-join--왼쪽-오른쪽에-표기된-테이블을-모두-출력"><code class="language-plaintext highlighter-rouge">FULL OUTER JOIN</code> : 왼쪽, 오른쪽에 표기된 테이블을 모두 출력</h5>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">LEFT OUTER JOIN</code>와 <code class="language-plaintext highlighter-rouge">RIGHT OUTER JOIN</code>의 합집합 (단, 중복값은 제거)</li>
-</ul>
-
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/b2467251-eacb-426c-b4b7-1168e0ba19b2" width="80%" /></p>
-
-<h5 id="nature-join--테이블에-같은-이름을-가진-컬럼들이-모두-동일한-데이터를-가지면-join"><code class="language-plaintext highlighter-rouge">NATURE JOIN</code> : 테이블에 같은 이름을 가진 컬럼들이 모두 동일한 데이터를 가지면 <code class="language-plaintext highlighter-rouge">JOIN</code></h5>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT *
-FROM RUNNING_MAN A NATURAL JOIN INFINITE_CHALLENGE B;
-</code></pre></div></div>
+for n in range(N):
+    x, y = map(int, read().split())
 
-<h5 id="cross-join--테이블-사이에-join이-없으면-조합할-수-있는-모든-경우-출력"><code class="language-plaintext highlighter-rouge">CROSS JOIN</code> : 테이블 사이에 <code class="language-plaintext highlighter-rouge">JOIN</code>이 없으면, 조합할 수 있는 모든 경우 출력</h5>
+    D.append([y, x])
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/34eb0299-568e-4a6e-8737-00ce194ae55c" width="80%" /></p>
+D.sort()
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SELECT A.CODE, A.NAME, B.ID, B.CONTENT
-FROM ENTERTAINER A CROSS JOIN DRINK B;
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="SQLD" /><summary type="html"><![CDATA[SELECT문 : 저장된 데이터 조회]]></summary></entry></feed>
+for n in range(len(D)):
+    for m in range(1, -1, -1):
+        print(D[n][m], end=" ")
+    print()
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 10. 재귀</title><link href="http://localhost:4000/algorithm10/" rel="alternate" type="text/html" title="[Algorithm] 10. 재귀" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm10</id><content type="html" xml:base="http://localhost:4000/algorithm10/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 21. 최소 신장 트리</title><link href="http://localhost:4000/algorithm21/" rel="alternate" type="text/html" title="[Algorithm] 21. 최소 신장 트리" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm21</id><content type="html" xml:base="http://localhost:4000/algorithm21/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry></feed>
