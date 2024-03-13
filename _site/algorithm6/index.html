@@ -54,8 +54,8 @@ function checkAndLoadPage(allImages) {
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Algorithm] 6. 브루트 포스 - pocj8ur4in’s blog</title>
-<meta name="description" content="브루트 포스 (Brute-Force) : 가능한 모든 경우의 수를 ‘완전탐색’해 충족되는 결과를 가져오는 알고리즘">
+<!-- begin _includes/seo.html --><title>[Algorithm] 6. 큐 - pocj8ur4in’s blog</title>
+<meta name="description" content="큐 (Queue) : 선입선출 (FIFO)로 데이터를 처리하는 자료구조">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -67,11 +67,11 @@ function checkAndLoadPage(allImages) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[Algorithm] 6. 브루트 포스">
+<meta property="og:title" content="[Algorithm] 6. 큐">
 <meta property="og:url" content="http://localhost:4000/algorithm6/">
 
 
-  <meta property="og:description" content="브루트 포스 (Brute-Force) : 가능한 모든 경우의 수를 ‘완전탐색’해 충족되는 결과를 가져오는 알고리즘">
+  <meta property="og:description" content="큐 (Queue) : 선입선출 (FIFO)로 데이터를 처리하는 자료구조">
 
 
 
@@ -211,7 +211,7 @@ function checkAndLoadPage(allImages) {
         <span class="sep">/</span>
       
       
-        <li class="current">[Algorithm] 6. 브루트 포스</li>
+        <li class="current">[Algorithm] 6. 큐</li>
       
     
   </ol>
@@ -337,8 +337,8 @@ function checkAndLoadPage(allImages) {
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Algorithm] 6. 브루트 포스">
-    <meta itemprop="description" content="브루트 포스 (Brute-Force) : 가능한 모든 경우의 수를 ‘완전탐색’해 충족되는 결과를 가져오는 알고리즘">
+    <meta itemprop="headline" content="[Algorithm] 6. 큐">
+    <meta itemprop="description" content="큐 (Queue) : 선입선출 (FIFO)로 데이터를 처리하는 자료구조">
     <meta itemprop="datePublished" content="2024-03-11T00:00:00+09:00">
     <meta itemprop="dateModified" content="2024-03-11T00:00:00+09:00">
 
@@ -346,7 +346,7 @@ function checkAndLoadPage(allImages) {
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/algorithm6/" class="u-url" itemprop="url">[Algorithm] 6. 브루트 포스
+            <a href="http://localhost:4000/algorithm6/" class="u-url" itemprop="url">[Algorithm] 6. 큐
 </a>
           </h1>
           
@@ -378,24 +378,18 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#브루트-포스-brute-force--가능한-모든-경우의-수를-완전탐색해-충족되는-결과를-가져오는-알고리즘">브루트 포스 (Brute-Force) : 가능한 모든 경우의 수를 ‘완전탐색’해 충족되는 결과를 가져오는 알고리즘</a></li><li><a href="#boj-1018번-체스판-다시-칠하기-s4">BOJ 1018번. 체스판 다시 칠하기 (S4)</a></li><li><a href="#boj-1065번-한수-s4">BOJ 1065번. 한수 (S4)</a></li><li><a href="#boj-1436번-영화감독-숌-s5">BOJ 1436번. 영화감독 숌 (S5)</a></li></ul>
+              <ul class="toc__menu"><li><a href="#큐-queue--선입선출-fifo로-데이터를-처리하는-자료구조">큐 (Queue) : 선입선출 (FIFO)로 데이터를 처리하는 자료구조</a></li><li><a href="#boj-2164번-카드2-s4">BOJ 2164번. 카드2 (S4)</a></li><li><a href="#boj-11866번-요세푸스-문제-0-s5">BOJ 11866번. 요세푸스 문제 0 (S5)</a></li><li><a href="#boj-18258번-큐-2-s4">BOJ 18258번. 큐 2 (S4)</a></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="브루트-포스-brute-force--가능한-모든-경우의-수를-완전탐색해-충족되는-결과를-가져오는-알고리즘">브루트 포스 (<code class="language-plaintext highlighter-rouge">Brute-Force</code>) : 가능한 모든 경우의 수를 ‘완전탐색’해 충족되는 결과를 가져오는 알고리즘</h2>
+        <h2 id="큐-queue--선입선출-fifo로-데이터를-처리하는-자료구조">큐 (<code class="language-plaintext highlighter-rouge">Queue</code>) : 선입선출 (<code class="language-plaintext highlighter-rouge">FIFO</code>)로 데이터를 처리하는 자료구조</h2>
 
-<ul>
-  <li>브루트 포스 설계의 기본적인 접근 방법 : 해가 존재할 것으로 예상되는 모든 영역을 전체 탐색
-    <ol>
-      <li>주어진 문제를 선형 구조로 구조화한다.</li>
-      <li>구조화된 문제 공간을 적절한 방법으로 해를 구성할 때까지 탐색한다.</li>
-      <li>구성된 해를 정리한다.</li>
-    </ol>
-  </li>
-</ul>
+<div style="filter: invert(100%);">
+  <img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/741e3c68-5b29-4ce2-933e-bb3c53efb244" width="50%" />
+</div>
 
-<h2 id="boj-1018번-체스판-다시-칠하기-s4"><a href="https://www.acmicpc.net/problem/1018">BOJ 1018번. 체스판 다시 칠하기 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
+<h2 id="boj-2164번-카드2-s4"><a href="https://www.acmicpc.net/problem/2164">BOJ 2164번. 카드2 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
 read = sys.stdin.readline
@@ -416,46 +410,69 @@ for i in range(N - 1):
 print(R)
 </code></pre></div></div>
 
-<h2 id="boj-1065번-한수-s4"><a href="https://www.acmicpc.net/problem/1065">BOJ 1065번. 한수 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
+<h2 id="boj-11866번-요세푸스-문제-0-s5"><a href="https://www.acmicpc.net/problem/11866">BOJ 11866번. 요세푸스 문제 0 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+from collections import deque
 read = sys.stdin.readline
 
-N = int(read())
-ans = 0
+N, K = map(int, read().split())
+D1 = deque()
 
-for i in range(1, N + 1):
-    if i &lt; 100:
-        ans += 1
-    elif 100 &lt;= i &lt; 1000:
-        a = i // 100
-        b = (i % 100) // 10
-        c = i % 10
+print("&lt;", end="")
 
-        if c - b == b - a:
-            ans += 1
+for n in range(N):
+    D1.append(n + 1)
 
-print(ans)
+for n in range(N):
+    for k in range(K):
+        D1.append(D1.popleft())
+
+    if n != N - 1:
+        print(str(D1.pop()) + ", ", end="")
+    else:
+        print(str(D1.pop()), end="")
+
+print("&gt;")
 </code></pre></div></div>
 
-<h2 id="boj-1436번-영화감독-숌-s5"><a href="https://www.acmicpc.net/problem/1436">BOJ 1436번. 영화감독 숌 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h2>
+<h2 id="boj-18258번-큐-2-s4"><a href="https://www.acmicpc.net/problem/18258">BOJ 18258번. 큐 2 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+from collections import deque
+
 read = sys.stdin.readline
 
 N = int(read())
-S = 0
+Q = deque()
 
 for i in range(N):
-    S += 1
-
-    while True:
-        if "666" in str(S):
-            break
+    C = read().split()
+    if C[0] == 'push':
+        Q.append(C[1])
+    elif C[0] == 'pop':
+        if len(Q) != 0:
+            print(Q[0])
+            Q.popleft()
         else:
-            S += 1
-
-print(S)
+            print(-1)
+    elif C[0] == 'size':
+        print(len(Q))
+    elif C[0] == 'empty':
+        if len(Q) == 0:
+            print(1)
+        else:
+            print(0)
+    elif C[0] == 'front':
+        if len(Q) != 0:
+            print(Q[0])
+        else:
+            print(-1)
+    elif C[0] == 'back':
+        if len(Q) != 0:
+            print(Q[len(Q) - 1])
+        else:
+            print(-1)
 </code></pre></div></div>
 
         
@@ -506,7 +523,7 @@ print(S)
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BAlgorithm%5D+6.+%EB%B8%8C%EB%A3%A8%ED%8A%B8+%ED%8F%AC%EC%8A%A4%20http%3A%2F%2Flocalhost%3A4000%2Falgorithm6%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BAlgorithm%5D+6.+%ED%81%90%20http%3A%2F%2Flocalhost%3A4000%2Falgorithm6%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm6%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
@@ -516,11 +533,11 @@ print(S)
       
   <nav class="pagination">
     
-      <a href="/algorithm5/" class="pagination--pager" title="[Algorithm] 5. 큐
+      <a href="/algorithm5/" class="pagination--pager" title="[Algorithm] 5. 스택
 ">이전</a>
     
     
-      <a href="/algorithm7/" class="pagination--pager" title="[Algorithm] 7. 그래프와 순회
+      <a href="/algorithm7/" class="pagination--pager" title="[Algorithm] 7. 브루트 포스
 ">다음</a>
     
   </nav>

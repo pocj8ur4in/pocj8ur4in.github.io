@@ -54,8 +54,8 @@ function checkAndLoadPage(allImages) {
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Algorithm] 10. 재귀 - pocj8ur4in’s blog</title>
-<meta name="description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
+<!-- begin _includes/seo.html --><title>[Algorithm] 10. 집합과 맵 - pocj8ur4in’s blog</title>
+<meta name="description" content="집합 (Set) : 데이터를 중복 없는 유일한 값으로 저장해 비순차적으로 처리하는 자료구조">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -67,11 +67,11 @@ function checkAndLoadPage(allImages) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[Algorithm] 10. 재귀">
+<meta property="og:title" content="[Algorithm] 10. 집합과 맵">
 <meta property="og:url" content="http://localhost:4000/algorithm10/">
 
 
-  <meta property="og:description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
+  <meta property="og:description" content="집합 (Set) : 데이터를 중복 없는 유일한 값으로 저장해 비순차적으로 처리하는 자료구조">
 
 
 
@@ -211,7 +211,7 @@ function checkAndLoadPage(allImages) {
         <span class="sep">/</span>
       
       
-        <li class="current">[Algorithm] 10. 재귀</li>
+        <li class="current">[Algorithm] 10. 집합과 맵</li>
       
     
   </ol>
@@ -337,8 +337,8 @@ function checkAndLoadPage(allImages) {
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Algorithm] 10. 재귀">
-    <meta itemprop="description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
+    <meta itemprop="headline" content="[Algorithm] 10. 집합과 맵">
+    <meta itemprop="description" content="집합 (Set) : 데이터를 중복 없는 유일한 값으로 저장해 비순차적으로 처리하는 자료구조">
     <meta itemprop="datePublished" content="2024-03-12T00:00:00+09:00">
     <meta itemprop="dateModified" content="2024-03-12T00:00:00+09:00">
 
@@ -346,7 +346,7 @@ function checkAndLoadPage(allImages) {
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/algorithm10/" class="u-url" itemprop="url">[Algorithm] 10. 재귀
+            <a href="http://localhost:4000/algorithm10/" class="u-url" itemprop="url">[Algorithm] 10. 집합과 맵
 </a>
           </h1>
           
@@ -378,12 +378,69 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              
+              <ul class="toc__menu"><li><a href="#집합-set--데이터를-중복-없는-유일한-값으로-저장해-비순차적으로-처리하는-자료구조">집합 (Set) : 데이터를 중복 없는 유일한 값으로 저장해 비순차적으로 처리하는 자료구조</a></li><li><a href="#맵-map--키-key와-값-value를-쌍으로-데이터를-처리하는-자료구조">맵 (Map) : 키 (Key)와 값 (Value)를 쌍으로 데이터를 처리하는 자료구조</a></li><li><a href="#boj-25192번-인사성-밝은-곰곰이-s4">BOJ 25192번. 인사성 밝은 곰곰이 (S4)</a></li><li><a href="#boj-26069번-붙임성-좋은-총총이-s4">BOJ 26069번. 붙임성 좋은 총총이 (S4)</a></li></ul>
 
             </nav>
           </aside>
         
-        <p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>
+        <h2 id="집합-set--데이터를-중복-없는-유일한-값으로-저장해-비순차적으로-처리하는-자료구조">집합 (<code class="language-plaintext highlighter-rouge">Set</code>) : 데이터를 중복 없는 유일한 값으로 저장해 비순차적으로 처리하는 자료구조</h2>
+
+<ul>
+  <li>파이썬에서는 <code class="language-plaintext highlighter-rouge">set()</code>으로 정의하고 <code class="language-plaintext highlighter-rouge">{}</code> 안에 생성되는 집합 (<code class="language-plaintext highlighter-rouge">set</code>)이 집합 자료구조
+    <ul>
+      <li>교집합 (<code class="language-plaintext highlighter-rouge">A &amp; B</code>), 합집합 (<code class="language-plaintext highlighter-rouge">A | B</code>), 차집합 (<code class="language-plaintext highlighter-rouge">A - B</code>) 모두 지원</li>
+      <li>가변 집합을 생성하는 <code class="language-plaintext highlighter-rouge">set()</code> 대신, <code class="language-plaintext highlighter-rouge">frozenset()</code>으로 불변 집합을 생성할 수 있음</li>
+    </ul>
+  </li>
+  <li>다른 컬렉션의 중복을 제거하거나, 순서 상관없이 두 객체를 비교하는 데에 효율적</li>
+</ul>
+
+<h2 id="맵-map--키-key와-값-value를-쌍으로-데이터를-처리하는-자료구조">맵 (<code class="language-plaintext highlighter-rouge">Map</code>) : 키 (<code class="language-plaintext highlighter-rouge">Key</code>)와 값 (<code class="language-plaintext highlighter-rouge">Value</code>)를 쌍으로 데이터를 처리하는 자료구조</h2>
+
+<ul>
+  <li>파이썬에서는 <code class="language-plaintext highlighter-rouge">{}</code>로 정의하고 키·값이 <code class="language-plaintext highlighter-rouge">:</code>으로 구분하는 딕셔너리 (<code class="language-plaintext highlighter-rouge">dictionary</code>)가 맵 자료구조</li>
+  <li>변수의 이름과 값을 연결하여 데이터를 저장하고 검색하는 데에 효율적</li>
+</ul>
+
+<h2 id="boj-25192번-인사성-밝은-곰곰이-s4"><a href="https://www.acmicpc.net/problem/25192">BOJ 25192번. 인사성 밝은 곰곰이 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+N = int(read())
+SET = set()
+ans = 0
+
+for n in range(N):
+    S = read().rstrip()
+    if S != "ENTER":
+        if S not in SET:
+            SET.add(S)
+            ans += 1
+    else:
+        SET.clear()
+
+print(str(ans))
+</code></pre></div></div>
+
+<h2 id="boj-26069번-붙임성-좋은-총총이-s4"><a href="https://www.acmicpc.net/problem/26069">BOJ 26069번. 붙임성 좋은 총총이 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+N = int(read())
+S = set()
+S.add("ChongChong")
+
+for n in range(N):
+    X, Y = map(str, read().rstrip().split())
+    if X in S and Y not in S:
+        S.add(Y)
+    elif X not in S and Y in S:
+        S.add(X)
+
+print(str(S.__len__()))
+</code></pre></div></div>
 
         
       </section>
@@ -433,7 +490,7 @@ function checkAndLoadPage(allImages) {
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BAlgorithm%5D+10.+%EC%9E%AC%EA%B7%80%20http%3A%2F%2Flocalhost%3A4000%2Falgorithm10%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BAlgorithm%5D+10.+%EC%A7%91%ED%95%A9%EA%B3%BC+%EB%A7%B5%20http%3A%2F%2Flocalhost%3A4000%2Falgorithm10%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm10%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
@@ -443,7 +500,7 @@ function checkAndLoadPage(allImages) {
       
   <nav class="pagination">
     
-      <a href="/algorithm9/" class="pagination--pager" title="[Algorithm] 9. 집합과 맵
+      <a href="/algorithm9/" class="pagination--pager" title="[Algorithm] 9. 그리디
 ">이전</a>
     
     

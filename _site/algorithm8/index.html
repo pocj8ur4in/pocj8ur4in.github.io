@@ -54,8 +54,8 @@ function checkAndLoadPage(allImages) {
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Algorithm] 8. 그리디 - pocj8ur4in’s blog</title>
-<meta name="description" content="그리디 (Greedy) : 나중에 미칠 영향을 고려하지 않고, 매 순간 가장 좋은 것을 선택하는 알고리즘">
+<!-- begin _includes/seo.html --><title>[Algorithm] 8. 그래프와 순회 - pocj8ur4in’s blog</title>
+<meta name="description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -67,11 +67,11 @@ function checkAndLoadPage(allImages) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[Algorithm] 8. 그리디">
+<meta property="og:title" content="[Algorithm] 8. 그래프와 순회">
 <meta property="og:url" content="http://localhost:4000/algorithm8/">
 
 
-  <meta property="og:description" content="그리디 (Greedy) : 나중에 미칠 영향을 고려하지 않고, 매 순간 가장 좋은 것을 선택하는 알고리즘">
+  <meta property="og:description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
 
 
 
@@ -211,7 +211,7 @@ function checkAndLoadPage(allImages) {
         <span class="sep">/</span>
       
       
-        <li class="current">[Algorithm] 8. 그리디</li>
+        <li class="current">[Algorithm] 8. 그래프와 순회</li>
       
     
   </ol>
@@ -337,8 +337,8 @@ function checkAndLoadPage(allImages) {
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Algorithm] 8. 그리디">
-    <meta itemprop="description" content="그리디 (Greedy) : 나중에 미칠 영향을 고려하지 않고, 매 순간 가장 좋은 것을 선택하는 알고리즘">
+    <meta itemprop="headline" content="[Algorithm] 8. 그래프와 순회">
+    <meta itemprop="description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
     <meta itemprop="datePublished" content="2024-03-11T00:00:00+09:00">
     <meta itemprop="dateModified" content="2024-03-11T00:00:00+09:00">
 
@@ -346,7 +346,7 @@ function checkAndLoadPage(allImages) {
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/algorithm8/" class="u-url" itemprop="url">[Algorithm] 8. 그리디
+            <a href="http://localhost:4000/algorithm8/" class="u-url" itemprop="url">[Algorithm] 8. 그래프와 순회
 </a>
           </h1>
           
@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          최대 1 분 소요
         
       </span>
     
@@ -378,142 +378,12 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#그리디-greedy--나중에-미칠-영향을-고려하지-않고-매-순간-가장-좋은-것을-선택하는-알고리즘">그리디 (Greedy) : 나중에 미칠 영향을 고려하지 않고, 매 순간 가장 좋은 것을 선택하는 알고리즘</a></li><li><a href="#boj-1541번-잃어버린-괄호-s2">BOJ 1541번. 잃어버린 괄호 (S2)</a></li><li><a href="#boj-1931번-회의실-배정-s1">BOJ 1931번. 회의실 배정 (S1)</a></li><li><a href="#boj-2839번-설탕-배달-s4">BOJ 2839번. 설탕 배달 (S4)</a></li><li><a href="#boj-11047번-동전-0-s4">BOJ 11047번. 동전 0 (S4)</a></li><li><a href="#boj-11399번-atm-s4">BOJ 11399번. ATM (S4)</a></li><li><a href="#boj-13305번-주유소-s3">BOJ 13305번. 주유소 (S3)</a></li></ul>
+              
 
             </nav>
           </aside>
         
-        <h2 id="그리디-greedy--나중에-미칠-영향을-고려하지-않고-매-순간-가장-좋은-것을-선택하는-알고리즘">그리디 (<code class="language-plaintext highlighter-rouge">Greedy</code>) : 나중에 미칠 영향을 고려하지 않고, 매 순간 가장 좋은 것을 선택하는 알고리즘</h2>
-
-<ul>
-  <li>사전에 외우고 있지 않아도 풀 수 있을 가능성이 높음 : ‘가장 큰 순서대로’, ‘가장 작은 크기부터’와 같은 기준이 제시됨</li>
-  <li>특정 문제를 만났을 때, 그리디 알고리즘을 적용해 문제를 풀 수 있을지 파악할 수 있어야 함
-    <ol>
-      <li>문제 풀이를 위한 최소한의 아이디어를 떠올리고,</li>
-      <li>그것이 정당한지 검토하여 답을 도출한다.</li>
-    </ol>
-  </li>
-</ul>
-
-<h2 id="boj-1541번-잃어버린-괄호-s2"><a href="https://www.acmicpc.net/problem/1541">BOJ 1541번. 잃어버린 괄호 (<code class="language-plaintext highlighter-rouge">S2</code>)</a></h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
-read = sys.stdin.readline
-
-li = read().split('-')
-r = 0
-
-for i in range(len(li)):
-    s = li[i]
-    s = s.split('+')
-    s = list(map(int, s))
-    s = sum(s)
-    if i == 0:
-        r = s
-    else:
-        r -= s
-
-print(r)
-</code></pre></div></div>
-
-<h2 id="boj-1931번-회의실-배정-s1"><a href="https://www.acmicpc.net/problem/1931">BOJ 1931번. 회의실 배정 (<code class="language-plaintext highlighter-rouge">S1</code>)</a></h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
-read = sys.stdin.readline
-
-N = int(read())
-li = [list(map(int, read().split())) for i in range(N)]
-
-li.sort(key=lambda x: [x[1], x[0]])
-
-R = 1
-C = li[0][1]
-
-for i in range(N - 1):
-    if C &lt;= li[i + 1][0]:
-        C = li[i + 1][1]
-        R += 1
-
-print(R)
-</code></pre></div></div>
-
-<h2 id="boj-2839번-설탕-배달-s4"><a href="https://www.acmicpc.net/problem/2839">BOJ 2839번. 설탕 배달 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
-read = sys.stdin.readline
-
-N = int(read())
-li = [list(map(int, read().split())) for i in range(N)]
-
-li.sort(key=lambda x: [x[1], x[0]])
-
-R = 1
-C = li[0][1]
-
-for i in range(N - 1):
-    if C &lt;= li[i + 1][0]:
-        C = li[i + 1][1]
-        R += 1
-
-print(R)
-</code></pre></div></div>
-
-<h2 id="boj-11047번-동전-0-s4"><a href="https://www.acmicpc.net/problem/11047">BOJ 11047번. 동전 0 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
-read = sys.stdin.readline
-
-N, K = map(int, read().split())
-O = 0
-C = list([read() for i in range(N)])
-
-for i in range(N):
-    if (K &lt; int(C[N - 1 - i])):
-        continue
-    else:
-        while (K &gt;= int(C[N - 1 - i])):
-            K -= int(C[N - 1 - i])
-            O += 1
-
-    print(O)
-</code></pre></div></div>
-
-<h2 id="boj-11399번-atm-s4"><a href="https://www.acmicpc.net/problem/11399">BOJ 11399번. ATM (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
-read = sys.stdin.readline
-
-N = int(read())
-li = list(map(int, read().split()))
-li.sort()
-
-s = 0
-
-for i in range(N):
-    s += li[i] * (N - i)
-
-print(s)
-</code></pre></div></div>
-
-<h2 id="boj-13305번-주유소-s3"><a href="https://www.acmicpc.net/problem/13305">BOJ 13305번. 주유소 (<code class="language-plaintext highlighter-rouge">S3</code>)</a></h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
-read = sys.stdin.readline
-
-N = int(read())
-L = list(map(int, read().split()))
-P = list(map(int, read().split()))
-
-C = 0
-S = L[C] * P[C]
-
-for i in range(1, N - 1):
-    if L[i] * P [C] &gt; L[i] * P[i]:
-        C = i
-    S += L[i] * P [C]
-
-print(S)
-</code></pre></div></div>
+        <p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>
 
         
       </section>
@@ -563,7 +433,7 @@ print(S)
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BAlgorithm%5D+8.+%EA%B7%B8%EB%A6%AC%EB%94%94%20http%3A%2F%2Flocalhost%3A4000%2Falgorithm8%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BAlgorithm%5D+8.+%EA%B7%B8%EB%9E%98%ED%94%84%EC%99%80+%EC%88%9C%ED%9A%8C%20http%3A%2F%2Flocalhost%3A4000%2Falgorithm8%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Falgorithm8%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
@@ -573,11 +443,11 @@ print(S)
       
   <nav class="pagination">
     
-      <a href="/algorithm7/" class="pagination--pager" title="[Algorithm] 7. 그래프와 순회
+      <a href="/algorithm7/" class="pagination--pager" title="[Algorithm] 7. 브루트 포스
 ">이전</a>
     
     
-      <a href="/algorithm9/" class="pagination--pager" title="[Algorithm] 9. 집합과 맵
+      <a href="/algorithm9/" class="pagination--pager" title="[Algorithm] 9. 그리디
 ">다음</a>
     
   </nav>
