@@ -55,7 +55,7 @@ function checkAndLoadPage(allImages) {
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[SpringBoot] 2. SpringBoot Common Task - pocj8ur4in’s blog</title>
-<meta name="description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
+<meta name="description" content="어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -71,7 +71,7 @@ function checkAndLoadPage(allImages) {
 <meta property="og:url" content="http://localhost:4000/springboot2/">
 
 
-  <meta property="og:description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
+  <meta property="og:description" content="어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화">
 
 
 
@@ -338,7 +338,7 @@ function checkAndLoadPage(allImages) {
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[SpringBoot] 2. SpringBoot Common Task">
-    <meta itemprop="description" content="이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.">
+    <meta itemprop="description" content="어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화">
     <meta itemprop="datePublished" content="2024-01-22T00:00:00+09:00">
     <meta itemprop="dateModified" content="2024-01-22T00:00:00+09:00">
 
@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 분 소요
+          5 분 소요
         
       </span>
     
@@ -378,14 +378,12 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#어플리케이션-설정-관리--여러-환경에-따른-설정-정보의-다중화">어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화</a><ul><li><a href="#springapplication-클래스-사용">SpringApplication 클래스 사용</a></li><li><a href="#propertysource-사용">@PropertySource 사용</a></li><li><a href="#환경-설정-파일-applicationproperties-또는-applicationyml">환경 설정 파일 (application.properties 또는 application.yml)</a></li><li><a href="#운영-체제의-환경-변수">운영 체제의 환경 변수</a></li></ul></li><li><a href="#configurationproperties--커스텀-프로퍼티-생성">@ConfigurationProperties : 커스텀 프로퍼티 생성</a><ul><li><a href="#environment-인스턴스-주입을-통한-프로퍼티-값-사용">Environment 인스턴스 주입을 통한 프로퍼티 값 사용</a></li><li><a href="#configurationproperties-어노테이션을-사용한-커스텀-프로퍼티-정의">@ConfigurationProperties 어노테이션을 사용한 커스텀 프로퍼티 정의</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#어플리케이션-설정-관리--여러-환경에-따른-설정-정보의-다중화">어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화</a><ul><li><a href="#springapplication-클래스-사용">SpringApplication 클래스 사용</a></li><li><a href="#propertysource-사용">@PropertySource 사용</a></li><li><a href="#환경-설정-파일-applicationproperties-또는-applicationyml">환경 설정 파일 (application.properties 또는 application.yml)</a></li><li><a href="#운영-체제의-환경-변수">운영 체제의 환경 변수</a></li></ul></li><li><a href="#configurationproperties--커스텀-프로퍼티-생성">@ConfigurationProperties : 커스텀 프로퍼티 생성</a><ul><li><a href="#environment-인스턴스-주입을-통한-프로퍼티-값-사용">Environment 인스턴스 주입을 통한 프로퍼티 값 사용</a></li><li><a href="#configurationproperties-어노테이션을-사용한-커스텀-프로퍼티-정의">@ConfigurationProperties 어노테이션을 사용한 커스텀 프로퍼티 정의</a></li><li><a href="#commandrunner-applicationrunner로-스프링부트-어플리케이션-시작-시-코드-실행">CommandRunner, ApplicationRunner로 스프링부트 어플리케이션 시작 시 코드 실행</a></li><li><a href="#스프링부트-어플리케이션-로깅-커스터마이징">스프링부트 어플리케이션 로깅 커스터마이징</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>
-
-<h2 id="어플리케이션-설정-관리--여러-환경에-따른-설정-정보의-다중화">어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화</h2>
+        <h2 id="어플리케이션-설정-관리--여러-환경에-따른-설정-정보의-다중화">어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화</h2>
 
 <ul>
   <li>개발 환경의 다중화 → 개발 (<code class="language-plaintext highlighter-rouge">dev</code>), 테스트 (<code class="language-plaintext highlighter-rouge">test</code>), 스테이징 (<code class="language-plaintext highlighter-rouge">staging</code>), 배포 (<code class="language-plaintext highlighter-rouge">prod</code>)
@@ -419,7 +417,7 @@ function checkAndLoadPage(allImages) {
   </li>
 </ul>
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/41016cdc-001c-4c27-bc87-3d366061017f" width="80%" /></p>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/cd0898ec-e803-4c63-8a39-0c265c5a2dd5" width="80%" /></p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">application.properties</code> 파일은 다른 설정 파일들을 <code class="language-plaintext highlighter-rouge">spring.config.import</code> 프로퍼티를 통해 임포트해서 사용
@@ -444,7 +442,7 @@ function checkAndLoadPage(allImages) {
   </li>
 </ul>
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/080afe26-f960-4980-8551-1acc165c7d0e" width="80%" /></p>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a1858e95-9784-4d5b-8cd2-94cac3930019" width="80%" /></p>
 
 <ul>
   <li>스프링이 제공하는 <code class="language-plaintext highlighter-rouge">Environment</code> 인스턴스를 주입받으면, 설정 파일에 있는 정보를 읽을 수 있음</li>
@@ -492,7 +490,7 @@ public class SpringBootApplication {
     <li><code class="language-plaintext highlighter-rouge">/config</code> 디렉터리의 바로 하위에 위치한 디렉터리</li>
   </ul>
 
-  <p>추가로, <code class="language-plaintext highlighter-rouge">spring.config.location</code> 프로퍼티를 통해 상대 경로나 절대 경로의 환경 설정 파일을 읽을 수 있음<br />(<code class="language-plaintext highlighter-rouge">optional:</code> 접두어를 통해 해당된 경로에 환경 설정 파일이 없더라도, 예외 처리 없이 스프링부트 기본 설정값으로 실행할 수 있음)</p>
+  <p>추가로, <code class="language-plaintext highlighter-rouge">spring.config.location</code> 프로퍼티를 통해 상대 경로나 절대 경로의 환경 설정 파일을 읽을 수 있음<br />(<code class="language-plaintext highlighter-rouge">optional:</code> 접두어로 해당 경로에 환경 설정 파일이 없더라도, 예외 처리 없이 스프링부트 기본 설정값으로 실행 가능)</p>
 
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -jar target/config-data-file.jar --spring.config.location=optional:data/application.yml
 </code></pre></div>  </div>
@@ -531,13 +529,13 @@ public class ProductionConfiguration {
 <h3 id="운영-체제의-환경-변수">운영 체제의 환경 변수</h3>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">application.properties</code> 파일에서 <code class="language-plaintext highlighter-rouge">app.timeout</code> 커스텀 프로퍼티를 활용</li>
+  <li><code class="language-plaintext highlighter-rouge">application.properties</code> 파일에서 <code class="language-plaintext highlighter-rouge">app.timeout</code> 커스텀 프로퍼티 활용</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app.timeout=${APP_TIMEOUT}
 </code></pre></div></div>
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c8c54862-d56a-43d8-b491-dc1251c7e0d1" width="80%" /></p>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/9b5cbce3-6baf-40f4-9a68-9340ff726cc6" width="80%" /></p>
 
 <ol>
   <li><code class="language-plaintext highlighter-rouge">ConfigurableApplicationContext</code> 인스턴스에 접근</li>
@@ -565,12 +563,12 @@ public class ProductionConfiguration {
   <li>스프링의 <code class="language-plaintext highlighter-rouge">Environment</code> 인스턴스에 프로퍼티가 바인딩 → <code class="language-plaintext highlighter-rouge">Environment</code> 인스턴스를 주입받아 프로퍼티 값 사용 가능</li>
   <li>프로퍼티 값의 타입 안정성 (<code class="language-plaintext highlighter-rouge">Type-Safety</code>)이 보장되지 않아, 이로 인해 런타임 에러가 발생할 수 있음
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">URL</code>이나 이메일 주소를 프로퍼티로 사용할 때 유효성 검증 (<code class="language-plaintext highlighter-rouge">Vadlidation</code>)을 수행할 수 없음</li>
+      <li><code class="language-plaintext highlighter-rouge">URL</code>이나 이메일 주소를 프로퍼티로 사용할 때 유효성 검증 (<code class="language-plaintext highlighter-rouge">Validation</code>)을 수행할 수 없음</li>
     </ul>
   </li>
   <li>프로퍼티 값을 일정한 단위로 묶어서 읽을 수 없음
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">@Value</code> 어노테이션이나 스프링의 <code class="language-plaintext highlighter-rouge">Environment</code> 인스턴스를 사용해서 하나하나 개별적으로만 읽을 수 있음</li>
+      <li><code class="language-plaintext highlighter-rouge">@Value</code>나 스프링의 <code class="language-plaintext highlighter-rouge">Environment</code> 인스턴스를 사용해서 하나하나 개별적으로만 읽을 수 있음</li>
     </ul>
   </li>
 </ul>
@@ -582,54 +580,153 @@ public class ProductionConfiguration {
 </blockquote>
 
 <ul>
-  <li>스프링부트 설정 처리기 (<code class="language-plaintext highlighter-rouge">Configuration Processor</code>)를 통해 <code class="language-plaintext highlighter-rouge">@ConfigurationProperties</code>이 붙은 클래스에 대한 메타데이터 생성
+  <li>설정 처리기 (<code class="language-plaintext highlighter-rouge">Configuration Processor</code> )로 <code class="language-plaintext highlighter-rouge">@ConfigurationProperties</code>가 붙은 클래스 메타데이터 생성
     <ul>
       <li><code class="language-plaintext highlighter-rouge">spring-boot-configuration-processor</code> 의존 관계를 추가해 스프링부트 설정 처리기를 활성화</li>
       <li>생성된 메타데이터는 환경 설정 파일에 기술된 프로퍼티에 대한 자동 완성이나 문서화 지원</li>
     </ul>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">spring.config.import</code>와 <code class="language-plaintext highlighter-rouge">@ConfigurationProperties</code>을 함께 사용해, 연관된 프로퍼티들을 그룹화한 프로퍼티 파일로 관리 가능</li>
-  <li><code class="language-plaintext highlighter-rouge">@ConfigurationProperties</code> 어노테이션을 클래스 안에서 빈을 생성하는 <code class="language-plaintext highlighter-rouge">@Bean</code> 메소드에도 붙일 수 있음</li>
+  <li><code class="language-plaintext highlighter-rouge">spring.config.import</code>, <code class="language-plaintext highlighter-rouge">@ConfigurationProperties</code>으로 연관 프로퍼티들을 그룹화한 프로퍼티 파일로 관리</li>
+  <li><code class="language-plaintext highlighter-rouge">@ConfigurationProperties</code>을 클래스 안에서 빈을 생성하는 <code class="language-plaintext highlighter-rouge">@Bean</code> 메소드에도 붙일 수 있음</li>
   <li>아래처럼 생성자를 사용해서 바인딩하는 방식이 아닌, <code class="language-plaintext highlighter-rouge">setter</code> 메소드를 통해 바인딩하는 방식 또한 가능</li>
 </ul>
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/264e5990-ee36-44a5-bfe3-420b68fd02d2" width="80%" /></p>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/705c02ca-509a-4033-a637-e50f572008c4" width="80%" /></p>
 
 <ul>
   <li>커스텀 프로퍼티를 사용하려면 환경 설정 파일에 해당 프로퍼티에 대한 정보를 추가해야 함</li>
 </ul>
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/8f9f02c6-0ce3-4bb0-b9c4-a5534462fbc3" width="80%" /></p>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/526d0d97-abf3-4e3c-a81c-991315ba2efb" width="80%" /></p>
 
 <ul>
-  <li>프로퍼티를 정의하고 이를 담은 <code class="language-plaintext highlighter-rouge">AppProperties</code> 클래스를 통해 서비스 클래스에서 <code class="language-plaintext highlighter-rouge">AppProperties</code> 객체를 주입받을 수 있음</li>
+  <li>프로퍼티 정의를 담은 <code class="language-plaintext highlighter-rouge">AppProperties</code> 클래스로 서비스 클래스에서 <code class="language-plaintext highlighter-rouge">AppProperties</code> 객체를 주입받을 수 있음</li>
 </ul>
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/ac00105a-cd9c-4b8c-8dfa-14bf4d1c49ed" width="80%" /></p>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/f0f3bd4a-c9a8-4792-9f27-d978a19a2b71" width="80%" /></p>
 
 <ul>
-  <li>스프링부트 어플리케이션 클래스는 서비스 클래스를 사용해서 <code class="language-plaintext highlighter-rouge">AppProperties</code> 객체에 접근하여 프로퍼티 값을 사용
+  <li>스프링부트 어플리케이션 클래스는 서비스 클래스를 사용해서 <code class="language-plaintext highlighter-rouge">AppProperties</code> 객체에 접근하여 프로퍼티 값 사용
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">@EnableConfigurationProperties</code> 어노테이션은 <code class="language-plaintext highlighter-rouge">@ConfigurationProperties</code>이 붙은 클래스를 스프링 컨테이너에 등록</li>
-      <li><code class="language-plaintext highlighter-rouge">@ConfigurationPropertiesScan</code> 어노테이션으로 기준 패키지을 지정하면, 지정 패키지 하위에 있는 <code class="language-plaintext highlighter-rouge">@ConfigurationProperties</code>가 붙은 클래스를 모두 탐색해서 스프링 컨테이너에 등록</li>
-      <li><code class="language-plaintext highlighter-rouge">@ConfigurationProperties</code> 어노테이션이 붙은 클래스를 자동 탐색해서 등록하는 것이 아니라 직접 명시해야 함</li>
+      <li><code class="language-plaintext highlighter-rouge">@EnableConfigurationProperties</code>는 <code class="language-plaintext highlighter-rouge">@ConfigurationProperties</code>가 붙은 클래스를 스프링 컨테이너에 등록</li>
+      <li><code class="language-plaintext highlighter-rouge">@ConfigurationPropertiesScan</code>으로 기준 패키지을 지정하면, 지정 패키지 하위에 있는 <code class="language-plaintext highlighter-rouge">@ConfigurationProperties</code>가 붙은 클래스를 모두 탐색해서 스프링 컨테이너에 등록</li>
+      <li><code class="language-plaintext highlighter-rouge">@ConfigurationProperties</code>가 붙은 클래스를 자동 탐색해서 등록하는 것이 아니라 직접 명시해야 함</li>
     </ul>
   </li>
 </ul>
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a1975bd6-5a08-44eb-914e-572a5d539585" width="80%" /></p>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/fe5576ec-9f14-4a9d-89f0-7182f4dc067a" width="80%" /></p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">ConstructorBinding</code> 어노테이션을 <code class="language-plaintext highlighter-rouge">POJO</code> 클래스에 사용하면, 생성자를 통해 프로퍼티 정보값이 설정
+  <li><code class="language-plaintext highlighter-rouge">ConstructorBinding</code>을 <code class="language-plaintext highlighter-rouge">POJO</code> 클래스에 사용하면, 생성자를 통해 프로퍼티 정보값이 설정
     <ul>
-      <li>생성자가 하나만 있으면 클래스에, 생성자가 여러 개라면 프로퍼티 정보값 설정에 사용할 생성자에 어노테이션을 붙이면 됨</li>
+      <li>생성자가 하나면 클래스에, 생성자가 여러 개라면 프로퍼티 정보값 설정에 사용할 생성자에 어노테이션을 붙이면 됨</li>
       <li>설정 정보 클래스의 불변성을 보장하기 위해선 세터 바인딩 대신 생성자 바인딩으로 프로퍼티 값을 설정해야 함</li>
     </ul>
   </li>
+  <li>생성자 바인딩 대신 세터 메소드를 사용하는 세터 바인딩 방식으로 프로퍼티 값을 설정할 수도 있음
+    <ul>
+      <li>설정 정보의 불변성을 보장하기 위해 세터 메소드 대신 <code class="language-plaintext highlighter-rouge">@ConstructorBinding</code>을 사용해야 함</li>
+      <li><code class="language-plaintext highlighter-rouge">@DefaultValue</code>로 프로퍼티 기본값 지정 가능</li>
+    </ul>
+  </li>
 </ul>
 
-<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/3ae42b22-9e2e-47cb-a8fb-3d2f25357007" width="80%" /></p>
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/53942f92-5382-4d51-b658-45ed3ff238e5" width="80%" /></p>
 
+<h3 id="commandrunner-applicationrunner로-스프링부트-어플리케이션-시작-시-코드-실행"><code class="language-plaintext highlighter-rouge">CommandRunner</code>, <code class="language-plaintext highlighter-rouge">ApplicationRunner</code>로 스프링부트 어플리케이션 시작 시 코드 실행</h3>
+
+<blockquote>
+  <p>요구 사항 : 어플리케이션 초기화 이전에 <code class="language-plaintext highlighter-rouge">DB</code> 초기화 스크립트를 실행하거나, 외부 <code class="language-plaintext highlighter-rouge">REST</code> 서비스를 호출해서 데이터를 가져오는 상황이 있을 수 있다.</p>
+</blockquote>
+
+<ul>
+  <li>스프링부트 메인 클래스가 <code class="language-plaintext highlighter-rouge">CommandRunner</code> 인터페이스를 구현</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/fdb7007e-130e-41e6-b58d-c4a404828f77" width="80%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CommandRunner</code> 구현체에 <code class="language-plaintext highlighter-rouge">@Bean</code>을 붙어 스프링 빈으로 정의
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">CommandRunner</code>는 <code class="language-plaintext highlighter-rouge">run(String... args)</code> 메소드 하나만 가진 함수형 인터페이스<br />→ 람다식을 사용해서 <code class="language-plaintext highlighter-rouge">CommandRunner</code> 구현체를 작성할 수 있음</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1cc72f8d-ee00-4173-8401-2969018435d6" width="80%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CommandRunner</code> 구현체에 <code class="language-plaintext highlighter-rouge">@Component</code>를 붙어서 스프링 컴포넌트로 정의
+    <ul>
+      <li>어플리케이션을 실행하면 스프링부트 컴포넌트 스캔을  통해 컴포넌트의 인스턴스가 생성되고 빈으로 등록</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/0eb370aa-171e-4a70-b11d-f7d100b6c856" width="80%" /></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">@Bean vs @Component</code>? : 모두 스프링에 의해 빈으로 등록된다는 공통점</p>
+
+  <ul>
+    <li>빈으로 등록할 클래스의 코드에 직접 접근할 수 없으면, 클래스의 인스턴스를 반환하는 메소드에 <code class="language-plaintext highlighter-rouge">@Bean</code></li>
+    <li>빈으로 등록할 클래스의 코드에 직접 접근할 수 있으면, 클래스의 인스턴스를 반환하는 메소드에 <code class="language-plaintext highlighter-rouge">@Component</code></li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CommandRunner</code> 안에서 스프링 의존 관계 주입으로 빈을 주입받아 사용 가능
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">CommandRunner</code> 구현체는 빈 등록을 포함한 초기화를 거의 마친 뒤 실행되므로, 어떤 빈이든 주입받아 사용 가능</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="스프링부트-어플리케이션-로깅-커스터마이징">스프링부트 어플리케이션 로깅 커스터마이징</h3>
+<ul>
+  <li>로거 (<code class="language-plaintext highlighter-rouge">Logger</code>) : 한 개 이상의 어펜더를 사용해 로그 메시지 표시를 담당하는 로깅 프레임워크 컴포넌트
+    <ul>
+      <li>어펜더 (<code class="language-plaintext highlighter-rouge">Appender</code>) : 로그가 출력되는 대상과 로깅 포맷 지정 가능
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">ConsoleAppender</code> : 어플리케이션의 콘솔에 로그 출력</li>
+          <li><code class="language-plaintext highlighter-rouge">FileAppender</code> : 하나의 파일에 로그 출력</li>
+          <li><code class="language-plaintext highlighter-rouge">RollingFileAppender</code> : 시간과 날짜 기반으로 별도의 파일에 로그 출력</li>
+          <li><code class="language-plaintext highlighter-rouge">SmtpAppender</code> : 정해진 이메일 주소로 로그 출력</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>요구 사항 : 어플리케이션에 발생하는 중요 이벤트와 어플리케이션 동작에 대한 로그를 출력하는 로깅은 필수적이다.</p>
+</blockquote>
+
+<ul>
+  <li>스프링부트 어플리케이션의 콘솔 로그는 기본으로 제공 : <code class="language-plaintext highlighter-rouge">Apache Commons</code> 로깅 프레임워크 사용
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Logback</code>, <code class="language-plaintext highlighter-rouge">Log24</code> 등 로깅 프레임워크, 자바에서 제공하는 <code class="language-plaintext highlighter-rouge">java.util.logging</code> 또한 지원</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>로그를 구성하는 여러 요소?</p>
+
+  <ul>
+    <li>일시 : 로그가 출력되는 날짜와 시간</li>
+    <li>로그 레벨 : 로그의 중요도에 따라 <code class="language-plaintext highlighter-rouge">FATAL</code>, <code class="language-plaintext highlighter-rouge">ERROR</code>, <code class="language-plaintext highlighter-rouge">WARN</code>, <code class="language-plaintext highlighter-rouge">INFO</code>, <code class="language-plaintext highlighter-rouge">DEBUG</code>, <code class="language-plaintext highlighter-rouge">TRACE</code>로 구분</li>
+    <li>구분자 : 실제 로그 메시지의 시작 부분</li>
+    <li>스레드 이름 : 현재 로그를 출력한 스레드 이름<br />(<code class="language-plaintext highlighter-rouge">TaskExecutor</code>로 생성할 때 지정된 스레드풀에서 사용할 이름)</li>
+    <li>로거 이름 : 축약된 클래스 이름</li>
+    <li>메시지 : 실제 로그 메시지</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>로그 출력 패턴 :</li>
+</ul>
 
         
       </section>

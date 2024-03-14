@@ -309,10 +309,10 @@ public class VocawikApplication {
 - ```ApplicationStartingEvent``` : 어플리케이션이 시작되어 리스너 (```Listener```가 등록될 때 발행
   - 스프링부트의 ```LoggingSystem```이 해당 이벤트를 통해 어플리케이션 초기화 단계 이전에 필요한 작업 수행
 - ```ApplicationEnvironmentPreparedEvent``` : 어플리케이션이 시작되고 ```Environment```가 준비될 때 발행
-  - ```MessageConverter```, ```ConversionService```, ```Jackson```의 초기화 등 서비스 사전 초기화 (```PreInitialize```) 작업 수행
+  - ```MessageConverter```, ```ConversionService```, ```Jackson``` 초기화 등 사전 초기화 (```PreInitialize```) 작업 수행
 - ```ApplicationContextInitializedEvent``` : ```ApplicationContext```가 준비되고 ```ApplicationContextInitializer```가 실행되면 발행
   - 빈이 스프링 컨테이너에 로디오디어 초기화되기 전에 이루어질 작업이 필요할 때 이 이벤트를 사용
-- ```ApplicationPreparedEvent``` : ```ApplicationContext```가 준비되고 빈이 로딩되었으나 ```ApplicationContext```가 초기화되기 전에 발행
+- ```ApplicationPreparedEvent``` : ```ApplicationContext```가 준비되고 ```ApplicationContext```가 초기화되기 전에 발행
   - 이 이벤트가 발행된 이후에 ```Environment```를 사용할 수 있음
 - ```ContextRefreshedEvent``` : ```ApplicationContext```가 초기화된 이후에 발행
   - 스프링부트가 아닌 스프링이 발행한 이벤트로, ```SpringApplicationEvent```를 상속하지 않음
@@ -326,7 +326,7 @@ public class VocawikApplication {
 - ```ApplicationFailedEvent``` : 어플리케이션 시작 과정에서 예외가 발생하면 발행
   - 예외 발생 시 스크립트를 실행하거나, 스타트업 실패를 알릴 때 사용
 
-### 스프링부트 어플리케이션 이벤트 감지 : 스프링부트 스타트업 이벤트가 제공하는 정보들을 활용하기 위해 이벤트를 구독
+### 스프링부트 어플리케이션 이벤트 감지 : 스타트업 이벤트가 제공하는 정보들을 활용하기 위한 이벤트 구독
 
 - ```@EventListener``` 어노테이션 : 스프링 프레임워크에서 제공하는 이벤트를 구독하는 어노테이션
   - 어플리케이션 스타트업 극초기에 발행되는 이벤트는 감지하지 못함
@@ -368,7 +368,7 @@ public class SpringBootEventApplication {
 ```
 
 - ```spring.factories``` 파일 : 어플리케이션 기능 설정 및 커스터마이징을 가능하도록 스프링부트가 제공
-  - <del>스프링부트 이전부터 스프링 프레임워크에서 제공 (```spring-beans.jar```에서 확인 가능)</del> → 스프링부트 ```2.7.0```부터 ```deprecated```
+  - <del>스프링부트 이전부터 스프링 프레임워크에서 제공 (```spring-beans.jar```에서 확인 가능)</del><br>→ 스프링부트 ```2.7.0```부터 ```deprecated```
 
 > Reference
 >

@@ -11,8 +11,6 @@ date: 2024-01-22
 last_modified_at: 2024-01-22
 ---
 
-<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br>미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>
-
 ## 어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화
 
 - 개발 환경의 다중화 → 개발 (```dev```), 테스트 (```test```), 스테이징 (```staging```), 배포 (```prod```)
@@ -33,7 +31,7 @@ last_modified_at: 2024-01-22
 - ```java.util.Properties```나 ```java.util.Map<String, Object>```가 인자인 ```setDefaultProperties()``` 메소드 호출
   - ```Properties```나 ```Map<String, Object>```를 통해 설정 정보를 어플리케이션에 적용
 
-<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/41016cdc-001c-4c27-bc87-3d366061017f" width="80%">
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/cd0898ec-e803-4c63-8a39-0c265c5a2dd5" width="80%">
 
 - ```application.properties``` 파일은 다른 설정 파일들을 ```spring.config.import``` 프로퍼티를 통해 임포트해서 사용
   - ```spring.config.import=classpath:additional-application.properties```를 추가하면 스프링부트는 ```additional-application.properties``` 파일에 있는 설정 정보를 읽어 사용할 수 있음
@@ -45,7 +43,7 @@ last_modified_at: 2024-01-22
 - 설정 파일의 위치를 어노테이션을 사용해 지정 (자바 8 이후로는 동일한 어노테이션을 여러 번 사용할 수 있음)
   - ```src/main/resources/```의 파일은 ```JAR```로 패키징된 후 클래스패스에 위치하므로, 해당 디렉터리에 설정 파일 작성
 
-<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/080afe26-f960-4980-8551-1acc165c7d0e" width="80%">
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a1858e95-9784-4d5b-8cd2-94cac3930019" width="80%">
 
 - 스프링이 제공하는 ```Environment``` 인스턴스를 주입받으면, 설정 파일에 있는 정보를 읽을 수 있음
 
@@ -82,7 +80,7 @@ public class SpringBootApplication {
 > - 현재 디렉터리 ```/config``` 디렉터리
 > - ```/config``` 디렉터리의 바로 하위에 위치한 디렉터리
 >
-> 추가로, ```spring.config.location``` 프로퍼티를 통해 상대 경로나 절대 경로의 환경 설정 파일을 읽을 수 있음<br>(```optional:``` 접두어를 통해 해당된 경로에 환경 설정 파일이 없더라도, 예외 처리 없이 스프링부트 기본 설정값으로 실행할 수 있음)
+> 추가로, ```spring.config.location``` 프로퍼티를 통해 상대 경로나 절대 경로의 환경 설정 파일을 읽을 수 있음<br>(```optional:``` 접두어로 해당 경로에 환경 설정 파일이 없더라도, 예외 처리 없이 스프링부트 기본 설정값으로 실행 가능)
 >
 > ```
 > java -jar target/config-data-file.jar --spring.config.location=optional:data/application.yml
@@ -110,13 +108,13 @@ public class ProductionConfiguration {
 
 ### 운영 체제의 환경 변수
 
-- ```application.properties``` 파일에서 ```app.timeout``` 커스텀 프로퍼티를 활용
+- ```application.properties``` 파일에서 ```app.timeout``` 커스텀 프로퍼티 활용
 
 ```
 app.timeout=${APP_TIMEOUT}
 ```
 
-<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c8c54862-d56a-43d8-b491-dc1251c7e0d1" width="80%">
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/9b5cbce3-6baf-40f4-9a68-9340ff726cc6" width="80%">
 
 1. ```ConfigurableApplicationContext``` 인스턴스에 접근
 2. ```Environment``` 빈을 가져옴
@@ -133,41 +131,93 @@ app.timeout=${APP_TIMEOUT}
 
 - 스프링의 ```Environment``` 인스턴스에 프로퍼티가 바인딩 → ```Environment``` 인스턴스를 주입받아 프로퍼티 값 사용 가능
 - 프로퍼티 값의 타입 안정성 (```Type-Safety```)이 보장되지 않아, 이로 인해 런타임 에러가 발생할 수 있음
-  - ```URL```이나 이메일 주소를 프로퍼티로 사용할 때 유효성 검증 (```Vadlidation```)을 수행할 수 없음
+  - ```URL```이나 이메일 주소를 프로퍼티로 사용할 때 유효성 검증 (```Validation```)을 수행할 수 없음
 - 프로퍼티 값을 일정한 단위로 묶어서 읽을 수 없음
-  - ```@Value``` 어노테이션이나 스프링의 ```Environment``` 인스턴스를 사용해서 하나하나 개별적으로만 읽을 수 있음
+  - ```@Value```나 스프링의 ```Environment``` 인스턴스를 사용해서 하나하나 개별적으로만 읽을 수 있음
 
 ### ```@ConfigurationProperties``` 어노테이션을 사용한 커스텀 프로퍼티 정의
 
 > 요구 사항 : 커스텀 프로퍼티에 대한 타입 안정성을 보장하고, 값의 유효성을 검증해야 한다.
 
-- 스프링부트 설정 처리기 (```Configuration Processor```)를 통해 ```@ConfigurationProperties```이 붙은 클래스에 대한 메타데이터 생성
+- 설정 처리기 (```Configuration Processor``` )로 ```@ConfigurationProperties```가 붙은 클래스 메타데이터 생성
   - ```spring-boot-configuration-processor``` 의존 관계를 추가해 스프링부트 설정 처리기를 활성화
   - 생성된 메타데이터는 환경 설정 파일에 기술된 프로퍼티에 대한 자동 완성이나 문서화 지원
-- ```spring.config.import```와 ```@ConfigurationProperties```을 함께 사용해, 연관된 프로퍼티들을 그룹화한 프로퍼티 파일로 관리 가능
-- ```@ConfigurationProperties``` 어노테이션을 클래스 안에서 빈을 생성하는 ```@Bean``` 메소드에도 붙일 수 있음
+- ```spring.config.import```, ```@ConfigurationProperties```으로 연관 프로퍼티들을 그룹화한 프로퍼티 파일로 관리
+- ```@ConfigurationProperties```을 클래스 안에서 빈을 생성하는 ```@Bean``` 메소드에도 붙일 수 있음
 - 아래처럼 생성자를 사용해서 바인딩하는 방식이 아닌, ```setter``` 메소드를 통해 바인딩하는 방식 또한 가능
 
-<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/264e5990-ee36-44a5-bfe3-420b68fd02d2" width="80%">
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/705c02ca-509a-4033-a637-e50f572008c4" width="80%">
 
 - 커스텀 프로퍼티를 사용하려면 환경 설정 파일에 해당 프로퍼티에 대한 정보를 추가해야 함
 
-<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/8f9f02c6-0ce3-4bb0-b9c4-a5534462fbc3" width="80%">
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/526d0d97-abf3-4e3c-a81c-991315ba2efb" width="80%">
 
-- 프로퍼티를 정의하고 이를 담은 ```AppProperties``` 클래스를 통해 서비스 클래스에서 ```AppProperties``` 객체를 주입받을 수 있음
+- 프로퍼티 정의를 담은 ```AppProperties``` 클래스로 서비스 클래스에서 ```AppProperties``` 객체를 주입받을 수 있음
 
-<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/ac00105a-cd9c-4b8c-8dfa-14bf4d1c49ed" width="80%">
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/f0f3bd4a-c9a8-4792-9f27-d978a19a2b71" width="80%">
 
-- 스프링부트 어플리케이션 클래스는 서비스 클래스를 사용해서 ```AppProperties``` 객체에 접근하여 프로퍼티 값을 사용
-  - ```@EnableConfigurationProperties``` 어노테이션은 ```@ConfigurationProperties```이 붙은 클래스를 스프링 컨테이너에 등록
-  - ```@ConfigurationPropertiesScan``` 어노테이션으로 기준 패키지을 지정하면, 지정 패키지 하위에 있는 ```@ConfigurationProperties```가 붙은 클래스를 모두 탐색해서 스프링 컨테이너에 등록
-  - ```@ConfigurationProperties``` 어노테이션이 붙은 클래스를 자동 탐색해서 등록하는 것이 아니라 직접 명시해야 함
+- 스프링부트 어플리케이션 클래스는 서비스 클래스를 사용해서 ```AppProperties``` 객체에 접근하여 프로퍼티 값 사용
+  - ```@EnableConfigurationProperties```는 ```@ConfigurationProperties```가 붙은 클래스를 스프링 컨테이너에 등록
+  - ```@ConfigurationPropertiesScan```으로 기준 패키지을 지정하면, 지정 패키지 하위에 있는 ```@ConfigurationProperties```가 붙은 클래스를 모두 탐색해서 스프링 컨테이너에 등록
+  - ```@ConfigurationProperties```가 붙은 클래스를 자동 탐색해서 등록하는 것이 아니라 직접 명시해야 함
 
-<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a1975bd6-5a08-44eb-914e-572a5d539585" width="80%">
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/fe5576ec-9f14-4a9d-89f0-7182f4dc067a" width="80%">
 
-- ```ConstructorBinding``` 어노테이션을 ```POJO``` 클래스에 사용하면, 생성자를 통해 프로퍼티 정보값이 설정
-  - 생성자가 하나만 있으면 클래스에, 생성자가 여러 개라면 프로퍼티 정보값 설정에 사용할 생성자에 어노테이션을 붙이면 됨
+- ```ConstructorBinding```을 ```POJO``` 클래스에 사용하면, 생성자를 통해 프로퍼티 정보값이 설정
+  - 생성자가 하나면 클래스에, 생성자가 여러 개라면 프로퍼티 정보값 설정에 사용할 생성자에 어노테이션을 붙이면 됨
   - 설정 정보 클래스의 불변성을 보장하기 위해선 세터 바인딩 대신 생성자 바인딩으로 프로퍼티 값을 설정해야 함
+- 생성자 바인딩 대신 세터 메소드를 사용하는 세터 바인딩 방식으로 프로퍼티 값을 설정할 수도 있음
+  - 설정 정보의 불변성을 보장하기 위해 세터 메소드 대신 ```@ConstructorBinding```을 사용해야 함
+  - ```@DefaultValue```로 프로퍼티 기본값 지정 가능
 
-<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/3ae42b22-9e2e-47cb-a8fb-3d2f25357007" width="80%">
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/53942f92-5382-4d51-b658-45ed3ff238e5" width="80%">
 
+### ```CommandRunner```, ```ApplicationRunner```로 스프링부트 어플리케이션 시작 시 코드 실행
+
+> 요구 사항 : 어플리케이션 초기화 이전에 ```DB``` 초기화 스크립트를 실행하거나, 외부 ```REST``` 서비스를 호출해서 데이터를 가져오는 상황이 있을 수 있다.
+
+- 스프링부트 메인 클래스가 ```CommandRunner``` 인터페이스를 구현
+
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/fdb7007e-130e-41e6-b58d-c4a404828f77" width="80%">
+
+- ```CommandRunner``` 구현체에 ```@Bean```을 붙어 스프링 빈으로 정의
+  - ```CommandRunner```는 ```run(String... args)``` 메소드 하나만 가진 함수형 인터페이스<br>→ 람다식을 사용해서 ```CommandRunner``` 구현체를 작성할 수 있음
+
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1cc72f8d-ee00-4173-8401-2969018435d6" width="80%">
+
+- ```CommandRunner``` 구현체에 ```@Component```를 붙어서 스프링 컴포넌트로 정의
+  - 어플리케이션을 실행하면 스프링부트 컴포넌트 스캔을  통해 컴포넌트의 인스턴스가 생성되고 빈으로 등록
+
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/0eb370aa-171e-4a70-b11d-f7d100b6c856" width="80%">
+
+> ```@Bean vs @Component```? : 모두 스프링에 의해 빈으로 등록된다는 공통점
+>
+> - 빈으로 등록할 클래스의 코드에 직접 접근할 수 없으면, 클래스의 인스턴스를 반환하는 메소드에 ```@Bean```
+> - 빈으로 등록할 클래스의 코드에 직접 접근할 수 있으면, 클래스의 인스턴스를 반환하는 메소드에 ```@Component```
+
+- ```CommandRunner``` 안에서 스프링 의존 관계 주입으로 빈을 주입받아 사용 가능
+  - ```CommandRunner``` 구현체는 빈 등록을 포함한 초기화를 거의 마친 뒤 실행되므로, 어떤 빈이든 주입받아 사용 가능
+
+### 스프링부트 어플리케이션 로깅 커스터마이징
+- 로거 (```Logger```) : 한 개 이상의 어펜더를 사용해 로그 메시지 표시를 담당하는 로깅 프레임워크 컴포넌트
+  - 어펜더 (```Appender```) : 로그가 출력되는 대상과 로깅 포맷 지정 가능
+    - ```ConsoleAppender``` : 어플리케이션의 콘솔에 로그 출력
+    - ```FileAppender``` : 하나의 파일에 로그 출력
+    - ```RollingFileAppender``` : 시간과 날짜 기반으로 별도의 파일에 로그 출력
+    - ```SmtpAppender``` : 정해진 이메일 주소로 로그 출력
+
+> 요구 사항 : 어플리케이션에 발생하는 중요 이벤트와 어플리케이션 동작에 대한 로그를 출력하는 로깅은 필수적이다.
+
+- 스프링부트 어플리케이션의 콘솔 로그는 기본으로 제공 : ```Apache Commons``` 로깅 프레임워크 사용
+  - ```Logback```, ```Log24``` 등 로깅 프레임워크, 자바에서 제공하는 ```java.util.logging``` 또한 지원
+
+> 로그를 구성하는 여러 요소?
+> 
+> - 일시 : 로그가 출력되는 날짜와 시간
+> - 로그 레벨 : 로그의 중요도에 따라 ```FATAL```, ```ERROR```, ```WARN```, ```INFO```, ```DEBUG```, ```TRACE```로 구분
+> - 구분자 : 실제 로그 메시지의 시작 부분
+> - 스레드 이름 : 현재 로그를 출력한 스레드 이름<br>(```TaskExecutor```로 생성할 때 지정된 스레드풀에서 사용할 이름)
+> - 로거 이름 : 축약된 클래스 이름
+> - 메시지 : 실제 로그 메시지
+
+- 로그 출력 패턴 : 
