@@ -199,6 +199,7 @@ app.timeout=${APP_TIMEOUT}
   - ```CommandRunner``` 구현체는 빈 등록을 포함한 초기화를 거의 마친 뒤 실행되므로, 어떤 빈이든 주입받아 사용 가능
 
 ### 스프링부트 어플리케이션 로깅 커스터마이징
+
 - 로거 (```Logger```) : 한 개 이상의 어펜더를 사용해 로그 메시지 표시를 담당하는 로깅 프레임워크 컴포넌트
   - 어펜더 (```Appender```) : 로그가 출력되는 대상과 로깅 포맷 지정 가능
     - ```ConsoleAppender``` : 어플리케이션의 콘솔에 로그 출력
@@ -209,7 +210,9 @@ app.timeout=${APP_TIMEOUT}
 > 요구 사항 : 어플리케이션에 발생하는 중요 이벤트와 어플리케이션 동작에 대한 로그를 출력하는 로깅은 필수적이다.
 
 - 스프링부트 어플리케이션의 콘솔 로그는 기본으로 제공 : ```Apache Commons``` 로깅 프레임워크 사용
-  - ```Logback```, ```Log24``` 등 로깅 프레임워크, 자바에서 제공하는 ```java.util.logging``` 또한 지원
+  - ```Logback```, ```Log4j2``` 등 로깅 프레임워크, 자바에서 제공하는 ```java.util.logging``` 또한 지원
+- 로그 출력 패턴 : 로그를 구성하는 여러 요소들을 출력하는 형태 및 ```ANSI``` 색상을 지정할 수 있음
+- 로그 롤링 (```Log Rolling```) : 나중에 확인할 수 있도록 로그의 양, 기간에 따라 별도의 파일에 나누어 저장
 
 > 로그를 구성하는 여러 요소?
 > 
@@ -219,5 +222,87 @@ app.timeout=${APP_TIMEOUT}
 > - 스레드 이름 : 현재 로그를 출력한 스레드 이름<br>(```TaskExecutor```로 생성할 때 지정된 스레드풀에서 사용할 이름)
 > - 로거 이름 : 축약된 클래스 이름
 > - 메시지 : 실제 로그 메시지
+ 
+### 스프링부트 어플리케이션에 ```Log4j2``` 사용
 
-- 로그 출력 패턴 : 
+- 기본으로 내장된 ```logback``` 의존 관계를 제거하고, ```Log4j2``` 의존 관계를 추가
+
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/8bc291f1-929b-4491-864c-5d8220a01dcc" width="80%">
+
+- ```XML```, ```JSON```, ```YAML``` 형식 중 하나로 ```Log4j2``` 설정 파일 작성
+
+```
+Configuration: # 로그 설정
+  name: DEFAULT # 설정 이름
+  status: "${env:LOGGING_LEVEL}" # 설정 상태
+
+  Appenders: # 설정 Appender
+    Console:
+      name: Console_Appender
+      target: SYSTEM_OUT # 출력 대상 (SYSTEM_OUT, SYSTEM_ERR)
+      PatternLayout: # 출력 패턴
+        charset: "${env:LOGGING_CHARSET}"
+        pattern: "${env:LOGGING_PATTERN}"
+        disableAnsi: false # ANSI 색상 미사용 여부
+    RollingFile:
+      name: RollingFile_Appender
+      fileName: "${env:LOGGING_FILENAME}" # 파일명
+      filePattern: "${env:LOGGING_FILE_PATTERN}" # 파일 패턴
+      PatternLayout:
+        charset: "${env:LOGGING_CHARSET}"
+        pattern: "${env:LOGGING_PATTERN}"
+      Policies:
+        SizeBasedTriggeringPolicy:
+          size: "${env:LOGGING_FILE_SIZE}" # 파일 크기
+        TimeBasedTriggeringPolicy:
+          interval: "${env:LOGGING_FILE_INTERVAL}" # 시간 간격
+  Loggers:
+    Root:
+      level: "${env:LOGGING_LEVEL}" # 루트 로거 레벨
+      AppenderRef:
+        - ref: Console_Appender # 루트 로거 출력 대상
+        - ref: RollingFile_Appender # 루트 로거 출력 대상
+    Logger:
+      name: vw.temp # 로거 이름
+      additivity: false # 상위 로거 출력 여부
+      level: "${env:LOGGING_LEVEL}" # 로거 레벨
+      AppenderRef:
+        - ref: Console_Appender
+        - ref: RollingFile_Appender
+```
+
+- ```LoggerFactory``` 클래스의 ```getLogger``` 메소드로 로거 인스턴스 생성
+  - ```SLF4j``` : 로깅 프레임워크를 빌드 타임에 플러그인 방식으로 사용할 수 있게 해주는 추상화 라이브러리
+
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1e88dc92-a58e-498e-9eed-a4e79e238b54" width="80%">
+
+### ```Bean Validation```으로 사용자 입력 데이터 유효성 검증
+
+> 요구사항 : 사용자 입력 데이터가 비즈니스 요구 사항에 적합한지 검증해야 한다.
+
+- ```Bean Validation``` : 유효성 검사를 간단한 어노테이션으로 쉽게 구현 가능 + 커스텀 벨리데이터 생성 가능
+
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/d8aaac7b-75a7-4747-87b5-59fa9f86824a" width="80%">
+
+- 유효성 검사를 할 필드에 어노테이션을 붙어 비즈니스 제약 사항을 수행하는지 확인
+  - 제약 사항이 충족되지 않으면, 어노테이션에서 지정한 에러 메시지 표시
+
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a43c1b0d-fff9-4026-8da6-c8f8ebbd1f2c" width="80%">
+
+- ```Hibernate Validation``` : ```Bean Validation``` 스펙을 참조하는 구현체
+
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/fe447231-87ac-45b3-a139-cb7f234c7f73" width="80%">
+
+### 커스텀 ```Bean Validation``` 어노테이션을 사용한 ```POJO``` 빈 유효성 검증
+
+> 요구사항 : 사용자 입력 데이터가 비즈니스 요구 사항에 적합한지 검증할 때, 유효성 검사 커스텀마이징가 필요하다.
+
+- ```passay``` 라이브러리 : 비밀번호 규칙을 강제
+
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/3e6b49cc-b8b5-40e8-895d-d1a528fc384d" width="80%">
+
+- ```ConstraintValidator``` : 커스텀 어노테이션을 정의할 때, 제약 사항 준수를 위해 호출되는 인터페이스
+  - ```isValid``` 메소드 : 커스텀 유효성 검증 로직을 추가
+  - ```Password```, ```String``` 두개의 타입 인자를
+
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c096eb4f-e20a-4a0d-9b28-85c8c52ea0a3" width="80%">

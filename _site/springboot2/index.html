@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          5 분 소요
+          6 분 소요
         
       </span>
     
@@ -378,7 +378,7 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#어플리케이션-설정-관리--여러-환경에-따른-설정-정보의-다중화">어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화</a><ul><li><a href="#springapplication-클래스-사용">SpringApplication 클래스 사용</a></li><li><a href="#propertysource-사용">@PropertySource 사용</a></li><li><a href="#환경-설정-파일-applicationproperties-또는-applicationyml">환경 설정 파일 (application.properties 또는 application.yml)</a></li><li><a href="#운영-체제의-환경-변수">운영 체제의 환경 변수</a></li></ul></li><li><a href="#configurationproperties--커스텀-프로퍼티-생성">@ConfigurationProperties : 커스텀 프로퍼티 생성</a><ul><li><a href="#environment-인스턴스-주입을-통한-프로퍼티-값-사용">Environment 인스턴스 주입을 통한 프로퍼티 값 사용</a></li><li><a href="#configurationproperties-어노테이션을-사용한-커스텀-프로퍼티-정의">@ConfigurationProperties 어노테이션을 사용한 커스텀 프로퍼티 정의</a></li><li><a href="#commandrunner-applicationrunner로-스프링부트-어플리케이션-시작-시-코드-실행">CommandRunner, ApplicationRunner로 스프링부트 어플리케이션 시작 시 코드 실행</a></li><li><a href="#스프링부트-어플리케이션-로깅-커스터마이징">스프링부트 어플리케이션 로깅 커스터마이징</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#어플리케이션-설정-관리--여러-환경에-따른-설정-정보의-다중화">어플리케이션 설정 관리 : 여러 환경에 따른 설정 정보의 다중화</a><ul><li><a href="#springapplication-클래스-사용">SpringApplication 클래스 사용</a></li><li><a href="#propertysource-사용">@PropertySource 사용</a></li><li><a href="#환경-설정-파일-applicationproperties-또는-applicationyml">환경 설정 파일 (application.properties 또는 application.yml)</a></li><li><a href="#운영-체제의-환경-변수">운영 체제의 환경 변수</a></li></ul></li><li><a href="#configurationproperties--커스텀-프로퍼티-생성">@ConfigurationProperties : 커스텀 프로퍼티 생성</a><ul><li><a href="#environment-인스턴스-주입을-통한-프로퍼티-값-사용">Environment 인스턴스 주입을 통한 프로퍼티 값 사용</a></li><li><a href="#configurationproperties-어노테이션을-사용한-커스텀-프로퍼티-정의">@ConfigurationProperties 어노테이션을 사용한 커스텀 프로퍼티 정의</a></li><li><a href="#commandrunner-applicationrunner로-스프링부트-어플리케이션-시작-시-코드-실행">CommandRunner, ApplicationRunner로 스프링부트 어플리케이션 시작 시 코드 실행</a></li><li><a href="#스프링부트-어플리케이션-로깅-커스터마이징">스프링부트 어플리케이션 로깅 커스터마이징</a></li><li><a href="#스프링부트-어플리케이션에-log4j2-사용">스프링부트 어플리케이션에 Log4j2 사용</a></li><li><a href="#bean-validation으로-사용자-입력-데이터-유효성-검증">Bean Validation으로 사용자 입력 데이터 유효성 검증</a></li><li><a href="#커스텀-bean-validation-어노테이션을-사용한-pojo-빈-유효성-검증">커스텀 Bean Validation 어노테이션을 사용한 POJO 빈 유효성 검증</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -684,6 +684,7 @@ public class ProductionConfiguration {
 </ul>
 
 <h3 id="스프링부트-어플리케이션-로깅-커스터마이징">스프링부트 어플리케이션 로깅 커스터마이징</h3>
+
 <ul>
   <li>로거 (<code class="language-plaintext highlighter-rouge">Logger</code>) : 한 개 이상의 어펜더를 사용해 로그 메시지 표시를 담당하는 로깅 프레임워크 컴포넌트
     <ul>
@@ -706,9 +707,11 @@ public class ProductionConfiguration {
 <ul>
   <li>스프링부트 어플리케이션의 콘솔 로그는 기본으로 제공 : <code class="language-plaintext highlighter-rouge">Apache Commons</code> 로깅 프레임워크 사용
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">Logback</code>, <code class="language-plaintext highlighter-rouge">Log24</code> 등 로깅 프레임워크, 자바에서 제공하는 <code class="language-plaintext highlighter-rouge">java.util.logging</code> 또한 지원</li>
+      <li><code class="language-plaintext highlighter-rouge">Logback</code>, <code class="language-plaintext highlighter-rouge">Log4j2</code> 등 로깅 프레임워크, 자바에서 제공하는 <code class="language-plaintext highlighter-rouge">java.util.logging</code> 또한 지원</li>
     </ul>
   </li>
+  <li>로그 출력 패턴 : 로그를 구성하는 여러 요소들을 출력하는 형태 및 <code class="language-plaintext highlighter-rouge">ANSI</code> 색상을 지정할 수 있음</li>
+  <li>로그 롤링 (<code class="language-plaintext highlighter-rouge">Log Rolling</code>) : 나중에 확인할 수 있도록 로그의 양, 기간에 따라 별도의 파일에 나누어 저장</li>
 </ul>
 
 <blockquote>
@@ -724,9 +727,117 @@ public class ProductionConfiguration {
   </ul>
 </blockquote>
 
+<h3 id="스프링부트-어플리케이션에-log4j2-사용">스프링부트 어플리케이션에 <code class="language-plaintext highlighter-rouge">Log4j2</code> 사용</h3>
+
 <ul>
-  <li>로그 출력 패턴 :</li>
+  <li>기본으로 내장된 <code class="language-plaintext highlighter-rouge">logback</code> 의존 관계를 제거하고, <code class="language-plaintext highlighter-rouge">Log4j2</code> 의존 관계를 추가</li>
 </ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/8bc291f1-929b-4491-864c-5d8220a01dcc" width="80%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">XML</code>, <code class="language-plaintext highlighter-rouge">JSON</code>, <code class="language-plaintext highlighter-rouge">YAML</code> 형식 중 하나로 <code class="language-plaintext highlighter-rouge">Log4j2</code> 설정 파일 작성</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Configuration: # 로그 설정
+  name: DEFAULT # 설정 이름
+  status: "${env:LOGGING_LEVEL}" # 설정 상태
+
+  Appenders: # 설정 Appender
+    Console:
+      name: Console_Appender
+      target: SYSTEM_OUT # 출력 대상 (SYSTEM_OUT, SYSTEM_ERR)
+      PatternLayout: # 출력 패턴
+        charset: "${env:LOGGING_CHARSET}"
+        pattern: "${env:LOGGING_PATTERN}"
+        disableAnsi: false # ANSI 색상 미사용 여부
+    RollingFile:
+      name: RollingFile_Appender
+      fileName: "${env:LOGGING_FILENAME}" # 파일명
+      filePattern: "${env:LOGGING_FILE_PATTERN}" # 파일 패턴
+      PatternLayout:
+        charset: "${env:LOGGING_CHARSET}"
+        pattern: "${env:LOGGING_PATTERN}"
+      Policies:
+        SizeBasedTriggeringPolicy:
+          size: "${env:LOGGING_FILE_SIZE}" # 파일 크기
+        TimeBasedTriggeringPolicy:
+          interval: "${env:LOGGING_FILE_INTERVAL}" # 시간 간격
+  Loggers:
+    Root:
+      level: "${env:LOGGING_LEVEL}" # 루트 로거 레벨
+      AppenderRef:
+        - ref: Console_Appender # 루트 로거 출력 대상
+        - ref: RollingFile_Appender # 루트 로거 출력 대상
+    Logger:
+      name: vw.temp # 로거 이름
+      additivity: false # 상위 로거 출력 여부
+      level: "${env:LOGGING_LEVEL}" # 로거 레벨
+      AppenderRef:
+        - ref: Console_Appender
+        - ref: RollingFile_Appender
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">LoggerFactory</code> 클래스의 <code class="language-plaintext highlighter-rouge">getLogger</code> 메소드로 로거 인스턴스 생성
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">SLF4j</code> : 로깅 프레임워크를 빌드 타임에 플러그인 방식으로 사용할 수 있게 해주는 추상화 라이브러리</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/1e88dc92-a58e-498e-9eed-a4e79e238b54" width="80%" /></p>
+
+<h3 id="bean-validation으로-사용자-입력-데이터-유효성-검증"><code class="language-plaintext highlighter-rouge">Bean Validation</code>으로 사용자 입력 데이터 유효성 검증</h3>
+
+<blockquote>
+  <p>요구사항 : 사용자 입력 데이터가 비즈니스 요구 사항에 적합한지 검증해야 한다.</p>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Bean Validation</code> : 유효성 검사를 간단한 어노테이션으로 쉽게 구현 가능 + 커스텀 벨리데이터 생성 가능</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/d8aaac7b-75a7-4747-87b5-59fa9f86824a" width="80%" /></p>
+
+<ul>
+  <li>유효성 검사를 할 필드에 어노테이션을 붙어 비즈니스 제약 사항을 수행하는지 확인
+    <ul>
+      <li>제약 사항이 충족되지 않으면, 어노테이션에서 지정한 에러 메시지 표시</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/a43c1b0d-fff9-4026-8da6-c8f8ebbd1f2c" width="80%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Hibernate Validation</code> : <code class="language-plaintext highlighter-rouge">Bean Validation</code> 스펙을 참조하는 구현체</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/fe447231-87ac-45b3-a139-cb7f234c7f73" width="80%" /></p>
+
+<h3 id="커스텀-bean-validation-어노테이션을-사용한-pojo-빈-유효성-검증">커스텀 <code class="language-plaintext highlighter-rouge">Bean Validation</code> 어노테이션을 사용한 <code class="language-plaintext highlighter-rouge">POJO</code> 빈 유효성 검증</h3>
+
+<blockquote>
+  <p>요구사항 : 사용자 입력 데이터가 비즈니스 요구 사항에 적합한지 검증할 때, 유효성 검사 커스텀마이징가 필요하다.</p>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">passay</code> 라이브러리 : 비밀번호 규칙을 강제</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/3e6b49cc-b8b5-40e8-895d-d1a528fc384d" width="80%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ConstraintValidator</code> : 커스텀 어노테이션을 정의할 때, 제약 사항 준수를 위해 호출되는 인터페이스
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">isValid</code> 메소드 : 커스텀 유효성 검증 로직을 추가</li>
+      <li><code class="language-plaintext highlighter-rouge">Password</code>, <code class="language-plaintext highlighter-rouge">String</code> 두개의 타입 인자를</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c096eb4f-e20a-4a0d-9b28-85c8c52ea0a3" width="80%" /></p>
 
         
       </section>
