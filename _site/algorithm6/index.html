@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          1 분 소요
         
       </span>
     
@@ -378,7 +378,7 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#큐-queue--선입선출-fifo로-데이터를-처리하는-자료구조">큐 (Queue) : 선입선출 (FIFO)로 데이터를 처리하는 자료구조</a></li><li><a href="#boj-2164번-카드2-s4">BOJ 2164번. 카드2 (S4)</a></li><li><a href="#boj-11866번-요세푸스-문제-0-s5">BOJ 11866번. 요세푸스 문제 0 (S5)</a></li><li><a href="#boj-18258번-큐-2-s4">BOJ 18258번. 큐 2 (S4)</a></li></ul>
+              <ul class="toc__menu"><li><a href="#큐-queue--선입선출-fifo로-데이터를-처리하는-자료구조">큐 (Queue) : 선입선출 (FIFO)로 데이터를 처리하는 자료구조</a></li><li><a href="#boj-1966번-프린터-큐-s3">BOJ 1966번. 프린터 큐 (S3)</a></li><li><a href="#boj-2164번-카드2-s4">BOJ 2164번. 카드2 (S4)</a></li><li><a href="#boj-11866번-요세푸스-문제-0-s5">BOJ 11866번. 요세푸스 문제 0 (S5)</a></li><li><a href="#boj-18258번-큐-2-s4">BOJ 18258번. 큐 2 (S4)</a></li></ul>
 
             </nav>
           </aside>
@@ -388,6 +388,37 @@ function checkAndLoadPage(allImages) {
 <div style="filter: invert(100%);">
   <img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/741e3c68-5b29-4ce2-933e-bb3c53efb244" width="50%" />
 </div>
+
+<h2 id="boj-1966번-프린터-큐-s3"><a href="https://www.acmicpc.net/problem/1966">BOJ 1966번. 프린터 큐 (<code class="language-plaintext highlighter-rouge">S3</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+from collections import deque
+
+read = sys.stdin.readline
+
+T = int(read())
+
+for i in range(0, T):
+    n, m = map(int, read().split())
+    queue = deque(map(int, read().split()))
+
+    count = 0
+    while queue:
+        maxi = max(queue)
+        front = queue.popleft()
+        m -= 1
+
+        if maxi == front:
+            count += 1
+            if m &lt; 0:
+                print(count)
+                break
+
+        else:
+            queue.append(front)
+            if m &lt; 0:
+                m = len(queue) - 1
+</code></pre></div></div>
 
 <h2 id="boj-2164번-카드2-s4"><a href="https://www.acmicpc.net/problem/2164">BOJ 2164번. 카드2 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
 

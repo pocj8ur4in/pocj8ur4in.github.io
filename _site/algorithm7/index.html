@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          1 분 소요
         
       </span>
     
@@ -378,7 +378,7 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#브루트-포스-brute-force--가능한-모든-경우의-수를-완전탐색해-충족되는-결과를-가져오는-알고리즘">브루트 포스 (Brute-Force) : 가능한 모든 경우의 수를 ‘완전탐색’해 충족되는 결과를 가져오는 알고리즘</a></li><li><a href="#boj-1018번-체스판-다시-칠하기-s4">BOJ 1018번. 체스판 다시 칠하기 (S4)</a></li><li><a href="#boj-1065번-한수-s4">BOJ 1065번. 한수 (S4)</a></li><li><a href="#boj-1436번-영화감독-숌-s5">BOJ 1436번. 영화감독 숌 (S5)</a></li></ul>
+              <ul class="toc__menu"><li><a href="#브루트-포스-brute-force--가능한-모든-경우의-수를-완전탐색해-충족되는-결과를-가져오는-알고리즘">브루트 포스 (Brute-Force) : 가능한 모든 경우의 수를 ‘완전탐색’해 충족되는 결과를 가져오는 알고리즘</a></li><li><a href="#boj-1018번-체스판-다시-칠하기-s4">BOJ 1018번. 체스판 다시 칠하기 (S4)</a></li><li><a href="#boj-1065번-한수-s4">BOJ 1065번. 한수 (S4)</a></li><li><a href="#boj-1182번-부분수열의-합-s2">BOJ 1182번. 부분수열의 합 (S2)</a></li><li><a href="#boj-1436번-영화감독-숌-s5">BOJ 1436번. 영화감독 숌 (S5)</a></li></ul>
 
             </nav>
           </aside>
@@ -436,6 +436,26 @@ for i in range(1, N + 1):
             ans += 1
 
 print(ans)
+</code></pre></div></div>
+
+<h2 id="boj-1182번-부분수열의-합-s2"><a href="https://www.acmicpc.net/problem/1182">BOJ 1182번. 부분수열의 합 (<code class="language-plaintext highlighter-rouge">S2</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+from itertools import combinations
+
+read = sys.stdin.readline
+
+
+N, S = map(int, read().split())
+arr = list(map(int, read().split()))
+result = 0
+
+for i in range(1, N + 1):
+    for j in combinations(arr, i):
+        if sum(j) == S:
+            result += 1
+
+print(result)
 </code></pre></div></div>
 
 <h2 id="boj-1436번-영화감독-숌-s5"><a href="https://www.acmicpc.net/problem/1436">BOJ 1436번. 영화감독 숌 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h2>
