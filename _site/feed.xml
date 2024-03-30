@@ -1,4 +1,248 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-21T15:07:52+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[Algorithm] 18. 투 포인터</title><link href="http://localhost:4000/algorithm18/" rel="alternate" type="text/html" title="[Algorithm] 18. 투 포인터" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm18</id><content type="html" xml:base="http://localhost:4000/algorithm18/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 17. 최단 경로</title><link href="http://localhost:4000/algorithm17/" rel="alternate" type="text/html" title="[Algorithm] 17. 최단 경로" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm17</id><content type="html" xml:base="http://localhost:4000/algorithm17/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 16. 우선순위 큐</title><link href="http://localhost:4000/algorithm16/" rel="alternate" type="text/html" title="[Algorithm] 16. 우선순위 큐" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm16</id><content type="html" xml:base="http://localhost:4000/algorithm16/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 15. 이분 탐색</title><link href="http://localhost:4000/algorithm15/" rel="alternate" type="text/html" title="[Algorithm] 15. 이분 탐색" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm15</id><content type="html" xml:base="http://localhost:4000/algorithm15/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 14. 누적 합</title><link href="http://localhost:4000/algorithm14/" rel="alternate" type="text/html" title="[Algorithm] 14. 누적 합" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm14</id><content type="html" xml:base="http://localhost:4000/algorithm14/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 13. 동적 계획법</title><link href="http://localhost:4000/algorithm13/" rel="alternate" type="text/html" title="[Algorithm] 13. 동적 계획법" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm13</id><content type="html" xml:base="http://localhost:4000/algorithm13/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 12. 백트래킹</title><link href="http://localhost:4000/algorithm12/" rel="alternate" type="text/html" title="[Algorithm] 12. 백트래킹" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm12</id><content type="html" xml:base="http://localhost:4000/algorithm12/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 11. 정렬</title><link href="http://localhost:4000/algorithm11/" rel="alternate" type="text/html" title="[Algorithm] 11. 정렬" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm11</id><content type="html" xml:base="http://localhost:4000/algorithm11/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-30T09:51:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">pocj8ur4in’s blog</title><subtitle></subtitle><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><entry><title type="html">[SpringBoot] 3. Spring Data</title><link href="http://localhost:4000/springboot3/" rel="alternate" type="text/html" title="[SpringBoot] 3. Spring Data" /><published>2024-03-26T00:00:00+09:00</published><updated>2024-03-30T00:00:00+09:00</updated><id>http://localhost:4000/springboot3</id><content type="html" xml:base="http://localhost:4000/springboot3/"><![CDATA[<h2 id="스프링-데이터-spring-data--다양한-데이터-소스에-접근해-데이터를-활용">스프링 데이터 (<code class="language-plaintext highlighter-rouge">Spring Data</code>) : 다양한 데이터 소스에 접근해 데이터를 활용</h2>
+
+<ul>
+  <li>스프링 데이터는 여러 데이터 스토어를 지원하는 개별 프로젝트를 포함하는 상위 프로젝트
+    <ul>
+      <li>여러 데이터 소스의 데이터를 다룰 때 일관성 있는 프로그래밍 모델 제공</li>
+      <li>비즈니스 도메인 객체를 특정 데이터 스토어에 저장 가능</li>
+      <li>관계형 데이터베이스와 스프링 데이터 <code class="language-plaintext highlighter-rouge">JPA</code>를 사용해서 비즈니스 객체 관리 가능</li>
+    </ul>
+  </li>
+  <li>스프링 템플릿 (<code class="language-plaintext highlighter-rouge">Spring Template</code>) : 특정 데이터베이스의 다양한 연산을 수행 가능한 클래스
+    <ul>
+      <li>템플릿 클래스에서 저장소별 특화된 자원을 관리하고 예외를 변환할 수 있게 해주는 헬퍼 메서드가 포함</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="스프링-데이터-모듈-spring-data-module">스프링 데이터 모듈 (<code class="language-plaintext highlighter-rouge">Spring Data Module</code>)</h3>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/4fce3081-c961-42e5-b1ba-b07b8d7cb31d" width="80%" /></p>
+
+<ul>
+  <li>스프링 데이터 커먼즈 : 데이터 스토어의 독립적인 기초 컴포넌트로 구성
+    <ul>
+      <li>스프링 데이터 <code class="language-plaintext highlighter-rouge">JPA</code>의 <code class="language-plaintext highlighter-rouge">JpaRepository</code> 인터페이스는 스프링 데이터 커먼즈 내 <code class="language-plaintext highlighter-rouge">PagingAndSortingRepository</code>의 <code class="language-plaintext highlighter-rouge">CRUD</code>, 페이징, 정렬 기능을 상속<br /><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/666ac803-a66b-4d03-b3ba-64d8caf9117f" width="80%" /></li>
+    </ul>
+  </li>
+  <li>스프링 데이터 서브 모듈 : 특정 데이터베이스에 특화된 기능을 포함</li>
+</ul>
+
+<h3 id="스프링부트-어플리케이션-데이터베이스-연동-설정">스프링부트 어플리케이션 데이터베이스 연동 설정</h3>
+
+<blockquote>
+  <p>요구사항 : 스프링부트에 관계형 데이터베이스를 연동하기 위해선, 어플리케이션에 관련 설정 작업을 해야 한다.</p>
+</blockquote>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/2fe98ffc-7530-4a29-8c15-5b386a9cc01c" width="80%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">application.properties</code>에 데이터베이스 연결 정보를 작성할 수 있음</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/125bd13f-b45c-45e7-8363-4936c6ae6b33" width="80%" /></p>
+
+<blockquote>
+  <p>요구사항 : 어플리케이션을 시작할 때, 데이터베이스 내 스키마를 적절히 초기화해야 한다.</p>
+</blockquote>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">src/main/resources/</code> 폴더의 <code class="language-plaintext highlighter-rouge">.sql</code> 파일을 통해 스키마 정의 및 스크립트 실행이 가능</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/ed4f1d35-6e23-4695-8691-83b53e0d73cc" width="80%" /></p>
+
+<h3 id="crudrepository-pagingandsortingrepository-인터페이스-이해"><code class="language-plaintext highlighter-rouge">CrudRepository</code>, <code class="language-plaintext highlighter-rouge">PagingAndSortingRepository</code> 인터페이스 이해</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Repository</code> : 비즈니스 도메인 클래스와 그 식별자로 데이터 소스 접근을 추상화하는 인터페이스
+    <ul>
+      <li>객체의 런타임 타입 정보만을 알려주는 마커 (<code class="language-plaintext highlighter-rouge">marker</code>) 인터페이스</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/21d76eb4-360c-4728-970e-8e89a694ec35" width="80%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">CrudRepository</code> : <code class="language-plaintext highlighter-rouge">Repository</code>를 상속받아 <code class="language-plaintext highlighter-rouge">CRUD</code> 연산을 포함하는 하위 인터페이스</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/e9253a24-e0b4-41fa-bd24-ed593e818519" width="80%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">PagingAndSortingRepository</code> : 페이징 (<code class="language-plaintext highlighter-rouge">pagination</code>)과 정렬 (<code class="language-plaintext highlighter-rouge">sort</code>) 기능을 포함</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/974dcccb-9eec-4414-a7e7-e151658f5a3d" width="80%" /></p>
+
+<blockquote>
+  <p>요구사항 : 스프링 데이터 <code class="language-plaintext highlighter-rouge">JPA</code>를 사용해 도메인 객체를 관계형 데이터베이스에 저장하고 관리한다.</p>
+</blockquote>
+
+<ul>
+  <li>엔티티에 <code class="language-plaintext highlighter-rouge">@Id</code>, <code class="language-plaintext highlighter-rouge">@Column</code>, <code class="language-plaintext highlighter-rouge">GeneratedValue</code> 어노테이션 추가
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">@Transactional</code> : 메소드 실행 중 발생하는 데이터 작업을 하나의 트랙잭션으로 처리</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/46bfc342-f746-46f2-932d-c54da6119e1c" width="80%" /></p>
+
+<ul>
+  <li>엔티티를 관리하기 위한 레포지토리 인터페이스 작성</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/466f2dd2-eb57-4794-b63b-35018944d03e" width="80%" /></p>
+
+<h3 id="쿼리-메소드-namedquery를-통한-스프링-데이터를-사용한-데이터-조회">쿼리 메소드, <code class="language-plaintext highlighter-rouge">@NamedQuery</code>를 통한 스프링 데이터를 사용한 데이터 조회</h3>
+
+<ul>
+  <li>쿼리 메소드 : 리포지토리 인터페이스에 정의하는 메소드 이름을 패턴에 맞춰 작성하면 이름을 파싱해 쿼리 생성</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/b7a77f68-f866-4070-9107-1861e56843c5" width="80%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">@NamedQuery</code> : 직접 쿼리문을 지정해 데이터를 조회 (2개 이상의 테이블을 조인해 데이터를 조회)
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">@@Modifying</code> : <code class="language-plaintext highlighter-rouge">@Query</code> 에 정의된 쿼리가 조회가 아닌 수정 작업을 수행한다는 것을 명시</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c3772e60-0728-4f77-90c9-5cc44552742a" width="80%" /></p>
+
+<h3 id="타입-검사-쿼리-정적-검사를-위한-criteria-api-사용">타입 검사, 쿼리 정적 검사를 위한 <code class="language-plaintext highlighter-rouge">Criteria API</code> 사용</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Criteria API</code> : 쿼리를 단순 문자열이 아닌 프로그램 코드로 작성해 타입 안정성 보장 가능</li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/496e64e0-1202-45c5-94fa-bc15d25758cf" width="80%" /></p>
+
+<h3 id="스프링-데이터-jpa와-querydsl">스프링 데이터 <code class="language-plaintext highlighter-rouge">JPA</code>와 <code class="language-plaintext highlighter-rouge">QueryDSL</code></h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">QueryDSL</code> : <code class="language-plaintext highlighter-rouge">Criteria API</code>처럼 타입 안정성을 보장하고, 평문형 <code class="language-plaintext highlighter-rouge">API</code>로 코드 작성량 을 줄임
+    <ul>
+      <li>쿼리에 포함된 엔티티 타입이 실제로 존재하고, 해당 엔티티를 데이터베이스에 저장 가능</li>
+      <li>쿼리에 포함된 모든 프로퍼티가 엔티티에 실제로 조직하고, 해당 프로퍼티를 데이터베이스에 저장 가능</li>
+      <li>모든 <code class="language-plaintext highlighter-rouge">SQL</code> 연산자에는 적합한 타입이 사용되며, 최종 쿼리가 문법적으로 올바름</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/6e06e455-8a6a-4851-a84d-50e3490cea87" width="80%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">querydsl-apt</code> : 소스 파일의 어노테이션을 컴파일 단계 이전에 먼저 처리하는 어노테이션 처리 도구
+    <ul>
+      <li>어플리케이션에 포함된 엔티티 클래스를 바탕으로 <code class="language-plaintext highlighter-rouge">Q</code>-타입 클래스 생성</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">querydsl-jpa</code> : <code class="language-plaintext highlighter-rouge">JPA</code>를 사용하는 어플리케이션에서 <code class="language-plaintext highlighter-rouge">QueryDSL</code>을 사용할 수 있게 함</li>
+  <li><code class="language-plaintext highlighter-rouge">apt-maven-gradle</code> : 메이븐의 프로세스 골에서 <code class="language-plaintext highlighter-rouge">Q</code>-타입 클래스가 생성되는 것을 보장
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">outputDirectory</code> 프로퍼티로 <code class="language-plaintext highlighter-rouge">Q</code>-타입 클래스 파일이 저장될 위치 지정</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/fb3eebf7-6845-4cbf-aafa-d43c23fb7867" width="80%" /></p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="SpringBoot" /><summary type="html"><![CDATA[스프링 데이터 (Spring Data) : 다양한 데이터 소스에 접근해 데이터를 활용]]></summary></entry><entry><title type="html">[Algorithm] 17. 최단 경로</title><link href="http://localhost:4000/algorithm17/" rel="alternate" type="text/html" title="[Algorithm] 17. 최단 경로" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm17</id><content type="html" xml:base="http://localhost:4000/algorithm17/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 16. 우선순위 큐</title><link href="http://localhost:4000/algorithm16/" rel="alternate" type="text/html" title="[Algorithm] 16. 우선순위 큐" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm16</id><content type="html" xml:base="http://localhost:4000/algorithm16/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 15. 이분 탐색</title><link href="http://localhost:4000/algorithm15/" rel="alternate" type="text/html" title="[Algorithm] 15. 이분 탐색" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm15</id><content type="html" xml:base="http://localhost:4000/algorithm15/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 14. 누적 합</title><link href="http://localhost:4000/algorithm14/" rel="alternate" type="text/html" title="[Algorithm] 14. 누적 합" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm14</id><content type="html" xml:base="http://localhost:4000/algorithm14/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 13. 동적 계획법</title><link href="http://localhost:4000/algorithm13/" rel="alternate" type="text/html" title="[Algorithm] 13. 동적 계획법" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm13</id><content type="html" xml:base="http://localhost:4000/algorithm13/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 12. 백트래킹</title><link href="http://localhost:4000/algorithm12/" rel="alternate" type="text/html" title="[Algorithm] 12. 백트래킹" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm12</id><content type="html" xml:base="http://localhost:4000/algorithm12/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>
+
+<h2 id="boj-15649번-n과-m-1-s3"><a href="https://www.acmicpc.net/problem/15649">BOJ 15649번. N과 M (1) (<code class="language-plaintext highlighter-rouge">S3</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+
+def bt(ars, cnt):
+    if cnt == M:
+        arr.append(ars)
+    else:
+        for i in range(1, N + 1):
+            if i not in ars:
+                tmp = ars.copy()
+                tmp.append(i)
+                bt(tmp, cnt + 1)
+
+
+N, M = map(int, read().split())
+arr = []
+
+bt([], 0)
+
+for i in arr:
+    result = ""
+
+    for j in i:
+        result = result + str(j) + " "
+
+    print(result)
+</code></pre></div></div>
+
+<h2 id="boj-15650번-n과-m-2-s3"><a href="https://www.acmicpc.net/problem/15650">BOJ 15650번. N과 M (2) (<code class="language-plaintext highlighter-rouge">S3</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+
+def bt(ars, cnt):
+    if cnt == M:
+        arr.add(tuple(sorted(ars)))
+    else:
+        for i in range(1, N + 1):
+            if i not in ars:
+                tmp = ars.copy()
+                tmp.append(i)
+                bt(tmp, cnt + 1)
+
+
+N, M = map(int, read().split())
+arr = set()
+
+bt([], 0)
+
+for i in sorted(arr):
+    result = ""
+
+    for j in i:
+        result = result + str(j) + " "
+
+    print(result)
+</code></pre></div></div>
+
+<h2 id="boj-15651번-n과-m-3-s3"><a href="https://www.acmicpc.net/problem/15651">BOJ 15651번. N과 M (3) (<code class="language-plaintext highlighter-rouge">S3</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+read = sys.stdin.readline
+
+
+def bt(ars, cnt):
+    if cnt == M:
+        arr.append(ars)
+    else:
+        for i in range(1, N + 1):
+            tmp = ars.copy()
+            tmp.append(i)
+            bt(tmp, cnt + 1)
+
+
+N, M = map(int, read().split())
+arr = []
+
+bt([], 0)
+
+for i in arr:
+    result = ""
+
+    for j in i:
+        result = result + str(j) + " "
+
+    print(result)
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry><entry><title type="html">[Algorithm] 11. 정렬</title><link href="http://localhost:4000/algorithm11/" rel="alternate" type="text/html" title="[Algorithm] 11. 정렬" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm11</id><content type="html" xml:base="http://localhost:4000/algorithm11/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>
 
 <h2 id="boj-1181번-단어-정렬-s5"><a href="https://www.acmicpc.net/problem/1181">BOJ 1181번. 단어 정렬 (<code class="language-plaintext highlighter-rouge">S5</code>)</a></h2>
 
@@ -157,6 +401,29 @@ for n in range(len(D)):
   <li>변수의 이름과 값을 연결하여 데이터를 저장하고 검색하는 데에 효율적</li>
 </ul>
 
+<h2 id="boj-1620번-나는야-포켓몬-마스터-이다솜-s4"><a href="https://www.acmicpc.net/problem/1620">BOJ 1620번. 나는야 포켓몬 마스터 이다솜 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+
+read = sys.stdin.readline
+
+N, M = map(int, read().split())
+pocket = dict()
+
+for i in range(1, N + 1):
+    pocket[i] = read().rstrip()
+
+convert_pocket = {v:k for k,v in pocket.items()}
+
+for i in range(0, M):
+    search = read().rstrip()
+
+    if search[0].isdigit():
+        print(pocket.get(int(search)))
+    else:
+        print(convert_pocket.get(search))
+</code></pre></div></div>
+
 <h2 id="boj-25192번-인사성-밝은-곰곰이-s4"><a href="https://www.acmicpc.net/problem/25192">BOJ 25192번. 인사성 밝은 곰곰이 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
@@ -195,4 +462,74 @@ for n in range(N):
         S.add(X)
 
 print(str(S.__len__()))
-</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[집합 (Set) : 데이터를 중복 없는 유일한 값으로 저장해 비순차적으로 처리하는 자료구조]]></summary></entry><entry><title type="html">[Algorithm] 21. 최소 신장 트리</title><link href="http://localhost:4000/algorithm21/" rel="alternate" type="text/html" title="[Algorithm] 21. 최소 신장 트리" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm21</id><content type="html" xml:base="http://localhost:4000/algorithm21/"><![CDATA[<p class="notice--primary"><strong>이 포스트는 현재 작성중입니다. </strong><br />미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.</p>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[집합 (Set) : 데이터를 중복 없는 유일한 값으로 저장해 비순차적으로 처리하는 자료구조]]></summary></entry><entry><title type="html">[Algorithm] 22. 계산 기하</title><link href="http://localhost:4000/algorithm22/" rel="alternate" type="text/html" title="[Algorithm] 22. 계산 기하" /><published>2024-03-12T00:00:00+09:00</published><updated>2024-03-12T00:00:00+09:00</updated><id>http://localhost:4000/algorithm22</id><content type="html" xml:base="http://localhost:4000/algorithm22/"><![CDATA[<h2 id="계산-기하-computational-geometry--점선다각형원-등-기하학적-도형을-다루는-알고리즘">계산 기하 (<code class="language-plaintext highlighter-rouge">Computational Geometry</code>) : 점·선·다각형·원 등 기하학적 도형을 다루는 알고리즘</h2>
+
+<ul>
+  <li>기하학 (<code class="language-plaintext highlighter-rouge">Geometry</code>) : 공간에 있는 도형의 성질을 분석하는 수학의 하위 분야</li>
+</ul>
+
+<h2 id="boj-1002번-터렛-s3"><a href="https://www.acmicpc.net/problem/1002">BOJ 1002번. 터렛 (<code class="language-plaintext highlighter-rouge">S3</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+import math
+read = sys.stdin.readline
+
+T = int(read())
+
+for i in range(T):
+    N = read().split()
+    N = [int(n) for n in N]
+
+    Z = math.sqrt((N[0] - N[3]) ** 2 + (N[1] - N[4]) ** 2)
+
+    if Z == 0 and N[2] == 0 and N[5] == 0:
+        print(1)
+    elif N[2] + N[5] &gt; Z &gt; abs(N[2] - N[5]):  # 접점 2개
+        print(2)
+    elif (N[2] + N[5] == Z or abs(N[2] - N[5]) == Z) and Z != 0:  # 접점 1개
+        print(1)
+    elif N[2] + N[5] &lt; Z or abs(N[2] - N[5]) &gt; Z:  # 접점 0개
+        print(0)
+    elif Z == 0 and N[2] == N[5]:
+        print(-1)
+</code></pre></div></div>
+
+<h2 id="boj-1004번-어린-왕자-s3"><a href="https://www.acmicpc.net/problem/1004">BOJ 1004번. 어린 왕자 (<code class="language-plaintext highlighter-rouge">S3</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+import math
+
+read = sys.stdin.readline
+
+T = int(read())
+
+for t in range(T):
+    x1, y1, x2, y2 = map(int, read().rstrip().split())
+
+    N = int(read())
+    L1 = []
+
+    for n in range(N):
+        L2 = list(map(int, read().rstrip().split()))
+        L1.append(L2)
+
+    ans = 0
+
+    for n in range(N):
+        cnt = 0
+
+        for m in range(2):
+            if m == 0:
+                D = math.sqrt((x1 - L1[n][0]) ** 2 + (y1 - L1[n][1]) ** 2)
+                if D &lt; L1[n][2]:
+                    cnt += 1
+            else:
+                D = math.sqrt((x2 - L1[n][0]) ** 2 + (y2 - L1[n][1]) ** 2)
+                if D &lt; L1[n][2]:
+                    cnt += 1
+
+        if cnt == 1:
+            ans += 1
+
+    print(ans)
+</code></pre></div></div>]]></content><author><name>pocj8ur4in</name><email>pocj8ur4in@gmail.com</email></author><category term="Algorithm" /><summary type="html"><![CDATA[계산 기하 (Computational Geometry) : 점·선·다각형·원 등 기하학적 도형을 다루는 알고리즘]]></summary></entry></feed>

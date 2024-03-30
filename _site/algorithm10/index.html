@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          1 분 소요
         
       </span>
     
@@ -378,7 +378,7 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#집합-set--데이터를-중복-없는-유일한-값으로-저장해-비순차적으로-처리하는-자료구조">집합 (Set) : 데이터를 중복 없는 유일한 값으로 저장해 비순차적으로 처리하는 자료구조</a></li><li><a href="#맵-map--키-key와-값-value를-쌍으로-데이터를-처리하는-자료구조">맵 (Map) : 키 (Key)와 값 (Value)를 쌍으로 데이터를 처리하는 자료구조</a></li><li><a href="#boj-25192번-인사성-밝은-곰곰이-s4">BOJ 25192번. 인사성 밝은 곰곰이 (S4)</a></li><li><a href="#boj-26069번-붙임성-좋은-총총이-s4">BOJ 26069번. 붙임성 좋은 총총이 (S4)</a></li></ul>
+              <ul class="toc__menu"><li><a href="#집합-set--데이터를-중복-없는-유일한-값으로-저장해-비순차적으로-처리하는-자료구조">집합 (Set) : 데이터를 중복 없는 유일한 값으로 저장해 비순차적으로 처리하는 자료구조</a></li><li><a href="#맵-map--키-key와-값-value를-쌍으로-데이터를-처리하는-자료구조">맵 (Map) : 키 (Key)와 값 (Value)를 쌍으로 데이터를 처리하는 자료구조</a></li><li><a href="#boj-1620번-나는야-포켓몬-마스터-이다솜-s4">BOJ 1620번. 나는야 포켓몬 마스터 이다솜 (S4)</a></li><li><a href="#boj-25192번-인사성-밝은-곰곰이-s4">BOJ 25192번. 인사성 밝은 곰곰이 (S4)</a></li><li><a href="#boj-26069번-붙임성-좋은-총총이-s4">BOJ 26069번. 붙임성 좋은 총총이 (S4)</a></li></ul>
 
             </nav>
           </aside>
@@ -401,6 +401,29 @@ function checkAndLoadPage(allImages) {
   <li>파이썬에서는 <code class="language-plaintext highlighter-rouge">{}</code>로 정의하고 키·값이 <code class="language-plaintext highlighter-rouge">:</code>으로 구분하는 딕셔너리 (<code class="language-plaintext highlighter-rouge">dictionary</code>)가 맵 자료구조</li>
   <li>변수의 이름과 값을 연결하여 데이터를 저장하고 검색하는 데에 효율적</li>
 </ul>
+
+<h2 id="boj-1620번-나는야-포켓몬-마스터-이다솜-s4"><a href="https://www.acmicpc.net/problem/1620">BOJ 1620번. 나는야 포켓몬 마스터 이다솜 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import sys
+
+read = sys.stdin.readline
+
+N, M = map(int, read().split())
+pocket = dict()
+
+for i in range(1, N + 1):
+    pocket[i] = read().rstrip()
+
+convert_pocket = {v:k for k,v in pocket.items()}
+
+for i in range(0, M):
+    search = read().rstrip()
+
+    if search[0].isdigit():
+        print(pocket.get(int(search)))
+    else:
+        print(convert_pocket.get(search))
+</code></pre></div></div>
 
 <h2 id="boj-25192번-인사성-밝은-곰곰이-s4"><a href="https://www.acmicpc.net/problem/25192">BOJ 25192번. 인사성 밝은 곰곰이 (<code class="language-plaintext highlighter-rouge">S4</code>)</a></h2>
 
@@ -529,6 +552,47 @@ print(str(S.__len__()))
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
+        <a href="/springboot3/" rel="permalink">[SpringBoot] 3. Spring Data
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">스프링 데이터 (Spring Data) : 다양한 데이터 소스에 접근해 데이터를 활용
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
         <a href="/algorithm22/" rel="permalink">[Algorithm] 22. 계산 기하
 </a>
       
@@ -611,46 +675,6 @@ print(str(S.__len__()))
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/algorithm20/" rel="permalink">[Algorithm] 20. 유니온 파인드
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/algorithm19/" rel="permalink">[Algorithm] 19. 트리
 </a>
       
     </h2>

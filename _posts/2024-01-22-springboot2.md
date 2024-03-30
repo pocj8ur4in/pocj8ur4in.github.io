@@ -137,7 +137,7 @@ app.timeout=${APP_TIMEOUT}
 
 ### ```@ConfigurationProperties``` 어노테이션을 사용한 커스텀 프로퍼티 정의
 
-> 요구 사항 : 커스텀 프로퍼티에 대한 타입 안정성을 보장하고, 값의 유효성을 검증해야 한다.
+> 요구사항 : 커스텀 프로퍼티에 대한 타입 안정성을 보장하고, 값의 유효성을 검증해야 한다.
 
 - 설정 처리기 (```Configuration Processor``` )로 ```@ConfigurationProperties```가 붙은 클래스 메타데이터 생성
   - ```spring-boot-configuration-processor``` 의존 관계를 추가해 스프링부트 설정 처리기를 활성화
@@ -174,7 +174,7 @@ app.timeout=${APP_TIMEOUT}
 
 ### ```CommandRunner```, ```ApplicationRunner```로 스프링부트 어플리케이션 시작 시 코드 실행
 
-> 요구 사항 : 어플리케이션 초기화 이전에 ```DB``` 초기화 스크립트를 실행하거나, 외부 ```REST``` 서비스를 호출해서 데이터를 가져오는 상황이 있을 수 있다.
+> 요구사항 : 어플리케이션 초기화 이전에 ```DB``` 초기화 스크립트를 실행하거나, 외부 ```REST``` 서비스를 호출해서 데이터를 가져오는 상황이 있을 수 있다.
 
 - 스프링부트 메인 클래스가 ```CommandRunner``` 인터페이스를 구현
 
@@ -207,7 +207,7 @@ app.timeout=${APP_TIMEOUT}
     - ```RollingFileAppender``` : 시간과 날짜 기반으로 별도의 파일에 로그 출력
     - ```SmtpAppender``` : 정해진 이메일 주소로 로그 출력
 
-> 요구 사항 : 어플리케이션에 발생하는 중요 이벤트와 어플리케이션 동작에 대한 로그를 출력하는 로깅은 필수적이다.
+> 요구사항 : 어플리케이션에 발생하는 중요 이벤트와 어플리케이션 동작에 대한 로그를 출력하는 로깅은 필수적이다.
 
 - 스프링부트 어플리케이션의 콘솔 로그는 기본으로 제공 : ```Apache Commons``` 로깅 프레임워크 사용
   - ```Logback```, ```Log4j2``` 등 로깅 프레임워크, 자바에서 제공하는 ```java.util.logging``` 또한 지원
@@ -295,14 +295,18 @@ Configuration: # 로그 설정
 
 ### 커스텀 ```Bean Validation``` 어노테이션을 사용한 ```POJO``` 빈 유효성 검증
 
-> 요구사항 : 사용자 입력 데이터가 비즈니스 요구 사항에 적합한지 검증할 때, 유효성 검사 커스텀마이징가 필요하다.
+> 요구사항 : 사용자 입력 데이터가 비즈니스 요구 사항에 적합한지 검증할 때, 유효성 검사 커스텀마이징이 필요하다.
 
 - ```passay``` 라이브러리 : 비밀번호 규칙을 강제
 
 <img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/3e6b49cc-b8b5-40e8-895d-d1a528fc384d" width="80%">
 
 - ```ConstraintValidator``` : 커스텀 어노테이션을 정의할 때, 제약 사항 준수를 위해 호출되는 인터페이스
-  - ```isValid``` 메소드 : 커스텀 유효성 검증 로직을 추가
-  - ```Password```, ```String``` 두개의 타입 인자를
+  - ```isValid``` 메소드는 비밀번호 유효성 검증에 사용하는 커스텀 로직이 정의 → ```true/false``` 반환
+  - 첫번째 인자 ```Password```는 커스텀 벨리데이터 로직을 적용하는 어노테이션 → ```@String```
+  - 두번째 인자 ```String```은 커스텀 어노테이션을 적용해야 하는 데이터 타입
 
 <img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/c096eb4f-e20a-4a0d-9b28-85c8c52ea0a3" width="80%">
+
+<img src="https://github.com/pocj8ur4in/pocj8ur4in.github.io/assets/105341168/89949354-15ea-4159-bccb-fb5143d23393" width="80%">
+

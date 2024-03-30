@@ -361,6 +361,10 @@
 <lastmod>2024-03-12T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/springboot3/</loc>
+<lastmod>2024-03-30T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
@@ -392,6 +396,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/page9/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page10/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/googlece206819820f99f5.html</loc>
