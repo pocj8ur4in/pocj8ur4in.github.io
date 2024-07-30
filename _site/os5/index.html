@@ -54,7 +54,7 @@ function checkAndLoadPage(allImages) {
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Operation System] 5. Thread - pocj8ur4in’s blog</title>
+<!-- begin _includes/seo.html --><title>[OS] 5. 쓰레드 (Thread) - pocj8ur4in’s blog</title>
 <meta name="description" content="쓰레드 (Thread) : 프로세스 내부의 흐름">
 
 
@@ -67,7 +67,7 @@ function checkAndLoadPage(allImages) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[Operation System] 5. Thread">
+<meta property="og:title" content="[OS] 5. 쓰레드 (Thread)">
 <meta property="og:url" content="http://localhost:4000/os5/">
 
 
@@ -83,7 +83,7 @@ function checkAndLoadPage(allImages) {
 
 
 
-  <meta property="article:modified_time" content="2022-12-12T00:00:00+09:00">
+  <meta property="article:modified_time" content="2024-07-30T00:00:00+09:00">
 
 
 
@@ -211,7 +211,7 @@ function checkAndLoadPage(allImages) {
         <span class="sep">/</span>
       
       
-        <li class="current">[Operation System] 5. Thread</li>
+        <li class="current">[OS] 5. 쓰레드 (Thread)</li>
       
     
   </ol>
@@ -337,16 +337,16 @@ function checkAndLoadPage(allImages) {
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Operation System] 5. Thread">
+    <meta itemprop="headline" content="[OS] 5. 쓰레드 (Thread)">
     <meta itemprop="description" content="쓰레드 (Thread) : 프로세스 내부의 흐름">
     <meta itemprop="datePublished" content="2022-10-07T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2022-12-12T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-07-30T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/os5/" class="u-url" itemprop="url">[Operation System] 5. Thread
+            <a href="http://localhost:4000/os5/" class="u-url" itemprop="url">[OS] 5. 쓰레드 (Thread)
 </a>
           </h1>
           
@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          2 분 소요
         
       </span>
     
@@ -378,40 +378,20 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#쓰레드-thread--프로세스-내부의-흐름">쓰레드 (Thread) : 프로세스 내부의 흐름</a><ul><li><a href="#다중-쓰레드-multi-threads---하나의-프로세스에-쓰레드가-2개-이상-존재">다중 쓰레드 (Multi-Threads) :  하나의 프로세스에 쓰레드가 2개 이상 존재</a></li><li><a href="#다중-쓰레드-모델-multi-threads-models---2개-이상의-쓰레드로-구성된-모델">다중 쓰레드 모델 (Multi-Threads Models) :  2개 이상의 쓰레드로 구성된 모델</a><ul><li><a href="#many-to-one-모델--한-커널-쓰레드가-여러-유저-쓰레드-처리">Many-to-One 모델 : 한 커널 쓰레드가 여러 유저 쓰레드 처리</a></li><li><a href="#one-to-one-모델--유저-쓰레드-한-개당-커널-쓰레드를-대응시켜-처리">One-to-One 모델 : 유저 쓰레드 한 개당 커널 쓰레드를 대응시켜 처리</a></li><li><a href="#many-to-many-모델--여러-유저-쓰레드가-여러-커널-쓰레드-처리">Many-to-Many 모델 : 여러 유저 쓰레드가 여러 커널 쓰레드 처리</a></li><li><a href="#two-level-모델--중요한-작업은-one-to-one으로-나머지는-many-to-one으로-처리">Two-Level 모델 : 중요한 작업은 One-to-One으로, 나머지는 Many-to-One으로 처리</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#쓰레드-thread--프로세스-내부의-흐름">쓰레드 (Thread) : 프로세스 내부의 흐름</a><ul><li><a href="#다중-쓰레드-multi-threads">다중 쓰레드 (Multi-Threads)</a></li><li><a href="#다중-쓰레드-모델-multi-threads-models">다중 쓰레드 모델 (Multi-Threads Models)</a><ul><li><a href="#many-to-one-모델">Many-to-One 모델</a></li><li><a href="#one-to-one-모델">One-to-One 모델</a></li><li><a href="#many-to-many-모델">Many-to-Many 모델</a></li><li><a href="#two-level-모델">Two-Level 모델</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="쓰레드-thread--프로세스-내부의-흐름">쓰레드 (<code class="language-plaintext highlighter-rouge">Thread</code>) : 프로세스 내부의 흐름</h2>
+        <h2 id="쓰레드-thread--프로세스-내부의-흐름">쓰레드 (Thread) : 프로세스 내부의 흐름</h2>
 
-<ul>
-  <li>CPU를 구성하는 기본 단위로, 일반적으로 하나의 프로세스는 하나의 쓰레드가 존재</li>
-  <li>하나의 쓰레드는 고유한 <code class="language-plaintext highlighter-rouge">Thread ID</code>, <code class="language-plaintext highlighter-rouge">Program Counter</code>, <code class="language-plaintext highlighter-rouge">Register Set</code> 및 <code class="language-plaintext highlighter-rouge">Stack</code>을 가짐</li>
-</ul>
+<p>쓰레드는 CPU를 구성하는 기본 단위로, 프로세스 내부의 흐름을 가리킨다. 일반적으로 하나의 프로세스에는 하나의 쓰레드가 존재한다. 하나의 쓰레드는 고유한 Thread ID, Program Counter, Register Set 및 Stack을 가진다.</p>
 
-<h3 id="다중-쓰레드-multi-threads---하나의-프로세스에-쓰레드가-2개-이상-존재">다중 쓰레드 (<code class="language-plaintext highlighter-rouge">Multi-Threads</code>) :  하나의 프로세스에 쓰레드가 2개 이상 존재</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Concurrent</code> : 한 프로세스에서 여러 쓰레드가 빠른 시간 간격으로 스위칭되어 동시에 실행되는 것처럼 보임
-    <ul>
-      <li>여러 쓰레드들이 하나의 프로세스 안에 속하면서 <code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">data</code> 메모리 공간과 프로세스 자원 <code class="language-plaintext highlighter-rouge">file</code>과 <code class="language-plaintext highlighter-rouge">I/O</code> 공유</li>
-      <li>메시지 패싱 X (운영 체제를 거치지 않고도 통신 가능), 공유 메모리 X (공유 메모리를 만들지 않아도 됨)
-        <ul>
-          <li>멀티 프로세스에 비해 문맥 전환 시간이 짧고, 메모리와 자원의 할당이 더 효율적</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>운영체제가 다중 쓰레드를 지원 : 현대 운영체제에서의 문맥 전환은 프로세스가 아닌 쓰레드 단위로 이루어짐
-    <ul>
-      <li>하나의 프로세스 안에서 여러 쓰레드가 수행되다가 다른 프로세스로 넘어가 그 프로세스의 쓰레드를 수행함
-        <ul>
-          <li>웹 브라우저 : 화면을 출력하는 쓰레드와 데이터를 읽어오는 쓰레드가 따로 수행</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+<h3 id="다중-쓰레드-multi-threads">다중 쓰레드 (Multi-Threads)</h3>
+
+<p>다중 쓰레드는 하나의 프로세스에 쓰레드가 2개 이상 존재하는 상태를 말한다. Concurrent 방식은 한 프로세스에서 여러 쓰레드가 빠른 시간 간격으로 스위칭되어 동시에 실행되는 것처럼 보인다. 여러 쓰레드들은 하나의 프로세스 안에 속하면서 code, data 메모리 공간과 프로세스 자원인 file과 I/O를 공유한다. 메시지 패싱을 사용할 필요가 없고, 공유 메모리를 만들지 않아도 되기 때문에 운영 체제를 거치지 않고도 통신이 가능하다. 멀티 프로세스에 비해 문맥 전환 시간이 짧고, 메모리와 자원의 할당이 더 효율적이다.</p>
+
+<p>운영체제가 다중 쓰레드를 지원하는 경우, 현대 운영체제에서의 문맥 전환은 프로세스가 아닌 쓰레드 단위로 이루어진다. 하나의 프로세스 안에서 여러 쓰레드가 수행되다가 다른 프로세스로 넘어가 그 프로세스의 쓰레드를 수행하는 방식이다. 예를 들어, 웹 브라우저는 화면을 출력하는 쓰레드와 데이터를 읽어오는 쓰레드가 따로 수행된다.</p>
 
 <blockquote>
   <p>프로세스와 쓰레드의 비교 : 다중 프로세스와 다중 쓰레드는 둘다 여러 흐름이 동시에 진행된다는 공통점을 가지나,</p>
@@ -424,28 +404,25 @@ function checkAndLoadPage(allImages) {
   </ul>
 </blockquote>
 
-<h3 id="다중-쓰레드-모델-multi-threads-models---2개-이상의-쓰레드로-구성된-모델">다중 쓰레드 모델 (<code class="language-plaintext highlighter-rouge">Multi-Threads Models</code>) :  2개 이상의 쓰레드로 구성된 모델</h3>
-<ul>
-  <li>유저 쓰레드 (<code class="language-plaintext highlighter-rouge">User Thread</code>) : 유저 레벨의 쓰레드 라이브러리를 통해 관리되는 쓰레드</li>
-  <li>커널 쓰레드 (<code class="language-plaintext highlighter-rouge">Kernel Thread</code>) :  운영체제가 제공하고 직접 관리하는 쓰레드</li>
-</ul>
+<h3 id="다중-쓰레드-모델-multi-threads-models">다중 쓰레드 모델 (Multi-Threads Models)</h3>
 
-<h4 id="many-to-one-모델--한-커널-쓰레드가-여러-유저-쓰레드-처리"><code class="language-plaintext highlighter-rouge">Many-to-One</code> 모델 : 한 커널 쓰레드가 여러 유저 쓰레드 처리</h4>
-<ul>
-  <li>병목 현상 : 시스템 호출이 발생하면, 모든 유저 쓰레드가 대기해야 함</li>
-</ul>
+<p>다중 쓰레드 모델은 2개 이상의 쓰레드로 구성된 모델이다. 유저 쓰레드(User Thread)는 유저 레벨의 쓰레드 라이브러리를 통해 관리되는 쓰레드이며, 커널 쓰레드(Kernel Thread)는 운영체제가 제공하고 직접 관리하는 쓰레드이다.</p>
 
-<h4 id="one-to-one-모델--유저-쓰레드-한-개당-커널-쓰레드를-대응시켜-처리"><code class="language-plaintext highlighter-rouge">One-to-One</code> 모델 : 유저 쓰레드 한 개당 커널 쓰레드를 대응시켜 처리</h4>
-<ul>
-  <li>커널 쓰레드가 과도하게 생성되어 비효율적임</li>
-</ul>
+<h4 id="many-to-one-모델">Many-to-One 모델</h4>
 
-<h4 id="many-to-many-모델--여러-유저-쓰레드가-여러-커널-쓰레드-처리"><code class="language-plaintext highlighter-rouge">Many-to-Many</code> 모델 : 여러 유저 쓰레드가 여러 커널 쓰레드 처리</h4>
-<ul>
-  <li>커널 쓰레드의 수는 유저 쓰레드의 수보다 작거나 같게 해야 함</li>
-</ul>
+<p>Many-to-One 모델에서는 한 커널 쓰레드가 여러 유저 쓰레드를 처리한다. 이 모델은 유저 레벨에서 쓰레드를 관리하며, 커널은 단 하나의 쓰레드만을 인식한다. 따라서 여러 유저 쓰레드가 하나의 커널 쓰레드를 공유하게 된다. 이러한 구조로 인해 시스템 호출이 발생하면 해당 커널 쓰레드를 사용하는 모든 유저 쓰레드가 대기 상태에 놓이게 되어 병목 현상이 발생할 수 있다. Many-to-One 모델은 구현이 간단하고, 유저 레벨에서 빠른 쓰레드 관리가 가능하지만, 멀티프로세서 시스템에서는 병목 현상으로 인해 성능이 저하될 수 있다.</p>
 
-<h4 id="two-level-모델--중요한-작업은-one-to-one으로-나머지는-many-to-one으로-처리"><code class="language-plaintext highlighter-rouge">Two-Level</code> 모델 : 중요한 작업은 <code class="language-plaintext highlighter-rouge">One-to-One</code>으로, 나머지는 <code class="language-plaintext highlighter-rouge">Many-to-One</code>으로 처리</h4>
+<h4 id="one-to-one-모델">One-to-One 모델</h4>
+
+<p>One-to-One 모델에서는 유저 쓰레드 한 개당 커널 쓰레드를 대응시켜 처리한다. 즉, 각 유저 쓰레드는 별도의 커널 쓰레드를 가지며, 이로 인해 각 쓰레드는 독립적으로 커널 레벨에서 관리된다. One-to-One 모델은 멀티프로세서 시스템에서 높은 성능을 발휘할 수 있으며, 병목 현상을 줄일 수 있다. 그러나 커널 쓰레드가 과도하게 생성될 경우 시스템 자원이 부족해질 수 있고, 쓰레드 생성 및 관리 오버헤드가 증가할 수 있다.</p>
+
+<h4 id="many-to-many-모델">Many-to-Many 모델</h4>
+
+<p>Many-to-Many 모델에서는 여러 유저 쓰레드가 여러 커널 쓰레드를 처리한다. 유저 쓰레드와 커널 쓰레드의 수는 독립적으로 조절될 수 있으며, 커널 쓰레드의 수는 유저 쓰레드의 수보다 작거나 같아야 한다. 이 모델은 유연한 쓰레드 관리를 가능하게 하며, 병목 현상을 줄일 수 있다. 또한, 유저 레벨에서 쓰레드를 관리하면서도 커널 레벨에서 병목 현상을 방지할 수 있어 멀티프로세서 시스템에서 높은 성능을 발휘할 수 있다.</p>
+
+<h4 id="two-level-모델">Two-Level 모델</h4>
+
+<p>Two-Level 모델에서는 중요한 작업은 One-to-One 방식으로 처리하고, 나머지는 Many-to-One 방식으로 처리한다. 이를 통해 중요한 작업의 우선 처리를 보장하면서도, 전체적인 자원 효율성을 확보할 수 있다. Two-Level 모델은 Many-to-Many 모델의 유연성과 One-to-One 모델의 성능을 결합하여, 다양한 작업 환경에서 최적의 성능을 제공한다. 중요한 작업은 독립적인 커널 쓰레드를 통해 빠르게 처리되며, 덜 중요한 작업은 공유된 커널 쓰레드를 통해 효율적으로 관리된다.</p>
 
         
       </section>
@@ -462,7 +439,7 @@ function checkAndLoadPage(allImages) {
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#operation-system" class="page__taxonomy-item p-category" rel="tag">Operation System</a>
+      <a href="/tags/#os" class="page__taxonomy-item p-category" rel="tag">OS</a>
     
     </span>
   </p>
@@ -472,7 +449,7 @@ function checkAndLoadPage(allImages) {
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-12-12">December 12, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-07-30">July 30, 2024</time></p>
 
       </footer>
       
@@ -495,7 +472,7 @@ function checkAndLoadPage(allImages) {
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BOperation+System%5D+5.+Thread%20http%3A%2F%2Flocalhost%3A4000%2Fos5%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BOS%5D+5.+%EC%93%B0%EB%A0%88%EB%93%9C+%28Thread%29%20http%3A%2F%2Flocalhost%3A4000%2Fos5%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fos5%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
@@ -505,11 +482,11 @@ function checkAndLoadPage(allImages) {
       
   <nav class="pagination">
     
-      <a href="/os4/" class="pagination--pager" title="[Operation System] 4. IPC
+      <a href="/os4/" class="pagination--pager" title="[OS] 4. 프로세스 간 통신 (Inter Process Communication)
 ">이전</a>
     
     
-      <a href="/os6/" class="pagination--pager" title="[Operation System] 6. Main Memory Management
+      <a href="/os6/" class="pagination--pager" title="[OS] 6. 메인 메모리 관리 (Main Memory Management)
 ">다음</a>
     
   </nav>
@@ -575,7 +552,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm22/" rel="permalink">[Algorithm] 22. 계산 기하
+        <a href="/sqld4/" rel="permalink">[SQLD] 4. 관리 구문
 </a>
       
     </h2>
@@ -593,14 +570,16 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          3 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">계산 기하 (Computational Geometry) : 점·선·다각형·원 등 기하학적 도형을 다루는 알고리즘
+    <p class="archive__item-excerpt" itemprop="description">
+  SQLD를 취득하기 위해 공부하는 과정에 작성한 ‘관리 구문’ 관련 정리이다.
+
 
 </p>
   </article>
@@ -616,7 +595,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm21/" rel="permalink">[Algorithm] 21. 최소 신장 트리
+        <a href="/sqld3/" rel="permalink">[SQLD] 3. SQL 활용
 </a>
       
     </h2>
@@ -634,14 +613,17 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          5 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
+    <p class="archive__item-excerpt" itemprop="description">
+  SQLD를 취득하기 위해 공부하는 과정에 작성한 ‘SQL 활용’ 관련 정리이다.
+
+
 </p>
   </article>
 </div>
@@ -656,7 +638,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm20/" rel="permalink">[Algorithm] 20. 유니온 파인드
+        <a href="/sqld2/" rel="permalink">[SQLD] 2. SQL 기본
 </a>
       
     </h2>
@@ -674,14 +656,17 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          5 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
+    <p class="archive__item-excerpt" itemprop="description">
+  SQLD를 취득하기 위해 공부하는 과정에 작성한 ‘SQL 기본’ 관련 정리이다.
+
+
 </p>
   </article>
 </div>

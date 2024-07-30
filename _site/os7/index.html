@@ -54,7 +54,7 @@ function checkAndLoadPage(allImages) {
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Operation System] 7. Paging - pocj8ur4in’s blog</title>
+<!-- begin _includes/seo.html --><title>[OS] 7. 페이징 (Paging) - pocj8ur4in’s blog</title>
 <meta name="description" content="페이징 (Paging) : 프로그램과 메모리를 일정한 크기로 나눔">
 
 
@@ -67,7 +67,7 @@ function checkAndLoadPage(allImages) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[Operation System] 7. Paging">
+<meta property="og:title" content="[OS] 7. 페이징 (Paging)">
 <meta property="og:url" content="http://localhost:4000/os7/">
 
 
@@ -83,7 +83,7 @@ function checkAndLoadPage(allImages) {
 
 
 
-  <meta property="article:modified_time" content="2022-12-12T00:00:00+09:00">
+  <meta property="article:modified_time" content="2024-07-30T00:00:00+09:00">
 
 
 
@@ -211,7 +211,7 @@ function checkAndLoadPage(allImages) {
         <span class="sep">/</span>
       
       
-        <li class="current">[Operation System] 7. Paging</li>
+        <li class="current">[OS] 7. 페이징 (Paging)</li>
       
     
   </ol>
@@ -337,16 +337,16 @@ function checkAndLoadPage(allImages) {
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Operation System] 7. Paging">
+    <meta itemprop="headline" content="[OS] 7. 페이징 (Paging)">
     <meta itemprop="description" content="페이징 (Paging) : 프로그램과 메모리를 일정한 크기로 나눔">
     <meta itemprop="datePublished" content="2022-10-07T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2022-12-12T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-07-30T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/os7/" class="u-url" itemprop="url">[Operation System] 7. Paging
+            <a href="http://localhost:4000/os7/" class="u-url" itemprop="url">[OS] 7. 페이징 (Paging)
 </a>
           </h1>
           
@@ -378,242 +378,100 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#페이징-paging--프로그램과-메모리를-일정한-크기로-나눔">페이징 (Paging) : 프로그램과 메모리를 일정한 크기로 나눔</a><ul><li><a href="#페이지-폴트-page-fault--페이지가-메모리에-매핑되어-있지-않음을-파악하면-cpu에서-트랩-발생">페이지 폴트 (Page Fault) : 페이지가 메모리에 매핑되어 있지 않음을 파악하면 CPU에서 트랩 발생</a></li><li><a href="#페이징-테이블-page-table--가상-페이지-번호-vpn를-페이지-프레임-번호-pfn로-매핑">페이징 테이블 (Page Table) : 가상 페이지 번호 (VPN)를 페이지 프레임 번호 (PFN)로 매핑</a></li><li><a href="#tlbs-translation-lookaside-buffers--페이징의-속도를-높이고-큰-가상-주소-공간을-지원하는-기법">TLBs (Translation Lookaside Buffers) : 페이징의 속도를 높이고, 큰 가상 주소 공간을 지원하는 기법</a></li><li><a href="#다단계-페이지-테이블-multi-level-page-table">다단계 페이지 테이블 (Multi-level Page Table)</a></li><li><a href="#역-페이지-테이블-inverted-page-table">역 페이지 테이블 (Inverted Page Table)</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#페이징-paging--프로그램과-메모리를-일정한-크기로-나눔">페이징 (Paging) : 프로그램과 메모리를 일정한 크기로 나눔</a><ul><li><a href="#페이지-폴트-page-fault">페이지 폴트 (Page Fault)</a></li><li><a href="#페이징-테이블-page-table">페이징 테이블 (Page Table)</a></li><li><a href="#tlbs-translation-lookaside-buffers">TLBs (Translation Lookaside Buffers)</a></li><li><a href="#다단계-페이지-테이블-multi-level-page-table">다단계 페이지 테이블 (Multi-level Page Table)</a></li><li><a href="#역-페이지-테이블-inverted-page-table">역 페이지 테이블 (Inverted Page Table)</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="페이징-paging--프로그램과-메모리를-일정한-크기로-나눔">페이징 (<code class="language-plaintext highlighter-rouge">Paging</code>) : 프로그램과 메모리를 일정한 크기로 나눔</h2>
+        <h2 id="페이징-paging--프로그램과-메모리를-일정한-크기로-나눔">페이징 (Paging) : 프로그램과 메모리를 일정한 크기로 나눔</h2>
 
+<p>페이징은 프로그램과 메모리를 일정한 크기로 나누는 기법이다. 프로그램이 가상 메모리에서 참조하는 주소를 가상 주소(Virtual address)라고 한다. 가상 메모리가 있다면, 각 프로그램은 자신의 고유한 가상 주소 공간을 가진다. 가상 메모리를 사용할 때는 가상 주소가 그대로 메모리 버스에 실려 물리 주소가 되지만, 가상 메모리를 사용하지 않을 때는 가상 주소가 MMU에 의해 물리 주소로 매핑된다.</p>
+
+<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F77cc13d2-02da-4be4-9ff6-369f0dbc4b26%2F페이징2.PNG" alt="Paging" /></p>
+
+<p>가상 주소 공간과 물리 주소 공간은 고정된 크기 단위의 유닛들로 동일하게 나뉜다. 가상 페이지(Virtual Page)는 가상 주소 공간을 나눈 조각으로, 각 페이지는 연속된 주소를 가진다. 페이지 프레임(Page Frame)은 물리 메모리를 나눈 조각이다.</p>
+
+<p>가상 주소 공간과 물리 주소 공간은 고정된 크기 단위의 유닛들로 동일하게 나뉜다. 가상 페이지(Virtual Page)는 가상 주소 공간을 나눈 조각으로, 각 페이지는 연속된 주소를 가진다. 페이지 프레임(Page Frame)은 물리 메모리를 나눈 조각이다.</p>
+
+<p>다음 그림에서는 가상 주소 공간을 64KB, 물리 메모리 공간을 32KB, 유닛 크기는 4KB로 가정하고 있다.</p>
+
+<p><img src="https://d2vlcm61l7u1fs.cloudfront.net/media%2F814%2F8145fa33-a835-4aec-b761-957da632ac81%2FphpBxgNnp.png" alt="Paging Example" /></p>
+
+<p>논리 주소(logical address)는 세그먼트(segment)와 오프셋(offset)으로 구성된다. 세그먼트는 고정된 길이와 시작 위치로 구성되며, 오프셋은 세그먼트의 시작 지점에서 실제 주소까지의 거리를 나타낸다. 가상 주소(virtual address)는 32비트의 단일 정수로 표현되며, 물리 주소(physical address)는 물리 메모리에서 각각의 셀(cell)의 주소를 나타낸다. 페이지 프레임은 가상 페이지가 매핑되는 물리 메모리의 일부분이다.</p>
+
+<p>명령어 <code class="language-plaintext highlighter-rouge">MOV REG, 0</code>을 수행한다고 가정해보자.</p>
 <ul>
-  <li>가상 주소 (<code class="language-plaintext highlighter-rouge">Virtual address</code>) : 프로그램이 가상 메모리에서 참조하는 주소
-    <ul>
-      <li>가상 메모리 (<code class="language-plaintext highlighter-rouge">Virtual Memory</code>)가 있다면, 각 프로그램은 자신의 고유한 가상 주소 공간을 가짐
-        <ul>
-          <li>가상 메모리 사용 <code class="language-plaintext highlighter-rouge">O</code> : 가상 주소가 그대로 메모리 버스에 실려 물리 주소가 됨</li>
-          <li>가상 메모리 사용 <code class="language-plaintext highlighter-rouge">X</code> : 가상 주소가 <code class="language-plaintext highlighter-rouge">MMU</code>에 의해 물리 주소로 매핑</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+  <li>이 명령어에서 접근하는 가상 주소 0은 MMU로 전달된다.</li>
+  <li>MMU는 해당 가상 주소가 가상 페이지 0에 속한 것임을 확인한다.</li>
+  <li>MMU는 가상 페이지 0에 매핑된 물리 주소의 페이지 프레임이 2임을 계산한다.</li>
+  <li>가상 주소 0은 물리 주소 8192로 변환되고, 이 물리 주소가 메모리 버스에 실린다.</li>
 </ul>
 
-<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F77cc13d2-02da-4be4-9ff6-369f0dbc4b26%2F페이징2.PNG" width="66%" style="margin-left: 2%" /></p>
+<p>그러나 가상 페이지를 페이지 프레임에 매핑하는 것만으로는, 가상 주소 공간이 물리 주소 공간보다 큰 문제를 해결하지 못한다.</p>
 
+<h3 id="페이지-폴트-page-fault">페이지 폴트 (Page Fault)</h3>
+
+<p>페이지 폴트는 페이지가 메모리에 매핑되어 있지 않음을 파악하면 CPU에서 트랩을 발생시키는 현상이다. present 비트는 어떤 페이지가 실제 메모리에 존재하는지를 표현하는 비트로, 가상 페이지에 X로 표시된다. 페이지가 메모리에 매핑되어 있지 않으면, CPU에서 트랩을 발생시켜 운영체제에 이를 알린다.</p>
+
+<p>페이지 폴트가 발생하면, 운영체제는 적게 사용되고 있는 페이지 프레임을 하나 선택한다. 선택한 페이지가 수정되었다면 (dirty 상태) 이를 디스크에 기록하고, 수정되지 않았다면 (clean 상태) 디스크에 존재하는 것과 동일하므로 기록하지 않는다. 선택한 기존 페이지의 내용을 지우고, 참조하려는 페이지의 내용을 페이지 프레임에 적재한 후, 선택한 기존 페이지 프레임을 X로, 참조한 페이지 프레임을 숫자로 매핑시켜 가상 페이지 맵을 수정한다. 마지막으로 트랩이 발생한 명령어를 다시 실행한다.</p>
+
+<p>명령어 <code class="language-plaintext highlighter-rouge">MOV REG, 24576</code>을 수행할 때 페이지 폴트가 발생해 OS에서 페이지 프레임 1을 교체한다고 가정해보자.</p>
 <ul>
-  <li>가상 주소 공간과 물리 주소 공간은 고정된 크기 단위의 유닛들로 동일하게 나뉜다.
-    <ul>
-      <li>가상 페이지 (<code class="language-plaintext highlighter-rouge">Virtual Page</code>) : 가상 주소 공간을 나눈 조각. 각 페이지는 연속된 주소를 가짐</li>
-      <li>페이지 프레임 (<code class="language-plaintext highlighter-rouge">Page Frame</code>) : 물리 메모리를 나눈 조각.</li>
-    </ul>
-  </li>
+  <li>가상 페이지 1이 더 이상 매핑되지 않음을 X로 표시한다.</li>
+  <li>가상 페이지 7이 페이지 프레임 1에 매핑되었음을 표시한다.</li>
 </ul>
 
-<blockquote>
-  <ul>
-    <li>다음 그림에서는 가상 주소 공간을 <code class="language-plaintext highlighter-rouge">64KB</code>, 물리 메모리 공간을 <code class="language-plaintext highlighter-rouge">32KB</code>, 유닛 크기는 <code class="language-plaintext highlighter-rouge">4KB</code>로 가정하고 있다.</li>
-  </ul>
+<h3 id="페이징-테이블-page-table">페이징 테이블 (Page Table)</h3>
 
-  <p><img src="https://d2vlcm61l7u1fs.cloudfront.net/media%2F814%2F8145fa33-a835-4aec-b761-957da632ac81%2FphpBxgNnp.png" width="80%" style="margin-left: 2%" /></p>
-  <ul>
-    <li>논리 주소 (<code class="language-plaintext highlighter-rouge">logical address</code>) : 세그먼트 (<code class="language-plaintext highlighter-rouge">segment</code>) + 오프셋 (<code class="language-plaintext highlighter-rouge">offset</code>)
-      <ul>
-        <li>세그먼트 (<code class="language-plaintext highlighter-rouge">segment</code>) : <code class="language-plaintext highlighter-rouge">64KB</code>의 고정된 길이와 시작 위치으로만 구성</li>
-        <li>오프셋 (<code class="language-plaintext highlighter-rouge">offset</code>) : 세그먼트의 시작 지점에서 실제 주소까지 떨어진 거리</li>
-      </ul>
-    </li>
-    <li>가상 주소 (<code class="language-plaintext highlighter-rouge">virtual address</code>) : <code class="language-plaintext highlighter-rouge">single 32-bit unsigned integer</code>
-      <ul>
-        <li>가상 페이지는 <code class="language-plaintext highlighter-rouge">16</code>진수로 표현 (<code class="language-plaintext highlighter-rouge">16bit</code>) : <code class="language-plaintext highlighter-rouge">0x00000000</code> ~ <code class="language-plaintext highlighter-rouge">0xffffffff</code>의 범위 (<code class="language-plaintext highlighter-rouge">4096bit</code>=<code class="language-plaintext highlighter-rouge">4KB</code>)</li>
-      </ul>
-    </li>
-    <li>물리 주소 (<code class="language-plaintext highlighter-rouge">physical address</code>) : 물리 메모리에서 각각의 셀 (<code class="language-plaintext highlighter-rouge">cell</code>)의 주소
-      <ul>
-        <li>페이지 프레임은 가상 페이지가 매핑되는 물리 메모리의 일부분(<code class="language-plaintext highlighter-rouge">4096bit</code>=<code class="language-plaintext highlighter-rouge">4KB</code>)</li>
-      </ul>
-    </li>
-  </ul>
+<p>페이징 테이블은 가상 페이지 번호(VPN)를 페이지 프레임 번호(PFN)로 매핑하는 구조이다.</p>
 
-  <blockquote>
-    <p>명령어 <code class="language-plaintext highlighter-rouge">MOV REG, 0</code>을 수행한다고 가정해보자.</p>
-    <ul>
-      <li>이 명령어에서 접근하는 가상 주소 0는 MMU로 전달된다.</li>
-      <li><code class="language-plaintext highlighter-rouge">MMU</code>는 해당 가상 주소가 가상 페이지 0에 속한 것임을 확인한다.</li>
-      <li><code class="language-plaintext highlighter-rouge">MMU</code>는 가상 페이지 0에 매핑된 물리 주소의 페이지 프레임이 2임을 계산한다.</li>
-      <li>가상 주소 0은 물리 주소 8192로 변환되고, 이 물리 주소가 메모리 버스에 실린다.</li>
-    </ul>
-  </blockquote>
+<p>위의 매핑 정보를 바탕으로 가상 주소 8196를 물리 주소 24580로 변환하는 과정을 가정해 살펴보자.</p>
 
-  <p>… 가상 페이지를 페이지 프레임에 매핑하는 것만으론, 가상 주소 공간이 물리 주소 공간보다 큰 문제를 해결하지 못한다.</p>
-</blockquote>
+<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F1e02251d-f340-4f21-a40a-ece83ef34966%2F페이지테이블1.PNG" alt="Paging Table Example" /></p>
 
-<h3 id="페이지-폴트-page-fault--페이지가-메모리에-매핑되어-있지-않음을-파악하면-cpu에서-트랩-발생">페이지 폴트 (<code class="language-plaintext highlighter-rouge">Page Fault</code>) : 페이지가 메모리에 매핑되어 있지 않음을 파악하면 <code class="language-plaintext highlighter-rouge">CPU</code>에서 트랩 발생</h3>
+<p>16비트 크기를 갖는 가상 주소는 VPN와 오프셋으로 구분된다. 페이지 번호는 페이지 테이블의 인덱스로 사용된다. 페이지 테이블에는 VPN에 대응되는 PFN이 기록되어 있다. present 비트가 1이면, 페이지 테이블의 PFN 3과 가상 주소의 오프셋 12가 결합해 물리 주소가 된다. 물리 주소를 주소 출력 레지스터를 통해 메모리 버스로 전달해 참조한다.</p>
+
+<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F3e57db8f-32a6-4eb8-9aae-401f58178f5a%2F페이징주소변환.PNG" alt="Paging Address Translation" /></p>
+
+<p>페이지 테이블에는 디스크에 존재하는 페이지의 디스크 주소에 대한 정보가 없다. 페이지 폴트(Page Fault)는 운영체제 내부에서 처리되며, 페이지 테이블에는 메모리에 존재하는 페이지 주소에 대한 정보만 있다. 하드웨어는 이를 사용해 가상 주소를 물리 주소로 변경한다.</p>
+
+<p><img src="https://examradar.com/wp-content/uploads/2019/03/page-table-entry.png" alt="Page Table Entry" /></p>
+
+<p>페이지 테이블의 각 엔트리에는 다음과 같은 정보가 포함된다:</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">present</code> 비트 : 어떤 페이지가 실제 메모리에 존재하는지 표현하는 비트 (가상 페이지에 <code class="language-plaintext highlighter-rouge">X</code>로 표현)
-    <ul>
-      <li>페이지가 메모리에 매핑되어 있지 않으면, <code class="language-plaintext highlighter-rouge">CPU</code>에서 트랩을 발생시켜 운영체제에 이를 알림</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">Page Fault</code>가 발생하면, 운영체제는 적게 사용되고 있는 페이지 프레임을 하나 선택
-    <ol>
-      <li>선택한 페이지가 수정되었다면 (<code class="language-plaintext highlighter-rouge">dirty</code> 상태) 이를 디스크에 기록</li>
-      <li>선택한 페이지가 수정되지 않았다면 (<code class="language-plaintext highlighter-rouge">clean</code> 상태) 디스크에 존재하는 것과 동일하니 기록하지 않음</li>
-      <li>선택한 기존 페이지의 내용을 지우고, 참조하려는 페이지의 내용을 페이지 프레임에 적재</li>
-      <li>선택한 기존 페이지 프레임을 <code class="language-plaintext highlighter-rouge">X</code>로, 참조한 페이지 프레임을 숫자로 매핑시켜 가상 페이지 맵 수정</li>
-      <li>트랩이 발생한 명령어를 다시 실행</li>
-    </ol>
-  </li>
+  <li><strong>페이지 프레임 번호 (PFN)</strong> : 가상 주소를 물리 주소로 매핑하며, 해당 페이지가 매핑된 물리 주소를 결정한다. 이 번호는 가상 페이지가 실제 물리 메모리의 어느 페이지 프레임에 위치하는지를 나타낸다.</li>
+  <li><strong>Present 비트</strong> : PFN이 유효한지 아닌지를 결정하는 비트이다. 가상 주소가 사용될 때마다 이 비트가 확인되며, 0 (X)이면 해당 엔트리에 대응되는 페이지가 물리 메모리에 존재하지 않는 상태를 의미하여 트랩이 발생한다. 1이면 해당 페이지가 물리 메모리에 존재하는 상태를 의미한다.</li>
+  <li><strong>Protection 비트</strong> : 페이지에 대한 접근 권한을 표시한다. 이 비트는 해당 페이지에 어떤 접근이 허용되는지를 나타내며, 보통 write, read, execute 권한으로 구분된다. 각 비트가 설정되어 있으면 그 권한이 허용됨을 의미한다.</li>
+  <li><strong>Modify 비트 (Dirty 비트)</strong> : 페이지가 수정되었는지 아닌지를 나타낸다. 페이지의 내용이 write되면 하드웨어가 자동으로 이 비트를 1로 설정한다. Modify 비트가 1 (dirty)인 경우, 페이지 프레임이 교체될 때 디스크에 기록되어야 한다. Modify 비트가 0 (clean)인 경우, 페이지 프레임이 교체될 때 새로운 내용으로 덮어씌워도 된다.</li>
+  <li><strong>Reference 비트</strong> : 해당 페이지가 접근되었는지를 나타낸다. 페이지가 write 또는 read로 접근될 때 설정되며, 운영체제가 Page Fault의 처리를 위해 교체할 페이지 프레임을 선택할 때 사용된다. 이 비트를 통해 운영체제는 페이지의 사용 빈도를 추적하고, 적절한 교체 알고리즘을 적용할 수 있다.</li>
+  <li><strong>Caching Disabled 비트</strong> : 해당 페이지가 캐싱될 수 있는지 여부를 나타낸다. 이 비트가 설정되어 있으면 해당 페이지는 캐시되지 않으며, 주로 페이지가 메모리가 아닌 장치 레지스터에 매핑되어 있을 때 사용된다. 캐시를 비활성화하면 일관성을 보장할 수 있다.</li>
 </ul>
 
-<blockquote>
-  <p>명령어 <code class="language-plaintext highlighter-rouge">MOV REG, 24576</code>을 수행할 때 <code class="language-plaintext highlighter-rouge">Page Fault</code>가 발생해 OS에서 페이지 프레임 1을 교체한다고 가정해보자.</p>
-  <ul>
-    <li>가상 페이지 1이 더 이상 매핑되지 않음 (<code class="language-plaintext highlighter-rouge">X</code>)을 표시한다.</li>
-    <li>가상 페이지 7이 페이지 프레임 1에 매핑되었음을 표시한다.</li>
-  </ul>
-</blockquote>
+<p>64비트 주소를 사용하는 컴퓨터는 가상 주소 공간이 2^64 byte이다. 가상 주소 공간의 한 페이지가 4KB = 2^12 byte이면, 페이지 테이블의 엔트리 개수는 전체 공간을 한 페이지로 나눈 2^52 개이다. 엔트리 하나당 4 byte의 크기를 가진다면, 페이지 테이블의 크기는 2^52 * 4 byte가 된다.</p>
 
-<h3 id="페이징-테이블-page-table--가상-페이지-번호-vpn를-페이지-프레임-번호-pfn로-매핑">페이징 테이블 (<code class="language-plaintext highlighter-rouge">Page Table</code>) : 가상 페이지 번호 (<code class="language-plaintext highlighter-rouge">VPN</code>)를 페이지 프레임 번호 (<code class="language-plaintext highlighter-rouge">PFN</code>)로 매핑</h3>
-
-<blockquote>
-  <p>위의 매핑 정보를 바탕으로 가상 주소 <code class="language-plaintext highlighter-rouge">8196</code>를 물리 주소 <code class="language-plaintext highlighter-rouge">24580</code>로 변환하는 과정을 가정해 살펴보자.</p>
-
-  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F1e02251d-f340-4f21-a40a-ece83ef34966%2F페이지테이블1.PNG" width="80%" style="margin-left: 2%" /></p>
-
-  <ul>
-    <li>16비트 크기를 갖는 가상 주소는 <code class="language-plaintext highlighter-rouge">VPN</code>와 오프셋으로 구분된다.
-      <ul>
-        <li>페이지 번호는 페이지 테이블의 인덱스로 사용된다.</li>
-      </ul>
-    </li>
-    <li>페이지 테이블에는 <code class="language-plaintext highlighter-rouge">VPN</code>에 대응되는 <code class="language-plaintext highlighter-rouge">PFN</code>이 기록되어 있다.
-      <ul>
-        <li><code class="language-plaintext highlighter-rouge">present</code>가 1이면, 페이지 테이블의 <code class="language-plaintext highlighter-rouge">PFN</code> 3과 가상 주소의 오프셋 12가 결합해 물리 주소가 된다.</li>
-      </ul>
-    </li>
-    <li>물리 주소를 주소 출력 레지스터를 통해 메모리 버스로 전달해 참조한다.</li>
-  </ul>
-
-  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F3e57db8f-32a6-4eb8-9aae-401f58178f5a%2F페이징주소변환.PNG" width="80%" style="margin-left: 2%" /></p>
-</blockquote>
-
+<p>페이징은 다음 두 가지 문제를 해결해야 한다.</p>
 <ul>
-  <li>페이지 테이블엔 디스크에 존재하는 페이지의 디스크 주소에 대한 정보가 없음 (<code class="language-plaintext highlighter-rouge">Page Fault</code> : 운영체제 내부에서 처리)
-    <ul>
-      <li>메모리에 존재하는 페이지 주소에 대한 정보만 존재 : 하드웨어가 가상 주소를 물리 주소로 변경할 때 사용</li>
-    </ul>
-  </li>
+  <li>가상 주소 공간이 커지면 페이지 테이블의 크기, 즉 페이지 테이블 엔트리의 개수 또한 증가한다. 그러므로 페이지 테이블을 유지하기 위해서 필요한 메모리의 크기가 클 수 있다.</li>
+  <li>가상 주소에서 물리 주소로의 변환이 빠르게 이루어져야 한다. 메모리를 참조하는 오버헤드가 작아야 한다.</li>
 </ul>
 
-<p><img src="https://examradar.com/wp-content/uploads/2019/03/page-table-entry.png" width="80%" style="margin-left: 2%" /></p>
+<h3 id="tlbs-translation-lookaside-buffers">TLBs (Translation Lookaside Buffers)</h3>
 
-<ul>
-  <li>페이지 테이블의 각 페이지에 존재하는 정보
-    <ul>
-      <li>페이지 프레임 번호 (<code class="language-plaintext highlighter-rouge">PFN</code>) : 가상 주소를 물리 주소로 매핑
-        <ul>
-          <li>해당 페이지가 매핑된 물리 주소 결정</li>
-        </ul>
-      </li>
-      <li><code class="language-plaintext highlighter-rouge">Present</code> 비트 : <code class="language-plaintext highlighter-rouge">PFN</code>이 유효한지 아닌지 결정 (가상 주소가 사용될 때마다 확인)
-        <ul>
-          <li>0 (<code class="language-plaintext highlighter-rouge">X</code>)이면 해당 엔트리에 대응되는 페이지가 물리 메모리에 존재하지 않는 상태 (트랩 발생)</li>
-        </ul>
-      </li>
-      <li><code class="language-plaintext highlighter-rouge">Protection</code> 비트 : 어떤 접근이 허용되는지 표시
-        <ul>
-          <li><code class="language-plaintext highlighter-rouge">write</code>, <code class="language-plaintext highlighter-rouge">read</code>, <code class="language-plaintext highlighter-rouge">execute</code></li>
-        </ul>
-      </li>
-      <li><code class="language-plaintext highlighter-rouge">Modify</code> 비트 : 페이지가 수정되었는지 아닌지 확인
-        <ul>
-          <li>페이지의 내용이 <code class="language-plaintext highlighter-rouge">write</code>되면, 하드웨어가 자동으로 비트를 1로 세팅
-            <ul>
-              <li><code class="language-plaintext highlighter-rouge">Modify</code> 비트가 1 (<code class="language-plaintext highlighter-rouge">dirty</code>)이면, 페이지 프레임이 교체될 때 디스크에 기록되어야 함</li>
-              <li><code class="language-plaintext highlighter-rouge">Modify</code> 비트가 0 (<code class="language-plaintext highlighter-rouge">clean</code>)이면, 페이지 프레임이 교체될 때 새로운 내용으로 덮어씌워도 됨</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><code class="language-plaintext highlighter-rouge">Reference</code> 비트 : 해당 페이지가 <code class="language-plaintext highlighter-rouge">write</code> 또는 <code class="language-plaintext highlighter-rouge">read</code>로 접근되었을 때 설정
-        <ul>
-          <li>운영체제가 <code class="language-plaintext highlighter-rouge">Page Fault</code>의 처리를 위해 교체할 페이지 프레임을 선택할 때 사용</li>
-        </ul>
-      </li>
-      <li><code class="language-plaintext highlighter-rouge">Cashing Disabled</code> 비트 : 해당 페이지가 캐싱될 수 있는지 여부
-        <ul>
-          <li>페이지가 메모리가 아닌 장치 레지스터에 매핑되어 있을 때 실행</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+<p>TLB는 페이지 테이블의 참조 없이 가상 주소를 물리 주소로 매핑할 수 있는 작은 크기의 메모리이다. 이는 MMU 내부에 존재하며, 적은 개수의 엔트리를 가진다. 각각의 TLB 엔트리는 한 페이지에 대한 정보를 포함하고 있다. TLBs는 페이징의 속도를 높이고, 큰 가상 주소 공간을 지원하는 기법을 말한다.</p>
 
-<blockquote>
-  <blockquote>
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">64bit</code> 주소를 사용하는 컴퓨터는 가상 주소 공간이 <code class="language-plaintext highlighter-rouge">2^64byte</code></li>
-      <li>가상 주소 공간의 한 페이지가 <code class="language-plaintext highlighter-rouge">4KB = 2^12byte</code>이면,
-        <ul>
-          <li>페이지 테이블의 엔트리 개수는 전체 공간을 한 페이지로 나눈 <code class="language-plaintext highlighter-rouge">2^52</code>개</li>
-          <li>엔트리 하나당 <code class="language-plaintext highlighter-rouge">4byte</code>의 크기를 가진다면, 페이지 테이블의 크기는 <code class="language-plaintext highlighter-rouge">2^52 * 4byte</code></li>
-        </ul>
-      </li>
-    </ul>
-  </blockquote>
+<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F8b9807f3-f9d5-437a-8110-25ff5a9aad4a%2FTLB2.PNG" alt="TLB Example" /></p>
 
-  <p>… 페이징은 다음 두 가지 문제를 해결해야 한다.</p>
-  <ul>
-    <li>가상 주소 공간이 커지면, 페이지 테이블의 크기 (= 페이지 테이블 엔트리의 개수) 또한 증가한다.
-      <ul>
-        <li>페이지 테이블을 유지하기 위해 필요한 메모리의 크기가 클 수 있음</li>
-      </ul>
-    </li>
-    <li>가상 주소에서 물리 주소로의 변환이 빠르게 이루어져야 한다.
-      <ul>
-        <li>메모리를 참조하는 오버헤드가 작아야 함</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
+<ol>
+  <li>MMU는 주소 변환을 할 때 요청된 가상 페이지가 TLB에 있는지 검색한다.</li>
+  <li>가상 페이지가 존재하고 보호 코드를 위반하지 않으면, 대응되는 페이지 프레임을 사용하여 주소 변환을 실행한다.</li>
+  <li>TLB에 존재하지 않으면, TLB miss가 발생한다. MMU는 페이지 테이블에서 해당 페이지 테이블 엔트리를 검색한다.</li>
+  <li>그리고 TLB 엔트리 중 하나를 선택해 그 내용을 교체한다. 페이지 테이블에 없는 수정 비트는 페이지 테이블에 기록된다.</li>
+  <li>찾은 페이지 테이블 엔트리를 TLB 엔트리에 기록한다. 이때 다시 참조하면 TLB hit로 처리된다.</li>
+  <li>새로운 정보가 적재될 때는 페이지 테이블 엔트리에 있는 내용이 적재된다.</li>
+</ol>
 
-<h3 id="tlbs-translation-lookaside-buffers--페이징의-속도를-높이고-큰-가상-주소-공간을-지원하는-기법"><code class="language-plaintext highlighter-rouge">TLBs</code> (<code class="language-plaintext highlighter-rouge">Translation Lookaside Buffers</code>) : 페이징의 속도를 높이고, 큰 가상 주소 공간을 지원하는 기법</h3>
+<p>메모리 계층 구조에서 발생할 수 있는 miss의 경우의 수는 2^3가지이지만, 실제 발생 가능한 경우의 수는 5가지이다.</p>
 
-<blockquote>
-  <p>대부분의 프로그램들은 적은 개수의 페이지를 집중적으로 참조하는 경향이 있다.</p>
-  <ul>
-    <li>페이지 테이블의 일부 엔트리만이 높은 빈도로 참조되고, 나머지 엔트리는 낮은 빈도로 참조된다.</li>
-  </ul>
-</blockquote>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">TLB</code> : 페이지 테이블의 참조 없이 가상 주소를 물리 주소로 매핑할 수 있는 작은 크기의 메모리
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">MMU</code> 내부에 존재하며, 적은 개수의 엔트리를 가짐
-        <ul>
-          <li>각각의 <code class="language-plaintext highlighter-rouge">TLB</code> 엔트리는 한 페이지에 대한 정보를 포함</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F8b9807f3-f9d5-437a-8110-25ff5a9aad4a%2FTLB2.PNG" width="80%" style="margin-left: 2%" /></p>
-
-  <ol>
-    <li><code class="language-plaintext highlighter-rouge">MMU</code>는 주소 변환을 할 때 요청된 가상 페이지가 <code class="language-plaintext highlighter-rouge">TLB</code>에 있는지 검색</li>
-    <li>가상 페이지가 존재하고 보호코드를 위반하지 않으면, 대응되는 페이지 프레임을 사용하여 주소 변환을 실행</li>
-    <li><code class="language-plaintext highlighter-rouge">TLB</code>가 존재하지 않으면, <code class="language-plaintext highlighter-rouge">TLB miss</code> 발생. <code class="language-plaintext highlighter-rouge">MMU</code>는 페이지 테이블에서 해당 페이지 테이블 엔트리를 검색</li>
-    <li>그리고 <code class="language-plaintext highlighter-rouge">TLB</code> 엔트리 중 하나를 선택해 그 내용을 교체. 페이지 테이블에 없는 수정 비트는 페이지 테이블에 기록</li>
-    <li>찾은 페이지 테이블 엔트리를 <code class="language-plaintext highlighter-rouge">TLB</code> 엔트리에 기록 (이때 다시 참조한다면 <code class="language-plaintext highlighter-rouge">TLB hit</code>로 처리)</li>
-    <li>새로운 정보가 적재될 때는 페이지 테이블 엔트리에 있는 내용이 적재</li>
-  </ol>
-</blockquote>
-
-<ul>
-  <li>메모리 계층 구조에서 발생할 수 있는 <code class="language-plaintext highlighter-rouge">miss</code>의 경우의 수 : <code class="language-plaintext highlighter-rouge">2^3</code>가지 <code class="language-plaintext highlighter-rouge">-&gt;</code> 실제 발생 가능한 경우의 수 : <code class="language-plaintext highlighter-rouge">5</code>가지</li>
-</ul>
 <div style="text-align: center;">
   <table>
 	  <thead>
@@ -688,100 +546,42 @@ function checkAndLoadPage(allImages) {
 
 <blockquote>
   <ul>
-    <li><code class="language-plaintext highlighter-rouge">TLB miss</code>인 경우 : 페이지 테이블에는 정보가 있지만, <code class="language-plaintext highlighter-rouge">TLB</code>에 그 정보가 들어있지 않을 때
+    <li>TLB miss인 경우 : 페이지 테이블에는 정보가 있지만, TLB에 그 정보가 들어있지 않을 때
       <ul>
-        <li>해결책 : 페이지 테이블의 페이지 엔트리 내 데이터를 가져와 <code class="language-plaintext highlighter-rouge">TLB</code>에 넣음</li>
+        <li>해결책 : 페이지 테이블의 페이지 엔트리 내 데이터를 가져와 TLB에 넣는다.</li>
       </ul>
     </li>
-    <li><code class="language-plaintext highlighter-rouge">Page fault</code>인 경우 : <code class="language-plaintext highlighter-rouge">TLB</code>에도 정보가 없고, 페이지 테이블에도 그 정보가 없을 때
+    <li>Page fault인 경우 : TLB에도 정보가 없고, 페이지 테이블에도 그 정보가 없을 때
       <ul>
-        <li>운영체제는 권한을 받아 하드 디스크의 데이터를 페이지 테이블에 가져오고, <code class="language-plaintext highlighter-rouge">TLB</code>에 가져온 데이터를 넣음</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<h3 id="다단계-페이지-테이블-multi-level-page-table">다단계 페이지 테이블 (<code class="language-plaintext highlighter-rouge">Multi-level Page Table</code>)</h3>
-<ul>
-  <li>페이지 테이블을 페이지 프레임 크기로 나눔
-    <ul>
-      <li>해당 페이지 테이블의 페이지가 <code class="language-plaintext highlighter-rouge">invalid</code>하면 메모리에 할당하지 않음</li>
-      <li>기존의 단일한 페이지 테이블을 트리 구조로 연결</li>
-    </ul>
-  </li>
-  <li>페이지 디렉토리 (<code class="language-plaintext highlighter-rouge">Page Dictionary</code>) : 페이지 프레임의 유무를 확인하는 자료구조
-    <ul>
-      <li>적어도 하나의 <code class="language-plaintext highlighter-rouge">PFN</code>이 <code class="language-plaintext highlighter-rouge">valid</code>하다면, 페이지 디렉토리의 해당 엔트리는 존재함</li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <p><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTAyMTlfOCAg/MDAxNTUwNTA2MjIzODAw.Wv_UIJMhp3-_COSDHBtsqEz0OCp91j4zEc3Vr4lmWHQg.qFb-bL0s7WgeO7btb1857Ifsk_KZqW063BUihRmZd-wg.PNG.babobigi/Page_Table_비교.png?type=w2" width="80%" style="margin-left: 2%" /></p>
-
-  <ul>
-    <li>기존의 페이지 테이블에서, 가운데에 위치한 페이지는 메모리에 할당되어 있음</li>
-    <li>다단계 페이지 테이블에서, 가운데에 위치한 페이지는 메모리에 할당되어 있지 않음</li>
-  </ul>
-
-  <p>다단계 페이지 테이블에서의 모든 페이지 테이블은 항상 메모리에 유지될 필요가 없다.</p>
-</blockquote>
-
-<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2Fcf85f3b3-985d-4872-9030-eb337ae7dbbe%2F2단계페테2.PNG" width="80%" style="margin-left: 2%" /></p>
-
-<ul>
-  <li>필요한 페이지 테이블만 메모리에 할당해 절약할 수 있음</li>
-  <li>페이지 디렉토리로 물리 메모리의 빈 공간에 페이지 테이블 엔트리를 생성 가능</li>
-  <li>기존의 <code class="language-plaintext highlighter-rouge">TLB Miss</code>가 2번 늘어나 주소 변환이 2번 필요하고, <code class="language-plaintext highlighter-rouge">TLB Miss</code>를 처리해 메모리를 최적화하는 로직이 복잡해짐</li>
-</ul>
-
-<h3 id="역-페이지-테이블-inverted-page-table">역 페이지 테이블 (<code class="language-plaintext highlighter-rouge">Inverted Page Table</code>)</h3>
-<ul>
-  <li>빠른 하드웨어 레지스터로 구성된 단일한 페이지 테이블 사용
-    <ul>
-      <li>페이지 테이블의 각 엔트리는 하나의 메모리 프레임에 대응</li>
-    </ul>
-  </li>
-  <li>크기가 고정된 페이지 테이블에 프로세스를 맵핑
-    <ul>
-      <li>프로세스 실행 시 운영체제는 메모리에 존재하는 프로세스의 페이지 테이블 전체를 하드웨어 레지스터 배열에 적재</li>
-    </ul>
-  </li>
-  <li>논리 주소는 <code class="language-plaintext highlighter-rouge">PID</code>, <code class="language-plaintext highlighter-rouge">PFN</code>, <code class="language-plaintext highlighter-rouge">offset</code>으로 구성</li>
-  <li>물리 주소는 <code class="language-plaintext highlighter-rouge">MFN</code>와 <code class="language-plaintext highlighter-rouge">offset</code>으로 구성</li>
-</ul>
-
-<p><img src="https://i0.wp.com/blog.skby.net/wp-content/uploads/2020/03/역페이지테이블-구성도.png" width="80%" style="margin-left: 2%" /></p>
-
-<ol>
-  <li>논리 주소의 <code class="language-plaintext highlighter-rouge">PID</code>와 <code class="language-plaintext highlighter-rouge">PFN</code> 정보를 바탕으로 페이지 테이블에서 동일한 엔트리 탐색</li>
-  <li>페이지 테이블에서 <code class="language-plaintext highlighter-rouge">PID</code>와 <code class="language-plaintext highlighter-rouge">PFN</code>가 일치하는 (<code class="language-plaintext highlighter-rouge">MFN</code>)번째 항목을 발견</li>
-  <li><code class="language-plaintext highlighter-rouge">MFN</code>과 <code class="language-plaintext highlighter-rouge">Offset</code> 정보를 바탕으로 확인된 메모리 주소에 접근</li>
-</ol>
-
-<blockquote>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">64bit</code>를 사용하는 컴퓨터에서 <code class="language-plaintext highlighter-rouge">256MB</code>의 물리 메모리가 <code class="language-plaintext highlighter-rouge">4KB</code> 페이지 프레임 <code class="language-plaintext highlighter-rouge">2^18</code>개로 구성되었다면,
-      <ul>
-        <li>페이지 테이블을 사용할 때의 페이지 테이블의 엔트리는,
-          <ul>
-            <li>가상 주소 공간 <code class="language-plaintext highlighter-rouge">2^64byte</code>을 한 페이지 프레임의 크기 <code class="language-plaintext highlighter-rouge">4KB = 2^12byte</code>로 나눈 <code class="language-plaintext highlighter-rouge">2^52</code>개</li>
-          </ul>
-        </li>
-        <li>역 페이지 테이블을 사용하는 페이지 테이블의 엔트리는 물리 메모리의 페이지 프레임의 개수와 같으므로,
-          <ul>
-            <li>물리 메모리 <code class="language-plaintext highlighter-rouge">256MB = 2^28byte</code>를 한 페이지 프레임의 크기 <code class="language-plaintext highlighter-rouge">4KB = 2^12byte</code>로 나눈 <code class="language-plaintext highlighter-rouge">2^16</code>개</li>
-          </ul>
-        </li>
+        <li>운영체제는 권한을 받아 하드 디스크의 데이터를 페이지 테이블에 가져오고, TLB에 가져온 데이터를 넣는다.</li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<ul>
-  <li>프로세스 실행 중엔 페이지 테이블을 위한 추가적인 메모리 참조가 필요 없음 (프로세스 확장이 페이지 테이블과 무관)</li>
-  <li>페이지 테이블이 커질수록 구현을 위한 비용이 증가하고, 최악의 경우 페이지 테이블 전체를 적재해야 함 ex) 문맥 교환</li>
-</ul>
+<h3 id="다단계-페이지-테이블-multi-level-page-table">다단계 페이지 테이블 (Multi-level Page Table)</h3>
+
+<p>다단계 페이지 테이블은 페이지 테이블을 페이지 프레임 크기로 나누어, 해당 페이지 테이블의 페이지가 invalid하면 메모리에 할당하지 않고 기존의 단일한 페이지 테이블을 트리 구조로 연결한다. 페이지 디렉토리(Page Dictionary)는 페이지 프레임의 유무를 확인하는 자료구조로, 적어도 하나의 PFN이 valid하다면 페이지 디렉토리의 해당 엔트리는 존재하게 된다.</p>
+
+<p><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTAyMTlfOCAg/MDAxNTUwNTA2MjIzODAw.Wv_UIJMhp3-_COSDHBtsqEz0OCp91j4zEc3Vr4lmWHQg.qFb-bL0s7WgeO7btb1857Ifsk_KZqW063BUihRmZd-wg.PNG.babobigi/Page_Table_비교.png?type=w2" alt="Page Table Comparison" /></p>
+
+<p>기존의 페이지 테이블에서는 가운데에 위치한 페이지가 메모리에 할당되어 있지만, 다단계 페이지 테이블에서는 가운데에 위치한 페이지가 메모리에 할당되어 있지 않다. 다단계 페이지 테이블의 모든 페이지 테이블은 항상 메모리에 유지될 필요가 없다.</p>
+
+<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2Fcf85f3b3-985d-4872-9030-eb337ae7dbbe%2F2단계페테2.PNG" alt="Multi-level Page Table" /></p>
+
+<p>다단계 페이지 테이블은 필요한 페이지 테이블만 메모리에 할당해 메모리 사용을 절약할 수 있다. 페이지 디렉토리를 통해 물리 메모리의 빈 공간에 페이지 테이블 엔트리를 생성할 수 있다. 하지만, 기존의 TLB Miss가 2번 늘어나 주소 변환이 2번 필요하고, TLB Miss를 처리해 메모리를 최적화하는 로직이 복잡해진다.</p>
+
+<h3 id="역-페이지-테이블-inverted-page-table">역 페이지 테이블 (Inverted Page Table)</h3>
+
+<p>역 페이지 테이블은 빠른 하드웨어 레지스터로 구성된 단일한 페이지 테이블을 사용한다. 페이지 테이블의 각 엔트리는 하나의 메모리 프레임에 대응된다. 크기가 고정된 페이지 테이블에 프로세스를 맵핑하며, 프로세스 실행 시 운영체제는 메모리에 존재하는 프로세스의 페이지 테이블 전체를 하드웨어 레지스터 배열에 적재한다. 논리 주소는 PID, PFN, offset으로 구성되고, 물리 주소는 MFN와 offset으로 구성된다.</p>
+
+<p><img src="https://i0.wp.com/blog.skby.net/wp-content/uploads/2020/03/역페이지테이블-구성도.png" alt="Inverted Page Table" /></p>
+
+<p>논리 주소의 PID와 PFN 정보를 바탕으로 페이지 테이블에서 동일한 엔트리를 탐색하고, 페이지 테이블에서 PID와 PFN이 일치하는 MFN 번째 항목을 발견한다. 이후, MFN과 Offset 정보를 바탕으로 확인된 메모리 주소에 접근한다.</p>
+
+<p>예를 들어, 64bit를 사용하는 컴퓨터에서 256MB의 물리 메모리가 4KB 페이지 프레임 2^18개로 구성되었다면, 페이지 테이블을 사용할 때의 페이지 테이블의 엔트리는 가상 주소 공간 2^64byte를 한 페이지 프레임의 크기 4KB = 2^12byte로 나눈 2^52개가 된다. 반면, 역 페이지 테이블을 사용하는 페이지 테이블의 엔트리는 물리 메모리의 페이지 프레임의 개수와 같으므로, 물리 메모리 256MB = 2^28byte를 한 페이지 프레임의 크기 4KB = 2^12byte로 나눈 2^16개가 된다.</p>
+
+<p>프로세스 실행 중에는 페이지 테이블을 위한 추가적인 메모리 참조가 필요 없으며, 프로세스 확장이 페이지 테이블과 무관하다. 그러나 페이지 테이블이 커질수록 구현을 위한 비용이 증가하고, 최악의 경우 페이지 테이블 전체를 적재해야 하는 경우가 발생할 수 있다. 예를 들어, 문맥 교환 시 이러한 문제가 발생할 수 있다.</p>
 
         
       </section>
@@ -798,7 +598,7 @@ function checkAndLoadPage(allImages) {
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#operation-system" class="page__taxonomy-item p-category" rel="tag">Operation System</a>
+      <a href="/tags/#os" class="page__taxonomy-item p-category" rel="tag">OS</a>
     
     </span>
   </p>
@@ -808,7 +608,7 @@ function checkAndLoadPage(allImages) {
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-12-12">December 12, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-07-30">July 30, 2024</time></p>
 
       </footer>
       
@@ -831,7 +631,7 @@ function checkAndLoadPage(allImages) {
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BOperation+System%5D+7.+Paging%20http%3A%2F%2Flocalhost%3A4000%2Fos7%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BOS%5D+7.+%ED%8E%98%EC%9D%B4%EC%A7%95+%28Paging%29%20http%3A%2F%2Flocalhost%3A4000%2Fos7%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fos7%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
@@ -841,11 +641,11 @@ function checkAndLoadPage(allImages) {
       
   <nav class="pagination">
     
-      <a href="/os6/" class="pagination--pager" title="[Operation System] 6. Main Memory Management
+      <a href="/os6/" class="pagination--pager" title="[OS] 6. 메인 메모리 관리 (Main Memory Management)
 ">이전</a>
     
     
-      <a href="/os8/" class="pagination--pager" title="[Operation System] 8. Page Replacement Algorithm
+      <a href="/os8/" class="pagination--pager" title="[OS] 8. 페이지 교체 알고리즘 (Page Replacement Algorithm)
 ">다음</a>
     
   </nav>
@@ -911,7 +711,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm22/" rel="permalink">[Algorithm] 22. 계산 기하
+        <a href="/sqld4/" rel="permalink">[SQLD] 4. 관리 구문
 </a>
       
     </h2>
@@ -929,14 +729,16 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          3 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">계산 기하 (Computational Geometry) : 점·선·다각형·원 등 기하학적 도형을 다루는 알고리즘
+    <p class="archive__item-excerpt" itemprop="description">
+  SQLD를 취득하기 위해 공부하는 과정에 작성한 ‘관리 구문’ 관련 정리이다.
+
 
 </p>
   </article>
@@ -952,7 +754,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm21/" rel="permalink">[Algorithm] 21. 최소 신장 트리
+        <a href="/sqld3/" rel="permalink">[SQLD] 3. SQL 활용
 </a>
       
     </h2>
@@ -970,14 +772,17 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          5 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
+    <p class="archive__item-excerpt" itemprop="description">
+  SQLD를 취득하기 위해 공부하는 과정에 작성한 ‘SQL 활용’ 관련 정리이다.
+
+
 </p>
   </article>
 </div>
@@ -992,7 +797,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm20/" rel="permalink">[Algorithm] 20. 유니온 파인드
+        <a href="/sqld2/" rel="permalink">[SQLD] 2. SQL 기본
 </a>
       
     </h2>
@@ -1010,14 +815,17 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          5 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
+    <p class="archive__item-excerpt" itemprop="description">
+  SQLD를 취득하기 위해 공부하는 과정에 작성한 ‘SQL 기본’ 관련 정리이다.
+
+
 </p>
   </article>
 </div>

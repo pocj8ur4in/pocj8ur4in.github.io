@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          6 분 소요
+          7 분 소요
         
       </span>
     
@@ -378,7 +378,7 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#스코프-scope--변수에-접근할-수-있는-범위">스코프 (Scope) : 변수에 접근할 수 있는 범위</a><ul><li><a href="#전역-스코프-global-level-scope--코드-어디에서나-참조-가능">전역 스코프 (Global-level Scope) → 코드 어디에서나 참조 가능</a></li><li><a href="#함수-스코프-function-level-scope--함수-자신과-하위-함수에서만-참조-가능">함수 스코프 (Function-level Scope) → 함수 자신과 하위 함수에서만 참조 가능</a></li><li><a href="#블록-스코프-block-level-scope--블록-내에서만-참조-가능">블록 스코프 (Block-level Scope) → 블록 내에서만 참조 가능</a></li><li><a href="#모듈-스코프-module-level-scope-">모듈 스코프 (Module-level Scope) →</a></li><li><a href="#렉시컬-스코프-lexical-level-scope">렉시컬 스코프 (Lexical-level Scope)</a></li><li><a href="#암묵적-전역-implicit-global">암묵적 전역 (Implicit Global)</a></li></ul></li><li><a href="#실행-컨텍스트-execution-context--실행할-코드에-제공할-환경-정보들을-모아놓은-객체">실행 컨텍스트 (Execution Context) : 실행할 코드에 제공할 환경 정보들을 모아놓은 객체</a></li><li><a href="#엄격-모드-strict-mode--자바스크립트가-묵인한-에러를-발생시켜-엄격한-오류-검사를-적용">엄격 모드 (Strict Mode) : 자바스크립트가 묵인한 에러를 발생시켜 엄격한 오류 검사를 적용</a></li><li><a href="#클로저-closure--함수가-특정-스코프에-접근할-수-있도록-의도적으로-그-스코프에서-정의한-것">클로저 (Closure) : 함수가 특정 스코프에 접근할 수 있도록 의도적으로 그 스코프에서 정의한 것</a></li></ul>
+              <ul class="toc__menu"><li><a href="#스코프-scope--변수에-접근할-수-있는-범위">스코프 (Scope) : 변수에 접근할 수 있는 범위</a><ul><li><a href="#전역-스코프-global-level-scope--코드-어디에서나-참조-가능">전역 스코프 (Global-level Scope) → 코드 어디에서나 참조 가능</a></li><li><a href="#함수-스코프-function-level-scope--함수-자신과-하위-함수에서만-참조-가능">함수 스코프 (Function-level Scope) → 함수 자신과 하위 함수에서만 참조 가능</a></li><li><a href="#블록-스코프-block-level-scope--블록-내에서만-참조-가능">블록 스코프 (Block-level Scope) → 블록 내에서만 참조 가능</a></li><li><a href="#모듈-스코프-module-level-scope--모듈-내에서만-참조-가능">모듈 스코프 (Module-level Scope) → 모듈 내에서만 참조 가능</a></li><li><a href="#렉시컬-스코프-lexical-level-scope--변수-스코프가-코드-작성-문맥에-결정">렉시컬 스코프 (Lexical-level Scope) → 변수 스코프가 코드 작성 문맥에 결정</a></li><li><a href="#암묵적-전역-implicit-global--변수-선언-없이-값-할당-시-객체-프로퍼티로-등록">암묵적 전역 (Implicit Global) → 변수 선언 없이 값 할당 시, 객체 프로퍼티로 등록</a></li></ul></li><li><a href="#실행-컨텍스트-execution-context--실행할-코드에-제공할-환경-정보들을-모아놓은-객체">실행 컨텍스트 (Execution Context) : 실행할 코드에 제공할 환경 정보들을 모아놓은 객체</a></li><li><a href="#엄격-모드-strict-mode--자바스크립트가-묵인한-에러를-발생시켜-엄격한-오류-검사를-적용">엄격 모드 (Strict Mode) : 자바스크립트가 묵인한 에러를 발생시켜 엄격한 오류 검사를 적용</a></li><li><a href="#클로저-closure--함수가-특정-스코프에-접근할-수-있도록-의도적으로-그-스코프에서-정의한-것">클로저 (Closure) : 함수가 특정 스코프에 접근할 수 있도록 의도적으로 그 스코프에서 정의한 것</a></li></ul>
 
             </nav>
           </aside>
@@ -415,19 +415,77 @@ console.log(local); // Uncaught ReferenceError: local is not defined
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(function () {
   var local = 'local';
-  console.log(local);
+  console.log(local); // 'local'
 })();
+console.log(typeof local); // 'undefined'
 </code></pre></div></div>
 
 <h3 id="블록-스코프-block-level-scope--블록-내에서만-참조-가능">블록 스코프 (<code class="language-plaintext highlighter-rouge">Block-level Scope</code>) → 블록 내에서만 참조 가능</h3>
 
-<h3 id="모듈-스코프-module-level-scope-">모듈 스코프 (<code class="language-plaintext highlighter-rouge">Module-level Scope</code>) →</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  let blockScoped = 'block scoped';
+  console.log(blockScoped); // 'block scoped'
+}
+console.log(typeof blockScoped); // 'undefined'
+</code></pre></div></div>
 
-<h3 id="렉시컬-스코프-lexical-level-scope">렉시컬 스코프 (<code class="language-plaintext highlighter-rouge">Lexical-level Scope</code>)</h3>
+<h3 id="모듈-스코프-module-level-scope--모듈-내에서만-참조-가능">모듈 스코프 (<code class="language-plaintext highlighter-rouge">Module-level Scope</code>) → 모듈 내에서만 참조 가능</h3>
 
-<h3 id="암묵적-전역-implicit-global">암묵적 전역 (<code class="language-plaintext highlighter-rouge">Implicit Global</code>)</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// module1.js
+export const moduleScoped = 'module scoped';
+
+// module2.js
+import { moduleScoped } from './module1.js';
+console.log(moduleScoped); // 'module scoped'
+</code></pre></div></div>
+
+<h3 id="렉시컬-스코프-lexical-level-scope--변수-스코프가-코드-작성-문맥에-결정">렉시컬 스코프 (<code class="language-plaintext highlighter-rouge">Lexical-level Scope</code>) → 변수 스코프가 코드 작성 문맥에 결정</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function outer() {
+  const lexical = 'lexical scope';
+  function inner() {
+    console.log(lexical); // 'lexical scope'
+  }
+  inner();
+}
+outer();
+</code></pre></div></div>
+
+<h3 id="암묵적-전역-implicit-global--변수-선언-없이-값-할당-시-객체-프로퍼티로-등록">암묵적 전역 (<code class="language-plaintext highlighter-rouge">Implicit Global</code>) → 변수 선언 없이 값 할당 시, 객체 프로퍼티로 등록</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function implicitGlobalExample() {
+  implicitVar = 'implicit global'; // 암묵적 전역 변수
+}
+implicitGlobalExample();
+console.log(implicitVar); // 'implicit global'
+</code></pre></div></div>
 
 <h2 id="실행-컨텍스트-execution-context--실행할-코드에-제공할-환경-정보들을-모아놓은-객체">실행 컨텍스트 (<code class="language-plaintext highlighter-rouge">Execution Context</code>) : 실행할 코드에 제공할 환경 정보들을 모아놓은 객체</h2>
+
+<ul>
+  <li>변수 객체 (Variable Object) : : 변수, 함수 선언, 함수의 인수 정보를 담고 있는 객체
+    <ul>
+      <li>활성 객체 : 변수 객체의 초기 상태는 활성 객체로, arguments 객체만 포함</li>
+      <li>함수 선언 : 모든 함수 선언은 변수 객체에 즉시 추가</li>
+      <li>변수 선언 : 변수 선언은 undefined로 초기화되며, 코드 실행 시 값이 할당</li>
+    </ul>
+  </li>
+  <li>스코프 체인 (Scope Chain) : 현재 실행 중인 코드의 스코프(변수 접근 범위)를 나타내는 리스트
+    <ul>
+      <li>현재 스코프 : 실행 중인 함수의 변수 객체
+        <ul>
+          <li>외부 스코프 : 외부 함수들의 변수 객체를 참조</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>this 바인딩 (this Binding) : 실행 컨텍스트 내에서 this가 가리키는 객체를 정의
+    <ul>
+      <li>전역 컨텍스트 : 전역 객체 (window 객체 등)를 가리킴</li>
+      <li>함수 컨텍스트 : 함수 호출 방식에 따라 this의 값이 결정</li>
+    </ul>
+  </li>
+</ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var gg = 1;  let bb = 2;
 
@@ -839,7 +897,7 @@ console.log(counter2()); // 1
       
   <nav class="pagination">
     
-      <a href="/digital_hanaro_5.md/" class="pagination--pager" title="고차 함수, 콜백 함수 (2024.01.31)
+      <a href="/js3/" class="pagination--pager" title="[JS] 3. 호이스팅 (Hoisting) &amp; 동적 타이핑 (Type Conversion)
 ">이전</a>
     
     
@@ -909,7 +967,7 @@ console.log(counter2()); // 1
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm22/" rel="permalink">[Algorithm] 22. 계산 기하
+        <a href="/sqld4/" rel="permalink">[SQLD] 4. 관리 구문
 </a>
       
     </h2>
@@ -927,14 +985,16 @@ console.log(counter2()); // 1
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          3 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">계산 기하 (Computational Geometry) : 점·선·다각형·원 등 기하학적 도형을 다루는 알고리즘
+    <p class="archive__item-excerpt" itemprop="description">
+  SQLD를 취득하기 위해 공부하는 과정에 작성한 ‘관리 구문’ 관련 정리이다.
+
 
 </p>
   </article>
@@ -950,7 +1010,7 @@ console.log(counter2()); // 1
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm21/" rel="permalink">[Algorithm] 21. 최소 신장 트리
+        <a href="/sqld3/" rel="permalink">[SQLD] 3. SQL 활용
 </a>
       
     </h2>
@@ -968,14 +1028,17 @@ console.log(counter2()); // 1
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          5 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
+    <p class="archive__item-excerpt" itemprop="description">
+  SQLD를 취득하기 위해 공부하는 과정에 작성한 ‘SQL 활용’ 관련 정리이다.
+
+
 </p>
   </article>
 </div>
@@ -990,7 +1053,7 @@ console.log(counter2()); // 1
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm20/" rel="permalink">[Algorithm] 20. 유니온 파인드
+        <a href="/sqld2/" rel="permalink">[SQLD] 2. SQL 기본
 </a>
       
     </h2>
@@ -1008,14 +1071,17 @@ console.log(counter2()); // 1
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          5 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
+    <p class="archive__item-excerpt" itemprop="description">
+  SQLD를 취득하기 위해 공부하는 과정에 작성한 ‘SQL 기본’ 관련 정리이다.
+
+
 </p>
   </article>
 </div>

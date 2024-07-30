@@ -54,8 +54,8 @@ function checkAndLoadPage(allImages) {
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Operation System] 6. Main Memory Management - pocj8ur4in’s blog</title>
-<meta name="description" content="메인 메모리 관리 (Main Memory Management)">
+<!-- begin _includes/seo.html --><title>[OS] 6. 메인 메모리 관리 (Main Memory Management) - pocj8ur4in’s blog</title>
+<meta name="description" content="메인 메모리 관리 (Main Memory Management) : 주소와 데이터를 관리">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -67,11 +67,11 @@ function checkAndLoadPage(allImages) {
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="pocj8ur4in's blog">
-<meta property="og:title" content="[Operation System] 6. Main Memory Management">
+<meta property="og:title" content="[OS] 6. 메인 메모리 관리 (Main Memory Management)">
 <meta property="og:url" content="http://localhost:4000/os6/">
 
 
-  <meta property="og:description" content="메인 메모리 관리 (Main Memory Management)">
+  <meta property="og:description" content="메인 메모리 관리 (Main Memory Management) : 주소와 데이터를 관리">
 
 
 
@@ -83,7 +83,7 @@ function checkAndLoadPage(allImages) {
 
 
 
-  <meta property="article:modified_time" content="2022-12-12T00:00:00+09:00">
+  <meta property="article:modified_time" content="2024-07-30T00:00:00+09:00">
 
 
 
@@ -211,7 +211,7 @@ function checkAndLoadPage(allImages) {
         <span class="sep">/</span>
       
       
-        <li class="current">[Operation System] 6. Main Memory Management</li>
+        <li class="current">[OS] 6. 메인 메모리 관리 (Main Memory Management)</li>
       
     
   </ol>
@@ -337,16 +337,16 @@ function checkAndLoadPage(allImages) {
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Operation System] 6. Main Memory Management">
-    <meta itemprop="description" content="메인 메모리 관리 (Main Memory Management)">
+    <meta itemprop="headline" content="[OS] 6. 메인 메모리 관리 (Main Memory Management)">
+    <meta itemprop="description" content="메인 메모리 관리 (Main Memory Management) : 주소와 데이터를 관리">
     <meta itemprop="datePublished" content="2022-10-07T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2022-12-12T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-07-30T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/os6/" class="u-url" itemprop="url">[Operation System] 6. Main Memory Management
+            <a href="http://localhost:4000/os6/" class="u-url" itemprop="url">[OS] 6. 메인 메모리 관리 (Main Memory Management)
 </a>
           </h1>
           
@@ -363,7 +363,7 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          7 분 소요
+          6 분 소요
         
       </span>
     
@@ -378,389 +378,132 @@ function checkAndLoadPage(allImages) {
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#메인-메모리-관리-main-memory-management">메인 메모리 관리 (Main Memory Management)</a><ul><li><a href="#메모리-계층-memory-hierarchy--각각의-특징이-있는-저장-장치를-혼용해-효율성-극대화">메모리 계층 (Memory hierarchy) : 각각의 특징이 있는 저장 장치를 혼용해 효율성 극대화</a></li><li><a href="#q-cpu가-한-번에-한-프로세스를-수행하면--mono-programming">Q. CPU가 한 번에 한 프로세스를 수행하면? : Mono-Programming</a></li><li><a href="#q-만약-메모리-추상화를-사용하지-않는다면--모든-프로그램이-물리-메모리를-직접-사용">Q. 만약 메모리 추상화를 사용하지 않는다면? : 모든 프로그램이 물리 메모리를 직접 사용</a><ul><li><a href="#p1-프로텍션-protection--한-프로세스가-운영체제나-다른-프로세스의-파티션을-침범하지-못하게-해야-함">P1. 프로텍션 (Protection) : 한 프로세스가 운영체제나 다른 프로세스의 파티션을 침범하지 못하게 해야 함</a></li><li><a href="#p2-리로케이트-relocation--변수-주소나-프로시저-주소에-대한-접근에-차이가-발생">P2. 리로케이트 (Relocation) : 변수 주소나 프로시저 주소에 대한 접근에 차이가 발생</a></li></ul></li><li><a href="#주소-바인딩-address-binding--프로세스의-논리적-주소를-물리적-메모리-주소로-연결">주소 바인딩 (Address Binding) : 프로세스의 논리적 주소를 물리적 메모리 주소로 연결</a><ul><li><a href="#mmu의-재배치-레지스터-relocation-register--프로세스의-논리-공간을-메모리의-물리-공간으로-연속해-매핑">MMU의 재배치 레지스터 (Relocation Register) : 프로세스의 논리 공간을 메모리의 물리 공간으로 연속해 매핑</a></li></ul></li><li><a href="#스와핑-swapping--메모리에-로드된-프로세스-중에-장기간-미사용된-것을-하드-디스크에-이미지-형태로-저장">스와핑 (Swapping) : 메모리에 로드된 프로세스 중에 장기간 미사용된 것을 하드 디스크에 이미지 형태로 저장</a><ul><li><a href="#동적-메모리-파티션-dynamic-memory-partitions--프로그램이-메모리에-로드될-때마다-파티션을-나누고-할당">동적 메모리 파티션 (Dynamic memory partitions) : 프로그램이 메모리에 로드될 때마다 파티션을 나누고 할당</a></li><li><a href="#contiguous-memory-allocation--메모리에-새로-생성된-프로세스들을-위한-메모리-공간-할당">Contiguous Memory Allocation : 메모리에 새로 생성된 프로세스들을 위한 메모리 공간 할당</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#메인-메모리-관리-main-memory-management--주소와-데이터를-관리">메인 메모리 관리 (Main Memory Management) : 주소와 데이터를 관리</a><ul><li><a href="#메모리-계층-memory-hierarchy">메모리 계층 (Memory hierarchy)</a></li><li><a href="#q-cpu가-한-번에-한-프로세스를-수행하면--mono-programming">Q. CPU가 한 번에 한 프로세스를 수행하면? : Mono-Programming</a></li><li><a href="#q-만약-메모리-추상화를-사용하지-않는다면--모든-프로그램이-물리-메모리를-직접-사용">Q. 만약 메모리 추상화를 사용하지 않는다면? : 모든 프로그램이 물리 메모리를 직접 사용</a><ul><li><a href="#p1-프로텍션-protection">P1. 프로텍션 (Protection)</a></li><li><a href="#p2-리로케이트-relocation">P2. 리로케이트 (Relocation)</a></li></ul></li><li><a href="#주소-바인딩-address-binding">주소 바인딩 (Address Binding)</a></li><li><a href="#mmu의-재배치-레지스터-relocation-register">MMU의 재배치 레지스터 (Relocation Register)</a></li><li><a href="#스와핑-swapping">스와핑 (Swapping)</a></li><li><a href="#동적-메모리-파티션-dynamic-memory-partitions">동적 메모리 파티션 (Dynamic memory partitions)</a></li><li><a href="#contiguous-memory-allocation">Contiguous Memory Allocation</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="메인-메모리-관리-main-memory-management">메인 메모리 관리 (<code class="language-plaintext highlighter-rouge">Main Memory Management</code>)</h2>
+        <h2 id="메인-메모리-관리-main-memory-management--주소와-데이터를-관리">메인 메모리 관리 (Main Memory Management) : 주소와 데이터를 관리</h2>
 
-<ul>
-  <li>메모리 공간은 기본적으로 주소 (<code class="language-plaintext highlighter-rouge">address</code>)와 데이터 (<code class="language-plaintext highlighter-rouge">data</code>)로 구성되어 있음
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">CPU</code>는 주소를 가지고 메인 메모리에 요청을 하거나 해당 주소에 계산 결과를 저장</li>
-      <li>메인 메모리는 <code class="language-plaintext highlighter-rouge">CPU</code>가 요구하는 주소에 저장되어 있는 데이터를 <code class="language-plaintext highlighter-rouge">CPU</code>에게 전달</li>
-    </ul>
-  </li>
-</ul>
+<p>메모리 공간은 기본적으로 주소 (address)와 데이터 (data)로 구성되어 있다. CPU는 주소를 가지고 메인 메모리에 요청을 하거나 해당 주소에 계산 결과를 저장하며, 메인 메모리는 CPU가 요구하는 주소에 저장되어 있는 데이터를 CPU에게 전달한다.</p>
 
-<p><img src="https://user-images.githubusercontent.com/34755287/54821877-d74f5380-4ce6-11e9-8888-e63816796f65.png" width="80%" style="margin-left: 2%" /></p>
+<p><img src="https://user-images.githubusercontent.com/34755287/54821877-d74f5380-4ce6-11e9-8888-e63816796f65.png" alt="Main Memory Management" /></p>
 
-<ul>
-  <li>프로그램의 빌드는 소스 파일, 목적 파일, 실행 파일 순서로 생성
-    <ul>
-      <li>소스 파일 (<code class="language-plaintext highlighter-rouge">Source file</code>) : 고수준 언어 또는 어셈블리어
-        <ul>
-          <li>컴파일 단계 : 소스 파일은 컴파일러 또는 어셈블러에 의해 컴파일 또는 어셈블하여 목적 파일 생성</li>
-        </ul>
-      </li>
-      <li>목적 파일 (<code class="language-plaintext highlighter-rouge">Object file</code>) : 컴파일된 결과 또는 어셈블된 결과
-        <ul>
-          <li>링크 단계 : 목적 파일은 링커 (<code class="language-plaintext highlighter-rouge">Linker</code>)에 의해 라이브러리를 찾아 정보를 추가해 실행 파일 생성</li>
-        </ul>
-      </li>
-      <li>실행 파일 (<code class="language-plaintext highlighter-rouge">Executable file</code>) : 링크된 결과
-        <ul>
-          <li>로드 단계 : 실행 파일은 로더 (<code class="language-plaintext highlighter-rouge">Loader</code>)에 의해 메인 메모리에 할당</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+<p>프로그램의 빌드는 소스 파일, 목적 파일, 실행 파일 순서로 생성된다. 소스 파일(Source file)은 고수준 언어 또는 어셈블리어로 작성되며, 컴파일 단계에서 컴파일러 또는 어셈블러에 의해 컴파일 또는 어셈블하여 목적 파일(Object file)을 생성한다. 목적 파일은 컴파일된 결과 또는 어셈블된 결과를 나타내며, 링크 단계에서 링커(Linker)에 의해 라이브러리를 찾아 정보를 추가해 실행 파일(Executable file)을 생성한다. 실행 파일은 로드 단계에서 로더(Loader)에 의해 메인 메모리에 할당된다.</p>
 
-<p><img src="https://user-images.githubusercontent.com/34755287/54821878-d74f5380-4ce6-11e9-98e8-a43b086a4837.png" width="80%" style="margin-left: 2%" /></p>
+<p><img src="https://user-images.githubusercontent.com/34755287/54821878-d74f5380-4ce6-11e9-98e8-a43b086a4837.png" alt="Program Build" /></p>
 
-<ul>
-  <li>빌드된 프로그램은 <code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">data</code>, <code class="language-plaintext highlighter-rouge">stack</code> 영역으로 구분됨
-    <ul>
-      <li>단순히 생성된 프로그램은 <code class="language-plaintext highlighter-rouge">code</code>, <code class="language-plaintext highlighter-rouge">data</code> 영역만 존재</li>
-      <li>로드 단계에서 프로그램이 실행을 위해 메모리에 적재되었을 때, 운영체제에 의해 <code class="language-plaintext highlighter-rouge">stack</code> 영역이 추가됨</li>
-    </ul>
-  </li>
-</ul>
+<p>빌드된 프로그램은 code, data, stack 영역으로 구분된다. 단순히 생성된 프로그램은 code, data 영역만 존재하지만, 로드 단계에서 프로그램이 실행을 위해 메모리에 적재되었을 때, 운영체제에 의해 stack 영역이 추가된다.</p>
 
-<h3 id="메모리-계층-memory-hierarchy--각각의-특징이-있는-저장-장치를-혼용해-효율성-극대화">메모리 계층 (<code class="language-plaintext highlighter-rouge">Memory hierarchy</code>) : 각각의 특징이 있는 저장 장치를 혼용해 효율성 극대화</h3>
-<ul>
-  <li>메모리 매니저 (<code class="language-plaintext highlighter-rouge">Memory Manager</code>) : 메모리 하이라키를 관리하는 관리 시스템의 일부분</li>
-</ul>
+<h3 id="메모리-계층-memory-hierarchy">메모리 계층 (Memory hierarchy)</h3>
 
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9986554C5C76482528" width="80%" style="margin-left: 2%" /></p>
+<p>메모리 계층은 각각의 특징이 있는 저장 장치를 혼용해 효율성을 극대화하는 방법이다. 메모리 계층 구조는 성능, 비용, 용량 및 접근 속도 측면에서 다양한 저장 장치들을 적절히 배치하여 최적의 성능을 제공하는 것을 목표로 한다. 메모리 매니저(Memory Manager)는 이러한 메모리 계층을 관리하는 시스템의 일부분으로, 각 계층 간의 데이터 이동과 접근을 효율적으로 관리한다.</p>
 
-<ul>
-  <li>캐시 (<code class="language-plaintext highlighter-rouge">Cash</code>) : 빠르고, 비싸고, 휘발성</li>
-  <li>메인 메모리 (<code class="language-plaintext highlighter-rouge">Main Memory</code>) : 캐시보다 느리고, 캐시보다 싸고, 휘발성</li>
-  <li>디스크 스토리지 (<code class="language-plaintext highlighter-rouge">Disk Storage</code>) : 메인 메모리보다 느리고, 메인 메모리보다 싸고, 비휘발성</li>
-</ul>
+<p>캐시(Cache)는 메모리 계층 구조의 최상위에 위치하며, 접근 속도가 가장 빠르다. 캐시는 CPU와 가장 가까운 위치에 있어 매우 빠른 데이터 접근이 가능하지만, 용량이 제한적이고 비용이 높으며 휘발성 메모리이다. 캐시는 주로 CPU의 작업 효율성을 높이기 위해 자주 사용되는 데이터를 저장한다. L1, L2, L3 등의 레벨로 구분되며, 각 레벨은 크기와 속도에서 차이가 있다.</p>
 
-<blockquote>
-  <p>메모리 계층 구조를 통해 프로그래머가 사용하기 좋은 모델로 <b>추상화</b>하고, 운영체제를 통해 추상회된 객체를 관리한다.</p>
-</blockquote>
+<p>메인 메모리(Main Memory)는 캐시보다 느리지만, 용량이 더 크고 비용이 상대적으로 낮다. 메인 메모리 역시 휘발성 메모리로, 전원이 꺼지면 저장된 데이터가 사라진다. 메인 메모리는 운영체제와 실행 중인 프로그램이 데이터를 저장하고 접근하는 주요 공간으로 사용된다. DRAM(Dynamic Random Access Memory)이 일반적으로 메인 메모리로 사용된다.</p>
 
-<h3 id="q-cpu가-한-번에-한-프로세스를-수행하면--mono-programming">Q. <code class="language-plaintext highlighter-rouge">CPU</code>가 한 번에 한 프로세스를 수행하면? : <code class="language-plaintext highlighter-rouge">Mono-Programming</code></h3>
+<p>디스크 스토리지(Disk Storage)는 메모리 계층 구조의 하위에 위치하며, 비휘발성 메모리로 데이터를 영구적으로 저장할 수 있다. 디스크 스토리지는 메인 메모리보다 훨씬 큰 용량을 제공하지만, 접근 속도가 느리고 비용이 더 저렴하다. HDD(Hard Disk Drive)와 SSD(Solid State Drive)가 대표적인 디스크 스토리지 장치이다. 디스크 스토리지는 주로 대용량 데이터 저장 및 백업 용도로 사용된다.</p>
 
-<ul>
-  <li>메인 프레임 (<code class="language-plaintext highlighter-rouge">mainframe</code>) : <code class="language-plaintext highlighter-rouge">RAM</code> 위의 <code class="language-plaintext highlighter-rouge">OS</code>에 유저 프로그램이 주소로 연결되어 존재</li>
-  <li>임베디드 시스템 (<code class="language-plaintext highlighter-rouge">Embedded System</code>) : <code class="language-plaintext highlighter-rouge">OS</code>가 위치한 <code class="language-plaintext highlighter-rouge">ROM</code> 아래에 유저 프로그램이 주소로 연결되어 존재</li>
-  <li>퍼스널 컴퓨터 (<code class="language-plaintext highlighter-rouge">personal computer</code>) : 메인 프레임 + <code class="language-plaintext highlighter-rouge">ROM</code> 위 장치 관리자가 유저 프로그램 위에서 <code class="language-plaintext highlighter-rouge">OS</code>의 관리를 받음</li>
-</ul>
+<p>메모리 계층 구조를 통해 프로그래머가 사용하기 좋은 모델로 추상화하고, 운영체제를 통해 추상화된 객체를 관리한다. 프로그래머는 메모리 계층 구조의 복잡성을 신경 쓰지 않고, 운영체제가 제공하는 메모리 관리 기능을 통해 메모리에 접근할 수 있다. 운영체제는 캐시, 메인 메모리, 디스크 스토리지 간의 데이터 이동을 자동으로 처리하여 최적의 성능을 유지한다. 이를 통해 프로그램의 실행 속도를 높이고, 시스템 자원의 효율적인 사용을 도모할 수 있다.</p>
 
-<blockquote>
-  <p>하단 내용은, <code class="language-plaintext highlighter-rouge">CPU</code>가 여러 프로세스를 돌아가면서 수행하는 <code class="language-plaintext highlighter-rouge">Multi-Programming</code> 환경이라 가정한다.</p>
-</blockquote>
+<h3 id="q-cpu가-한-번에-한-프로세스를-수행하면--mono-programming">Q. CPU가 한 번에 한 프로세스를 수행하면? : Mono-Programming</h3>
+
+<p>메인 프레임(mainframe)은 RAM 위의 OS에 유저 프로그램이 주소로 연결되어 존재한다. 임베디드 시스템(Embedded System)은 OS가 위치한 ROM 아래에 유저 프로그램이 주소로 연결되어 존재한다. 퍼스널 컴퓨터(personal computer)는 메인 프레임과 ROM 위 장치 관리자가 유저 프로그램 위에서 OS의 관리를 받는 형태로 존재한다.</p>
 
 <h3 id="q-만약-메모리-추상화를-사용하지-않는다면--모든-프로그램이-물리-메모리를-직접-사용">Q. 만약 메모리 추상화를 사용하지 않는다면? : 모든 프로그램이 물리 메모리를 직접 사용</h3>
-<ul>
-  <li>프로그래머에게 제공되는 메모리 영역 : 실제 물리 메모리 (0 ~ (실제 물리 메모리의 크기))
-    <ul>
-      <li>각 주소는 <code class="language-plaintext highlighter-rouge">n</code>비트로 구성된 셀 (<code class="language-plaintext highlighter-rouge">Cell</code>)로 정의</li>
-    </ul>
-  </li>
-  <li>하드웨어의 도움 없이 두 프로그램이 동시에 메모리에서 실행된다는 것은 불가능
-    <ul>
-      <li>메모리의 프로세스를 이미지 형태로 디스크에 저장하고, 프로그램을 메모리로 스와핑 (<code class="language-plaintext highlighter-rouge">Swapping</code>)할 순 있음</li>
-    </ul>
-  </li>
-</ul>
 
-<blockquote>
-  <p>! 메모리 추상화를 사용하지 않는다고 했으니, 메모리 계층 구조 또한 존재하지 않는거네?</p>
-  <ul>
-    <li><b>아니다.</b> 메모리를 추상화하는 방법 중 하나로, <b>메모리 추상화를 사용하지 않는 것</b>이다.
-      <ul>
-        <li>{ a, b, c, d, … } 를 추상화하는 방법 (1) := alphabetic</li>
-        <li>{ a, b, c, d, … } 를 추상화하는 방법 (2) := { a, b, c, d, … }</li>
-      </ul>
-    </li>
-  </ul>
+<p>프로그래머에게 제공되는 메모리 영역은 실제 물리 메모리(0 ~ 실제 물리 메모리의 크기)로, 각 주소는 n비트로 구성된 셀(Cell)로 정의된다. 하드웨어의 도움 없이 두 프로그램이 동시에 메모리에서 실행된다는 것은 불가능하지만, 메모리의 프로세스를 이미지 형태로 디스크에 저장하고 프로그램을 메모리로 스와핑(Swapping)할 수는 있다.</p>
 
-  <p>… 운영체제는 메모리 계층 구조를 이루는 캐시, 메인 메모리, 디스크 스토리지를 물리 주소를 통해 직접 접근한다.</p>
-  <ul>
-    <li>그런데, 물리 주소를 직접 접근하는 방법에는 <code class="language-plaintext highlighter-rouge">Protection &amp; Relocation</code> 이슈가 존재한다.</li>
-  </ul>
-</blockquote>
+<p>메모리를 추상화하지 않는 방법도 메모리 추상화의 한 가지 방법이다. 메모리 계층 구조는 여전히 존재하며, 운영체제는 캐시, 메인 메모리, 디스크 스토리지를 물리 주소를 통해 직접 접근한다. 그러나, 물리 주소를 직접 접근하는 방법에는 Protection &amp; Relocation 이슈가 존재한다.</p>
 
-<h4 id="p1-프로텍션-protection--한-프로세스가-운영체제나-다른-프로세스의-파티션을-침범하지-못하게-해야-함">P1. 프로텍션 (<code class="language-plaintext highlighter-rouge">Protection</code>) : 한 프로세스가 운영체제나 다른 프로세스의 파티션을 침범하지 못하게 해야 함</h4>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">IBM360</code>모델 : 프로텍션 코드 (<code class="language-plaintext highlighter-rouge">Protection code</code>)
-    <ul>
-      <li>프로세스의 <code class="language-plaintext highlighter-rouge">PSW</code>에는 <code class="language-plaintext highlighter-rouge">4bit</code> 키가 포함 / 메모리를 <code class="language-plaintext highlighter-rouge">2KB</code> 블럭 단위로 나누고, 각 블록에 <code class="language-plaintext highlighter-rouge">4bit</code> 프로텍션 코드 할당</li>
-      <li>수행되는 프로세스는 자신의 <code class="language-plaintext highlighter-rouge">PSW</code> 키와 액세스하는 블럭의 프로텍션 코드를 비교해, 일치하지 않으면 트랩 발생</li>
-    </ul>
-  </li>
-</ul>
+<h4 id="p1-프로텍션-protection">P1. 프로텍션 (Protection)</h4>
 
-<h4 id="p2-리로케이트-relocation--변수-주소나-프로시저-주소에-대한-접근에-차이가-발생">P2. 리로케이트 (<code class="language-plaintext highlighter-rouge">Relocation</code>) : 변수 주소나 프로시저 주소에 대한 접근에 차이가 발생</h4>
-<ul>
-  <li>컴파일된 <code class="language-plaintext highlighter-rouge">.exe</code> 파일을 파티션에 로드해 실행할 때, 바이너리 파일이 아닌, 파티션을 기준으로 접근해야 함
-    <ul>
-      <li>컴파일된 <code class="language-plaintext highlighter-rouge">.exe</code> 파일을 파티션 A와 B에 각각 로드해 실행할 때, 각 파티션을 기준으로 접근해야 함</li>
-    </ul>
-  </li>
-</ul>
+<p>한 프로세스가 운영체제나 다른 프로세스의 파티션을 침범하지 못하게 해야 한다. IBM360 모델에서는 프로텍션 코드(Protection code)를 사용한다. 프로세스의 PSW에는 4bit 키가 포함되며, 메모리를 2KB 블럭 단위로 나누고 각 블록에 4bit 프로텍션 코드를 할당한다. 수행되는 프로세스는 자신의 PSW 키와 액세스하는 블럭의 프로텍션 코드를 비교해 일치하지 않으면 트랩을 발생시킨다.</p>
 
-<blockquote>
-  <p>컴파일된 <code class="language-plaintext highlighter-rouge">.exe</code> 파일의 첫번째 명령어가 100번지에 있는 프로시저 콜이라고 가정하면…</p>
-  <ul>
-    <li>해당 파일을 파티션에 로드해 실행했을 때 : <del>0 + 100번지로 접근</del> (파티션의 시작 주소) + 100번지로 접근</li>
-  </ul>
-</blockquote>
+<h4 id="p2-리로케이트-relocation">P2. 리로케이트 (Relocation)</h4>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">IBM360</code>모델 : 정적 재배치 (<code class="language-plaintext highlighter-rouge">Static Relocation</code>)
-    <ul>
-      <li>프로그램이 메모리에 로드될 때, 파티션을 기준으로 접근하도록 명령어 수정
-        <ul>
-          <li>링커가 프로그램의 어떤 부분이 리로케이트되어야 하는지 알아야 함</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+<p>변수 주소나 프로시저 주소에 대한 접근에 차이가 발생한다. .exe 파일을 파티션에 로드해 실행할 때, 바이너리 파일이 아닌 파티션을 기준으로 접근해야 한다. 예를 들어, 컴파일된 .exe 파일을 파티션 A와 B에 각각 로드해 실행할 때, 각 파티션을 기준으로 접근해야 한다.</p>
 
-<h3 id="주소-바인딩-address-binding--프로세스의-논리적-주소를-물리적-메모리-주소로-연결">주소 바인딩 (<code class="language-plaintext highlighter-rouge">Address Binding</code>) : 프로세스의 논리적 주소를 물리적 메모리 주소로 연결</h3>
-<ul>
-  <li>주소 공간 (<code class="language-plaintext highlighter-rouge">address space</code>) : 프로세스가 메모리에 접근할 때 사용하는 주소들의 집합
-    <ul>
-      <li>각 프로세스들은 자신들만의 주소 공간을 가짐 -&gt; <code class="language-plaintext highlighter-rouge">logical address</code></li>
-    </ul>
-  </li>
-  <li>프로그램이 어떤 주소를 사용해도, 메인 메모리에 할당된 주소를 찾아가도록 해야 함
-    <ul>
-      <li>논리 주소 (<code class="language-plaintext highlighter-rouge">logical address</code>) : CPU에서 사용하는 주소. 메모리 내 프로세스의 독립적인 공간</li>
-      <li>물리 주소 (<code class="language-plaintext highlighter-rouge">physical address</code>) : 메인 메모리에서 사용하는 주소. 하드웨어에 의해 정해진 주소 공간</li>
-    </ul>
-  </li>
-</ul>
+<p>IBM360 모델에서는 정적 재배치(Static Relocation)를 사용하여 프로그램이 메모리에 로드될 때 파티션을 기준으로 접근하도록 명령어를 수정한다. 이를 위해 링커가 프로그램의 어떤 부분이 리로케이트되어야 하는지 알아야 한다.</p>
 
-<blockquote>
-  <p>… 그러므로 프로그램이 할당된 실제 메모리 주소 공간의 위치는 프로그램을 실행하는 <code class="language-plaintext highlighter-rouge">CPU</code>에 전혀 영향을 미치지 않음</p>
-  <ul>
-    <li>그럼 어떻게 각각의 프로세스들에게 서로 다른 주소 공간을 제공할 수 있을까?</li>
-  </ul>
-</blockquote>
+<h3 id="주소-바인딩-address-binding">주소 바인딩 (Address Binding)</h3>
 
-<h4 id="mmu의-재배치-레지스터-relocation-register--프로세스의-논리-공간을-메모리의-물리-공간으로-연속해-매핑"><code class="language-plaintext highlighter-rouge">MMU</code>의 재배치 레지스터 (<code class="language-plaintext highlighter-rouge">Relocation Register</code>) : 프로세스의 논리 공간을 메모리의 물리 공간으로 연속해 매핑</h4>
-<ul>
-  <li>동적 재배치 (<code class="language-plaintext highlighter-rouge">Dynamic relocation</code>) : 프로세스의 논리 주소를 메모리의 물리 주소으로 변경
-    <ul>
-      <li>베이스 레지스터 (<code class="language-plaintext highlighter-rouge">Base Register</code>) : (파티션의 시작 주소)</li>
-      <li>리미트 레지스터 (<code class="language-plaintext highlighter-rouge">Limit Register</code>) : (파티션의 크기)</li>
-    </ul>
-  </li>
-</ul>
+<p>주소 바인딩은 프로세스의 논리적 주소를 물리적 메모리 주소로 연결하는 작업이다. 주소 공간(address space)은 프로세스가 메모리에 접근할 때 사용하는 주소들의 집합으로, 각 프로세스는 자신만의 주소 공간을 가진다. 프로그램이 어떤 주소를 사용해도 메인 메모리에 할당된 주소를 찾아가도록 해야 한다. 논리 주소(logical address)는 CPU에서 사용하는 주소로, 메모리 내 프로세스의 독립적인 공간이다. 물리 주소(physical address)는 메인 메모리에서 사용하는 주소로, 하드웨어에 의해 정해진 주소 공간이다.</p>
 
-<p><img src="https://user-images.githubusercontent.com/34755287/54821880-d7e7ea00-4ce6-11e9-944e-3be89338213f.png" width="80%" style="margin-left: 2%" /></p>
+<h3 id="mmu의-재배치-레지스터-relocation-register">MMU의 재배치 레지스터 (Relocation Register)</h3>
+
+<p>MMU의 재배치 레지스터(Relocation Register)는 프로세스의 논리 공간을 메모리의 물리 공간으로 연속해 매핑한다. 동적 재배치(Dynamic relocation)는 프로세스의 논리 주소를 메모리의 물리 주소로 변경한다. 베이스 레지스터(Base Register)는 파티션의 시작 주소를, 리미트 레지스터(Limit Register)는 파티션의 크기를 나타낸다.</p>
+
+<p><img src="https://user-images.githubusercontent.com/34755287/54821880-d7e7ea00-4ce6-11e9-944e-3be89338213f.png" alt="Dynamic Relocation" /></p>
 
 <ol>
-  <li>현재 프로그램이 파티션에 로드되었을 때, 프로그램이 로드된 파티션의 크기를 리미트 레지스터의 값에 저장</li>
-  <li><code class="language-plaintext highlighter-rouge">CPU</code>는 메인 메모리에서 주소가 사용 가능한지 여부를 생각하지 않고, 명시된 그대로 물리 주소를 사용하려고 함</li>
-  <li><code class="language-plaintext highlighter-rouge">CPU</code>가 명령어를 수행할 때마다, 프로세스가 참조하려는 주소에 베이스 레지스터의 값을 더해 수행 (<code class="language-plaintext highlighter-rouge">Relocation</code>)</li>
-  <li><code class="language-plaintext highlighter-rouge">CPU</code>가 명령어를 수행할 때마다, 프로세스가 참조하려는 주소가 리미트 레지스터의 값과 동일하거나 큰지 확인 (<code class="language-plaintext highlighter-rouge">Protection</code>)
+  <li>현재 프로그램이 파티션에 로드되었을 때, 프로그램이 로드된 파티션의 크기를 리미트 레지스터의 값에 저장한다.</li>
+  <li>CPU는 메인 메모리에서 주소가 사용 가능한지 여부를 고려하지 않고, 명시된 그대로 물리 주소를 사용하려고 한다.</li>
+  <li>CPU가 명령어를 수행할 때마다, 프로세스가 참조하려는 주소에 베이스 레지스터의 값을 더해 수행한다 (Relocation).</li>
+  <li>CPU가 명령어를 수행할 때마다, 프로세스가 참조하려는 주소가 리미트 레지스터의 값과 동일하거나 큰지 확인한다 (Protection).
     <ul>
-      <li>O : 프로텍션 바이오레이션 (<code class="language-plaintext highlighter-rouge">Protection Violation</code>) 발생시켜 메모리 참조를 중단</li>
-      <li>X : 프로세스가 참조하려는 주소에 베이스 레지스터의 값을 더한 값을 메모리 버스에 보냄</li>
+      <li>O: 프로텍션 바이오레이션(Protection Violation) 발생 시켜 메모리 참조를 중단한다.</li>
+      <li>X: 프로세스가 참조하려는 주소에 베이스 레지스터의 값을 더한 값을 메모리 버스에 보낸다.</li>
     </ul>
   </li>
 </ol>
 
-<blockquote>
-  <p>Q. 그럼 베이스 레지스터 &amp; 리미트 레지스터를 사용하면 이젠 더 이상 문제가 없는걸까?</p>
-  <ul>
-    <li>모든 메모리 참조마다 덧셈과 비교 연산이 요구되기에, 비교적 시간이 오래 걸림 : 특히 덧셈 연산이!
-      <ul>
-        <li>블로트웨어 (<code class="language-plaintext highlighter-rouge">Bloatware</code>) : 메모리의 크기를 증가하는 속도를 소프트웨어의 크기가 증가하는 속도가 역전</li>
-      </ul>
-    </li>
-  </ul>
+<p>이 방식에서는 모든 메모리 참조마다 덧셈과 비교 연산이 요구되기에 비교적 시간이 오래 걸린다. 특히 덧셈 연산이 그렇다. 블로트웨어(Bloatware)는 메모리의 크기가 증가하는 속도를 소프트웨어의 크기가 증가하는 속도가 역전하는 현상을 말한다.</p>
 
-  <p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2Fe9a93b26-58ff-4ab0-8b6b-2a8b3cb3cdfd%2F정적재배치2.PNG" width="80%" style="margin-left: 2%" /></p>
+<p>정적 메모리 파티션(Fixed memory partitions)은 메모리를 여러 개의 파티션으로 미리 나누고 프로세스를 할당하는 방법이다. 도착한 작업을 크기에 맞는 가장 작은 파티션에 넣는 Multiple input Queues 방식과, 도착한 작업을 수용할 큐를 하나만 배정하여 먼저 도착한 작업을 먼저 실행시키는 Single input Queue 방식이 있다.</p>
 
-  <ul>
-    <li>정적 메모리 파티션 (<code class="language-plaintext highlighter-rouge">Fixed memory partitions</code>) : 메모리를 파티션 여러 개로 미리 나누고 프로세스 할당
-      <ul>
-        <li><code class="language-plaintext highlighter-rouge">Multiple input Queues</code> : 도착한 작업을 크기에 맞는 가장 작은 파티션에 넣음</li>
-        <li><code class="language-plaintext highlighter-rouge">Single input Queue</code> : 도착한 작업을 수용할 큐를 하나만 배정, 먼저 도착한 작업을 먼저 실행시킴</li>
-      </ul>
-    </li>
-  </ul>
+<p><img src="https://examradar.com/wp-content/uploads/2019/02/fixed-memory-partition.png" alt="Fixed Memory Partition" /></p>
 
-  <p><img src="https://examradar.com/wp-content/uploads/2019/02/fixed-memory-partition.png" width="80%" style="margin-left: 2%" /></p>
+<p>정적 메모리 파티션은 메모리가 시스템이 구동할 모든 프로세스를 적재 가능한 용량을 가져야 하나, 시스템이 구동할 모든 프로세스들이 필요한 메모리의 전체 크기는 실제 RAM 용량보다 크다. 또한, 프로그램 시작 이전에 이미 실행 중인 프로세스들이 적재되어 있을 수 있다.</p>
 
-  <blockquote>
-    <p>정적 메모리 파티션은 메모리가 시스템이 구동할 모든 프로세스를 적재 가능한 용량을 가져야 성립하나,</p>
-    <ul>
-      <li>시스템이 구동할 모든 프로세스들이 필요한 메모리의 전체 크기는 실제 <code class="language-plaintext highlighter-rouge">RAM</code> 용량보다 크다.</li>
-      <li>프로그램이 시작하기 전에 이미 실행 중인 프로세스들이 적재되어 있다.</li>
-    </ul>
-  </blockquote>
+<h3 id="스와핑-swapping">스와핑 (Swapping)</h3>
 
-  <p>… <b>모든 프로세스들을 계속 적재하기엔, 물리 메모리 크기에 한계가 있다</b>는 문제에 대해, 2가지 해결책이 제시되었다.</p>
-  <ul>
-    <li><code class="language-plaintext highlighter-rouge">Swapping</code> : 한 프로세스의 전체 이미지가 메모리로 적재되어 실행되다가 실행되지 않으면 디스크로 이동</li>
-    <li><code class="language-plaintext highlighter-rouge">Virtual Memory</code> : 한 프로세스의 전체 이미지가 아닌 일부만 메모리에 있어도 프로세스의 실행이 가능</li>
-  </ul>
-</blockquote>
+<p>스와핑은 메모리에 로드된 프로세스 중 장기간 미사용된 것을 하드 디스크에 이미지 형태로 저장하는 방식이다. 프로세스 이미지(Process Image)는 프로그램이 메모리에 로드되고 실행되어 데이터가 변경된 프로세스를 말한다. 하드 디스크에 존재하는 .exe 또는 .app 파일이 데이터가 변경됨에 따라 이를 하드 디스크의 backing store에 저장하게 된다. 메인 메모리에서 backing store로 데이터를 이동시키는 것을 swap-out이라 하고, backing store에서 메인 메모리로 데이터를 이동시키는 것을 swap-in이라고 한다.</p>
 
-<h3 id="스와핑-swapping--메모리에-로드된-프로세스-중에-장기간-미사용된-것을-하드-디스크에-이미지-형태로-저장">스와핑 (<code class="language-plaintext highlighter-rouge">Swapping</code>) : 메모리에 로드된 프로세스 중에 장기간 미사용된 것을 하드 디스크에 이미지 형태로 저장</h3>
-<ul>
-  <li>프로세스 이미지 (<code class="language-plaintext highlighter-rouge">Process Image</code>) : 프로그램이 메모리에 로드되고 실행되어 데이터가 변경된 프로세스
-    <ul>
-      <li>하드 디스크에 존재하는 <code class="language-plaintext highlighter-rouge">.exe</code>, <code class="language-plaintext highlighter-rouge">.app</code>에 데이터가 변경되었기에 이를 하드 디스크의 <code class="language-plaintext highlighter-rouge">backing store</code>에 저장
-        <ul>
-          <li><code class="language-plaintext highlighter-rouge">swap-out</code> : 메인 메모리 -&gt; <code class="language-plaintext highlighter-rouge">Backing store</code></li>
-          <li><code class="language-plaintext highlighter-rouge">swap-in</code> : <code class="language-plaintext highlighter-rouge">Backing store</code> -&gt; 메인 메모리</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F79e932b4-c55f-4e27-aaaf-381605691e27%2F스와핑1.PNG" alt="Swapping" /></p>
 
-<p><img src="https://velog.velcdn.com/images%2Fholicme7%2Fpost%2F79e932b4-c55f-4e27-aaaf-381605691e27%2F스와핑1.PNG" width="80%" style="margin-left: 2%" /></p>
+<p>backing store는 메인 메모리의 모든 프로세스가 swap-out될 때 데이터의 소실 없이 저장할 수 있어야 한다. 따라서, 하드 디스크에서 backing store가 할당받는 크기는 최소 메인 메모리의 크기와 같을 것으로 예상할 수 있다.</p>
 
-<blockquote>
-  <p>… <code class="language-plaintext highlighter-rouge">backing store</code>는 메인 메모리의 모든 프로세스가 <code class="language-plaintext highlighter-rouge">swap-out</code>될 때 데어터의 소실 없이 저장할 수 있어야 한다.</p>
-  <ul>
-    <li>그러므로, 하드 디스크에서 <code class="language-plaintext highlighter-rouge">backing store</code>이 할당받는 크기는 <b>최소 메인 메모리의 크기</b>라 예상할 수 있다.</li>
-  </ul>
-</blockquote>
+<p><img src="https://miro.medium.com/max/1200/1*QnOhzkY2mIXFKM-SoXh_8w.jpeg" alt="Process Image" /></p>
 
-<p><img src="https://miro.medium.com/max/1200/1*QnOhzkY2mIXFKM-SoXh_8w.jpeg" width="80%" style="margin-left: 2%" /></p>
+<p>프로그램의 데이터 세그먼트가 늘어날 공간을 미리 확보하고, 각 프로그램의 세그먼트를 프로그램 텍스트, 데이터 세그먼트, 스택 세그먼트로 나누어 관리한다. 프로그램 텍스트 위의 데이터 세그먼트와 스택 세그먼트가 서로를 향해 자라게 하여 사용자가 동적으로 할당할 수 있는 힙(Heap) 영역(Room for growth)을 확보한다. malloc, calloc 등의 명령어로 힙 영역을 관리한다.</p>
 
-<ul>
-  <li>(a) 각 프로그램의 데이터 세그먼트가 늘어날 공간을 미리 확보</li>
-  <li>(b) 각 프로그램의 세그먼트를 프로그램 텍스트 / 데이터 세그먼트 / 스택 세그먼트로 나눔
-    <ul>
-      <li>프로그램 텍스 위의 데이터 세그먼트와 스택 세그먼트가 서로를 향해 자라게끔 함
-        <ul>
-          <li>힙 (<code class="language-plaintext highlighter-rouge">Heap</code>) 영역 (<code class="language-plaintext highlighter-rouge">Room for growth</code>) : 사용자가 동적으로 할당할 영역
-            <ul>
-              <li><code class="language-plaintext highlighter-rouge">malloc</code>, <code class="language-plaintext highlighter-rouge">calloc</code> 등의 명령어로 관리</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+<h3 id="동적-메모리-파티션-dynamic-memory-partitions">동적 메모리 파티션 (Dynamic memory partitions)</h3>
 
-<h4 id="동적-메모리-파티션-dynamic-memory-partitions--프로그램이-메모리에-로드될-때마다-파티션을-나누고-할당">동적 메모리 파티션 (<code class="language-plaintext highlighter-rouge">Dynamic memory partitions</code>) : 프로그램이 메모리에 로드될 때마다 파티션을 나누고 할당</h4>
-<ul>
-  <li>운영체제가 동적으로 할당된 프로세스를 관리 : 힙 영역이 커지므로, 프로세스의 확장을 위한 공간이 할당되어야 함</li>
-</ul>
+<p>동적 메모리 파티션은 프로그램이 메모리에 로드될 때마다 파티션을 나누고 할당하는 방식이다. 운영체제가 동적으로 할당된 프로세스를 관리하며, 힙 영역이 커지므로 프로세스의 확장을 위한 공간이 할당되어야 한다.</p>
 
-<p><img src="https://examradar.com/wp-content/uploads/2019/03/Memory-Management-with-Bitmap.png" width="66%" style="margin-left: 2%" /></p>
+<p><img src="https://examradar.com/wp-content/uploads/2019/03/Memory-Management-with-Bitmap.png" alt="Dynamic Memory Partition" /></p>
 
-<ul>
-  <li>(b) <code class="language-plaintext highlighter-rouge">Bit Maps</code> 사용 : 맵에 <code class="language-plaintext highlighter-rouge">X</code>비트를 관장할 <code class="language-plaintext highlighter-rouge">Y</code>개의 할당 단위 (<code class="language-plaintext highlighter-rouge">allocation unit</code>)
-    <ul>
-      <li>단위 유닛이 메모리에 할당되어 있으면 유닛의 값을 1, 할당되어 있지 않으면 0 (<code class="language-plaintext highlighter-rouge">flag bit</code>)</li>
-    </ul>
-  </li>
-</ul>
+<p>Bit Maps를 사용하여 맵에 X비트를 관장할 Y개의 할당 단위(allocation unit)를 관리한다. 단위 유닛이 메모리에 할당되어 있으면 유닛의 값을 1로, 할당되어 있지 않으면 0으로 표시하는 flag bit를 사용한다. 할당 단위가 작아지면 유닛의 개수 Y가 커지므로 맵의 크기가 커져 맵을 탐색할 때의 성능이 저하될 수 있다. 할당 단위가 커지면 유닛의 개수 Y가 작아져 비트맵의 공간이 작아지지만, 마지막 프로세스에 빈 공간이 커져 메모리 공간이 낭비될 가능성이 있다. Bit Maps의 문제점은 프로세스가 k개의 할당 단위를 요구할 때, 맵에서 k개의 0비트를 연속해서 찾아야 한다는 점이다.</p>
 
-<blockquote>
-  <ul>
-    <li>할당 단위가 작아지면? : 유닛의 개수 <code class="language-plaintext highlighter-rouge">Y</code>가 커진다.
-      <ul>
-        <li><code class="language-plaintext highlighter-rouge">Y</code>를 표현할 <code class="language-plaintext highlighter-rouge">flag bit</code>가 많이 필요하므로, 맵의 크기가 커져 맵을 탐색할 때의 성능이 저하된다.</li>
-      </ul>
-    </li>
-    <li>할당 단위가 커지면? : 유닛의 개수 <code class="language-plaintext highlighter-rouge">Y</code>가 작아진다.
-      <ul>
-        <li><code class="language-plaintext highlighter-rouge">Y</code>를 표현할 <code class="language-plaintext highlighter-rouge">flag bit</code>가 적게 필요하므로, 비트맵의 공간이 작아진다.</li>
-        <li>마지막 프로세스에 빈 공간 역시 커져 더 많은 메모리 공간이 낭비될 가능성이 있다.</li>
-      </ul>
-    </li>
-  </ul>
+<p>Linked Lists를 사용하여 메모리의 낮은 주소부터 링크드 리스트의 노드가 있는 방식도 있다. 각 엔트리는 P(프로세스) 또는 H(홀)을 표현하는 flag, 시작 주소, 길이, 다음 엔트리를 가리키는 포인터로 구성된다. 프로세스 종료 시 Linked Lists를 업데이트하는 방법으로 종료되는 프로세스는 일반적으로 2개의 이웃을 가지며, 이웃은 다른 프로세스가 차지한 공간이거나 빈 공간일 수 있다.</p>
 
-  <p>… <code class="language-plaintext highlighter-rouge">Bit Maps</code>의 문제점 : 프로세스가 <code class="language-plaintext highlighter-rouge">k</code>개의 할당 단위를 요구할 때, 맵에서 <code class="language-plaintext highlighter-rouge">k</code>개의 0비트를 연속해서 찾아야 한다.</p>
-</blockquote>
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL0MnsZnPlU2O0BnlViAvrs8Ge5bJtE5VhIQ&amp;usqp=CAU" alt="Linked Lists" /></p>
 
-<ul>
-  <li>(c) <code class="language-plaintext highlighter-rouge">Linked Lists</code> 사용 : 메모리의 낮은 주소부터 링크드 리스트의 노드가 있음
-    <ul>
-      <li>각 엔트리는 <code class="language-plaintext highlighter-rouge">P</code> (프로세스) or <code class="language-plaintext highlighter-rouge">H</code> (홀)을 표현하는 <code class="language-plaintext highlighter-rouge">flag</code>, 시작 주소, 길이, 다음 엔트리를 가리키는 포인터로 구성</li>
-    </ul>
-  </li>
-</ul>
+<p>X에 해당되는 엔트리를 X에서 H로 갱신하거나, 2개의 엔트리를 통합해 표현할 수 있으며, 3개의 엔트리를 통합해 표현할 수 있다.</p>
 
-<blockquote>
-  <ul>
-    <li>프로세스 종료 시 <code class="language-plaintext highlighter-rouge">Linked Lists</code>를 업데이트하는 방법
-      <ul>
-        <li>종료되는 프로세스는 일반적으로 2개의 이웃을 가짐 → 이웃은 다른 프로세스가 차지한 공간이거나 빈 공간</li>
-      </ul>
-    </li>
-  </ul>
+<h3 id="contiguous-memory-allocation">Contiguous Memory Allocation</h3>
 
-  <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL0MnsZnPlU2O0BnlViAvrs8Ge5bJtE5VhIQ&amp;usqp=CAU" width="66%" style="margin-left: 2%" /></p>
+<p>Contiguous Memory Allocation은 메모리에 새로 생성된 프로세스들을 위한 메모리 공간을 할당하는 방식이다. 메모리 단편화(Memory fragmentation)는 메인 메모리에 흩어진 홀들이 불연속적으로 할당된 상태를 의미한다. 프로세스 생성과 종료가 반복되면 scattered holes가 생길 수 있다. 홀(Hole)은 메인 메모리에서 프로세스가 할당되지 않은 영역이다. 외부 단편화(External fragmentation)는 프로세스를 할당할 크기가 충분하나 메모리 단편화로 할당이 불가능한 상태를 의미한다.</p>
 
-  <ul>
-    <li>(a) <code class="language-plaintext highlighter-rouge">X</code>에 해당되는 엔트리를 <code class="language-plaintext highlighter-rouge">X</code>에서 <code class="language-plaintext highlighter-rouge">H</code>로 바꿔 갱신</li>
-    <li>(b), (c) 2개의 엔트리를 통합해 하나로 표현</li>
-    <li>(d) 3개의 엔트리를 통합해 하나로 표현</li>
-  </ul>
-</blockquote>
+<p><img src="https://user-images.githubusercontent.com/34755287/54821882-d8808080-4ce6-11e9-8ff3-193fa79c04a3.png" alt="First-fit" /></p>
 
-<h4 id="contiguous-memory-allocation--메모리에-새로-생성된-프로세스들을-위한-메모리-공간-할당"><code class="language-plaintext highlighter-rouge">Contiguous Memory Allocation</code> : 메모리에 새로 생성된 프로세스들을 위한 메모리 공간 할당</h4>
-<ul>
-  <li>메모리 단편화 (<code class="language-plaintext highlighter-rouge">Memory fragmentation</code>) : 메인 메모리에 흩어진 홀들이 불연속적으로 할당된 상태
-    <ul>
-      <li>프로세스 생성 &amp; 종료 반복 → <code class="language-plaintext highlighter-rouge">scattered holes</code></li>
-      <li>홀 (<code class="language-plaintext highlighter-rouge">Hole</code>) : 메인 메모리에서 프로세스가 할당되지 않은 영역</li>
-    </ul>
-  </li>
-  <li>외부 단편화 (<code class="language-plaintext highlighter-rouge">External fragmentation</code>) : 프로세스를 할당할 크기가 충분하나, 메모리 단편화로 할당이 불가능한 상태</li>
-</ul>
+<p>First-fit은 프로세스 크기보다 크거나 같은 홀을 탐색하는 순서 중에서 가장 먼저 찾은 홀에 프로세스를 할당하는 방식이다.</p>
 
-<p><img src="https://user-images.githubusercontent.com/34755287/54821882-d8808080-4ce6-11e9-8ff3-193fa79c04a3.png" width="80%" style="margin-left: 2%" /></p>
+<p><img src="https://user-images.githubusercontent.com/34755287/54821883-d8808080-4ce6-11e9-8c2d-c84b878d21ea.png" alt="Best-fit" /></p>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">First-fit</code> : 프로세스 크기보다 크거나 같은 홀을 탐색하는 순서 중에서 가장 먼저 찾은 홀에 프로세스 할당</li>
-</ul>
+<p>Best-fit은 할당할 프로세스 크기와 홀의 크기 차이가 가장 작은 홀에 프로세스를 할당하는 방식이다.</p>
 
-<p><img src="https://user-images.githubusercontent.com/34755287/54821883-d8808080-4ce6-11e9-8c2d-c84b878d21ea.png" width="80%" style="margin-left: 2%" /></p>
+<p><img src="https://user-images.githubusercontent.com/34755287/54821885-d8808080-4ce6-11e9-9473-db032d7eeb3a.png" alt="Worst-fit" /></p>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Best-fit</code> : 할당할 프로세스 크기와 홀의 크기 차이가 가장 작은 홀에 프로세스 할당</li>
-</ul>
+<p>Worst-fit은 할당할 프로세스 크기와 홀의 크기 차이가 가장 큰 홀에 프로세스를 할당하는 방식이다. Best-fit을 사용하였을 때 다른 프로세스가 쓰지 못할 정도의 홀이 생겼을 때의 대안으로 사용된다.</p>
 
-<p><img src="https://user-images.githubusercontent.com/34755287/54821885-d8808080-4ce6-11e9-9473-db032d7eeb3a.png" width="80%" style="margin-left: 2%" /></p>
+<p><img src="https://user-images.githubusercontent.com/34755287/54821887-d9191700-4ce6-11e9-9b00-fa92272b8b7d.png" alt="Compaction" /></p>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Worst-fit</code> : 할당할 프로세스 크기와 홀의 크기 차이가 가장 큰 홀에 프로세스 할당
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">Best-fit</code>을 사용하였다가 다른 프로세스가 쓰지 못할 정도의 홀이 생겼을 때를 위한 대안</li>
-    </ul>
-  </li>
-</ul>
+<p>Compaction은 메모리 여러 곳에 흩어져 있는 홀들을 강제로 하나로 병합하는 방식이다. 그러나 홀을 옮기는 오버헤드가 매우 크며, 어느 홀을 옮겨야 빠르게 합칠 수 있는지에 대한 최적 알고리즘이 존재하지 않는다.</p>
 
-<p><img src="https://user-images.githubusercontent.com/34755287/54821887-d9191700-4ce6-11e9-9b00-fa92272b8b7d.png" width="80%" style="margin-left: 2%" /></p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Compaction</code> : 메모리 여러 곳에 흩어져있는 홀들을 강제로 하나로 병합
-    <ul>
-      <li>홀을 옮기는 오버헤드가 매우 크고, 어느 홀을 옮겨야 빠르게 합칠 수 있는지에 대한 최적 알고리즘이 존재하지 않음</li>
-    </ul>
-  </li>
-</ul>
-
-<blockquote>
-  <p>일반적으로 할당 속도는 <code class="language-plaintext highlighter-rouge">First-fit</code>가 가장 빠르며, 메모리 이용률은 <code class="language-plaintext highlighter-rouge">First-fit</code>와 <code class="language-plaintext highlighter-rouge">Best-fit</code>이 비슷하다.</p>
-  <ul>
-    <li>하지만 <code class="language-plaintext highlighter-rouge">Best-fit</code>을 사용하더라도, 외부 단편화로 인해 여전히 전체 메모리의 1/3 정도를 낭비한다.</li>
-  </ul>
-</blockquote>
+<p>일반적으로 할당 속도는 First-fit이 가장 빠르며, 메모리 이용률은 First-fit과 Best-fit이 비슷하다. 그러나 Best-fit을 사용하더라도, 외부 단편화로 인해 여전히 전체 메모리의 1/3 정도를 낭비하게 된다.</p>
 
         
       </section>
@@ -777,7 +520,7 @@ function checkAndLoadPage(allImages) {
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#operation-system" class="page__taxonomy-item p-category" rel="tag">Operation System</a>
+      <a href="/tags/#os" class="page__taxonomy-item p-category" rel="tag">OS</a>
     
     </span>
   </p>
@@ -787,7 +530,7 @@ function checkAndLoadPage(allImages) {
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2022-12-12">December 12, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-07-30">July 30, 2024</time></p>
 
       </footer>
       
@@ -810,7 +553,7 @@ function checkAndLoadPage(allImages) {
   </script>
 
   <div style="padding-top: 1%;">
-    <a href="https://twitter.com/intent/tweet?text=%5BOperation+System%5D+6.+Main+Memory+Management%20http%3A%2F%2Flocalhost%3A4000%2Fos6%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+    <a href="https://twitter.com/intent/tweet?text=%5BOS%5D+6.+%EB%A9%94%EC%9D%B8+%EB%A9%94%EB%AA%A8%EB%A6%AC+%EA%B4%80%EB%A6%AC+%28Main+Memory+Management%29%20http%3A%2F%2Flocalhost%3A4000%2Fos6%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fos6%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
   </div>
@@ -820,11 +563,11 @@ function checkAndLoadPage(allImages) {
       
   <nav class="pagination">
     
-      <a href="/os5/" class="pagination--pager" title="[Operation System] 5. Thread
+      <a href="/os5/" class="pagination--pager" title="[OS] 5. 쓰레드 (Thread)
 ">이전</a>
     
     
-      <a href="/os7/" class="pagination--pager" title="[Operation System] 7. Paging
+      <a href="/os7/" class="pagination--pager" title="[OS] 7. 페이징 (Paging)
 ">다음</a>
     
   </nav>
@@ -890,7 +633,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm22/" rel="permalink">[Algorithm] 22. 계산 기하
+        <a href="/sqld4/" rel="permalink">[SQLD] 4. 관리 구문
 </a>
       
     </h2>
@@ -908,14 +651,16 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 분 소요
+          3 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">계산 기하 (Computational Geometry) : 점·선·다각형·원 등 기하학적 도형을 다루는 알고리즘
+    <p class="archive__item-excerpt" itemprop="description">
+  SQLD를 취득하기 위해 공부하는 과정에 작성한 ‘관리 구문’ 관련 정리이다.
+
 
 </p>
   </article>
@@ -931,7 +676,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm21/" rel="permalink">[Algorithm] 21. 최소 신장 트리
+        <a href="/sqld3/" rel="permalink">[SQLD] 3. SQL 활용
 </a>
       
     </h2>
@@ -949,14 +694,17 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          5 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
+    <p class="archive__item-excerpt" itemprop="description">
+  SQLD를 취득하기 위해 공부하는 과정에 작성한 ‘SQL 활용’ 관련 정리이다.
+
+
 </p>
   </article>
 </div>
@@ -971,7 +719,7 @@ function checkAndLoadPage(allImages) {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm20/" rel="permalink">[Algorithm] 20. 유니온 파인드
+        <a href="/sqld2/" rel="permalink">[SQLD] 2. SQL 기본
 </a>
       
     </h2>
@@ -989,14 +737,17 @@ function checkAndLoadPage(allImages) {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          5 분 소요
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">이 포스트는 현재 작성중입니다. 미완성된 내용이나 코드가 존재하므로 유의하시기 바랍니다.
+    <p class="archive__item-excerpt" itemprop="description">
+  SQLD를 취득하기 위해 공부하는 과정에 작성한 ‘SQL 기본’ 관련 정리이다.
+
+
 </p>
   </article>
 </div>
