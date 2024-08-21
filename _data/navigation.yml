@@ -1,4 +1,6 @@
 main:
+  - title: "포트폴리오"
+    url: /portfolio
   - title: "모아보기"
     url: /tags/
 
