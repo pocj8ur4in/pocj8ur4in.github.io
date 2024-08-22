@@ -38,7 +38,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800 loading">
 
-    <div id="sidebar" class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hidden lg:block">
+    <div id="sidebar" class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hidden lg:block" style="z-index: 1000;">
         <h2 class="text-2xl font-bold mb-4 text-gray-800">포트폴리오</h2>
         <ul class="space-y-4">
             <li><a href="#intro" class="text-blue-600 hover:text-blue-800 transition-colors duration-300" data-scroll>소개</a></li>
@@ -52,7 +52,7 @@
     </div>
 
     <main id="content" class="container mx-auto p-6 md:max-w-4xl">
-        <section id="intro" class="mb-12">
+        <section id="intro" class="mb-12 animate-on-scroll opacity-0 transform translate-y-10 transition-opacity duration-700 ease-in-out">
             <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
                 <h2 class="text-2xl font-semibold border-b-4 border-blue-600 inline-block pb-2 mb-4 text-gray-700">소개</h2>
                 <p class="text-xl text-gray-700">안녕하세요, 개발자 김백규입니다.</p>
@@ -102,58 +102,209 @@
                 <p class="mt-4 text-base text-gray-600 font-semibold">
                     모두가 성장할 수 있도록 노력합니다.
                 </p>
-                <p class="text-base text-gray-600">
+                <p class="mb-4 text-base text-gray-600">
                     혼자가 아닌 함께 성장했을 때 더 큰 성취감을 느껴, 스터디나 개발 블로그를 통해 꾸준히 지식을 공유하고 있습니다.
                     개발 과정에서 코드 리뷰를 통해 코드를 피드백하고, 좋은 코드를 작성할 수 있도록 노력합니다.
                 </p>
             </div>
         </section>
         
-        <section id="project" class="mb-12">
+        <section id="project" class="mb-12 animate-on-scroll opacity-0 transform translate-y-10 transition-opacity duration-700 ease-in-out">
             <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
                 <h2 class="text-2xl font-semibold border-b-4 border-blue-600 inline-block pb-2 mb-4 text-gray-700">프로젝트</h2>
-                <div class="mt-6 mb-6">
+                <div class="mt-6">
+                    <img src="https://avatars.githubusercontent.com/u/169661491?s=200&v=4" alt="하나 V" class="w-16 h-auto rounded-lg shadow-md m-5 border border-gray-100">
                     <h3 class="text-lg font-semibold">
-                        📚 Hana V - Variety, View, Value 당신의 소비 생활을 더 스마트하게
+                        Hana V - Variety, View, Value 당신의 소비 생활을 더 스마트하게
                     </h3>
-                    <img src="https://avatars.githubusercontent.com/u/169661491?s=200&v=4" alt="하나 V" class="w-16 h-auto rounded-lg shadow-md m-5">
-                    <p class="mt-2 text-base text-gray-600">
-                        <ul class="list-disc list-inside mt-2 text-base text-gray-600">
-                            <li>
-                                링크 : <a href="https://github.com/hana-runner" class="text-blue-600 hover:text-blue-800 transition-colors duration-300" target="_blank">Github</a>
-                            </li>
-                            <li>
-                                참여 인원 : 6명
-                            </li>
-                        </ul>
-                    </p>
-                    <p class="mt-2 text-base text-gray-600">
-                        디지털하나路 3기 팀 프로젝트 1차에서 진행한 프로젝트로, 비슷한 관점을 가진 사람들의 소비 성향과 나의 소비 성향을 비교하고 효율적인 소비 생활을 위한 금융 방향을 제시하는 관심사 소비 분석 플랫폼입니다.
-                    </p>
+                    <div class="flex flex-col lg:flex-row aspect-square">
+                        <div class="flex-1 pt-4 pl-4 pr-4 text-left">
+                            <ul class="list-disc list-inside mt-2 text-base text-gray-600">
+                                <li>
+                                    저장소 : <a href="https://github.com/hana-runner" class="text-blue-600 hover:text-blue-800 transition-colors duration-300" target="_blank">Github</a> / 사이트 : <a href="https://hana-v.com" class="text-blue-600 hover:text-blue-800 transition-colors duration-300" target="_blank">Hana V</a>
+                                </li>
+                                <li>
+                                    참여 인원 : 6명 (BE 2명, FE 4명)
+                                </li>
+                                <li>
+                                    진행 기간 : 2024.05 ~ 2024.06
+                                </li>
+                            </ul>
+                            <p class="mt-2 text-base text-gray-600">
+                                디지털하나路 3기 팀 프로젝트 1차에서 진행한 프로젝트로, 비슷한 관점을 가진 사람들의 소비 성향과 나의 소비 성향을 비교하고 효율적인 소비 생활을 위한 금융 방향을 제시하는 관심사 소비 분석 플랫폼입니다.
+                            </p>
+                            <p class="mt-4 text-base text-gray-600">
+                                <h4 class="text-base font-semibold text-gray-700">
+                                    👩🏻‍💻 기여한 부분
+                                </h4>
+                                <div class="mt-2 text-base text-gray-600">
+                                    <div class="mt-2">
+                                        팀장을 맡아 프로젝트에 <a href="https://github.com/hana-runner/hana-v-backend/commit/a85106cca63bedc3ed9941775d3a167fa6c690dc" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">로깅</a>, 
+                                        <a href="https://github.com/hana-runner/hana-v-backend/commit/e3772a3bf4c9a852fa4afae6df5f0dd3e0203399" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">예외 처리</a>,
+                                        <a href="https://github.com/hana-runner/hana-v-backend/commit/ad574a16a880448301b34977432c4f526946daa9" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">Swagger 설정</a>과 같은 서버 개발에 필요한 기본적인 설정을 구축하였습니다.
+                                        <ul>
+
+                                        </ul>
+                                    </div>
+                                    <div class="mt-2">
+                                        <a href="https://github.com/hana-runner/hana-v-backend/commit/5ae457dd72359041d70ebe2d1652d17e6482e339" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">거래내역 조회</a> API를 구현하였습니다.
+                                        <br>ㄴ JPA Pagination과 Specification을 통해 검색 조건에 따라 쿼리를 동적으로 생성되도록 하였습니다.
+                                    </div>
+                                    <div class="mt-2">
+                                        <a href="https://github.com/hana-runner/hana-v-backend/commit/e5e37339fbd2234cd523c5dcb14c305d27466415" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">단일거래 조회</a> 및
+                                        <a href="https://github.com/hana-runner/hana-v-backend/commit/f95e00a719a36b643dba7e72f882b7835dcd6e34" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">수정</a> API를 구현하였습니다.
+                                        <br>ㄴ JPA Native Query를 활용해 요구사항에 맞는 쿼리를 작성하고, Stream API의 filter, map, collect로 데이터를 가공하였습니다.
+                                    </div>
+                                    <div class="mt-2">
+                                        <a href="https://github.com/hana-runner/hana-v-backend/commit/0458dc0d7515dd9112b794d3b5383d487b228e89" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">관심사별 소비 조회</a> 및
+                                        <a href="https://github.com/hana-runner/hana-v-backend/commit/342de734877ed369007ba67c7af5da9321eb8eca" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">카드 추천</a> API를 구현하였습니다.
+                                        <br>ㄴ CompletableFuture와 @Async으로 여러 기능들을 비동기로 처리하여 서버 응답 시간을 단축하였습니다.
+                                    </div>
+                                    <div class="mt-2">
+                                        <a href="https://hub.docker.com/r/pocj8ur4in/hana-v-frontend" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">프론트엔드</a>와 <a href="https://hub.docker.com/r/pocj8ur4in/hana-v-backend" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">백엔드 서버</a>를 Docker로 컨테이너화하고, Github Actions로 <a href="https://github.com/hana-runner/hana-v-backend/commit/f2e53589b7cc3c7c31c0d901d49abeaf76559b9c" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">CI/CD 파이프라인</a>을 구축하여 AWS EC2에 배포하는 로직</a>을 구현하였습니다.
+                                    </div>
+                                </div>
+                            </p>
+                            <div class="mt-4 mb-4 text-base text-gray-600">
+                                <h4 class="text-base font-semibold text-gray-700">
+                                    🖥️ 활용한 기술
+                                </h4>
+                                <div class="mt-2 text-base text-gray-600">
+                                    <div class="mt-2">
+                                        Java, SpringBoot, JPA, MySQL, Redis, Docker, AWS (EC2, RDS), Prometheus, Grafana
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-wrap flex-1">
+                            <div class="w-1/2 aspect-square p-1">
+                                <img src="https://github.com/hana-runner/hana-v-frontend/assets/31836035/62bbef0b-e532-4e33-bfc2-fd657679e30a" alt="하나 V 메인 화면" class="w-full h-full object-cover p-2">
+                            </div>
+                            <div class="w-1/2 aspect-square p-1">
+                                <img src="https://github.com/hana-runner/hana-v-frontend/assets/31836035/6bc0c928-2dc2-4050-8658-53ded455964e" alt="하나 V 거래내역 조회 화면" class="w-full h-full object-cover p-2">
+                            </div>
+                            <div class="w-1/2 aspect-square p-1">
+                                <img src="https://github.com/hana-runner/hana-v-frontend/assets/31836035/5a317317-dac7-497a-8bab-66e4b9f0769b" alt="하나 V 거래 내역 수정 화면" class="w-full h-full object-cover p-2">
+                            </div>
+                            <div class="w-1/2 aspect-square p-1">
+                                <img src="https://github.com/hana-runner/hana-v-frontend/assets/31836035/807e770d-66cb-4cd6-b7cb-ba31d9e8200e" alt="하나 V 관심사별 소비 패턴 분석 화면" class="w-full h-full object-cover p-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pl-4 pr-4 pb-4 mb-6 text-base text-gray-600">
+                    <h4 class="text-base font-semibold text-gray-700">
+                        🚨 트러블슈팅
+                    </h4>
+                    <div class="mt-2 text-base text-gray-600">
+                        <div class="mt-2">
+                            거래내역 조회 API에서 사용자의 거래 내역을 모두 조회한 다음에 Stream API로 가공하여 필요한 값들을 반환하고, 모든 거래 내역은 일정 기간 캐싱하는 방식으로 기능을 구현하였습니다.
+                            그러나, 메모리와 캐시에 저장되는 데이터가 많아져 AWS 서버에서 OutOfMemoryError가 발생하는 문제가 발생하였습니다.
+                        </div>
+                        <div class="mt-2">
+                            처음에는 사용자가 많아질수록 AWS 인스턴스의 메모리 사용량이 급증하는 것을 확인해, 데이터의 TTL을 조절하거나 Redis 서버를 따로 구축하여 문제를 해결하고자 하였습니다.
+                            그럼에도 문제는 지속되어 엑추에이터를 통해 서버의 상태를 모니터링하고, Prometheus와 Grafana를 연동해 서버 부하를 확인하였습니다.
+                            서버 역시 메모리 사용량이 급증하는 것을 확인하고, 거래내역 조회 API의 데이터 조회 로직을 네이티브 쿼리로 작성하여 필요한 데이터만 조회하도록 <a href="https://github.com/hana-runner/hana-v-backend/commit/d356c89d5ac5d138c88bb0b3b90f557a60dcd045" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">수정하였습니다</a>.
+                        </div>
+                    </div>
                 </div>
                 <div class="mt-6 mb-6">
+                    <img src="https://avatars.githubusercontent.com/u/173334671?s=200&v=4" alt="하나 V" class="w-16 h-auto rounded-lg shadow-md m-5 border border-gray-100">
                     <h3 class="text-lg font-semibold">
-                        📚 대학생을 위한 금융 생활 동반자, 더영하나
+                        대학생을 위한 금융 생활 동반자, 더영하나
                     </h3>
-                    <img src="https://avatars.githubusercontent.com/u/173334671?s=200&v=4" alt="하나 V" class="w-16 h-auto rounded-lg shadow-md m-5">
-                    <p class="mt-2 text-base text-gray-600">
-                        <ul class="list-disc list-inside mt-2 text-base text-gray-600">
-                            <li>
-                                링크 : <a href="https://github.com/the-young-hana" class="text-blue-600 hover:text-blue-800 transition-colors duration-300" target="_blank">Github</a></a>
-                            </li>
-                            <li>
-                                참여 인원 : 6명
-                            </li>
-                        </ul>
-                    </p>
-                    <p class="mt-2 text-base text-gray-600">
-                        디지털하나路 3기 팀 프로젝트 2차에서 진행한 프로젝트로, 기존 하나원큐 영하나 서비스를 확장해 대학교에서 일어나는 금융과 관련된 활동을 관리할 수 있는 스마트캠퍼스 서비스입니다.
-                    </p>
+                    <div class="flex flex-col lg:flex-row aspect-square">
+                        <div class="flex-1 pt-4 pl-4 pr-4 text-left">
+                            <ul class="list-disc list-inside mt-2 text-base text-gray-600">
+                                <li>
+                                    저장소 : <a href="https://github.com/the-young-hana" class="text-blue-600 hover:text-blue-800 transition-colors duration-300" target="_blank">Github</a> / 영상 : <a href="https://www.youtube.com/watch?v=ECoUt2NdIao" class="text-blue-600 hover:text-blue-800 transition-colors duration-300" target="_blank">Youtube</a> / 사이트 : <a href="https://theyounghana.r-e.kr" class="text-blue-600 hover:text-blue-800 transition-colors duration-300" target="_blank">더영하나</a>
+                                </li>
+                                <li>
+                                    참여 인원 : 6명 (BE 3명, FE 3명)
+                                </li>
+                                <li>
+                                    진행 기간 : 2024.06 ~ 2024.07
+                                </li>
+                            </ul>
+                            <p class="mt-2 text-base text-gray-600">
+                                디지털하나路 3기 팀 프로젝트 2차에서 진행한 프로젝트로, 기존 하나원큐 영하나 서비스를 확장해 대학에서 일어나는 금융 활동을 관리할 수 있는 스마트캠퍼스 서비스입니다.
+                            </p>
+                            <p class="mt-4 text-base text-gray-600">
+                                <h4 class="text-base font-semibold text-gray-700">
+                                    👩🏻‍💻 기여한 부분
+                                </h4>
+                                <div class="mt-2 text-base text-gray-600">
+                                    <div class="mt-2">
+                                        팀장을 맡아 <a href="https://github.com/the-young-hana/theYoungHana-backend/commit/1ac0f63390c2af8b93f2143f09a3eb6b5fb3041c" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">초기 설정</a>과
+                                        <a href="https://github.com/the-young-hana/theYoungHana-backend/commit/79ede6f2146629c0dce09e876a41dace2e53eac8" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">프로젝트 구조</a>를 구축하고, 
+                                        모든 팀원이 동일한 환경에서 작업할 수 있도록 <a href="https://github.com/the-young-hana/theYoungHana-backend/blob/main/docker-compose.yml" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">Spring Docker Compose</a>를 프로젝트에 반영했습니다.
+                                    </div>
+                                    <div class="mt-2">
+                                        <a href="https://github.com/the-young-hana/theYoungHana-backend/commit/43b4876bb0946c07f2129ad04a026be7d512bd4a" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">회원 간편로그인</a> API를 구현하였습니다.
+                                        <br>ㄴ JWT와 Spring Security으로 권한을 관리하였습니다. 또한 세션을 Redis에 저장하여 서버 부하를 줄였습니다.
+                                    </div>
+                                    <div class="mt-2">
+                                        <a href="https://github.com/the-young-hana/theYoungHana-backend/commit/6adb37fa7ced7e699d7803fc1f615f3252ad0534" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">신청·응모·선착 이벤트 생성, 조회, 검색, 수정, 삭제</a> API를 구현하였습니다.
+                                        <br>ㄴ Spring Scheduler로 1분마다 이벤트 상태를 변경하고, 사용자가 이벤트의 작업을 접근할 수 있도록 하였습니다.
+                                        <br>ㄴ 선착 이벤트에서 발생할 수 있는 동시성 문제를 해결하기 위해 Redis 분산 락을 구현하였습니다.
+                                    </div>
+                                    <div class="mt-2">
+                                        <a href="https://github.com/the-young-hana/theYoungHana-backend/commit/64b9a1172c240e099c0d5cbd9ab61e017ed82260" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">알림 목록 조회, 삭제</a> API를 구현하였습니다.
+                                        <br>ㄴ Firebase로 사용자에게 알림을 전송하도록 하였습니다.
+                                    </div>
+                                    <div class="mt-2">
+                                        HTTPS 환경에서의 서버 운영을 위해 인증서를 발급하고, Nginx로 리버시 프록시를 구성해 서버를 운영하였습니다.
+                                    </div>
+                                </div>
+                            </p>
+                            <div class="mt-4 mb-4 text-base text-gray-600">
+                                <h4 class="text-base font-semibold text-gray-700">
+                                    🖥️ 활용한 기술
+                                </h4>
+                                <div class="mt-2 text-base text-gray-600">
+                                    <div class="mt-2">
+                                        Java, SpringBoot, JPA, MySQL, Redis, Docker, Nginx, AWS (EC2, RDS, S3), Firebase, Prometheus, Grafana
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap flex-1 pt-4 pl-4 pr-4">
+                            <div class="w-1/2 aspect-square p-1">
+                                <img src="https://github.com/the-young-hana/theYoungHana-frontend/assets/31836035/6cd07475-05a9-4872-ae3e-49227bd278b4" alt="더영하나 메인 화면" class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-1/2 aspect-square p-1">
+                                <img src="https://github.com/the-young-hana/theYoungHana-frontend/assets/31836035/f304ae80-bd0a-48d1-81f0-abae417da86a" alt="더영하나 이벤트 조회 화면" class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-1/2 aspect-square p-1">
+                                <img src="https://github.com/the-young-hana/theYoungHana-frontend/assets/31836035/c377f52e-89a7-4812-b9e0-5588800f04e7" width="200" alt="더영하나 응모 이벤트 신청 화면" class="w-full h-full object-cover">
+                            </div>
+                            <div class="w-1/2 aspect-square p-1">
+                                <img src="https://github.com/the-young-hana/theYoungHana-frontend/assets/31836035/8ac87ff7-7ac8-42c2-96ea-a121a3918c8e"" alt="더영하나 이벤트 알림 화면" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pl-4 pr-4 pb-4 mb-6 text-base text-gray-600">
+                        <h4 class="text-base font-semibold text-gray-700">
+                            🚨 트러블슈팅
+                        </h4>
+                        <div class="mt-2 text-base text-gray-600">
+                            <div class="mt-2">
+                                배포된 프로젝트가 운영을 시작한 후에 서비스 안정성을 저해하는 문제가 발생했습니다.
+                                지속적인 DDOS 공격으로 서버가 과부하 상태에 빠지면서 서비스 중단이 빈번하게 일어났고, 이에 대한 즉각적인 대응이 필요했습니다.
+                            </div>
+                            <div class="mt-2">
+                                Nginx의 Rate Limit 모듈로 IP 주소당 초당 요청 횟수를 제한했으나, 이렇게 여러 IP에서 동시에 요청을 보내는 경우에는 대응할 수 없었습니다.
+                                그래서 <a href="https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker?trk=article-ssr-frontend-pulse_little-text-block" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">Nginx Ultimate Bad Bot Blocker</a>와
+                                <a href="https://www.abuseipdb.com/?trk=article-ssr-frontend-pulse_little-text-block" class="text-blue-600 hover:text-blue-800 transition-colors duration-300">AbuseIPDB</a>로 악성 IP 주소를 차단하는 방법을 찾아 적용하였습니다.
+                                이러한 방어 조치로 정상적인 사용자 트래픽을 보호하면서, 공격 시도의 영향을 최소화할 수 있었습니다.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="tech-stack" class="mb-12">
+        <section id="tech-stack" class="mb-12 animate-on-scroll opacity-0 transform translate-y-10 transition-opacity duration-700 ease-in-out">
             <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
                 <h2 class="text-2xl font-semibold border-b-4 border-blue-600 inline-block pb-2 mb-4 text-gray-700">기술 스택</h2>
                 <div class="mt-6 mb-6">
@@ -199,7 +350,7 @@
             </div>
         </section>
         
-        <section id="activities" class="mb-12">            
+        <section id="activities" class="mb-12 animate-on-scroll opacity-0 transform translate-y-10 transition-opacity duration-700 ease-in-out">            
             <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
                 <h2 class="text-2xl font-semibold border-b-4 border-blue-600 inline-block pb-2 mb-4 text-gray-700">활동</h2>
                 <div class="mt-6 mb-6">
@@ -215,7 +366,7 @@
             </div>
         </section>
 
-        <section id="education" class="mb-12">
+        <section id="education" class="mb-12 animate-on-scroll opacity-0 transform translate-y-10 transition-opacity duration-700 ease-in-out">
             <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
                 <h2 class="text-2xl font-semibold border-b-4 border-blue-600 inline-block pb-2 mb-4 text-gray-700">학력</h2>
                 <div class="mt-6 mb-6">
@@ -230,7 +381,7 @@
             </div>
         </section>
         
-        <section id="certificate" class="mb-12">
+        <section id="certificate" class="mb-12 animate-on-scroll opacity-0 transform translate-y-10 transition-opacity duration-700 ease-in-out">
             <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
                 <h2 class="text-2xl font-semibold border-b-4 border-blue-600 inline-block pb-2 mb-4 text-gray-700">자격증</h2>
                 <div class="mt-6 mb-6">
@@ -250,7 +401,7 @@
             </div>
         </section>
         
-        <section id="etc" class="mb-12">
+        <section id="etc" class="mb-16 animate-on-scroll opacity-0 transform translate-y-10 transition-opacity duration-700 ease-in-out">
             <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
                 <h2 class="text-2xl font-semibold border-b-4 border-blue-600 inline-block pb-2 mb-4 text-gray-700">기타</h2>
                 <div class="mt-6 mb-6">
@@ -270,14 +421,32 @@
     </main>
 
     <script>
+        const targets = document.querySelectorAll('.animate-on-scroll');
+
+        function applyAnimation() {
+            const viewportHeight = window.innerHeight;
+    
+            targets.forEach(target => {
+                const elementTop = target.getBoundingClientRect().top;
+                const elementBottom = target.getBoundingClientRect().bottom;
+    
+                if (elementTop < viewportHeight && elementBottom > 0) {
+                    target.classList.add('opacity-100', 'translate-y-0');
+                    target.classList.remove('opacity-0', 'translate-y-0');
+                } else {
+                    target.classList.add('opacity-0', 'translate-y-10');
+                    target.classList.remove('opacity-100', 'translate-y-0');
+                }
+            });
+        }
+
         document.addEventListener("DOMContentLoaded", function() {
             window.addEventListener("load", function() {
                 document.body.classList.remove("loading");
                 document.body.classList.add("loaded");
+                applyAnimation();
             });
-        });
     
-        document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('a[data-scroll]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -285,11 +454,19 @@
                     const targetId = this.getAttribute('href').substring(1);
                     const targetElement = document.getElementById(targetId);
     
-                    targetElement.scrollIntoView({
+    
+                    const offset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+    
+                    window.scrollTo({
+                        top: offsetPosition,
                         behavior: 'smooth'
                     });
                 });
             });
+    
+            window.addEventListener('scroll', applyAnimation);
         });
     </script>
 

@@ -55,7 +55,7 @@ function checkAndLoadPage(allImages) {
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[JS] 2. 변수 (Variable) &amp; 객체 (Object) - pocj8ur4in’s blog</title>
-<meta name="description" content="변수 (Variable) : 하나의 값을 저장할 수 있는 메모리 공간">
+<meta name="description" content="Data 영역에는 null, undefined, 그리고 평가 단계에서의 변수 주소 (8bit)     Stack 영역에는 크기가 변할 수 없는 변수의 값이 저장 -&gt; 원시 타입     Heap 영역에는 크키가 변할 수  있는 변수의 값이 저장 -&gt; 객체 타입">
 
 
   <meta name="author" content="pocj8ur4in">
@@ -71,7 +71,7 @@ function checkAndLoadPage(allImages) {
 <meta property="og:url" content="http://localhost:4000/js2/">
 
 
-  <meta property="og:description" content="변수 (Variable) : 하나의 값을 저장할 수 있는 메모리 공간">
+  <meta property="og:description" content="Data 영역에는 null, undefined, 그리고 평가 단계에서의 변수 주소 (8bit)     Stack 영역에는 크기가 변할 수 없는 변수의 값이 저장 -&gt; 원시 타입     Heap 영역에는 크키가 변할 수  있는 변수의 값이 저장 -&gt; 객체 타입">
 
 
 
@@ -340,7 +340,7 @@ function checkAndLoadPage(allImages) {
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="[JS] 2. 변수 (Variable) &amp; 객체 (Object)">
-    <meta itemprop="description" content="변수 (Variable) : 하나의 값을 저장할 수 있는 메모리 공간">
+    <meta itemprop="description" content="        Data 영역에는 null, undefined, 그리고 평가 단계에서의 변수 주소 (8bit)    Stack 영역에는 크기가 변할 수 없는 변수의 값이 저장 -&gt; 원시 타입    Heap 영역에는 크키가 변할 수  있는 변수의 값이 저장 -&gt; 객체 타입  ">
     <meta itemprop="datePublished" content="2024-01-30T00:00:00+09:00">
     <meta itemprop="dateModified" content="2024-01-30T00:00:00+09:00">
 
@@ -385,7 +385,17 @@ function checkAndLoadPage(allImages) {
             </nav>
           </aside>
         
-        <h2 id="변수-variable--하나의-값을-저장할-수-있는-메모리-공간">변수 (<code class="language-plaintext highlighter-rouge">Variable</code>) : 하나의 값을 저장할 수 있는 메모리 공간</h2>
+        <blockquote>
+  <p><img src="https://github.com/user-attachments/assets/c8706570-e0b6-4eaf-a215-d411501a25f4" alt="자바스크립트가 값을 저장하는 방식" /></p>
+
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">Data</code> 영역에는 <code class="language-plaintext highlighter-rouge">null</code>, <code class="language-plaintext highlighter-rouge">undefined</code>, 그리고 평가 단계에서의 변수 주소 (<code class="language-plaintext highlighter-rouge">8bit</code>)</li>
+    <li><code class="language-plaintext highlighter-rouge">Stack</code> 영역에는 크기가 변할 수 없는 변수의 값이 저장 -&gt; 원시 타입</li>
+    <li><code class="language-plaintext highlighter-rouge">Heap</code> 영역에는 크키가 변할 수  있는 변수의 값이 저장 -&gt; 객체 타입</li>
+  </ul>
+</blockquote>
+
+<h2 id="변수-variable--하나의-값을-저장할-수-있는-메모리-공간">변수 (<code class="language-plaintext highlighter-rouge">Variable</code>) : 하나의 값을 저장할 수 있는 메모리 공간</h2>
 
 <blockquote>
   <p>변수 = 선언 + 식별자 + 타입 + 값 + 소코프</p>
